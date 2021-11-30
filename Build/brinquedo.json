@@ -1,0 +1,16 @@
+{
+"companyName": "Maicon",
+"productName": "BrinquedoTeste",
+"productVersion": "0.1",
+"dataUrl": "brinquedo.data.unityweb",
+"wasmCodeUrl": "brinquedo.wasm.code.unityweb",
+"wasmFrameworkUrl": "brinquedo.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 1.0","WebGL 2.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.2.16f1"
+}
