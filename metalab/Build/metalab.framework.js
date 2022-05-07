@@ -1286,7 +1286,7 @@ function _emscripten_asm_const_ii(code, a0) {
  return ASM_CONSTS[code](a0);
 }
 STATIC_BASE = GLOBAL_BASE;
-STATICTOP = STATIC_BASE + 2918128;
+STATICTOP = STATIC_BASE + 2928880;
 __ATINIT__.push({
  func: (function() {
   __GLOBAL__sub_I_AccessibilityScriptingClasses_cpp();
@@ -3312,7 +3312,7 @@ __ATINIT__.push({
   ___emscripten_environ_constructor();
  })
 });
-var STATIC_BUMP = 2918128;
+var STATIC_BUMP = 2928880;
 Module["STATIC_BASE"] = STATIC_BASE;
 Module["STATIC_BUMP"] = STATIC_BUMP;
 var tempDoublePtr = STATICTOP;
@@ -3752,6 +3752,214 @@ function _JS_SystemInfo_HasFullscreen() {
 }
 function _JS_SystemInfo_HasWebGL() {
  return Module.SystemInfo.hasWebGL;
+}
+var videoInstances = {};
+var jsSupportedVideoFormats = [];
+var jsUnsupportedVideoFormats = [];
+function _JS_Video_CanPlayFormat(format) {
+ format = UTF8ToString(format);
+ if (jsSupportedVideoFormats.indexOf(format) != -1) return true;
+ if (jsUnsupportedVideoFormats.indexOf(format) != -1) return false;
+ var video = document.createElement("video");
+ var canPlay = video.canPlayType(format);
+ if (canPlay) jsSupportedVideoFormats.push(format); else jsUnsupportedVideoFormats.push(format);
+ return !!canPlay;
+}
+var videoInstanceIdCounter = 0;
+function jsVideoEnded() {
+ if (this.onendedCallback) {
+  dynCall_vi(this.onendedCallback, this.onendedRef);
+ }
+}
+function _JS_Video_Create(url) {
+ var str = UTF8ToString(url);
+ var video = document.createElement("video");
+ video.style.display = "none";
+ video.src = str;
+ video.muted = true;
+ video.setAttribute("muted", "");
+ video.setAttribute("playsinline", "");
+ video.crossOrigin = "anonymous";
+ videoInstances[++videoInstanceIdCounter] = video;
+ return videoInstanceIdCounter;
+}
+var jsVideoPendingBlockedVideos = {};
+function jsVideoPlayPendingBlockedVideo(video) {
+ jsVideoPendingBlockedVideos[video].play().then((function() {
+  jsVideoRemovePendingBlockedVideo(video);
+ }));
+}
+function jsVideoAttemptToPlayBlockedVideos() {
+ for (var i in jsVideoPendingBlockedVideos) {
+  if (jsVideoPendingBlockedVideos.hasOwnProperty(i)) jsVideoPlayPendingBlockedVideo(i);
+ }
+}
+function jsVideoRemovePendingBlockedVideo(video) {
+ delete jsVideoPendingBlockedVideos[video];
+ if (Object.keys(jsVideoPendingBlockedVideos).length == 0) {
+  window.removeEventListener("mousedown", jsVideoAttemptToPlayBlockedVideos);
+ }
+}
+function _JS_Video_Destroy(video) {
+ var v = videoInstances[video];
+ if (v.loopEndPollInterval) {
+  clearInterval(v.loopEndPollInterval);
+ }
+ jsVideoRemovePendingBlockedVideo(video);
+ v.src = "";
+ delete v.onendedCallback;
+ v.onended = v.onerror = v.oncanplay = v.onseeked = null;
+ delete videoInstances[video];
+}
+function _JS_Video_Duration(video) {
+ return videoInstances[video].duration;
+}
+function _JS_Video_EnableAudioTrack(video, trackIndex, enabled) {
+ var v = videoInstances[video];
+ if (!v.enabledTracks) v.enabledTracks = [];
+ while (v.enabledTracks.length <= trackIndex) v.enabledTracks.push(true);
+ v.enabledTracks[trackIndex] = enabled;
+ var tracks = v.audioTracks;
+ if (!tracks) return;
+ var track = tracks[trackIndex];
+ if (track) track.enabled = enabled ? true : false;
+}
+function _JS_Video_GetAudioLanguageCode(video, trackIndex) {
+ var tracks = videoInstances[video].audioTracks;
+ if (!tracks) return "";
+ var track = tracks[trackIndex];
+ return track ? track.language : "";
+}
+function _JS_Video_GetNumAudioTracks(video) {
+ var tracks = videoInstances[video].audioTracks;
+ return tracks ? tracks.length : 1;
+}
+function _JS_Video_Height(video) {
+ return videoInstances[video].videoHeight;
+}
+function _JS_Video_IsPlaying(video) {
+ var v = videoInstances[video];
+ return !v.paused && !v.ended;
+}
+function _JS_Video_IsReady(video) {
+ var v = videoInstances[video];
+ var targetReadyState = /(iPhone|iPad)/i.test(navigator.userAgent) ? v.HAVE_METADATA : v.HAVE_ENOUGH_DATA;
+ if (!v.isReady && v.readyState >= targetReadyState) v.isReady = true;
+ return v.isReady;
+}
+function _JS_Video_Pause(video) {
+ var v = videoInstances[video];
+ v.pause();
+ jsVideoRemovePendingBlockedVideo(video);
+ if (v.loopEndPollInterval) {
+  clearInterval(v.loopEndPollInterval);
+ }
+}
+function _JS_Video_SetLoop(video, loop) {
+ var v = videoInstances[video];
+ if (v.loopEndPollInterval) {
+  clearInterval(v.loopEndPollInterval);
+ }
+ v.loop = loop;
+ if (loop) {
+  v.loopEndPollInterval = setInterval((function() {
+   if (v.currentTime < v.lastSeenPlaybackTime) {
+    jsVideoEnded.apply(v);
+   }
+   v.lastSeenPlaybackTime = v.currentTime;
+  }), 1e3 / 30);
+  v.lastSeenPlaybackTime = v.currentTime;
+  v.onended = null;
+ } else {
+  v.onended = jsVideoEnded;
+ }
+}
+function jsVideoAllAudioTracksAreDisabled(v) {
+ if (!v.enabledTracks) return false;
+ for (var i = 0; i < v.enabledTracks.length; ++i) {
+  if (v.enabledTracks[i]) return false;
+ }
+ return true;
+}
+function jsVideoAddPendingBlockedVideo(video, v) {
+ if (Object.keys(jsVideoPendingBlockedVideos).length == 0) window.addEventListener("mousedown", jsVideoAttemptToPlayBlockedVideos);
+ jsVideoPendingBlockedVideos[video] = v;
+}
+function _JS_Video_Play(video, muted) {
+ var v = videoInstances[video];
+ v.muted = muted || jsVideoAllAudioTracksAreDisabled(v);
+ var promise = v.play();
+ if (promise) promise.catch((function(e) {
+  if (e.name == "NotAllowedError") jsVideoAddPendingBlockedVideo(video, v);
+ }));
+ _JS_Video_SetLoop(video, v.loop);
+}
+function _JS_Video_Seek(video, time) {
+ var v = videoInstances[video];
+ v.lastSeenPlaybackTime = v.currentTime = time;
+}
+function _JS_Video_SetEndedHandler(video, ref, onended) {
+ var v = videoInstances[video];
+ v.onendedCallback = onended;
+ v.onendedRef = ref;
+}
+function _JS_Video_SetErrorHandler(video, ref, onerror) {
+ videoInstances[video].onerror = (function(evt) {
+  dynCall_vii(onerror, ref, evt.target.error.code);
+ });
+}
+function _JS_Video_SetMute(video, muted) {
+ var v = videoInstances[video];
+ v.muted = muted || jsVideoAllAudioTracksAreDisabled(v);
+}
+function _JS_Video_SetPlaybackRate(video, rate) {
+ videoInstances[video].playbackRate = rate;
+}
+function _JS_Video_SetReadyHandler(video, ref, onready) {
+ videoInstances[video].oncanplay = (function() {
+  dynCall_vi(onready, ref);
+ });
+}
+function _JS_Video_SetSeekedOnceHandler(video, ref, onseeked) {
+ videoInstances[video].onseeked = (function() {
+  dynCall_vi(onseeked, ref);
+ });
+}
+function _JS_Video_SetVolume(video, volume) {
+ videoInstances[video].volume = volume;
+}
+function _JS_Video_Time(video) {
+ return videoInstances[video].currentTime;
+}
+function _JS_Video_UpdateToTexture(video, tex, adjustToLinearspace) {
+ var v = videoInstances[video];
+ if (!(v.videoWidth > 0 && v.videoHeight > 0)) return false;
+ if (v.lastUpdateTextureTime === v.currentTime) return false;
+ v.lastUpdateTextureTime = v.currentTime;
+ GLctx.pixelStorei(GLctx.UNPACK_FLIP_Y_WEBGL, true);
+ var internalFormat = adjustToLinearspace ? GLctx.SRGB8 : GLctx.RGBA;
+ var format = adjustToLinearspace ? GLctx.RGB : GLctx.RGBA;
+ if (v.previousUploadedWidth != v.videoWidth || v.previousUploadedHeight != v.videoHeight) {
+  GLctx.deleteTexture(GL.textures[tex]);
+  var t = GLctx.createTexture();
+  t.name = tex;
+  GL.textures[tex] = t;
+  GLctx.bindTexture(GLctx.TEXTURE_2D, t);
+  GLctx.texParameteri(GLctx.TEXTURE_2D, GLctx.TEXTURE_WRAP_S, GLctx.CLAMP_TO_EDGE);
+  GLctx.texParameteri(GLctx.TEXTURE_2D, GLctx.TEXTURE_WRAP_T, GLctx.CLAMP_TO_EDGE);
+  GLctx.texParameteri(GLctx.TEXTURE_2D, GLctx.TEXTURE_MIN_FILTER, GLctx.LINEAR);
+  GLctx.texImage2D(GLctx.TEXTURE_2D, 0, internalFormat, format, GLctx.UNSIGNED_BYTE, v);
+  v.previousUploadedWidth = v.videoWidth;
+  v.previousUploadedHeight = v.videoHeight;
+ } else {
+  GLctx.bindTexture(GLctx.TEXTURE_2D, GL.textures[tex]);
+  GLctx.texImage2D(GLctx.TEXTURE_2D, 0, internalFormat, format, GLctx.UNSIGNED_BYTE, v);
+ }
+ GLctx.pixelStorei(GLctx.UNPACK_FLIP_Y_WEBGL, false);
+ return true;
+}
+function _JS_Video_Width(video) {
+ return videoInstances[video].videoWidth;
 }
 var wr = {
  requestInstances: {},
@@ -14276,6 +14484,11 @@ function nullFunc_diiii(x) {
  err("Build with ASSERTIONS=2 for more info.");
  abort(x);
 }
+function nullFunc_dij(x) {
+ err("Invalid function pointer called with signature 'dij'. Perhaps this is an invalid value (e.g. caused by calling a virtual method on a NULL pointer)? Or calling a function with an incorrect type, which will fail? (it is worth building your source files with -Werror (warnings are errors), as warnings can indicate undefined behavior which can cause this)");
+ err("Build with ASSERTIONS=2 for more info.");
+ abort(x);
+}
 function nullFunc_dji(x) {
  err("Invalid function pointer called with signature 'dji'. Perhaps this is an invalid value (e.g. caused by calling a virtual method on a NULL pointer)? Or calling a function with an incorrect type, which will fail? (it is worth building your source files with -Werror (warnings are errors), as warnings can indicate undefined behavior which can cause this)");
  err("Build with ASSERTIONS=2 for more info.");
@@ -14581,6 +14794,11 @@ function nullFunc_iiiifiii(x) {
  err("Build with ASSERTIONS=2 for more info.");
  abort(x);
 }
+function nullFunc_iiiifiiii(x) {
+ err("Invalid function pointer called with signature 'iiiifiiii'. Perhaps this is an invalid value (e.g. caused by calling a virtual method on a NULL pointer)? Or calling a function with an incorrect type, which will fail? (it is worth building your source files with -Werror (warnings are errors), as warnings can indicate undefined behavior which can cause this)");
+ err("Build with ASSERTIONS=2 for more info.");
+ abort(x);
+}
 function nullFunc_iiiifiiiii(x) {
  err("Invalid function pointer called with signature 'iiiifiiiii'. Perhaps this is an invalid value (e.g. caused by calling a virtual method on a NULL pointer)? Or calling a function with an incorrect type, which will fail? (it is worth building your source files with -Werror (warnings are errors), as warnings can indicate undefined behavior which can cause this)");
  err("Build with ASSERTIONS=2 for more info.");
@@ -14588,6 +14806,11 @@ function nullFunc_iiiifiiiii(x) {
 }
 function nullFunc_iiiii(x) {
  err("Invalid function pointer called with signature 'iiiii'. Perhaps this is an invalid value (e.g. caused by calling a virtual method on a NULL pointer)? Or calling a function with an incorrect type, which will fail? (it is worth building your source files with -Werror (warnings are errors), as warnings can indicate undefined behavior which can cause this)");
+ err("Build with ASSERTIONS=2 for more info.");
+ abort(x);
+}
+function nullFunc_iiiiidii(x) {
+ err("Invalid function pointer called with signature 'iiiiidii'. Perhaps this is an invalid value (e.g. caused by calling a virtual method on a NULL pointer)? Or calling a function with an incorrect type, which will fail? (it is worth building your source files with -Werror (warnings are errors), as warnings can indicate undefined behavior which can cause this)");
  err("Build with ASSERTIONS=2 for more info.");
  abort(x);
 }
@@ -14826,6 +15049,11 @@ function nullFunc_ji(x) {
  err("Build with ASSERTIONS=2 for more info.");
  abort(x);
 }
+function nullFunc_jid(x) {
+ err("Invalid function pointer called with signature 'jid'. Perhaps this is an invalid value (e.g. caused by calling a virtual method on a NULL pointer)? Or calling a function with an incorrect type, which will fail? (it is worth building your source files with -Werror (warnings are errors), as warnings can indicate undefined behavior which can cause this)");
+ err("Build with ASSERTIONS=2 for more info.");
+ abort(x);
+}
 function nullFunc_jidi(x) {
  err("Invalid function pointer called with signature 'jidi'. Perhaps this is an invalid value (e.g. caused by calling a virtual method on a NULL pointer)? Or calling a function with an incorrect type, which will fail? (it is worth building your source files with -Werror (warnings are errors), as warnings can indicate undefined behavior which can cause this)");
  err("Build with ASSERTIONS=2 for more info.");
@@ -14956,8 +15184,18 @@ function nullFunc_vid(x) {
  err("Build with ASSERTIONS=2 for more info.");
  abort(x);
 }
+function nullFunc_vidd(x) {
+ err("Invalid function pointer called with signature 'vidd'. Perhaps this is an invalid value (e.g. caused by calling a virtual method on a NULL pointer)? Or calling a function with an incorrect type, which will fail? (it is worth building your source files with -Werror (warnings are errors), as warnings can indicate undefined behavior which can cause this)");
+ err("Build with ASSERTIONS=2 for more info.");
+ abort(x);
+}
 function nullFunc_vidi(x) {
  err("Invalid function pointer called with signature 'vidi'. Perhaps this is an invalid value (e.g. caused by calling a virtual method on a NULL pointer)? Or calling a function with an incorrect type, which will fail? (it is worth building your source files with -Werror (warnings are errors), as warnings can indicate undefined behavior which can cause this)");
+ err("Build with ASSERTIONS=2 for more info.");
+ abort(x);
+}
+function nullFunc_vidii(x) {
+ err("Invalid function pointer called with signature 'vidii'. Perhaps this is an invalid value (e.g. caused by calling a virtual method on a NULL pointer)? Or calling a function with an incorrect type, which will fail? (it is worth building your source files with -Werror (warnings are errors), as warnings can indicate undefined behavior which can cause this)");
  err("Build with ASSERTIONS=2 for more info.");
  abort(x);
 }
@@ -15078,6 +15316,11 @@ function nullFunc_vii(x) {
 }
 function nullFunc_viid(x) {
  err("Invalid function pointer called with signature 'viid'. Perhaps this is an invalid value (e.g. caused by calling a virtual method on a NULL pointer)? Or calling a function with an incorrect type, which will fail? (it is worth building your source files with -Werror (warnings are errors), as warnings can indicate undefined behavior which can cause this)");
+ err("Build with ASSERTIONS=2 for more info.");
+ abort(x);
+}
+function nullFunc_viidd(x) {
+ err("Invalid function pointer called with signature 'viidd'. Perhaps this is an invalid value (e.g. caused by calling a virtual method on a NULL pointer)? Or calling a function with an incorrect type, which will fail? (it is worth building your source files with -Werror (warnings are errors), as warnings can indicate undefined behavior which can cause this)");
  err("Build with ASSERTIONS=2 for more info.");
  abort(x);
 }
@@ -15536,8 +15779,8 @@ function nullFunc_vjji(x) {
  err("Build with ASSERTIONS=2 for more info.");
  abort(x);
 }
-Module["wasmTableSize"] = 80434;
-Module["wasmMaxTableSize"] = 80434;
+Module["wasmTableSize"] = 80490;
+Module["wasmMaxTableSize"] = 80490;
 function invoke_dddi(index, a1, a2, a3) {
  var sp = stackSave();
  try {
@@ -15622,6 +15865,16 @@ function invoke_diiii(index, a1, a2, a3, a4) {
  var sp = stackSave();
  try {
   return Module["dynCall_diiii"](index, a1, a2, a3, a4);
+ } catch (e) {
+  stackRestore(sp);
+  if (typeof e !== "number" && e !== "longjmp") throw e;
+  Module["setThrew"](1, 0);
+ }
+}
+function invoke_dij(index, a1, a2, a3) {
+ var sp = stackSave();
+ try {
+  return Module["dynCall_dij"](index, a1, a2, a3);
  } catch (e) {
   stackRestore(sp);
   if (typeof e !== "number" && e !== "longjmp") throw e;
@@ -16238,6 +16491,16 @@ function invoke_iiiifiii(index, a1, a2, a3, a4, a5, a6, a7) {
   Module["setThrew"](1, 0);
  }
 }
+function invoke_iiiifiiii(index, a1, a2, a3, a4, a5, a6, a7, a8) {
+ var sp = stackSave();
+ try {
+  return Module["dynCall_iiiifiiii"](index, a1, a2, a3, a4, a5, a6, a7, a8);
+ } catch (e) {
+  stackRestore(sp);
+  if (typeof e !== "number" && e !== "longjmp") throw e;
+  Module["setThrew"](1, 0);
+ }
+}
 function invoke_iiiifiiiii(index, a1, a2, a3, a4, a5, a6, a7, a8, a9) {
  var sp = stackSave();
  try {
@@ -16252,6 +16515,16 @@ function invoke_iiiii(index, a1, a2, a3, a4) {
  var sp = stackSave();
  try {
   return Module["dynCall_iiiii"](index, a1, a2, a3, a4);
+ } catch (e) {
+  stackRestore(sp);
+  if (typeof e !== "number" && e !== "longjmp") throw e;
+  Module["setThrew"](1, 0);
+ }
+}
+function invoke_iiiiidii(index, a1, a2, a3, a4, a5, a6, a7) {
+ var sp = stackSave();
+ try {
+  return Module["dynCall_iiiiidii"](index, a1, a2, a3, a4, a5, a6, a7);
  } catch (e) {
   stackRestore(sp);
   if (typeof e !== "number" && e !== "longjmp") throw e;
@@ -16728,6 +17001,16 @@ function invoke_ji(index, a1) {
   Module["setThrew"](1, 0);
  }
 }
+function invoke_jid(index, a1, a2) {
+ var sp = stackSave();
+ try {
+  return Module["dynCall_jid"](index, a1, a2);
+ } catch (e) {
+  stackRestore(sp);
+  if (typeof e !== "number" && e !== "longjmp") throw e;
+  Module["setThrew"](1, 0);
+ }
+}
 function invoke_jidi(index, a1, a2, a3) {
  var sp = stackSave();
  try {
@@ -16988,10 +17271,30 @@ function invoke_vid(index, a1, a2) {
   Module["setThrew"](1, 0);
  }
 }
+function invoke_vidd(index, a1, a2, a3) {
+ var sp = stackSave();
+ try {
+  Module["dynCall_vidd"](index, a1, a2, a3);
+ } catch (e) {
+  stackRestore(sp);
+  if (typeof e !== "number" && e !== "longjmp") throw e;
+  Module["setThrew"](1, 0);
+ }
+}
 function invoke_vidi(index, a1, a2, a3) {
  var sp = stackSave();
  try {
   Module["dynCall_vidi"](index, a1, a2, a3);
+ } catch (e) {
+  stackRestore(sp);
+  if (typeof e !== "number" && e !== "longjmp") throw e;
+  Module["setThrew"](1, 0);
+ }
+}
+function invoke_vidii(index, a1, a2, a3, a4) {
+ var sp = stackSave();
+ try {
+  Module["dynCall_vidii"](index, a1, a2, a3, a4);
  } catch (e) {
   stackRestore(sp);
   if (typeof e !== "number" && e !== "longjmp") throw e;
@@ -17232,6 +17535,16 @@ function invoke_viid(index, a1, a2, a3) {
  var sp = stackSave();
  try {
   Module["dynCall_viid"](index, a1, a2, a3);
+ } catch (e) {
+  stackRestore(sp);
+  if (typeof e !== "number" && e !== "longjmp") throw e;
+  Module["setThrew"](1, 0);
+ }
+}
+function invoke_viidd(index, a1, a2, a3, a4) {
+ var sp = stackSave();
+ try {
+  Module["dynCall_viidd"](index, a1, a2, a3, a4);
  } catch (e) {
   stackRestore(sp);
   if (typeof e !== "number" && e !== "longjmp") throw e;
@@ -18165,6 +18478,7 @@ Module.asmLibraryArg = {
  "nullFunc_dii": nullFunc_dii,
  "nullFunc_diii": nullFunc_diii,
  "nullFunc_diiii": nullFunc_diiii,
+ "nullFunc_dij": nullFunc_dij,
  "nullFunc_dji": nullFunc_dji,
  "nullFunc_f": nullFunc_f,
  "nullFunc_fdi": nullFunc_fdi,
@@ -18226,8 +18540,10 @@ Module.asmLibraryArg = {
  "nullFunc_iiiifi": nullFunc_iiiifi,
  "nullFunc_iiiifii": nullFunc_iiiifii,
  "nullFunc_iiiifiii": nullFunc_iiiifiii,
+ "nullFunc_iiiifiiii": nullFunc_iiiifiiii,
  "nullFunc_iiiifiiiii": nullFunc_iiiifiiiii,
  "nullFunc_iiiii": nullFunc_iiiii,
+ "nullFunc_iiiiidii": nullFunc_iiiiidii,
  "nullFunc_iiiiiff": nullFunc_iiiiiff,
  "nullFunc_iiiiifiii": nullFunc_iiiiifiii,
  "nullFunc_iiiiifiiiiif": nullFunc_iiiiifiiiiif,
@@ -18275,6 +18591,7 @@ Module.asmLibraryArg = {
  "nullFunc_jdii": nullFunc_jdii,
  "nullFunc_jfi": nullFunc_jfi,
  "nullFunc_ji": nullFunc_ji,
+ "nullFunc_jid": nullFunc_jid,
  "nullFunc_jidi": nullFunc_jidi,
  "nullFunc_jidii": nullFunc_jidii,
  "nullFunc_jii": nullFunc_jii,
@@ -18301,7 +18618,9 @@ Module.asmLibraryArg = {
  "nullFunc_vfi": nullFunc_vfi,
  "nullFunc_vi": nullFunc_vi,
  "nullFunc_vid": nullFunc_vid,
+ "nullFunc_vidd": nullFunc_vidd,
  "nullFunc_vidi": nullFunc_vidi,
+ "nullFunc_vidii": nullFunc_vidii,
  "nullFunc_vidiii": nullFunc_vidiii,
  "nullFunc_vif": nullFunc_vif,
  "nullFunc_viff": nullFunc_viff,
@@ -18326,6 +18645,7 @@ Module.asmLibraryArg = {
  "nullFunc_vifijii": nullFunc_vifijii,
  "nullFunc_vii": nullFunc_vii,
  "nullFunc_viid": nullFunc_viid,
+ "nullFunc_viidd": nullFunc_viidd,
  "nullFunc_viidi": nullFunc_viidi,
  "nullFunc_viidii": nullFunc_viidii,
  "nullFunc_viif": nullFunc_viif,
@@ -18426,6 +18746,7 @@ Module.asmLibraryArg = {
  "invoke_dii": invoke_dii,
  "invoke_diii": invoke_diii,
  "invoke_diiii": invoke_diiii,
+ "invoke_dij": invoke_dij,
  "invoke_dji": invoke_dji,
  "invoke_f": invoke_f,
  "invoke_fdi": invoke_fdi,
@@ -18487,8 +18808,10 @@ Module.asmLibraryArg = {
  "invoke_iiiifi": invoke_iiiifi,
  "invoke_iiiifii": invoke_iiiifii,
  "invoke_iiiifiii": invoke_iiiifiii,
+ "invoke_iiiifiiii": invoke_iiiifiiii,
  "invoke_iiiifiiiii": invoke_iiiifiiiii,
  "invoke_iiiii": invoke_iiiii,
+ "invoke_iiiiidii": invoke_iiiiidii,
  "invoke_iiiiiff": invoke_iiiiiff,
  "invoke_iiiiifiii": invoke_iiiiifiii,
  "invoke_iiiiifiiiiif": invoke_iiiiifiiiiif,
@@ -18536,6 +18859,7 @@ Module.asmLibraryArg = {
  "invoke_jdii": invoke_jdii,
  "invoke_jfi": invoke_jfi,
  "invoke_ji": invoke_ji,
+ "invoke_jid": invoke_jid,
  "invoke_jidi": invoke_jidi,
  "invoke_jidii": invoke_jidii,
  "invoke_jii": invoke_jii,
@@ -18562,7 +18886,9 @@ Module.asmLibraryArg = {
  "invoke_vfi": invoke_vfi,
  "invoke_vi": invoke_vi,
  "invoke_vid": invoke_vid,
+ "invoke_vidd": invoke_vidd,
  "invoke_vidi": invoke_vidi,
+ "invoke_vidii": invoke_vidii,
  "invoke_vidiii": invoke_vidiii,
  "invoke_vif": invoke_vif,
  "invoke_viff": invoke_viff,
@@ -18587,6 +18913,7 @@ Module.asmLibraryArg = {
  "invoke_vifijii": invoke_vifijii,
  "invoke_vii": invoke_vii,
  "invoke_viid": invoke_viid,
+ "invoke_viidd": invoke_viidd,
  "invoke_viidi": invoke_viidi,
  "invoke_viidii": invoke_viidii,
  "invoke_viif": invoke_viif,
@@ -18723,6 +19050,30 @@ Module.asmLibraryArg = {
  "_JS_SystemInfo_HasCursorLock": _JS_SystemInfo_HasCursorLock,
  "_JS_SystemInfo_HasFullscreen": _JS_SystemInfo_HasFullscreen,
  "_JS_SystemInfo_HasWebGL": _JS_SystemInfo_HasWebGL,
+ "_JS_Video_CanPlayFormat": _JS_Video_CanPlayFormat,
+ "_JS_Video_Create": _JS_Video_Create,
+ "_JS_Video_Destroy": _JS_Video_Destroy,
+ "_JS_Video_Duration": _JS_Video_Duration,
+ "_JS_Video_EnableAudioTrack": _JS_Video_EnableAudioTrack,
+ "_JS_Video_GetAudioLanguageCode": _JS_Video_GetAudioLanguageCode,
+ "_JS_Video_GetNumAudioTracks": _JS_Video_GetNumAudioTracks,
+ "_JS_Video_Height": _JS_Video_Height,
+ "_JS_Video_IsPlaying": _JS_Video_IsPlaying,
+ "_JS_Video_IsReady": _JS_Video_IsReady,
+ "_JS_Video_Pause": _JS_Video_Pause,
+ "_JS_Video_Play": _JS_Video_Play,
+ "_JS_Video_Seek": _JS_Video_Seek,
+ "_JS_Video_SetEndedHandler": _JS_Video_SetEndedHandler,
+ "_JS_Video_SetErrorHandler": _JS_Video_SetErrorHandler,
+ "_JS_Video_SetLoop": _JS_Video_SetLoop,
+ "_JS_Video_SetMute": _JS_Video_SetMute,
+ "_JS_Video_SetPlaybackRate": _JS_Video_SetPlaybackRate,
+ "_JS_Video_SetReadyHandler": _JS_Video_SetReadyHandler,
+ "_JS_Video_SetSeekedOnceHandler": _JS_Video_SetSeekedOnceHandler,
+ "_JS_Video_SetVolume": _JS_Video_SetVolume,
+ "_JS_Video_Time": _JS_Video_Time,
+ "_JS_Video_UpdateToTexture": _JS_Video_UpdateToTexture,
+ "_JS_Video_Width": _JS_Video_Width,
  "_JS_WebRequest_Abort": _JS_WebRequest_Abort,
  "_JS_WebRequest_Create": _JS_WebRequest_Create,
  "_JS_WebRequest_GetResponseHeaders": _JS_WebRequest_GetResponseHeaders,
@@ -19105,6 +19456,12 @@ Module.asmLibraryArg = {
  "emscriptenWebGLValidateMapBufferTarget": emscriptenWebGLValidateMapBufferTarget,
  "emscripten_get_canvas_element_size_js": emscripten_get_canvas_element_size_js,
  "emscripten_set_canvas_element_size_js": emscripten_set_canvas_element_size_js,
+ "jsVideoAddPendingBlockedVideo": jsVideoAddPendingBlockedVideo,
+ "jsVideoAllAudioTracksAreDisabled": jsVideoAllAudioTracksAreDisabled,
+ "jsVideoAttemptToPlayBlockedVideos": jsVideoAttemptToPlayBlockedVideos,
+ "jsVideoEnded": jsVideoEnded,
+ "jsVideoPlayPendingBlockedVideo": jsVideoPlayPendingBlockedVideo,
+ "jsVideoRemovePendingBlockedVideo": jsVideoRemovePendingBlockedVideo,
  "DYNAMICTOP_PTR": DYNAMICTOP_PTR,
  "tempDoublePtr": tempDoublePtr,
  "ABORT": ABORT,
@@ -25228,6 +25585,11 @@ var dynCall_diiii = Module["dynCall_diiii"] = (function() {
  assert(!runtimeExited, "the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)");
  return Module["asm"]["dynCall_diiii"].apply(null, arguments);
 });
+var dynCall_dij = Module["dynCall_dij"] = (function() {
+ assert(runtimeInitialized, "you need to wait for the runtime to be ready (e.g. wait for main() to be called)");
+ assert(!runtimeExited, "the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)");
+ return Module["asm"]["dynCall_dij"].apply(null, arguments);
+});
 var dynCall_dji = Module["dynCall_dji"] = (function() {
  assert(runtimeInitialized, "you need to wait for the runtime to be ready (e.g. wait for main() to be called)");
  assert(!runtimeExited, "the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)");
@@ -25533,6 +25895,11 @@ var dynCall_iiiifiii = Module["dynCall_iiiifiii"] = (function() {
  assert(!runtimeExited, "the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)");
  return Module["asm"]["dynCall_iiiifiii"].apply(null, arguments);
 });
+var dynCall_iiiifiiii = Module["dynCall_iiiifiiii"] = (function() {
+ assert(runtimeInitialized, "you need to wait for the runtime to be ready (e.g. wait for main() to be called)");
+ assert(!runtimeExited, "the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)");
+ return Module["asm"]["dynCall_iiiifiiii"].apply(null, arguments);
+});
 var dynCall_iiiifiiiii = Module["dynCall_iiiifiiiii"] = (function() {
  assert(runtimeInitialized, "you need to wait for the runtime to be ready (e.g. wait for main() to be called)");
  assert(!runtimeExited, "the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)");
@@ -25542,6 +25909,11 @@ var dynCall_iiiii = Module["dynCall_iiiii"] = (function() {
  assert(runtimeInitialized, "you need to wait for the runtime to be ready (e.g. wait for main() to be called)");
  assert(!runtimeExited, "the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)");
  return Module["asm"]["dynCall_iiiii"].apply(null, arguments);
+});
+var dynCall_iiiiidii = Module["dynCall_iiiiidii"] = (function() {
+ assert(runtimeInitialized, "you need to wait for the runtime to be ready (e.g. wait for main() to be called)");
+ assert(!runtimeExited, "the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)");
+ return Module["asm"]["dynCall_iiiiidii"].apply(null, arguments);
 });
 var dynCall_iiiiiff = Module["dynCall_iiiiiff"] = (function() {
  assert(runtimeInitialized, "you need to wait for the runtime to be ready (e.g. wait for main() to be called)");
@@ -25778,6 +26150,11 @@ var dynCall_ji = Module["dynCall_ji"] = (function() {
  assert(!runtimeExited, "the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)");
  return Module["asm"]["dynCall_ji"].apply(null, arguments);
 });
+var dynCall_jid = Module["dynCall_jid"] = (function() {
+ assert(runtimeInitialized, "you need to wait for the runtime to be ready (e.g. wait for main() to be called)");
+ assert(!runtimeExited, "the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)");
+ return Module["asm"]["dynCall_jid"].apply(null, arguments);
+});
 var dynCall_jidi = Module["dynCall_jidi"] = (function() {
  assert(runtimeInitialized, "you need to wait for the runtime to be ready (e.g. wait for main() to be called)");
  assert(!runtimeExited, "the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)");
@@ -25908,10 +26285,20 @@ var dynCall_vid = Module["dynCall_vid"] = (function() {
  assert(!runtimeExited, "the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)");
  return Module["asm"]["dynCall_vid"].apply(null, arguments);
 });
+var dynCall_vidd = Module["dynCall_vidd"] = (function() {
+ assert(runtimeInitialized, "you need to wait for the runtime to be ready (e.g. wait for main() to be called)");
+ assert(!runtimeExited, "the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)");
+ return Module["asm"]["dynCall_vidd"].apply(null, arguments);
+});
 var dynCall_vidi = Module["dynCall_vidi"] = (function() {
  assert(runtimeInitialized, "you need to wait for the runtime to be ready (e.g. wait for main() to be called)");
  assert(!runtimeExited, "the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)");
  return Module["asm"]["dynCall_vidi"].apply(null, arguments);
+});
+var dynCall_vidii = Module["dynCall_vidii"] = (function() {
+ assert(runtimeInitialized, "you need to wait for the runtime to be ready (e.g. wait for main() to be called)");
+ assert(!runtimeExited, "the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)");
+ return Module["asm"]["dynCall_vidii"].apply(null, arguments);
 });
 var dynCall_vidiii = Module["dynCall_vidiii"] = (function() {
  assert(runtimeInitialized, "you need to wait for the runtime to be ready (e.g. wait for main() to be called)");
@@ -26032,6 +26419,11 @@ var dynCall_viid = Module["dynCall_viid"] = (function() {
  assert(runtimeInitialized, "you need to wait for the runtime to be ready (e.g. wait for main() to be called)");
  assert(!runtimeExited, "the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)");
  return Module["asm"]["dynCall_viid"].apply(null, arguments);
+});
+var dynCall_viidd = Module["dynCall_viidd"] = (function() {
+ assert(runtimeInitialized, "you need to wait for the runtime to be ready (e.g. wait for main() to be called)");
+ assert(!runtimeExited, "the runtime was exited (use NO_EXIT_RUNTIME to keep it alive after main() exits)");
+ return Module["asm"]["dynCall_viidd"].apply(null, arguments);
 });
 var dynCall_viidi = Module["dynCall_viidi"] = (function() {
  assert(runtimeInitialized, "you need to wait for the runtime to be ready (e.g. wait for main() to be called)");
