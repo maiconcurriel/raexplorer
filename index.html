@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Brinquedoteca</title>
+    <title>AssetExplorer</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
@@ -25,15 +25,15 @@
     <script>
       const hideFullScreenButton = "";
       const buildUrl = "Build";
-      const loaderUrl = buildUrl + "/brinquedoteste.loader.js";
+      const loaderUrl = buildUrl + "/AssetExplorer.loader.js";
       const config = {
-        dataUrl: buildUrl + "/brinquedoteste.data",
-        frameworkUrl: buildUrl + "/brinquedoteste.framework.js",
-        codeUrl: buildUrl + "/brinquedoteste.wasm",
+        dataUrl: buildUrl + "/AssetExplorer.data",
+        frameworkUrl: buildUrl + "/AssetExplorer.framework.js",
+        codeUrl: buildUrl + "/AssetExplorer.wasm",
         streamingAssetsUrl: "StreamingAssets",
-        companyName: "Vitru",
-        productName: "Brinquedoteca",
-        productVersion: "1.2",
+        companyName: "DefaultCompany",
+        productName: "AssetExplorer",
+        productVersion: "0.1",
       };
 
       const container = document.querySelector("#unity-container");
@@ -76,7 +76,7 @@
           loadingCover.style.display = "none";
           if (canFullscreen) {
             if (!hideFullScreenButton) {
-              fullscreenButton.style.display = "";
+              fullscreenButton.style.display = "true";
             }
             fullscreenButton.onclick = () => {
               unityInstance.SetFullscreen(1);
