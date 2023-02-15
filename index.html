@@ -5,8 +5,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="TemplateData/favicon.png">
 
     <title>AssetExplorer</title>
   </head>
@@ -15,11 +16,13 @@
       <div class="aspect"></div>
       <div class="webgl-content">
         <div id="unityContainer">
-          <canvas id="unity-canvas" style="background: #231F20"></canvas>
+          <canvas id="unity-canvas"></canvas>
         </div>
       </div>
     </div>   
-
+    <div class="info">
+      <p>Tela cheia: pressione F</p>
+    </div>
     <script src="MyLoader.js"></script>
     <script>
       createUnityInstance(document.querySelector("#unity-canvas"), {
@@ -32,6 +35,20 @@
         productVersion: "0.1",
       }).then((unityInstance) => {
         myGameInstance = unityInstance;
+      });
+    </script>
+    <script>
+      var isFullscreen = false;
+
+      document.addEventListener('keydown', function(event) {
+          if (event.which === 70) {
+              if (!isFullscreen) {
+                myGameInstance.SetFullscreen(1);
+              } else {
+                myGameInstance.SetFullscreen(0);
+              }
+              isFullscreen = !isFullscreen;
+          }
       });
     </script>
   </body>
