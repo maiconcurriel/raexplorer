@@ -23,6 +23,7 @@ body {
     background-image: url('splash.png');
     background-repeat: no-repeat;
     background-position: center;
+    background-color: #323A5E;
 }
 #loading-cover {
     position: center;
@@ -100,5 +101,3 @@ body {
     transform: rotate(360deg);
   }
 }
-
-
