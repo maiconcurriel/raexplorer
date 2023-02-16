@@ -18,17 +18,14 @@ body {
     height: 100%;
 }
 #unity-canvas {
-    width: 960px;
-    height: 600px;
+    width: 100%;
+    height: 100%;
     background-image: url('splash.png');
-    margin: auto;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 #loading-cover {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    position: center;
     display: block;
     justify-content: center;
     align-items: center;
