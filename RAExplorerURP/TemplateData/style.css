@@ -22,37 +22,16 @@ body {
     height: 100%;
 }
 #loading-cover {
-    position: center;
-    display: block;
-    justify-content: center;
-    align-items: center;
-	margin: auto;
-	text-align: center;
 }
 #unity-loading-bar {
-	text-align: center;
-	margin: auto;
 }
 #unity-logo {
-	padding: 50px;
-	text-align: center;
 }
 #unity-logo img {
-	padding: 50px;
-    max-width: 80%;
 }
 #unity-progress-bar-empty {
-    width: 50%;
-    height: 25px;
-    margin: auto;
-    text-align: center;
-    border: 2px solid white;
-    padding: 1px;
 }
 #unity-progress-bar-full {
-    width: 0%;
-    height: 100%;
-    background: white;
 }
 .light #unity-progress-bar-empty {
     border-color: black;
