@@ -413,5 +413,8 @@
     {"id":"768","descricao":"768 - Movimentação de Estoque: Indústria x Comércio"},
     {"id":"770","descricao":"770 - Teste VDRL"},
     {"id":"775","descricao":"775 - Molécula de Histamina e Cimetidina"},
-    {"id":"776","descricao":"776 - Fases do Ciclo Cardíaco e a Função de Bomba do Coração"}
+    {"id":"776","descricao":"776 - Fases do Ciclo Cardíaco e a Função de Bomba do Coração"},
+    {"id":"6000","descricao":"6000 - Coração"},
+    {"id":"6001","descricao":"6001 - Cérebro"},
+    {"id":"6002","descricao":"6002 - Esqueleto"}
 ]}]}]
