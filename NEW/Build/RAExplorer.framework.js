@@ -1289,10 +1289,10 @@ function dbg(text) {
 // === Body ===
 
 var ASM_CONSTS = {
-  5684848: () => { Module['emscripten_get_now_backup'] = performance.now; },  
+  5684800: () => { Module['emscripten_get_now_backup'] = performance.now; },  
+ 5684855: ($0) => { performance.now = function() { return $0; }; },  
  5684903: ($0) => { performance.now = function() { return $0; }; },  
- 5684951: ($0) => { performance.now = function() { return $0; }; },  
- 5684999: () => { performance.now = Module['emscripten_get_now_backup']; }
+ 5684951: () => { performance.now = Module['emscripten_get_now_backup']; }
 };
 
 
