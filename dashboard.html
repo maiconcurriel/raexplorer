@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>RA Explorer - Dashboard</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.png">
+    <link rel="stylesheet" href="TemplateData/dashstyle.css">
+
+</head>
+
+<body>
+
+    <div class="dashboard-container">
+
+        <header class="dashboard-header">
+
+            <img src="TemplateData/RA_explorer.png">
+
+        </header>
+
+
+        <main class="dashboard-content">
+
+            <section class="info-section">
+
+                <h2>Informações Gerais</h2>
+
+                <ul id="general-info">
+
+                    <li id="totalobj">Total de objetos: Carregando...</li>
+
+                    <li id="total">Total de objetos acessados: Carregando...</li>
+
+                    <li id="views">Total de acessos 👀: Carregando...</li>
+
+                    <li id="ratings">Total de avaliações ⭐: Carregando...</li>
+
+                </ul>
+
+            </section>
+
+
+            <section class="info-section">
+
+                <h2>Top 3 + Acessados</h2>
+
+                <div class="top-3-container" id="top-3-most-viewed">
+
+                    <div class="top-3-item">Carregando...</div>
+
+                    <div class="top-3-item">Carregando...</div>
+
+                    <div class="top-3-item">Carregando...</div>
+
+                </div>
+
+            </section>
+
+
+            <section class="search-section">
+
+                <h2>Consulte um Objeto</h2>
+
+                <div class="search-box">
+
+                    <input type="text" id="object-id" placeholder="Para obter informações detalhadas, digite o número do objeto">
+
+                    <button onclick="consultarObjeto()">Pesquisar</button>
+
+                </div>
+
+            </section>
+
+
+            <section class="info-section">
+
+                <h2>Informações detalhadas do Objeto</h2>
+
+                <div id="object-info">
+
+                  <p>As informações do objeto serão detalhadas aqui</p>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+
+    <script>
+
+        // Seu arquivo de configuração do Firebase
+
+        const firebaseConfig = {
+
+            apiKey: "AIzaSyCHuwulHqDx8EKviao5QAvN1iNWVomlaD4",
+
+            authDomain: "teste-382817.firebaseapp.com",
+
+            databaseURL: "https://teste-382817-default-rtdb.firebaseio.com",
+
+            projectId: "teste-382817",
+
+            storageBucket: "teste-382817.firebasestorage.app",
+
+            messagingSenderId: "493784072099",
+
+            appId: "1:493784072099:web:0d0b01f5273471ebbba416"
+
+        };
+
+
+        // Inicialize o Firebase
+
+        firebase.initializeApp(firebaseConfig);
+
+
+        // Obtém uma referência para o banco de dados
+
+        const database = firebase.database();
+
+        const ref = database.ref('/RARating');
+
+
+        // Carrega as informações gerais
+
+        carregarInformacoesGerais();
+
+
+        // Encontra e exibe os 3 objetos mais vistos
+
+        encontrarEExibirTop3ObjetosMaisVistos();
+
+
+        function carregarInformacoesGerais() {
+
+            database.ref('/RARating/totalobj').on('value', (snapshot) => {
+
+            document.getElementById('totalobj').textContent = `Total de objetos: ${snapshot.val()}`;
+
+            });
+
+            database.ref('/RARating/total').on('value', (snapshot) => {
+
+                document.getElementById('total').textContent = `Total de objetos acessados: ${snapshot.val()}`;
+
+            });
+
+            database.ref('/RARating/views').on('value', (snapshot) => {
+
+                document.getElementById('views').textContent = `Total de acessos 👀:  ${snapshot.val()}`;
+
+            });
+
+            database.ref('/RARating/ratings').on('value', (snapshot) => {
+
+                document.getElementById('ratings').textContent = `Total de avaliações ⭐: ${snapshot.val()}`;
+
+            });
+
+        }
+
+
+        function encontrarEExibirTop3ObjetosMaisVistos() {
+
+            const raratingRef = database.ref('/RARating');
+
+
+            raratingRef.once('value', (snapshot) => {
+
+                const data = snapshot.val();
+
+                const objetosComViews = [];
+
+
+                for (const key in data) {
+
+                    if (data.hasOwnProperty(key) && data[key].view !== undefined) {
+
+                        objetosComViews.push({ key: key, data: data[key] });
+
+                    }
+
+                }
+
+
+                // Ordena os objetos por views em ordem decrescente
+
+                objetosComViews.sort((a, b) => b.data.view - a.data.view);
+
+
+                // Pega os 3 primeiros objetos
+
+                const top3Objetos = objetosComViews.slice(0, 3);
+
+
+                exibirTop3ObjetosMaisVistos(top3Objetos);
+
+            });
+
+        }
+
+
+        function exibirTop3ObjetosMaisVistos(objetos) {
+
+            const top3Container = document.getElementById('top-3-most-viewed');
+
+            top3Container.innerHTML = ''; // Limpa o container
+
+
+            if (objetos.length > 0) {
+
+                objetos.forEach((objeto) => {
+
+                    const top3Item = document.createElement('div');
+
+                    top3Item.classList.add('top-3-item');
+
+
+                    // Cria a imagem do objeto
+
+                    const img = document.createElement('img');
+
+                    img.src = `https://221322w.ha.azioncdn.net/Portal/images/elemento/${objeto.key}.png`;
+
+                    img.alt = `Objeto ${objeto.key}`;
+
+                    img.style.maxWidth = '100px'; // Ajuste o tamanho conforme necessário
+
+                    img.style.maxHeight = '100px';
+
+                    // número do obj
+
+                    const ul = document.createElement('ul');
+
+                    ul.innerHTML = `
+
+                        <li>⭐: ${objeto.data.star1}</li>
+
+                        <li>⭐⭐: ${objeto.data.star2}</li>
+
+                        <li>⭐⭐⭐: ${objeto.data.star3}</li>
+
+                        <li>⭐⭐⭐⭐: ${objeto.data.star4}</li>
+
+                        <li>⭐⭐⭐⭐⭐: ${objeto.data.star5}</li>
+
+                        <li>👀: ${objeto.data.view}</li>
+
+                    `;
+
+
+                    top3Item.appendChild(img); // Adiciona a imagem ao item
+
+                    top3Item.appendChild(ul);
+
+                    top3Container.appendChild(top3Item);
+
+                });
+
+            } else {
+
+                const top3Item = document.createElement('div');
+
+                top3Item.classList.add('top-3-item');
+
+                top3Item.textContent = 'Nenhum objeto com views encontrado.';
+
+                top3Container.appendChild(top3Item);
+
+            }
+
+        }
+
+
+        // Consulta um objeto específico
+
+        function consultarObjeto() {
+
+            const objectId = document.getElementById('object-id').value;
+
+            const objectRef = database.ref(`/RARating/${objectId}`);
+
+
+            objectRef.once('value', (snapshot) => {
+
+                const data = snapshot.val();
+
+                exibirInformacoesDoObjeto(data);
+
+            });
+
+        }
+
+
+        // Exibe as informações do objeto consultado
+
+        function exibirInformacoesDoObjeto(data) {
+
+            const objectInfo = document.getElementById('object-info');
+
+            objectInfo.innerHTML = ''; // Limpa a lista
+
+
+            if (data) {
+
+                // Cria a imagem do objeto                
+                
+                const img = document.createElement('img');
+
+                img.src = `https://221322w.ha.azioncdn.net/Portal/images/elemento/${document.getElementById('object-id').value}.png`;
+
+                img.alt = `Objeto ${document.getElementById('object-id').value}`;
+
+                img.style.maxWidth = '100px'; // Ajuste o tamanho conforme necessário
+
+                img.style.maxHeight = '100px';
+
+                objectInfo.appendChild(img);
+
+
+                const ul = document.createElement('ul');
+
+                for (const key in data) {
+
+                    if (data.hasOwnProperty(key)) {
+
+                        let emoji = key;
+
+                        switch (key) {
+
+                            case 'star1': emoji = '⭐'; break;
+
+                            case 'star2': emoji = '⭐⭐'; break;
+
+                            case 'star3': emoji = '⭐⭐⭐'; break;
+
+                            case 'star4': emoji = '⭐⭐⭐⭐'; break;
+
+                            case 'star5': emoji = '⭐⭐⭐⭐⭐'; break;
+
+                            case 'view': emoji = '👀'; break;
+
+                        }
+
+                        const listItem = document.createElement('li');
+
+                        listItem.textContent = `${emoji}: ${data[key]}`;
+
+                        ul.appendChild(listItem);
+
+                    }
+
+                }
+
+                objectInfo.appendChild(ul);
+
+            } else {
+
+                const message = document.createElement('p');
+
+                message.textContent = 'Objeto não encontrado.';
+
+                objectInfo.appendChild(message);
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
