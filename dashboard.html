@@ -31,9 +31,9 @@
 
                     <li id="totalobj">Total de objetos: Carregando...</li>
 
-                    <li id="total">Total de objetos acessados: Carregando...</li>
+                    <li id="total">Total de objetos visualizados: Carregando...</li>
 
-                    <li id="views">Total de acessos 👀: Carregando...</li>
+                    <li id="views">Total de visualizações 👀: Carregando...</li>
 
                     <li id="ratings">Total de avaliações ⭐: Carregando...</li>
 
@@ -44,7 +44,7 @@
 
             <section class="info-section">
 
-                <h2>Top 3 + Acessados</h2>
+                <h2>Top 3 + Visualizados</h2>
 
                 <div class="top-3-container" id="top-3-most-viewed">
 
@@ -150,13 +150,13 @@
 
             database.ref('/RARating/total').on('value', (snapshot) => {
 
-                document.getElementById('total').textContent = `Total de objetos acessados: ${snapshot.val()}`;
+                document.getElementById('total').textContent = `Total de objetos visualizações: ${snapshot.val()}`;
 
             });
 
             database.ref('/RARating/views').on('value', (snapshot) => {
 
-                document.getElementById('views').textContent = `Total de acessos 👀:  ${snapshot.val()}`;
+                document.getElementById('views').textContent = `Total de visualizações 👀:  ${snapshot.val()}`;
 
             });
 
