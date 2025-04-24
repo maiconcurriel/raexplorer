@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard - QR Codes</title>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+  <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>  
+  <link rel="stylesheet" href="css/qrcode.css">
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    input, button { padding: 10px; margin: 5px; }
+    .resultados { margin-top: 20px; }
+    .resultado { padding: 10px; border: 1px solid #ddd; margin-bottom: 10px; }
+    .formulario-cadastro { margin-top: 30px; }
+    .formulario-edicao { margin-top: 30px; }
+  </style>
+</head>
+<body>
+  <!-- Formulário de Cadastro de QR Code -->
+  <div class="formulario-cadastro">
+    <h3>Cadastrar Novo QR Code</h3>
+    <input type="text" id="cadastroNome" placeholder="Nome do QR Code" required onkeydown="ativarCadastro(event)" tabindex="1">
+    <input type="text" id="cadastroDisciplina" placeholder="Disciplina" required onkeydown="ativarCadastro(event)" tabindex="2">
+    <input type="text" id="cadastroLink" placeholder="Link do QR Code" required onkeydown="ativarCadastro(event)" tabindex="3">
+    <button onclick="cadastrarQRCode()" tabindex="4">Cadastrar QR Code</button>
+  </div>
+
+  <!-- Campos de Pesquisa Separados -->
+  <div>
+    <h3>Pesquisar QR Code</h3>
+    <input type="text" id="pesquisaNome" placeholder="Nome do QR Code" onkeydown="ativarPesquisar(event)" tabindex="5">
+    <input type="text" id="pesquisaDisciplina" placeholder="Disciplina" onkeydown="ativarPesquisar(event)" tabindex="6">
+    <input type="text" id="pesquisaLink" placeholder="Link" onkeydown="ativarPesquisar(event)" tabindex="7">
+    <input type="text" id="pesquisaCriador" placeholder="Criador" onkeydown="ativarPesquisar(event)" tabindex="8">
+    <button onclick="pesquisarQRCode()" tabindex="9">Pesquisar</button>
+  </div>
+
+  <!-- Contador de Resultados -->
+  <div id="contadorResultados"></div>
+
+  <div class="resultados" id="resultados">
+    <!-- Os resultados da pesquisa serão exibidos aqui -->
+  </div>
+
+  <!-- Formulário de Edição de QR Code -->
+  <div class="formulario-edicao" id="formularioEdicao" style="display: none;">
+    <h3>Editar QR Code</h3>
+    <input type="text" id="editaNome" placeholder="Nome do QR Code" required onkeydown="ativarEditar(event)" tabindex="10">
+    <input type="text" id="editaDisciplina" placeholder="Disciplina" required onkeydown="ativarEditar(event)" tabindex="11">
+    <input type="text" id="editaLink" placeholder="Link do QR Code" required onkeydown="ativarEditar(event)" tabindex="12">
+    <button onclick="editarQRCode()" tabindex="13">Salvar Alterações</button>
+    <button onclick="cancelarEdicao()" tabindex="14">Cancelar</button>
+  </div>
+
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyCYzI5tEfdEd1W2Y9TisWZKHe5yR4YTLdg",
+      authDomain: "raratingmd.firebaseapp.com",
+      databaseURL: "https://raratingmd-default-rtdb.firebaseio.com",
+      projectId: "raratingmd",
+      storageBucket: "raratingmd.firebasestorage.app",
+      messagingSenderId: "532670860158",
+      appId: "1:532670860158:web:e372730458dfc7506a812f"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+
+    // Verifica se o usuário está logado
+    const usuarioLogado = sessionStorage.getItem('usuarioLogado');
+    if (!usuarioLogado) {
+      alert('Você precisa estar logado para acessar esta página.');
+      window.location.href = 'login.html'; // redireciona para a página de login
+    }
+
+    const db = firebase.database();
+
+    function ativarPesquisar(event) {
+      if (event.key === 'Enter') {
+        pesquisarQRCode();  // Chama a função de pesquisa
+      }
+    }
+
+    function ativarCadastro(event) {
+      if (event.key === 'Enter') {
+        cadastrarQRCode();  // Chama a função de cadastro
+      }
+    }
+
+    function ativarEditar(event) {
+      if (event.key === 'Enter') {
+        editarQRCode();  // Chama a função de edição
+      }
+    }
+
+    // Função para cadastrar um novo QR Code
+    function cadastrarQRCode() {
+      const nome = document.getElementById('cadastroNome').value;
+      const disciplina = document.getElementById('cadastroDisciplina').value;
+      const link = document.getElementById('cadastroLink').value;
+      const criador = sessionStorage.getItem('usuarioLogado');  // Pega o criador do QR code
+
+      const numeroQRCode = Date.now();
+
+      if (nome && disciplina && link && criador) {
+        const db = firebase.database();
+        const ref = db.ref('qrcodes/' + numeroQRCode);
+        
+        ref.set({
+          nome: nome,
+          disciplina: disciplina,
+          numero: numeroQRCode,
+          criador: criador,
+          link: link,
+          views: 0
+        }).then(() => {
+          alert('QR Code cadastrado com sucesso!');
+          document.getElementById('cadastroNome').value = '';
+          document.getElementById('cadastroDisciplina').value = '';
+          document.getElementById('cadastroLink').value = '';
+        }).catch(error => {
+          console.error('Erro ao cadastrar QR Code:', error);
+          alert('Erro ao cadastrar QR Code.');
+        });
+      } else {
+        alert('Preencha todos os campos!');
+      }
+    }
+
+    // Função para pesquisar QR codes com base nos campos separados
+    function pesquisarQRCode() {
+      const nome = document.getElementById('pesquisaNome').value.toLowerCase();
+      const disciplina = document.getElementById('pesquisaDisciplina').value.toLowerCase();
+      const link = document.getElementById('pesquisaLink').value.toLowerCase();
+      const criador = document.getElementById('pesquisaCriador').value.toLowerCase();
+
+      if (!nome && !disciplina && !link && !criador) {
+        document.getElementById('resultados').innerHTML = '';
+        document.getElementById('contadorResultados').innerText = 'Nenhum resultado encontrado';
+        return;
+      }
+
+      const db = firebase.database();
+      const ref = db.ref('qrcodes');
+      
+      ref.once('value').then(snapshot => {
+        const dados = snapshot.val();
+        let resultados = '';
+        let contador = 0;
+
+        for (const key in dados) {
+          const qr = dados[key];
+          const nomeQR = qr.nome || '';
+          const disciplinaQR = qr.disciplina || '';
+          const numeroQRCode = key;
+          const criadorQR = qr.criador || '';
+          const linkQR = qr.link || '';
+          const viewsQR = qr.views || 0;
+
+          if (
+            nomeQR.toLowerCase().includes(nome) &&
+            disciplinaQR.toLowerCase().includes(disciplina) &&
+            linkQR.toLowerCase().includes(link) &&
+            criadorQR.toLowerCase().includes(criador)
+          ) {
+            resultados += `
+              <div class="resultado">
+                <p><strong>Nome:</strong> ${nomeQR}</p>
+                <p><strong>Disciplina:</strong> ${disciplinaQR}</p>
+                <p><strong>Criador:</strong> ${criadorQR}</p>
+                <p><strong>Link:</strong> <a href="${linkQR}" target="_blank">${linkQR}</a></p>
+                <p><strong>Visualizações:</strong> ${viewsQR}</p>
+                <p><strong>Número (Chave do QR Code):</strong> ${numeroQRCode}</p>
+                <button onclick="editarQRCode('${numeroQRCode}')">Editar</button> <!-- Alteração aqui -->
+                <button onclick="gerarQRCode('${numeroQRCode}', '${linkQR}')">Gerar QR Code</button>
+                <div id="qrcode-${numeroQRCode}" class="qrcode-img"></div> <!-- Contêiner para o QR Code gerado -->
+              </div>
+            `;
+            contador++;
+          }
+        }
+
+        document.getElementById('resultados').innerHTML = resultados;
+        document.getElementById('contadorResultados').innerText = `Resultados encontrados: ${contador || 'Nenhum'}`;
+      }).catch(error => {
+        console.error('Erro ao buscar dados no Firebase:', error);
+      });
+    }
+
+    // Função para gerar o QR Code
+    function gerarQRCode(numeroQRCode, link) {
+      const containerId = `qrcode-${numeroQRCode}`;  // Garantir que o ID é único para cada QR Code
+      const qrcodeContainer = document.getElementById(containerId);
+
+      if (qrcodeContainer) {
+        qrcodeContainer.innerHTML = '';  // Limpa o conteúdo anterior
+
+        // Cria o QR Code dentro do contêiner
+        new QRCode(qrcodeContainer, {
+          text: 'https://maiconcurriel.github.io/redir?'+numeroQRCode,
+          width: 128,
+          height: 128
+        });
+      } else {
+        console.error(`Contêiner com ID ${containerId} não encontrado.`);
+      }
+    }
+
+    // Função de edição
+    function editarQRCode(numeroQRCode) {
+      const db = firebase.database();
+      const ref = db.ref('qrcodes/' + numeroQRCode);
+      
+      ref.once('value').then(snapshot => {
+        const qr = snapshot.val();
+        
+        document.getElementById('editaNome').value = qr.nome;
+        document.getElementById('editaDisciplina').value = qr.disciplina;
+        document.getElementById('editaLink').value = qr.link;
+        
+        // Exibe o formulário de edição
+        document.getElementById('formularioEdicao').style.display = 'block';
+        
+        // Quando a edição for salva, deve atualizar o banco
+        document.querySelector('button[onclick="editarQRCode()"]').onclick = function() {
+          ref.update({
+            nome: document.getElementById('editaNome').value,
+            disciplina: document.getElementById('editaDisciplina').value,
+            link: document.getElementById('editaLink').value
+          }).then(() => {
+            alert('QR Code atualizado com sucesso!');
+            document.getElementById('formularioEdicao').style.display = 'none';
+          }).catch(error => {
+            console.error('Erro ao editar QR Code:', error);
+            alert('Erro ao editar QR Code.');
+          });
+        };
+      });
+    }
+
+    // Função para cancelar a edição
+    function cancelarEdicao() {
+      document.getElementById('formularioEdicao').style.display = 'none';
+    }
+  </script>
+</body>
+</html>

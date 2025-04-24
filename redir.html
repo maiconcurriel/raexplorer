@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecionando...</title>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+</head>
+<body>
+  <p>Redirecionando...</p>
+  <script>
+    // Configuração do Firebase
+    const firebaseConfig = {
+      apiKey: "AIzaSyCYzI5tEfdEd1W2Y9TisWZKHe5yR4YTLdg",
+      authDomain: "raratingmd.firebaseapp.com",
+      databaseURL: "https://raratingmd-default-rtdb.firebaseio.com",
+      projectId: "raratingmd",
+      storageBucket: "raratingmd.firebasestorage.app",
+      messagingSenderId: "532670860158",
+      appId: "1:532670860158:web:e372730458dfc7506a812f"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+
+    // Pegar o número da URL
+    const params = new URLSearchParams(window.location.search);
+    const numero = params.keys().next().value;
+
+    if (numero) {
+      // Acessa o QR Code no Firebase usando o número
+      db.ref('qrcodes/' + numero).once('value').then(snapshot => {
+        const dados = snapshot.val();
+        if (dados && dados.link) {
+          // Atualiza a contagem de visualizações individual
+          db.ref('qrcodes/' + numero).update({
+            views: (dados.views || 0) + 1
+          });
+
+          // Atualiza a contagem de visualizações totais
+          const totalViewsRef = db.ref('qrcodes/totalViews');
+          totalViewsRef.once('value').then(viewSnapshot => {
+            const total = viewSnapshot.val() || 0;
+            totalViewsRef.set(total + 1);
+          });
+
+          // Redireciona para o link
+          window.location.href = dados.link;
+        } else {
+          document.body.innerHTML = '<h1>QR Code não encontrado</h1>';
+        }
+      }).catch(error => {
+        console.error('Erro ao acessar o Firebase:', error);
+        document.body.innerHTML = '<h1>Erro ao acessar o Firebase</h1>';
+      });
+    } else {
+      document.body.innerHTML = '<h1>Nenhum número informado</h1>';
+    }
+  </script>
+</body>
+</html>

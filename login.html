@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+  <link rel="stylesheet" href="css/login.css">
+  <style>
+    body { font-family: sans-serif; display: flex; flex-direction: column; align-items: center; padding-top: 100px; }
+    input, button { margin: 5px; padding: 10px; width: 200px; }
+  </style>
+</head>
+<body>
+  <h2>Login</h2>
+  <input type="text" id="usuario" placeholder="Usuário" tabindex="1" onkeydown="ativarLogin(event)">
+  <input type="password" id="senha" placeholder="Senha" tabindex="2" onkeydown="ativarLogin(event)">
+  <button onclick="fazerLogin()" tabindex="3">Entrar</button>
+
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyCYzI5tEfdEd1W2Y9TisWZKHe5yR4YTLdg",
+      authDomain: "raratingmd.firebaseapp.com",
+      databaseURL: "https://raratingmd-default-rtdb.firebaseio.com",
+      projectId: "raratingmd",
+      storageBucket: "raratingmd.firebasestorage.app",
+      messagingSenderId: "532670860158",
+      appId: "1:532670860158:web:e372730458dfc7506a812f"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+
+    function ativarLogin(event) {
+      if (event.key === 'Enter') {
+        fazerLogin();  // Aciona a função de login ao pressionar Enter
+      }
+    }
+
+    function fazerLogin() {
+  const usuario = document.getElementById('usuario').value;
+  const senha = document.getElementById('senha').value;
+
+  db.ref('usuarios/' + usuario).once('value').then(snapshot => {
+    const dados = snapshot.val();
+    if (dados) {
+      if (dados.senha === senha) {
+        sessionStorage.setItem('usuarioLogado', usuario); // salva o nome do usuário logado
+        window.location.href = 'qrcode.html';
+      } else {
+        alert('Senha incorreta');
+      }
+    } else {
+      alert('Usuário não encontrado');
+    }
+  }).catch(error => {
+    console.error("Erro ao acessar o Firebase: ", error);
+  });
+}
+
+  </script>
+</body>
+</html>
