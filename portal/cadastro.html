@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro - QR Codes</title>
+  <link rel="stylesheet" href="css/qrcode.css">
+</head>
+<body>
+  <header class="header">
+    <nav>
+      <a href="cadastro.html">Cadastrar</a>
+      <a href="pesquisa.html">Pesquisar</a>
+      <a href="dash.html">Dashboard</a>
+    </nav>
+  </header>
+
+  <!-- Formulário de Cadastro de QR Code -->
+  <div class="formulario-cadastro">
+    <h3>Cadastrar Novo QR Code</h3>
+    <input type="text" id="cadastroNome" placeholder="Nome do QR Code" required onkeydown="ativarCadastro(event)" tabindex="1">
+    <input type="text" id="cadastroDisciplina" placeholder="Disciplina" required onkeydown="ativarCadastro(event)" tabindex="2">
+    <input type="text" id="cadastroLink" placeholder="Link do QR Code" required onkeydown="ativarCadastro(event)" tabindex="3">
+    <button onclick="cadastrarQRCode()" tabindex="4">Cadastrar QR Code</button>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyCYzI5tEfdEd1W2Y9TisWZKHe5yR4YTLdg",
+      authDomain: "raratingmd.firebaseapp.com",
+      databaseURL: "https://raratingmd-default-rtdb.firebaseio.com",
+      projectId: "raratingmd",
+      storageBucket: "raratingmd.firebasestorage.app",
+      messagingSenderId: "532670860158",
+      appId: "1:532670860158:web:e372730458dfc7506a812f"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+
+    const usuarioLogado = sessionStorage.getItem('usuarioLogado');
+    if (!usuarioLogado) {
+      alert('Você precisa estar logado para acessar esta página.');
+      window.location.href = 'login.html';
+    }
+
+    const db = firebase.database();
+
+    function ativarCadastro(event) {
+      if (event.key === 'Enter') {
+        cadastrarQRCode();
+      }
+    }
+
+    function cadastrarQRCode() {
+      const nome = document.getElementById('cadastroNome').value;
+      const disciplina = document.getElementById('cadastroDisciplina').value;
+      const link = document.getElementById('cadastroLink').value;
+      const criador = sessionStorage.getItem('usuarioLogado');
+
+      const numeroQRCode = Date.now();
+
+      if (nome && disciplina && link && criador) {
+        const ref = db.ref('qrcodes/' + numeroQRCode);
+        ref.set({
+          nome, disciplina, numero: numeroQRCode, criador, link, views: 0
+        }).then(() => {
+          alert('QR Code cadastrado com sucesso!');
+          document.getElementById('cadastroNome').value = '';
+          document.getElementById('cadastroDisciplina').value = '';
+          document.getElementById('cadastroLink').value = '';
+        }).catch(error => {
+          console.error('Erro ao cadastrar QR Code:', error);
+          alert('Erro ao cadastrar QR Code.');
+        });
+      } else {
+        alert('Preencha todos os campos!');
+      }
+    }
+  </script>
+</body>
+</html>

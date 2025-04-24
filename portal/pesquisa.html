@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Pesquisa - QR Codes</title>
+  <link rel="stylesheet" href="css/qrcode.css">
+</head>
+<body>
+  <header class="header">
+    <nav>
+      <a href="cadastro.html">Cadastrar</a>
+      <a href="pesquisa.html">Pesquisar</a>
+      <a href="dash.html">Dashboard</a>
+    </nav>
+  </header>
+
+  <!-- Campos de Pesquisa Separados -->
+  <div>
+    <h3>Pesquisar QR Code</h3>
+    <input type="text" id="pesquisaNome" placeholder="Nome do QR Code" onkeydown="ativarPesquisar(event)" tabindex="1">
+    <input type="text" id="pesquisaDisciplina" placeholder="Disciplina" onkeydown="ativarPesquisar(event)" tabindex="2">
+    <input type="text" id="pesquisaLink" placeholder="Link" onkeydown="ativarPesquisar(event)" tabindex="3">
+    <input type="text" id="pesquisaCriador" placeholder="Criador" onkeydown="ativarPesquisar(event)" tabindex="4">
+    <button onclick="pesquisarQRCode()" tabindex="5">Pesquisar</button>
+  </div>
+
+  <div id="contadorResultados"></div>
+  <div class="resultados" id="resultados"></div>
+
+  <!-- Formulário de Edição -->
+  <div class="formulario-edicao" id="formularioEdicao" style="display: none;">
+    <h3>Editar QR Code</h3>
+    <input type="text" id="editaNome" placeholder="Nome do QR Code" required onkeydown="ativarEditar(event)" tabindex="6">
+    <input type="text" id="editaDisciplina" placeholder="Disciplina" required onkeydown="ativarEditar(event)" tabindex="7">
+    <input type="text" id="editaLink" placeholder="Link do QR Code" required onkeydown="ativarEditar(event)" tabindex="8">
+    <button onclick="salvarEdicao()" tabindex="9">Salvar Alterações</button>
+    <button onclick="cancelarEdicao()" tabindex="10">Cancelar</button>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+  <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyCYzI5tEfdEd1W2Y9TisWZKHe5yR4YTLdg",
+      authDomain: "raratingmd.firebaseapp.com",
+      databaseURL: "https://raratingmd-default-rtdb.firebaseio.com",
+      projectId: "raratingmd",
+      storageBucket: "raratingmd.firebasestorage.app",
+      messagingSenderId: "532670860158",
+      appId: "1:532670860158:web:e372730458dfc7506a812f"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+
+    const usuarioLogado = sessionStorage.getItem('usuarioLogado');
+    if (!usuarioLogado) {
+      alert('Você precisa estar logado para acessar esta página.');
+      window.location.href = 'login.html';
+    }
+
+    const db = firebase.database();
+
+    function ativarPesquisar(event) {
+      if (event.key === 'Enter') pesquisarQRCode();
+    }
+
+    function ativarEditar(event) {
+      if (event.key === 'Enter') salvarEdicao();
+    }
+
+    function pesquisarQRCode() {
+      const nome = document.getElementById('pesquisaNome').value.toLowerCase();
+      const disciplina = document.getElementById('pesquisaDisciplina').value.toLowerCase();
+      const link = document.getElementById('pesquisaLink').value.toLowerCase();
+      const criador = document.getElementById('pesquisaCriador').value.toLowerCase();
+
+      if (!nome && !disciplina && !link && !criador) {
+        document.getElementById('resultados').innerHTML = '';
+        document.getElementById('contadorResultados').innerText = 'Nenhum resultado encontrado';
+        return;
+      }
+
+      db.ref('qrcodes').once('value').then(snapshot => {
+        const dados = snapshot.val();
+        let resultados = '', contador = 0;
+
+        for (const key in dados) {
+          const qr = dados[key];
+          if (
+              qr.nome?.toLowerCase().includes(nome) &&
+              qr.disciplina?.toLowerCase().includes(disciplina) &&
+              qr.link?.toLowerCase().includes(link) &&
+              qr.criador?.toLowerCase().includes(criador)
+            ) {
+            resultados += `
+              <div class="resultado">
+                <p><strong>Nome:</strong> ${qr.nome}</p>
+                <p><strong>Disciplina:</strong> ${qr.disciplina}</p>
+                <p><strong>Criador:</strong> ${qr.criador}</p>
+                <p><strong>Link:</strong> <a href="${qr.link}" target="_blank">${qr.link}</a></p>
+                <p><strong>Visualizações:</strong> ${qr.views}</p>
+                <p><strong>Número (Chave do QR Code):</strong> ${key}</p>
+                <button onclick="carregarEdicao('${key}')">Editar</button>
+                <button onclick="gerarQRCode('${key}', '${qr.link}')">Gerar QR Code</button>
+                <div id="qrcode-${key}" class="qrcode-img"></div>
+              </div>
+            `;
+            contador++;
+          }
+        }
+
+        document.getElementById('resultados').innerHTML = resultados;
+        document.getElementById('contadorResultados').innerText = `Resultados encontrados: ${contador || 'Nenhum'}`;
+      });
+    }
+
+    function gerarQRCode(numeroQRCode, link) {
+      const container = document.getElementById(`qrcode-${numeroQRCode}`);
+      container.innerHTML = '';
+      new QRCode(container, {
+        text: 'https://maiconcurriel.github.io/redir?' + numeroQRCode,
+        width: 128,
+        height: 128
+      });
+    }
+
+    function carregarEdicao(numeroQRCode) {
+      db.ref('qrcodes/' + numeroQRCode).once('value').then(snapshot => {
+        const qr = snapshot.val();
+        document.getElementById('editaNome').value = qr.nome;
+        document.getElementById('editaDisciplina').value = qr.disciplina;
+        document.getElementById('editaLink').value = qr.link;
+        document.getElementById('formularioEdicao').style.display = 'block';
+        document.getElementById('formularioEdicao').dataset.key = numeroQRCode;
+      });
+    }
+
+    function salvarEdicao() {
+      const numeroQRCode = document.getElementById('formularioEdicao').dataset.key;
+      db.ref('qrcodes/' + numeroQRCode).update({
+        nome: document.getElementById('editaNome').value,
+        disciplina: document.getElementById('editaDisciplina').value,
+        link: document.getElementById('editaLink').value
+      }).then(() => {
+        alert('QR Code atualizado com sucesso!');
+        document.getElementById('formularioEdicao').style.display = 'none';
+        pesquisarQRCode();
+      });
+    }
+
+    function cancelarEdicao() {
+      document.getElementById('formularioEdicao').style.display = 'none';
+    }
+  </script>
+</body>
+</html>

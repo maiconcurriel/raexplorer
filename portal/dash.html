@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/qrcode.css">
+  <style>
+    #top3Container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <nav>
+      <a href="cadastro.html">Cadastrar</a>
+      <a href="pesquisa.html">Pesquisar</a>
+      <a href="dash.html">Dashboard</a>
+    </nav>
+  </header>
+
+  <div class="formulario-cadastro">
+    <h3>Total de Visualizações</h3>
+    <p id="totalViews" style="font-size: 24px; font-weight: bold; color: #3498db;">Carregando...</p>
+  </div>
+
+  <div class="formulario-cadastro">
+    <h3>Top 3 QR Codes Mais Visualizados</h3>
+    <div id="top3Container"></div>
+  </div>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+    import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyCYzI5tEfdEd1W2Y9TisWZKHe5yR4YTLdg",
+      authDomain: "raratingmd.firebaseapp.com",
+      databaseURL: "https://raratingmd-default-rtdb.firebaseio.com",
+      projectId: "raratingmd",
+      storageBucket: "raratingmd.firebasestorage.app",
+      messagingSenderId: "532670860158",
+      appId: "1:532670860158:web:e372730458dfc7506a812f"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+
+    const qrcodesRef = ref(db, "qrcodes");
+
+    get(qrcodesRef).then((snapshot) => {
+      if (snapshot.exists()) {
+        const data = snapshot.val();
+
+        // 1. Total geral
+        const totalViews = data.totalViews || 0;
+        document.getElementById("totalViews").textContent = totalViews.toLocaleString("pt-BR");
+
+        // 2. Lista de QR codes (ignorando a chave totalViews)
+        const qrcodes = Object.entries(data)
+          .filter(([id, qr]) => id !== "totalViews" && typeof qr === "object")
+          .map(([id, qr]) => ({ id, ...qr }));
+
+        // 3. Top 3 mais visualizados
+        const top3 = qrcodes
+          .sort((a, b) => (b.views || 0) - (a.views || 0))
+          .slice(0, 3);
+
+        const container = document.getElementById("top3Container");
+        top3.forEach((qr, index) => {
+          const card = document.createElement("div");
+          card.className = "resultado";
+          card.innerHTML = `
+            <p><strong>${index + 1}º:</strong> ${qr.nome || 'Sem nome'}</p>
+            <p><strong>Disciplina:</strong> ${qr.disciplina || '-'}</p>
+            <p><strong>Visualizações:</strong> ${qr.views || 0}</p>
+          `;
+          container.appendChild(card);
+        });
+
+      } else {
+        document.getElementById("totalViews").textContent = "Nenhum dado encontrado.";
+      }
+    }).catch((error) => {
+      console.error("Erro ao carregar dados:", error);
+      document.getElementById("totalViews").textContent = "Erro ao carregar.";
+    });
+  </script>
+</body>
+</html>
