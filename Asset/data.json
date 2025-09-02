@@ -8,7 +8,10 @@
                 "TRANSPOSIÇÃO DA ÁGUA",
                 "SISTEMA DE ABASTECIMENTO"
             ],
-            "categoria": "0"
+            "categoria": [
+                "ENGENHARIA",
+                "HISTÓRIA"
+            ]
         },
         {
             "numero": 2,
@@ -20,7 +23,10 @@
                 "APARALHO DE GINÁSTICA",
                 "EXERCÍCIO FÍSICO"
             ],
-            "categoria": "1"
+            "categoria": [
+                "ENGENHARIA",
+                "FÍSICA"
+            ]
         },
         {
             "numero": 4,
@@ -32,7 +38,7 @@
                 "EDIFICAÇÃO",
                 "VIGAS, TIJOLINHO À VISTA"
             ],
-            "categoria": "2"
+            "categoria": ""
         },
         {
             "numero": 5,
@@ -4929,7 +4935,10 @@
                 "BEBÊ",
                 "OVÁRIO"
             ],
-            "categoria": ""
+            "categoria": [
+                "CIÊNCIA",
+                "SAÚDE"
+            ]
         },
         {
             "numero": 812,
