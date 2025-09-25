@@ -5227,6 +5227,22 @@
                 "ESQUELETO"
             ],
             "categoria": ""
+        },
+        {
+            "numero": 6003,
+            "nome": "811 Win",
+            "palavraChave": [
+                "811"
+            ],
+            "categoria": ""
+        },
+        {
+            "numero": 6004,
+            "nome": "821 Win",
+            "palavraChave": [
+                "821"
+            ],
+            "categoria": ""
         }
     ]
 }
