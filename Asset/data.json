@@ -5227,38 +5227,6 @@
                 "ESQUELETO"
             ],
             "categoria": ""
-        },
-        {
-            "numero": 6003,
-            "nome": "811 Win",
-            "palavraChave": [
-                "811"
-            ],
-            "categoria": ""
-        },
-        {
-            "numero": 6004,
-            "nome": "821 Win",
-            "palavraChave": [
-                "821"
-            ],
-            "categoria": ""
-        },
-        {
-            "numero": 6005,
-            "nome": "811 Android",
-            "palavraChave": [
-                "811"
-            ],
-            "categoria": ""
-        },
-        {
-            "numero": 6006,
-            "nome": "821 Android",
-            "palavraChave": [
-                "821"
-            ],
-            "categoria": ""
         }
     ]
 }
