@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <title>Mapa Mental</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <button id="addNode">+ Novo nó</button>
+
+  <div class="dropdown">
+    <button class="drop-btn">Tema ▼</button>
+    <div class="dropdown-content">
+      <div data-theme="dark">Escuro</div>
+      <div data-theme="light">Claro</div>
+      <div data-theme="ocean">Ocean</div>
+      <div data-theme="amethyst">Ametista</div>
+      <div data-theme="emerald">Esmeralda</div>
+      <div data-theme="crimson">Carmim</div>
+      <div data-theme="solar">Solarizado</div>
+    </div>
+  </div>
+
+  <button id="saveBtn">Salvar</button>
+  <button id="loadBtn">Carregar</button>
+  <button id="exportBtn">Exportar JSON</button>
+  <button id="importBtn">Importar JSON</button>
+  <input id="importFile" type="file" accept="application/json" style="display:none;" />
+  <button id="clearBtn">Zerar Tudo</button>
+</header>
+
+<!-- Versão B: container + canvas (canvas será transformado (pan/zoom)) -->
+<div id="canvasContainer">
+  <div id="canvas">
+
+    <!-- Grid -->
+    <div id="grid"></div>
+
+    <!-- Links -->
+    <svg id="svg"></svg>
+
+    <!-- Nodes serão adicionados aqui -->
+  </div>
+</div>
+
+<footer id="hint">Clique e arraste para mover nós. Botão do meio = pan. Ctrl+Scroll = Zoom.</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
