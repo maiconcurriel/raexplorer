@@ -5173,16 +5173,6 @@
             "categoria": ""
         },
         {
-            "numero": 830,
-            "nome": "MAPAS DE SITE E WIREFRAMES",
-            "palavraChave": [
-                "MAPA",
-                "SITE",
-                "WIREFRAMES"
-            ],
-            "categoria": ""
-        },
-        {
             "numero": 831,
             "nome": "RETOCOLITE ULCERATIVA (RCU) E A DOENÇA DE CROHN (DC)",
             "palavraChave": [
@@ -5190,6 +5180,17 @@
                 "ULCERATIVA",
                 "DOENÇA",
                 "CROHN"
+            ],
+            "categoria": ""
+        },
+        {
+            "numero": 833,
+            "nome": "INTERAÇÃO FÁRMACO-ORGANISMO",
+            "palavraChave": [
+                "INTERAÇÃO",
+                "FÁRMACO",
+                "ORGANISMO",
+                "FARMÁCIA"
             ],
             "categoria": ""
         },
