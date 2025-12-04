@@ -16,7 +16,7 @@ body {
 button {
     padding: 8px 14px;
     background: #1c2938;
-    border: 1px solid #2f4157;
+    border: 1px solid #572f2f;
     border-radius: 6px;
     color: white;
     cursor: pointer;
@@ -32,7 +32,6 @@ button:hover {
     overflow: auto;
 }
 
-/* SVG de conexões */
 #connections {
     position: absolute;
     top: 0;
@@ -56,7 +55,6 @@ button:hover {
   pointer-events: none;
 }
 
-/* Nó */
 .node {
     position: absolute;
     width: 220px;
@@ -65,7 +63,7 @@ button:hover {
     border: 1px solid #38536a;
     border-radius: 10px;
     padding: 15px;
-    box-shadow: 0 0 10px #0004;
+    box-shadow: 0 0 10px var(--shadow);
     z-index: 10;
     user-select: none;
 }
@@ -94,22 +92,6 @@ button:hover {
     border-radius: 4px;
     cursor: pointer;
 }
-:root{
-  --bg:#111113;
-  --panel:#1a1d22;
-  --node:#20242b;
-  --text:#e6eef6;
-  --accent:#4ade80;
-  --danger:#ef4444;
-}
-.light{
-  --bg:#f2f3f7;
-  --panel:#ffffff;
-  --node:#ffffff;
-  --text:#111113;
-  --accent:#0ea5e9;
-  --danger:#dc2626;
-}
 html,body{
   margin:0;
   height:100%;
@@ -118,7 +100,6 @@ html,body{
   color:var(--text);
 }
 
-/* header / toolbar */
 header{
   display:flex;
   gap:.5rem;
@@ -186,15 +167,15 @@ button, label{
   background:var(--accent);
   border-radius:6px;
   padding:.25rem .45rem;
-  color:#042;
-  border:1px solid rgba(0,0,0,0.06);
+  color:#fff;
+  border:1px solid #0c8b00;
 }
 .delete-btn{
   background:var(--danger);
   border-radius:6px;
   padding:.25rem .45rem;
   color:#fff;
-  border:1px solid rgba(0,0,0,0.06);
+  border:1px solid #ff0000;
 }
 
 .selected{ outline:3px solid rgba(0,0,0,0.06); }
@@ -212,7 +193,6 @@ footer{
   z-index:1200;
 }
 
-/* Dropdown */
 .dropdown{ position:relative; display:inline-block; }
 .drop-btn{ background:var(--node); color:var(--text); }
 .dropdown-content{
@@ -246,14 +226,14 @@ footer{
 }
 
 /* ---------------- THEMES ---------------- */
-
 :root {
   --bg:#111113;
   --panel:#1a1d22;
   --node:#20242b;
   --text:#e6eef6;
-  --accent:#4ade80;
-  --danger:#ef4444;
+  --accent:#0c8b00;
+  --danger:#ff0000;
+  --shadow:rgba(255, 255, 255, 0.267);
 }
 
 /* Claro */
@@ -262,8 +242,9 @@ footer{
   --panel:#ffffff;
   --node:#ffffff;
   --text:#111113;
-  --accent:#0ea5e9;
-  --danger:#dc2626;
+  --accent:#0c8b00;
+  --danger:#ff0000;
+  --shadow:#0004;  
 }
 
 /* Ocean */
@@ -272,8 +253,9 @@ footer{
   --panel:#10344a;
   --node:#164b68;
   --text:#c8eaff;
-  --accent:#38bdf8;
-  --danger:#ef4444;
+  --accent:#0c8b00;
+  --danger:#ff0000;
+  --shadow:#0004;
 }
 
 /* Amethyst */
@@ -282,8 +264,9 @@ footer{
   --panel:#251535;
   --node:#341f48;
   --text:#f0e0ff;
-  --accent:#c084fc;
-  --danger:#f87171;
+  --accent:#0c8b00;
+  --danger:#ff0000;
+  --shadow:#0004;
 }
 
 /* Emerald */
@@ -292,8 +275,9 @@ footer{
   --panel:#0c3023;
   --node:#104030;
   --text:#d9ffe9;
-  --accent:#34d399;
-  --danger:#f87171;
+  --accent:#0c8b00;
+  --danger:#ff0000;
+  --shadow:#0004;
 }
 
 /* Crimson */
@@ -302,8 +286,9 @@ footer{
   --panel:#3c121a;
   --node:#511822;
   --text:#ffe1e8;
-  --accent:#fb7185;
-  --danger:#ef4444;
+  --accent:#0c8b00;
+  --danger:#ff0000;
+  --shadow:#0004;
 }
 
 /* Solar */
@@ -312,10 +297,10 @@ footer{
   --panel:#3b2d0b;
   --node:#4b390f;
   --text:#fff6d4;
-  --accent:#facc15;
-  --danger:#f87171;
+  --accent:#0c8b00;
+  --danger:#ff0000;
+  --shadow:#0004;
 }
-
 
 @media (max-width:800px){
   #canvas{ width:2000px; height:1400px; }

@@ -1,5 +1,3 @@
-// script.js - Mindmap (version B) - pan, zoom focused, themes, save/load/export/import
-
 // block browser zoom when ctrl+wheel (prevent default)
 document.addEventListener('wheel', function (e) {
   if (e.ctrlKey) e.preventDefault();
