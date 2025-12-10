@@ -26,8 +26,6 @@ const themeDropdownContainer = document.getElementById('themeDropdownContainer')
 const themeDropBtn = document.getElementById('themeDropBtn');
 const themeOptions = themeDropdownContainer ? themeDropdownContainer.querySelectorAll('.dropdown-content div') : []; 
 
-const saveBtn = document.getElementById('saveBtn');
-const loadBtn = document.getElementById('loadBtn');
 const exportBtn = document.getElementById('exportBtn');
 const importBtn = document.getElementById('importBtn');
 const importFile = document.getElementById('importFile');
@@ -468,7 +466,20 @@ exportBtn.addEventListener('click', () => {
   const blob = new Blob([data], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
-  a.href = url; a.download = 'mindmap.json'; a.click();
+
+  const now = new Date();
+  const day = String(now.getDate()).padStart(2, '0');
+  const month = String(now.getMonth() + 1).padStart(2, '0');
+  const year = now.getFullYear();
+  const hours = String(now.getHours()).padStart(2, '0');
+  const minutes = String(now.getMinutes()).padStart(2, '0');
+
+  const filename = `mapamental-${day}-${month}-${year}-${hours}h${minutes}.json`;
+
+  a.href = url;
+  a.download = filename;
+  a.click();
+
   URL.revokeObjectURL(url);
 });
 
@@ -644,8 +655,6 @@ nodeOptions.forEach(opt => {
     nodeFormatDropdown.parentElement.classList.remove('active');
   });
 });
-saveBtn.addEventListener('click', () => save(true));
-loadBtn.addEventListener('click', load);
 
 load();
 applyTransform();
@@ -732,8 +741,17 @@ async function exportPNG() {
     backgroundColor: bg
   });
 
+  const now = new Date();
+  const day = String(now.getDate()).padStart(2, '0');
+  const month = String(now.getMonth() + 1).padStart(2, '0'); // Janeiro = 0
+  const year = now.getFullYear();
+  const hours = String(now.getHours()).padStart(2, '0');
+  const minutes = String(now.getMinutes()).padStart(2, '0');
+
+  const filename = `mapamental-${day}-${month}-${year}-${hours}h${minutes}.json`;
+
   const link = document.createElement('a');
-  link.download = 'mindmap.png';
+  link.download = filename;
   link.href = dataUrl;
   link.click();
 }
