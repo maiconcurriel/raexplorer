@@ -57,15 +57,194 @@ button:hover {
 
 .node {
     position: absolute;
+    cursor: grab;
+    background: var(--node);
+    box-shadow: none;
+    padding: 15px;
+    border-radius: var(--border-radius-default);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border: 2px solid var(--node-border, #555);
+    box-shadow: 0 0 10px var(--shadow);
+    overflow: hidden;
+}
+
+/* --- FORMATOS E TAMANHOS --- */
+
+/* Retângulo Padrão (220x120 - default) */
+.node.size-default {
     width: 220px;
     min-height: 120px;
-    background: var(--node);
-    border: 1px solid #38536a;
+    border: 2px solid var(--node-border, #555);
+}
+/* Retângulo Grande (300x160) */
+.node.size-large {
+    width: 300px;
+    min-height: 160px;
+}
+
+/* Quadrado (160x160) */
+.node.format-square {
+    width: 160px;
+    height: 160px;
+    min-height: 160px;
     border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0 0 10px var(--shadow);
+}
+
+/* Diamond */
+.node.format-diamond { 
+  width: 150px; 
+  height: 130px;
+  transform: rotate(45deg);
+  outline: none;
+  text-align: center; 
+  overflow: hidden; 
+  padding-top: 25px; 
+  padding-bottom: 25px; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: space-between; 
+  box-shadow: 0 0 10px var(--shadow);
+}
+
+.node.format-diamond textarea {
+    text-align: center;    
+    transform: rotate(-45deg);
+    margin-top: 30px;
+}
+.node.format-diamond .controls{  
+    transform: rotate(-45deg);
+    margin-left: 105px;
+}
+
+.node.format-triangle {
+    border: none !important;    
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+}
+
+.node.format-triangle::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: var(--border-size) solid var(--node-border-color);
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    pointer-events: none;
     z-index: 10;
-    user-select: none;
+}
+
+.node.format-triangle.selected::after {
+    border-color: #63caff;
+}
+
+.node.format-triangle textarea {
+    text-align: center;    
+    margin: 0;    
+    margin-top: 60px;    
+    width: 100px;     
+    flex-grow: 1; 
+    box-sizing: border-box;    
+    margin-bottom: 5px; 
+}
+
+/* Pentágono */
+.node.format-pentagon {
+    width: 180px;
+    height: 165px;
+    border: none;
+    outline: none;
+    position: relative;
+    clip-path: polygon(50% 0%, 100% 38%, 81% 100%, 19% 100%, 0% 38%);
+    text-align: center;
+    overflow: visible;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 0 10px var(--shadow);
+    position: relative;
+    z-index: 2;
+    background: transparent !important; /* remove o retângulo de fundo que o cobre */
+}
+
+/* BORDA FALSA ATRÁS — O ÚNICO ELEMENTO QUE PRECISA */
+.node.format-pentagon::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    box-sizing: border-box;
+    clip-path: polygon(50% 0%, 100% 38%, 81% 100%, 19% 100%, 0% 38%);
+    background: var(--node);     /* usa a variável --node para o fill */
+    box-shadow: 0 0 10px var(--shadow);
+    z-index: 0;                  /* atrás do conteúdo, mas acima do fundo da página */
+    pointer-events: none;
+}
+
+.node.format-pentagon.selected::after {
+  border-color: #63caff;
+}
+
+.node.format-pentagon::after {
+  content: "";
+  position: absolute;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  box-sizing: border-box;
+  clip-path: polygon(50% 0%, 100% 38%, 81% 100%, 19% 100%, 0% 38%);
+  transform-origin: 50% 50%;
+  transform: scale(1.06);      /* aumenta visualmente, não altera layout */
+  border: var(--border-size) solid var(--node-border-color);
+  background: transparent;
+  z-index: 1;                  /* acima do fill (::before), abaixo do conteúdo */
+  pointer-events: none;
+}
+
+/* FORÇA a hierarquia esperada caso algum ancestral crie stacking context */
+.node.format-pentagon,
+.node.format-pentagon::before,
+.node.format-pentagon::after {
+  transform: none !important;
+  will-change: auto !important;
+}
+
+/* Ajusta a textarea */
+.node.format-pentagon textarea {
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 50px;
+}
+
+/* Círculo/Oval */
+.node.format-circle {
+    width: 160px;
+    height: 160px;
+    min-height: 160px;
+    border-radius: var(--border-radius-round);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 0 10px var(--shadow);
+}
+
+.node.format-circle textarea {
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 20px;
+}
+
+.node:not(.format-diamond):not(.format-triangle):not(.format-pentagon):not(.format-circle)::after {
+  border-color: var(--node-border-color);
 }
 
 .node.selected {
@@ -80,6 +259,8 @@ button:hover {
     color: white;
     resize: none;
     outline: none;
+    flex-grow: 1;
+    margin-bottom: 10px;
 }
 
 .closeBtn {
@@ -120,12 +301,20 @@ button, label{
 #importFile{ display:none; }
 
 #canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 5000px;
-  height: 5000px;
-  transform-origin: 0 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-origin: 0 0;
+    transform: none;
+}
+
+#selectionBox {
+    position: absolute;
+    border: 1px dashed var(--accent);
+    background: color-mix(in srgb, var(--accent) 20%, transparent);
+    pointer-events: none;
+    display: none;
+    z-index: 9999;
 }
 
 #canvasContainer {
@@ -134,14 +323,18 @@ button, label{
   overflow: hidden;
   position: relative;
   background: var(--bg);
+  background-image:
+    radial-gradient(circle, var(--grid-color, rgba(255, 255, 255, 0.07)) 0.5px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: 0 0;
 }
 
 #svg{
   position: absolute;
   top: 0;
   left: 0;
-  width: 5000px;
-  height: 5000px;
+  width: 100%;   /* Garante que o SVG cobre o viewport */
+  height: 100%; /* Garante que o SVG cobre o viewport */
   pointer-events: none;
   overflow: visible;
 }
@@ -159,26 +352,38 @@ button, label{
   font-size:14px;
 }
 .controls{
-  display:flex;
-  gap:.4rem;
-  margin-top:.5rem;
+  display: flex;
+  gap: .4rem;
+  margin-top: 0;
+  align-items: center;  
+}
+/* Ocultar controles por padrão */
+.node .controls {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease;
+}
+
+/* Mostrar quando passar o mouse */
+.node:hover .controls {
+    opacity: 1;
+    pointer-events: auto;
 }
 .connect-btn{
-  background:var(--accent);
+  background:#0c8b00;
   border-radius:6px;
   padding:.25rem .45rem;
   color:#fff;
   border:1px solid #0c8b00;
 }
 .delete-btn{
-  background:var(--danger);
+  background:#ff0000;
   border-radius:6px;
   padding:.25rem .45rem;
   color:#fff;
   border:1px solid #ff0000;
 }
 
-.selected{ outline:3px solid rgba(0,0,0,0.06); }
 .delete-link-btn{ pointer-events: all; cursor:pointer; }
 
 footer{
@@ -225,15 +430,34 @@ footer{
   transform-origin: 0 0;
 }
 
+/* deixa a bolinha escondida por padrão (backup) */
+svg .link-handle {
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+/* hover visual se preferir usar só css (não necessário com o JS acima) */
+svg .link-hover-path:hover + .link-handle,
+svg .link-path:hover + .link-handle {
+  opacity: 1;
+}
+
+
 /* ---------------- THEMES ---------------- */
 :root {
-  --bg:#111113;
+  --bg:#131211;
   --panel:#1a1d22;
   --node:#20242b;
-  --text:#e6eef6;
+  --text:#ffffff;
   --accent:#0c8b00;
   --danger:#ff0000;
   --shadow:rgba(255, 255, 255, 0.267);
+  --grid-color:#ffffff;
+  --border-radius-default: 10px;
+  --border-radius-round: 50%;
+  --node-border-color: #38536a;
+  --border-size: 4px;
+  --shape-border-scale: 1.06;
 }
 
 /* Claro */
@@ -241,10 +465,16 @@ footer{
   --bg:#f2f3f7;
   --panel:#ffffff;
   --node:#ffffff;
-  --text:#111113;
+  --text:#000000;
   --accent:#0c8b00;
   --danger:#ff0000;
-  --shadow:#0004;  
+  --shadow:rgba(0, 0, 0, 0.267);
+  --grid-color: #000000;
+  --border-radius-default: 10px;
+  --border-radius-round: 50%;  
+  --node-border-color: #38536a;
+  --border-size: 4px;
+  --shape-border-scale: 1.06;
 }
 
 /* Ocean */
@@ -256,6 +486,12 @@ footer{
   --accent:#0c8b00;
   --danger:#ff0000;
   --shadow:#0004;
+  --grid-color: #c8eaff;
+  --border-radius-default: 10px;
+  --border-radius-round: 50%;
+  --node-border-color: #38536a;
+  --border-size: 4px;
+  --shape-border-scale: 1.06;
 }
 
 /* Amethyst */
@@ -267,6 +503,12 @@ footer{
   --accent:#0c8b00;
   --danger:#ff0000;
   --shadow:#0004;
+  --grid-color: #f0e0ff;
+  --border-radius-default: 10px;
+  --border-radius-round: 50%;
+  --node-border-color: #38536a;
+  --border-size: 4px;
+  --shape-border-scale: 1.06;
 }
 
 /* Emerald */
@@ -278,6 +520,12 @@ footer{
   --accent:#0c8b00;
   --danger:#ff0000;
   --shadow:#0004;
+  --grid-color:#d9ffe9;
+  --border-radius-default: 10px;
+  --border-radius-round: 50%;
+  --node-border-color: #38536a;
+  --border-size: 4px;
+  --shape-border-scale: 1.06;
 }
 
 /* Crimson */
@@ -289,6 +537,12 @@ footer{
   --accent:#0c8b00;
   --danger:#ff0000;
   --shadow:#0004;
+  --grid-color:#ffe1e8;
+  --border-radius-default: 10px;
+  --border-radius-round: 50%;
+  --node-border-color: #38536a;
+  --border-size: 4px;
+  --shape-border-scale: 1.06;
 }
 
 /* Solar */
@@ -300,6 +554,12 @@ footer{
   --accent:#0c8b00;
   --danger:#ff0000;
   --shadow:#0004;
+  --grid-color:#fff6d4;
+  --border-radius-default: 10px;
+  --border-radius-round: 50%;
+  --node-border-color: #38536a;
+  --border-size: 4px;
+  --shape-border-scale: 1.06;
 }
 
 @media (max-width:800px){
