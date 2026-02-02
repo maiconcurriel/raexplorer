@@ -1,0 +1,30 @@
+{
+  "quadril": {
+    "title": "Quadril",
+    "description": "quadradim"
+  },
+  "cranio": {
+    "title": "Crânio",
+    "description": "é o crânio kk"
+  },
+  "bracoesquerdo": {
+    "title": "Braço esquerdo",
+    "description": "braço esquerdo"
+  },
+  "caixatoraxica": {
+    "title": "Caixa toráxica",
+    "description": "é uma caixa e é toráxica"
+  },
+  "bracodireito": {
+    "title": "Braço direito",
+    "description": "contrário do braço esquerdo"
+  },
+  "pernaesquerda": {
+    "title": "Perna esquerda",
+    "description": "é uma perna e é esquerda"
+  },
+  "pernadireita": {
+    "title": "Perna direita",
+    "description": "perna direita"
+  }
+}

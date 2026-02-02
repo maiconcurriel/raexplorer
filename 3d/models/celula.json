@@ -1,0 +1,34 @@
+{
+  "amigdala": {
+    "title": "amigdala",
+    "description": "quadradim"
+  },
+  "cortex": {
+    "title": "cortex",
+    "description": "é o crânio kk"
+  },
+  "cerebeloesquerdo": {
+    "title": "cerebelo esquerdo",
+    "description": "braço esquerdo"
+  },
+  "cerebelodireito": {
+    "title": "cerebelo direito",
+    "description": "é uma caixa e é toráxica"
+  },
+  "hemisferiodireito": {
+    "title": "hemisferio direito",
+    "description": "contrário do braço esquerdo"
+  },
+  "corpo": {
+    "title": "corpo",
+    "description": "é uma perna e é esquerda"
+  },
+  "corpomamilar": {
+    "title": "corpo mamilar",
+    "description": "perna direita"
+  },
+  "corpoamigdaloide": {
+    "title": "corpo amigdaloide",
+    "description": "perna direita"
+  }
+}
