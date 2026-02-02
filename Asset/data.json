@@ -5206,6 +5206,17 @@
             "categoria": ""
         },
         {
+            "numero": 834,
+            "nome": "GLP-1",
+            "palavraChave": [
+                "INTERAÇÃO",
+                "FÁRMACO",
+                "ORGANISMO",
+                "FARMÁCIA"
+            ],
+            "categoria": ""
+        },
+        {
             "numero": 5001,
             "nome": "PLANOS E EIXOS DE MOVIMENTO",
             "palavraChave": [
