@@ -10,14 +10,76 @@
   }
   </script>
   <meta charset="UTF-8" />
-  <title>Viewer</title>
+  <title>3D Viewer</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div id="topBar">
+  <button id="infoBtn" title="Informações" class="icon-btn">
+    <svg xmlns="http://www.w3.org/2000/svg"
+     width="24" height="24" viewBox="0 0 24 24"
+     fill="none" stroke="currentColor"
+     stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10"/>
+      <line x1="12" y1="10" x2="12" y2="16"/>
+      <line x1="12" y1="7" x2="12.01" y2="7"/>
+    </svg>
+  </button>
 
-<button id="resetBtn">Resetar Cena</button>
+  <button id="fullscreenBtn" title="Tela cheia" class="icon-btn">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path d="M9 3H3V9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M3 3L9 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M15 3H21V9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M21 3L15 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M9 21H3V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M3 21L9 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M15 21H21V15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M21 21L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+  <button id="exitFullscreenBtn" title="Sair da tela cheia" style="display:none;" class="icon-btn">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+      <path d="M4 4L10 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M10 6V10H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M20 4L14 10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M14 6V10H18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M4 20L10 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M10 18V14H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M20 20L14 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M14 18V14H18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+  <select id="colorFilter" title="Filtro de cores para daltônicos" >
+      <option value="normal">Normal</option>
+      <option value="protanopia">Protanopia</option>
+      <option value="deuteranopia">Deuteranopia</option>
+      <option value="tritanopia">Tritanopia</option>
+  </select>
+
+  <button id="resetBtnIcon" title="Resetar cena" class="icon-btn">
+    <svg xmlns="http://www.w3.org/2000/svg"
+        width="24" height="24" viewBox="0 0 24 24"
+        fill="none" stroke="currentColor"
+        stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="1 4 1 10 7 10"/>
+      <path d="M3.51 15a9 9 0 1 0 .49-9"/>
+    </svg>
+  </button>
+</div>
 
 <div id="infoPanel">
+  <button id="closeInfo" title="Fechar" ><svg xmlns="http://www.w3.org/2000/svg"
+     width="24" height="24" viewBox="0 0 24 24"
+     fill="none" stroke="currentColor"
+     stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <line x1="18" y1="6" x2="6" y2="18"/>
+  <line x1="6" y1="6" x2="18" y2="18"/>
+</svg>
+</button>
+
   <h2 id="infoTitle">Objeto</h2>
   <p id="infoDesc">Descrição do objeto.</p>
 
@@ -25,5 +87,16 @@
 </div>
 
 <script type="module" src="js/main.js"></script>
+
+<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
 </body>
 </html>

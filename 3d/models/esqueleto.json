@@ -1,30 +1,39 @@
 {
+  "objname": "Esqueleto Humano",
+  "objdescription": "Modelo anatômico completo do esqueleto humano, representando a estrutura óssea responsável por sustentação, proteção dos órgãos e suporte aos movimentos do corpo.",
+
   "quadril": {
-    "title": "Quadril",
-    "description": "quadradim"
+    "objname": "Quadril",
+    "description": "Estrutura óssea que conecta o tronco aos membros inferiores, sustentando o peso do corpo e permitindo movimentos como caminhar, sentar e girar."
   },
+
   "cranio": {
-    "title": "Crânio",
-    "description": "é o crânio kk"
+    "objname": "Crânio",
+    "description": "Conjunto de ossos que protege o cérebro e sustenta as estruturas da face, como olhos, nariz e mandíbula."
   },
+
   "bracoesquerdo": {
-    "title": "Braço esquerdo",
-    "description": "braço esquerdo"
+    "objname": "Braço esquerdo",
+    "description": "Membro superior responsável por movimentos de alcance, apoio e manipulação de objetos, composto por úmero, rádio e ulna."
   },
+
   "caixatoraxica": {
-    "title": "Caixa toráxica",
-    "description": "é uma caixa e é toráxica"
+    "objname": "Caixa toráxica",
+    "description": "Formada pelas costelas, esterno e vértebras torácicas, protege órgãos vitais como coração e pulmões."
   },
+
   "bracodireito": {
-    "title": "Braço direito",
-    "description": "contrário do braço esquerdo"
+    "objname": "Braço direito",
+    "description": "Membro superior que permite movimentos precisos e força, auxiliando em atividades diárias e coordenação motora."
   },
+
   "pernaesquerda": {
-    "title": "Perna esquerda",
-    "description": "é uma perna e é esquerda"
+    "objname": "Perna esquerda",
+    "description": "Membro inferior que auxilia na locomoção e equilíbrio, formado por fêmur, tíbia, fíbula e ossos do pé."
   },
+
   "pernadireita": {
-    "title": "Perna direita",
-    "description": "perna direita"
+    "objname": "Perna direita",
+    "description": "Membro inferior responsável por sustentar o corpo e permitir movimentos como caminhar, correr e saltar."
   }
 }
