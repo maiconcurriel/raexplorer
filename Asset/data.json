@@ -5250,6 +5250,26 @@
                 "ESQUELETO"
             ],
             "categoria": ""
+        },
+        {
+            "numero": 6003,
+            "nome": "PROCEDIMENTOS DE PODOLOGIA",
+            "palavraChave": [
+                "PÉ",
+                "PROCEDIMENTO",
+                "PODOLOGIA",
+                "PROFILAXIA",
+                "ÓRTESE",
+                "HIPERQUERATOSE",
+                "CALOSIDADE",
+                "REFLEXOLOGIA",
+                "PODAL",
+                "ONICÓLISE",
+                "ONICOMICOSE",
+                "DIABETE",
+                "HÁLUX"
+            ],
+            "categoria": ""
         }
     ]
 }
