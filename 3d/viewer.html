@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+      <script type="importmap">
+            {
+                "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+                }
+            }
+        </script>
+    <title>Viewer 3D</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/viewer.css">
+</head>
+<body>
+<div class="det-modal">
+    <div class="v-panel">
+        <div class="v-nav">
+            <div class="breadcrumb">
+                <span id="det-sys">Sistema</span>
+                <svg width="10" height="10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                <span class="cur" id="det-bc">Modelo</span>
+            </div>
+        </div>
+        
+        <div class="v-panel" id="three-container">
+            <div class="v-nav">
+                <div class="breadcrumb">
+                    <span id="det-sys">Sistema</span>
+                    <svg width="10" height="10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+                    <span class="cur" id="det-bc">Modelo</span>
+                </div>
+            </div>
+            
+            <div id="loading-3d" style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); z-index:10">
+                <div class="v-ph-ico">🧬</div>
+                <strong>Carregando...</strong>
+            </div>
+        </div>
+
+        <div class="v-bot-bar">
+            <select class="sort-sel" onchange="setColorBlindMode(this.value)" title="Acessibilidade Visual">
+                <option value="normal">Visão Normal</option>
+                <option value="protanopia">Protanopia</option>
+                <option value="deuteranopia">Deuteranopia</option>
+                <option value="tritanopia">Tritanopia</option>
+            </select>
+            <div class="bt-sep"></div>
+        <button class="bt-btn" title="Tela cheia" onclick="toggleFullscreen()">
+    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
+    </svg>
+</button>
+<div class="bt-sep"></div>
+<button class="bt-btn" title="Resetar Visualização" onclick="resetScene()">
+    <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M1 4v6h6M23 20v-6h-6M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"/>
+    </svg>
+</button>
+    </div>
+    </div>
+    
+    <div class="dp">
+        <div class="dp-head">
+            <div class="dp-nav">
+                <span class="dp-nav-lb">Detalhes do modelo</span>
+                <button title="Fechar" class="nav-arr" onclick="window.parent.closeDet()">×</button>
+            </div>
+            <h2 class="dp-title" id="det-title">Carregando...</h2>
+            <div class="dp-tags" id="det-tags"></div>
+            <div class="dp-acts"><button class="dp-act" onclick="shareModel(this)">
+    <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+    </svg>
+    Compartilhar
+</button>
+            </div>
+            <div class="tabs">
+                <button class="tab-btn active" onclick="swTab('desc',this)">Descrição</button>
+                <button class="tab-btn" onclick="swTab('ch',this)">Capítulos</button>
+                <button class="tab-btn" onclick="swTab('res',this)">Recursos</button>
+            </div>
+        </div>
+
+        <div class="tab-ct" id="tc-desc">
+            <div class="desc-tx">
+                <p><strong>O modelo anatômico selecionado</strong> oferece uma visualização tridimensional detalhada...</p>
+                <p>Navegue pelos <strong>capítulos</strong> no painel ao lado para focar em regiões específicas...</p>
+            </div>
+        </div>
+
+        <div class="tab-ct" id="tc-ch" style="display:none">
+            <div class="ch-item hl"><div><div class="ch-name">Anatomia Geral</div><div class="ch-desc">Visão geral da estrutura</div></div><span class="ch-badge">Destaque</span></div>
+            </div>
+
+        <div class="tab-ct" id="tc-res" style="display:none">
+            <div class="res-item"><div class="res-ic">📄</div><div><div class="res-name">Manual de Anatomia</div><div class="res-type">PDF · 2.4 MB</div></div></div>
+            </div>
+
+        <div class="help-bar">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+            Rotacione o modelo 3D clicando e arrastando
+        </div>
+    </div>
+</div>
+<script type="module" src="js/viewer.js"></script>
+</body>
+</html>
