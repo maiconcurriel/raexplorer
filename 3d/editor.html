@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Editor Pro - Viewer 3D</title>
+    <style>
+        :root { --primary: #007bff; --success: #28a745; --danger: #dc3545; --dark: #212529; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f0f2f5; margin: 0; display: flex; height: 100vh; }
+        
+        .sidebar { width: 350px; background: white; border-right: 1px solid #ddd; display: flex; flex-direction: column; padding: 20px; box-sizing: border-box; }
+        textarea { flex-grow: 1; width: 100%; font-family: monospace; font-size: 12px; border: 1px solid #ccc; padding: 10px; resize: none; margin-top: 10px; border-radius: 4px; }
+        
+        .main-content { flex-grow: 1; overflow-y: auto; padding: 30px; scroll-behavior: smooth; }
+        .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin-bottom: 20px; }
+        
+        .field-group { margin-bottom: 15px; }
+        label { display: block; font-weight: bold; font-size: 13px; color: #555; margin-bottom: 5px; }
+        input, select, textarea.small { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; font-size: 14px; }
+        
+        .mesh-item { border-left: 4px solid var(--primary); padding: 15px; background: #fcfcfc; margin-bottom: 20px; position: relative; border-radius: 0 8px 8px 0; }
+        .res-item { border-left: 4px solid var(--success); padding: 15px; background: #fcfcfc; margin-bottom: 15px; border-radius: 0 8px 8px 0; }
+        
+        button { cursor: pointer; border: none; border-radius: 4px; padding: 10px 15px; font-weight: 600; transition: 0.2s; }
+        .btn-load { background: var(--primary); color: white; width: 100%; margin-top: 10px; }
+        .btn-add { background: var(--success); color: white; margin-top: 20px; display: block; width: 200px; }
+        .btn-delete { background: var(--danger); color: white; padding: 5px 10px; font-size: 11px; margin-top: 10px; }
+        .btn-save { background: var(--dark); color: white; width: 100%; margin-top: 20px; padding: 15px; font-size: 16px; }
+        
+        .header-section { border-bottom: 2px solid #eee; margin-bottom: 15px; padding-bottom: 10px; }
+        select { cursor: pointer; background: white; }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>📁 Arquivo</h2>
+        <input type="file" id="fileInput" accept=".json">
+        <button class="btn-load" onclick="lerArquivo()">Carregar Arquivo</button>
+        
+        <h2 style="margin-top: 30px;">📄 Código JSON</h2>
+        <textarea id="jsonOutput" readonly></textarea>
+        <button class="btn-save" onclick="baixarJSON()">BAIXAR JSON</button>
+    </div>
+
+    <div class="main-content">
+        <div class="card">
+            <h2>Configurações Gerais</h2>
+            <div class="field-group">
+                <label>Nome do Objeto</label>
+                <input type="text" id="objname" oninput="sincronizar()">
+            </div>
+            <div class="field-group">
+                <label>Sistema</label>
+                <input type="text" id="objsystem" oninput="sincronizar()">
+            </div>
+            <div class="field-group">
+                <label>Descrição Geral</label>
+                <textarea class="small" id="objdescription" style="height: 80px;" oninput="sincronizar()"></textarea>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="header-section">
+                <h2>Peças (Meshes)</h2>
+            </div>
+            <div id="containerPecas"></div>
+            <button class="btn-add" onclick="addPeca()">+ Adicionar Nova Peça</button>
+        </div>
+
+        <div class="card">
+            <div class="header-section">
+                <h2>Recursos Globais</h2>
+            </div>
+            <div id="containerRecursos"></div>
+            <button class="btn-add" style="background: var(--success)" onclick="addRecurso()">+ Adicionar Novo Recurso</button>
+        </div>
+    </div>
+
+    <script>
+        let dados = { objname: "", objsystem: "", objdescription: "", resources: [] };
+        let nomeArquivoOriginal = "modelo.json"; // Nome padrão caso comece do zero
+
+        const tiposRecurso = [
+            { id: 'video', label: '🎥 Vídeo' },
+            { id: 'image', label: '📊 Imagem' },
+            { id: 'pdf', label: '📄 PDF' },
+            { id: 'doc', label: '📄 Documento (DOC)' },
+            { id: 'link', label: '🔗 Link Externo' },
+            { id: 'podcast', label: '🎙️ Podcast' }
+        ];
+
+        function lerArquivo() {
+            const fileInput = document.getElementById('fileInput');
+            const file = fileInput.files[0];
+            if (!file) return alert("Selecione um arquivo!");
+
+            // ARMAZENA O NOME DO ARQUIVO CARREGADO
+            nomeArquivoOriginal = file.name;
+
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                try {
+                    dados = JSON.parse(e.target.result);
+                    if (!dados.resources) dados.resources = [];
+                    preencherFormulario();
+                } catch (err) { alert("Erro ao ler JSON: " + err); }
+            };
+            reader.readAsText(file);
+        }
+
+        function preencherFormulario() {
+            document.getElementById('objname').value = dados.objname || "";
+            document.getElementById('objsystem').value = dados.objsystem || "";
+            document.getElementById('objdescription').value = dados.objdescription || "";
+            renderizarPecas();
+            renderizarRecursos();
+            atualizarCodigo();
+        }
+
+        function renderizarPecas() {
+            const container = document.getElementById('containerPecas');
+            container.innerHTML = "";
+            Object.keys(dados).forEach(key => {
+                if (typeof dados[key] === 'object' && key !== 'resources') {
+                    const div = document.createElement('div');
+                    div.className = 'mesh-item';
+                    div.innerHTML = `
+                        <label>ID da Mesh:</label>
+                        <input type="text" value="${key}" onchange="renomearChave('${key}', this.value)">
+                        <label>Nome Exibição:</label>
+                        <input type="text" value="${dados[key].objname || ''}" oninput="dados['${key}'].objname = this.value; sincronizar()">
+                        <label>Descrição:</label>
+                        <textarea class="small" oninput="dados['${key}'].description = this.value; sincronizar()">${dados[key].description || ''}</textarea>
+                        <button class="btn-delete" onclick="removerPeca('${key}')">Excluir Peça</button>
+                    `;
+                    container.appendChild(div);
+                }
+            });
+        }
+
+        function renderizarRecursos() {
+            const container = document.getElementById('containerRecursos');
+            container.innerHTML = "";
+            dados.resources.forEach((res, index) => {
+                const div = document.createElement('div');
+                div.className = 'res-item';
+                
+                let optionsHtml = tiposRecurso.map(t => `<option value="${t.id}" ${res.type === t.id ? 'selected' : ''}>${t.label}</option>`).join('');
+
+                div.innerHTML = `
+                    <div style="display:grid; grid-template-columns: 1fr 1.5fr 1fr 1fr; gap: 10px; align-items: end;">
+                        <div>
+                            <label>Tipo:</label>
+                            <select onchange="dados.resources[${index}].type = this.value; sincronizar()">${optionsHtml}</select>
+                        </div>
+                        <div>
+                            <label>Nome do Recurso:</label>
+                            <input type="text" value="${res.name}" oninput="dados.resources[${index}].name = this.value; sincronizar()">
+                        </div>
+                        <div>
+                            <label>Info (Ex: Vídeo · 10 min):</label>
+                            <input type="text" value="${res.info}" oninput="dados.resources[${index}].info = this.value; sincronizar()">
+                        </div>
+                        <div>
+                            <label>URL / Arquivo:</label>
+                            <input type="text" value="${res.url}" oninput="dados.resources[${index}].url = this.value; sincronizar()">
+                        </div>
+                    </div>
+                    <button class="btn-delete" onclick="removerRecurso(${index})">Remover Recurso</button>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        function addPeca() {
+            const id = "nova_mesh_" + Date.now();
+            dados[id] = { objname: "Nova Peça", description: "" };
+            renderizarPecas();
+            sincronizar();
+            window.scrollTo(0, document.body.scrollHeight);
+        }
+
+        function addRecurso() {
+            dados.resources.push({ type: "video", name: "", info: "Vídeo · 0 min", url: "" });
+            renderizarRecursos();
+            sincronizar();
+        }
+
+        function removerPeca(id) { delete dados[id]; renderizarPecas(); sincronizar(); }
+        function removerRecurso(index) { dados.resources.splice(index, 1); renderizarRecursos(); sincronizar(); }
+        
+        function renomearChave(antiga, nova) {
+            if (nova !== antiga && nova.trim() !== "") {
+                dados[nova] = dados[antiga];
+                delete dados[antiga];
+                renderizarPecas();
+                sincronizar();
+            }
+        }
+
+        function sincronizar() {
+            dados.objname = document.getElementById('objname').value;
+            dados.objsystem = document.getElementById('objsystem').value;
+            dados.objdescription = document.getElementById('objdescription').value;
+            atualizarCodigo();
+        }
+
+        function atualizarCodigo() { document.getElementById('jsonOutput').value = JSON.stringify(dados, null, 2); }
+
+        function baixarJSON() {
+            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(dados, null, 2));
+            const dl = document.createElement('a');
+            dl.setAttribute("href", dataStr);
+            
+            // USA O NOME DO ARQUIVO ORIGINAL PARA SALVAR
+            dl.setAttribute("download", nomeArquivoOriginal);
+            
+            document.body.appendChild(dl);
+            dl.click();
+            document.body.removeChild(dl);
+        }
+    </script>
+</body>
+</html>

@@ -1,40 +1,69 @@
 {
   "objname": "Coração",
-  "objsystem": "Nervoso",
-  "objdescription": "Modelo anatômico completo do esqueleto humano, representando a estrutura óssea responsável por sustentação, proteção dos órgãos e suporte aos movimentos do corpo.",
-  
-  "quadril": {
-    "objname": "Quadril",
-    "description": "Estrutura óssea que conecta o tronco aos membros inferiores, sustentando o peso do corpo e permitindo movimentos como caminhar, sentar e girar."
+  "objsystem": "Cardiovascular",
+  "objdescription": "Modelo anatômico detalhado do coração humano, representando a complexa estrutura muscular responsável pelo bombeamento rítmico do sangue, garantindo a oxigenação dos tecidos e a nutrição celular através das circulações sistêmica e pulmonar, processos fundamentais para a vida.",
+  "resources": [
+    {
+      "type": "image",
+      "name": "Coração",
+      "info": "Imagem",
+      "url": "coracao.png"
+    }
+  ],
+  "veiacavainf": {
+    "objname": "Veia cava inferior",
+    "description": "Principal veia do corpo humano que coleta o sangue desoxigenado proveniente do abdome, pelve e membros inferiores, direcionando-o ao átrio direito para que seja enviado aos pulmões para oxigenação adequada."
   },
-
-  "cranio": {
-    "objname": "Crânio",
-    "description": "Conjunto de ossos que protege o cérebro e sustenta as estruturas da face, como olhos, nariz e mandíbula."
+  "vcavasup2": {
+    "objname": "Veia cava superior",
+    "description": "Vaso sanguíneo de grande calibre responsável por transportar o sangue desoxigenado vindo da cabeça, pescoço, membros superiores e tórax diretamente para o átrio direito, iniciando o ciclo de retorno venoso ao coração."
   },
-
-  "bracoesquerdo": {
-    "objname": "Braço esquerdo",
-    "description": "Membro superior responsável por movimentos de alcance, apoio e manipulação de objetos, composto por úmero, rádio e ulna."
+  "atriodir": {
+    "objname": "Átrio direito ",
+    "description": "Câmara superior direita que atua como reservatório inicial do sangue venoso trazido pelas veias cavas. Após o enchimento, contrai-se para impulsionar este sangue desoxigenado em direção ao ventrículo direito."
   },
-
-  "caixatoraxica": {
-    "objname": "Caixa toráxica",
-    "description": "Formada pelas costelas, esterno e vértebras torácicas, protege órgãos vitais como coração e pulmões."
+  "valvulatri": {
+    "objname": "Válvula tricúspide ",
+    "description": "Estrutura com três folhetos localizada entre o átrio e o ventrículo direitos. Sua função vital é impedir o refluxo de sangue para o átrio durante a contração ventricular, garantindo o fluxo unidirecional."
   },
-
-  "bracodireito": {
-    "objname": "Braço direito",
-    "description": "Membro superior que permite movimentos precisos e força, auxiliando em atividades diárias e coordenação motora."
+  "ventriculodir": {
+    "objname": "Ventrículo direito",
+    "description": "Câmara inferior que recebe o sangue desoxigenado do átrio direito. Possui paredes musculares que se contraem vigorosamente para bombear este sangue através da válvula pulmonar rumo aos pulmões para oxigenação."
   },
-
-  "pernaesquerda": {
-    "objname": "Perna esquerda",
-    "description": "Membro inferior que auxilia na locomoção e equilíbrio, formado por fêmur, tíbia, fíbula e ossos do pé."
+  "valvulapul": {
+    "objname": "Válvula pulmonar",
+    "description": "Posicionada na saída do ventrículo direito, esta válvula semilunar abre-se durante a sístole para permitir a passagem do sangue para a artéria pulmonar, fechando-se em seguida para evitar o retorno do sangue."
   },
-
-  "pernadireita": {
-    "objname": "Perna direita",
-    "description": "Membro inferior responsável por sustentar o corpo e permitir movimentos como caminhar, correr e saltar."
+  "arteriapul": {
+    "objname": "Artéria pulmonar",
+    "description": "Tronco arterial fundamental que transporta o sangue pobre em oxigênio do ventrículo direito até os pulmões. É a única artéria do corpo humano adulto que carrega sangue desoxigenado para fins de trocas gasosas."
+  },
+  "veiaspul": {
+    "objname": "Veias pulmonares",
+    "description": "Conjunto de vasos (normalmente quatro) que trazem o sangue recém-oxigenado dos pulmões diretamente para o átrio esquerdo. São as únicas veias do corpo a transportar sangue rico em oxigênio no sistema adulto."
+  },
+  "atrioesq": {
+    "objname": "Átrio esquerdo",
+    "description": "Câmara superior esquerda que atua como receptora do sangue oxigenado vindo dos pulmões. Ao se contrair, empurra esse sangue rico em nutrientes e oxigênio para o ventrículo esquerdo através da válvula mitral."
+  },
+  "valvulamit": {
+    "objname": "Válvula mitral",
+    "description": "Também chamada de bicúspide, separa o átrio do ventrículo esquerdos. Composta por dois folhetos, garante que o sangue oxigenado flua apenas para frente, bloqueando qualquer retorno ao átrio durante a sístole."
+  },
+  "ventriculoesq": {
+    "objname": "Ventrículo esquerdo",
+    "description": "Câmara de maior massa muscular do coração. Sua forte contração é essencial para ejetar o sangue oxigenado, vencendo a resistência sistêmica, e distribuí-lo por todo o corpo humano através da artéria aorta."
+  },
+  "valvulaaor": {
+    "objname": "Válvula aórtica ",
+    "description": "Válvula semilunar localizada entre o ventrículo esquerdo e a aorta. Abre-se para a ejeção do sangue rico em oxigênio e fecha-se hermeticamente para impedir o refluxo para o ventrículo no momento do relaxamento."
+  },
+  "aorta": {
+    "objname": "Aorta",
+    "description": "A maior e principal artéria do corpo humano. Emerge do ventrículo esquerdo e distribui o sangue oxigenado sob alta pressão para a rede arterial sistêmica, nutrindo todos os tecidos, órgãos e células do organismo."
+  },
+  "frente": {
+    "objname": "Frente",
+    "description": "Esconder/Mostrar parte da frente."
   }
 }

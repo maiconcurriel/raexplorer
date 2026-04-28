@@ -23,6 +23,10 @@ let scene, camera, renderer, controls, composer, colorPass, modelId;
 let highlightMesh = null;
 let models = [];
 let objectData = {};
+let selectedObject = null;
+let originalEmissive = new THREE.Color();
+let isIsolatedMode = false;
+let visibilidadeAntesDoIsolamento = {};
 
 const raycaster = new THREE.Raycaster();
 const mouse = new THREE.Vector2();
@@ -51,6 +55,8 @@ async function initViewer() {
         if(tagsCont) tagsCont.innerHTML = `<span class="tag">ID: #${modelId}</span><span class="tag">${objectData.objsystem}</span>`;
 
         renderizarCapitulos(objectData);
+
+        renderizarRecursosGlobais(objectData);
 
         initThree();
 
@@ -97,7 +103,6 @@ function initThree() {
 
     scene.add(dirLight);
 
-
     controls = new OrbitControls(camera, renderer.domElement);
     controls.enableDamping = true;
     controls.dampingFactor = 0.05;
@@ -133,7 +138,7 @@ function load3DModel(id) {
                     obj.material.depthWrite = false;
                 }
                 if (obj.material.emissiveIntensity !== undefined) {
-                    // obj.material.emissiveIntensity = 2.0; 
+                    //obj.material.emissiveIntensity = 2.0;
                 }
             }
         });
@@ -150,13 +155,16 @@ function load3DModel(id) {
 
 function renderizarCapitulos(data) {
     const container = document.getElementById('tc-ch');
-    const ignoreKeys = ['objname', 'objsystem', 'objdescription', 'id'];
+    const ignoreKeys = ['objname', 'objsystem', 'objdescription', 'id', 'resources'];
+    
     const html = Object.keys(data)
-
-        .filter(key => !ignoreKeys.includes(key))
-
+        .filter(key => {
+            const isNotIgnored = !ignoreKeys.includes(key);
+            const hasDescription = data[key] && data[key].description && data[key].description.trim() !== "";
+            
+            return isNotIgnored && hasDescription;
+        })
         .map(key => `
-
             <div class="ch-item" onclick="focarParte('${key}')">
                 <div>
                     <div class="ch-name">${data[key].objname || key}</div>
@@ -170,28 +178,39 @@ function renderizarCapitulos(data) {
 
 window.focarParte = (id) => {
     const data = objectData[id];
+    if (!data) return;
 
-    if (data) {
-        window.swTab('desc', document.querySelector('.tab-btn')); // Vai para aba descrição
-
-        document.querySelector('.desc-tx').innerHTML = `
-            <h3>${data.objname || id}</h3>
-            <p>${data.description || 'Sem descrição.'}</p>
-            <button class="dp-act" onclick="resetScene()">Voltar ao Geral</button>
-        `;
-
-        scene.traverse(obj => {
-
-            if(obj.isMesh && obj.name === id) highlightObject(obj);
-        });
+    if (isIsolatedMode && selectedObject && selectedObject.name === id) {
+        renderButtons(id, data);
+        return; 
     }
+
+    if (isIsolatedMode) {
+        isolarObjeto(id); 
+    } else {
+        scene.traverse(obj => {
+            if(obj.isMesh && obj.name === id) {
+                highlightObject(obj);
+            }
+        });
+        renderButtons(id, data);
+    }
+
+    window.swTab('desc', document.querySelector('.tab-btn'));
+    if (typeof renderizarRecursos === 'function') renderizarRecursos(data);
 };
 
 
 window.resetScene = () => {
+    isIsolatedMode = false;
     clearHighlight();
+    selectedObject = null;
+
+    scene.traverse(obj => {
+        if (obj.isMesh) obj.visible = true;
+    });
+
     setDefaultCamera();
-    camera.position.set(0, 2, 3);
     document.querySelector('.desc-tx').innerHTML = `<p>${objectData.objdescription}</p>`;
 };
 
@@ -241,46 +260,94 @@ window.shareModel = (btnEl) => {
 
 function onPointerDown(event) {
     const rect = renderer.domElement.getBoundingClientRect();
-
     mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
     mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
 
     raycaster.setFromCamera(mouse, camera);
-
-    const intersects = raycaster.intersectObjects(models, true);
+    const intersects = raycaster.intersectObjects(models, true).filter(i => i.object.visible);
 
     if (intersects.length > 0) {
-        const selected = intersects[0].object;
-        window.focarParte(selected.name);
+        const clicked = intersects[0].object;
+        window.focarParte(clicked.name);
+    } else {
+        if (!isIsolatedMode) {
+            clearHighlight();
+            selectedObject = null;
+            document.querySelector('.desc-tx').innerHTML = `<p>${objectData.objdescription}</p>`;
+        }
     }
 }
 
 
 function highlightObject(object) {
-    clearHighlight();
+    if (isIsolatedMode) return;
 
-    highlightMesh = new THREE.Mesh(
-        object.geometry.clone(),
-        new THREE.MeshBasicMaterial({ color: 0x00ffff, transparent: true, opacity: 0.35, side: THREE.BackSide, depthWrite: false })
-    );
+    if (selectedObject && selectedObject.material) {
+        selectedObject.material.emissive.copy(originalEmissive);
+        selectedObject.material.emissiveIntensity = 0.5;
+    }
 
-    highlightMesh.position.copy(object.getWorldPosition(new THREE.Vector3()));
-    highlightMesh.quaternion.copy(object.getWorldQuaternion(new THREE.Quaternion()));
-    highlightMesh.scale.copy(object.getWorldScale(new THREE.Vector3())).multiplyScalar(1.03);
+    selectedObject = object;
 
-    scene.add(highlightMesh);
-}
-
-
-function clearHighlight() {
-    if (highlightMesh) {
-        highlightMesh.geometry.dispose();
-        highlightMesh.material.dispose();
-        scene.remove(highlightMesh);
-        highlightMesh = null;
+    if (selectedObject.material) {
+        selectedObject.material = selectedObject.material.clone();
+        originalEmissive.copy(selectedObject.material.emissive);
+        
+        selectedObject.material.emissive.setHex(0xffffff); 
+        selectedObject.material.emissiveIntensity = 0.2; 
+        
+        selectedObject.material.transparent = false;
+        selectedObject.material.opacity = 0.8; 
     }
 }
 
+function clearHighlight() {
+    if (selectedObject && selectedObject.material) {
+        selectedObject.material.emissive.copy(originalEmissive);
+        selectedObject.material.emissiveIntensity = 1.0;
+    }
+}
+
+window.isolarObjeto = (id) => {
+    const targetObj = id ? scene.getObjectByName(id) : selectedObject;
+    if (!targetObj) return;
+
+    visibilidadeAntesDoIsolamento = {};
+    scene.traverse(obj => {
+        if (obj.isMesh) {
+            visibilidadeAntesDoIsolamento[obj.name] = obj.visible;
+        }
+    });
+
+    const data = objectData[targetObj.name];
+    clearHighlight();
+    selectedObject = targetObj;
+    isIsolatedMode = true;
+
+    scene.traverse(obj => {
+        if (obj.isMesh) {
+            obj.visible = (obj.name === targetObj.name);
+        }
+    });
+
+    renderButtons(targetObj.name, data);
+    window.aproximarObjeto(targetObj.name);
+};
+
+window.voltarDoIsolamento = (id) => {
+    isIsolatedMode = false;
+
+    scene.traverse(obj => {
+        if (obj.isMesh && visibilidadeAntesDoIsolamento[obj.name] !== undefined) {
+            obj.visible = visibilidadeAntesDoIsolamento[obj.name];
+        }
+    });
+    
+    setDefaultCamera();
+
+    const data = objectData[id];
+    renderButtons(id, data);
+};
 
 function animate() {
     requestAnimationFrame(animate);
@@ -288,6 +355,89 @@ function animate() {
     composer.render();
 }
 
+const RESOURCE_CONFIG = {
+    pdf: { icon: '📄', color: '#f1f5f9' },
+    doc: { icon: '📄', color: '#f1f5f9' },
+    video: { icon: '🎥', color: 'var(--accent2-lt)' },
+    image: { icon: '📊', color: '#f0eef8' },
+    link: { icon: '🔗', color: '#fef5ec' },
+    podcast: { icon: '🎙️', color: '#eefcf0' }
+};
+
+function renderizarRecursosGlobais(data) {
+    const container = document.getElementById('tc-res');
+    if (!container || !data.resources) return;
+
+    container.innerHTML = data.resources.map(res => {
+        const config = RESOURCE_CONFIG[res.type] || RESOURCE_CONFIG.link;
+        return `
+            <div class="res-item" onclick='abrirMedia(${JSON.stringify(res)})'>
+                <div class="res-ic" style="background:${config.color}">${config.icon}</div>
+                <div>
+                    <div class="res-name">${res.name}</div>
+                    <div class="res-type">${res.info}</div>
+                </div>
+            </div>
+        `;
+    }).join('');
+}
+
+window.abrirMedia = (res) => {
+    const modal = document.getElementById('media-modal');
+    const body = document.getElementById('modal-body');
+    const title = document.getElementById('modal-title');
+    
+    title.innerText = res.name;
+    body.innerHTML = ''; 
+
+    const isExternal = res.url.startsWith('http');
+    const finalPath = isExternal ? res.url : `models/${res.url}`;
+
+    if (res.type === 'video') {
+        let embedUrl = finalPath;
+        
+        // Mantemos a conversão para Embed caso seja link externo de YouTube/Vimeo
+        if (isExternal) {
+            if (res.url.includes('youtube.com/watch?v=')) {
+                embedUrl = res.url.replace('watch?v=', 'embed/');
+            } else if (res.url.includes('vimeo.com/')) {
+                embedUrl = res.url.replace('vimeo.com/', 'player.vimeo.com/video/');
+            }
+        }
+
+        body.innerHTML = `
+            <iframe src="${embedUrl}" 
+                style="width:100%; aspect-ratio:16/9; border:none; display:block;" 
+                allowfullscreen>
+            </iframe>`;
+    } 
+    else if (res.type === 'image') {
+        body.innerHTML = `
+            <img src="${finalPath}" 
+                style="display:block; max-height:80vh; width:100%; object-fit:contain; border:none;" 
+            />`;
+    }
+    else if (res.type === 'podcast') {
+        body.innerHTML = `
+            <div style="padding: 40px; background: #f8f9fa; display: flex; justify-content: center;">
+                <audio controls src="${finalPath}" style="width: 100%;"></audio>
+            </div>`;
+    }
+    else {
+        // PDF, DOC e outros continuam abrindo em nova aba
+        window.open(finalPath, '_blank');
+        return;
+    }
+
+    modal.style.display = 'flex';
+};
+
+window.closeMediaModal = () => {
+    const modal = document.getElementById('media-modal');
+    const body = document.getElementById('modal-body');
+    body.innerHTML = '';
+    modal.style.display = 'none';
+};
 
 window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
@@ -307,5 +457,71 @@ window.addEventListener('resize', () => {
     renderer.setSize(container.offsetWidth, container.offsetHeight);
     composer.setSize(container.offsetWidth, container.offsetHeight);
 });
+
+window.toggleVisibility = (id, action) => {
+    scene.traverse(obj => {
+        if (obj.isMesh && obj.name === id) {
+            obj.visible = (action === 'show');
+        }
+    });
+    
+    const data = objectData[id];
+    renderButtons(id, data);
+};
+
+function renderButtons(id, data) {
+    let isVisible = true;
+    scene.traverse(obj => {
+        if (obj.isMesh && obj.name === id) isVisible = obj.visible;
+    });
+
+    let botoesHtml = "";
+
+    if (isIsolatedMode) {
+        botoesHtml = `
+            <button class="dp-act" style="background:#555; color:#fff;" onclick="resetScene()">Geral</button>
+            <button class="dp-act" style="background:#f1c40f; color:#000;" onclick="voltarDoIsolamento('${id}')">Voltar</button>
+        `;
+    } else {
+        const hideShowBtn = isVisible 
+            ? `<button class="dp-act btn-hide" onclick="toggleVisibility('${id}', 'hide')">Esconder</button>`
+            : `<button class="dp-act btn-show" onclick="toggleVisibility('${id}', 'show')">Mostrar</button>`;
+
+        botoesHtml = `
+            <button class="dp-act" style="background:#555; color:#fff;" onclick="resetScene()">Geral</button>
+            <button class="dp-act" style="background:#00ffff; color:#000;" onclick="isolarObjeto('${id}')">Isolar</button>
+            ${hideShowBtn}
+        `;
+    }
+
+    let htmlContent = `
+        <h3>${data.objname || id}</h3>
+        <p>${data.description || 'Sem descrição.'}</p>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 15px;">
+            ${botoesHtml}
+        </div>
+    `;
+
+    document.querySelector('.desc-tx').innerHTML = htmlContent;
+}
+
+window.aproximarObjeto = (id) => {
+    const targetObj = scene.getObjectByName(id);
+    if (!targetObj) return;
+
+    const box = new THREE.Box3().setFromObject(targetObj);
+    const center = box.getCenter(new THREE.Vector3());
+    const size = box.getSize(new THREE.Vector3());
+
+    const maxDim = Math.max(size.x, size.y, size.z);
+    const fov = camera.fov * (Math.PI / 180);
+    let cameraZ = Math.abs(maxDim / 2 / Math.tan(fov / 2)) * 1.5;
+
+    controls.target.copy(center);
+    
+    camera.position.set(center.x, center.y, center.z + cameraZ);
+    
+    controls.update();
+};
 
 initViewer(); 
