@@ -3,44 +3,73 @@
   "objsystem": "Esquelético",
   "objdescription": "Modelo anatômico completo do esqueleto humano, representando a estrutura óssea responsável por sustentação, proteção dos órgãos e suporte aos movimentos do corpo.",
   "resources": [
-    { "type": "pdf", "name": "Manual de Anatomia", "info": "PDF · 2.4 MB", "url": "manual.pdf" },
-    { "type": "doc", "name": "Documento", "info": "DOC · 1.5 MB", "url": "documento.docx" },    
-    { "type": "video", "name": "Vídeo Aula", "info": "Vídeo · 12 min", "url": "https://vimeo.com/482092372?share=copy" },
-    { "type": "image", "name": "Imagem", "info": "Imagem · 2.1 MB", "url": "eisque.png" },    
-    { "type": "link", "name": "Link Externo", "info": "Link externo", "url": "link.html" },
-    { "type": "podcast", "name": "Podcast", "info": "Áudio · 8 min", "url": "audio.mp3" }
+    {
+      "type": "pdf",
+      "name": "Manual de Anatomia",
+      "info": "PDF · 2.4 MB",
+      "url": "manual.pdf"
+    },
+    {
+      "type": "doc",
+      "name": "Documento",
+      "info": "DOC · 1.5 MB",
+      "url": "documento.docx"
+    },
+    {
+      "type": "video",
+      "name": "Vimeo",
+      "info": "Vídeo · 11 sec",
+      "url": "https://vimeo.com/482092372?share=copy"
+    },
+    {
+      "type": "image",
+      "name": "Imagem",
+      "info": "Imagem · 37,8 kb",
+      "url": "eisque.png"
+    },
+    {
+      "type": "link",
+      "name": "Link Externo",
+      "info": "Link externo",
+      "url": "link.html"
+    },
+    {
+      "type": "podcast",
+      "name": "Podcast",
+      "info": "Áudio · 8 min",
+      "url": "audio.mp3"
+    },
+    {
+      "type": "video",
+      "name": "YouTube",
+      "info": "Vídeo · 10 hrs",
+      "url": "https://www.youtube.com/watch?v=e_IIORCnBxI"
+    }
   ],
-  
   "quadril": {
     "objname": "Quadril",
     "description": "Estrutura óssea que conecta o tronco aos membros inferiores, sustentando o peso do corpo e permitindo movimentos como caminhar, sentar e girar."
   },
-
   "cranio": {
     "objname": "Crânio",
     "description": "Conjunto de ossos que protege o cérebro e sustenta as estruturas da face, como olhos, nariz e mandíbula."
   },
-
   "bracoesquerdo": {
     "objname": "Braço esquerdo",
     "description": "Membro superior responsável por movimentos de alcance, apoio e manipulação de objetos, composto por úmero, rádio e ulna."
   },
-
   "caixatoraxica": {
     "objname": "Caixa toráxica",
     "description": "Formada pelas costelas, esterno e vértebras torácicas, protege órgãos vitais como coração e pulmões."
   },
-
   "bracodireito": {
     "objname": "Braço direito",
     "description": "Membro superior que permite movimentos precisos e força, auxiliando em atividades diárias e coordenação motora."
   },
-
   "pernaesquerda": {
     "objname": "Perna esquerda",
     "description": "Membro inferior que auxilia na locomoção e equilíbrio, formado por fêmur, tíbia, fíbula e ossos do pé."
   },
-
   "pernadireita": {
     "objname": "Perna direita",
     "description": "Membro inferior responsável por sustentar o corpo e permitir movimentos como caminhar, correr e saltar."
