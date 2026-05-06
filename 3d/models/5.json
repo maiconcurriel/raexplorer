@@ -1,0 +1,13 @@
+{
+  "objname": "Coração (Animado)",
+  "objsystem": "Cardiovascular",
+  "objdescription": "Modelo anatômico detalhado do coração humano, representando a complexa estrutura muscular responsável pelo bombeamento rítmico do sangue, garantindo a oxigenação dos tecidos e a nutrição celular através das circulações sistêmica e pulmonar, processos fundamentais para a vida.",
+  "resources": [
+    {
+      "type": "image",
+      "name": "Coração",
+      "info": "Imagem · 262 KB",
+      "url": "coracao.png"
+    }
+  ]
+}

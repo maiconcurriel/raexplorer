@@ -8,7 +8,7 @@ window.handleSort = handleSort;
 window.removeFilter = removeFilter;
 window.clearAllFilters = clearAllFilters;
 
-const modelosIDs = [1, 2, 3, 4]; // Garanta que models/1.json, 2.json e 3.json existam
+const modelosIDs = [1, 2, 3, 4, 5]; // Garanta que models/1.json, 2.json e 3.json existam
 
 const FILTER_LABELS = {
     all: 'Todos', nervoso: 'Nervoso', cardio: 'Cardiovascular',
@@ -212,9 +212,6 @@ function renderizarCards(lista) {
     }
 }
 
-  /* ──────────────────────────────────────────────────────────────────────────
-     3. PERSISTÊNCIA (localStorage)
-     ────────────────────────────────────────────────────────────────────────── */
   function saveState() {
     const state = {
       view: currentView,

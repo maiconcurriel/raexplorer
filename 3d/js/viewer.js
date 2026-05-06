@@ -27,6 +27,13 @@ let selectedObject = null;
 let originalEmissive = new THREE.Color();
 let isIsolatedMode = false;
 let visibilidadeAntesDoIsolamento = {};
+let mixer, clock;
+let currentAction = null;
+let isLooping = true;
+let animationSpeed = 1.0;
+let isPaused = false;
+let animContainer = null;
+let isProgressBarDragging = false;
 
 const raycaster = new THREE.Raycaster();
 const mouse = new THREE.Vector2();
@@ -38,6 +45,8 @@ async function initViewer() {
     if (params.get('theme') === 'dark') document.body.classList.add('dark-mode');
     if (params.get('modal') === 'true') document.body.classList.add('is-modal');
     if (!modelId) return;
+
+    clock = new THREE.Clock();
 
     try {
 
@@ -69,13 +78,14 @@ async function initViewer() {
 
 
 function initThree() {
-
     const container = document.getElementById('three-container');
-    const width = container.offsetWidth;
-    const height = container.offsetHeight;
+    if (!container) return;
+
+    const width = container.clientWidth;
+    const height = container.clientHeight;
 
     if (height === 0) {
-        requestAnimationFrame(initThree);
+        setTimeout(initThree, 100);
         return;
     }
 
@@ -126,30 +136,111 @@ function initThree() {
 function load3DModel(id) {
     const loader = new GLTFLoader();
     loader.load(`models/${id}.glb`, (gltf) => {
+        const model = gltf.scene;
         
-        gltf.scene.traverse(obj => {
-            if (obj.isLight) {
-                obj.intensity *= 1.0;
-            }
-
-            if (obj.isMesh && obj.material) {
-                if (obj.material.opacity < 1) {
-                    obj.material.transparent = true;
-                    obj.material.depthWrite = false;
-                }
-                if (obj.material.emissiveIntensity !== undefined) {
-                    //obj.material.emissiveIntensity = 2.0;
-                }
+        model.traverse(obj => {
+            if (obj.isMesh) {
+                obj.castShadow = true;
+                obj.receiveShadow = true;
             }
         });
 
-        scene.add(gltf.scene);
-        models.push(gltf.scene);
+        scene.add(model);
+        models.push(model); 
 
-        const box = new THREE.Box3().setFromObject(gltf.scene);
-        const center = box.getCenter(new THREE.Vector3());       
+        const loadingEl = document.getElementById('loading-3d');
+        if(loadingEl) loadingEl.style.display = 'none';
 
-        document.getElementById('loading-3d').style.display = 'none';
+        if (gltf.animations && gltf.animations.length > 0) {
+            mixer = new THREE.AnimationMixer(model);
+            currentAction = mixer.clipAction(gltf.animations[0]);
+            
+            currentAction.clampWhenFinished = true;
+            currentAction.setLoop(isLooping ? THREE.LoopRepeat : THREE.LoopOnce);
+            currentAction.play();
+            
+            isPaused = false; 
+            injectAnimationControls();
+
+            mixer.addEventListener('finished', (e) => {
+                if (e.action === currentAction && !isLooping) {
+                    isPaused = true;
+                    updatePlayPauseUI();
+                }
+            });
+        }
+    }, undefined, (error) => {
+        console.error("Erro ao carregar GLB:", error);
+    });
+}
+
+function injectAnimationControls() {
+    const bar = document.querySelector('.v-bot-bar');
+    if (!bar || document.getElementById('anim-group')) return; // Evita duplicar
+
+    const animControlsHTML = `
+        <div id="anim-group" style="display: flex; align-items: center; gap: 10px; flex-grow: 1; margin: 0 15px;">
+            <div class="bt-sep"></div>
+            <button class="bt-btn" id="btn-play" title="Play/Pause" onclick="window.togglePlayPause()">
+                <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+            </button>
+            <input type="range" id="anim-progress" min="0" max="100" value="0" step="0.1" 
+                style="flex-grow: 1; cursor: pointer; height: 4px; accent-color: #00ffff;">
+            <button class="bt-btn" id="btn-loop" title="Alternar Loop" onclick="window.toggleLoop()" style="color: #00ffff;">
+                <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 1l4 4-4 4M7 23l-4-4 4-4M21 13a9 9 0 0 1-18 0m0-2a9 9 0 0 1 18 0"/></svg>
+            </button>
+            <select class="sort-sel" onchange="window.changeSpeed(this.value)" style="width: 60px; padding: 2px;">
+                <option value="1">1x</option>
+                <option value="0.5">0.5x</option>
+                <option value="0.25">0.25x</option>
+            </select>
+        </div>
+    `;
+
+    const colorSelect = bar.querySelector('select');
+    if (colorSelect) colorSelect.insertAdjacentHTML('afterend', animControlsHTML);
+
+    const progressBar = document.getElementById('anim-progress');
+    if (!progressBar) return;
+
+    progressBar.addEventListener('pointerdown', () => {
+        isProgressBarDragging = true;
+    });
+
+    progressBar.addEventListener('pointerup', () => {
+    isProgressBarDragging = false;
+
+        if (currentAction) {
+            currentAction.paused = isPaused;
+        }
+    });
+
+    progressBar.addEventListener('pointerleave', () => {
+        isProgressBarDragging = false;
+    });
+
+    progressBar.addEventListener('input', (e) => {
+    if (!currentAction || !mixer) return;
+
+        isProgressBarDragging = true;
+
+        const duration = currentAction.getClip().duration;
+        const targetTime = (parseFloat(e.target.value) / 100) * duration;
+
+        currentAction.paused = false;
+
+        mixer.setTime(targetTime);
+
+        mixer.update(0);
+    });
+
+    progressBar.addEventListener('change', () => { 
+        isProgressBarDragging = false;
+        
+        // Se a animação não estava pausada globalmente, retoma o play
+        if (!isPaused && currentAction) {
+            currentAction.paused = false;
+        }
     });
 }
 
@@ -206,12 +297,18 @@ window.resetScene = () => {
     clearHighlight();
     selectedObject = null;
 
+    if (currentAction) {
+        currentAction.reset();
+        currentAction.play();
+        isPaused = false;
+        updatePlayPauseUI(); // Adicione isso aqui
+    }
+
     scene.traverse(obj => {
         if (obj.isMesh) obj.visible = true;
     });
 
     setDefaultCamera();
-    document.querySelector('.desc-tx').innerHTML = `<p>${objectData.objdescription}</p>`;
 };
 
 
@@ -351,8 +448,26 @@ window.voltarDoIsolamento = (id) => {
 
 function animate() {
     requestAnimationFrame(animate);
-    controls.update();
-    composer.render();
+    const delta = clock.getDelta();
+    
+    if (mixer) {
+        if (isProgressBarDragging) {
+            // 🔥 força atualização visual enquanto arrasta
+            mixer.update(0);
+        } 
+        else if (!isPaused) {
+            mixer.update(delta);
+        }
+
+        const progressBar = document.getElementById('anim-progress');
+        if (progressBar && currentAction && !isProgressBarDragging) {
+            const progress = (mixer.time % currentAction.getClip().duration) / currentAction.getClip().duration * 100;
+            progressBar.value = progress;
+        }
+    }
+    
+    if (controls) controls.update();
+    if (composer) composer.render();
 }
 
 const RESOURCE_CONFIG = {
@@ -396,7 +511,6 @@ window.abrirMedia = (res) => {
     if (res.type === 'video') {
         let embedUrl = finalPath;
         
-        // Mantemos a conversão para Embed caso seja link externo de YouTube/Vimeo
         if (isExternal) {
             if (res.url.includes('youtube.com/watch?v=')) {
                 embedUrl = res.url.replace('watch?v=', 'embed/');
@@ -424,7 +538,6 @@ window.abrirMedia = (res) => {
             </div>`;
     }
     else {
-        // PDF, DOC e outros continuam abrindo em nova aba
         window.open(finalPath, '_blank');
         return;
     }
@@ -504,6 +617,66 @@ function renderButtons(id, data) {
 
     document.querySelector('.desc-tx').innerHTML = htmlContent;
 }
+
+window.togglePlayPause = () => {
+    if (!currentAction) return;
+
+    const duration = currentAction.getClip().duration;
+
+    // Se a animação terminou (ou está no fim), reseta para o início antes de dar play
+    if (isPaused && currentAction.time >= duration - 0.05) {
+        currentAction.time = 0;
+        mixer.setTime(0);
+    }
+
+    // Inverte o estado de pausa
+    isPaused = !isPaused;
+    currentAction.paused = isPaused;
+
+    if (!isPaused) {
+        currentAction.play();
+    }
+
+    updatePlayPauseUI();
+};
+
+function updatePlayPauseUI() {
+    const btn = document.getElementById('btn-play');
+    if (!btn) return;
+    btn.innerHTML = isPaused 
+        ? `<svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>`
+        : `<svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>`;
+}
+
+window.toggleLoop = () => {
+    if (!currentAction) return;
+
+    isLooping = !isLooping;
+    
+    // Configura o modo de repetição
+    currentAction.setLoop(isLooping ? THREE.LoopRepeat : THREE.LoopOnce);
+    currentAction.clampWhenFinished = true; 
+    
+    // Atualiza visualmente o botão
+    const btn = document.getElementById('btn-loop');
+    if (btn) {
+        btn.style.color = isLooping ? "#00ffff" : "#888";
+        // Opcional: mudar a opacidade para dar feedback de "desativado"
+        btn.style.opacity = isLooping ? "1" : "0.5";
+    }
+};
+
+window.changeSpeed = (val) => {
+    if (!mixer) return;
+    const speed = parseFloat(val);
+    mixer.timeScale = speed;
+    
+    // Se a velocidade for 0.25 (slow motion), você pode querer ajustar 
+    // o damping dos controles para uma experiência mais fluida
+    if (controls) {
+        controls.rotateSpeed = speed < 1 ? 0.5 : 1.0;
+    }
+};
 
 window.aproximarObjeto = (id) => {
     const targetObj = scene.getObjectByName(id);

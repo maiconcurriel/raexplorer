@@ -154,3 +154,66 @@ canvas {
 .btn-hide { background: #ff4757; color: white; } /* Vermelho para esconder */
 .btn-show { background: #2ed573; color: white; } /* Verde para mostrar */
 .dp-act { cursor: pointer; border: none; padding: 8px 12px; border-radius: 4px; font-weight: bold; font-size: 12px; }
+
+.anim-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
+    border-radius: 30px;
+    display: flex;
+    gap: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 100;
+    align-items: center;
+}
+
+.dark-mode .anim-controls {
+    background: rgba(30, 41, 59, 0.9);
+    color: white;
+}
+
+.anim-controls button, .anim-controls select {
+    border: none;
+    background: #e2e8f0;
+    padding: 5px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.dark-mode .anim-controls button, .dark-mode .anim-controls select {
+    background: #334155;
+    color: white;
+}
+
+#anim-progress {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #444; /* Cor do trilho */
+    height: 4px;
+    border-radius: 2px;
+    outline: none;
+}
+
+#anim-progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background: #00ffff; /* Cor da bolinha */
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+#anim-progress::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    background: #00ffff;
+    border-radius: 50%;
+    cursor: pointer;
+}
