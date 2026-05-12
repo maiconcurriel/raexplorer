@@ -521,15 +521,29 @@ window.abrirMedia = (res) => {
             if (res.url.includes('youtube.com/watch?v=')) {
                 embedUrl = res.url.replace('watch?v=', 'embed/');
             } else if (res.url.includes('vimeo.com/')) {
-                embedUrl = res.url.replace('vimeo.com/', 'player.vimeo.com/video/');
+
+                const cleanUrl = res.url.replace(/\/$/, '');
+
+                const parts = cleanUrl.split('/');
+
+                const videoId = parts[3];
+
+                const hash = parts[4];
+
+                embedUrl = hash
+                    ? `https://player.vimeo.com/video/${videoId}?h=${hash}`
+                    : `https://player.vimeo.com/video/${videoId}`;
             }
         }
 
         body.innerHTML = `
-            <iframe src="${embedUrl}" 
-                style="width:100%; aspect-ratio:16/9; border:none; display:block;" 
+            <iframe 
+                src="${embedUrl}"
+                style="width:100%; aspect-ratio:16/9; border:none; display:block;"
+                allow="autoplay; fullscreen; picture-in-picture"
                 allowfullscreen>
-            </iframe>`;
+            </iframe>
+        `;
     } 
     else if (res.type === 'image') {
         body.innerHTML = `
