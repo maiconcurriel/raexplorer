@@ -308,6 +308,12 @@ window.resetScene = () => {
         if (obj.isMesh) obj.visible = true;
     });
 
+    document.querySelector('.desc-tx').innerHTML = `
+        <p>${objectData.objdescription}</p>
+    `;
+
+    window.swTab('desc', document.querySelector('.tab-btn'));
+
     setDefaultCamera();
 };
 
