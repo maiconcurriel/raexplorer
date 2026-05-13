@@ -34,6 +34,8 @@ let animationSpeed = 1.0;
 let isPaused = false;
 let animContainer = null;
 let isProgressBarDragging = false;
+let previousModelId = null;
+let isSecondaryModel = false;
 
 const raycaster = new THREE.Raycaster();
 const mouse = new THREE.Vector2();
@@ -57,7 +59,7 @@ async function initViewer() {
         document.getElementById('det-title').textContent = objectData.objname;
         document.getElementById('det-bc').textContent = objectData.objname;
         document.getElementById('det-sys').textContent = objectData.objsystem;
-        document.querySelector('.desc-tx').innerHTML = `<p>${objectData.objdescription}</p>`;       
+        document.querySelector('.desc-tx').innerHTML = parseDescriptionMedia(objectData.objdescription);
 
         const tagsCont = document.getElementById('det-tags');
 
@@ -66,6 +68,8 @@ async function initViewer() {
         renderizarCapitulos(objectData);
 
         renderizarRecursosGlobais(objectData);
+
+        atualizarBotaoModeloSecundario();
 
         initThree();
 
@@ -168,6 +172,10 @@ function load3DModel(id) {
                     updatePlayPauseUI();
                 }
             });
+        } else {
+
+            removeAnimationControls();
+
         }
     }, undefined, (error) => {
         console.error("Erro ao carregar GLB:", error);
@@ -309,7 +317,7 @@ window.resetScene = () => {
     });
 
     document.querySelector('.desc-tx').innerHTML = `
-        <p>${objectData.objdescription}</p>
+        ${parseDescriptionMedia(objectData.objdescription)}
     `;
 
     window.swTab('desc', document.querySelector('.tab-btn'));
@@ -376,7 +384,7 @@ function onPointerDown(event) {
         if (!isIsolatedMode) {
             clearHighlight();
             selectedObject = null;
-            document.querySelector('.desc-tx').innerHTML = `<p>${objectData.objdescription}</p>`;
+            document.querySelector('.desc-tx').innerHTML = parseDescriptionMedia(objectData.objdescription);
         }
     }
 }
@@ -541,6 +549,7 @@ window.abrirMedia = (res) => {
                 src="${embedUrl}"
                 style="width:100%; aspect-ratio:16/9; border:none; display:block;"
                 allow="autoplay; fullscreen; picture-in-picture"
+                referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen>
             </iframe>
         `;
@@ -629,7 +638,7 @@ function renderButtons(id, data) {
 
     let htmlContent = `
         <h3>${data.objname || id}</h3>
-        <p>${data.description || 'Sem descrição.'}</p>
+        ${parseDescriptionMedia(data.description || 'Sem descrição.')}
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 15px;">
             ${botoesHtml}
         </div>
@@ -716,5 +725,180 @@ window.aproximarObjeto = (id) => {
     
     controls.update();
 };
+
+function parseDescriptionMedia(description = '') {
+
+    let embedHtml = '';
+    let cleanText = description;
+
+    // =========================
+    // YOUTUBE
+    // =========================
+    const ytMatch = description.match(
+        /(https?:\/\/(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]+))/i
+    );
+
+    if (ytMatch) {
+
+        const videoId = ytMatch[2];
+
+        embedHtml = `
+            <iframe
+                src="https://www.youtube.com/embed/${videoId}"
+                style="width:100%; aspect-ratio:16/9; border:none; border-radius:12px; margin-bottom:15px;"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        `;
+
+        cleanText = cleanText.replace(ytMatch[1], '').trim();
+    }
+
+    // =========================
+    // VIMEO
+    // =========================
+    const vimeoMatch = description.match(
+        /https?:\/\/(?:www\.)?vimeo\.com\/(\d+)(?:\/([a-zA-Z0-9]+))?/i
+    );
+
+    if (vimeoMatch) {
+
+        const videoId = vimeoMatch[1];
+        const hash = vimeoMatch[2];
+
+        const embedUrl = hash
+            ? `https://player.vimeo.com/video/${videoId}?h=${hash}`
+            : `https://player.vimeo.com/video/${videoId}`;
+
+        embedHtml = `
+            <iframe
+                src="${embedUrl}"
+                style="width:100%; aspect-ratio:16/9; border:none; border-radius:12px; margin-bottom:15px;"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        `;
+
+        cleanText = cleanText.replace(vimeoMatch[0], '').trim();
+    }
+
+    return `
+        ${embedHtml}
+        <p>${cleanText}</p>
+    `;
+}
+
+async function carregarNovoModelo(id, voltar = false) {
+
+    previousModelId = voltar ? null : modelId;
+
+    modelId = id;
+
+    // limpa modelos antigos
+    models.forEach(model => {
+        scene.remove(model);
+    });
+
+    models = [];
+
+    // limpa animações
+    if (mixer) {
+        mixer.stopAllAction();
+        mixer = null;
+    }
+
+    currentAction = null;
+
+    removeAnimationControls();
+
+    isPaused = false;
+    isLooping = true;
+
+    try {
+
+        const response = await fetch(`models/${modelId}.json`);
+
+        objectData = await response.json();
+
+        document.getElementById('det-title').textContent = objectData.objname;
+        document.getElementById('det-bc').textContent = objectData.objname;
+        document.getElementById('det-sys').textContent = objectData.objsystem;
+
+        document.querySelector('.desc-tx').innerHTML =
+            parseDescriptionMedia(objectData.objdescription);
+
+        renderizarCapitulos(objectData);
+
+        renderizarRecursosGlobais(objectData);
+
+        atualizarBotaoModeloSecundario();
+
+        load3DModel(modelId);
+
+        resetScene();
+
+    } catch (e) {
+
+        console.error("Erro ao carregar novo modelo:", e);
+
+    }
+}
+
+function atualizarBotaoModeloSecundario() {
+
+    const btn = document.getElementById('btn-linked-model');
+
+    if (!btn) return;
+
+    // BOTÃO VOLTAR
+    if (previousModelId) {
+
+        btn.style.display = 'flex';
+
+        btn.innerHTML = '⬅️';
+
+        btn.title = 'Voltar ao modelo principal';
+
+        btn.onclick = () => {
+
+            carregarNovoModelo(previousModelId, true);
+
+        };
+
+        return;
+    }
+
+    // BOTÃO ABRIR SECUNDÁRIO
+    if (objectData.linkedModel) {
+
+        btn.style.display = 'flex';
+
+        btn.innerHTML = '🧬';
+
+        btn.title =
+            objectData.linkedModel.label || 'Modelo relacionado';
+
+        btn.onclick = () => {
+
+            carregarNovoModelo(objectData.linkedModel.id);
+
+        };
+
+    } else {
+
+        btn.style.display = 'none';
+
+    }
+}
+
+function removeAnimationControls() {
+
+    const animGroup = document.getElementById('anim-group');
+
+    if (animGroup) {
+        animGroup.remove();
+    }
+
+}
 
 initViewer(); 
