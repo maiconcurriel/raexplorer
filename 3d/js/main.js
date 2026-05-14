@@ -8,7 +8,7 @@ window.handleSort = handleSort;
 window.removeFilter = removeFilter;
 window.clearAllFilters = clearAllFilters;
 
-const modelosIDs = [1, 2, 3, 4, 5]; // Garanta que models/1.json, 2.json e 3.json existam
+const modelosIDs = [1, 2, 3, 4];
 
 const FILTER_LABELS = {
     all: 'Todos', nervoso: 'Nervoso', cardio: 'Cardiovascular',
@@ -24,9 +24,6 @@ let pendingFilters = new Set(['all']);
 let isDark = false;
 let currentOpenId = null;
 
-/* ──────────────────────────────────────────────────────────────────────────
-   2. CARREGAMENTO DOS DADOS (JSON)
-   ────────────────────────────────────────────────────────────────────────── */
 async function carregarModelos() {
     const grid = document.querySelector('.cards-grid');
     if (grid) grid.innerHTML = '<p>Carregando modelos...</p>';
@@ -39,7 +36,6 @@ async function carregarModelos() {
                     return res.json();
                 })
                 .then(data => {
-    // Criamos um mapeamento seguro para as categorias
     const sistemaBruto = data.objsystem || "";
     let categoriaChave = 'all';
 
@@ -59,7 +55,7 @@ async function carregarModelos() {
         nome: data.objname || "Sem Nome",
         sistema: sistemaBruto,
         img: `models/${id}.png`, 
-        cat: categoriaChave // Esta chave precisa bater com o FILTER_LABELS
+        cat: categoriaChave
     };
 })
         );
@@ -81,15 +77,11 @@ async function carregarModelos() {
     }
 }
 
-/* ──────────────────────────────────────────────────────────────────────────
-   3. INICIALIZAÇÃO DO APP
-   ────────────────────────────────────────────────────────────────────────── */
 function inicializarApp() {
     loadState(); 
     renderActiveChips(); 
     render();
 
-    // Verifica se há ID na URL para abrir direto
     const urlParams = new URLSearchParams(window.location.search);
     const idParaAbrir = urlParams.get('id');
 
@@ -104,7 +96,6 @@ function inicializarApp() {
         }
     }
 
-    // Configuração de Eventos (Busca, Teclado, etc)
     const searchInput = document.querySelector('.hd-search input');
     if (searchInput) searchInput.addEventListener('input', render);
 
@@ -142,31 +133,25 @@ function renderizarCards(lista) {
     const idParaAbrir = urlParams.get('id');
 
     if (idParaAbrir) {
-        // 1. Se tem ID na URL, pula o Welcome direto
         const welcomeModal = document.getElementById('welcome-overlay');
         if (welcomeModal) {
-            welcomeModal.style.display = 'none'; // Remove o modal sem animação
+            welcomeModal.style.display = 'none';
         }
-        document.getElementById('app').classList.add('visible'); // Mostra o app
+        document.getElementById('app').classList.add('visible');
 
-        // 2. Tenta abrir o modelo específico
         const modelo = modelosData.find(m => m.id == idParaAbrir);
         if (modelo) {
-            // Um pequeno delay para o DOM renderizar o fundo antes do modal subir
             setTimeout(() => openDet(modelo.nome, modelo.sistema, modelo.id), 100);
         }
     } else {
-        // Se NÃO tem ID, o fluxo segue normal (mostra o Welcome)
-        // (O seu CSS deve manter o welcome como display: flex por padrão)
+        
     }
 
-    // Evento de Busca
     const searchInput = document.querySelector('.hd-search input');
     if (searchInput) {
       searchInput.addEventListener('input', render);
     }
 
-    // Eventos dos Botões de Visualização (Grid/Lista)
     const vBtns = document.querySelectorAll('.vbtn');
     vBtns.forEach((btn, idx) => {
       btn.addEventListener('click', () => {
@@ -177,7 +162,6 @@ function renderizarCards(lista) {
       });
     });
 
-    // Fechar modal com ESC
     document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
         closeDet();
@@ -186,11 +170,9 @@ function renderizarCards(lista) {
     document.addEventListener('keydown', (event) => {
     const welcomeModal = document.getElementById('welcome-overlay');
     
-    // Verifica se o modal de boas-vindas existe e está VISÍVEL
-    // (display !== 'none' garante que o Enter só funcione quando o modal estiver na tela)
     if (welcomeModal && welcomeModal.style.display !== 'none') {
         if (event.key === 'Enter') {
-            closeWelcome(); // Chama a sua função que já fecha o modal
+            closeWelcome();
         }
     }
   });
@@ -231,18 +213,16 @@ function renderizarCards(lista) {
       currentView = state.view || 'grid';
       currentSort = state.sort || 'az';
 
-      // Sincroniza Select de Ordenação
       const sortSelect = document.querySelector('.sort-sel');
       if (sortSelect) sortSelect.value = currentSort;
 
-      // Sincroniza Favoritos no Array
       if (state.favorites) {
         modelosData.forEach(m => {
           m.fav = state.favorites.includes(m.id);
         });
       }
     }
-    updateViewButtons(); // Garante que o ícone correto fique azul
+    updateViewButtons();
   }
 
   function updateViewButtons() {
@@ -250,19 +230,14 @@ function renderizarCards(lista) {
     if (btns.length < 2) return;
     btns.forEach(b => b.classList.remove('active'));
     
-    // Se grid, ativa o primeiro botão. Se list, o segundo.
     if (currentView === 'grid') btns[0].classList.add('active');
     else btns[1].classList.add('active');
   }
 
-  /* ──────────────────────────────────────────────────────────────────────────
-     4. RENDERIZAÇÃO PRINCIPAL
-     ────────────────────────────────────────────────────────────────────────── */
   function render() {
     const grid = document.querySelector('.cards-grid');
     if (!grid) return;
 
-    // 1. Atualiza o contador de TOTAL (baseado no que veio dos JSONs)
     const spanTotal = document.getElementById('count-total');
     if (spanTotal) spanTotal.textContent = modelosData.length;
 
@@ -271,9 +246,7 @@ function renderizarCards(lista) {
 
     grid.className = `cards-grid ${currentView === 'list' ? 'list-mode' : ''}`;
 
-    // 2. Filtragem
     let filtrados = modelosData.filter(m => {
-        // Verifica se as propriedades existem antes de dar toLowerCase para evitar erros
         const nome = m.objname ? m.objname.toLowerCase() : "";
         const sistema = m.objsystem ? m.objsystem.toLowerCase() : "";
         
@@ -283,21 +256,17 @@ function renderizarCards(lista) {
         return matchesSearch && matchesCat;
     });
 
-    // 3. Atualiza o contador de FILTRADOS
     const spanFiltrados = document.getElementById('count-filtrados');
     if (spanFiltrados) spanFiltrados.textContent = filtrados.length;
 
-    // 4. Ordenação
     if (currentSort === 'az') {
         filtrados.sort((a, b) => (a.objname || "").localeCompare(b.objname || ""));
     } else if (currentSort === 'za') {
         filtrados.sort((a, b) => (b.objname || "").localeCompare(a.objname || ""));
     }
 
-    // 5. Renderização dos Cards
     grid.innerHTML = "";
 
-    // O delay de 10ms ajuda na performance da animação de entrada
     setTimeout(() => {
         if (filtrados.length === 0) {
             grid.innerHTML = '<div class="no-results">Nenhum modelo encontrado para esta busca.</div>';
@@ -330,9 +299,6 @@ function renderizarCards(lista) {
     }, 10);
 }
 
-  /* ──────────────────────────────────────────────────────────────────────────
-     5. FILTROS E DROPDOWN
-     ────────────────────────────────────────────────────────────────────────── */
   function toggleFdd() {
     const btn = document.getElementById('filter-btn');
     const dd = document.getElementById('fdd');
@@ -340,7 +306,7 @@ function renderizarCards(lista) {
     btn.classList.toggle('open', open);
     
     pendingFilters = new Set(activeFilters);
-    syncDropdownUI(); // <--- Agora ele vai calcular os números toda vez que abrir
+    syncDropdownUI();
 
     if (open) setTimeout(() => document.addEventListener('click', outsideFdd), 10);
   }
@@ -361,31 +327,25 @@ function renderizarCards(lista) {
         activeFilters.delete('all');
         if (activeFilters.has(key)) {
             activeFilters.delete(key);
-            // Se ficou vazio, volta para o 'Todos'
             if (activeFilters.size === 0) activeFilters.add('all');
         } else {
             activeFilters.add(key);
         }
     }
 
-    // A MÁGICA: Aplica tudo na hora
     syncDropdownUI();
     renderActiveChips();
     render();
-    //saveState(); // Opcional: salva a preferência do usuário
   }
 
   function syncDropdownUI() {
     const counts = getCounts(); 
     
     document.querySelectorAll('.ddchip').forEach(c => {
-        // Pega a chave do filtro que está no onclick (ex: 'cardio')
         const key = c.getAttribute('onclick').match(/'([^']+)'/)[1];
         
-        // Verifica contra o activeFilters real
         c.classList.toggle('active', activeFilters.has(key));
         
-        // Atualiza os números
         const count = counts[key] || 0;
         const spanCnt = c.querySelector('.ddcnt');
         if (spanCnt) spanCnt.textContent = `(${count})`;
@@ -443,11 +403,9 @@ function renderizarCards(lista) {
 
   function getCounts() {
     const counts = {};
-    // Inicializa todos com zero baseando-se no seu objeto de labels
     Object.keys(FILTER_LABELS).forEach(key => counts[key] = 0);
 
     modelosData.forEach(m => {
-        // Se a categoria do modelo existe no nosso dicionário, incrementa
         if (counts[m.cat] !== undefined) {
             counts[m.cat]++;
         }
@@ -457,9 +415,6 @@ function renderizarCards(lista) {
     return counts;
   }
 
-  /* ──────────────────────────────────────────────────────────────────────────
-     6. UTILITÁRIOS (MODAIS, FAVORITOS, TABS)
-     ────────────────────────────────────────────────────────────────────────── */
   function handleSort(value) {
     currentSort = value;
     saveState();
@@ -476,23 +431,22 @@ function renderizarCards(lista) {
       const btn = document.getElementById('theme-icon');
       if (isDark) {
           document.body.classList.add('dark-mode');
-          btn.textContent = '☀️'; // Mostra Sol para voltar ao Light
+          btn.textContent = '☀️';
       } else {
           document.body.classList.remove('dark-mode');
-          btn.textContent = '🌙'; // Mostra Lua para ir ao Dark
+          btn.textContent = '🌙';
       }
   }
 
   function togFav(btn, id) {
     const item = modelosData.find(m => m.id === id);
     if (item) {
-        item.fav = !item.fav; // Inverte o valor no banco de dados
+        item.fav = !item.fav;
         
-        // Em vez de render(), alteramos apenas o elemento visual
         btn.classList.toggle('active', item.fav);
         btn.innerHTML = item.fav ? '❤️' : '🤍';
 
-        saveState(); // Salva no localStorage sem recarregar a tela
+        saveState();
     }
   }
 
@@ -509,22 +463,18 @@ function renderizarCards(lista) {
 }
 
   function shareModel(id, btnEl) {
-    // 1. Prioridade para o ID passado (Card), se não, usa o do Modal aberto
     const targetId = id || currentOpenId;
     if (!targetId) return;
 
-    // 2. Monta a URL (funciona em file:/// e http://)
     const baseUrl = window.location.href.split('?')[0];
     const shareUrl = `${baseUrl}?id=${targetId}`;
 
-    // 3. Copia para a área de transferência
     navigator.clipboard.writeText(shareUrl).then(() => {
         if (btnEl) {
             const originalHTML = btnEl.innerHTML;
             
-            // Feedback visual no botão específico que foi clicado
             btnEl.innerHTML = "✅ Copiado!";
-            btnEl.classList.add('copied'); // Opcional: para mudar a cor via CSS
+            btnEl.classList.add('copied');
             
             setTimeout(() => {
                 btnEl.innerHTML = originalHTML;
@@ -536,14 +486,13 @@ function renderizarCards(lista) {
     });
   }
 
-  function togFavModal(btn) { // Recebe o botão como parâmetro
+  function togFavModal(btn) {
     if (currentOpenId === null) return;
     
     const item = modelosData.find(m => m.id === currentOpenId);
     if (item) {
         item.fav = !item.fav;
         
-        // Atualiza o visual do botão no modal
         btn.classList.toggle('active', item.fav);
         btn.innerHTML = item.fav ? '❤️ Favoritado' : '🤍 Favoritar';
         
@@ -556,22 +505,18 @@ function renderizarCards(lista) {
     const modal = document.getElementById('det-ov');
     const frame = document.getElementById('viewer-frame');
     
-    // Define a URL com o parâmetro do modelo
     const viewerUrl = `viewer.html?id=${modelId}`;
     
-    // Opção 1: Abrir no Modal (Iframe)
     frame.src = viewerUrl;
     modal.style.display = 'flex';
     
-    // Opção 2: Se você quiser um botão "Abrir em nova aba" no index
-    // window.open(viewerUrl, '_blank');
 }
 
   function closeDet() {
     const modal = document.getElementById('det-ov');
     const frame = document.getElementById('viewer-frame');
     modal.style.display = 'none';
-    frame.src = ""; // Limpa o iframe para economizar memória e resetar o 3D
+    frame.src = "";
   }
 
   function closeWelcome() {
@@ -595,17 +540,14 @@ function renderizarCards(lista) {
     const searchPanel = document.getElementById('anatomy-search');
     if (!searchPanel) return;
 
-    // Alterna a classe 'open' ou 'active'
     const isOpen = searchPanel.classList.toggle('open');
 
-    // Opcional: Dar foco automático no input quando abrir
     if (isOpen) {
         const input = searchPanel.querySelector('input');
         if (input) setTimeout(() => input.focus(), 100);
     }
   }
 
-// Aproveitando para criar a função de filtrar a lista interna
   function filterAnatomy(term) {
       const items = document.querySelectorAll('.as-item');
       const filter = term.toLowerCase();
@@ -616,31 +558,25 @@ function renderizarCards(lista) {
       });
   }
 
-// E a função de selecionar (apenas visual por enquanto)
   function selectAnatomy(el) {
       document.querySelectorAll('.as-item').forEach(i => i.classList.remove('active'));
       el.classList.add('active');
       
-      // Feedback simples
       console.log("Estrutura selecionada:", el.textContent);
-      // Aqui você poderia integrar com a API do BioDigital para focar no órgão
   }
 
   function toggleFullscreen() {
-    // Selecionamos o elemento que queremos expandir (o modal inteiro ou apenas o viewer)
     const elem = document.getElementById('det-ov'); 
 
     if (!document.fullscreenElement) {
-        // Tenta colocar em tela cheia
         if (elem.requestFullscreen) {
             elem.requestFullscreen();
-        } else if (elem.webkitRequestFullscreen) { /* Safari */
+        } else if (elem.webkitRequestFullscreen) {
             elem.webkitRequestFullscreen();
-        } else if (elem.msRequestFullscreen) { /* IE11 */
+        } else if (elem.msRequestFullscreen) {
             elem.msRequestFullscreen();
         }
     } else {
-        // Se já estiver em tela cheia, sai dela
         if (document.exitFullscreen) {
             document.exitFullscreen();
         }
@@ -654,10 +590,8 @@ function renderizarCards(lista) {
     const titulo = params.get('title');
     const sistema = params.get('sys');
 
-    // Preenche os elementos dentro do viewer.html
     if (titulo) document.getElementById('det-title').textContent = titulo;
     if (sistema) document.getElementById('det-sys').textContent = sistema;
     
-    // Atualiza o breadcrumb se necessário
     if (titulo) document.getElementById('det-bc').textContent = titulo;
 });

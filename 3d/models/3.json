@@ -19,13 +19,13 @@
       "type": "video",
       "name": "Vimeo",
       "info": "Vídeo · 11 sec",
-      "url": "https://vimeo.com/482092372?share=copy"
+      "url": "https://vimeo.com/486984055"
     },
     {
       "type": "image",
       "name": "Imagem",
       "info": "Imagem · 37,8 kb",
-      "url": "eisque.png"
+      "url": "esqueleto.png"
     },
     {
       "type": "link",
@@ -43,35 +43,71 @@
       "type": "video",
       "name": "YouTube",
       "info": "Vídeo · 10 hrs",
-      "url": "https://www.youtube.com/watch?v=e_IIORCnBxI"
+      "url": "https://www.youtube.com/watch?v=KZk8crBYDcY"
     }
   ],
-  "quadril": {
-    "objname": "Quadril",
-    "description": "Estrutura óssea que conecta o tronco aos membros inferiores, sustentando o peso do corpo e permitindo movimentos como caminhar, sentar e girar."
+  "RibCage": {
+    "objname": "Caixa torácica",
+    "description": "Estrutura óssea formada por costelas, esterno e vértebras torácicas, responsável por proteger órgãos vitais como coração e pulmões."
   },
-  "cranio": {
+  "Cranium": {
     "objname": "Crânio",
-    "description": "Conjunto de ossos que protege o cérebro e sustenta as estruturas da face, como olhos, nariz e mandíbula."
+    "description": "Conjunto de ossos que protege o cérebro e forma a estrutura da cabeça e do rosto."
   },
-  "bracoesquerdo": {
-    "objname": "Braço esquerdo",
-    "description": "Membro superior responsável por movimentos de alcance, apoio e manipulação de objetos, composto por úmero, rádio e ulna."
+  "Pelvis": {
+    "objname": "Quadril",
+    "description": "Região formada pelos ossos da pelve, conectando o tronco aos membros inferiores e auxiliando na sustentação do corpo."
   },
-  "caixatoraxica": {
-    "objname": "Caixa toráxica",
-    "description": "Formada pelas costelas, esterno e vértebras torácicas, protege órgãos vitais como coração e pulmões."
+  "Humerus": {
+    "objname": "Úmero",
+    "description": "Osso longo do braço localizado entre o ombro e o cotovelo, essencial para os movimentos do membro superior."
   },
-  "bracodireito": {
-    "objname": "Braço direito",
-    "description": "Membro superior que permite movimentos precisos e força, auxiliando em atividades diárias e coordenação motora."
+  "Radius": {
+    "objname": "Rádio",
+    "description": "Osso do antebraço localizado do lado do polegar, importante para os movimentos de rotação da mão e do punho."
   },
-  "pernaesquerda": {
-    "objname": "Perna esquerda",
-    "description": "Membro inferior que auxilia na locomoção e equilíbrio, formado por fêmur, tíbia, fíbula e ossos do pé."
+  "Ulna": {
+    "objname": "Ulna",
+    "description": "Osso do antebraço localizado ao lado do dedo mínimo, responsável pela estabilidade e movimentação do cotovelo."
   },
-  "pernadireita": {
-    "objname": "Perna direita",
-    "description": "Membro inferior responsável por sustentar o corpo e permitir movimentos como caminhar, correr e saltar."
+  "Spine": {
+    "objname": "Coluna vertebral",
+    "description": "Estrutura composta por vértebras que sustenta o corpo, protege a medula espinhal e permite movimentos do tronco."
+  },
+  "Mandible": {
+    "objname": "Mandibula",
+    "description": "Maior e único osso móvel da face, responsável pela mastigação, fala e sustentação dos dentes inferiores."
+  },
+  "Clavicle": {
+    "objname": "Clavícula",
+    "description": "Osso alongado que conecta o ombro ao tórax, auxiliando na sustentação e movimentação dos braços."
+  },
+  "Femur": {
+    "objname": "Fêmur",
+    "description": "Maior e mais resistente osso do corpo humano, localizado na coxa e fundamental para locomoção e sustentação."
+  },
+  "Tibia": {
+    "objname": "Tíbia",
+    "description": "Principal osso da perna, responsável por suportar grande parte do peso corporal entre o joelho e o tornozelo."
+  },
+  "Fibula": {
+    "objname": "Fíbula",
+    "description": "Osso fino localizado ao lado da tíbia, contribuindo para estabilidade e suporte da perna e tornozelo."
+  },
+  "Tarsal": {
+    "objname": "Ossos tarsais",
+    "description": "Conjunto de ossos do tornozelo e parte posterior do pé, responsáveis pela sustentação e mobilidade."
+  },
+  "Carpals": {
+    "objname": "Ossos carpais",
+    "description": "Pequenos ossos localizados no punho, responsáveis pela flexibilidade e movimentos das mãos."
+  },
+  "Scapula": {
+    "objname": "Escápula",
+    "description": "Osso plano localizado nas costas, conhecido como omoplata, essencial para os movimentos do ombro."
+  },
+  "Patella": {
+    "objname": "Patela",
+    "description": "Osso localizado na frente do joelho, responsável por proteger a articulação e auxiliar nos movimentos da perna."
   }
 }

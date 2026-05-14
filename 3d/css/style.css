@@ -355,56 +355,115 @@ body.dark-mode .vbtn {
   }
 
   /* CARDS */
-  .cards-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 14px; }
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+}
 
-  .m-card {
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: var(--radius); overflow: hidden; cursor: pointer;
-    box-shadow: var(--shadow-sm);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-    animation: cardIn .35s ease both;
+.m-card {
+    background: var(--surface);
     border: 1px solid var(--border);
+    border-radius: 18px;
+    overflow: hidden;
+    cursor: pointer;
+
+    box-shadow: var(--shadow-sm);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+
     opacity: 0;
     animation: cardEntrada 0.4s ease-out forwards;
-  }
-  .m-card:hover { 
-    transform: translateY(-5px);
-    border-color: var(--accent-md);
-    box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.5), 0 0 15px -5px var(--accent-lt);
-  }
-  .m-card:nth-child(1){animation-delay:.04s} .m-card:nth-child(2){animation-delay:.08s}
-  .m-card:nth-child(3){animation-delay:.12s} .m-card:nth-child(4){animation-delay:.16s}
-  .m-card:nth-child(5){animation-delay:.20s} .m-card:nth-child(6){animation-delay:.24s}
-  .m-card:nth-child(7){animation-delay:.28s} .m-card:nth-child(8){animation-delay:.32s}
+}
 
-  .c-thumb {
-    position: relative; aspect-ratio: 4/3;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 56px; overflow: hidden; border-bottom: 1px solid var(--border);
+.m-card:hover {
+    transform: translateY(-4px);
+
+    border-color: var(--accent-md);
+
+    box-shadow:
+        0 12px 30px -12px rgba(0,0,0,.45),
+        0 0 18px -8px var(--accent-lt);
+}
+
+.c-thumb {
+    position: relative;
+
+    aspect-ratio: 1/1;
+
+    overflow: hidden;
+
     background: #eef0f4;
-  }
-  .c-thumb img.thumb-img {
-    position: absolute; inset: 0; width: 100%; height: 100%;
-    object-fit: cover; object-position: center;
-    transition: transform .4s ease;
-  }
-  .m-card:hover .thumb-img { transform: scale(1.04); }
-  .c-overlay {
-    position: absolute; inset: 0;
-    background: rgba(26,32,53,.55);
-    display: flex; align-items: center; justify-content: center;
-    opacity: 0; transition: opacity .18s;
-  }
-  .m-card:hover .c-overlay { opacity: 1; }
-  .v3d-btn {
-    background: #fff; color: var(--accent); border: none; border-radius: 8px;
-    padding: 9px 18px; font-size: 13px; font-weight: 600;
-    font-family: 'Onest', sans-serif; cursor: pointer;
-    display: flex; align-items: center; gap: 6px;
-    transform: translateY(6px); transition: transform .18s;
-    box-shadow: 0 2px 12px rgba(0,0,0,.2);
-  }
-  .m-card:hover .v3d-btn { transform: translateY(0); }
+
+    border-bottom: 1px solid var(--border);
+}
+
+.c-thumb img.thumb-img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform .35s ease;
+}
+
+.m-card:hover .thumb-img {
+    transform: scale(1.05);
+}
+
+.c-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(10,15,30,.45);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+
+    transition: opacity .2s ease;
+}
+
+.m-card:hover .c-overlay {
+    opacity: 1;
+}
+
+.v3d-btn {
+    background: rgba(255,255,255,.96);
+
+    color: var(--accent);
+
+    border: none;
+    border-radius: 12px;
+
+    padding: 10px 18px;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    font-family: 'Onest', sans-serif;
+
+    cursor: pointer;
+
+    transform: translateY(8px);
+
+    transition:
+        transform .2s ease,
+        background .2s ease;
+
+    box-shadow:
+        0 4px 18px rgba(0,0,0,.18);
+}
+
+.m-card:hover .v3d-btn {
+    transform: translateY(0);
+}
 
   .cat-badge {
     padding: 4px 8px;
@@ -429,9 +488,21 @@ body.dark-mode .vbtn {
   .fav-btn.active { opacity: 1; color: var(--danger); background: #fff0ef; border-color: #fcc; }
   .fav-btn:hover { color: var(--danger); }
 
-  .c-body { padding: 13px 14px; }
-  .c-name { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 4px; line-height: 1.35; letter-spacing: -.01em; }
-  .c-sys { font-size: 13px; color: var(--text-3); margin-bottom: 11px; line-height: 1.5; }
+  .c-body {
+    padding: 14px;
+}
+
+.c-name {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 4px;
+}
+
+.c-sys {
+    font-size: 13px;
+    opacity: .7;
+}
   .tag { font-size: 12px; padding: 4px 9px; border-radius: 5px; font-weight: 500; }
 
   .c-actions { border-top: 1px solid var(--border); padding-top: 10px; }
@@ -801,4 +872,16 @@ body.dark-mode header {
     max-width: none;
     max-height: none;
     border-radius: 0;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo-img{
+    width:30px;
+    height:30px;
+    object-fit:contain;
 }

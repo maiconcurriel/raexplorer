@@ -4,6 +4,7 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
+import * as SkeletonUtils from 'three/addons/utils/SkeletonUtils.js';
 
 const ColorBlindShader = {
     uniforms: { tDiffuse: { value: null }, uMatrix: { value: new THREE.Matrix3() } },
@@ -40,6 +41,9 @@ let isSecondaryModel = false;
 const raycaster = new THREE.Raycaster();
 const mouse = new THREE.Vector2();
 const params = new URLSearchParams(window.location.search);
+const gltfLoader = new GLTFLoader();
+const modelCache = new Map();
+const jsonCache = new Map();
 
 modelId = params.get('id');
 
@@ -52,9 +56,7 @@ async function initViewer() {
 
     try {
 
-        const response = await fetch(`models/${modelId}.json`);
-
-        objectData = await response.json();
+        objectData = await loadObjectData(modelId);
 
         document.getElementById('det-title').textContent = objectData.objname;
         document.getElementById('det-bc').textContent = objectData.objname;
@@ -70,6 +72,12 @@ async function initViewer() {
         renderizarRecursosGlobais(objectData);
 
         atualizarBotaoModeloSecundario();
+
+        if (objectData.linkedModel?.id) {
+
+            preloadModel(objectData.linkedModel.id);
+
+        }
 
         initThree();
 
@@ -119,8 +127,15 @@ function initThree() {
 
     controls = new OrbitControls(camera, renderer.domElement);
     controls.enableDamping = true;
-    controls.dampingFactor = 0.05;
+    controls.dampingFactor = 0.03;
     controls.screenSpacePanning = true;
+    controls.enablePan = true;
+
+    controls.mouseButtons = {
+        LEFT: THREE.MOUSE.ROTATE,
+        MIDDLE: THREE.MOUSE.DOLLY,
+        RIGHT: THREE.MOUSE.PAN
+    };
 
     composer = new EffectComposer(renderer);
     composer.addPass(new RenderPass(scene, camera));
@@ -138,48 +153,107 @@ function initThree() {
 
 
 function load3DModel(id) {
-    const loader = new GLTFLoader();
-    loader.load(`models/${id}.glb`, (gltf) => {
-        const model = gltf.scene;
-        
+
+    const finishSetup = (gltf) => {
+
+        const model = SkeletonUtils.clone(gltf.scene);
+
         model.traverse(obj => {
+
             if (obj.isMesh) {
-                obj.castShadow = true;
-                obj.receiveShadow = true;
+
+                obj.castShadow = false;
+                obj.receiveShadow = false;
+
+                obj.frustumCulled = false;
             }
         });
 
         scene.add(model);
-        models.push(model); 
+
+        models.push(model);
 
         const loadingEl = document.getElementById('loading-3d');
-        if(loadingEl) loadingEl.style.display = 'none';
+
+        if (loadingEl) {
+
+            loadingEl.style.display = 'none';
+
+        }
 
         if (gltf.animations && gltf.animations.length > 0) {
+
             mixer = new THREE.AnimationMixer(model);
+
             currentAction = mixer.clipAction(gltf.animations[0]);
-            
+
             currentAction.clampWhenFinished = true;
-            currentAction.setLoop(isLooping ? THREE.LoopRepeat : THREE.LoopOnce);
+
+            currentAction.setLoop(
+                isLooping ? THREE.LoopRepeat : THREE.LoopOnce
+            );
+
             currentAction.play();
-            
-            isPaused = false; 
+
+            isPaused = false;
+
             injectAnimationControls();
 
             mixer.addEventListener('finished', (e) => {
+
                 if (e.action === currentAction && !isLooping) {
+
                     isPaused = true;
+
                     updatePlayPauseUI();
+
                 }
             });
+
         } else {
 
             removeAnimationControls();
 
         }
-    }, undefined, (error) => {
-        console.error("Erro ao carregar GLB:", error);
-    });
+    };
+
+    // =========================
+    // USA CACHE SE EXISTIR
+    // =========================
+
+    if (modelCache.has(id)) {
+
+        console.log(`[CACHE] Modelo ${id} carregado do cache`);
+
+        finishSetup(modelCache.get(id));
+
+        return;
+    }
+
+    // =========================
+    // CARREGAMENTO NORMAL
+    // =========================
+
+    gltfLoader.load(
+
+        `models/${id}.glb`,
+
+        (gltf) => {
+
+            modelCache.set(id, gltf);
+
+            finishSetup(gltf);
+
+        },
+
+        undefined,
+
+        (error) => {
+
+            console.error("Erro ao carregar GLB:", error);
+
+        }
+    );
 }
 
 function injectAnimationControls() {
@@ -245,7 +319,6 @@ function injectAnimationControls() {
     progressBar.addEventListener('change', () => { 
         isProgressBarDragging = false;
         
-        // Se a animação não estava pausada globalmente, retoma o play
         if (!isPaused && currentAction) {
             currentAction.paused = false;
         }
@@ -370,6 +443,9 @@ window.shareModel = (btnEl) => {
 };
 
 function onPointerDown(event) {
+
+    if (event.button !== 0) return;
+
     const rect = renderer.domElement.getBoundingClientRect();
     mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
     mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
@@ -381,11 +457,11 @@ function onPointerDown(event) {
         const clicked = intersects[0].object;
         window.focarParte(clicked.name);
     } else {
-        if (!isIsolatedMode) {
+        /*if (!isIsolatedMode) {
             clearHighlight();
             selectedObject = null;
             document.querySelector('.desc-tx').innerHTML = parseDescriptionMedia(objectData.objdescription);
-        }
+        }*/
     }
 }
 
@@ -420,43 +496,107 @@ function clearHighlight() {
 }
 
 window.isolarObjeto = (id) => {
-    const targetObj = id ? scene.getObjectByName(id) : selectedObject;
+
+    const targetObj = id
+        ? scene.getObjectByName(id)
+        : selectedObject;
+
     if (!targetObj) return;
 
     visibilidadeAntesDoIsolamento = {};
+
     scene.traverse(obj => {
-        if (obj.isMesh) {
-            visibilidadeAntesDoIsolamento[obj.name] = obj.visible;
+
+        if (obj.isMesh || obj.isSkinnedMesh) {
+
+            visibilidadeAntesDoIsolamento[obj.uuid] = obj.visible;
+
         }
     });
 
     const data = objectData[targetObj.name];
+
     clearHighlight();
+
     selectedObject = targetObj;
+
     isIsolatedMode = true;
 
+    // =========================
+    // PEGA OBJETO PAI
+    // =========================
+
+    let root = targetObj;
+
+// sobe apenas até encontrar um Group útil
+while (
+    root.parent &&
+    root.parent !== scene &&
+    !root.parent.isScene
+) {
+
+    // para se o pai tiver muitos filhos
+    // evitando pegar o modelo inteiro
+    if (root.parent.children.length > 5) {
+        break;
+    }
+
+    root = root.parent;
+}
+
+    // =========================
+    // ESCONDE TUDO
+    // =========================
+
     scene.traverse(obj => {
-        if (obj.isMesh) {
-            obj.visible = (obj.name === targetObj.name);
-        }
-    });
+
+    if (obj.isMesh || obj.isSkinnedMesh) {
+
+        obj.visible = false;
+
+    }
+});
+
+// =========================
+// MOSTRA APENAS O OBJETO
+// E SEUS FILHOS
+// =========================
+
+targetObj.traverse(obj => {
+
+    if (obj.isMesh || obj.isSkinnedMesh) {
+
+        obj.visible = true;
+
+    }
+});
 
     renderButtons(targetObj.name, data);
+
     window.aproximarObjeto(targetObj.name);
 };
 
 window.voltarDoIsolamento = (id) => {
+
     isIsolatedMode = false;
 
     scene.traverse(obj => {
-        if (obj.isMesh && visibilidadeAntesDoIsolamento[obj.name] !== undefined) {
-            obj.visible = visibilidadeAntesDoIsolamento[obj.name];
+
+        if (
+            (obj.isMesh || obj.isSkinnedMesh) &&
+            visibilidadeAntesDoIsolamento[obj.uuid] !== undefined
+        ) {
+
+            obj.visible =
+                visibilidadeAntesDoIsolamento[obj.uuid];
+
         }
     });
-    
+
     setDefaultCamera();
 
     const data = objectData[id];
+
     renderButtons(id, data);
 };
 
@@ -466,7 +606,6 @@ function animate() {
     
     if (mixer) {
         if (isProgressBarDragging) {
-            // 🔥 força atualização visual enquanto arrasta
             mixer.update(0);
         } 
         else if (!isPaused) {
@@ -591,13 +730,27 @@ window.addEventListener('keydown', (e) => {
 
 
 window.addEventListener('resize', () => {
+
+    if (!camera || !renderer || !composer) return;
+
     const container = document.getElementById('three-container');
 
-    camera.aspect = container.offsetWidth / container.offsetHeight;
+    if (!container) return;
+
+    camera.aspect =
+        container.offsetWidth / container.offsetHeight;
+
     camera.updateProjectionMatrix();
 
-    renderer.setSize(container.offsetWidth, container.offsetHeight);
-    composer.setSize(container.offsetWidth, container.offsetHeight);
+    renderer.setSize(
+        container.offsetWidth,
+        container.offsetHeight
+    );
+
+    composer.setSize(
+        container.offsetWidth,
+        container.offsetHeight
+    );
 });
 
 window.toggleVisibility = (id, action) => {
@@ -652,13 +805,11 @@ window.togglePlayPause = () => {
 
     const duration = currentAction.getClip().duration;
 
-    // Se a animação terminou (ou está no fim), reseta para o início antes de dar play
     if (isPaused && currentAction.time >= duration - 0.05) {
         currentAction.time = 0;
         mixer.setTime(0);
     }
 
-    // Inverte o estado de pausa
     isPaused = !isPaused;
     currentAction.paused = isPaused;
 
@@ -682,15 +833,12 @@ window.toggleLoop = () => {
 
     isLooping = !isLooping;
     
-    // Configura o modo de repetição
     currentAction.setLoop(isLooping ? THREE.LoopRepeat : THREE.LoopOnce);
     currentAction.clampWhenFinished = true; 
     
-    // Atualiza visualmente o botão
     const btn = document.getElementById('btn-loop');
     if (btn) {
         btn.style.color = isLooping ? "#00ffff" : "#888";
-        // Opcional: mudar a opacidade para dar feedback de "desativado"
         btn.style.opacity = isLooping ? "1" : "0.5";
     }
 };
@@ -700,8 +848,6 @@ window.changeSpeed = (val) => {
     const speed = parseFloat(val);
     mixer.timeScale = speed;
     
-    // Se a velocidade for 0.25 (slow motion), você pode querer ajustar 
-    // o damping dos controles para uma experiência mais fluida
     if (controls) {
         controls.rotateSpeed = speed < 1 ? 0.5 : 1.0;
     }
@@ -731,9 +877,6 @@ function parseDescriptionMedia(description = '') {
     let embedHtml = '';
     let cleanText = description;
 
-    // =========================
-    // YOUTUBE
-    // =========================
     const ytMatch = description.match(
         /(https?:\/\/(?:www\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]+))/i
     );
@@ -754,9 +897,6 @@ function parseDescriptionMedia(description = '') {
         cleanText = cleanText.replace(ytMatch[1], '').trim();
     }
 
-    // =========================
-    // VIMEO
-    // =========================
     const vimeoMatch = description.match(
         /https?:\/\/(?:www\.)?vimeo\.com\/(\d+)(?:\/([a-zA-Z0-9]+))?/i
     );
@@ -794,14 +934,14 @@ async function carregarNovoModelo(id, voltar = false) {
 
     modelId = id;
 
-    // limpa modelos antigos
     models.forEach(model => {
+
         scene.remove(model);
+
     });
 
     models = [];
 
-    // limpa animações
     if (mixer) {
         mixer.stopAllAction();
         mixer = null;
@@ -816,9 +956,7 @@ async function carregarNovoModelo(id, voltar = false) {
 
     try {
 
-        const response = await fetch(`models/${modelId}.json`);
-
-        objectData = await response.json();
+        objectData = await loadObjectData(modelId);
 
         document.getElementById('det-title').textContent = objectData.objname;
         document.getElementById('det-bc').textContent = objectData.objname;
@@ -832,6 +970,12 @@ async function carregarNovoModelo(id, voltar = false) {
         renderizarRecursosGlobais(objectData);
 
         atualizarBotaoModeloSecundario();
+
+        if (objectData.linkedModel?.id) {
+
+            preloadModel(objectData.linkedModel.id);
+
+        }
 
         load3DModel(modelId);
 
@@ -850,7 +994,6 @@ function atualizarBotaoModeloSecundario() {
 
     if (!btn) return;
 
-    // BOTÃO VOLTAR
     if (previousModelId) {
 
         btn.style.display = 'flex';
@@ -868,12 +1011,11 @@ function atualizarBotaoModeloSecundario() {
         return;
     }
 
-    // BOTÃO ABRIR SECUNDÁRIO
     if (objectData.linkedModel) {
 
         btn.style.display = 'flex';
 
-        btn.innerHTML = '🧬';
+        btn.innerHTML = '<img src="css/icone.png" alt="Logo BioExplora" class="logo-img">';
 
         btn.title =
             objectData.linkedModel.label || 'Modelo relacionado';
@@ -899,6 +1041,36 @@ function removeAnimationControls() {
         animGroup.remove();
     }
 
+}
+
+async function loadObjectData(id) {
+
+    if (jsonCache.has(id)) {
+
+        return jsonCache.get(id);
+
+    }
+
+    const response = await fetch(`models/${id}.json`);
+
+    const data = await response.json();
+
+    jsonCache.set(id, data);
+
+    return data;
+}
+
+function preloadModel(id) {
+
+    if (!id || modelCache.has(id)) return;
+
+    gltfLoader.load(`models/${id}.glb`, (gltf) => {
+
+        modelCache.set(id, gltf);
+
+        console.log(`[PRELOAD] Modelo ${id} carregado em cache`);
+
+    });
 }
 
 initViewer(); 
