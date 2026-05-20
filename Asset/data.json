@@ -5217,6 +5217,26 @@
             "categoria": ""
         },
         {
+            "numero": 835,
+            "nome": "ÓRTESE X PRÓTESE X DAM",
+            "palavraChave": [
+                "ÓRTESE",
+                "PRÓTESE",
+                "DAM"
+            ],
+            "categoria": ""
+        },
+        {
+            "numero": 836,
+            "nome": "ALAVANCAS DO CORPO HUMANO",
+            "palavraChave": [
+                "ALAVANCAS",
+                "CORPO",
+                "HUMANO"
+            ],
+            "categoria": ""
+        },
+        {
             "numero": 5001,
             "nome": "PLANOS E EIXOS DE MOVIMENTO",
             "palavraChave": [
