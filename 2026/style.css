@@ -20,15 +20,34 @@ th { background: #eee; padding: 5px; }
 td { padding: 5px; border-bottom: 1px solid #eee; text-align: center; }
 .txt-l { text-align: left; font-weight: bold; }
 
-.time-flag-left { text-align: left; font-weight: bold; font-size: 2rem; }
-.time-flag-right { text-align: right; font-weight: bold; font-size: 2rem; }
+.time-flag-left { 
+    text-align: left; 
+    font-size: 1.8rem;     /* Reduzido levemente para casar com a altura do input */
+    line-height: 1;        /* Força a caixa do emoji a ter o tamanho exato dele */
+    display: flex;         /* Transforma a própria tag em flex */
+    align-items: center;   /* Garante que o caractere interno fique centralizado */
+}
+
+.time-flag-right { 
+    text-align: right; 
+    font-size: 1.8rem;    /* Reduzido levemente para casar com a altura do input */
+    line-height: 1;       /* Força a caixa do emoji a ter o tamanho exato dele */
+    display: flex;        /* Transforma a própria tag em flex */
+    align-items: center;  /* Garante que o caractere interno fique centralizado */
+}
 
 .jogo-item { background: #f9f9f9; padding: 10px; border-radius: 5px; margin-bottom: 8px; border: 1px solid #ddd; }
 .jogo-meta { font-size: 0.7rem; color: #666; text-align: center; margin-bottom: 5px; }
 .placar { display: flex; align-items: center; justify-content: space-between; gap: 5px; }
 .time-n { flex: 1; font-size: 0.8rem; }
 .time-n.m { text-align: right; }
-input { width: 35px; text-align: center; font-weight: bold; }
+input { 
+    width: 35px; 
+    height: 25px;          /* Adicionado para dar uma área de clique melhor e padrão */
+    text-align: center; 
+    font-weight: bold; 
+    box-sizing: border-box; /* Garante que as bordas não alterem o tamanho total */
+}
 
 .grid-mata { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; }
 .chaveamento-final { display: flex; gap: 20px; overflow-x: auto; padding-bottom: 20px; }

@@ -2,7 +2,7 @@ const dadosIniciais = {
     grupos: {
         A: { nome: "Grupo A", selecoes: ["MEX", "RSA", "KOR", "CZE"], nomes: { "MEX": "🇲🇽", "RSA": "🇿🇦", "KOR": "🇰🇷", "CZE": "🇨🇿" } },
         B: { nome: "Grupo B", selecoes: ["CAN", "BIH", "QAT", "SUI"], nomes: { "CAN": "🇨🇦", "BIH": "🇧🇦", "QAT": "🇶🇦", "SUI": "🇨🇭" } },
-        C: { nome: "Grupo C", selecoes: ["BRA", "MAR", "HAI", "SCO"], nomes: { "BRA": "🇧🇷", "MAR": "🇲🇦", "HAI": "🇭🇹", "SCO": "󠁳🏴󠁧󠁢󠁳󠁣󠁴󠁿" } },
+        C: { nome: "Grupo C", selecoes: ["BRA", "MAR", "HAI", "SCO"], nomes: { "BRA": "🇧🇷", "MAR": "🇲🇦", "HAI": "🇭🇹", "SCO": "🏴󠁧󠁢󠁳󠁣󠁴󠁿" } },
         D: { nome: "Grupo D", selecoes: ["USA", "PAR", "AUS", "TUR"], nomes: { "USA": "🇺🇸", "PAR": "🇵🇾", "AUS": "🇦🇺", "TUR": "🇹🇷" } },
         E: { nome: "Grupo E", selecoes: ["GER", "CUW", "CIV", "ECU"], nomes: { "GER": "🇩🇪", "CUW": "🇨🇼", "CIV": "🇨🇮", "ECU": "🇪🇨" } },
         F: { nome: "Grupo F", selecoes: ["NED", "JPN", "SWE", "TUN"], nomes: { "NED": "🇳🇱", "JPN": "🇯🇵", "SWE": "🇸🇪", "TUN": "🇹🇳" } },
@@ -81,7 +81,7 @@ const dadosIniciais = {
         { id: 60, g: "D", data: "Jogo 60 - 25/06 - 23h00", t1: "PAR", t2: "AUS", g1: "", g2: "" },
         { id: 61, g: "I", data: "Jogo 61 - 26/06 - 16h00", t1: "NOR", t2: "FRA", g1: "", g2: "" },
         { id: 62, g: "I", data: "Jogo 62 - 26/06 - 16h00", t1: "SEN", t2: "IRQ", g1: "", g2: "" },
-        { id: 63, g: "H", data: "Jogo 63 - 26/06 - 21h00", t1: "CPV", t2: "KSA", g1: "", g2: "" }, // Corrigido de CAB para CPV
+        { id: 63, g: "H", data: "Jogo 63 - 26/06 - 21h00", t1: "CPV", t2: "KSA", g1: "", g2: "" },
         { id: 64, g: "H", data: "Jogo 64 - 26/06 - 21h00", t1: "URU", t2: "ESP", g1: "", g2: "" },
         { id: 65, g: "G", data: "Jogo 65 - 27/06 - 00h00", t1: "EGY", t2: "IRN", g1: "", g2: "" },
         { id: 66, g: "G", data: "Jogo 66 - 27/06 - 00h00", t1: "NZL", t2: "BEL", g1: "", g2: "" },
