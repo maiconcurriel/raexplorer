@@ -1,0 +1,38 @@
+:root {
+    --primary: #0b5e3a; --secondary: #b3081b; --bg: #f0f4f2;
+}
+body { font-family: 'Segoe UI', sans-serif; background: var(--bg); margin: 0; }
+header { background: var(--primary); color: white; padding: 20px; text-align: center; position: sticky; top: 0; z-index: 100; }
+.menu-navegacao { margin-top: 15px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+.btn-nav, .btn-reset { padding: 8px 15px; border-radius: 20px; border: none; cursor: pointer; font-weight: bold; }
+.btn-nav { background: rgba(255,255,255,0.2); color: white; }
+.btn-nav.active { background: white; color: var(--primary); }
+.btn-reset { background: var(--secondary); color: white; }
+
+.container { max-width: 1400px; margin: 20px auto; padding: 0 15px; }
+.aba-conteudo { display: none; }
+.aba-conteudo.active { display: block; }
+
+.grid-grupos { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+.grupo-card { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-top: 4px solid var(--primary); }
+table { width: 100%; border-collapse: collapse; font-size: 0.8rem; margin-bottom: 10px; }
+th { background: #eee; padding: 5px; }
+td { padding: 5px; border-bottom: 1px solid #eee; text-align: center; }
+.txt-l { text-align: left; font-weight: bold; }
+
+.time-flag-left { text-align: left; font-weight: bold; font-size: 2rem; }
+.time-flag-right { text-align: right; font-weight: bold; font-size: 2rem; }
+
+.jogo-item { background: #f9f9f9; padding: 10px; border-radius: 5px; margin-bottom: 8px; border: 1px solid #ddd; }
+.jogo-meta { font-size: 0.7rem; color: #666; text-align: center; margin-bottom: 5px; }
+.placar { display: flex; align-items: center; justify-content: space-between; gap: 5px; }
+.time-n { flex: 1; font-size: 0.8rem; }
+.time-n.m { text-align: right; }
+input { width: 35px; text-align: center; font-weight: bold; }
+
+.grid-mata { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; }
+.chaveamento-final { display: flex; gap: 20px; overflow-x: auto; padding-bottom: 20px; }
+.coluna-mata { flex: 1; min-width: 250px; }
+.coluna-mata h3 { background: var(--primary); color: white; text-align: center; padding: 10px; border-radius: 5px; }
+
+.campeao-container { margin-top: 20px; padding: 20px; background: gold; border-radius: 10px; text-align: center; font-weight: bold; display: none; border: 2px solid #b8860b; }

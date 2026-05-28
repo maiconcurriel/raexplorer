@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏆 Copa do Mundo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🏆 Copa do Mundo</h1>
+        <div class="menu-navegacao">
+            <button class="btn-nav active" onclick="mudarAba('grupos')">Fase de Grupos</button>
+            <button class="btn-nav" onclick="mudarAba('fase32')">Fase de 32 (Mata-Mata)</button>
+            <button class="btn-nav" onclick="mudarAba('finais')">Oitavas até Final</button>
+            <button class="btn-reset" onclick="resetarSimulador()">🔄 Resetar</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="secao-grupos" class="aba-conteudo active">
+            <div class="grid-grupos" id="container-grupos"></div>
+        </section>
+
+        <section id="secao-fase32" class="aba-conteudo">
+            <h2 class="titulo-fase">Fase de 32 (Dezesseis-avos de Final)</h2>
+            <div class="grid-mata" id="container-32avos"></div>
+        </section>
+
+        <section id="secao-finais" class="aba-conteudo">
+            <div class="chaveamento-final">
+                <div class="coluna-mata"><h3>Oitavas</h3><div id="oitavas-lista"></div></div>
+                <div class="coluna-mata"><h3>Quartas</h3><div id="quartas-lista"></div></div>
+                <div class="coluna-mata"><h3>Semis</h3><div id="semis-lista"></div></div>
+                <div class="coluna-mata destaque">
+                    <h3>Final e 3º Lugar</h3>
+                    <div id="final-lista"></div>
+                    <div id="terceiro-lista" style="margin-top: 30px;"></div>
+                    <div id="campeao-box" class="campeao-container"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
