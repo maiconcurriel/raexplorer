@@ -5237,6 +5237,34 @@
             "categoria": ""
         },
         {
+            "numero": 837,
+            "nome": "ARRITMIA",
+            "palavraChave": [
+                "ARRITMIA",
+                "CORAÇÃO"
+            ],
+            "categoria": ""
+        },
+        {
+            "numero": 838,
+            "nome": "EXPERIMENTO DO PESCOÇO DE CISNE",
+            "palavraChave": [
+                "EXPERIMENTO",
+                "PESCOÇO",
+                "CISNE"
+            ],
+            "categoria": ""
+        },
+        {
+            "numero": 839,
+            "nome": "PRINCÍPIOS DA BIOÉTICA",
+            "palavraChave": [
+                "PRINCÍPIOS",
+                "BIOÉTICA"
+            ],
+            "categoria": ""
+        },
+        {
             "numero": 5001,
             "nome": "PLANOS E EIXOS DE MOVIMENTO",
             "palavraChave": [
