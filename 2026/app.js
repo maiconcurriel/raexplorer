@@ -266,7 +266,7 @@ function atualizarMataMata(stats) {
     if (cBox) {
         if (f.g1 !== "" && f.g2 !== "" && f.t1 && f.t2 && f.g1 !== f.g2) {
             let vencedor = parseInt(f.g1) > parseInt(f.g2) ? f.t1 : f.t2;
-            cBox.innerHTML = `👑 CAMPEÃO DA COPA 2026:<br><span style="font-size:1.6rem">${vencedor}</span>`;
+            cBox.innerHTML = `CAMPEÃO:<br><span style="font-size:1.6rem">${vencedor}</span>`;
             cBox.style.display = 'block';
         } else { cBox.style.display = 'none'; }
     }
