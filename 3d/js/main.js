@@ -466,8 +466,17 @@ function renderizarCards(lista) {
     const targetId = id || currentOpenId;
     if (!targetId) return;
 
+    // Pega a base da URL atual do projeto (ex: http://localhost/projeto/ ou https://site.com/)
     const baseUrl = window.location.href.split('?')[0];
-    const shareUrl = `${baseUrl}?id=${targetId}`;
+    
+    // Remove o "index.html" do final da URL base, caso ele exista, para mapear o viewer corretamente
+    const dirUrl = baseUrl.substring(0, baseUrl.lastIndexOf('/'));
+    
+    // Define o tema ativo baseado no estado atual da interface
+    const theme = isDark ? 'dark' : 'light';
+
+    // Monta a URL limpa apontando diretamente para o arquivo do viewer
+    const shareUrl = `${dirUrl}/viewer.html?id=${targetId}&theme=${theme}`;
 
     navigator.clipboard.writeText(shareUrl).then(() => {
         if (btnEl) {
@@ -484,7 +493,7 @@ function renderizarCards(lista) {
     }).catch(err => {
         console.error('Erro ao copiar:', err);
     });
-  }
+}
 
   function togFavModal(btn) {
     if (currentOpenId === null) return;

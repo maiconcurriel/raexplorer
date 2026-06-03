@@ -1,57 +1,60 @@
 .nav-arr {
-    display: none; 
+    display: none;
 }
 
-/* Classe que será adicionada via JS se for modal */
 body.is-modal .nav-arr {
-    display: flex; /* Ou block, dependendo do seu layout */
+    display: flex;
 }
-        body, html { margin: 0; padding: 0; height: 100vh; overflow: hidden; }
-        
-        .det-modal { 
-            display: flex; 
-            width: 100%; 
-            height: 100%; 
-            background: var(--bg-color, #fff); 
-        }
 
-        /* O viewer 3D cresce para ocupar o espaço */
-        .v-panel { 
-            flex: 1; 
-            display: flex; 
-            flex-direction: column; 
-            border-right: 1px solid var(--border-color, #eee);
-        }
-
-        /* O painel de detalhes fica fixo na direita */
-        .dp { 
-            width: 380px; 
-            display: flex; 
-            flex-direction: column; 
-            background: var(--bg-panel, #f9f9f9);
-            overflow-y: auto;
-        }
-
-body.dark-mode {
-    background-color: #0f172a !important; /* Cor para o modo escuro */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
 }
 
 body {
-    background-color: #f2f2f2; /* Cor para o modo claro */
-    margin: 0;
-    padding: 0;
+    background-color: #f2f2f2;
 }
 
+.det-modal {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color, #fff);
+}
+
+.v-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--border-color, #eee);
+}
+
+.dp {
+    width: 380px;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-panel, #f9f9f9);
+    overflow-y: auto;
+}
+
+/* Modo Escuro */
+body.dark-mode, 
 body.dark-mode .det-modal {
     background-color: #0f172a !important;
 }
 
 body.dark-mode .dp {
-    background: #1e293b !important; /* Cor do painel lateral */
+    background: #1e293b !important;
     border-left: 1px solid #334155 !important;
 }
 
-body.dark-mode .dp-title, 
+.dp-nav{
+    justify-content: right;
+}
+
+body.dark-mode .dp-title,
 body.dark-mode .desc-tx,
 body.dark-mode .dp-nav-lb {
     color: #f1f5f9 !important;
@@ -66,78 +69,116 @@ body.dark-mode .tab-btn.active {
     border-bottom-color: #38bdf8;
 }
 
-/* Força o fundo das abas e itens de recurso */
 body.dark-mode .tab-ct {
     background: transparent;
 }
 
+/* Componentes de Interface */
+.dp-act {
+    cursor: pointer;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 12px;
+}
+
 .dp-act.copied {
-    background: #059669 !important; /* Verde */
+    background: #059669 !important;
     color: white !important;
     border-color: #059669 !important;
 }
 
-.v-bot-bar {
-    position: absolute; bottom: 14px; left: 50%; transform: translateX(-50%);
-    display: flex; gap: 4px; align-items: center;
-    background: var(--surface); border: 1px solid var(--border);
-    border-radius: 10px; padding: 7px 10px; box-shadow: var(--shadow-md);
-  }
+.btn-hide { background: #ff4757; color: white; }
+.btn-show { background: #2ed573; color: white; }
 
-  #three-container {
-    flex: 1;           /* Faz ele ocupar o espaço restante */
+.v-bot-bar {
+    position: absolute;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 7px 10px;
+    box-shadow: var(--shadow-md);
+}
+
+#three-container {
+    flex: 1;
     width: 100%;
-    height: 100%;      /* Essencial */
+    height: 100%;
     position: relative;
-    min-height: 300px; /* Garante que não colapse */
+    min-height: 300px;
     background: transparent;
 }
 
 canvas {
-    display: block;    /* Remove espaços vazios de linha de texto abaixo do canvas */
+    display: block;
 }
 
+/* Componentes de Mídia / Modal */
 .modal-overlay {
-    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0,0,0,0.85); z-index: 1000;
-    display: flex; align-items: center; justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 .modal-content {
-    background: #ffffff; /* Cor sólida para o fundo (ou var(--bg-card)) */
-    width: 90%; 
+    background: #ffffff;
+    width: 90%;
     max-width: 800px;
     border-radius: 12px;
     position: relative;
-    overflow: hidden; /* Corta o vídeo nos cantos arredondados */
-    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
 }
 
 .modal-header {
     padding: 15px 20px;
-    background: #ffffff; /* Garante que o topo seja sólido */
+    background: #ffffff;
     border-bottom: 1px solid #eee;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 10; /* Garante que fique acima de qualquer conteúdo */
+    z-index: 10;
 }
+
 #modal-title {
     font-weight: 600;
-    color: #333; /* Cor escura para leitura clara no fundo branco */
+    color: #333;
     font-size: 1.1rem;
 }
+
 #modal-body {
-    background: #000; /* Fundo preto para o vídeo não mostrar frestas brancas */
+    background: #000;
     line-height: 0;
 }
-#modal-body iframe, #modal-body img { width: 100%; height: auto; border: none; }
-#modal-body iframe {
+
+#modal-body iframe, 
+#modal-body img {
     width: 100%;
-    aspect-ratio: 16 / 9; /* Mantém a proporção de vídeo */
+    height: auto;
+    border: none;
+}
+
+#modal-body iframe {
+    aspect-ratio: 16 / 9;
     display: block;
 }
+
 .close-btn {
     background: none;
     border: none;
@@ -151,49 +192,11 @@ canvas {
     color: #333;
 }
 
-.btn-hide { background: #ff4757; color: white; } /* Vermelho para esconder */
-.btn-show { background: #2ed573; color: white; } /* Verde para mostrar */
-.dp-act { cursor: pointer; border: none; padding: 8px 12px; border-radius: 4px; font-weight: bold; font-size: 12px; }
-
-.anim-controls {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(255, 255, 255, 0.9);
-    padding: 10px 20px;
-    border-radius: 30px;
-    display: flex;
-    gap: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    z-index: 100;
-    align-items: center;
-}
-
-.dark-mode .anim-controls {
-    background: rgba(30, 41, 59, 0.9);
-    color: white;
-}
-
-.anim-controls button, .anim-controls select {
-    border: none;
-    background: #e2e8f0;
-    padding: 5px 12px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 13px;
-    font-weight: 600;
-}
-
-.dark-mode .anim-controls button, .dark-mode .anim-controls select {
-    background: #334155;
-    color: white;
-}
-
+/* Controle de Progresso (Barra Injetada) */
 #anim-progress {
     -webkit-appearance: none;
     appearance: none;
-    background: #444; /* Cor do trilho */
+    background: #444;
     height: 4px;
     border-radius: 2px;
     outline: none;
@@ -204,7 +207,7 @@ canvas {
     appearance: none;
     width: 12px;
     height: 12px;
-    background: #00ffff; /* Cor da bolinha */
+    background: #00ffff;
     border-radius: 50%;
     cursor: pointer;
     box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
@@ -216,4 +219,188 @@ canvas {
     background: #00ffff;
     border-radius: 50%;
     cursor: pointer;
+}
+
+.callout-label {
+    background: #1e293b;
+    border: 2px solid #00ffff;
+    color: #ffffff;
+    padding: 6px 12px;
+    font-family: sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 255, 255, 0.2);
+    white-space: nowrap;
+    transition: opacity 0.2s ease;
+}
+
+/* Container Geral */
+.search-floating-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 110; /* Acima dos controles do Three.js */
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-family: 'Onest', sans-serif;
+}
+
+/* Botão de Abrir/Fechar */
+.search-toggle-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    color: #334155;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+}
+.search-toggle-btn:hover {
+    background: #f8fafc;
+    color: #0284c7;
+}
+
+/* Painel de Resultados */
+.search-floating-panel {
+    width: 280px;
+    max-height: 350px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+.search-floating-panel.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+}
+
+/* Campo de Input */
+.search-panel-header {
+    padding: 10px;
+    border-bottom: 1px solid #e2e8f0;
+    background: #f8fafc;
+}
+#search-float-input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 13px;
+    outline: none;
+    box-sizing: border-box;
+}
+#search-float-input:focus {
+    border-color: #38bdf8;
+}
+
+/* Lista de Itens */
+.search-panel-results {
+    flex: 1;
+    overflow-y: auto;
+    max-height: 290px;
+}
+.search-item-btn {
+    width: 100%;
+    padding: 10px 14px;
+    text-align: left;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 13px;
+    color: #334155;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+.search-item-btn:hover {
+    background: #f0f9ff;
+    color: #0369a1;
+}
+
+/* Suporte ao Modo Escuro */
+body.dark-mode .search-toggle-btn {
+    background: #1e293b;
+    border-color: #334155;
+    color: #f1f5f9;
+}
+body.dark-mode .search-toggle-btn:hover {
+    background: #334155;
+    color: #38bdf8;
+}
+body.dark-mode .search-floating-panel {
+    background: #1e293b;
+    border-color: #334155;
+}
+body.dark-mode .search-panel-header {
+    background: #0f172a;
+    border-bottom-color: #334155;
+}
+body.dark-mode #search-float-input {
+    background: #1e293b;
+    border-color: #475569;
+    color: #ffffff;
+}
+body.dark-mode .search-item-btn {
+    border-bottom-color: #334155;
+    color: #cbd5e1;
+}
+body.dark-mode .search-item-btn:hover {
+    background: #334155;
+    color: #38bdf8;
+}
+
+.altbutton
+{
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    color: var(--text-3);
+}
+
+body.dark-mode .altbutton
+{
+    background: #334155;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    color: var(--text-3);
+}
+
+.altbutton:hover {
+    background: var(--surface3);
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.divaltbutton {
+    margin-top: 20px; border-top: 1px solid rgba(0,0,0,0.1); padding-top: 15px; display: grid; place-items: center;
+}
+
+body.dark-mode .divaltbutton {
+    margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 15px; display: grid; place-items: center;
 }

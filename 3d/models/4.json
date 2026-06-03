@@ -2,10 +2,12 @@
   "objname": "Coração",
   "objsystem": "Cardiovascular",
   "objdescription": "https://vimeo.com/1191660272/3f4d52023b\n\nModelo anatômico detalhado do coração humano, representando a complexa estrutura muscular responsável pelo bombeamento rítmico do sangue, garantindo a oxigenação dos tecidos e a nutrição celular através das circulações sistêmica e pulmonar, processos fundamentais para a vida.",
-  "linkedModel": {
-    "id": "5",
-    "label": "Objeto animado"
-  },
+  "linkedModels": [
+    {
+      "id": "5",
+      "label": "Coração (Animado)"
+    }
+  ],
   "resources": [
     {
       "type": "image",
@@ -73,7 +75,7 @@
     "description": "A maior e principal artéria do corpo humano. Emerge do ventrículo esquerdo e distribui o sangue oxigenado sob alta pressão para a rede arterial sistêmica, nutrindo todos os tecidos, órgãos e células do organismo."
   },
   "frente": {
-    "objname": "Frente",
-    "description": "Esconder/Mostrar parte da frente."
+    "objname": "Coração",
+    "description": "https://vimeo.com/1191660272/3f4d52023b\n\nModelo anatômico detalhado do coração humano, representando a complexa estrutura muscular responsável pelo bombeamento rítmico do sangue, garantindo a oxigenação dos tecidos e a nutrição celular através das circulações sistêmica e pulmonar, processos fundamentais para a vida."
   }
 }
