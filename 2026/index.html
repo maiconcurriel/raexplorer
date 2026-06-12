@@ -12,6 +12,7 @@
     <header>
         <img src="copa.png" width="100px" height="100px"><h1>Copa do Mundo</h1>
         <div class="menu-navegacao">
+            <button class="btn-nav" onclick="mudarAba('calendario')">Calendário de Jogos</button>
             <button class="btn-nav active" onclick="mudarAba('grupos')">Fase de Grupos</button>
             <button class="btn-nav" onclick="mudarAba('fase32')">Fase de 32 (Mata-Mata)</button>
             <button class="btn-nav" onclick="mudarAba('finais')">Oitavas até Final</button>
@@ -20,12 +21,21 @@
     </header>
 
     <main class="container">
+
+        <section id="secao-calendario" class="aba-conteudo">
+            <div class="filtro-calendario" style="margin-bottom: 20px; max-width: 300px;">
+                <label for="select-data-jogo" style="font-weight: bold; color: var(--primary);">Escolha uma data:</label>
+                <select id="select-data-jogo" onchange="renderizarJogosDoDia(this.value)" style="width: 100%; padding: 8px; margin-top: 5px; border-radius: 5px; border: 1px solid #ccc; font-size: 0.9rem; font-weight: bold;"></select>
+            </div>
+            <!-- O grid-grupos aqui vai fazer os cards de jogos ficarem idênticos aos da Fase de Grupos -->
+            <div class="grid-grupos" id="lista-jogos-dia"></div>
+        </section>
+
         <section id="secao-grupos" class="aba-conteudo active">
             <div class="grid-grupos" id="container-grupos"></div>
         </section>
 
         <section id="secao-fase32" class="aba-conteudo">
-            <h2 class="titulo-fase">Fase de 32 (Dezesseis-avos de Final)</h2>
             <div class="grid-mata" id="container-32avos"></div>
         </section>
 
@@ -43,7 +53,6 @@
             </div>
         </section>
     </main>
-
     <script src="app.js"></script>
 </body>
 </html>

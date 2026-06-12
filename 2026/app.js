@@ -27,10 +27,10 @@ const dadosIniciais = {
         { id: 10, g: "E", data: "Jogo 10 - 14/06 - 20h00", t1: "CIV", t2: "ECU", g1: "", g2: "" },
         { id: 11, g: "F", data: "Jogo 11 - 14/06 - 17h00", t1: "NED", t2: "JPN", g1: "", g2: "" },
         { id: 12, g: "F", data: "Jogo 12 - 14/06 - 23h00", t1: "SWE", t2: "TUN", g1: "", g2: "" },
-        { id: 13, g: "H", data: "Jogo 13 - 14/06 - 13h00", t1: "ESP", t2: "CPV", g1: "", g2: "" },
-        { id: 14, g: "H", data: "Jogo 14 - 14/06 - 19h00", t1: "KSA", t2: "URU", g1: "", g2: "" },
-        { id: 15, g: "G", data: "Jogo 15 - 14/06 - 16h00", t1: "BEL", t2: "EGY", g1: "", g2: "" },
-        { id: 16, g: "G", data: "Jogo 16 - 14/06 - 22h00", t1: "IRN", t2: "NZL", g1: "", g2: "" },
+        { id: 13, g: "H", data: "Jogo 13 - 15/06 - 13h00", t1: "ESP", t2: "CPV", g1: "", g2: "" },
+        { id: 14, g: "H", data: "Jogo 14 - 15/06 - 19h00", t1: "KSA", t2: "URU", g1: "", g2: "" },
+        { id: 15, g: "G", data: "Jogo 15 - 15/06 - 16h00", t1: "BEL", t2: "EGY", g1: "", g2: "" },
+        { id: 16, g: "G", data: "Jogo 16 - 15/06 - 22h00", t1: "IRN", t2: "NZL", g1: "", g2: "" },
         { id: 17, g: "J", data: "Jogo 17 - 16/06 - 01h00", t1: "AUT", t2: "JOR", g1: "", g2: "" },
         { id: 18, g: "I", data: "Jogo 18 - 16/06 - 16h00", t1: "FRA", t2: "SEN", g1: "", g2: "" },
         { id: 19, g: "I", data: "Jogo 19 - 16/06 - 19h00", t1: "IRQ", t2: "NOR", g1: "", g2: "" },
@@ -199,10 +199,11 @@ function renderizarGrupos(stats) {
 
         db.jogos.filter(j => j.g === gId).forEach(j => {
             let idxOriginal = db.jogos.findIndex(jo => jo.id === j.id);
+            // Atualizado com min="0", placeholder="0" e chamando validarEAtualizarPlacarGeral
             html += `<div class="jogo-item"><div class="jogo-meta">${j.data}</div><div class="placar">
                 <span class="time-flag-right">${db.grupos[gId].nomes[j.t1]}</span>
-                <input type="number" value="${j.g1}" oninput="atuPlacar(${idxOriginal}, 'g1', this.value)">
-                <input type="number" value="${j.g2}" oninput="atuPlacar(${idxOriginal}, 'g2', this.value)">
+                <input type="number" min="0" placeholder="0" value="${j.g1 === "" ? "" : j.g1}" oninput="validarEAtualizarPlacarGeral('grupo', ${idxOriginal}, 'g1', this.value)">
+                <input type="number" min="0" placeholder="0" value="${j.g2 === "" ? "" : j.g2}" oninput="validarEAtualizarPlacarGeral('grupo', ${idxOriginal}, 'g2', this.value)">
                 <span class="time-flag-left">${db.grupos[gId].nomes[j.t2]}</span>
             </div></div>`;
         });
@@ -294,10 +295,11 @@ function renderMataGenerico(containerId, lista, tipo) {
     el.innerHTML = '';
     lista.forEach(j => {
         let idx = lista.indexOf(j);
+        // Atualizado com min="0", placeholder="0" e chamando validarEAtualizarPlacarGeral
         el.innerHTML += `<div class="jogo-item"><div class="jogo-meta"><b>${j.label}</b><br>${j.meta}</div><div class="placar">
             <span class="time-flag-right">${j.t1 || '<i>❓</i>'}</span>
-            <input type="number" value="${j.g1}" ${(!j.t1 || !j.t2) ? 'disabled' : ''} oninput="atuMata('${tipo}', ${idx}, 'g1', this.value)">
-            <input type="number" value="${j.g2}" ${(!j.t1 || !j.t2) ? 'disabled' : ''} oninput="atuMata('${tipo}', ${idx}, 'g2', this.value)">
+            <input type="number" min="0" placeholder="0" value="${j.g1 === "" ? "" : j.g1}" ${(!j.t1 || !j.t2) ? 'disabled' : ''} oninput="validarEAtualizarPlacarGeral('${tipo}', ${idx}, 'g1', this.value)">
+            <input type="number" min="0" placeholder="0" value="${j.g2 === "" ? "" : j.g2}" ${(!j.t1 || !j.t2) ? 'disabled' : ''} oninput="validarEAtualizarPlacarGeral('${tipo}', ${idx}, 'g2', this.value)">
             <span class="time-flag-left">${j.t2 || '<i>❓</i>'}</span>
         </div></div>`;
     });
@@ -322,4 +324,185 @@ function resetarSimulador() {
     }
 }
 
+// Função para inicializar e preencher o select de datas da nova aba
+function inicializarFiltroDatas() {
+    const select = document.getElementById('select-data-jogo');
+    if (!select) return;
+
+    let datasUnicas = [];
+
+    // 1. Coleta datas da Fase de Grupos (Formato: "Jogo 1 - 11/06 - 16h00")
+    db.jogos.forEach(j => {
+        let match = j.data.match(/\d{2}\/\d{2}/);
+        if (match && !datasUnicas.includes(match[0])) datasUnicas.push(match[0]);
+    });
+
+    // 2. Coleta datas do Mata-Mata de 32, Oitavas, Quartas e Semis (Formato: "Dom, 28/06")
+    const fasesMata = ['mata32', 'oitavas', 'quartas', 'semis'];
+    fasesMata.forEach(fase => {
+        db[fase].forEach(j => {
+            let match = j.meta.match(/\d{2}\/\d{2}/);
+            if (match && !datasUnicas.includes(match[0])) datasUnicas.push(match[0]);
+        });
+    });
+
+    // 3. Coleta datas das Finais (Terceiro Lugar e Final)
+    if (db.finais.terceiro.meta) {
+        let matchT = db.finais.terceiro.meta.match(/\d{2}\/\d{2}/);
+        if (matchT && !datasUnicas.includes(matchT[0])) datasUnicas.push(matchT[0]);
+    }
+    if (db.finais.final.meta) {
+        let matchF = db.finais.final.meta.match(/\d{2}\/\d{2}/);
+        if (matchF && !datasUnicas.includes(matchF[0])) datasUnicas.push(matchF[0]);
+    }
+
+    // Ordena as datas por ordem cronológica (transformando temporariamente em MMDD para ordenar correto se mudar o mês)
+    datasUnicas.sort((a, b) => {
+        let [diaA, mesA] = a.split('/');
+        let [diaB, mesB] = b.split('/');
+        return `${mesA}${diaA}`.localeCompare(`${mesB}${diaB}`);
+    });
+
+    select.innerHTML = datasUnicas.map(d => `<option value="${d}">Dia ${d}</option>`).join('');
+
+    const diaPadrao = datasUnicas.includes("12/06") ? "12/06" : datasUnicas[0];
+    select.value = diaPadrao;
+
+    if (diaPadrao) {
+        renderizarJogosDoDia(diaPadrao);
+    }
+}
+
+// Atualiza e renderiza os jogos do dia selecionado dentro da nova aba
+function renderizarJogosDoDia(dataSelecionada) {
+    const container = document.getElementById('lista-jogos-dia');
+    if (!container) return;
+
+    let html = "";
+
+    // === 1. BUSCA NA FASE DE GRUPOS ===
+    db.jogos.filter(j => j.data.includes(dataSelecionada)).forEach(j => {
+        let idxOriginal = db.jogos.findIndex(jo => jo.id === j.id);
+        let gId = j.g;
+        
+        // Na fase de grupos, t1 e t2 são siglas (ex: "MEX"), então buscamos o emoji no grupo
+        let emojiT1 = db.grupos[gId].nomes[j.t1] || j.t1;
+        let emojiT2 = db.grupos[gId].nomes[j.t2] || j.t2;
+        let rotulo = `Grupo ${gId} - ${j.data.split(' - ')[2] || ''}`;
+
+        html += criarCardJogoDia('grupo', idxOriginal, rotulo, emojiT1, emojiT2, j.g1, j.g2, dataSelecionada);
+    });
+
+    // === 2. BUSCA NAS FASES DE MATA-MATA (32avos, Oitavas, Quartas, Semis) ===
+    const fases = [
+        { chave: 'mata32', titulo: 'Fase de 32' },
+        { chave: 'oitavas', titulo: 'Oitavas de Final' },
+        { chave: 'quartas', titulo: 'Quartas de Final' },
+        { chave: 'semis', titulo: 'Semifinal' }
+    ];
+
+    fases.forEach(fase => {
+        db[fase.chave].filter(j => j.meta.includes(dataSelecionada)).forEach(j => {
+            let idxOriginal = db[fase.chave].findIndex(jo => jo.id === j.id);
+            let rotulo = `${fase.titulo} - ${j.label.split(' - ')[1] || j.label}`;
+            
+            // No mata-mata, j.t1 e j.t2 já guardam o emoji diretamente (ex: "🇲🇽")
+            html += criarCardJogoDia(fase.chave, idxOriginal, rotulo, j.t1, j.t2, j.g1, j.g2, dataSelecionada);
+        });
+    });
+
+    // === 3. BUSCA NAS FINAIS ===
+    if (db.finais.terceiro.meta.includes(dataSelecionada)) {
+        let j = db.finais.terceiro;
+        html += criarCardJogoDia('terceiro', 0, `Disputa do 3º Lugar`, j.t1, j.t2, j.g1, j.g2, dataSelecionada);
+    }
+    if (db.finais.final.meta.includes(dataSelecionada)) {
+        let j = db.finais.final;
+        html += criarCardJogoDia('final', 0, `Grande FINAL`, j.t1, j.t2, j.g1, j.g2, dataSelecionada);
+    }
+
+    // Se não houver nenhum jogo para o dia
+    if (html === "") {
+        container.innerHTML = `<p style="text-align: center; color: #666; width: 100%; grid-column: 1/-1;">Nenhum jogo agendado ou times ainda não definidos para este dia.</p>`;
+    } else {
+        container.innerHTML = html;
+    }
+}
+
+// Função auxiliar atualizada para renderizar os emojis perfeitamente
+function criarCardJogoDia(tipoOrigem, index, label, t1, t2, g1, g2, dataSelecionada) {
+    let nomeT1 = t1 || '<i>❓</i>';
+    let nomeT2 = t2 || '<i>❓</i>';
+    let camposDesabilitados = (!t1 || !t2 || t1.includes("3º Colocado") || t2.includes("3º Colocado")) ? 'disabled' : '';
+
+    return `
+    <div class="jogo-item" style="background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        <div class="jogo-meta" style="font-weight: bold; color: var(--primary); margin-bottom: 10px;">${label}</div>
+        <div class="placar">
+            <span class="time-flag-right">${nomeT1}</span>
+            <input type="number" min="0" placeholder="0" value="${g1 === "" ? "" : g1}" ${camposDesabilitados} oninput="validarEAtualizarPlacarGeral('modal', ${index}, 'g1', this.value); dbOrigemParaMata('${tipoOrigem}', ${index}, 'g1', this.value); renderizarJogosDoDia('${dataSelecionada}')">
+            <input type="number" min="0" placeholder="0" value="${g2 === "" ? "" : g2}" ${camposDesabilitados} oninput="validarEAtualizarPlacarGeral('modal', ${index}, 'g2', this.value); dbOrigemParaMata('${tipoOrigem}', ${index}, 'g2', this.value); renderizarJogosDoDia('${dataSelecionada}')">
+            <span class="time-flag-left">${nomeT2}</span>
+        </div>
+    </div>`;
+}
+
+// Função auxiliar indispensável para salvar o placar na array certa (Grupos ou Mata-mata específicos)
+function dbOrigemParaMata(tipoOrigem, index, campo, valor) {
+    let numCorrigido = valor === "" ? "" : Math.max(0, parseInt(valor, 10) || 0);
+    if (tipoOrigem === 'grupo') {
+        db.jogos[index][campo] = numCorrigido;
+    } else if (tipoOrigem === 'final') {
+        db.finais.final[campo] = numCorrigido;
+    } else if (tipoOrigem === 'terceiro') {
+        db.finais.terceiro[campo] = numCorrigido;
+    } else {
+        db[tipoOrigem][index][campo] = numCorrigido;
+    }
+    processarTudo();
+}
+
+// Função que valida o placar antes de salvar no banco de dados
+function validarEAtualizarPlacarGeral(origem, idx, campo, valor) {
+    let numCorrigido = "";
+    
+    if (valor !== "") {
+        let num = parseInt(valor, 10);
+        if (isNaN(num) || num < 0) {
+            num = 0;
+        }
+        numCorrigido = num;
+    }
+
+    // Identifica de onde veio o input e salva no local correto do banco
+    if (origem === 'grupo' || origem === 'modal') {
+        db.jogos[idx][campo] = numCorrigido;
+    } else if (origem === 'final') {
+        db.finais.final[campo] = numCorrigido;
+    } else if (origem === 'terceiro') {
+        db.finais.terceiro[campo] = numCorrigido;
+    } else {
+        db[origem][idx][campo] = numCorrigido;
+    }
+
+    // Processa os dados e atualiza o layout de fundo (Tabelas, Classificação e Chaves)
+    processarTudo();
+
+    // Se a alteração veio de dentro do modal, força o modal a se redesenhar para não perder o foco
+    if (origem === 'modal') {
+        const select = document.getElementById('select-data-jogo');
+        if (select) renderizarJogosDoDia(select.value);
+    }
+}
+
+// Fechar o modal se clicar fora da caixinha branca
+window.onclick = function(event) {
+    const modal = document.getElementById('modal-jogos');
+    if (event.target === modal) {
+        fecharModalJogos();
+    }
+}
+
 processarTudo();
+
+inicializarFiltroDatas();

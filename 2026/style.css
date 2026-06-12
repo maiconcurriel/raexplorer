@@ -55,3 +55,24 @@ input {
 .coluna-mata h3 { background: var(--primary); color: white; text-align: center; padding: 10px; border-radius: 5px; }
 
 .campeao-container { margin-top: 20px; padding: 20px; background: gold; border-radius: 10px; text-align: center; font-weight: bold; display: none; border: 2px solid #b8860b; }
+
+/* Estilo do botão de Jogos do Dia */
+.btn-jogos-dia {
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    background: #ffa500;
+    color: #000;
+}
+
+/* Select de datas interno */
+#select-data-jogo {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 0.9rem;
+}
