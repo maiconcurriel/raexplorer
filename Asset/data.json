@@ -5318,6 +5318,15 @@
                 "HÁLUX"
             ],
             "categoria": ""
+        },
+        {
+            "numero": 6004,
+            "nome": "LABORATÓRIO DE QUÍMICA",
+            "palavraChave": [
+                "LABORATÓRIO",
+                "QUÍMICA"
+            ],
+            "categoria": ""
         }
     ]
 }
