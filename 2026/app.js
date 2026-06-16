@@ -31,125 +31,125 @@ const dadosIniciais = {
     },
     jogos: [
         // 1ª RODADA
-        { id: 1, g: "A", data: "Jogo 1 - 11/06 - 16h00", t1: "MEX", t2: "RSA", g1: "", g2: "" },
-        { id: 2, g: "A", data: "Jogo 2 - 11/06 - 23h00", t1: "KOR", t2: "CZE", g1: "", g2: "" },
-        { id: 3, g: "B", data: "Jogo 3 - 12/06 - 16h00", t1: "CAN", t2: "BIH", g1: "", g2: "" },
-        { id: 4, g: "D", data: "Jogo 4 - 12/06 - 22h00", t1: "USA", t2: "PAR", g1: "", g2: "" },
-        { id: 5, g: "B", data: "Jogo 5 - 13/06 - 16h00", t1: "QAT", t2: "SUI", g1: "", g2: "" },
-        { id: 6, g: "C", data: "Jogo 6 - 13/06 - 19h00", t1: "BRA", t2: "MAR", g1: "", g2: "" },
-        { id: 7, g: "C", data: "Jogo 7 - 13/06 - 22h00", t1: "HAI", t2: "SCO", g1: "", g2: "" },
-        { id: 8, g: "D", data: "Jogo 8 - 14/06 - 01h00", t1: "AUS", t2: "TUR", g1: "", g2: "" },
-        { id: 9, g: "E", data: "Jogo 9 - 14/06 - 14h00", t1: "GER", t2: "CUW", g1: "", g2: "" },
-        { id: 10, g: "F", data: "Jogo 10 - 14/06 - 17h00", t1: "NED", t2: "JPN", g1: "", g2: "" },
-        { id: 11, g: "E", data: "Jogo 11 - 14/06 - 20h00", t1: "CIV", t2: "ECU", g1: "", g2: "" },        
-        { id: 12, g: "F", data: "Jogo 12 - 14/06 - 23h00", t1: "SWE", t2: "TUN", g1: "", g2: "" },
-        { id: 13, g: "H", data: "Jogo 13 - 15/06 - 13h00", t1: "ESP", t2: "CPV", g1: "", g2: "" },        
-        { id: 14, g: "G", data: "Jogo 14 - 15/06 - 16h00", t1: "BEL", t2: "EGY", g1: "", g2: "" },
-        { id: 15, g: "H", data: "Jogo 15 - 15/06 - 19h00", t1: "KSA", t2: "URU", g1: "", g2: "" },
-        { id: 16, g: "G", data: "Jogo 16 - 15/06 - 22h00", t1: "IRN", t2: "NZL", g1: "", g2: "" },
-        { id: 17, g: "I", data: "Jogo 17 - 16/06 - 16h00", t1: "FRA", t2: "SEN", g1: "", g2: "" },
-        { id: 18, g: "I", data: "Jogo 18 - 16/06 - 19h00", t1: "IRQ", t2: "NOR", g1: "", g2: "" },
-        { id: 19, g: "J", data: "Jogo 19 - 16/06 - 22h00", t1: "ARG", t2: "ALG", g1: "", g2: "" },        
-        { id: 20, g: "J", data: "Jogo 20 - 17/06 - 01h00", t1: "AUT", t2: "JOR", g1: "", g2: "" },
-        { id: 21, g: "K", data: "Jogo 21 - 17/06 - 14h00", t1: "POR", t2: "COD", g1: "", g2: "" },
-        { id: 22, g: "L", data: "Jogo 22 - 17/06 - 17h00", t1: "ENG", t2: "CRO", g1: "", g2: "" },
-        { id: 23, g: "L", data: "Jogo 23 - 17/06 - 20h00", t1: "GHA", t2: "PAN", g1: "", g2: "" },
-        { id: 24, g: "K", data: "Jogo 24 - 17/06 - 23h00", t1: "UZB", t2: "COL", g1: "", g2: "" },
+        { id: 1, g: "A", data: "Jogo 1 - 11/06 - 16h00", t1: "MEX", t2: "RSA", g1: "", g2: "", liveUrl: "" },
+        { id: 2, g: "A", data: "Jogo 2 - 11/06 - 23h00", t1: "KOR", t2: "CZE", g1: "", g2: "", liveUrl: "" },
+        { id: 3, g: "B", data: "Jogo 3 - 12/06 - 16h00", t1: "CAN", t2: "BIH", g1: "", g2: "", liveUrl: "" },
+        { id: 4, g: "D", data: "Jogo 4 - 12/06 - 22h00", t1: "USA", t2: "PAR", g1: "", g2: "", liveUrl: "" },
+        { id: 5, g: "B", data: "Jogo 5 - 13/06 - 16h00", t1: "QAT", t2: "SUI", g1: "", g2: "", liveUrl: "" },
+        { id: 6, g: "C", data: "Jogo 6 - 13/06 - 19h00", t1: "BRA", t2: "MAR", g1: "", g2: "", liveUrl: "" },
+        { id: 7, g: "C", data: "Jogo 7 - 13/06 - 22h00", t1: "HAI", t2: "SCO", g1: "", g2: "", liveUrl: "" },
+        { id: 8, g: "D", data: "Jogo 8 - 14/06 - 01h00", t1: "AUS", t2: "TUR", g1: "", g2: "", liveUrl: "" },
+        { id: 9, g: "E", data: "Jogo 9 - 14/06 - 14h00", t1: "GER", t2: "CUW", g1: "", g2: "", liveUrl: "" },
+        { id: 10, g: "F", data: "Jogo 10 - 14/06 - 17h00", t1: "NED", t2: "JPN", g1: "", g2: "", liveUrl: "" },
+        { id: 11, g: "E", data: "Jogo 11 - 14/06 - 20h00", t1: "CIV", t2: "ECU", g1: "", g2: "", liveUrl: "" },        
+        { id: 12, g: "F", data: "Jogo 12 - 14/06 - 23h00", t1: "SWE", t2: "TUN", g1: "", g2: "", liveUrl: "" },
+        { id: 13, g: "H", data: "Jogo 13 - 15/06 - 13h00", t1: "ESP", t2: "CPV", g1: "", g2: "", liveUrl: "" },        
+        { id: 14, g: "G", data: "Jogo 14 - 15/06 - 16h00", t1: "BEL", t2: "EGY", g1: "", g2: "", liveUrl: "" },
+        { id: 15, g: "H", data: "Jogo 15 - 15/06 - 19h00", t1: "KSA", t2: "URU", g1: "", g2: "", liveUrl: "" },
+        { id: 16, g: "G", data: "Jogo 16 - 15/06 - 22h00", t1: "IRN", t2: "NZL", g1: "", g2: "", liveUrl: "" },
+        { id: 17, g: "I", data: "Jogo 17 - 16/06 - 16h00", t1: "FRA", t2: "SEN", g1: "", g2: "", liveUrl: "" },
+        { id: 18, g: "I", data: "Jogo 18 - 16/06 - 19h00", t1: "IRQ", t2: "NOR", g1: "", g2: "", liveUrl: "" },
+        { id: 19, g: "J", data: "Jogo 19 - 16/06 - 22h00", t1: "ARG", t2: "ALG", g1: "", g2: "", liveUrl: "" },        
+        { id: 20, g: "J", data: "Jogo 20 - 17/06 - 01h00", t1: "AUT", t2: "JOR", g1: "", g2: "", liveUrl: "" },
+        { id: 21, g: "K", data: "Jogo 21 - 17/06 - 14h00", t1: "POR", t2: "COD", g1: "", g2: "", liveUrl: "" },
+        { id: 22, g: "L", data: "Jogo 22 - 17/06 - 17h00", t1: "ENG", t2: "CRO", g1: "", g2: "", liveUrl: "" },
+        { id: 23, g: "L", data: "Jogo 23 - 17/06 - 20h00", t1: "GHA", t2: "PAN", g1: "", g2: "", liveUrl: "" },
+        { id: 24, g: "K", data: "Jogo 24 - 17/06 - 23h00", t1: "UZB", t2: "COL", g1: "", g2: "", liveUrl: "" },
 
         // 2ª RODADA
-        { id: 25, g: "A", data: "Jogo 25 - 18/06 - 13h00", t1: "CZE", t2: "RSA", g1: "", g2: "" },
-        { id: 26, g: "B", data: "Jogo 26 - 18/06 - 16h00", t1: "SUI", t2: "BIH", g1: "", g2: "" },
-        { id: 27, g: "B", data: "Jogo 27 - 18/06 - 19h00", t1: "CAN", t2: "QAT", g1: "", g2: "" },
-        { id: 28, g: "A", data: "Jogo 28 - 18/06 - 22h00", t1: "MEX", t2: "KOR", g1: "", g2: "" },
-        { id: 29, g: "D", data: "Jogo 29 - 19/06 - 16h00", t1: "USA", t2: "AUS", g1: "", g2: "" },
-        { id: 30, g: "C", data: "Jogo 30 - 19/06 - 19h00", t1: "SCO", t2: "MAR", g1: "", g2: "" },
-        { id: 31, g: "C", data: "Jogo 31 - 19/06 - 21h30", t1: "BRA", t2: "HAI", g1: "", g2: "" },        
-        { id: 32, g: "D", data: "Jogo 32 - 20/06 - 00h00", t1: "TUR", t2: "PAR", g1: "", g2: "" },        
-        { id: 33, g: "F", data: "Jogo 33 - 20/06 - 14h00", t1: "NED", t2: "SWE", g1: "", g2: "" },
-        { id: 34, g: "E", data: "Jogo 34 - 20/06 - 17h00", t1: "GER", t2: "CIV", g1: "", g2: "" },
-        { id: 35, g: "E", data: "Jogo 35 - 20/06 - 21h00", t1: "ECU", t2: "CUW", g1: "", g2: "" },
-        { id: 36, g: "F", data: "Jogo 36 - 21/06 - 01h00", t1: "TUN", t2: "JPN", g1: "", g2: "" },
-        { id: 37, g: "H", data: "Jogo 37 - 21/06 - 13h00", t1: "ESP", t2: "KSA", g1: "", g2: "" },
-        { id: 38, g: "G", data: "Jogo 38 - 21/06 - 16h00", t1: "BEL", t2: "IRN", g1: "", g2: "" },
-        { id: 39, g: "H", data: "Jogo 39 - 21/06 - 19h00", t1: "URU", t2: "CPV", g1: "", g2: "" },
-        { id: 40, g: "G", data: "Jogo 40 - 21/06 - 22h00", t1: "NZL", t2: "EGY", g1: "", g2: "" },
-        { id: 41, g: "J", data: "Jogo 41 - 22/06 - 14h00", t1: "ARG", t2: "AUT", g1: "", g2: "" },
-        { id: 42, g: "I", data: "Jogo 42 - 22/06 - 18h00", t1: "FRA", t2: "IRQ", g1: "", g2: "" },
-        { id: 43, g: "I", data: "Jogo 43 - 22/06 - 21h00", t1: "NOR", t2: "SEN", g1: "", g2: "" },
-        { id: 44, g: "J", data: "Jogo 44 - 23/06 - 00h00", t1: "JOR", t2: "ALG", g1: "", g2: "" },
-        { id: 45, g: "K", data: "Jogo 45 - 23/06 - 14h00", t1: "POR", t2: "UZB", g1: "", g2: "" },
-        { id: 46, g: "L", data: "Jogo 46 - 23/06 - 17h00", t1: "ENG", t2: "GHA", g1: "", g2: "" },
-        { id: 47, g: "L", data: "Jogo 47 - 23/06 - 20h00", t1: "PAN", t2: "CRO", g1: "", g2: "" },
-        { id: 48, g: "K", data: "Jogo 48 - 23/06 - 23h00", t1: "COL", t2: "COD", g1: "", g2: "" },
+        { id: 25, g: "A", data: "Jogo 25 - 18/06 - 13h00", t1: "CZE", t2: "RSA", g1: "", g2: "", liveUrl: "" },
+        { id: 26, g: "B", data: "Jogo 26 - 18/06 - 16h00", t1: "SUI", t2: "BIH", g1: "", g2: "", liveUrl: "" },
+        { id: 27, g: "B", data: "Jogo 27 - 18/06 - 19h00", t1: "CAN", t2: "QAT", g1: "", g2: "", liveUrl: "" },
+        { id: 28, g: "A", data: "Jogo 28 - 18/06 - 22h00", t1: "MEX", t2: "KOR", g1: "", g2: "", liveUrl: "" },
+        { id: 29, g: "D", data: "Jogo 29 - 19/06 - 16h00", t1: "USA", t2: "AUS", g1: "", g2: "", liveUrl: "" },
+        { id: 30, g: "C", data: "Jogo 30 - 19/06 - 19h00", t1: "SCO", t2: "MAR", g1: "", g2: "", liveUrl: "" },
+        { id: 31, g: "C", data: "Jogo 31 - 19/06 - 21h30", t1: "BRA", t2: "HAI", g1: "", g2: "", liveUrl: "https://www.youtube.com/watch?v=DUuWdi0r1RI" },
+        { id: 32, g: "D", data: "Jogo 32 - 20/06 - 00h00", t1: "TUR", t2: "PAR", g1: "", g2: "", liveUrl: "" },        
+        { id: 33, g: "F", data: "Jogo 33 - 20/06 - 14h00", t1: "NED", t2: "SWE", g1: "", g2: "", liveUrl: "" },
+        { id: 34, g: "E", data: "Jogo 34 - 20/06 - 17h00", t1: "GER", t2: "CIV", g1: "", g2: "", liveUrl: "" },
+        { id: 35, g: "E", data: "Jogo 35 - 20/06 - 21h00", t1: "ECU", t2: "CUW", g1: "", g2: "", liveUrl: "" },
+        { id: 36, g: "F", data: "Jogo 36 - 21/06 - 01h00", t1: "TUN", t2: "JPN", g1: "", g2: "", liveUrl: "" },
+        { id: 37, g: "H", data: "Jogo 37 - 21/06 - 13h00", t1: "ESP", t2: "KSA", g1: "", g2: "", liveUrl: "" },
+        { id: 38, g: "G", data: "Jogo 38 - 21/06 - 16h00", t1: "BEL", t2: "IRN", g1: "", g2: "", liveUrl: "" },
+        { id: 39, g: "H", data: "Jogo 39 - 21/06 - 19h00", t1: "URU", t2: "CPV", g1: "", g2: "", liveUrl: "" },
+        { id: 40, g: "G", data: "Jogo 40 - 21/06 - 22h00", t1: "NZL", t2: "EGY", g1: "", g2: "", liveUrl: "" },
+        { id: 41, g: "J", data: "Jogo 41 - 22/06 - 14h00", t1: "ARG", t2: "AUT", g1: "", g2: "", liveUrl: "" },
+        { id: 42, g: "I", data: "Jogo 42 - 22/06 - 18h00", t1: "FRA", t2: "IRQ", g1: "", g2: "", liveUrl: "" },
+        { id: 43, g: "I", data: "Jogo 43 - 22/06 - 21h00", t1: "NOR", t2: "SEN", g1: "", g2: "", liveUrl: "" },
+        { id: 44, g: "J", data: "Jogo 44 - 23/06 - 00h00", t1: "JOR", t2: "ALG", g1: "", g2: "", liveUrl: "" },
+        { id: 45, g: "K", data: "Jogo 45 - 23/06 - 14h00", t1: "POR", t2: "UZB", g1: "", g2: "", liveUrl: "" },
+        { id: 46, g: "L", data: "Jogo 46 - 23/06 - 17h00", t1: "ENG", t2: "GHA", g1: "", g2: "", liveUrl: "" },
+        { id: 47, g: "L", data: "Jogo 47 - 23/06 - 20h00", t1: "PAN", t2: "CRO", g1: "", g2: "", liveUrl: "" },
+        { id: 48, g: "K", data: "Jogo 48 - 23/06 - 23h00", t1: "COL", t2: "COD", g1: "", g2: "", liveUrl: "" },
 
         // 3ª RODADA
-        { id: 49, g: "B", data: "Jogo 49 - 24/06 - 16h00", t1: "SUI", t2: "CAN", g1: "", g2: "" },
-        { id: 50, g: "B", data: "Jogo 50 - 24/06 - 16h00", t1: "BIH", t2: "QAT", g1: "", g2: "" },
-        { id: 51, g: "C", data: "Jogo 51 - 24/06 - 19h00", t1: "MAR", t2: "HAI", g1: "", g2: "" },        
-        { id: 52, g: "C", data: "Jogo 52 - 24/06 - 19h00", t1: "SCO", t2: "BRA", g1: "", g2: "" },
-        { id: 53, g: "A", data: "Jogo 53 - 24/06 - 22h00", t1: "RSA", t2: "KOR", g1: "", g2: "" },
-        { id: 54, g: "A", data: "Jogo 54 - 24/06 - 22h00", t1: "CZE", t2: "MEX", g1: "", g2: "" },
-        { id: 55, g: "E", data: "Jogo 55 - 25/06 - 17h00", t1: "CUW", t2: "CIV", g1: "", g2: "" },
-        { id: 56, g: "E", data: "Jogo 56 - 25/06 - 17h00", t1: "ECU", t2: "GER", g1: "", g2: "" },
-        { id: 57, g: "F", data: "Jogo 57 - 25/06 - 20h00", t1: "TUN", t2: "NED", g1: "", g2: "" },
-        { id: 58, g: "F", data: "Jogo 58 - 25/06 - 20h00", t1: "JPN", t2: "SWE", g1: "", g2: "" },        
-        { id: 59, g: "D", data: "Jogo 59 - 25/06 - 23h00", t1: "TUR", t2: "USA", g1: "", g2: "" },
-        { id: 60, g: "D", data: "Jogo 60 - 25/06 - 23h00", t1: "PAR", t2: "AUS", g1: "", g2: "" },
-        { id: 61, g: "I", data: "Jogo 61 - 26/06 - 16h00", t1: "NOR", t2: "FRA", g1: "", g2: "" },
-        { id: 62, g: "I", data: "Jogo 62 - 26/06 - 16h00", t1: "SEN", t2: "IRQ", g1: "", g2: "" },
-        { id: 63, g: "H", data: "Jogo 63 - 26/06 - 21h00", t1: "CPV", t2: "KSA", g1: "", g2: "" },
-        { id: 64, g: "H", data: "Jogo 64 - 26/06 - 21h00", t1: "URU", t2: "ESP", g1: "", g2: "" },
-        { id: 65, g: "G", data: "Jogo 65 - 27/06 - 00h00", t1: "NZL", t2: "BEL", g1: "", g2: "" },
-        { id: 66, g: "G", data: "Jogo 66 - 27/06 - 00h00", t1: "EGY", t2: "IRN", g1: "", g2: "" },        
-        { id: 67, g: "L", data: "Jogo 67 - 27/06 - 18h00", t1: "PAN", t2: "ENG", g1: "", g2: "" },
-        { id: 68, g: "L", data: "Jogo 68 - 27/06 - 18h00", t1: "CRO", t2: "GHA", g1: "", g2: "" },
-        { id: 69, g: "K", data: "Jogo 69 - 27/06 - 20h30", t1: "COL", t2: "POR", g1: "", g2: "" },
-        { id: 70, g: "K", data: "Jogo 70 - 27/06 - 20h30", t1: "COD", t2: "UZB", g1: "", g2: "" },
-        { id: 71, g: "J", data: "Jogo 71 - 27/06 - 23h00", t1: "ALG", t2: "AUT", g1: "", g2: "" },
-        { id: 72, g: "J", data: "Jogo 72 - 27/06 - 23h00", t1: "JOR", t2: "ARG", g1: "", g2: "" }
+        { id: 49, g: "B", data: "Jogo 49 - 24/06 - 16h00", t1: "SUI", t2: "CAN", g1: "", g2: "", liveUrl: "" },
+        { id: 50, g: "B", data: "Jogo 50 - 24/06 - 16h00", t1: "BIH", t2: "QAT", g1: "", g2: "", liveUrl: "" },
+        { id: 51, g: "C", data: "Jogo 51 - 24/06 - 19h00", t1: "MAR", t2: "HAI", g1: "", g2: "", liveUrl: "" },        
+        { id: 52, g: "C", data: "Jogo 52 - 24/06 - 19h00", t1: "SCO", t2: "BRA", g1: "", g2: "", liveUrl: "" },
+        { id: 53, g: "A", data: "Jogo 53 - 24/06 - 22h00", t1: "RSA", t2: "KOR", g1: "", g2: "", liveUrl: "" },
+        { id: 54, g: "A", data: "Jogo 54 - 24/06 - 22h00", t1: "CZE", t2: "MEX", g1: "", g2: "", liveUrl: "" },
+        { id: 55, g: "E", data: "Jogo 55 - 25/06 - 17h00", t1: "CUW", t2: "CIV", g1: "", g2: "", liveUrl: "" },
+        { id: 56, g: "E", data: "Jogo 56 - 25/06 - 17h00", t1: "ECU", t2: "GER", g1: "", g2: "", liveUrl: "" },
+        { id: 57, g: "F", data: "Jogo 57 - 25/06 - 20h00", t1: "TUN", t2: "NED", g1: "", g2: "", liveUrl: "" },
+        { id: 58, g: "F", data: "Jogo 58 - 25/06 - 20h00", t1: "JPN", t2: "SWE", g1: "", g2: "", liveUrl: "" },        
+        { id: 59, g: "D", data: "Jogo 59 - 25/06 - 23h00", t1: "TUR", t2: "USA", g1: "", g2: "", liveUrl: "" },
+        { id: 60, g: "D", data: "Jogo 60 - 25/06 - 23h00", t1: "PAR", t2: "AUS", g1: "", g2: "", liveUrl: "" },
+        { id: 61, g: "I", data: "Jogo 61 - 26/06 - 16h00", t1: "NOR", t2: "FRA", g1: "", g2: "", liveUrl: "" },
+        { id: 62, g: "I", data: "Jogo 62 - 26/06 - 16h00", t1: "SEN", t2: "IRQ", g1: "", g2: "", liveUrl: "" },
+        { id: 63, g: "H", data: "Jogo 63 - 26/06 - 21h00", t1: "CPV", t2: "KSA", g1: "", g2: "", liveUrl: "" },
+        { id: 64, g: "H", data: "Jogo 64 - 26/06 - 21h00", t1: "URU", t2: "ESP", g1: "", g2: "", liveUrl: "" },
+        { id: 65, g: "G", data: "Jogo 65 - 27/06 - 00h00", t1: "NZL", t2: "BEL", g1: "", g2: "", liveUrl: "" },
+        { id: 66, g: "G", data: "Jogo 66 - 27/06 - 00h00", t1: "EGY", t2: "IRN", g1: "", g2: "", liveUrl: "" },        
+        { id: 67, g: "L", data: "Jogo 67 - 27/06 - 18h00", t1: "PAN", t2: "ENG", g1: "", g2: "", liveUrl: "" },
+        { id: 68, g: "L", data: "Jogo 68 - 27/06 - 18h00", t1: "CRO", t2: "GHA", g1: "", g2: "", liveUrl: "" },
+        { id: 69, g: "K", data: "Jogo 69 - 27/06 - 20h30", t1: "COL", t2: "POR", g1: "", g2: "", liveUrl: "" },
+        { id: 70, g: "K", data: "Jogo 70 - 27/06 - 20h30", t1: "COD", t2: "UZB", g1: "", g2: "", liveUrl: "" },
+        { id: 71, g: "J", data: "Jogo 71 - 27/06 - 23h00", t1: "ALG", t2: "AUT", g1: "", g2: "", liveUrl: "" },
+        { id: 72, g: "J", data: "Jogo 72 - 27/06 - 23h00", t1: "JOR", t2: "ARG", g1: "", g2: "", liveUrl: "" }
     ],
     mata32: [
-        { id: 73, label: "Jogo 73 - 28/06 - 16h00", t1: "", t2: "", g1: "", g2: "" },
-        { id: 74, label: "Jogo 76 - 29/06 - 14h00", t1: "", t2: "", g1: "", g2: "" },
-        { id: 75, label: "Jogo 74 - 29/06 - 17h30", t1: "", t2: "", g1: "", g2: "" },
-        { id: 76, label: "Jogo 75 - 29/06 - 22h00", t1: "", t2: "", g1: "", g2: "" },
-        { id: 77, label: "Jogo 78 - 30/06 - 14h00", t1: "", t2: "", g1: "", g2: "" },        
-        { id: 78, label: "Jogo 77 - 30/06 - 18h00", t1: "", t2: "", g1: "", g2: "" },        
-        { id: 79, label: "Jogo 79 - 30/06 - 22h00", t1: "", t2: "", g1: "", g2: "" },
-        { id: 80, label: "Jogo 80 - 01/07 - 13h00", t1: "", t2: "", g1: "", g2: "" },
-        { id: 81, label: "Jogo 82 - 01/07 - 17h00", t1: "", t2: "", g1: "", g2: "" },
-        { id: 82, label: "Jogo 81 - 01/07 - 21h00", t1: "", t2: "", g1: "", g2: "" },  
-        { id: 83, label: "Jogo 84 - 02/07 - 16h00", t1: "", t2: "", g1: "", g2: "" },      
-        { id: 84, label: "Jogo 83 - 02/07 - 20h00", t1: "", t2: "", g1: "", g2: "" },        
-        { id: 85, label: "Jogo 85 - 03/07 - 00h00", t1: "", t2: "", g1: "", g2: "" },
-        { id: 86, label: "Jogo 88 - 03/07 - 15h00", t1: "", t2: "", g1: "", g2: "" },
-        { id: 87, label: "Jogo 86 - 03/07 - 19h00", t1: "", t2: "", g1: "", g2: "" },
-        { id: 88, label: "Jogo 87 - 03/07 - 22h30", t1: "", t2: "", g1: "", g2: "" }
+        { id: 73, label: "Jogo 73 - 28/06 - 16h00", t1: "", t2: "", g1: "", g2: "", liveUrl: "" },
+        { id: 74, label: "Jogo 76 - 29/06 - 14h00", t1: "", t2: "", g1: "", g2: "", liveUrl: "" },
+        { id: 75, label: "Jogo 74 - 29/06 - 17h30", t1: "", t2: "", g1: "", g2: "", liveUrl: "" },
+        { id: 76, label: "Jogo 75 - 29/06 - 22h00", t1: "", t2: "", g1: "", g2: "", liveUrl: "" },
+        { id: 77, label: "Jogo 78 - 30/06 - 14h00", t1: "", t2: "", g1: "", g2: "", liveUrl: "" },        
+        { id: 78, label: "Jogo 77 - 30/06 - 18h00", t1: "", t2: "", g1: "", g2: "", liveUrl: "" },        
+        { id: 79, label: "Jogo 79 - 30/06 - 22h00", t1: "", t2: "", g1: "", g2: "", liveUrl: "" },
+        { id: 80, label: "Jogo 80 - 01/07 - 13h00", t1: "", t2: "", g1: "", g2: "", liveUrl: "" },
+        { id: 81, label: "Jogo 82 - 01/07 - 17h00", t1: "", t2: "", g1: "", g2: "", liveUrl: "" },
+        { id: 82, label: "Jogo 81 - 01/07 - 21h00", t1: "", t2: "", g1: "", g2: "", liveUrl: "" },  
+        { id: 83, label: "Jogo 84 - 02/07 - 16h00", t1: "", t2: "", g1: "", g2: "", liveUrl: "" },      
+        { id: 84, label: "Jogo 83 - 02/07 - 20h00", t1: "", t2: "", g1: "", g2: "", liveUrl: "" },        
+        { id: 85, label: "Jogo 85 - 03/07 - 00h00", t1: "", t2: "", g1: "", g2: "", liveUrl: "" },
+        { id: 86, label: "Jogo 88 - 03/07 - 15h00", t1: "", t2: "", g1: "", g2: "", liveUrl: "" },
+        { id: 87, label: "Jogo 86 - 03/07 - 19h00", t1: "", t2: "", g1: "", g2: "", liveUrl: "" },
+        { id: 88, label: "Jogo 87 - 03/07 - 22h30", t1: "", t2: "", g1: "", g2: "", liveUrl: "" }
         
     ],
     oitavas: [
-        { id: 89, j1: 73, j2: 75, label: "Jogo 90 - 04/07 - 14h00", t1: "", t2: "", g1: "", g2: "" },
-        { id: 90, j1: 74, j2: 77, label: "Jogo 89 - 04/07 - 18h00", t1: "", t2: "", g1: "", g2: "" },        
-        { id: 91, j1: 76, j2: 78, label: "Jogo 91 - 05/07 - 17h00", t1: "", t2: "", g1: "", g2: "" },
-        { id: 92, j1: 79, j2: 80, label: "Jogo 92 - 05/07 - 21h00", t1: "", t2: "", g1: "", g2: "" },
-        { id: 93, j1: 83, j2: 84, label: "Jogo 93 - 06/07 - 16h00", t1: "", t2: "", g1: "", g2: "" },
-        { id: 94, j1: 81, j2: 82, label: "Jogo 94 - 06/07 - 21h00", t1: "", t2: "", g1: "", g2: "" },
-        { id: 95, j1: 86, j2: 88, label: "Jogo 95 - 07/07 - 13h00", t1: "", t2: "", g1: "", g2: "" },
-        { id: 96, j1: 85, j2: 87, label: "Jogo 96 - 07/07 - 17h00", t1: "", t2: "", g1: "", g2: "" }
+        { id: 89, j1: 73, j2: 75, label: "Jogo 90 - 04/07 - 14h00", t1: "", t2: "", g1: "", g2: "", liveUrl: "" },
+        { id: 90, j1: 74, j2: 77, label: "Jogo 89 - 04/07 - 18h00", t1: "", t2: "", g1: "", g2: "", liveUrl: "" },        
+        { id: 91, j1: 76, j2: 78, label: "Jogo 91 - 05/07 - 17h00", t1: "", t2: "", g1: "", g2: "", liveUrl: "" },
+        { id: 92, j1: 79, j2: 80, label: "Jogo 92 - 05/07 - 21h00", t1: "", t2: "", g1: "", g2: "", liveUrl: "" },
+        { id: 93, j1: 83, j2: 84, label: "Jogo 93 - 06/07 - 16h00", t1: "", t2: "", g1: "", g2: "", liveUrl: "" },
+        { id: 94, j1: 81, j2: 82, label: "Jogo 94 - 06/07 - 21h00", t1: "", t2: "", g1: "", g2: "", liveUrl: "" },
+        { id: 95, j1: 86, j2: 88, label: "Jogo 95 - 07/07 - 13h00", t1: "", t2: "", g1: "", g2: "", liveUrl: "" },
+        { id: 96, j1: 85, j2: 87, label: "Jogo 96 - 07/07 - 17h00", t1: "", t2: "", g1: "", g2: "", liveUrl: "" }
     ],
     quartas: [
-        { id: 97, j1: 89, j2: 90, label: "Jogo 97 - 07/07 - 17h00", t1: "", t2: "", g1: "", g2: "" },
-        { id: 98, j1: 93, j2: 94, label: "Jogo 98 - 10/07 - 16h00", t1: "", t2: "", g1: "", g2: "" },
-        { id: 99, j1: 91, j2: 92, label: "Jogo 99 - 11/07 - 18h00", t1: "", t2: "", g1: "", g2: "" },
-        { id: 100, j1: 95, j2: 96, label: "Jogo 100 - 11/07 - 22h00", t1: "", t2: "", g1: "", g2: "" }
+        { id: 97, j1: 89, j2: 90, label: "Jogo 97 - 07/07 - 17h00", t1: "", t2: "", g1: "", g2: "", liveUrl: "" },
+        { id: 98, j1: 93, j2: 94, label: "Jogo 98 - 10/07 - 16h00", t1: "", t2: "", g1: "", g2: "", liveUrl: "" },
+        { id: 99, j1: 91, j2: 92, label: "Jogo 99 - 11/07 - 18h00", t1: "", t2: "", g1: "", g2: "", liveUrl: "" },
+        { id: 100, j1: 95, j2: 96, label: "Jogo 100 - 11/07 - 22h00", t1: "", t2: "", g1: "", g2: "", liveUrl: "" }
     ],
     semis: [
-        { id: 101, j1: 97, j2: 98, label: "Jogo 101 - 14/07 - 16h00", t1: "", t2: "", g1: "", g2: "" },
-        { id: 102, j1: 99, j2: 100, label: "Jogo 102 - 15/07 - 16h00", t1: "", t2: "", g1: "", g2: "" }
+        { id: 101, j1: 97, j2: 98, label: "Jogo 101 - 14/07 - 16h00", t1: "", t2: "", g1: "", g2: "", liveUrl: "" },
+        { id: 102, j1: 99, j2: 100, label: "Jogo 102 - 15/07 - 16h00", t1: "", t2: "", g1: "", g2: "", liveUrl: "" }
     ],
     finais: {
-        terceiro: { id: 103, label: "3º Lugar - 18/07 - 18h00", t1: "", t2: "", g1: "", g2: "" },
-        final: { id: 104, label: "FINAL - 19/07 - 16h00", t1: "", t2: "", g1: "", g2: "" }
+        terceiro: { id: 103, label: "3º Lugar - 18/07 - 18h00", t1: "", t2: "", g1: "", g2: "", liveUrl: "" },
+        final: { id: 104, label: "FINAL - 19/07 - 16h00", t1: "", t2: "", g1: "", g2: "", liveUrl: "" }
     }
 };
 
@@ -280,11 +280,14 @@ function renderizarGrupos(stats) {
             let campo1 = gerarCampoPlacar('grupo', idxOriginal, 'g1', j.g1, false);
             let campo2 = gerarCampoPlacar('grupo', idxOriginal, 'g2', j.g2, false);
 
-            html += `<div class="jogo-item"><div class="jogo-meta">${j.data}</div><div class="placar">
+            html += `<div class="jogo-item">
+            <div class="jogo-meta">${j.data}</div>
+            <div class="placar">
                 <span class="time-flag-right">${db.grupos[gId].nomes[j.t1]}</span>
                 ${campo1} ${campo2}
                 <span class="time-flag-left">${db.grupos[gId].nomes[j.t2]}</span>
-            </div></div>`;
+            </div>
+            ${gerarLinkTransmissao(j.liveUrl, 'grupo', idxOriginal)}  </div>`;
         });
         container.innerHTML += html + `</div></div>`;
     });
@@ -373,11 +376,16 @@ function renderMataGenerico(containerId, lista, tipo) {
         let campo1 = gerarCampoPlacar(tipo, idx, 'g1', j.g1, desabilitado);
         let campo2 = gerarCampoPlacar(tipo, idx, 'g2', j.g2, desabilitado);
 
-        el.innerHTML += `<div class="jogo-item"><div class="jogo-meta"><b>${j.label}</b><br>${j.meta}</div><div class="placar">
-            <span class="time-flag-right">${j.t1 || '<i>❓</i>'}</span>
-            ${campo1} ${campo2}
-            <span class="time-flag-left">${j.t2 || '<i>❓</i>'}</span>
-        </div></div>`;
+        // CORRIGIDO: Passando j.liveUrl, tipo e idx para a função abaixo
+        el.innerHTML += `<div class="jogo-item">
+            <div class="jogo-meta"><b>${j.label}</b><br>${j.meta}</div>
+            <div class="placar">
+                <span class="time-flag-right">${j.t1 || '<i>❓</i>'}</span>
+                ${campo1} ${campo2}
+                <span class="time-flag-left">${j.t2 || '<i>❓</i>'}</span>
+            </div>
+            ${gerarLinkTransmissao(j.liveUrl, tipo, idx)} 
+        </div>`;
     });
 }
 
@@ -456,6 +464,7 @@ function renderizarJogosDoDia(dataSelecionada) {
 
     let html = "";
 
+    // 1. Fase de Grupos
     db.jogos.filter(j => j.data && j.data.includes(dataSelecionada)).forEach(j => {
         let idxOriginal = db.jogos.findIndex(jo => jo.id === j.id);
         let gId = j.g;
@@ -463,9 +472,10 @@ function renderizarJogosDoDia(dataSelecionada) {
         let emojiT2 = db.grupos[gId].nomes[j.t2] || j.t2;
         let rotulo = `Grupo ${gId} - ${j.data.split(' - ')[2] || ''}`;
 
-        html += criarCardJogoDia('grupo', idxOriginal, rotulo, emojiT1, emojiT2, j.g1, j.g2, dataSelecionada);
+        html += criarCardJogoDia('grupo', idxOriginal, rotulo, emojiT1, emojiT2, j.g1, j.g2, dataSelecionada, j.liveUrl);
     });
 
+    // 2. Fases de Mata-Mata
     const fases = [
         { chave: 'mata32', titulo: 'Fase de 32' },
         { chave: 'oitavas', titulo: 'Oitavas de Final' },
@@ -474,22 +484,21 @@ function renderizarJogosDoDia(dataSelecionada) {
     ];
 
     fases.forEach(fase => {
-        // Mudado j.meta para j.label aqui também
         db[fase.chave].filter(j => j.label && j.label.includes(dataSelecionada)).forEach(j => {
             let idxOriginal = db[fase.chave].findIndex(jo => jo.id === j.id);
             let rotulo = `${fase.titulo} - ${j.label.split(' - ')[1] || j.label}`;
-            html += criarCardJogoDia(fase.chave, idxOriginal, rotulo, j.t1, j.t2, j.g1, j.g2, dataSelecionada);
+            html += criarCardJogoDia(fase.chave, idxOriginal, rotulo, j.t1, j.t2, j.g1, j.g2, dataSelecionada, j.liveUrl);
         });
     });
 
-    // Mudado j.meta para j.label nas finais
+    // 3. Finais (Passando j.liveUrl com segurança)
     if (db.finais && db.finais.terceiro && db.finais.terceiro.label && db.finais.terceiro.label.includes(dataSelecionada)) {
         let j = db.finais.terceiro;
-        html += criarCardJogoDia('terceiro', 0, `Disputa do 3º Lugar - 18/07 - 18h00`, j.t1, j.t2, j.g1, j.g2, dataSelecionada);
+        html += criarCardJogoDia('terceiro', 0, `Disputa do 3º Lugar`, j.t1, j.t2, j.g1, j.g2, dataSelecionada, j.liveUrl);
     }
     if (db.finais && db.finais.final && db.finais.final.label && db.finais.final.label.includes(dataSelecionada)) {
         let j = db.finais.final;
-        html += criarCardJogoDia('final', 0, `Grande FINAL - 19/07 - 16h00`, j.t1, j.t2, j.g1, j.g2, dataSelecionada);
+        html += criarCardJogoDia('final', 0, `Grande FINAL`, j.t1, j.t2, j.g1, j.g2, dataSelecionada, j.liveUrl);
     }
 
     if (html === "") {
@@ -499,7 +508,7 @@ function renderizarJogosDoDia(dataSelecionada) {
     }
 }
 
-function criarCardJogoDia(tipoOrigem, index, label, t1, t2, g1, g2, dataSelecionada) {
+function criarCardJogoDia(tipoOrigem, index, label, t1, t2, g1, g2, dataSelecionada, liveUrl = "") {
     let nomeT1 = t1 || '<i>❓</i>';
     let nomeT2 = t2 || '<i>❓</i>';
     let desabilitado = (!t1 || !t2 || t1.includes("3º Colocado") || t2.includes("3º Colocado"));
@@ -515,6 +524,8 @@ function criarCardJogoDia(tipoOrigem, index, label, t1, t2, g1, g2, dataSelecion
             ${campo1} ${campo2}
             <span class="time-flag-left">${nomeT2}</span>
         </div>
+        <!-- Passando a origem e o index para que o Admin consiga editar -->
+        ${gerarLinkTransmissao(liveUrl, tipoOrigem, index)}
     </div>`;
 }
 
@@ -552,5 +563,78 @@ function validarEAtualizarPlacarGeral(origem, idx, campo, valor) {
     }
 
     // Envia ao Firebase
+    rtdb.ref('copa26_dados').set(db);
+}
+
+function gerarLinkTransmissao(url, tipoOrigem, index) {
+    // CORRIGIDO: Agora lê exatamente a sua variável global de login
+    let administrador = typeof isAdminLogado !== 'undefined' ? isAdminLogado : false;
+
+    const urlValida = url || "";
+
+    if (administrador) {
+        // Retorno para o ADMIN (Campo de texto para colar a URL)
+        return `
+            <div class="admin-live-container" style="margin-top: 10px; padding-top: 8px; border-top: 1px dashed #ccc; display: flex; gap: 5px; width: 100%;">
+                <input type="text" 
+                       placeholder="Colar link do YouTube aqui..." 
+                       value="${urlValida}" 
+                       style="font-size: 0.75rem; padding: 5px; flex: 1; border: 1px solid #a0aec0; border-radius: 4px; background: #f7fafc; color: #2d3748;"
+                       onchange="salvarLinkLiveDirect('${tipoOrigem}', ${index}, this.value)">
+                <span title="Salva automaticamente ao desfocar" style="font-size: 0.9rem; align-self: center; cursor: help;">💾</span>
+            </div>
+        `;
+    } else {
+        // Retorno para o USUÁRIO COMUM (Só mostra se de fato existir um link salvo)
+        if (urlValida.trim() === "") return "";
+        
+        return `
+            <div class="transmissao-link" style="text-align: center; margin-top: 10px; width: 100%;">
+                <a href="${urlValida}" target="_blank" rel="noopener noreferrer" style="color: #e53e3e; font-size: 0.85rem; font-weight: bold; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; padding: 4px 8px; border: 1px solid #fed7d7; border-radius: 4px; background: #fff5f5;">
+                    📺 Assistir ao Vivo no YouTube
+                </a>
+            </div>
+        `;
+    }
+}
+
+function salvarLinkLiveDirect(tipoOrigem, index, novaUrl) {
+    // 1. Atualiza a propriedade no objeto local baseado na origem do jogo
+    if (tipoOrigem === 'grupo') {
+        if (!db.jogos[index]) return;
+        db.jogos[index].liveUrl = novaUrl.trim();
+    } else if (tipoOrigem === 'terceiro') {
+        if (!db.finais || !db.finais.terceiro) return;
+        db.finais.terceiro.liveUrl = novaUrl.trim();
+    } else if (tipoOrigem === 'final') {
+        if (!db.finais || !db.finais.final) return;
+        db.finais.final.liveUrl = novaUrl.trim();
+    } else {
+        // Trata os mata-matas (mata32, oitavas, quartas, semis)
+        if (!db[tipoOrigem] || !db[tipoOrigem][index]) return;
+        db[tipoOrigem][index].liveUrl = novaUrl.trim();
+    }
+
+    // 2. Envia a árvore de dados atualizada para o Firebase
+    if (typeof rtdb !== 'undefined' && rtdb.ref) {
+        rtdb.ref('copa26_dados').set(db)
+            .then(() => {
+                console.log("Link da live atualizado com sucesso no Firebase!");
+            })
+            .catch((error) => {
+                console.error("Erro ao salvar link no Firebase:", error);
+                alert("Erro ao salvar no banco de dados.");
+            });
+    } else {
+        console.warn("Instância do rtdb não encontrada. Dados salvos apenas localmente.");
+    }
+}
+
+function atualizarLinkLive(origem, idx, url) {
+    if (origem === 'grupo') {
+        db.jogos[idx].liveUrl = url;
+    } else {
+        db[origem][idx].liveUrl = url;
+    }
     rtdb.ref('copa26_dados').set(db);
 }
