@@ -298,10 +298,9 @@ function renderizarGrupos(stats) {
                 </tr>`;
 
         sels.forEach(s => {
-            // Adicionado dinamicamente os valores calculados na linha da tabela
             html += `
                 <tr>
-                    <td class="time-flag-left">${s.nome}</td>
+                    <td>${s.nome}</td>
                     <td style="font-weight: bold;">${s.p}</td>
                     <td>${s.j}</td>
                     <td>${s.v}</td>

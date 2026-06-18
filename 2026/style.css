@@ -26,7 +26,7 @@ header { background: var(--primary); color: white; padding: 20px; text-align: ce
     font-size: 0.85rem;
 }
 .grupo-card th.txt-l, .grupo-card td.time-flag-left {
-    text-align: left; /* Mantém apenas o nome do time alinhado à esquerda */
+    text-align: left;
 }
 table { width: 100%; border-collapse: collapse; font-size: 0.8rem; margin-bottom: 10px; }
 th { background: #eee; padding: 5px; }
