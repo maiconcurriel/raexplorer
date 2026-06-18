@@ -15,6 +15,19 @@ header { background: var(--primary); color: white; padding: 20px; text-align: ce
 
 .grid-grupos { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
 .grupo-card { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-top: 4px solid var(--primary); }
+.grupo-card table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+.grupo-card th, .grupo-card td {
+    padding: 6px 8px;
+    text-align: center; /* Centraliza os números (P, PJ, VIT, etc) */
+    font-size: 0.85rem;
+}
+.grupo-card th.txt-l, .grupo-card td.time-flag-left {
+    text-align: left; /* Mantém apenas o nome do time alinhado à esquerda */
+}
 table { width: 100%; border-collapse: collapse; font-size: 0.8rem; margin-bottom: 10px; }
 th { background: #eee; padding: 5px; }
 td { padding: 5px; border-bottom: 1px solid #eee; text-align: center; }
