@@ -446,7 +446,7 @@ function renderMataGenerico(containerId, lista, tipo) {
         let campo2 = gerarCampoPlacar(tipo, idx, 'g2', j.g2, desabilitado);
 
         el.innerHTML += `<div class="jogo-item">
-            <div class="jogo-meta"><b>${j.label}</b><br>${j.meta}</div>
+            <div class="jogo-meta"><b>${j.label}</b><br></div>
             <div class="placar">
                 <span class="time-flag-right">${j.t1 || '<i>❓</i>'}</span>
                 ${campo1} ${campo2}
