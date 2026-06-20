@@ -317,8 +317,8 @@ function renderizarGrupos(stats) {
                 htmlCartoesGrupo = `
                 <div style="display: flex; justify-content: space-between; margin-top: 8px; font-size: 0.75rem; background: #f7fafc; padding: 4px; border-radius: 4px; width: 100%;">
                     <div style="display: flex; gap: 4px; align-items: center;">
-                        🟨<input type="number" min="0" placeholder="0" value="${cam1}" style="width:35px;" oninput="validarEAtualizarPlacarGeral('grupo', ${idxOriginal}, 'c_am1', this.value)">
                         🟥<input type="number" min="0" placeholder="0" value="${cvm1}" style="width:35px;" oninput="validarEAtualizarPlacarGeral('grupo', ${idxOriginal}, 'c_vm1', this.value)">
+                        🟨<input type="number" min="0" placeholder="0" value="${cam1}" style="width:35px;" oninput="validarEAtualizarPlacarGeral('grupo', ${idxOriginal}, 'c_am1', this.value)">
                     </div>
                     <div style="display: flex; gap: 4px; align-items: center;">
                         <input type="number" min="0" placeholder="0" value="${cam2}" style="width:35px;" oninput="validarEAtualizarPlacarGeral('grupo', ${idxOriginal}, 'c_am2', this.value)">🟨
@@ -329,7 +329,7 @@ function renderizarGrupos(stats) {
                 if (cam1 || cvm1 || cam2 || cvm2) {
                     htmlCartoesGrupo = `
                     <div style="display: flex; justify-content: space-between; margin-top: 6px; font-size: 0.75rem; color: #4a5568; width: 100%; padding: 0 2px;">
-                        <div>${cam1 ? `🟨 ${cam1}` : ''} ${cvm1 ? `🟥 ${cvm1}` : ''}</div>
+                        <div>${cvm1 ? `🟥 ${cvm1}` : ''} ${cam1 ? `🟨 ${cam1}` : ''}</div>
                         <div>${cam2 ? `${cam2} 🟨` : ''} ${cvm2 ? `${cvm2} 🟥` : ''}</div>
                     </div>`;
                 }
@@ -578,8 +578,8 @@ function criarCardJogoDia(tipoOrigem, index, label, t1, t2, g1, g2, dataSelecion
         htmlCartoes = `
         <div class="admin-cards-container" style="display: flex; justify-content: space-between; margin-top: 10px; font-size: 0.8rem; background: #f7fafc; padding: 6px; border-radius: 4px;">
             <div style="display: flex; gap: 4px; align-items: center;">
-                🟨<input type="number" min="0" placeholder="0" value="${cam1}" style="width: 35px; padding: 2px;" oninput="validarEAtualizarPlacarGeral('${tipoOrigem}', ${index}, 'c_am1', this.value); if('${dataSelecionada}'!=='') renderizarJogosDoDia('${dataSelecionada}')">
                 🟥<input type="number" min="0" placeholder="0" value="${cvm1}" style="width: 35px; padding: 2px;" oninput="validarEAtualizarPlacarGeral('${tipoOrigem}', ${index}, 'c_vm1', this.value); if('${dataSelecionada}'!=='') renderizarJogosDoDia('${dataSelecionada}')">
+                🟨<input type="number" min="0" placeholder="0" value="${cam1}" style="width: 35px; padding: 2px;" oninput="validarEAtualizarPlacarGeral('${tipoOrigem}', ${index}, 'c_am1', this.value); if('${dataSelecionada}'!=='') renderizarJogosDoDia('${dataSelecionada}')">
             </div>
             <div style="display: flex; gap: 4px; align-items: center;">
                 <input type="number" min="0" placeholder="0" value="${cam2}" style="width: 35px; padding: 2px;" oninput="validarEAtualizarPlacarGeral('${tipoOrigem}', ${index}, 'c_am2', this.value); if('${dataSelecionada}'!=='') renderizarJogosDoDia('${dataSelecionada}')">🟨
@@ -591,7 +591,7 @@ function criarCardJogoDia(tipoOrigem, index, label, t1, t2, g1, g2, dataSelecion
             htmlCartoes = `
             <div class="visitor-cards-container" style="display: flex; justify-content: space-between; margin-top: 8px; font-size: 0.8rem; color: #4a5568; padding: 0 4px;">
                 <div>
-                    ${cam1 ? `🟨 ${cam1}` : ''} ${cvm1 ? `🟥 ${cvm1}` : ''}
+                    ${cvm1 ? `🟥 ${cvm1}` : ''} ${cam1 ? `🟨 ${cam1}` : ''}
                 </div>
                 <div>
                     ${cam2 ? `${cam2} 🟨` : ''} ${cvm2 ? `${cvm2} 🟥` : ''}
