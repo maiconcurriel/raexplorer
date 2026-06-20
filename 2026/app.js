@@ -1,4 +1,3 @@
-// CONFIGURAÇÃO DO FIREBASE (Cole as suas credenciais aqui)
 const firebaseConfig = {
     apiKey: "AIzaSyAq7V9Olon9CMCvycXkqnGLqnaQWeZBjCs",
     authDomain: "simuladorcopa2026.firebaseapp.com",
@@ -9,7 +8,6 @@ const firebaseConfig = {
     appId: "1:318708564623:web:b61bdb7bb70c70833d26fa"
 };
 
-// Inicializa o Firebase
 firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 const rtdb = firebase.database();
@@ -30,7 +28,6 @@ const dadosIniciais = {
         L: { nome: "Grupo L", selecoes: ["ENG", "CRO", "GHA", "PAN"], nomes: { "ENG": "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "CRO": "🇭🇷", "GHA": "🇬🇭", "PAN": "🇵🇦" } }
     },
     jogos: [
-        // 1ª RODADA
         { id: 1, g: "A", data: "Jogo 1 - 11/06 - 16h00", t1: "MEX", t2: "RSA", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
         { id: 2, g: "A", data: "Jogo 2 - 11/06 - 23h00", t1: "KOR", t2: "CZE", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
         { id: 3, g: "B", data: "Jogo 3 - 12/06 - 16h00", t1: "CAN", t2: "BIH", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
@@ -56,7 +53,6 @@ const dadosIniciais = {
         { id: 23, g: "L", data: "Jogo 23 - 17/06 - 20h00", t1: "GHA", t2: "PAN", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
         { id: 24, g: "K", data: "Jogo 24 - 17/06 - 23h00", t1: "UZB", t2: "COL", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
 
-        // 2ª RODADA
         { id: 25, g: "A", data: "Jogo 25 - 18/06 - 13h00", t1: "CZE", t2: "RSA", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
         { id: 26, g: "B", data: "Jogo 26 - 18/06 - 16h00", t1: "SUI", t2: "BIH", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
         { id: 27, g: "B", data: "Jogo 27 - 18/06 - 19h00", t1: "CAN", t2: "QAT", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
@@ -82,7 +78,6 @@ const dadosIniciais = {
         { id: 47, g: "L", data: "Jogo 47 - 23/06 - 20h00", t1: "PAN", t2: "CRO", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
         { id: 48, g: "K", data: "Jogo 48 - 23/06 - 23h00", t1: "COL", t2: "COD", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
 
-        // 3ª RODADA
         { id: 49, g: "B", data: "Jogo 49 - 24/06 - 16h00", t1: "SUI", t2: "CAN", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
         { id: 50, g: "B", data: "Jogo 50 - 24/06 - 16h00", t1: "BIH", t2: "QAT", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
         { id: 51, g: "C", data: "Jogo 51 - 24/06 - 19h00", t1: "MAR", t2: "HAI", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },        
@@ -156,7 +151,6 @@ const dadosIniciais = {
 let db = JSON.parse(JSON.stringify(dadosIniciais));
 let isAdminLogado = false;
 
-// === MONITOR DE AUTENTICAÇÃO DO FIREBASE ===
 auth.onAuthStateChanged(user => {
     if (user) {
         isAdminLogado = true;
@@ -172,7 +166,6 @@ auth.onAuthStateChanged(user => {
     processarTudo(); 
 });
 
-// Sincronização em tempo real com o banco Firebase
 rtdb.ref('copa26_dados').on('value', snapshot => {
     const dadosFirebase = snapshot.val();
     if (dadosFirebase) {
@@ -222,12 +215,10 @@ function processarTudo() {
     });
 }
 
-// === IMPLEMENTADO: Cálculo de Vitórias, Empates, Derrotas, Gols Pró e Gols Contra ===
 function processarTudoLocal() {
     let stats = {};
     Object.keys(db.grupos).forEach(g => {
         db.grupos[g].selecoes.forEach(s => {
-            // Inicializando 'fp' (Fair Play - começa em 0)
             stats[s] = { id: s, nome: db.grupos[g].nomes[s], p: 0, j: 0, v: 0, e: 0, d: 0, gp: 0, gc: 0, sg: 0, fp: 0 };
         });
     });
@@ -248,8 +239,6 @@ function processarTudoLocal() {
             t1.sg = t1.gp - t1.gc;
             t2.sg = t2.gp - t2.gc;
 
-            // === NOVO: Acumula a pontuação de cartões (Fair Play) ===
-            // Pesos: Amarelo = 1 ponto, Vermelho Direto = 4 pontos
             let am1 = parseInt(jogo.c_am1) || 0;
             let vm1 = parseInt(jogo.c_vm1) || 0;
             let am2 = parseInt(jogo.c_am2) || 0;
@@ -271,7 +260,6 @@ function processarTudoLocal() {
     }
 }
 
-// === IMPLEMENTADO: Novas colunas visuais no cabeçalho e corpo da tabela ===
 function renderizarGrupos(stats) {
     const container = document.getElementById('container-grupos');
     if (!container) return;
@@ -280,10 +268,9 @@ function renderizarGrupos(stats) {
     Object.keys(db.grupos).forEach(gId => {
         let sels = db.grupos[gId].selecoes.map(s => stats[s]).sort((a, b) => b.p - a.p || b.sg - a.sg || b.gp - a.gp || a.fp - b.fp);
         
-        // Cabeçalho da tabela estendido com VIT, E, DER, GM e GC
         let html = `
         <div class="grupo-card">
-            <h3>Grupo ${gId}</h3>
+            <h3 style="text-align: center;">Grupo ${gId}</h3>
             <table>
                 <tr>
                     <th class="txt-l">Time</th>
@@ -329,13 +316,13 @@ function renderizarGrupos(stats) {
             if (isAdminLogado) {
                 htmlCartoesGrupo = `
                 <div style="display: flex; justify-content: space-between; margin-top: 8px; font-size: 0.75rem; background: #f7fafc; padding: 4px; border-radius: 4px; width: 100%;">
-                    <div style="display: flex; gap: 3px;">
-                        🟨<input type="number" min="0" placeholder="0" value="${cam1}" style="width:30px;" oninput="validarEAtualizarPlacarGeral('grupo', ${idxOriginal}, 'c_am1', this.value)">
-                        🟥<input type="number" min="0" placeholder="0" value="${cvm1}" style="width:30px;" oninput="validarEAtualizarPlacarGeral('grupo', ${idxOriginal}, 'c_vm1', this.value)">
+                    <div style="display: flex; gap: 4px; align-items: center;">
+                        🟨<input type="number" min="0" placeholder="0" value="${cam1}" style="width:35px;" oninput="validarEAtualizarPlacarGeral('grupo', ${idxOriginal}, 'c_am1', this.value)">
+                        🟥<input type="number" min="0" placeholder="0" value="${cvm1}" style="width:35px;" oninput="validarEAtualizarPlacarGeral('grupo', ${idxOriginal}, 'c_vm1', this.value)">
                     </div>
-                    <div style="display: flex; gap: 3px;">
-                        🟨<input type="number" min="0" placeholder="0" value="${cam2}" style="width:30px;" oninput="validarEAtualizarPlacarGeral('grupo', ${idxOriginal}, 'c_am2', this.value)">
-                        🟥<input type="number" min="0" placeholder="0" value="${cvm2}" style="width:30px;" oninput="validarEAtualizarPlacarGeral('grupo', ${idxOriginal}, 'c_vm2', this.value)">
+                    <div style="display: flex; gap: 4px; align-items: center;">
+                        <input type="number" min="0" placeholder="0" value="${cam2}" style="width:35px;" oninput="validarEAtualizarPlacarGeral('grupo', ${idxOriginal}, 'c_am2', this.value)">🟨
+                        <input type="number" min="0" placeholder="0" value="${cvm2}" style="width:35px;" oninput="validarEAtualizarPlacarGeral('grupo', ${idxOriginal}, 'c_vm2', this.value)">🟥
                     </div>
                 </div>`;
             } else {
@@ -571,15 +558,13 @@ function criarCardJogoDia(tipoOrigem, index, label, t1, t2, g1, g2, dataSelecion
     let nomeT1 = t1 || '<i>❓</i>';
     let nomeT2 = t2 || '<i>❓</i>';
     let desabilitado = (!t1 || !t2 || t1.includes("3º Colocado") || t2.includes("3º Colocado"));
-    
-    // Recupera o jogo atual para obter a contagem de cartões salvos
+
     let jogoAtual;
     if (tipoOrigem === 'grupo') jogoAtual = db.jogos[index];
     else if (tipoOrigem === 'final') jogoAtual = db.finais.final;
     else if (tipoOrigem === 'terceiro') jogoAtual = db.finais.terceiro;
     else jogoAtual = db[tipoOrigem] ? db[tipoOrigem][index] : null;
 
-    // Valores padrão caso ainda não existam no banco
     let cam1 = jogoAtual?.c_am1 ?? "";
     let cvm1 = jogoAtual?.c_vm1 ?? "";
     let cam2 = jogoAtual?.c_am2 ?? "";
@@ -588,7 +573,6 @@ function criarCardJogoDia(tipoOrigem, index, label, t1, t2, g1, g2, dataSelecion
     let campo1 = gerarCampoPlacar(tipoOrigem, index, 'g1', g1, desabilitado, dataSelecionada);
     let campo2 = gerarCampoPlacar(tipoOrigem, index, 'g2', g2, desabilitado, dataSelecionada);
 
-    // Renderização da área de cartões baseada no tipo de usuário logado
     let htmlCartoes = "";
     if (isAdminLogado) {
         htmlCartoes = `
@@ -597,14 +581,12 @@ function criarCardJogoDia(tipoOrigem, index, label, t1, t2, g1, g2, dataSelecion
                 🟨<input type="number" min="0" placeholder="0" value="${cam1}" style="width: 35px; padding: 2px;" oninput="validarEAtualizarPlacarGeral('${tipoOrigem}', ${index}, 'c_am1', this.value); if('${dataSelecionada}'!=='') renderizarJogosDoDia('${dataSelecionada}')">
                 🟥<input type="number" min="0" placeholder="0" value="${cvm1}" style="width: 35px; padding: 2px;" oninput="validarEAtualizarPlacarGeral('${tipoOrigem}', ${index}, 'c_vm1', this.value); if('${dataSelecionada}'!=='') renderizarJogosDoDia('${dataSelecionada}')">
             </div>
-            <span style="color: #718096; font-size: 0.75rem; align-self: center;">Painel de Cartões</span>
             <div style="display: flex; gap: 4px; align-items: center;">
-                🟨<input type="number" min="0" placeholder="0" value="${cam2}" style="width: 35px; padding: 2px;" oninput="validarEAtualizarPlacarGeral('${tipoOrigem}', ${index}, 'c_am2', this.value); if('${dataSelecionada}'!=='') renderizarJogosDoDia('${dataSelecionada}')">
-                🟥<input type="number" min="0" placeholder="0" value="${cvm2}" style="width: 35px; padding: 2px;" oninput="validarEAtualizarPlacarGeral('${tipoOrigem}', ${index}, 'c_vm2', this.value); if('${dataSelecionada}'!=='') renderizarJogosDoDia('${dataSelecionada}')">
+                <input type="number" min="0" placeholder="0" value="${cam2}" style="width: 35px; padding: 2px;" oninput="validarEAtualizarPlacarGeral('${tipoOrigem}', ${index}, 'c_am2', this.value); if('${dataSelecionada}'!=='') renderizarJogosDoDia('${dataSelecionada}')">🟨
+                <input type="number" min="0" placeholder="0" value="${cvm2}" style="width: 35px; padding: 2px;" oninput="validarEAtualizarPlacarGeral('${tipoOrigem}', ${index}, 'c_vm2', this.value); if('${dataSelecionada}'!=='') renderizarJogosDoDia('${dataSelecionada}')">🟥
             </div>
         </div>`;
     } else {
-        // Se for visitante, só mostra a linha se houver algum cartão registrado
         if (cam1 || cvm1 || cam2 || cvm2) {
             htmlCartoes = `
             <div class="visitor-cards-container" style="display: flex; justify-content: space-between; margin-top: 8px; font-size: 0.8rem; color: #4a5568; padding: 0 4px;">
@@ -674,11 +656,10 @@ function gerarLinkTransmissao(url, tipoOrigem, index) {
         return `
             <div class="admin-live-container" style="margin-top: 10px; padding-top: 8px; border-top: 1px dashed #ccc; display: flex; gap: 5px; width: 100%;">
                 <input type="text" 
-                       placeholder="Colar link do YouTube aqui..." 
+                       placeholder="Colar link aqui..."
                        value="${urlValida}" 
                        style="font-size: 0.75rem; padding: 5px; flex: 1; border: 1px solid #a0aec0; border-radius: 4px; background: #f7fafc; color: #2d3748;"
                        onchange="salvarLinkLiveDirect('${tipoOrigem}', ${index}, this.value)">
-                <span title="Salva automaticamente ao desfocar" style="font-size: 0.9rem; align-self: center; cursor: help;">💾</span>
             </div>
         `;
     } else {
@@ -686,7 +667,7 @@ function gerarLinkTransmissao(url, tipoOrigem, index) {
         return `
             <div class="transmissao-link" style="text-align: center; margin-top: 10px; width: 100%;">
                 <a href="${urlValida}" target="_blank" rel="noopener noreferrer" style="color: #e53e3e; font-size: 0.85rem; font-weight: bold; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; padding: 4px 8px; border: 1px solid #fed7d7; border-radius: 4px; background: #fff5f5;">
-                    📺 Assistir ao Vivo no YouTube
+                    📺 Assistir ao Vivo
                 </a>
             </div>
         `;
