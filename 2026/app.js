@@ -38,15 +38,15 @@ const dadosIniciais = {
         { id: 8, g: "D", data: "Jogo 8 - 14/06 - 01h00", t1: "AUS", t2: "TUR", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
         { id: 9, g: "E", data: "Jogo 9 - 14/06 - 14h00", t1: "GER", t2: "CUW", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
         { id: 10, g: "F", data: "Jogo 10 - 14/06 - 17h00", t1: "NED", t2: "JPN", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
-        { id: 11, g: "E", data: "Jogo 11 - 14/06 - 20h00", t1: "CIV", t2: "ECU", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },        
+        { id: 11, g: "E", data: "Jogo 11 - 14/06 - 20h00", t1: "CIV", t2: "ECU", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
         { id: 12, g: "F", data: "Jogo 12 - 14/06 - 23h00", t1: "SWE", t2: "TUN", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
-        { id: 13, g: "H", data: "Jogo 13 - 15/06 - 13h00", t1: "ESP", t2: "CPV", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },        
+        { id: 13, g: "H", data: "Jogo 13 - 15/06 - 13h00", t1: "ESP", t2: "CPV", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
         { id: 14, g: "G", data: "Jogo 14 - 15/06 - 16h00", t1: "BEL", t2: "EGY", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
         { id: 15, g: "H", data: "Jogo 15 - 15/06 - 19h00", t1: "KSA", t2: "URU", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
         { id: 16, g: "G", data: "Jogo 16 - 15/06 - 22h00", t1: "IRN", t2: "NZL", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
         { id: 17, g: "I", data: "Jogo 17 - 16/06 - 16h00", t1: "FRA", t2: "SEN", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
         { id: 18, g: "I", data: "Jogo 18 - 16/06 - 19h00", t1: "IRQ", t2: "NOR", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
-        { id: 19, g: "J", data: "Jogo 19 - 16/06 - 22h00", t1: "ARG", t2: "ALG", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },        
+        { id: 19, g: "J", data: "Jogo 19 - 16/06 - 22h00", t1: "ARG", t2: "ALG", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
         { id: 20, g: "J", data: "Jogo 20 - 17/06 - 01h00", t1: "AUT", t2: "JOR", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
         { id: 21, g: "K", data: "Jogo 21 - 17/06 - 14h00", t1: "POR", t2: "COD", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
         { id: 22, g: "L", data: "Jogo 22 - 17/06 - 17h00", t1: "ENG", t2: "CRO", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
@@ -60,7 +60,7 @@ const dadosIniciais = {
         { id: 29, g: "D", data: "Jogo 29 - 19/06 - 16h00", t1: "USA", t2: "AUS", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
         { id: 30, g: "C", data: "Jogo 30 - 19/06 - 19h00", t1: "SCO", t2: "MAR", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
         { id: 31, g: "C", data: "Jogo 31 - 19/06 - 21h30", t1: "BRA", t2: "HAI", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
-        { id: 32, g: "D", data: "Jogo 32 - 20/06 - 00h00", t1: "TUR", t2: "PAR", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },        
+        { id: 32, g: "D", data: "Jogo 32 - 20/06 - 00h00", t1: "TUR", t2: "PAR", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
         { id: 33, g: "F", data: "Jogo 33 - 20/06 - 14h00", t1: "NED", t2: "SWE", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
         { id: 34, g: "E", data: "Jogo 34 - 20/06 - 17h00", t1: "GER", t2: "CIV", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
         { id: 35, g: "E", data: "Jogo 35 - 20/06 - 21h00", t1: "ECU", t2: "CUW", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
@@ -80,14 +80,14 @@ const dadosIniciais = {
 
         { id: 49, g: "B", data: "Jogo 49 - 24/06 - 16h00", t1: "SUI", t2: "CAN", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
         { id: 50, g: "B", data: "Jogo 50 - 24/06 - 16h00", t1: "BIH", t2: "QAT", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
-        { id: 51, g: "C", data: "Jogo 51 - 24/06 - 19h00", t1: "MAR", t2: "HAI", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },        
+        { id: 51, g: "C", data: "Jogo 51 - 24/06 - 19h00", t1: "MAR", t2: "HAI", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
         { id: 52, g: "C", data: "Jogo 52 - 24/06 - 19h00", t1: "SCO", t2: "BRA", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
         { id: 53, g: "A", data: "Jogo 53 - 24/06 - 22h00", t1: "RSA", t2: "KOR", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
         { id: 54, g: "A", data: "Jogo 54 - 24/06 - 22h00", t1: "CZE", t2: "MEX", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
         { id: 55, g: "E", data: "Jogo 55 - 25/06 - 17h00", t1: "CUW", t2: "CIV", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
         { id: 56, g: "E", data: "Jogo 56 - 25/06 - 17h00", t1: "ECU", t2: "GER", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
         { id: 57, g: "F", data: "Jogo 57 - 25/06 - 20h00", t1: "TUN", t2: "NED", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
-        { id: 58, g: "F", data: "Jogo 58 - 25/06 - 20h00", t1: "JPN", t2: "SWE", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },        
+        { id: 58, g: "F", data: "Jogo 58 - 25/06 - 20h00", t1: "JPN", t2: "SWE", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
         { id: 59, g: "D", data: "Jogo 59 - 25/06 - 23h00", t1: "TUR", t2: "USA", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
         { id: 60, g: "D", data: "Jogo 60 - 25/06 - 23h00", t1: "PAR", t2: "AUS", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
         { id: 61, g: "I", data: "Jogo 61 - 26/06 - 16h00", t1: "NOR", t2: "FRA", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
@@ -95,7 +95,7 @@ const dadosIniciais = {
         { id: 63, g: "H", data: "Jogo 63 - 26/06 - 21h00", t1: "CPV", t2: "KSA", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
         { id: 64, g: "H", data: "Jogo 64 - 26/06 - 21h00", t1: "URU", t2: "ESP", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
         { id: 65, g: "G", data: "Jogo 65 - 27/06 - 00h00", t1: "NZL", t2: "BEL", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
-        { id: 66, g: "G", data: "Jogo 66 - 27/06 - 00h00", t1: "EGY", t2: "IRN", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },        
+        { id: 66, g: "G", data: "Jogo 66 - 27/06 - 00h00", t1: "EGY", t2: "IRN", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
         { id: 67, g: "L", data: "Jogo 67 - 27/06 - 18h00", t1: "PAN", t2: "ENG", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
         { id: 68, g: "L", data: "Jogo 68 - 27/06 - 18h00", t1: "CRO", t2: "GHA", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
         { id: 69, g: "K", data: "Jogo 69 - 27/06 - 20h30", t1: "COL", t2: "POR", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
@@ -105,26 +105,25 @@ const dadosIniciais = {
     ],
     mata32: [
         { id: 73, label: "Jogo 73 - 28/06 - 16h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
-        { id: 74, label: "Jogo 76 - 29/06 - 14h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
-        { id: 75, label: "Jogo 74 - 29/06 - 17h30", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
-        { id: 76, label: "Jogo 75 - 29/06 - 22h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
-        { id: 77, label: "Jogo 78 - 30/06 - 14h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },        
-        { id: 78, label: "Jogo 77 - 30/06 - 18h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },        
+        { id: 74, label: "Jogo 74 - 29/06 - 17h30", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
+        { id: 75, label: "Jogo 75 - 29/06 - 22h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
+        { id: 76, label: "Jogo 76 - 29/06 - 14h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
+        { id: 77, label: "Jogo 77 - 30/06 - 18h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
+        { id: 78, label: "Jogo 78 - 30/06 - 14h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
         { id: 79, label: "Jogo 79 - 30/06 - 22h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
         { id: 80, label: "Jogo 80 - 01/07 - 13h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
-        { id: 81, label: "Jogo 82 - 01/07 - 17h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
-        { id: 82, label: "Jogo 81 - 01/07 - 21h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },  
-        { id: 83, label: "Jogo 84 - 02/07 - 16h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },      
-        { id: 84, label: "Jogo 83 - 02/07 - 20h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },        
+        { id: 81, label: "Jogo 81 - 01/07 - 21h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
+        { id: 82, label: "Jogo 82 - 01/07 - 17h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
+        { id: 83, label: "Jogo 83 - 02/07 - 20h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
+        { id: 84, label: "Jogo 84 - 02/07 - 16h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
         { id: 85, label: "Jogo 85 - 03/07 - 00h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
-        { id: 86, label: "Jogo 88 - 03/07 - 15h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
-        { id: 87, label: "Jogo 86 - 03/07 - 19h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
-        { id: 88, label: "Jogo 87 - 03/07 - 22h30", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" }
-        
+        { id: 86, label: "Jogo 86 - 03/07 - 19h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
+        { id: 87, label: "Jogo 87 - 03/07 - 22h30", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
+        { id: 88, label: "Jogo 88 - 03/07 - 15h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" }
     ],
     oitavas: [
-        { id: 89, j1: 73, j2: 75, label: "Jogo 90 - 04/07 - 14h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
-        { id: 90, j1: 74, j2: 77, label: "Jogo 89 - 04/07 - 18h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },        
+        { id: 89, j1: 74, j2: 77, label: "Jogo 89 - 04/07 - 18h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
+        { id: 90, j1: 73, j2: 75, label: "Jogo 90 - 04/07 - 14h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
         { id: 91, j1: 76, j2: 78, label: "Jogo 91 - 05/07 - 17h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
         { id: 92, j1: 79, j2: 80, label: "Jogo 92 - 05/07 - 21h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
         { id: 93, j1: 83, j2: 84, label: "Jogo 93 - 06/07 - 16h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
@@ -356,27 +355,57 @@ function atualizarMataMata(stats) {
         rankGeral.push({ grupo: gId, primeiro: ordenados[0], segundo: ordenados[1], terceiro: ordenados[2] });
     });
 
-    let melhores3 = rankGeral.map(r => r.terceiro).sort((a, b) => b.p - a.p || b.sg - a.sg || b.gp - a.gp || a.fp - b.fp).slice(0, 8);
+    // Filtra e ordena todos os 12 terceiros lugares para descobrir os 8 melhores globais
+    let melhores3Globais = rankGeral
+        .map(r => r.terceiro)
+        .sort((a, b) => b.p - a.p || b.sg - a.sg || b.gp - a.gp || a.fp - b.fp)
+        .slice(0, 8);
 
-    db.mata32[0].t1 = rankGeral[0].segundo.nome;  db.mata32[0].t2 = rankGeral[1].segundo.nome;  
-    db.mata32[1].t1 = rankGeral[4].primeiro.nome; db.mata32[1].t2 = melhores3[0] ? melhores3[0].nome : "3º Colocado"; 
-    db.mata32[2].t1 = rankGeral[5].primeiro.nome; db.mata32[2].t2 = rankGeral[2].segundo.nome;  
-    db.mata32[3].t1 = rankGeral[2].primeiro.nome; db.mata32[3].t2 = rankGeral[5].segundo.nome;  
-    db.mata32[4].t1 = rankGeral[8].primeiro.nome; db.mata32[4].t2 = melhores3[1] ? melhores3[1].nome : "3º Colocado"; 
-    db.mata32[5].t1 = rankGeral[4].segundo.nome;  db.mata32[5].t2 = rankGeral[8].segundo.nome;  
-    db.mata32[6].t1 = rankGeral[0].primeiro.nome; db.mata32[6].t2 = melhores3[2] ? melhores3[2].nome : "3º Colocado"; 
-    db.mata32[7].t1 = rankGeral[11].primeiro.nome;db.mata32[7].t2 = melhores3[3] ? melhores3[3].nome : "3º Colocado"; 
-    db.mata32[8].t1 = rankGeral[3].primeiro.nome; db.mata32[8].t2 = melhores3[4] ? melhores3[4].nome : "3º Colocado"; 
-    db.mata32[9].t1 = rankGeral[6].primeiro.nome; db.mata32[9].t2 = melhores3[5] ? melhores3[5].nome : "3º Colocado"; 
-    db.mata32[10].t1 = rankGeral[10].segundo.nome;db.mata32[10].t2 = rankGeral[11].segundo.nome; 
-    db.mata32[11].t1 = rankGeral[7].primeiro.nome;db.mata32[11].t2 = rankGeral[9].segundo.nome;  
-    db.mata32[12].t1 = rankGeral[1].primeiro.nome; db.mata32[12].t2 = melhores3[6] ? melhores3[6].nome : "3º Colocado"; 
-    db.mata32[13].t1 = rankGeral[9].primeiro.nome; db.mata32[13].t2 = rankGeral[7].segundo.nome;  
-    db.mata32[14].t1 = rankGeral[10].primeiro.nome;db.mata32[14].t2 = melhores3[7] ? melhores3[7].nome : "3º Colocado"; 
-    db.mata32[15].t1 = rankGeral[3].segundo.nome;  db.mata32[15].t2 = rankGeral[6].segundo.nome;  
+    // Lista clonada para podermos consumir os times sem repetir no mata-mata
+    let terceirosDisponiveis = [...melhores3Globais];
+
+    // Função interna para pescar o melhor terceiro permitido para aquele confronto específico
+    function obterTerceiroPermitido(gruposPermitidos) {
+        // Encontra o primeiro time da lista de qualificados que pertença a um dos grupos permitidos
+        let idx = terceirosDisponiveis.findIndex(t => gruposPermitidos.includes(t.grupo));
+        if (idx !== -1) {
+            // Remove da lista de disponíveis para não repetir e retorna o time
+            return terceirosDisponiveis.splice(idx, 1)[0];
+        }
+        return null;
+    }
+
+    // Buscando os terceiros específicos para cada jogo conforme sua regra oficial
+    let t_jogo74 = obterTerceiroPermitido(['A', 'B', 'C', 'D', 'F']);
+    let t_jogo77 = obterTerceiroPermitido(['C', 'D', 'F', 'G', 'H']);
+    let t_jogo79 = obterTerceiroPermitido(['C', 'E', 'F', 'H', 'I']);
+    let t_jogo80 = obterTerceiroPermitido(['E', 'H', 'I', 'J', 'K']);
+    let t_jogo81 = obterTerceiroPermitido(['B', 'E', 'F', 'I', 'J']);
+    let t_jogo82 = obterTerceiroPermitido(['A', 'E', 'H', 'I', 'J']);
+    let t_jogo85 = obterTerceiroPermitido(['E', 'F', 'G', 'I', 'J']);
+    let t_jogo87 = obterTerceiroPermitido(['D', 'E', 'I', 'J', 'L']);
+
+    // === MAPEAMENTO DOS JOGOS 73 AO 88 (Fase de 32) ===
+    db.mata32[0].t1 = rankGeral[0].segundo.nome;  db.mata32[0].t2 = rankGeral[1].segundo.nome;  // J73: 2ºA x 2ºB
+    db.mata32[1].t1 = rankGeral[4].primeiro.nome; db.mata32[1].t2 = t_jogo74 ? t_jogo74.nome : "❓"; // J74: 1ºE x 3º(A/B/C/D/F)
+    db.mata32[2].t1 = rankGeral[5].primeiro.nome; db.mata32[2].t2 = rankGeral[2].segundo.nome;  // J75: 1ºF x 2ºC
+    db.mata32[3].t1 = rankGeral[2].primeiro.nome; db.mata32[3].t2 = rankGeral[5].segundo.nome;  // J76: 1ºC x 2ºF
+    db.mata32[4].t1 = rankGeral[8].primeiro.nome; db.mata32[4].t2 = t_jogo77 ? t_jogo77.nome : "❓"; // J77: 1ºI x 3º(C/D/F/G/H)
+    db.mata32[5].t1 = rankGeral[4].segundo.nome;  db.mata32[5].t2 = rankGeral[8].segundo.nome;  // J78: 2ºE x 2ºI
+    db.mata32[6].t1 = rankGeral[0].primeiro.nome; db.mata32[6].t2 = t_jogo79 ? t_jogo79.nome : "❓"; // J79: 1ºA x 3º(C/E/F/H/I)
+    db.mata32[7].t1 = rankGeral[11].primeiro.nome;db.mata32[7].t2 = t_jogo80 ? t_jogo80.nome : "❓"; // J80: 1ºL x 3º(E/H/I/J/K)
+    db.mata32[8].t1 = rankGeral[3].primeiro.nome; db.mata32[8].t2 = t_jogo81 ? t_jogo81.nome : "❓"; // J81: 1ºD x 3º(B/E/F/I/J)
+    db.mata32[9].t1 = rankGeral[6].primeiro.nome; db.mata32[9].t2 = t_jogo82 ? t_jogo82.nome : "❓"; // J82: 1ºG x 3º(A/E/H/I/J)
+    db.mata32[10].t1 = rankGeral[10].segundo.nome;db.mata32[10].t2 = rankGeral[11].segundo.nome; // J83: 2ºK x 2ºL
+    db.mata32[11].t1 = rankGeral[7].primeiro.nome;db.mata32[11].t2 = rankGeral[9].segundo.nome;  // J84: 1ºH x 2ºJ
+    db.mata32[12].t1 = rankGeral[1].primeiro.nome; db.mata32[12].t2 = t_jogo85 ? t_jogo85.nome : "❓"; // J85: 1ºB x 3º(E/F/G/I/J)
+    db.mata32[13].t1 = rankGeral[9].primeiro.nome; db.mata32[13].t2 = rankGeral[7].segundo.nome;  // J86: 1ºJ x 2ºH
+    db.mata32[14].t1 = rankGeral[10].primeiro.nome;db.mata32[14].t2 = t_jogo87 ? t_jogo87.nome : "❓"; // J87: 1ºK x 3º(D/E/I/J/L)
+    db.mata32[15].t1 = rankGeral[3].segundo.nome;  db.mata32[15].t2 = rankGeral[6].segundo.nome;  // J88: 2ºD x 2ºG
 
     renderMataGenerico('container-32avos', db.mata32, 'mata32');
 
+    // === PROGRESSÃO AUTOMÁTICA DOS VENCEDORES (Oitavas, Quartas, Semis e Finais) ===
     avancarFase(db.mata32, db.oitavas, 'oitavas');
     avancarFase(db.oitavas, db.quartas, 'quartas');
     avancarFase(db.quartas, db.semis, 'semis');
@@ -557,7 +586,7 @@ function renderizarJogosDoDia(dataSelecionada) {
 function criarCardJogoDia(tipoOrigem, index, label, t1, t2, g1, g2, dataSelecionada, liveUrl = "") {
     let nomeT1 = t1 || '<i>❓</i>';
     let nomeT2 = t2 || '<i>❓</i>';
-    let desabilitado = (!t1 || !t2 || t1.includes("3º Colocado") || t2.includes("3º Colocado"));
+    let desabilitado = (!t1 || !t2 || t1.includes("❓") || t2.includes("❓"));
 
     let jogoAtual;
     if (tipoOrigem === 'grupo') jogoAtual = db.jogos[index];
