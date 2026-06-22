@@ -350,14 +350,27 @@ function renderizarGrupos(stats) {
 
 function atualizarMataMata(stats) {
     let rankGeral = [];
-    Object.keys(db.grupos).forEach(gId => {
-        let ordenados = db.grupos[gId].selecoes.map(s => stats[s]).sort((a, b) => b.p - a.p || b.sg - a.sg || b.gp - a.gp || a.fp - b.fp);
-        rankGeral.push({ grupo: gId, primeiro: ordenados[0], segundo: ordenados[1], terceiro: ordenados[2] });
-    });
+    
+    // Garante que os grupos sejam processados estritamente na ordem alfabética (A até L)
+    Object.keys(db.grupos)
+        .sort((a, b) => a.localeCompare(b))
+        .forEach(gId => {
+            let ordenados = db.grupos[gId].selecoes
+                .map(s => stats[s])
+                .sort((a, b) => b.p - a.p || b.sg - a.sg || b.gp - a.gp || a.fp - b.fp);
+            
+            rankGeral.push({ 
+                grupo: gId, 
+                primeiro: ordenados[0], 
+                segundo: ordenados[1], 
+                terceiro: ordenados[2] 
+            });
+        });
 
     // Filtra e ordena todos os 12 terceiros lugares para descobrir os 8 melhores globais
     let melhores3Globais = rankGeral
         .map(r => r.terceiro)
+        .filter(t => t !== undefined) // Evita quebra se o grupo não tiver 3 times populados
         .sort((a, b) => b.p - a.p || b.sg - a.sg || b.gp - a.gp || a.fp - b.fp)
         .slice(0, 8);
 
@@ -366,10 +379,8 @@ function atualizarMataMata(stats) {
 
     // Função interna para pescar o melhor terceiro permitido para aquele confronto específico
     function obterTerceiroPermitido(gruposPermitidos) {
-        // Encontra o primeiro time da lista de qualificados que pertença a um dos grupos permitidos
         let idx = terceirosDisponiveis.findIndex(t => gruposPermitidos.includes(t.grupo));
         if (idx !== -1) {
-            // Remove da lista de disponíveis para não repetir e retorna o time
             return terceirosDisponiveis.splice(idx, 1)[0];
         }
         return null;
@@ -385,23 +396,68 @@ function atualizarMataMata(stats) {
     let t_jogo85 = obterTerceiroPermitido(['E', 'F', 'G', 'I', 'J']);
     let t_jogo87 = obterTerceiroPermitido(['D', 'E', 'I', 'J', 'L']);
 
-    // === MAPEAMENTO DOS JOGOS 73 AO 88 (Fase de 32) ===
-    db.mata32[0].t1 = rankGeral[0].segundo.nome;  db.mata32[0].t2 = rankGeral[1].segundo.nome;  // J73: 2ºA x 2ºB
-    db.mata32[1].t1 = rankGeral[4].primeiro.nome; db.mata32[1].t2 = t_jogo74 ? t_jogo74.nome : "❓"; // J74: 1ºE x 3º(A/B/C/D/F)
-    db.mata32[2].t1 = rankGeral[5].primeiro.nome; db.mata32[2].t2 = rankGeral[2].segundo.nome;  // J75: 1ºF x 2ºC
-    db.mata32[3].t1 = rankGeral[2].primeiro.nome; db.mata32[3].t2 = rankGeral[5].segundo.nome;  // J76: 1ºC x 2ºF
-    db.mata32[4].t1 = rankGeral[8].primeiro.nome; db.mata32[4].t2 = t_jogo77 ? t_jogo77.nome : "❓"; // J77: 1ºI x 3º(C/D/F/G/H)
-    db.mata32[5].t1 = rankGeral[4].segundo.nome;  db.mata32[5].t2 = rankGeral[8].segundo.nome;  // J78: 2ºE x 2ºI
-    db.mata32[6].t1 = rankGeral[0].primeiro.nome; db.mata32[6].t2 = t_jogo79 ? t_jogo79.nome : "❓"; // J79: 1ºA x 3º(C/E/F/H/I)
-    db.mata32[7].t1 = rankGeral[11].primeiro.nome;db.mata32[7].t2 = t_jogo80 ? t_jogo80.nome : "❓"; // J80: 1ºL x 3º(E/H/I/J/K)
-    db.mata32[8].t1 = rankGeral[3].primeiro.nome; db.mata32[8].t2 = t_jogo81 ? t_jogo81.nome : "❓"; // J81: 1ºD x 3º(B/E/F/I/J)
-    db.mata32[9].t1 = rankGeral[6].primeiro.nome; db.mata32[9].t2 = t_jogo82 ? t_jogo82.nome : "❓"; // J82: 1ºG x 3º(A/E/H/I/J)
-    db.mata32[10].t1 = rankGeral[10].segundo.nome;db.mata32[10].t2 = rankGeral[11].segundo.nome; // J83: 2ºK x 2ºL
-    db.mata32[11].t1 = rankGeral[7].primeiro.nome;db.mata32[11].t2 = rankGeral[9].segundo.nome;  // J84: 1ºH x 2ºJ
-    db.mata32[12].t1 = rankGeral[1].primeiro.nome; db.mata32[12].t2 = t_jogo85 ? t_jogo85.nome : "❓"; // J85: 1ºB x 3º(E/F/G/I/J)
-    db.mata32[13].t1 = rankGeral[9].primeiro.nome; db.mata32[13].t2 = rankGeral[7].segundo.nome;  // J86: 1ºJ x 2ºH
-    db.mata32[14].t1 = rankGeral[10].primeiro.nome;db.mata32[14].t2 = t_jogo87 ? t_jogo87.nome : "❓"; // J87: 1ºK x 3º(D/E/I/J/L)
-    db.mata32[15].t1 = rankGeral[3].segundo.nome;  db.mata32[15].t2 = rankGeral[6].segundo.nome;  // J88: 2ºD x 2ºG
+    if (!db.mata32[0].t1 || db.mata32[0].t1 === "❓") db.mata32[0].t1 = rankGeral[0].segundo.nome;
+    if (!db.mata32[0].t2 || db.mata32[0].t2 === "❓") db.mata32[0].t2 = rankGeral[1].segundo.nome;
+
+    // J74: 1ºE x 3º(A/B/C/D/F)
+    if (!db.mata32[1].t1 || db.mata32[1].t1 === "❓") db.mata32[1].t1 = rankGeral[4].primeiro.nome;
+    if (!db.mata32[1].t2 || db.mata32[1].t2 === "❓") db.mata32[1].t2 = t_jogo74 ? t_jogo74.nome : "❓";
+
+    // J75: 1ºF x 2ºC
+    if (!db.mata32[2].t1 || db.mata32[2].t1 === "❓") db.mata32[2].t1 = rankGeral[5].primeiro.nome;
+    if (!db.mata32[2].t2 || db.mata32[2].t2 === "❓") db.mata32[2].t2 = rankGeral[2].segundo.nome;
+
+    // J76: 1ºC x 2ºF (O jogo que você mencionou!)
+    if (!db.mata32[3].t1 || db.mata32[3].t1 === "❓") db.mata32[3].t1 = rankGeral[2].primeiro.nome; // 1ºC
+    if (!db.mata32[3].t2 || db.mata32[3].t2 === "❓") db.mata32[3].t2 = rankGeral[5].segundo.nome;  // 2ºF
+
+    // J77: 1ºI x 3º(C/D/F/G/H)
+    if (!db.mata32[4].t1 || db.mata32[4].t1 === "❓") db.mata32[4].t1 = rankGeral[8].primeiro.nome;
+    if (!db.mata32[4].t2 || db.mata32[4].t2 === "❓") db.mata32[4].t2 = t_jogo77 ? t_jogo77.nome : "❓";
+
+    // J78: 2ºE x 2ºI
+    if (!db.mata32[5].t1 || db.mata32[5].t1 === "❓") db.mata32[5].t1 = rankGeral[4].segundo.nome;
+    if (!db.mata32[5].t2 || db.mata32[5].t2 === "❓") db.mata32[5].t2 = rankGeral[8].segundo.nome;
+
+    // J79: 1ºA x 3º(C/E/F/H/I)
+    if (!db.mata32[6].t1 || db.mata32[6].t1 === "❓") db.mata32[6].t1 = rankGeral[0].primeiro.nome;
+    if (!db.mata32[6].t2 || db.mata32[6].t2 === "❓") db.mata32[6].t2 = t_jogo79 ? t_jogo79.nome : "❓";
+
+    // J80: 1ºL x 3º(E/H/I/J/K)
+    if (!db.mata32[7].t1 || db.mata32[7].t1 === "❓") db.mata32[7].t1 = rankGeral[11].primeiro.nome;
+    if (!db.mata32[7].t2 || db.mata32[7].t2 === "❓") db.mata32[7].t2 = t_jogo80 ? t_jogo80.nome : "❓";
+
+    // J81: 1ºD x 3º(B/E/F/I/J)
+    if (!db.mata32[8].t1 || db.mata32[8].t1 === "❓") db.mata32[8].t1 = rankGeral[3].primeiro.nome;
+    if (!db.mata32[8].t2 || db.mata32[8].t2 === "❓") db.mata32[8].t2 = t_jogo81 ? t_jogo81.nome : "❓";
+
+    // J82: 1ºG x 3º(A/E/H/I/J)
+    if (!db.mata32[9].t1 || db.mata32[9].t1 === "❓") db.mata32[9].t1 = rankGeral[6].primeiro.nome;
+    if (!db.mata32[9].t2 || db.mata32[9].t2 === "❓") db.mata32[9].t2 = t_jogo82 ? t_jogo82.nome : "❓";
+
+    // J83: 2ºK x 2ºL
+    if (!db.mata32[10].t1 || db.mata32[10].t1 === "❓") db.mata32[10].t1 = rankGeral[10].segundo.nome;
+    if (!db.mata32[10].t2 || db.mata32[10].t2 === "❓") db.mata32[10].t2 = rankGeral[11].segundo.nome;
+
+    // J84: 1ºH x 2ºJ
+    if (!db.mata32[11].t1 || db.mata32[11].t1 === "❓") db.mata32[11].t1 = rankGeral[7].primeiro.nome;
+    if (!db.mata32[11].t2 || db.mata32[11].t2 === "❓") db.mata32[11].t2 = rankGeral[9].segundo.nome;
+
+    // J85: 1ºB x 3º(E/F/G/I/J)
+    if (!db.mata32[12].t1 || db.mata32[12].t1 === "❓") db.mata32[12].t1 = rankGeral[1].primeiro.nome;
+    if (!db.mata32[12].t2 || db.mata32[12].t2 === "❓") db.mata32[12].t2 = t_jogo85 ? t_jogo85.nome : "❓";
+
+    // J86: 1ºJ x 2ºH
+    if (!db.mata32[13].t1 || db.mata32[13].t1 === "❓") db.mata32[13].t1 = rankGeral[9].primeiro.nome;
+    if (!db.mata32[13].t2 || db.mata32[13].t2 === "❓") db.mata32[13].t2 = rankGeral[7].segundo.nome;
+
+    // J87: 1ºK x 3º(D/E/I/J/L)
+    if (!db.mata32[14].t1 || db.mata32[14].t1 === "❓") db.mata32[14].t1 = rankGeral[10].primeiro.nome;
+    if (!db.mata32[14].t2 || db.mata32[14].t2 === "❓") db.mata32[14].t2 = t_jogo87 ? t_jogo87.nome : "❓";
+
+    // J88: 2ºD x 2ºG
+    if (!db.mata32[15].t1 || db.mata32[15].t1 === "❓") db.mata32[15].t1 = rankGeral[3].segundo.nome;
+    if (!db.mata32[15].t2 || db.mata32[15].t2 === "❓") db.mata32[15].t2 = rankGeral[6].segundo.nome;
 
     renderMataGenerico('container-32avos', db.mata32, 'mata32');
 
@@ -439,15 +495,21 @@ function atualizarMataMata(stats) {
 }
 
 function avancarFase(origem, destino, tipoDestino) {
-    destino.forEach(jogo => {
+    destino.forEach((jogo, idx) => {
         let j1 = origem.find(o => o.id === jogo.j1);
         let j2 = origem.find(o => o.id === jogo.j2);
-        if (j1 && j1.g1 !== "" && j1.g2 !== "" && j1.g1 !== j1.g2) {
-            jogo.t1 = parseInt(j1.g1) > parseInt(j1.g2) ? j1.t1 : j1.t2;
-        } else { jogo.t1 = ""; }
-        if (j2 && j2.g1 !== "" && j2.g2 !== "" && j2.g1 !== j2.g2) {
-            jogo.t2 = parseInt(j2.g1) > parseInt(j2.g2) ? j2.t1 : j2.t2;
-        } else { jogo.t2 = ""; }
+        
+        if (!jogo.t1 || jogo.t1 === "❓") {
+            if (j1 && j1.g1 !== "" && j1.g2 !== "" && j1.g1 !== j1.g2) {
+                jogo.t1 = parseInt(j1.g1) > parseInt(j1.g2) ? j1.t1 : j1.t2;
+            } else { jogo.t1 = "❓"; }
+        }
+        
+        if (!jogo.t2 || jogo.t2 === "❓") {
+            if (j2 && j2.g1 !== "" && j2.g2 !== "" && j2.g1 !== j2.g2) {
+                jogo.t2 = parseInt(j2.g1) > parseInt(j2.g2) ? j2.t1 : j2.t2;
+            } else { jogo.t2 = "❓"; }
+        }
     });
 }
 
@@ -457,17 +519,58 @@ function renderMataGenerico(containerId, lista, tipo) {
     el.innerHTML = '';
     lista.forEach(j => {
         let idx = lista.indexOf(j);
-        let desabilitado = (!j.t1 || !j.t2);
+        let desabilitado = (!j.t1 || !j.t2 || j.t1 === "❓" || j.t2 === "❓");
         let campo1 = gerarCampoPlacar(tipo, idx, 'g1', j.g1, desabilitado);
         let campo2 = gerarCampoPlacar(tipo, idx, 'g2', j.g2, desabilitado);
 
-        el.innerHTML += `<div class="jogo-item">
+        // Inputs de texto para o Admin gerenciar os nomes dos times
+        let displayT1, displayT2;
+        if (isAdminLogado) {
+            displayT1 = `<input type="text" value="${j.t1 && j.t1 !== '❓' ? j.t1 : ''}" placeholder="❓ Time 1" style="width: 110px; text-align: center; font-size: 0.85rem;" onchange="atualizarNomeTimeMata('${tipo}', ${idx}, 't1', this.value)">`;
+            displayT2 = `<input type="text" value="${j.t2 && j.t2 !== '❓' ? j.t2 : ''}" placeholder="❓ Time 2" style="width: 110px; text-align: center; font-size: 0.85rem;" onchange="atualizarNomeTimeMata('${tipo}', ${idx}, 't2', this.value)">`;
+        } else {
+            displayT1 = j.t1 || '<i>❓</i>';
+            displayT2 = j.t2 || '<i>❓</i>';
+        }
+
+        // Recupera os valores de cartões salvos no banco (ou inicia vazio se não existirem)
+        let cam1 = j.c_am1 ?? "";
+        let cvm1 = j.c_vm1 ?? "";
+        let cam2 = j.c_am2 ?? "";
+        let cvm2 = j.c_vm2 ?? "";
+
+        // Monta a estrutura HTML dos cartões para o mata-mata
+        let htmlCartoesMata = "";
+        if (isAdminLogado) {
+            htmlCartoesMata = `
+            <div style="display: flex; justify-content: space-between; margin-top: 8px; font-size: 0.75rem; background: #f7fafc; padding: 4px; border-radius: 4px; width: 100%;">
+                <div style="display: flex; gap: 4px; align-items: center;">
+                    🟥<input type="number" min="0" placeholder="0" value="${cvm1}" style="width:35px;" oninput="validarEAtualizarPlacarGeral('${tipo}', ${idx}, 'c_vm1', this.value)">
+                    🟨<input type="number" min="0" placeholder="0" value="${cam1}" style="width:35px;" oninput="validarEAtualizarPlacarGeral('${tipo}', ${idx}, 'c_am1', this.value)">
+                </div>
+                <div style="display: flex; gap: 4px; align-items: center;">
+                    <input type="number" min="0" placeholder="0" value="${cam2}" style="width:35px;" oninput="validarEAtualizarPlacarGeral('${tipo}', ${idx}, 'c_am2', this.value)">🟨
+                    <input type="number" min="0" placeholder="0" value="${cvm2}" style="width:35px;" oninput="validarEAtualizarPlacarGeral('${tipo}', ${idx}, 'c_vm2', this.value)">🟥
+                </div>
+            </div>`;
+        } else {
+            if (cam1 || cvm1 || cam2 || cvm2) {
+                htmlCartoesMata = `
+                <div style="display: flex; justify-content: space-between; margin-top: 6px; font-size: 0.75rem; color: #4a5568; width: 100%; padding: 0 2px;">
+                    <div>${cvm1 ? `🟥 ${cvm1}` : ''} ${cam1 ? `🟨 ${cam1}` : ''}</div>
+                    <div>${cam2 ? `${cam2} 🟨` : ''} ${cvm2 ? `${cvm2} 🟥` : ''}</div>
+                </div>`;
+            }
+        }
+
+        el.innerHTML += `<div class="jogo-item" style="display: flex; flex-direction: column; align-items: center;">
             <div class="jogo-meta"><b>${j.label}</b><br></div>
-            <div class="placar">
-                <span class="time-flag-right">${j.t1 || '<i>❓</i>'}</span>
+            <div class="placar" style="width: 100%;">
+                <span class="time-flag-right">${displayT1}</span>
                 ${campo1} ${campo2}
-                <span class="time-flag-left">${j.t2 || '<i>❓</i>'}</span>
+                <span class="time-flag-left">${displayT2}</span>
             </div>
+            ${htmlCartoesMata}
             ${gerarLinkTransmissao(j.liveUrl, tipo, idx)} 
         </div>`;
     });
@@ -723,6 +826,23 @@ function salvarLinkLiveDirect(tipoOrigem, index, novaUrl) {
             .then(() => { console.log("Link da live atualizado com sucesso!"); })
             .catch((error) => { console.error("Erro ao salvar link:", error); });
     }
+}
+
+function atualizarNomeTimeMata(tipo, idx, campo, valor) {
+    let valorFormatado = valor.trim() === "" ? "❓" : valor.trim();
+    
+    if (tipo === 'final') {
+        db.finais.final[campo] = valorFormatado;
+    } else if (tipo === 'terceiro') {
+        db.finais.terceiro[campo] = valorFormatado;
+    } else {
+        if (!db[tipo]) db[tipo] = [];
+        if (!db[tipo][idx]) db[tipo][idx] = {};
+        db[tipo][idx][campo] = valorFormatado;
+    }
+    
+    // Salva no banco. O Realtime Sync vai se encarregar de reprocessar a tela
+    rtdb.ref('copa26_dados').set(db);
 }
 
 function atualizarLinkLive(origem, idx, url) {
