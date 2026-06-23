@@ -327,7 +327,7 @@ function renderizarGrupos(stats) {
             } else {
                 if (cam1 || cvm1 || cam2 || cvm2) {
                     htmlCartoesGrupo = `
-                    <div style="display: flex; justify-content: space-between; margin-top: 6px; font-size: 0.75rem; color: #4a5568; width: 100%; padding: 0 2px;">
+                    <div style="display: flex; justify-content: space-between; margin-top: 6px; font-size: 0.75rem; color: #4a5568; width: 96%; padding: 0 2px;">
                         <div>${cvm1 ? `🟥 ${cvm1}` : ''} ${cam1 ? `🟨 ${cam1}` : ''}</div>
                         <div>${cam2 ? `${cam2} 🟨` : ''} ${cvm2 ? `${cvm2} 🟥` : ''}</div>
                     </div>`;
@@ -556,7 +556,7 @@ function renderMataGenerico(containerId, lista, tipo) {
         } else {
             if (cam1 || cvm1 || cam2 || cvm2) {
                 htmlCartoesMata = `
-                <div style="display: flex; justify-content: space-between; margin-top: 6px; font-size: 0.75rem; color: #4a5568; width: 100%; padding: 0 2px;">
+                <div style="display: flex; justify-content: space-between; margin-top: 6px; font-size: 0.75rem; color: #4a5568; width: 96%; padding: 0 2px;">
                     <div>${cvm1 ? `🟥 ${cvm1}` : ''} ${cam1 ? `🟨 ${cam1}` : ''}</div>
                     <div>${cam2 ? `${cam2} 🟨` : ''} ${cvm2 ? `${cvm2} 🟥` : ''}</div>
                 </div>`;
