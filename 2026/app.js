@@ -331,6 +331,12 @@ function renderizarGrupos(stats) {
                         <div>${cvm1 ? `🟥 ${cvm1}` : ''} ${cam1 ? `🟨 ${cam1}` : ''}</div>
                         <div>${cam2 ? `${cam2} 🟨` : ''} ${cvm2 ? `${cvm2} 🟥` : ''}</div>
                     </div>`;
+                }else{
+                    htmlCartoesGrupo = `
+                    <div style="display: flex; justify-content: space-between; margin-top: 23px; font-size: 0.75rem; color: #4a5568; width: 96%; padding: 0 2px;">
+                        <div></div>
+                        <div></div>
+                    </div>`;
                 }
             }
 
@@ -560,6 +566,12 @@ function renderMataGenerico(containerId, lista, tipo) {
                     <div>${cvm1 ? `🟥 ${cvm1}` : ''} ${cam1 ? `🟨 ${cam1}` : ''}</div>
                     <div>${cam2 ? `${cam2} 🟨` : ''} ${cvm2 ? `${cvm2} 🟥` : ''}</div>
                 </div>`;
+            }else{
+                htmlCartoesMata = `
+                <div style="display: flex; justify-content: space-between; margin-top: 23px; font-size: 0.75rem; color: #4a5568; width: 96%; padding: 0 2px;">
+                    <div></div>
+                    <div></div>
+                </div>`;
             }
         }
 
@@ -727,6 +739,14 @@ function criarCardJogoDia(tipoOrigem, index, label, t1, t2, g1, g2, dataSelecion
                 </div>
                 <div>
                     ${cam2 ? `${cam2} 🟨` : ''} ${cvm2 ? `${cvm2} 🟥` : ''}
+                </div>
+            </div>`;
+        }else{
+            htmlCartoes = `
+            <div class="visitor-cards-container" style="display: flex; justify-content: space-between; margin-top: 25px; font-size: 0.8rem; color: #4a5568; padding: 0 4px;">
+                <div>
+                </div>
+                <div>
                 </div>
             </div>`;
         }
