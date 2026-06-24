@@ -104,46 +104,46 @@ const dadosIniciais = {
         { id: 72, g: "J", data: "Jogo 72 - 27/06 - 23h00", t1: "JOR", t2: "ARG", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" }
     ],
     mata32: [
-        { id: 73, label: "Jogo 73 - 28/06 - 16h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
-        { id: 74, label: "Jogo 74 - 29/06 - 17h30", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
-        { id: 75, label: "Jogo 75 - 29/06 - 22h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
-        { id: 76, label: "Jogo 76 - 29/06 - 14h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
-        { id: 77, label: "Jogo 77 - 30/06 - 18h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
-        { id: 78, label: "Jogo 78 - 30/06 - 14h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
-        { id: 79, label: "Jogo 79 - 30/06 - 22h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
-        { id: 80, label: "Jogo 80 - 01/07 - 13h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
-        { id: 81, label: "Jogo 81 - 01/07 - 21h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
-        { id: 82, label: "Jogo 82 - 01/07 - 17h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
-        { id: 83, label: "Jogo 83 - 02/07 - 20h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
-        { id: 84, label: "Jogo 84 - 02/07 - 16h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
-        { id: 85, label: "Jogo 85 - 03/07 - 00h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
-        { id: 86, label: "Jogo 86 - 03/07 - 19h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
-        { id: 87, label: "Jogo 87 - 03/07 - 22h30", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
-        { id: 88, label: "Jogo 88 - 03/07 - 15h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" }
+        { id: 73, label: "Jogo 73 - 28/06 - 16h00", t1: "", t2: "", g1: "", g2: "", p1: "", p2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
+        { id: 74, label: "Jogo 74 - 29/06 - 17h30", t1: "", t2: "", g1: "", g2: "", p1: "", p2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
+        { id: 75, label: "Jogo 75 - 29/06 - 22h00", t1: "", t2: "", g1: "", g2: "", p1: "", p2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
+        { id: 76, label: "Jogo 76 - 29/06 - 14h00", t1: "", t2: "", g1: "", g2: "", p1: "", p2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
+        { id: 77, label: "Jogo 77 - 30/06 - 18h00", t1: "", t2: "", g1: "", g2: "", p1: "", p2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
+        { id: 78, label: "Jogo 78 - 30/06 - 14h00", t1: "", t2: "", g1: "", g2: "", p1: "", p2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
+        { id: 79, label: "Jogo 79 - 30/06 - 22h00", t1: "", t2: "", g1: "", g2: "", p1: "", p2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
+        { id: 80, label: "Jogo 80 - 01/07 - 13h00", t1: "", t2: "", g1: "", g2: "", p1: "", p2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
+        { id: 81, label: "Jogo 81 - 01/07 - 21h00", t1: "", t2: "", g1: "", g2: "", p1: "", p2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
+        { id: 82, label: "Jogo 82 - 01/07 - 17h00", t1: "", t2: "", g1: "", g2: "", p1: "", p2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
+        { id: 83, label: "Jogo 83 - 02/07 - 20h00", t1: "", t2: "", g1: "", g2: "", p1: "", p2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
+        { id: 84, label: "Jogo 84 - 02/07 - 16h00", t1: "", t2: "", g1: "", g2: "", p1: "", p2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
+        { id: 85, label: "Jogo 85 - 03/07 - 00h00", t1: "", t2: "", g1: "", g2: "", p1: "", p2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
+        { id: 86, label: "Jogo 86 - 03/07 - 19h00", t1: "", t2: "", g1: "", g2: "", p1: "", p2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
+        { id: 87, label: "Jogo 87 - 03/07 - 22h30", t1: "", t2: "", g1: "", g2: "", p1: "", p2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
+        { id: 88, label: "Jogo 88 - 03/07 - 15h00", t1: "", t2: "", g1: "", g2: "", p1: "", p2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" }
     ],
     oitavas: [
-        { id: 89, j1: 74, j2: 77, label: "Jogo 89 - 04/07 - 18h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
-        { id: 90, j1: 73, j2: 75, label: "Jogo 90 - 04/07 - 14h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
-        { id: 91, j1: 76, j2: 78, label: "Jogo 91 - 05/07 - 17h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
-        { id: 92, j1: 79, j2: 80, label: "Jogo 92 - 05/07 - 21h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
-        { id: 93, j1: 83, j2: 84, label: "Jogo 93 - 06/07 - 16h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
-        { id: 94, j1: 81, j2: 82, label: "Jogo 94 - 06/07 - 21h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
-        { id: 95, j1: 86, j2: 88, label: "Jogo 95 - 07/07 - 13h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
-        { id: 96, j1: 85, j2: 87, label: "Jogo 96 - 07/07 - 17h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" }
+        { id: 89, j1: 74, j2: 77, label: "Jogo 89 - 04/07 - 18h00", t1: "", t2: "", g1: "", g2: "", p1: "", p2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
+        { id: 90, j1: 73, j2: 75, label: "Jogo 90 - 04/07 - 14h00", t1: "", t2: "", g1: "", g2: "", p1: "", p2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
+        { id: 91, j1: 76, j2: 78, label: "Jogo 91 - 05/07 - 17h00", t1: "", t2: "", g1: "", g2: "", p1: "", p2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
+        { id: 92, j1: 79, j2: 80, label: "Jogo 92 - 05/07 - 21h00", t1: "", t2: "", g1: "", g2: "", p1: "", p2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
+        { id: 93, j1: 83, j2: 84, label: "Jogo 93 - 06/07 - 16h00", t1: "", t2: "", g1: "", g2: "", p1: "", p2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
+        { id: 94, j1: 81, j2: 82, label: "Jogo 94 - 06/07 - 21h00", t1: "", t2: "", g1: "", g2: "", p1: "", p2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
+        { id: 95, j1: 86, j2: 88, label: "Jogo 95 - 07/07 - 13h00", t1: "", t2: "", g1: "", g2: "", p1: "", p2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
+        { id: 96, j1: 85, j2: 87, label: "Jogo 96 - 07/07 - 17h00", t1: "", t2: "", g1: "", g2: "", p1: "", p2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" }
     ],
     quartas: [
-        { id: 97, j1: 89, j2: 90, label: "Jogo 97 - 07/07 - 17h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
-        { id: 98, j1: 93, j2: 94, label: "Jogo 98 - 10/07 - 16h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
-        { id: 99, j1: 91, j2: 92, label: "Jogo 99 - 11/07 - 18h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
-        { id: 100, j1: 95, j2: 96, label: "Jogo 100 - 11/07 - 22h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" }
+        { id: 97, j1: 89, j2: 90, label: "Jogo 97 - 07/07 - 17h00", t1: "", t2: "", g1: "", g2: "", p1: "", p2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
+        { id: 98, j1: 93, j2: 94, label: "Jogo 98 - 10/07 - 16h00", t1: "", t2: "", g1: "", g2: "", p1: "", p2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
+        { id: 99, j1: 91, j2: 92, label: "Jogo 99 - 11/07 - 18h00", t1: "", t2: "", g1: "", g2: "", p1: "", p2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
+        { id: 100, j1: 95, j2: 96, label: "Jogo 100 - 11/07 - 22h00", t1: "", t2: "", g1: "", g2: "", p1: "", p2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" }
     ],
     semis: [
-        { id: 101, j1: 97, j2: 98, label: "Jogo 101 - 14/07 - 16h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
-        { id: 102, j1: 99, j2: 100, label: "Jogo 102 - 15/07 - 16h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" }
+        { id: 101, j1: 97, j2: 98, label: "Jogo 101 - 14/07 - 16h00", t1: "", t2: "", g1: "", g2: "", p1: "", p2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
+        { id: 102, j1: 99, j2: 100, label: "Jogo 102 - 15/07 - 16h00", t1: "", t2: "", g1: "", g2: "", p1: "", p2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" }
     ],
     finais: {
-        terceiro: { id: 103, label: "3º Lugar - 18/07 - 18h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
-        final: { id: 104, label: "FINAL - 19/07 - 16h00", t1: "", t2: "", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" }
+        terceiro: { id: 103, label: "3º Lugar - 18/07 - 18h00", t1: "", t2: "", g1: "", g2: "", p1: "", p2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
+        final: { id: 104, label: "FINAL - 19/07 - 16h00", t1: "", t2: "", g1: "", g2: "", p1: "", p2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" }
     }
 };
 
@@ -197,7 +197,8 @@ function mudarAba(aba) {
 
 function gerarCampoPlacar(origem, idx, campo, valor, desabilitado, dataFiltro = '') {
     if (isAdminLogado) {
-        let eventoOninput = `validarEAtualizarPlacarGeral('${origem}', ${idx}, '${campo}', this.value)`;
+        // Agora disparando o processarTudoLocal para atualizar o estado de todas as abas ao mesmo tempo
+        let eventoOninput = `validarEAtualizarPlacarGeral('${origem}', ${idx}, '${campo}', this.value); processarTudoLocal();`;
         if (dataFiltro !== '') {
             eventoOninput += `; dbOrigemParaMata('${origem}', ${idx}, '${campo}', this.value); renderizarJogosDoDia('${dataFiltro}')`;
         }
@@ -305,7 +306,6 @@ function renderizarGrupos(stats) {
             let campo1 = gerarCampoPlacar('grupo', idxOriginal, 'g1', j.g1, false);
             let campo2 = gerarCampoPlacar('grupo', idxOriginal, 'g2', j.g2, false);
 
-            // Valores de cartões para a lista de grupos
             let cam1 = j.c_am1 ?? "";
             let cvm1 = j.c_vm1 ?? "";
             let cam2 = j.c_am2 ?? "";
@@ -357,7 +357,6 @@ function renderizarGrupos(stats) {
 function atualizarMataMata(stats) {
     let rankGeral = [];
     
-    // Garante que os grupos sejam processados estritamente na ordem alfabética (A até L)
     Object.keys(db.grupos)
         .sort((a, b) => a.localeCompare(b))
         .forEach(gId => {
@@ -373,17 +372,14 @@ function atualizarMataMata(stats) {
             });
         });
 
-    // Filtra e ordena todos os 12 terceiros lugares para descobrir os 8 melhores globais
     let melhores3Globais = rankGeral
         .map(r => r.terceiro)
-        .filter(t => t !== undefined) // Evita quebra se o grupo não tiver 3 times populados
+        .filter(t => t !== undefined) 
         .sort((a, b) => b.p - a.p || b.sg - a.sg || b.gp - a.gp || a.fp - b.fp)
         .slice(0, 8);
 
-    // Lista clonada para podermos consumir os times sem repetir no mata-mata
     let terceirosDisponiveis = [...melhores3Globais];
 
-    // Função interna para pescar o melhor terceiro permitido para aquele confronto específico
     function obterTerceiroPermitido(gruposPermitidos) {
         let idx = terceirosDisponiveis.findIndex(t => gruposPermitidos.includes(t.grupo));
         if (idx !== -1) {
@@ -392,7 +388,6 @@ function atualizarMataMata(stats) {
         return null;
     }
 
-    // Buscando os terceiros específicos para cada jogo conforme sua regra oficial
     let t_jogo74 = obterTerceiroPermitido(['A', 'B', 'C', 'D', 'F']);
     let t_jogo77 = obterTerceiroPermitido(['C', 'D', 'F', 'G', 'H']);
     let t_jogo79 = obterTerceiroPermitido(['C', 'E', 'F', 'H', 'I']);
@@ -405,79 +400,85 @@ function atualizarMataMata(stats) {
     if (!db.mata32[0].t1 || db.mata32[0].t1 === "❓") db.mata32[0].t1 = rankGeral[0].segundo.nome;
     if (!db.mata32[0].t2 || db.mata32[0].t2 === "❓") db.mata32[0].t2 = rankGeral[1].segundo.nome;
 
-    // J74: 1ºE x 3º(A/B/C/D/F)
     if (!db.mata32[1].t1 || db.mata32[1].t1 === "❓") db.mata32[1].t1 = rankGeral[4].primeiro.nome;
     if (!db.mata32[1].t2 || db.mata32[1].t2 === "❓") db.mata32[1].t2 = t_jogo74 ? t_jogo74.nome : "❓";
 
-    // J75: 1ºF x 2ºC
     if (!db.mata32[2].t1 || db.mata32[2].t1 === "❓") db.mata32[2].t1 = rankGeral[5].primeiro.nome;
     if (!db.mata32[2].t2 || db.mata32[2].t2 === "❓") db.mata32[2].t2 = rankGeral[2].segundo.nome;
 
-    // J76: 1ºC x 2ºF (O jogo que você mencionou!)
-    if (!db.mata32[3].t1 || db.mata32[3].t1 === "❓") db.mata32[3].t1 = rankGeral[2].primeiro.nome; // 1ºC
-    if (!db.mata32[3].t2 || db.mata32[3].t2 === "❓") db.mata32[3].t2 = rankGeral[5].segundo.nome;  // 2ºF
+    if (!db.mata32[3].t1 || db.mata32[3].t1 === "❓") db.mata32[3].t1 = rankGeral[2].primeiro.nome; 
+    if (!db.mata32[3].t2 || db.mata32[3].t2 === "❓") db.mata32[3].t2 = rankGeral[5].segundo.nome;  
 
-    // J77: 1ºI x 3º(C/D/F/G/H)
     if (!db.mata32[4].t1 || db.mata32[4].t1 === "❓") db.mata32[4].t1 = rankGeral[8].primeiro.nome;
     if (!db.mata32[4].t2 || db.mata32[4].t2 === "❓") db.mata32[4].t2 = t_jogo77 ? t_jogo77.nome : "❓";
 
-    // J78: 2ºE x 2ºI
     if (!db.mata32[5].t1 || db.mata32[5].t1 === "❓") db.mata32[5].t1 = rankGeral[4].segundo.nome;
     if (!db.mata32[5].t2 || db.mata32[5].t2 === "❓") db.mata32[5].t2 = rankGeral[8].segundo.nome;
 
-    // J79: 1ºA x 3º(C/E/F/H/I)
     if (!db.mata32[6].t1 || db.mata32[6].t1 === "❓") db.mata32[6].t1 = rankGeral[0].primeiro.nome;
     if (!db.mata32[6].t2 || db.mata32[6].t2 === "❓") db.mata32[6].t2 = t_jogo79 ? t_jogo79.nome : "❓";
 
-    // J80: 1ºL x 3º(E/H/I/J/K)
     if (!db.mata32[7].t1 || db.mata32[7].t1 === "❓") db.mata32[7].t1 = rankGeral[11].primeiro.nome;
     if (!db.mata32[7].t2 || db.mata32[7].t2 === "❓") db.mata32[7].t2 = t_jogo80 ? t_jogo80.nome : "❓";
 
-    // J81: 1ºD x 3º(B/E/F/I/J)
     if (!db.mata32[8].t1 || db.mata32[8].t1 === "❓") db.mata32[8].t1 = rankGeral[3].primeiro.nome;
     if (!db.mata32[8].t2 || db.mata32[8].t2 === "❓") db.mata32[8].t2 = t_jogo81 ? t_jogo81.nome : "❓";
 
-    // J82: 1ºG x 3º(A/E/H/I/J)
     if (!db.mata32[9].t1 || db.mata32[9].t1 === "❓") db.mata32[9].t1 = rankGeral[6].primeiro.nome;
     if (!db.mata32[9].t2 || db.mata32[9].t2 === "❓") db.mata32[9].t2 = t_jogo82 ? t_jogo82.nome : "❓";
 
-    // J83: 2ºK x 2ºL
     if (!db.mata32[10].t1 || db.mata32[10].t1 === "❓") db.mata32[10].t1 = rankGeral[10].segundo.nome;
     if (!db.mata32[10].t2 || db.mata32[10].t2 === "❓") db.mata32[10].t2 = rankGeral[11].segundo.nome;
 
-    // J84: 1ºH x 2ºJ
     if (!db.mata32[11].t1 || db.mata32[11].t1 === "❓") db.mata32[11].t1 = rankGeral[7].primeiro.nome;
     if (!db.mata32[11].t2 || db.mata32[11].t2 === "❓") db.mata32[11].t2 = rankGeral[9].segundo.nome;
 
-    // J85: 1ºB x 3º(E/F/G/I/J)
     if (!db.mata32[12].t1 || db.mata32[12].t1 === "❓") db.mata32[12].t1 = rankGeral[1].primeiro.nome;
     if (!db.mata32[12].t2 || db.mata32[12].t2 === "❓") db.mata32[12].t2 = t_jogo85 ? t_jogo85.nome : "❓";
 
-    // J86: 1ºJ x 2ºH
     if (!db.mata32[13].t1 || db.mata32[13].t1 === "❓") db.mata32[13].t1 = rankGeral[9].primeiro.nome;
     if (!db.mata32[13].t2 || db.mata32[13].t2 === "❓") db.mata32[13].t2 = rankGeral[7].segundo.nome;
 
-    // J87: 1ºK x 3º(D/E/I/J/L)
     if (!db.mata32[14].t1 || db.mata32[14].t1 === "❓") db.mata32[14].t1 = rankGeral[10].primeiro.nome;
     if (!db.mata32[14].t2 || db.mata32[14].t2 === "❓") db.mata32[14].t2 = t_jogo87 ? t_jogo87.nome : "❓";
 
-    // J88: 2ºD x 2ºG
     if (!db.mata32[15].t1 || db.mata32[15].t1 === "❓") db.mata32[15].t1 = rankGeral[3].segundo.nome;
     if (!db.mata32[15].t2 || db.mata32[15].t2 === "❓") db.mata32[15].t2 = rankGeral[6].segundo.nome;
 
     renderMataGenerico('container-32avos', db.mata32, 'mata32');
 
-    // === PROGRESSÃO AUTOMÁTICA DOS VENCEDORES (Oitavas, Quartas, Semis e Finais) ===
+    // === PROGRESSÃO AUTOMÁTICA DOS VENCEDORES (Considerando Empate + Pênaltis) ===
     avancarFase(db.mata32, db.oitavas, 'oitavas');
     avancarFase(db.oitavas, db.quartas, 'quartas');
     avancarFase(db.quartas, db.semis, 'semis');
 
     let s1 = db.semis[0], s2 = db.semis[1];
-    if (s1.g1 !== "" && s1.g2 !== "" && s2.g1 !== "" && s2.g2 !== "" && s1.g1 !== s1.g2 && s2.g1 !== s2.g2) {
-        db.finais.final.t1 = parseInt(s1.g1) > parseInt(s1.g2) ? s1.t1 : s1.t2;
-        db.finais.final.t2 = parseInt(s2.g1) > parseInt(s2.g2) ? s2.t1 : s2.t2;
-        db.finais.terceiro.t1 = parseInt(s1.g1) > parseInt(s1.g2) ? s1.t2 : s1.t1;
-        db.finais.terceiro.t2 = parseInt(s2.g1) > parseInt(s2.g2) ? s2.t2 : s2.t1;
+    
+    // Função auxiliar para determinar ganhador e perdedor tratando empates com pênalti
+    function obterResultadoMata(j) {
+        let g1 = parseInt(j.g1) || 0, g2 = parseInt(j.g2) || 0;
+        if (g1 > g2) return { venc: j.t1, perd: j.t2 };
+        if (g2 > g1) return { venc: j.t2, perd: j.t1 };
+        
+        let p1 = parseInt(j.p1) || 0, p2 = parseInt(j.p2) || 0;
+        if (p1 > p2) return { venc: j.t1, perd: j.t2 };
+        if (p2 > p1) return { venc: j.t2, perd: j.t1 };
+        return { venc: "", perd: "" };
+    }
+
+    if (s1.g1 !== "" && s1.g2 !== "" && s2.g1 !== "" && s2.g2 !== "") {
+        let resS1 = obterResultadoMata(s1);
+        let resS2 = obterResultadoMata(s2);
+
+        if (resS1.venc && resS2.venc) {
+            db.finais.final.t1 = resS1.venc;
+            db.finais.final.t2 = resS2.venc;
+            db.finais.terceiro.t1 = resS1.perd;
+            db.finais.terceiro.t2 = resS2.perd;
+        } else {
+            db.finais.final.t1 = ""; db.finais.final.t2 = "";
+            db.finais.terceiro.t1 = ""; db.finais.terceiro.t2 = "";
+        }
     } else {
         db.finais.final.t1 = ""; db.finais.final.t2 = "";
         db.finais.terceiro.t1 = ""; db.finais.terceiro.t2 = "";
@@ -492,28 +493,49 @@ function atualizarMataMata(stats) {
     let f = db.finais.final;
     let cBox = document.getElementById('campeao-box');
     if (cBox) {
-        if (f.g1 !== "" && f.g2 !== "" && f.t1 && f.t2 && f.g1 !== f.g2) {
-            let vencedor = parseInt(f.g1) > parseInt(f.g2) ? f.t1 : f.t2;
-            cBox.innerHTML = `CAMPEÃO:<br><span style="font-size:1.6rem">${vencedor}</span>`;
-            cBox.style.display = 'block';
+        if (f.g1 !== "" && f.g2 !== "" && f.t1 && f.t2) {
+            let resF = obterResultadoMata(f);
+            if (resF.venc) {
+                cBox.innerHTML = `CAMPEÃO:<br><span style="font-size:1.6rem">${resF.venc}</span>`;
+                cBox.style.display = 'block';
+            } else { cBox.style.display = 'none'; }
         } else { cBox.style.display = 'none'; }
     }
 }
 
 function avancarFase(origem, destino, tipoDestino) {
     destino.forEach((jogo, idx) => {
-        let j1 = origem.find(o => o.id === jogo.j1);
+        // Encontra o jogo correspondente na fase anterior para a vaga do Time 1 e Time 2
+        let j1 = origem.find(o => o.id === jogo.j1); 
         let j2 = origem.find(o => o.id === jogo.j2);
-        
+
+        // Define ou atualiza o Time 1 se ele ainda estiver indefinido ou com interrogação
         if (!jogo.t1 || jogo.t1 === "❓") {
-            if (j1 && j1.g1 !== "" && j1.g2 !== "" && j1.g1 !== j1.g2) {
-                jogo.t1 = parseInt(j1.g1) > parseInt(j1.g2) ? j1.t1 : j1.t2;
+            if (j1 && j1.g1 !== "" && j1.g2 !== "") {
+                let g1 = parseInt(j1.g1), g2 = parseInt(j1.g2);
+                if (g1 !== g2) {
+                    jogo.t1 = g1 > g2 ? j1.t1 : j1.t2;
+                } else {
+                    // Se houver empate no tempo normal, desempata pelo pênalti
+                    let p1 = parseInt(j1.p1) || 0, p2 = parseInt(j1.p2) || 0;
+                    if (p1 !== p2) jogo.t1 = p1 > p2 ? j1.t1 : j1.t2;
+                    else jogo.t1 = "❓";
+                }
             } else { jogo.t1 = "❓"; }
         }
         
+        // Define ou atualiza o Time 2 se ele ainda estiver indefinido ou com interrogação
         if (!jogo.t2 || jogo.t2 === "❓") {
-            if (j2 && j2.g1 !== "" && j2.g2 !== "" && j2.g1 !== j2.g2) {
-                jogo.t2 = parseInt(j2.g1) > parseInt(j2.g2) ? j2.t1 : j2.t2;
+            if (j2 && j2.g1 !== "" && j2.g2 !== "") {
+                let g1 = parseInt(j2.g1), g2 = parseInt(j2.g2);
+                if (g1 !== g2) {
+                    jogo.t2 = g1 > g2 ? j2.t1 : j2.t2;
+                } else {
+                    // Se houver empate no tempo normal, desempata pelo pênalti
+                    let p1 = parseInt(j2.p1) || 0, p2 = parseInt(j2.p2) || 0;
+                    if (p1 !== p2) jogo.t2 = p1 > p2 ? j2.t1 : j2.t2;
+                    else jogo.t2 = "❓";
+                }
             } else { jogo.t2 = "❓"; }
         }
     });
@@ -529,7 +551,6 @@ function renderMataGenerico(containerId, lista, tipo) {
         let campo1 = gerarCampoPlacar(tipo, idx, 'g1', j.g1, desabilitado);
         let campo2 = gerarCampoPlacar(tipo, idx, 'g2', j.g2, desabilitado);
 
-        // Inputs de texto para o Admin gerenciar os nomes dos times
         let displayT1, displayT2;
         if (isAdminLogado) {
             displayT1 = `<input type="text" value="${j.t1 && j.t1 !== '❓' ? j.t1 : ''}" placeholder="❓ Time 1" style="width: 110px; text-align: center; font-size: 0.85rem;" onchange="atualizarNomeTimeMata('${tipo}', ${idx}, 't1', this.value)">`;
@@ -539,13 +560,35 @@ function renderMataGenerico(containerId, lista, tipo) {
             displayT2 = j.t2 || '<i>❓</i>';
         }
 
-        // Recupera os valores de cartões salvos no banco (ou inicia vazio se não existirem)
+        let p1 = j.p1 ?? "";
+        let p2 = j.p2 ?? "";
         let cam1 = j.c_am1 ?? "";
         let cvm1 = j.c_vm1 ?? "";
         let cam2 = j.c_am2 ?? "";
         let cvm2 = j.c_vm2 ?? "";
 
-        // Monta a estrutura HTML dos cartões para o mata-mata
+        // Estrutura HTML dos pênaltis (Acima dos cartões)
+        let htmlPenaltisMata = "";
+        if (j.g1 !== "" && j.g2 !== "" && parseInt(j.g1) === parseInt(j.g2)) {
+            if (isAdminLogado) {
+                htmlPenaltisMata = `
+                <div style="display: flex; justify-content: space-between; margin-top: 8px; font-size: 0.75rem; background: #edf2f7; padding: 4px; border-radius: 4px; width: 100%; align-items: center;">
+                    <div style="display: flex; gap: 4px; align-items: center; font-weight: bold; color: #2b6cb0;">
+                        ⚽ Pênaltis: <input type="number" min="0" placeholder="0" value="${p1}" style="width:35px;" oninput="validarEAtualizarPlacarGeral('${tipo}', ${idx}, 'p1', this.value)">
+                    </div>
+                    <div style="display: flex; gap: 4px; align-items: center; font-weight: bold; color: #2b6cb0;">
+                        <input type="number" min="0" placeholder="0" value="${p2}" style="width:35px;" oninput="validarEAtualizarPlacarGeral('${tipo}', ${idx}, 'p2', this.value)"> :Pênaltis ⚽
+                    </div>
+                </div>`;
+            } else {
+                htmlPenaltisMata = `
+                <div style="display: flex; justify-content: space-between; margin-top: 6px; font-size: 0.75rem; font-weight: bold; color: #2b6cb0; width: 96%; padding: 0 2px;">
+                    <div>${p1 !== "" ? `⚽ (Pên: ${p1})` : '⚽ (Pên: 0)'}</div>
+                    <div>${p2 !== "" ? `(Pên: ${p2}) ⚽` : '(Pên: 0) ⚽'}</div>
+                </div>`;
+            }
+        }
+
         let htmlCartoesMata = "";
         if (isAdminLogado) {
             htmlCartoesMata = `
@@ -567,7 +610,7 @@ function renderMataGenerico(containerId, lista, tipo) {
                     <div>${cam2 ? `${cam2} 🟨` : ''} ${cvm2 ? `${cvm2} 🟥` : ''}</div>
                 </div>`;
             }else{
-                htmlCartoesMata = `
+                htmlCartoesMata = htmlPenaltisMata !== "" ? "" : `
                 <div style="display: flex; justify-content: space-between; margin-top: 23px; font-size: 0.75rem; color: #4a5568; width: 96%; padding: 0 2px;">
                     <div></div>
                     <div></div>
@@ -582,6 +625,7 @@ function renderMataGenerico(containerId, lista, tipo) {
                 ${campo1} ${campo2}
                 <span class="time-flag-left">${displayT2}</span>
             </div>
+            ${htmlPenaltisMata}
             ${htmlCartoesMata}
             ${gerarLinkTransmissao(j.liveUrl, tipo, idx)} 
         </div>`;
@@ -662,7 +706,7 @@ function renderizarJogosDoDia(dataSelecionada) {
         let gId = j.g;
         let emojiT1 = db.grupos[gId].nomes[j.t1] || j.t1;
         let emojiT2 = db.grupos[gId].nomes[j.t2] || j.t2;
-        let rotulo = `Grupo ${gId} - ${j.data.split(' - ')[2] || ''}`;
+        let rotulo = `Grupo ${gId} - ${j.data.split(' - ')[0] || ''} - ${j.data.split(' - ')[2] || ''}`;
 
         html += criarCardJogoDia('grupo', idxOriginal, rotulo, emojiT1, emojiT2, j.g1, j.g2, dataSelecionada, j.liveUrl);
     });
@@ -677,7 +721,7 @@ function renderizarJogosDoDia(dataSelecionada) {
     fases.forEach(fase => {
         db[fase.chave].filter(j => j.label && j.label.includes(dataSelecionada)).forEach(j => {
             let idxOriginal = db[fase.chave].findIndex(jo => jo.id === j.id);
-            let rotulo = `${fase.titulo} - ${j.label.split(' - ')[1] || j.label}`;
+            let rotulo = `${fase.titulo} - ${j.label.split(' - ')[0] || j.label} - ${j.label.split(' - ')[2] || j.label}`;
             html += criarCardJogoDia(fase.chave, idxOriginal, rotulo, j.t1, j.t2, j.g1, j.g2, dataSelecionada, j.liveUrl);
         });
     });
@@ -709,6 +753,8 @@ function criarCardJogoDia(tipoOrigem, index, label, t1, t2, g1, g2, dataSelecion
     else if (tipoOrigem === 'terceiro') jogoAtual = db.finais.terceiro;
     else jogoAtual = db[tipoOrigem] ? db[tipoOrigem][index] : null;
 
+    let p1 = jogoAtual?.p1 ?? "";
+    let p2 = jogoAtual?.p2 ?? "";
     let cam1 = jogoAtual?.c_am1 ?? "";
     let cvm1 = jogoAtual?.c_vm1 ?? "";
     let cam2 = jogoAtual?.c_am2 ?? "";
@@ -716,6 +762,28 @@ function criarCardJogoDia(tipoOrigem, index, label, t1, t2, g1, g2, dataSelecion
 
     let campo1 = gerarCampoPlacar(tipoOrigem, index, 'g1', g1, desabilitado, dataSelecionada);
     let campo2 = gerarCampoPlacar(tipoOrigem, index, 'g2', g2, desabilitado, dataSelecionada);
+
+    // Renderização condicional dos pênaltis na listagem diária
+    let htmlPenaltis = "";
+    if (tipoOrigem !== 'grupo' && g1 !== "" && g2 !== "" && parseInt(g1) === parseInt(g2)) {
+        if (isAdminLogado) {
+            htmlPenaltis = `
+            <div class="admin-penalties-container" style="display: flex; justify-content: space-between; margin-top: 10px; font-size: 0.8rem; background: #edf2f7; padding: 6px; border-radius: 4px; width: 100%; align-items: center;">
+                <div style="display: flex; gap: 4px; align-items: center; font-weight: bold; color: #2b6cb0;">
+                    ⚽ Pênaltis: <input type="number" min="0" placeholder="0" value="${p1}" style="width: 35px; padding: 2px;" oninput="validarEAtualizarPlacarGeral('${tipoOrigem}', ${index}, 'p1', this.value); processarTudoLocal();">
+                </div>
+                <div style="display: flex; gap: 4px; align-items: center; font-weight: bold; color: #2b6cb0;">
+                    <input type="number" min="0" placeholder="0" value="${p2}" style="width: 35px; padding: 2px;" oninput="validarEAtualizarPlacarGeral('${tipoOrigem}', ${index}, 'p2', this.value); processarTudoLocal();"> :Pênaltis ⚽
+                </div>
+            </div>`;
+        } else {
+            htmlPenaltis = `
+            <div class="visitor-penalties-container" style="display: flex; justify-content: space-between; margin-top: 8px; font-size: 0.8rem; font-weight: bold; color: #2b6cb0; width: 96%; padding: 0 4px;">
+                <div>${p1 !== "" ? `⚽ (Pên: ${p1})` : '⚽ (Pên: 0)'}</div>
+                <div>${p2 !== "" ? `(Pên: ${p2}) ⚽` : '(Pên: 0) ⚽'}</div>
+            </div>`;
+        }
+    }
 
     let htmlCartoes = "";
     if (isAdminLogado) {
@@ -741,13 +809,11 @@ function criarCardJogoDia(tipoOrigem, index, label, t1, t2, g1, g2, dataSelecion
                     ${cam2 ? `${cam2} 🟨` : ''} ${cvm2 ? `${cvm2} 🟥` : ''}
                 </div>
             </div>`;
-        }else{
-            htmlCartoes = `
+        }else {
+            htmlCartoes = htmlPenaltis !== "" ? "" : `
             <div class="visitor-cards-container" style="display: flex; justify-content: space-between; margin-top: 25px; font-size: 0.8rem; color: #4a5568; padding: 0 4px;">
-                <div>
-                </div>
-                <div>
-                </div>
+                <div></div>
+                <div></div>
             </div>`;
         }
     }
@@ -760,6 +826,7 @@ function criarCardJogoDia(tipoOrigem, index, label, t1, t2, g1, g2, dataSelecion
             ${campo1} ${campo2}
             <span class="time-flag-left">${nomeT2}</span>
         </div>
+        ${htmlPenaltis}
         ${htmlCartoes}
         ${gerarLinkTransmissao(liveUrl, tipoOrigem, index)}
     </div>`;
