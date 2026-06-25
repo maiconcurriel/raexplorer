@@ -292,7 +292,7 @@ function renderizarGrupos(stats) {
 
             html += `
                 <tr>
-                    <td class="txt-l" style="display: flex; align-items: center; justify-content: center; font-size: 1.0rem;">${displayTabela}</td>
+                    <td class="txt-l" style="grid: flex; justify-content: center;">${displayTabela}</td>
                     <td style="font-weight: bold;">${s.p}</td>
                     <td>${s.j}</td>
                     <td>${s.v}</td>
@@ -321,20 +321,20 @@ function renderizarGrupos(stats) {
                 htmlCartoesGrupo = `
                 <div style="display: flex; justify-content: space-between; margin-top: 8px; font-size: 0.75rem; background: #f7fafc; padding: 4px; border-radius: 4px; width: 100%;">
                     <div style="display: flex; gap: 4px; align-items: center;">
-                        🟥<input type="number" min="0" placeholder="0" value="${cvm1}" style="width:35px;" oninput="validarEAtualizarPlacarGeral('grupo', ${idxOriginal}, 'c_vm1', this.value)">
-                        🟨<input type="number" min="0" placeholder="0" value="${cam1}" style="width:35px;" oninput="validarEAtualizarPlacarGeral('grupo', ${idxOriginal}, 'c_am1', this.value)">
+                        <svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://w3.org"><rect width="15" height="15" fill="red" /></svg><input type="number" min="0" placeholder="0" value="${cvm1}" style="width:35px;" oninput="validarEAtualizarPlacarGeral('grupo', ${idxOriginal}, 'c_vm1', this.value)">
+                        <svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://w3.org"><rect width="15" height="15" fill="yellow" /></svg><input type="number" min="0" placeholder="0" value="${cam1}" style="width:35px;" oninput="validarEAtualizarPlacarGeral('grupo', ${idxOriginal}, 'c_am1', this.value)">
                     </div>
                     <div style="display: flex; gap: 4px; align-items: center;">
-                        <input type="number" min="0" placeholder="0" value="${cam2}" style="width:35px;" oninput="validarEAtualizarPlacarGeral('grupo', ${idxOriginal}, 'c_am2', this.value)">🟨
-                        <input type="number" min="0" placeholder="0" value="${cvm2}" style="width:35px;" oninput="validarEAtualizarPlacarGeral('grupo', ${idxOriginal}, 'c_vm2', this.value)">🟥
+                        <input type="number" min="0" placeholder="0" value="${cam2}" style="width:35px;" oninput="validarEAtualizarPlacarGeral('grupo', ${idxOriginal}, 'c_am2', this.value)"><svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://w3.org"><rect width="15" height="15" fill="yellow" /></svg>
+                        <input type="number" min="0" placeholder="0" value="${cvm2}" style="width:35px;" oninput="validarEAtualizarPlacarGeral('grupo', ${idxOriginal}, 'c_vm2', this.value)"><svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://w3.org"><rect width="15" height="15" fill="red" /></svg>
                     </div>
                 </div>`;
             } else {
                 if (cam1 || cvm1 || cam2 || cvm2) {
                     htmlCartoesGrupo = `
                     <div style="display: flex; justify-content: space-between; margin-top: 6px; font-size: 0.75rem; color: #4a5568; width: 96%; padding: 0 2px;">
-                        <div>${cvm1 ? `🟥 ${cvm1}` : ''} ${cam1 ? `🟨 ${cam1}` : ''}</div>
-                        <div>${cam2 ? `${cam2} 🟨` : ''} ${cvm2 ? `${cvm2} 🟥` : ''}</div>
+                        <div>${cvm1 ? `<svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://w3.org"><rect width="15" height="15" fill="red" /></svg> ${cvm1}` : ''} ${cam1 ? `<svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://w3.org"><rect width="15" height="15" fill="yellow" /></svg> ${cam1}` : ''}</div>
+                        <div>${cam2 ? `${cam2} <svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://w3.org"><rect width="15" height="15" fill="yellow" /></svg>` : ''} ${cvm2 ? `${cvm2} <svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://w3.org"><rect width="15" height="15" fill="red" /></svg>` : ''}</div>
                     </div>`;
                 } else {
                     htmlCartoesGrupo = `
@@ -613,20 +613,20 @@ function renderMataGenerico(containerId, lista, tipo) {
             htmlCartoesMata = `
             <div style="display: flex; justify-content: space-between; margin-top: 8px; font-size: 0.75rem; background: #f7fafc; padding: 4px; border-radius: 4px; width: 100%;">
                 <div style="display: flex; gap: 4px; align-items: center;">
-                    🟥<input type="number" min="0" placeholder="0" value="${cvm1}" style="width:35px;" oninput="validarEAtualizarPlacarGeral('${tipo}', ${idx}, 'c_vm1', this.value)">
-                    🟨<input type="number" min="0" placeholder="0" value="${cam1}" style="width:35px;" oninput="validarEAtualizarPlacarGeral('${tipo}', ${idx}, 'c_am1', this.value)">
+                    <svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://w3.org"><rect width="15" height="15" fill="red" /></svg><input type="number" min="0" placeholder="0" value="${cvm1}" style="width:35px;" oninput="validarEAtualizarPlacarGeral('${tipo}', ${idx}, 'c_vm1', this.value)">
+                    <svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://w3.org"><rect width="15" height="15" fill="yellow" /></svg><input type="number" min="0" placeholder="0" value="${cam1}" style="width:35px;" oninput="validarEAtualizarPlacarGeral('${tipo}', ${idx}, 'c_am1', this.value)">
                 </div>
                 <div style="display: flex; gap: 4px; align-items: center;">
-                    <input type="number" min="0" placeholder="0" value="${cam2}" style="width:35px;" oninput="validarEAtualizarPlacarGeral('${tipo}', ${idx}, 'c_am2', this.value)">🟨
-                    <input type="number" min="0" placeholder="0" value="${cvm2}" style="width:35px;" oninput="validarEAtualizarPlacarGeral('${tipo}', ${idx}, 'c_vm2', this.value)">🟥
+                    <input type="number" min="0" placeholder="0" value="${cam2}" style="width:35px;" oninput="validarEAtualizarPlacarGeral('${tipo}', ${idx}, 'c_am2', this.value)"><svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://w3.org"><rect width="15" height="15" fill="yellow" /></svg>
+                    <input type="number" min="0" placeholder="0" value="${cvm2}" style="width:35px;" oninput="validarEAtualizarPlacarGeral('${tipo}', ${idx}, 'c_vm2', this.value)"><svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://w3.org"><rect width="15" height="15" fill="red" /></svg>
                 </div>
             </div>`;
         } else {
             if (cam1 || cvm1 || cam2 || cvm2) {
                 htmlCartoesMata = `
                 <div style="display: flex; justify-content: space-between; margin-top: 6px; font-size: 0.75rem; color: #4a5568; width: 96%; padding: 0 2px;">
-                    <div>${cvm1 ? `🟥 ${cvm1}` : ''} ${cam1 ? `🟨 ${cam1}` : ''}</div>
-                    <div>${cam2 ? `${cam2} 🟨` : ''} ${cvm2 ? `${cvm2} 🟥` : ''}</div>
+                    <div>${cvm1 ? `<svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://w3.org"><rect width="15" height="15" fill="red" /></svg> ${cvm1}` : ''} ${cam1 ? `<svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://w3.org"><rect width="15" height="15" fill="yellow" /></svg> ${cam1}` : ''}</div>
+                    <div>${cam2 ? `${cam2} <svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://w3.org"><rect width="15" height="15" fill="yellow" /></svg>` : ''} ${cvm2 ? `${cvm2} <svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://w3.org"><rect width="15" height="15" fill="red" /></svg>` : ''}</div>
                 </div>`;
             } else {
                 htmlCartoesMata = htmlPenaltisMata !== "" ? "" : `
@@ -838,12 +838,12 @@ function criarCardJogoDia(tipoOrigem, index, label, t1, t2, g1, g2, dataSelecion
         htmlCartoes = `
         <div class="admin-cards-container" style="display: flex; justify-content: space-between; margin-top: 10px; font-size: 0.8rem; background: #f7fafc; padding: 6px; border-radius: 4px;">
             <div style="display: flex; gap: 4px; align-items: center;">
-                🟥<input type="number" min="0" placeholder="0" value="${cvm1}" style="width: 35px; padding: 2px;" oninput="validarEAtualizarPlacarGeral('${tipoOrigem}', ${index}, 'c_vm1', this.value); if('${dataSelecionada}'!=='') renderizarJogosDoDia('${dataSelecionada}')">
-                🟨<input type="number" min="0" placeholder="0" value="${cam1}" style="width: 35px; padding: 2px;" oninput="validarEAtualizarPlacarGeral('${tipoOrigem}', ${index}, 'c_am1', this.value); if('${dataSelecionada}'!=='') renderizarJogosDoDia('${dataSelecionada}')">
+                <svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://w3.org"><rect width="15" height="15" fill="red" /></svg><input type="number" min="0" placeholder="0" value="${cvm1}" style="width: 35px; padding: 2px;" oninput="validarEAtualizarPlacarGeral('${tipoOrigem}', ${index}, 'c_vm1', this.value); if('${dataSelecionada}'!=='') renderizarJogosDoDia('${dataSelecionada}')">
+                <svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://w3.org"><rect width="15" height="15" fill="yellow" /></svg><input type="number" min="0" placeholder="0" value="${cam1}" style="width: 35px; padding: 2px;" oninput="validarEAtualizarPlacarGeral('${tipoOrigem}', ${index}, 'c_am1', this.value); if('${dataSelecionada}'!=='') renderizarJogosDoDia('${dataSelecionada}')">
             </div>
             <div style="display: flex; gap: 4px; align-items: center;">
-                <input type="number" min="0" placeholder="0" value="${cam2}" style="width: 35px; padding: 2px;" oninput="validarEAtualizarPlacarGeral('${tipoOrigem}', ${index}, 'c_am2', this.value); if('${dataSelecionada}'!=='') renderizarJogosDoDia('${dataSelecionada}')">🟨
-                <input type="number" min="0" placeholder="0" value="${cvm2}" style="width: 35px; padding: 2px;" oninput="validarEAtualizarPlacarGeral('${tipoOrigem}', ${index}, 'c_vm2', this.value); if('${dataSelecionada}'!=='') renderizarJogosDoDia('${dataSelecionada}')">🟥
+                <input type="number" min="0" placeholder="0" value="${cam2}" style="width: 35px; padding: 2px;" oninput="validarEAtualizarPlacarGeral('${tipoOrigem}', ${index}, 'c_am2', this.value); if('${dataSelecionada}'!=='') renderizarJogosDoDia('${dataSelecionada}')"><svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://w3.org"><rect width="15" height="15" fill="yellow" /></svg>
+                <input type="number" min="0" placeholder="0" value="${cvm2}" style="width: 35px; padding: 2px;" oninput="validarEAtualizarPlacarGeral('${tipoOrigem}', ${index}, 'c_vm2', this.value); if('${dataSelecionada}'!=='') renderizarJogosDoDia('${dataSelecionada}')"><svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://w3.org"><rect width="15" height="15" fill="red" /></svg>
             </div>
         </div>`;
     } else {
@@ -851,10 +851,10 @@ function criarCardJogoDia(tipoOrigem, index, label, t1, t2, g1, g2, dataSelecion
             htmlCartoes = `
             <div class="visitor-cards-container" style="display: flex; justify-content: space-between; margin-top: 8px; font-size: 0.8rem; color: #4a5568; padding: 0 4px;">
                 <div>
-                    ${cvm1 ? `🟥 ${cvm1}` : ''} ${cam1 ? `🟨 ${cam1}` : ''}
+                    ${cvm1 ? `<svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://w3.org"><rect width="15" height="15" fill="red" /></svg> ${cvm1}` : ''} ${cam1 ? `<svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://w3.org"><rect width="15" height="15" fill="yellow" /></svg> ${cam1}` : ''}
                 </div>
                 <div>
-                    ${cam2 ? `${cam2} 🟨` : ''} ${cvm2 ? `${cvm2} 🟥` : ''}
+                    ${cam2 ? `${cam2} <svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://w3.org"><rect width="15" height="15" fill="yellow" /></svg>` : ''} ${cvm2 ? `${cvm2} <svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://w3.org"><rect width="15" height="15" fill="red" /></svg>` : ''}
                 </div>
             </div>`;
         } else {
