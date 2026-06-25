@@ -14,18 +14,18 @@ const rtdb = firebase.database();
 
 const dadosIniciais = {
     grupos: {
-        A: { nome: "Grupo A", selecoes: ["MEX", "RSA", "KOR", "CZE"], nomes: { "MEX": "🇲🇽", "RSA": "🇿🇦", "KOR": "🇰🇷", "CZE": "🇨🇿" } },
-        B: { nome: "Grupo B", selecoes: ["CAN", "BIH", "QAT", "SUI"], nomes: { "CAN": "🇨🇦", "BIH": "🇧🇦", "QAT": "🇶🇦", "SUI": "🇨🇭" } },
-        C: { nome: "Grupo C", selecoes: ["BRA", "MAR", "HAI", "SCO"], nomes: { "BRA": "🇧🇷", "MAR": "🇲🇦", "HAI": "🇭🇹", "SCO": "🏴󠁧󠁢󠁳󠁣󠁴󠁿" } },
-        D: { nome: "Grupo D", selecoes: ["USA", "PAR", "AUS", "TUR"], nomes: { "USA": "🇺🇸", "PAR": "🇵🇾", "AUS": "🇦🇺", "TUR": "🇹🇷" } },
-        E: { nome: "Grupo E", selecoes: ["GER", "CUW", "CIV", "ECU"], nomes: { "GER": "🇩🇪", "CUW": "🇨🇼", "CIV": "🇨🇮", "ECU": "🇪🇨" } },
-        F: { nome: "Grupo F", selecoes: ["NED", "JPN", "SWE", "TUN"], nomes: { "NED": "🇳🇱", "JPN": "🇯🇵", "SWE": "🇸🇪", "TUN": "🇹🇳" } },
-        G: { nome: "Grupo G", selecoes: ["BEL", "EGY", "IRN", "NZL"], nomes: { "BEL": "🇧🇪", "EGY": "🇪🇬", "IRN": "🇮🇷", "NZL": "🇳🇿" } },
-        H: { nome: "Grupo H", selecoes: ["ESP", "CPV", "KSA", "URU"], nomes: { "ESP": "🇪🇸", "CPV": "🇨🇻", "KSA": "🇸🇦", "URU": "🇺🇾" } },
-        I: { nome: "Grupo I", selecoes: ["FRA", "SEN", "IRQ", "NOR"], nomes: { "FRA": "🇫🇷", "SEN": "🇸🇳", "IRQ": "🇮🇶", "NOR": "🇳🇴" } },
-        J: { nome: "Grupo J", selecoes: ["ARG", "ALG", "AUT", "JOR"], nomes: { "ARG": "🇦🇷", "ALG": "🇩🇿", "AUT": "🇦🇹", "JOR": "🇯🇴" } },
-        K: { nome: "Grupo K", selecoes: ["POR", "COD", "UZB", "COL"], nomes: { "POR": "🇵🇹", "COD": "🇨🇩", "UZB": "🇺🇿", "COL": "🇨🇴" } },
-        L: { nome: "Grupo L", selecoes: ["ENG", "CRO", "GHA", "PAN"], nomes: { "ENG": "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "CRO": "🇭🇷", "GHA": "🇬🇭", "PAN": "🇵🇦" } }
+        A: { nome: "Grupo A", selecoes: ["MEX", "RSA", "KOR", "CZE"], nomes: { "MEX": "fi fi-mx", "RSA": "fi fi-za", "KOR": "fi fi-kr", "CZE": "fi fi-cz" } },
+        B: { nome: "Grupo B", selecoes: ["CAN", "BIH", "QAT", "SUI"], nomes: { "CAN": "fi fi-ca", "BIH": "fi fi-ba", "QAT": "fi fi-qa", "SUI": "fi fi-ch" } },
+        C: { nome: "Grupo C", selecoes: ["BRA", "MAR", "HAI", "SCO"], nomes: { "BRA": "fi fi-br", "MAR": "fi fi-ma", "HAI": "fi fi-ht", "SCO": "fi fi-gb-sct" } },
+        D: { nome: "Grupo D", selecoes: ["USA", "PAR", "AUS", "TUR"], nomes: { "USA": "fi fi-us", "PAR": "fi fi-py", "AUS": "fi fi-au", "TUR": "fi fi-tr" } },
+        E: { nome: "Grupo E", selecoes: ["GER", "CUW", "CIV", "ECU"], nomes: { "GER": "fi fi-de", "CUW": "fi fi-cw", "CIV": "fi fi-ci", "ECU": "fi fi-ec" } },
+        F: { nome: "Grupo F", selecoes: ["NED", "JPN", "SWE", "TUN"], nomes: { "NED": "fi fi-nl", "JPN": "fi fi-jp", "SWE": "fi fi-se", "TUN": "fi fi-tn" } },
+        G: { nome: "Grupo G", selecoes: ["BEL", "EGY", "IRN", "NZL"], nomes: { "BEL": "fi fi-be", "EGY": "fi fi-eg", "IRN": "fi fi-ir", "NZL": "fi fi-nz" } },
+        H: { nome: "Grupo H", selecoes: ["ESP", "CPV", "KSA", "URU"], nomes: { "ESP": "fi fi-es", "CPV": "fi fi-cv", "KSA": "fi fi-sa", "URU": "fi fi-uy" } },
+        I: { nome: "Grupo I", selecoes: ["FRA", "SEN", "IRQ", "NOR"], nomes: { "FRA": "fi fi-fr", "SEN": "fi fi-sn", "IRQ": "fi fi-iq", "NOR": "fi fi-no" } },
+        J: { nome: "Grupo J", selecoes: ["ARG", "ALG", "AUT", "JOR"], nomes: { "ARG": "fi fi-ar", "ALG": "fi fi-dz", "AUT": "fi fi-at", "JOR": "fi fi-jo" } },
+        K: { nome: "Grupo K", selecoes: ["POR", "COD", "UZB", "COL"], nomes: { "POR": "fi fi-pt", "COD": "fi fi-cd", "UZB": "fi fi-uz", "COL": "fi fi-co" } },
+        L: { nome: "Grupo L", selecoes: ["ENG", "CRO", "GHA", "PAN"], nomes: { "ENG": "fi fi-gb-eng", "CRO": "fi fi-hr", "GHA": "fi fi-gh", "PAN": "fi fi-pa" } }
     },
     jogos: [
         { id: 1, g: "A", data: "Jogo 1 - 11/06 - 16h00", t1: "MEX", t2: "RSA", g1: "", g2: "", c_am1: 0, c_vm1: 0, c_am2: 0, c_vm2: 0, liveUrl: "" },
@@ -285,9 +285,14 @@ function renderizarGrupos(stats) {
                 </tr>`;
 
         sels.forEach(s => {
+            let siglaTime = Object.keys(db.grupos[gId].nomes).find(key => db.grupos[gId].nomes[key] === s.nome) || s.nome;
+            let classeCss = db.grupos[gId].nomes[siglaTime] || '';
+            // Alterado para exibir APENAS o span da bandeira se a classe existir
+            let displayTabela = classeCss ? `<span class="${classeCss}"></span>` : siglaTime;
+
             html += `
                 <tr>
-                    <td>${s.nome}</td>
+                    <td class="txt-l" style="display: flex; align-items: center; justify-content: center; font-size: 1.0rem;">${displayTabela}</td>
                     <td style="font-weight: bold;">${s.p}</td>
                     <td>${s.j}</td>
                     <td>${s.v}</td>
@@ -331,7 +336,7 @@ function renderizarGrupos(stats) {
                         <div>${cvm1 ? `🟥 ${cvm1}` : ''} ${cam1 ? `🟨 ${cam1}` : ''}</div>
                         <div>${cam2 ? `${cam2} 🟨` : ''} ${cvm2 ? `${cvm2} 🟥` : ''}</div>
                     </div>`;
-                }else{
+                } else {
                     htmlCartoesGrupo = `
                     <div style="display: flex; justify-content: space-between; margin-top: 23px; font-size: 0.75rem; color: #4a5568; width: 96%; padding: 0 2px;">
                         <div></div>
@@ -340,12 +345,20 @@ function renderizarGrupos(stats) {
                 }
             }
 
+            let classeT1 = db.grupos[gId].nomes[j.t1];
+            let classeT2 = db.grupos[gId].nomes[j.t2];
+
+            // Alterado para renderizar apenas a tag span da classe correspondente
             html += `<div class="jogo-item" style="display: flex; flex-direction: column; align-items: center;">
             <div class="jogo-meta">${j.data}</div>
             <div class="placar" style="width: 100%;">
-                <span class="time-flag-right">${db.grupos[gId].nomes[j.t1]}</span>
+                <span class="time-flag-right">
+                    <span class="${classeT1}"></span>
+                </span>
                 ${campo1} ${campo2}
-                <span class="time-flag-left">${db.grupos[gId].nomes[j.t2]}</span>
+                <span class="time-flag-left">
+                    <span class="${classeT2}"></span>
+                </span>
             </div>
             ${htmlCartoesGrupo}
             ${gerarLinkTransmissao(j.liveUrl, 'grupo', idxOriginal)}</div>`;
@@ -397,64 +410,62 @@ function atualizarMataMata(stats) {
     let t_jogo85 = obterTerceiroPermitido(['E', 'F', 'G', 'I', 'J']);
     let t_jogo87 = obterTerceiroPermitido(['D', 'E', 'I', 'J', 'L']);
 
-    if (!db.mata32[0].t1 || db.mata32[0].t1 === "❓") db.mata32[0].t1 = rankGeral[0].segundo.nome;
-    if (!db.mata32[0].t2 || db.mata32[0].t2 === "❓") db.mata32[0].t2 = rankGeral[1].segundo.nome;
+    if (!db.mata32[0].t1 || db.mata32[0].t1 === "❓") db.mata32[0].t1 = rankGeral[0].segundo.id;
+    if (!db.mata32[0].t2 || db.mata32[0].t2 === "❓") db.mata32[0].t2 = rankGeral[1].segundo.id;
 
-    if (!db.mata32[1].t1 || db.mata32[1].t1 === "❓") db.mata32[1].t1 = rankGeral[4].primeiro.nome;
-    if (!db.mata32[1].t2 || db.mata32[1].t2 === "❓") db.mata32[1].t2 = t_jogo74 ? t_jogo74.nome : "❓";
+    if (!db.mata32[1].t1 || db.mata32[1].t1 === "❓") db.mata32[1].t1 = rankGeral[4].primeiro.id;
+    if (!db.mata32[1].t2 || db.mata32[1].t2 === "❓") db.mata32[1].t2 = t_jogo74 ? t_jogo74.id : "❓";
 
-    if (!db.mata32[2].t1 || db.mata32[2].t1 === "❓") db.mata32[2].t1 = rankGeral[5].primeiro.nome;
-    if (!db.mata32[2].t2 || db.mata32[2].t2 === "❓") db.mata32[2].t2 = rankGeral[2].segundo.nome;
+    if (!db.mata32[2].t1 || db.mata32[2].t1 === "❓") db.mata32[2].t1 = rankGeral[5].primeiro.id;
+    if (!db.mata32[2].t2 || db.mata32[2].t2 === "❓") db.mata32[2].t2 = rankGeral[2].segundo.id;
 
-    if (!db.mata32[3].t1 || db.mata32[3].t1 === "❓") db.mata32[3].t1 = rankGeral[2].primeiro.nome; 
-    if (!db.mata32[3].t2 || db.mata32[3].t2 === "❓") db.mata32[3].t2 = rankGeral[5].segundo.nome;  
+    if (!db.mata32[3].t1 || db.mata32[3].t1 === "❓") db.mata32[3].t1 = rankGeral[2].primeiro.id; 
+    if (!db.mata32[3].t2 || db.mata32[3].t2 === "❓") db.mata32[3].t2 = rankGeral[5].segundo.id;  
 
-    if (!db.mata32[4].t1 || db.mata32[4].t1 === "❓") db.mata32[4].t1 = rankGeral[8].primeiro.nome;
-    if (!db.mata32[4].t2 || db.mata32[4].t2 === "❓") db.mata32[4].t2 = t_jogo77 ? t_jogo77.nome : "❓";
+    if (!db.mata32[4].t1 || db.mata32[4].t1 === "❓") db.mata32[4].t1 = rankGeral[8].primeiro.id;
+    if (!db.mata32[4].t2 || db.mata32[4].t2 === "❓") db.mata32[4].t2 = t_jogo77 ? t_jogo77.id : "❓";
 
-    if (!db.mata32[5].t1 || db.mata32[5].t1 === "❓") db.mata32[5].t1 = rankGeral[4].segundo.nome;
-    if (!db.mata32[5].t2 || db.mata32[5].t2 === "❓") db.mata32[5].t2 = rankGeral[8].segundo.nome;
+    if (!db.mata32[5].t1 || db.mata32[5].t1 === "❓") db.mata32[5].t1 = rankGeral[4].segundo.id;
+    if (!db.mata32[5].t2 || db.mata32[5].t2 === "❓") db.mata32[5].t2 = rankGeral[8].segundo.id;
 
-    if (!db.mata32[6].t1 || db.mata32[6].t1 === "❓") db.mata32[6].t1 = rankGeral[0].primeiro.nome;
-    if (!db.mata32[6].t2 || db.mata32[6].t2 === "❓") db.mata32[6].t2 = t_jogo79 ? t_jogo79.nome : "❓";
+    if (!db.mata32[6].t1 || db.mata32[6].t1 === "❓") db.mata32[6].t1 = rankGeral[0].primeiro.id;
+    if (!db.mata32[6].t2 || db.mata32[6].t2 === "❓") db.mata32[6].t2 = t_jogo79 ? t_jogo79.id : "❓";
 
-    if (!db.mata32[7].t1 || db.mata32[7].t1 === "❓") db.mata32[7].t1 = rankGeral[11].primeiro.nome;
-    if (!db.mata32[7].t2 || db.mata32[7].t2 === "❓") db.mata32[7].t2 = t_jogo80 ? t_jogo80.nome : "❓";
+    if (!db.mata32[7].t1 || db.mata32[7].t1 === "❓") db.mata32[7].t1 = rankGeral[11].primeiro.id;
+    if (!db.mata32[7].t2 || db.mata32[7].t2 === "❓") db.mata32[7].t2 = t_jogo80 ? t_jogo80.id : "❓";
 
-    if (!db.mata32[8].t1 || db.mata32[8].t1 === "❓") db.mata32[8].t1 = rankGeral[3].primeiro.nome;
-    if (!db.mata32[8].t2 || db.mata32[8].t2 === "❓") db.mata32[8].t2 = t_jogo81 ? t_jogo81.nome : "❓";
+    if (!db.mata32[8].t1 || db.mata32[8].t1 === "❓") db.mata32[8].t1 = rankGeral[3].primeiro.id;
+    if (!db.mata32[8].t2 || db.mata32[8].t2 === "❓") db.mata32[8].t2 = t_jogo81 ? t_jogo81.id : "❓";
 
-    if (!db.mata32[9].t1 || db.mata32[9].t1 === "❓") db.mata32[9].t1 = rankGeral[6].primeiro.nome;
-    if (!db.mata32[9].t2 || db.mata32[9].t2 === "❓") db.mata32[9].t2 = t_jogo82 ? t_jogo82.nome : "❓";
+    if (!db.mata32[9].t1 || db.mata32[9].t1 === "❓") db.mata32[9].t1 = rankGeral[6].primeiro.id;
+    if (!db.mata32[9].t2 || db.mata32[9].t2 === "❓") db.mata32[9].t2 = t_jogo82 ? t_jogo82.id : "❓";
 
-    if (!db.mata32[10].t1 || db.mata32[10].t1 === "❓") db.mata32[10].t1 = rankGeral[10].segundo.nome;
-    if (!db.mata32[10].t2 || db.mata32[10].t2 === "❓") db.mata32[10].t2 = rankGeral[11].segundo.nome;
+    if (!db.mata32[10].t1 || db.mata32[10].t1 === "❓") db.mata32[10].t1 = rankGeral[10].segundo.id;
+    if (!db.mata32[10].t2 || db.mata32[10].t2 === "❓") db.mata32[10].t2 = rankGeral[11].segundo.id;
 
-    if (!db.mata32[11].t1 || db.mata32[11].t1 === "❓") db.mata32[11].t1 = rankGeral[7].primeiro.nome;
-    if (!db.mata32[11].t2 || db.mata32[11].t2 === "❓") db.mata32[11].t2 = rankGeral[9].segundo.nome;
+    if (!db.mata32[11].t1 || db.mata32[11].t1 === "❓") db.mata32[11].t1 = rankGeral[7].primeiro.id;
+    if (!db.mata32[11].t2 || db.mata32[11].t2 === "❓") db.mata32[11].t2 = rankGeral[9].second.id;
 
-    if (!db.mata32[12].t1 || db.mata32[12].t1 === "❓") db.mata32[12].t1 = rankGeral[1].primeiro.nome;
-    if (!db.mata32[12].t2 || db.mata32[12].t2 === "❓") db.mata32[12].t2 = t_jogo85 ? t_jogo85.nome : "❓";
+    if (!db.mata32[12].t1 || db.mata32[12].t1 === "❓") db.mata32[12].t1 = rankGeral[1].primeiro.id;
+    if (!db.mata32[12].t2 || db.mata32[12].t2 === "❓") db.mata32[12].t2 = t_jogo85 ? t_jogo85.id : "❓";
 
-    if (!db.mata32[13].t1 || db.mata32[13].t1 === "❓") db.mata32[13].t1 = rankGeral[9].primeiro.nome;
-    if (!db.mata32[13].t2 || db.mata32[13].t2 === "❓") db.mata32[13].t2 = rankGeral[7].segundo.nome;
+    if (!db.mata32[13].t1 || db.mata32[13].t1 === "❓") db.mata32[13].t1 = rankGeral[9].primeiro.id;
+    if (!db.mata32[13].t2 || db.mata32[13].t2 === "❓") db.mata32[13].t2 = rankGeral[7].segundo.id;
 
-    if (!db.mata32[14].t1 || db.mata32[14].t1 === "❓") db.mata32[14].t1 = rankGeral[10].primeiro.nome;
-    if (!db.mata32[14].t2 || db.mata32[14].t2 === "❓") db.mata32[14].t2 = t_jogo87 ? t_jogo87.nome : "❓";
+    if (!db.mata32[14].t1 || db.mata32[14].t1 === "❓") db.mata32[14].t1 = rankGeral[10].primeiro.id;
+    if (!db.mata32[14].t2 || db.mata32[14].t2 === "❓") db.mata32[14].t2 = t_jogo87 ? t_jogo87.id : "❓";
 
-    if (!db.mata32[15].t1 || db.mata32[15].t1 === "❓") db.mata32[15].t1 = rankGeral[3].segundo.nome;
-    if (!db.mata32[15].t2 || db.mata32[15].t2 === "❓") db.mata32[15].t2 = rankGeral[6].segundo.nome;
+    if (!db.mata32[15].t1 || db.mata32[15].t1 === "❓") db.mata32[15].t1 = rankGeral[3].segundo.id;
+    if (!db.mata32[15].t2 || db.mata32[15].t2 === "❓") db.mata32[15].t2 = rankGeral[6].segundo.id;
 
     renderMataGenerico('container-32avos', db.mata32, 'mata32');
 
-    // === PROGRESSÃO AUTOMÁTICA DOS VENCEDORES (Considerando Empate + Pênaltis) ===
     avancarFase(db.mata32, db.oitavas, 'oitavas');
     avancarFase(db.oitavas, db.quartas, 'quartas');
     avancarFase(db.quartas, db.semis, 'semis');
 
     let s1 = db.semis[0], s2 = db.semis[1];
     
-    // Função auxiliar para determinar ganhador e perdedor tratando empates com pênalti
     function obterResultadoMata(j) {
         let g1 = parseInt(j.g1) || 0, g2 = parseInt(j.g2) || 0;
         if (g1 > g2) return { venc: j.t1, perd: j.t2 };
@@ -496,7 +507,10 @@ function atualizarMataMata(stats) {
         if (f.g1 !== "" && f.g2 !== "" && f.t1 && f.t2) {
             let resF = obterResultadoMata(f);
             if (resF.venc) {
-                cBox.innerHTML = `CAMPEÃO:<br><span style="font-size:1.6rem">${resF.venc}</span>`;
+                let cls = "";
+                Object.keys(db.grupos).forEach(g => { if(db.grupos[g].nomes[resF.venc]) cls = db.grupos[g].nomes[resF.venc]; });
+                let bnd = cls ? `<span class="${cls}"></span>` : "";
+                cBox.innerHTML = `CAMPEÃO:<br><span style="font-size:1.6rem; display:flex; align-items:center; justify-content:center;">${bnd}</span>`;
                 cBox.style.display = 'block';
             } else { cBox.style.display = 'none'; }
         } else { cBox.style.display = 'none'; }
@@ -553,11 +567,17 @@ function renderMataGenerico(containerId, lista, tipo) {
 
         let displayT1, displayT2;
         if (isAdminLogado) {
-            displayT1 = `<input type="text" value="${j.t1 && j.t1 !== '❓' ? j.t1 : ''}" placeholder="❓ Time 1" style="width: 110px; text-align: center; font-size: 0.85rem;" onchange="atualizarNomeTimeMata('${tipo}', ${idx}, 't1', this.value)">`;
-            displayT2 = `<input type="text" value="${j.t2 && j.t2 !== '❓' ? j.t2 : ''}" placeholder="❓ Time 2" style="width: 110px; text-align: center; font-size: 0.85rem;" onchange="atualizarNomeTimeMata('${tipo}', ${idx}, 't2', this.value)">`;
+            displayT1 = `<input type="text" value="${j.t1 && j.t1 !== '❓' ? j.t1 : ''}" placeholder="❓" style="width: 50px; text-align: center; font-size: 0.85rem;" onchange="atualizarNomeTimeMata('${tipo}', ${idx}, 't1', this.value)">`;
+            displayT2 = `<input type="text" value="${j.t2 && j.t2 !== '❓' ? j.t2 : ''}" placeholder="❓" style="width: 50px; text-align: center; font-size: 0.85rem;" onchange="atualizarNomeTimeMata('${tipo}', ${idx}, 't2', this.value)">`;
         } else {
-            displayT1 = j.t1 || '<i>❓</i>';
-            displayT2 = j.t2 || '<i>❓</i>';
+            let c1 = "", c2 = "";
+            Object.keys(db.grupos).forEach(g => {
+                if(db.grupos[g].nomes[j.t1]) c1 = db.grupos[g].nomes[j.t1];
+                if(db.grupos[g].nomes[j.t2]) c2 = db.grupos[g].nomes[j.t2];
+            });
+            // Alterado para renderizar apenas os spans com as classes de estilo das bandeiras
+            displayT1 = c1 ? `<span class="${c1}"></span>` : (j.t1 || '<i>❓</i>');
+            displayT2 = c2 ? `<span class="${c2}"></span>` : (j.t2 || '<i>❓</i>');
         }
 
         let p1 = j.p1 ?? "";
@@ -567,7 +587,6 @@ function renderMataGenerico(containerId, lista, tipo) {
         let cam2 = j.c_am2 ?? "";
         let cvm2 = j.c_vm2 ?? "";
 
-        // Estrutura HTML dos pênaltis (Acima dos cartões)
         let htmlPenaltisMata = "";
         if (j.g1 !== "" && j.g2 !== "" && parseInt(j.g1) === parseInt(j.g2)) {
             if (isAdminLogado) {
@@ -609,7 +628,7 @@ function renderMataGenerico(containerId, lista, tipo) {
                     <div>${cvm1 ? `🟥 ${cvm1}` : ''} ${cam1 ? `🟨 ${cam1}` : ''}</div>
                     <div>${cam2 ? `${cam2} 🟨` : ''} ${cvm2 ? `${cvm2} 🟥` : ''}</div>
                 </div>`;
-            }else{
+            } else {
                 htmlCartoesMata = htmlPenaltisMata !== "" ? "" : `
                 <div style="display: flex; justify-content: space-between; margin-top: 23px; font-size: 0.75rem; color: #4a5568; width: 96%; padding: 0 2px;">
                     <div></div>
@@ -704,11 +723,15 @@ function renderizarJogosDoDia(dataSelecionada) {
     db.jogos.filter(j => j.data && j.data.includes(dataSelecionada)).forEach(j => {
         let idxOriginal = db.jogos.findIndex(jo => jo.id === j.id);
         let gId = j.g;
-        let emojiT1 = db.grupos[gId].nomes[j.t1] || j.t1;
-        let emojiT2 = db.grupos[gId].nomes[j.t2] || j.t2;
+        let c1 = db.grupos[gId].nomes[j.t1] || '';
+        let c2 = db.grupos[gId].nomes[j.t2] || '';
+        
+        // Alterado para ocultar o texto descritivo do time no display final do card
+        let t1Display = c1 ? `<span class="${c1}"></span>` : j.t1;
+        let t2Display = c2 ? `<span class="${c2}"></span>` : j.t2;
         let rotulo = `Grupo ${gId} - ${j.data.split(' - ')[0] || ''} - ${j.data.split(' - ')[2] || ''}`;
 
-        html += criarCardJogoDia('grupo', idxOriginal, rotulo, emojiT1, emojiT2, j.g1, j.g2, dataSelecionada, j.liveUrl);
+        html += criarCardJogoDia('grupo', idxOriginal, rotulo, t1Display, t2Display, j.g1, j.g2, dataSelecionada, j.liveUrl);
     });
 
     const fases = [
@@ -722,17 +745,43 @@ function renderizarJogosDoDia(dataSelecionada) {
         db[fase.chave].filter(j => j.label && j.label.includes(dataSelecionada)).forEach(j => {
             let idxOriginal = db[fase.chave].findIndex(jo => jo.id === j.id);
             let rotulo = `${fase.titulo} - ${j.label.split(' - ')[0] || j.label} - ${j.label.split(' - ')[2] || j.label}`;
-            html += criarCardJogoDia(fase.chave, idxOriginal, rotulo, j.t1, j.t2, j.g1, j.g2, dataSelecionada, j.liveUrl);
+            
+            let cl1 = "", cl2 = "";
+            Object.keys(db.grupos).forEach(g => {
+                if(db.grupos[g].nomes[j.t1]) cl1 = db.grupos[g].nomes[j.t1];
+                if(db.grupos[g].nomes[j.t2]) cl2 = db.grupos[g].nomes[j.t2];
+            });
+
+            let t1D = cl1 ? `<span class="${cl1}"></span>` : (j.t1 || '<i>❓</i>');
+            let t2D = cl2 ? `<span class="${cl2}"></span>` : (j.t2 || '<i>❓</i>');
+
+            html += criarCardJogoDia(fase.chave, idxOriginal, rotulo, t1D, t2D, j.g1, j.g2, dataSelecionada, j.liveUrl);
         });
     });
 
     if (db.finais && db.finais.terceiro && db.finais.terceiro.label && db.finais.terceiro.label.includes(dataSelecionada)) {
         let j = db.finais.terceiro;
-        html += criarCardJogoDia('terceiro', 0, `Disputa do 3º Lugar`, j.t1, j.t2, j.g1, j.g2, dataSelecionada, j.liveUrl);
+        let cl1 = "", cl2 = "";
+        Object.keys(db.grupos).forEach(g => {
+            if(db.grupos[g].nomes[j.t1]) cl1 = db.grupos[g].nomes[j.t1];
+            if(db.grupos[g].nomes[j.t2]) cl2 = db.grupos[g].nomes[j.t2];
+        });
+        let t1D = cl1 ? `<span class="${cl1}"></span>` : (j.t1 || '<i>❓</i>');
+        let t2D = cl2 ? `<span class="${cl2}"></span>` : (j.t2 || '<i>❓</i>');
+
+        html += criarCardJogoDia('terceiro', 0, `Disputa do 3º Lugar`, t1D, t2D, j.g1, j.g2, dataSelecionada, j.liveUrl);
     }
     if (db.finais && db.finais.final && db.finais.final.label && db.finais.final.label.includes(dataSelecionada)) {
         let j = db.finais.final;
-        html += criarCardJogoDia('final', 0, `Grande FINAL`, j.t1, j.t2, j.g1, j.g2, dataSelecionada, j.liveUrl);
+        let cl1 = "", cl2 = "";
+        Object.keys(db.grupos).forEach(g => {
+            if(db.grupos[g].nomes[j.t1]) cl1 = db.grupos[g].nomes[j.t1];
+            if(db.grupos[g].nomes[j.t2]) cl2 = db.grupos[g].nomes[j.t2];
+        });
+        let t1D = cl1 ? `<span class="${cl1}"></span>` : (j.t1 || '<i>❓</i>');
+        let t2D = cl2 ? `<span class="${cl2}"></span>` : (j.t2 || '<i>❓</i>');
+
+        html += criarCardJogoDia('final', 0, `Grande FINAL`, t1D, t2D, j.g1, j.g2, dataSelecionada, j.liveUrl);
     }
 
     if (html === "") {
@@ -763,7 +812,6 @@ function criarCardJogoDia(tipoOrigem, index, label, t1, t2, g1, g2, dataSelecion
     let campo1 = gerarCampoPlacar(tipoOrigem, index, 'g1', g1, desabilitado, dataSelecionada);
     let campo2 = gerarCampoPlacar(tipoOrigem, index, 'g2', g2, desabilitado, dataSelecionada);
 
-    // Renderização condicional dos pênaltis na listagem diária
     let htmlPenaltis = "";
     if (tipoOrigem !== 'grupo' && g1 !== "" && g2 !== "" && parseInt(g1) === parseInt(g2)) {
         if (isAdminLogado) {
@@ -809,7 +857,7 @@ function criarCardJogoDia(tipoOrigem, index, label, t1, t2, g1, g2, dataSelecion
                     ${cam2 ? `${cam2} 🟨` : ''} ${cvm2 ? `${cvm2} 🟥` : ''}
                 </div>
             </div>`;
-        }else {
+        } else {
             htmlCartoes = htmlPenaltis !== "" ? "" : `
             <div class="visitor-cards-container" style="display: flex; justify-content: space-between; margin-top: 25px; font-size: 0.8rem; color: #4a5568; padding: 0 4px;">
                 <div></div>
@@ -822,9 +870,9 @@ function criarCardJogoDia(tipoOrigem, index, label, t1, t2, g1, g2, dataSelecion
     <div class="jogo-item" style="background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
         <div class="jogo-meta" style="font-weight: bold; color: var(--primary); margin-bottom: 10px;">${label}</div>
         <div class="placar">
-            <span class="time-flag-right">${nomeT1}</span>
+            <span class="time-flag-right" style="display: flex; align-items: center; justify-content: flex-end; gap: 5px;">${nomeT1}</span>
             ${campo1} ${campo2}
-            <span class="time-flag-left">${nomeT2}</span>
+            <span class="time-flag-left" style="display: flex; align-items: center; justify-content: flex-start; gap: 5px;">${nomeT2}</span>
         </div>
         ${htmlPenaltis}
         ${htmlCartoes}
