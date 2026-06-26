@@ -14,7 +14,7 @@ header { background: var(--primary); color: white; padding: 20px; text-align: ce
 .aba-conteudo.active { display: block; }
 
 .grid-grupos { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
-.grupo-card { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-top: 4px solid var(--primary); }
+.grupo-card { background: white; padding: 5px; border-radius: 10px; box-shadow: 0 5px 10px rgba(0,0,0,0.1); border-top: 5px solid var(--primary); }
 .grupo-card table {
     width: 100%;
     border-collapse: collapse;

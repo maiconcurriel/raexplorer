@@ -270,7 +270,7 @@ function renderizarGrupos(stats) {
         
         let html = `
         <div class="grupo-card">
-            <h3 style="text-align: center;">Grupo ${gId}</h3>
+            <h3 style="text-align: center; margin-bottom: 5px; margin-top: 5px;">Grupo ${gId}</h3>
             <table>
                 <tr>
                     <th class="txt-l">Time</th>
