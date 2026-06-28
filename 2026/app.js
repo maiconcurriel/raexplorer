@@ -593,17 +593,17 @@ function renderMataGenerico(containerId, lista, tipo) {
                 htmlPenaltisMata = `
                 <div style="display: flex; justify-content: space-between; margin-top: 8px; font-size: 0.75rem; background: #edf2f7; padding: 4px; border-radius: 4px; width: 100%; align-items: center;">
                     <div style="display: flex; gap: 4px; align-items: center; font-weight: bold; color: #2b6cb0;">
-                        ⚽ Pênaltis: <input type="number" min="0" placeholder="0" value="${p1}" style="width:35px;" oninput="validarEAtualizarPlacarGeral('${tipo}', ${idx}, 'p1', this.value)">
+                        ⚽ <input type="number" min="0" placeholder="0" value="${p1}" style="width:35px;" oninput="validarEAtualizarPlacarGeral('${tipo}', ${idx}, 'p1', this.value)">
                     </div>
                     <div style="display: flex; gap: 4px; align-items: center; font-weight: bold; color: #2b6cb0;">
-                        <input type="number" min="0" placeholder="0" value="${p2}" style="width:35px;" oninput="validarEAtualizarPlacarGeral('${tipo}', ${idx}, 'p2', this.value)"> :Pênaltis ⚽
+                        <input type="number" min="0" placeholder="0" value="${p2}" style="width:35px;" oninput="validarEAtualizarPlacarGeral('${tipo}', ${idx}, 'p2', this.value)"> ⚽
                     </div>
                 </div>`;
             } else {
                 htmlPenaltisMata = `
                 <div style="display: flex; justify-content: space-between; margin-top: 6px; font-size: 0.75rem; font-weight: bold; color: #2b6cb0; width: 96%; padding: 0 2px;">
-                    <div>${p1 !== "" ? `⚽ (Pên: ${p1})` : '⚽ (Pên: 0)'}</div>
-                    <div>${p2 !== "" ? `(Pên: ${p2}) ⚽` : '(Pên: 0) ⚽'}</div>
+                    <div>${p1 !== "" ? `⚽ ${p1}` : '⚽ 0'}</div>
+                    <div>${p2 !== "" ? `${p2} ⚽` : '0 ⚽'}</div>
                 </div>`;
             }
         }
@@ -818,17 +818,17 @@ function criarCardJogoDia(tipoOrigem, index, label, t1, t2, g1, g2, dataSelecion
             htmlPenaltis = `
             <div class="admin-penalties-container" style="display: flex; justify-content: space-between; margin-top: 10px; font-size: 0.8rem; background: #edf2f7; padding: 6px; border-radius: 4px; width: 100%; align-items: center;">
                 <div style="display: flex; gap: 4px; align-items: center; font-weight: bold; color: #2b6cb0;">
-                    ⚽ Pênaltis: <input type="number" min="0" placeholder="0" value="${p1}" style="width: 35px; padding: 2px;" oninput="validarEAtualizarPlacarGeral('${tipoOrigem}', ${index}, 'p1', this.value); processarTudoLocal();">
+                    ⚽ <input type="number" min="0" placeholder="0" value="${p1}" style="width: 35px; padding: 2px;" oninput="validarEAtualizarPlacarGeral('${tipoOrigem}', ${index}, 'p1', this.value); processarTudoLocal();">
                 </div>
                 <div style="display: flex; gap: 4px; align-items: center; font-weight: bold; color: #2b6cb0;">
-                    <input type="number" min="0" placeholder="0" value="${p2}" style="width: 35px; padding: 2px;" oninput="validarEAtualizarPlacarGeral('${tipoOrigem}', ${index}, 'p2', this.value); processarTudoLocal();"> :Pênaltis ⚽
+                    <input type="number" min="0" placeholder="0" value="${p2}" style="width: 35px; padding: 2px;" oninput="validarEAtualizarPlacarGeral('${tipoOrigem}', ${index}, 'p2', this.value); processarTudoLocal();"> ⚽
                 </div>
             </div>`;
         } else {
             htmlPenaltis = `
             <div class="visitor-penalties-container" style="display: flex; justify-content: space-between; margin-top: 8px; font-size: 0.8rem; font-weight: bold; color: #2b6cb0; width: 96%; padding: 0 4px;">
-                <div>${p1 !== "" ? `⚽ (Pên: ${p1})` : '⚽ (Pên: 0)'}</div>
-                <div>${p2 !== "" ? `(Pên: ${p2}) ⚽` : '(Pên: 0) ⚽'}</div>
+                <div>${p1 !== "" ? `⚽ ${p1}` : '⚽ 0'}</div>
+                <div>${p2 !== "" ? `${p2} ⚽` : '0 ⚽'}</div>
             </div>`;
         }
     }
