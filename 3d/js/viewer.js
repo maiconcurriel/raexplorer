@@ -15,20 +15,12 @@ const ColorBlindShader = {
 
 const COLOR_FILTERS = {
     normal: [1, 0, 0, 0, 1, 0, 0, 0, 1],
-    
-    // Protanopia (Ausência de vermelho) e Protanomalia (Vermelho fraco)
     protanopia: [0.56667, 0.43333, 0.0, 0.55833, 0.44167, 0.0, 0.0, 0.24167, 0.75833],
     protanomalia: [0.81667, 0.18333, 0.0, 0.33333, 0.66667, 0.0, 0.0, 0.125, 0.875],
-    
-    // Deuteranopia (Ausência de verde) e Deuteranomalia (Verde fraco - mais comum de todos)
     deuteranopia: [0.625, 0.375, 0.0, 0.70, 0.30, 0.0, 0.0, 0.30, 0.70],
     deuteranomalia: [0.80, 0.20, 0.0, 0.25, 0.75, 0.0, 0.0, 0.14167, 0.85833],
-    
-    // Tritanopia (Ausência de azul) e Tritanomalia (Azul fraco)
     tritanopia: [0.95, 0.05, 0.0, 0.0, 0.43333, 0.56667, 0.0, 0.475, 0.525],
     tritanomalia: [0.96667, 0.03333, 0.0, 0.0, 0.73333, 0.26667, 0.0, 0.18333, 0.81667],
-    
-    // Acromatopsia (Visão em tons de cinza / ausência total de cor)
     acromatopsia: [0.299, 0.587, 0.114, 0.299, 0.587, 0.114, 0.299, 0.587, 0.114],
     acromanomalia: [0.6112, 0.3556, 0.0332, 0.2112, 0.7156, 0.0732, 0.0212, 0.1456, 0.8332]
 };
@@ -43,7 +35,6 @@ let visibilidadeAntesDoIsolamento = {};
 let mixer, clock;
 let currentAction = null;
 let isLooping = true;
-let animationSpeed = 1.0;
 let isPaused = false;
 let isProgressBarDragging = false;
 let previousModelId = null;
@@ -62,6 +53,7 @@ let isDark = false;
 
 modelId = params.get('id');
 
+// Inicializa o visualizador, processa parâmetros da URL (ID, tema, modal) e carrega os metadados JSON do modelo.
 async function initViewer() {
     const btn = document.getElementById('theme-icon');
     if (params.get('theme') === 'dark') {document.body.classList.add('dark-mode'); btn.textContent = '☀️'; isDark = true;} else {btn.textContent = '🌙'};
@@ -98,6 +90,7 @@ async function initViewer() {
     window.focus();
 }
 
+// Configura o ambiente Three.js (Scene, Camera, Renderers, Luzes, OrbitControls e o pipeline de Pós-Processamento).
 function initThree() {
     const container = document.getElementById('three-container');
     if (!container) return;    
@@ -129,7 +122,7 @@ function initThree() {
     labelRenderer.setSize(width, height);
     labelRenderer.domElement.style.position = 'absolute';
     labelRenderer.domElement.style.top = '0px';
-    labelRenderer.domElement.style.pointerEvents = 'none'; // Permite clicar através do texto para mover a câmera
+    labelRenderer.domElement.style.pointerEvents = 'none';
     container.appendChild(labelRenderer.domElement);
 
     scene.add(new THREE.AmbientLight(0xffffff, 0.9));
@@ -161,6 +154,7 @@ function initThree() {
     animate();
 }
 
+// Gerencia o carregamento assíncrono do arquivo .GLB do modelo 3D, tratando clonagem de meshes e inicialização de animações.
 function load3DModel(id) {
     const finishSetup = (gltf) => {
         const model = SkeletonUtils.clone(gltf.scene);
@@ -217,6 +211,7 @@ function load3DModel(id) {
     );
 }
 
+// Injeta dinamicamente na interface HTML os controles de reprodução, linha de tempo (slider) e velocidade da animação.
 function injectAnimationControls() {
     const bar = document.querySelector('.v-bot-bar');
     if (!bar || document.getElementById('anim-group')) return;
@@ -266,6 +261,7 @@ function injectAnimationControls() {
     progressBarEl = document.getElementById('anim-progress');
 }
 
+// Renderiza a lista de capítulos/partes anatômicas na barra lateral baseando-se nos nós do arquivo JSON.
 function renderizarCapitulos(data) {
     const container = document.getElementById('tc-ch');
     const ignoreKeys = ['objname', 'objsystem', 'objdescription', 'id', 'resources'];
@@ -287,45 +283,40 @@ function renderizarCapitulos(data) {
     container.innerHTML = html || '<p>Nenhum capítulo disponível.</p>';
 }
 
-window.focarParte = (id) => {
+// Evento global para focar em uma parte específica, aplicando realce (highlight), gerando o callout e atualizando a descrição.
+window.focarParte = (id, intersectionPoint = null) => {
     const data = objectData[id];
     if (!data) return;
-
     let objTarget = null;
     scene.traverse(child => {
         if (child.name === id) {
             objTarget = child;
         }
     });
-
     if (!objTarget) return;
-
     const nomeDoObjeto = data.objname || id;
-
-    // SE ESTIVER NO MODO ISOLADO: Esconde o callout para não poluir a visão do objeto sozinho
+    
     if (isIsolatedMode) {
-        removerCallout(); 
+        removerCallout();
     } else {
-        // Se não estiver isolado, mostra o callout normalmente
-        criarCallout(objTarget, nomeDoObjeto);
+        criarCallout(objTarget, nomeDoObjeto, intersectionPoint); 
     }
-
+    
     if (isIsolatedMode && selectedObject && selectedObject.name === id) {
         renderButtons(id, data);
-        return; 
+        return;
     }
-
     if (isIsolatedMode) {
-        isolarObjeto(id); 
+        isolarObjeto(id);
     } else {
         highlightObject(objTarget);
         renderButtons(id, data);
     }
-
     window.swTab('desc', document.querySelector('.tab-btn'));
     if (typeof renderizarRecursos === 'function') renderizarRecursos(data);
 };
 
+// Restaura toda a cena 3D para o estado inicial, limpando isolamentos, destaques, callouts e reposicionando a câmera.
 window.resetScene = () => {
     isIsolatedMode = false;
     clearHighlight();
@@ -348,12 +339,14 @@ window.resetScene = () => {
     removerCallout();
 };
 
+// Define a posição e o alvo (target) padrão da câmera de visualização.
 function setDefaultCamera() {
     camera.position.set(0, 2, 3);
     controls.target.set(0, 1, 0);
     controls.update();
 }
 
+// Alterna a exibição das abas laterais da interface (Capítulos, Descrição ou Recursos).
 window.swTab = (id, btn) => {
     document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
     if(btn) btn.classList.add('active');
@@ -363,26 +356,26 @@ window.swTab = (id, btn) => {
     });
 };
 
+// Altera a matriz de transformação de cor do shader de pós-processamento para simular/corrigir tipos de daltonismo.
 window.setColorBlindMode = (mode) => {
     const m = COLOR_FILTERS[mode] || COLOR_FILTERS.normal;
     colorPass.uniforms.uMatrix.value.set(m[0], m[1], m[2], m[3], m[4], m[5], m[6], m[7], m[8]);
 };
 
+// Alterna o estado da janela do navegador entre modo tela cheia (Fullscreen) e modo normal.
 window.toggleFullscreen = () => {
     if (!document.fullscreenElement) document.documentElement.requestFullscreen();
     else document.exitFullscreen();
 };
 
+// Remove parâmetros estéticos da URL e copia o link limpo do modelo atual para a área de transferência do usuário.
 window.shareModel = (btnEl) => {
-    // Cria o objeto URL baseado no endereço atual do iframe (viewer.html)
     const url = new URL(window.location.href);
     
-    // Remove os parâmetros que você quer deletar
     url.searchParams.delete('title');
     url.searchParams.delete('sys');
     url.searchParams.delete('modal');
 
-    // Copia a URL limpa contendo apenas o ?id=X&theme=Y
     navigator.clipboard.writeText(url.toString()).then(() => {
         const original = btnEl.innerHTML;
         btnEl.innerHTML = '✅ Copiado!';
@@ -395,22 +388,23 @@ window.shareModel = (btnEl) => {
     });
 };
 
+// Captura o clique do mouse no canvas, converte para coordenadas normalizadas e dispara o Raycaster para detectar a mesh clicada.
 function onPointerDown(event) {
     if (event.button !== 0) return;
-
     const rect = renderer.domElement.getBoundingClientRect();
     mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
     mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
-
     raycaster.setFromCamera(mouse, camera);
     const intersects = raycaster.intersectObjects(models, true).filter(i => i.object.visible);
-
+    
     if (intersects.length > 0) {
         const clicked = intersects[0].object;
-        window.focarParte(clicked.name);
+        const intersectionPoint = intersects[0].point;
+        window.focarParte(clicked.name, intersectionPoint);
     }
 }
 
+// Aplica um efeito de brilho verde (emissive) temporário na sub-mesh selecionada para destacá-la visualmente.
 function highlightObject(object) {
     if (isIsolatedMode) return;
 
@@ -432,6 +426,7 @@ function highlightObject(object) {
     }
 }
 
+// Remove o efeito de brilho (emissive) da peça que estava selecionada anteriormente.
 function clearHighlight() {
     if (selectedObject && selectedObject.material) {
         selectedObject.material.emissive.copy(originalEmissive);
@@ -439,6 +434,7 @@ function clearHighlight() {
     }
 }
 
+// Oculta todas as outras meshes da cena e foca a câmera exclusivamente na peça anatômica selecionada.
 window.isolarObjeto = (id) => {
     const targetObj = id ? scene.getObjectByName(id) : selectedObject;
     if (!targetObj) return;
@@ -476,6 +472,7 @@ window.isolarObjeto = (id) => {
     removerCallout();
 };
 
+// Desativa o modo isolamento, restaurando a visibilidade original de todas as peças e recriando o callout do objeto ativo.
 window.voltarDoIsolamento = (id) => {
     isIsolatedMode = false;
 
@@ -497,6 +494,7 @@ window.voltarDoIsolamento = (id) => {
     }
 };
 
+// Loop principal de renderização (60fps) que atualiza o relógio, o mixer de animações, os controles de órbita e renderiza os seletores.
 function animate() {
     requestAnimationFrame(animate);
     const delta = clock.getDelta();
@@ -529,6 +527,7 @@ const RESOURCE_CONFIG = {
     podcast: { icon: '🎙️', color: '#eefcf0' }
 };
 
+// Renderiza na aba correspondente a lista de mídias e materiais de apoio globais atrelados ao modelo.
 function renderizarRecursosGlobais(data) {
     const container = document.getElementById('tc-res');
     if (!container || !data.resources) return;
@@ -547,6 +546,7 @@ function renderizarRecursosGlobais(data) {
     }).join('');
 }
 
+// Abre e injeta o player de mídia adequado (Iframe de vídeo, imagem ou áudio) dentro da modal interna de recursos.
 window.abrirMedia = (res) => {
     const modal = document.getElementById('media-modal');
     const body = document.getElementById('modal-body');
@@ -588,6 +588,7 @@ window.abrirMedia = (res) => {
     modal.style.display = 'flex';
 };
 
+// Fecha a modal de exibição de mídias e limpa o contêiner interno para interromper reproduções em background.
 window.closeMediaModal = () => {
     const modal = document.getElementById('media-modal');
     const body = document.getElementById('modal-body');
@@ -595,12 +596,14 @@ window.closeMediaModal = () => {
     modal.style.display = 'none';
 };
 
+// Evento que escuta a tecla 'Escape' (ESC) para fechar a modal do visualizador chamando a função correspondente na janela pai (portal).
 window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && window.parent && typeof window.parent.closeDet === 'function') {
         window.parent.closeDet();
     }
 });
 
+// Ajusta dinamicamente a proporção da câmera (aspect) e o tamanho dos renderizadores 3D e 2D sempre que a janela for redimensionada.
 window.addEventListener('resize', () => {
     if (!camera || !renderer || !composer) return;
     const container = document.getElementById('three-container');
@@ -615,6 +618,7 @@ window.addEventListener('resize', () => {
     if (labelRenderer) labelRenderer.setSize(container.offsetWidth, container.offsetHeight);
 });
 
+// Alterna a visibilidade (visible = true/false) de uma sub-mesh específica na cena tridimensional.
 window.toggleVisibility = (id, action) => {
     scene.traverse(obj => {
         if (obj.isMesh && obj.name === id) {
@@ -624,6 +628,7 @@ window.toggleVisibility = (id, action) => {
     renderButtons(id, objectData[id]);
 };
 
+// Constrói e injeta o bloco de texto descritivo do objeto focado junto com seus botões de ação contextual (Isolar/Esconder/Mostrar).
 function renderButtons(id, data) {
     let isVisible = true;
     scene.traverse(obj => {
@@ -657,6 +662,7 @@ function renderButtons(id, data) {
     `;
 }
 
+// Controla os estados de Play e Pause da animação do modelo, reiniciando o clipe caso ele já tenha chegado ao fim.
 window.togglePlayPause = () => {
     if (!currentAction) return;
     const duration = currentAction.getClip().duration;
@@ -673,6 +679,7 @@ window.togglePlayPause = () => {
     updatePlayPauseUI();
 };
 
+// Altera o ícone do botão de Play/Pause na interface para condizer com o estado atual da animação.
 function updatePlayPauseUI() {
     const btn = document.getElementById('btn-play');
     if (!btn) return;
@@ -681,6 +688,7 @@ function updatePlayPauseUI() {
         : `<svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>`;
 }
 
+// Ativa ou desativa a reprodução contínua (looping) da animação do modelo e atualiza o estilo visual do botão.
 window.toggleLoop = () => {
     if (!currentAction) return;
 
@@ -695,6 +703,7 @@ window.toggleLoop = () => {
     }
 };
 
+// Altera a escala de velocidade do mixer de animação (ex: 1x, 0.5x) e suaviza a velocidade de rotação da câmera em câmera lenta.
 window.changeSpeed = (val) => {
     if (!mixer) return;
     const speed = parseFloat(val);
@@ -702,6 +711,7 @@ window.changeSpeed = (val) => {
     if (controls) controls.rotateSpeed = speed < 1 ? 0.5 : 1.0;
 };
 
+// Calcula a caixa delimitadora (Box3) do objeto e translada suavemente a câmera na coordenada Z para enquadrá-lo perfeitamente na tela.
 window.aproximarObjeto = (id) => {
     const targetObj = scene.getObjectByName(id);
     if (!targetObj) return;
@@ -719,6 +729,7 @@ window.aproximarObjeto = (id) => {
     controls.update();
 };
 
+// Analisa a string de descrição do JSON procurando links do YouTube/Vimeo para gerar e injetar players de vídeo automaticamente.
 function parseDescriptionMedia(description = '') {
     let embedHtml = '';
     let cleanText = description;
@@ -739,6 +750,7 @@ function parseDescriptionMedia(description = '') {
     return `${embedHtml}<p>${cleanText}</p>`;
 }
 
+// Executa a transição completa de modelos limpando meshes antigas, resetando mixers de animação e carregando um novo ID estruturado.
 window.carregarNovoModelo = async function(id, voltar = false) {
     previousModelId = voltar ? null : modelId;
     modelId = id;
@@ -776,12 +788,14 @@ window.carregarNovoModelo = async function(id, voltar = false) {
     }
 };
 
+// Remove o contêiner HTML dos controles de animação da interface e limpa sua referência em memória.
 function removeAnimationControls() {
     const animGroup = document.getElementById('anim-group');
     if (animGroup) animGroup.remove();
     progressBarEl = null;
 }
 
+// Realiza a requisição fetch do arquivo .json de metadados do modelo e armazena o resultado em um cache local Map().
 async function loadObjectData(id) {
     if (jsonCache.has(id)) return jsonCache.get(id);
 
@@ -791,6 +805,7 @@ async function loadObjectData(id) {
     return data;
 }
 
+// Carrega de forma silenciosa e antecipada o arquivo .glb de modelos vinculados ou relacionados para acelerar a troca de telas.
 function preloadModel(id) {
     if (!id || modelCache.has(id)) return;
     gltfLoader.load(`models/${id}.glb`, (gltf) => {
@@ -799,13 +814,13 @@ function preloadModel(id) {
     });
 }
 
+// Constrói o layout interno da seção de descrição, injetando os botões de alternância de modelos relacionados/principais.
 function renderizarDescricaoComAlternador() {
     const descContainer = document.querySelector('.desc-tx');
     if (!descContainer) return;
 
     let alternadorHTML = '';
 
-    // 1. Mantém o botão de voltar ao Modelo Principal se ele existir
     if (previousModelId) {
         alternadorHTML += `
             <div class="divaltbutton" id="divaltbutton-main" style="margin-bottom: 15px;">
@@ -817,12 +832,9 @@ function renderizarDescricaoComAlternador() {
         `;
     } 
 
-    // 2. Renderiza a lista de múltiplos modelos relacionados (linkedModels)
-    // Usamos tanto 'linkedModels' quanto o antigo 'linkedModel' como fallback por segurança
     const relacionados = objectData.linkedModels || (objectData.linkedModel ? [objectData.linkedModel] : []);
 
     if (relacionados.length > 0) {
-        // Criamos um container flex para que os múltiplos botões fiquem organizados lado a lado
         alternadorHTML += `
             <div>
         `;
@@ -831,7 +843,6 @@ function renderizarDescricaoComAlternador() {
             const targetId = modelo.id;
             const nameobj = modelo.label || `Relacionado ${index + 1}`;
             
-            // Pré-carrega os modelos em background para a transição ficar instantânea!
             if (typeof preloadModel === 'function') {
                 preloadModel(targetId);
             }
@@ -849,53 +860,40 @@ function renderizarDescricaoComAlternador() {
         alternadorHTML += `</div>`;
     }
 
-    // 3. Injeta a descrição textual combinada com os botões gerados
     descContainer.innerHTML = `
         ${parseDescriptionMedia(objectData.objdescription)}
         ${alternadorHTML}
     `;
 }
 
-function criarCallout(object, texto) {
-    // 1. Limpar callout anterior se existir
+// Cria e posiciona no espaço 3D a bolinha indicadora, a linha conectora e a etiqueta flutuante HTML (CSS2D) no ponto especificado.
+function criarCallout(object, texto, clickPoint = null) {
     removerCallout();
 
-    // 2. Calcular o centro do objeto
     const box = new THREE.Box3().setFromObject(object);
-    const center = box.getCenter(new THREE.Vector3());
     const size = box.getSize(new THREE.Vector3());
     const maxDim = Math.max(size.x, size.y, size.z);
 
-    // 3. Criar o Ponto no Centro
-    const dotGeo = new THREE.SphereGeometry(maxDim * 0.03, 16, 16);
+    const basePosition = clickPoint ? clickPoint.clone() : box.getCenter(new THREE.Vector3());
+
+    const dotGeo = new THREE.SphereGeometry(maxDim * 0.02, 16, 16);
     const dotMat = new THREE.MeshBasicMaterial({ color: 0x00ffff });
     labelDot = new THREE.Mesh(dotGeo, dotMat);
-    labelDot.position.copy(center);
+    labelDot.position.copy(basePosition);
     scene.add(labelDot);
 
-    // 4. Definir onde a caixa de texto vai flutuar (ex: um pouco acima e à direita do objeto)
-    const labelPosition = center.clone().add(new THREE.Vector3(maxDim * 0.5, maxDim * 0.6, 0));
+    const labelPosition = basePosition.clone().add(new THREE.Vector3(maxDim * 0.4, maxDim * 0.5, 0));
 
-    // Substitua a criação da linha por um cilindro posicionado entre os dois pontos
-    const distance = center.distanceTo(labelPosition);
-    const cylinderGeo = new THREE.CylinderGeometry(
-        0.005, // <-- Grossura no topo (raio)
-        0.005, // <-- Grossura na base (raio)
-        distance, 
-        4
-    );
-
+    const distance = basePosition.distanceTo(labelPosition);
+    const cylinderGeo = new THREE.CylinderGeometry(0.003, 0.003, distance, 4);
     const cylinderMat = new THREE.MeshBasicMaterial({ color: 0x00ffff });
     labelLine = new THREE.Mesh(cylinderGeo, cylinderMat);
 
-    // Posiciona e aponta o cilindro do centro para a label
-    labelLine.position.copy(center).add(labelPosition).multiplyScalar(0.5);
+    labelLine.position.copy(basePosition).add(labelPosition).multiplyScalar(0.5);
     labelLine.lookAt(labelPosition);
-    labelLine.rotateX(Math.PI / 2); // Alinha o eixo do cilindro com o vetor de direção
-
+    labelLine.rotateX(Math.PI / 2);
     scene.add(labelLine);
 
-    // 6. Criar a Caixa de Texto em HTML puro
     const div = document.createElement('div');
     div.className = 'callout-label';
     div.innerHTML = `
@@ -903,40 +901,40 @@ function criarCallout(object, texto) {
         <div class="callout-content">${texto}</div>
     `;
 
-    // 7. Converter o HTML em um objeto do Three.js e posicionar
     label2DObject = new CSS2DObject(div);
     label2DObject.position.copy(labelPosition);
     scene.add(label2DObject);
 }
 
+// Remove da cena e descarta da memória gráfica os vértices e materiais que compunham o callout anterior.
 function removerCallout() {
     if (labelDot) { scene.remove(labelDot); labelDot.geometry.dispose(); labelDot.material.dispose(); }
     if (labelLine) { scene.remove(labelLine); labelLine.geometry.dispose(); labelLine.material.dispose(); }
     if (label2DObject) { scene.remove(label2DObject); }
 }
 
-// Torna as funções acessíveis pelos cliques do HTML
 window.toggleFloatingSearch = toggleFloatingSearch;
 window.filtrarItensFlutuantes = filtrarItensFlutuantes;
 window.selecionarItemViaBusca = selecionarItemViaBusca;
 
+// Controla a abertura e fechamento visual do painel flutuante de busca interna de peças do visualizador.
 function toggleFloatingSearch() {
     const panel = document.getElementById('search-float-panel');
     const input = document.getElementById('search-float-input');
     const isOpen = panel.classList.toggle('open');
     
     if (isOpen) {
-        input.value = ""; // Limpa buscas anteriores
-        gerarListaFlutuanteCompleta(); // Popula a lista inicial com todos os capítulos
-        setTimeout(() => input.focus(), 100); // Foca automaticamente na caixa de texto
+        input.value = "";
+        gerarListaFlutuanteCompleta();
+        setTimeout(() => input.focus(), 100);
         
-        // Fecha o painel se o usuário clicar fora dele
         setTimeout(() => document.addEventListener('click', fecharBuscaAoClicarFora), 10);
     } else {
         document.removeEventListener('click', fecharBuscaAoClicarFora);
     }
 }
 
+// Escuta cliques no documento para fechar automaticamente o painel de busca flutuante caso o usuário clique fora dele.
 function fecharBuscaAoClicarFora(e) {
     const container = document.querySelector('.search-floating-container');
     if (!container.contains(e.target)) {
@@ -945,16 +943,15 @@ function fecharBuscaAoClicarFora(e) {
     }
 }
 
-// Renderiza todos os sub-objetos cadastrados no objectData do modelo carregado
+// Varre as chaves de peças válidas no JSON e gera a lista completa de botões de resultados dentro do menu flutuante.
 function gerarListaFlutuanteCompleta() {
     const containerResultados = document.getElementById('search-float-results');
     if (!containerResultados || !objectData) return;
 
-    // Lista de chaves globais do JSON que DEVEM ser ignoradas na busca de componentes
-    const chavesIgnoradas = ['objname', 'objsystem', 'objdescription', 'linkedModels', 'resourses', 'resources'];
+    const chavesIgnoradas = ['objname', 'objsystem', 'objdescription', 'linkedModels', 'resources', 'resources'];
 
     containerResultados.innerHTML = Object.keys(objectData)
-        .filter(id => !chavesIgnoradas.includes(id)) // Filtra tirando as propriedades gerais
+        .filter(id => !chavesIgnoradas.includes(id))
         .map(id => {
             const item = objectData[id];
             const nomeExibicao = item.objname || id;
@@ -966,7 +963,7 @@ function gerarListaFlutuanteCompleta() {
         }).join('');
 }
 
-// Filtra dinamicamente conforme digita no Input
+// Compara o termo digitado pelo usuário com o texto dos botões da busca flutuante, aplicando display: none nos que não dão match.
 function filtrarItensFlutuantes(termo) {
     const items = document.querySelectorAll('.search-item-btn');
     const filtro = termo.toLowerCase().trim();
@@ -981,18 +978,17 @@ function filtrarItensFlutuantes(termo) {
     });
 }
 
-// Dispara exatamente a mesma ação do clique na cena ou na aba lateral
+// Seleciona o item clicado no resultado da busca, fecha o painel de pesquisa e dispara o foco e realce na peça anatômica.
 function selecionarItemViaBusca(id) {
-    // Fecha o painel de busca após a seleção
     document.getElementById('search-float-panel').classList.remove('open');
     document.removeEventListener('click', fecharBuscaAoClicarFora);
 
-    // Executa a sua função nativa que cuida do foco, highlight e callout
     if (typeof window.focarParte === 'function') {
         window.focarParte(id);
     }
 }
 
+// Alterna o tema da aplicação (classes de CSS) e atualiza a cor de fundo (background) da cena do Three.js entre claro e escuro.
 function toggleDarkMode() {
     const btn = document.getElementById('theme-icon');
     if (isDark === false)
@@ -1008,5 +1004,32 @@ function toggleDarkMode() {
         isDark = false;
     }
   }
+
+window.abrirAjuda = abrirAjuda;
+window.fecharAjuda = fecharAjuda;
+window.switchHelpTab = switchHelpTab;
+
+function abrirAjuda() {
+    const helpModal = document.getElementById('help-modal');
+    if (helpModal) helpModal.style.display = 'flex';
+}
+
+function fecharAjuda() {
+    const helpModal = document.getElementById('help-modal');
+    if (helpModal) helpModal.style.display = 'none';
+}
+
+function switchHelpTab(tabId, btn) {
+    document.querySelectorAll('.help-tab-content').forEach(tab => {
+        tab.style.display = 'none';
+    });
+    
+    document.querySelectorAll('.help-tab-btn').forEach(b => {
+        b.classList.remove('active');
+    });
+    
+    document.getElementById(tabId).style.display = 'block';
+    btn.classList.add('active');
+}
 
 initViewer();

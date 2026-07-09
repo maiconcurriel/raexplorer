@@ -8,7 +8,7 @@ window.handleSort = handleSort;
 window.removeFilter = removeFilter;
 window.clearAllFilters = clearAllFilters;
 
-const modelosIDs = [1, 2, 3, 4];
+const modelosIDs = [1, 2, 3, 4, 5];
 
 const FILTER_LABELS = {
     all: 'Todos', nervoso: 'Nervoso', cardio: 'Cardiovascular',
@@ -20,10 +20,10 @@ let modelosData = [];
 let currentView = 'grid'; 
 let currentSort = 'az';
 let activeFilters = new Set(['all']);
-let pendingFilters = new Set(['all']);
 let isDark = false;
 let currentOpenId = null;
 
+// Realiza o fetch assíncrono dos arquivos JSON de metadados de cada modelo, categoriza por sistema e dispara o setup inicial da UI.
 async function carregarModelos() {
     const grid = document.querySelector('.cards-grid');
     if (grid) grid.innerHTML = '<p>Carregando modelos...</p>';
@@ -39,7 +39,6 @@ async function carregarModelos() {
     const sistemaBruto = data.objsystem || "";
     let categoriaChave = 'all';
 
-    // Traduz o nome do sistema para a chave usada no FILTER_LABELS
     if (sistemaBruto.toLowerCase().includes('nervoso')) categoriaChave = 'nervoso';
     else if (sistemaBruto.toLowerCase().includes('cardio')) categoriaChave = 'cardio';
     else if (sistemaBruto.toLowerCase().includes('esquel')) categoriaChave = 'esqueletico';
@@ -77,52 +76,7 @@ async function carregarModelos() {
     }
 }
 
-function inicializarApp() {
-    loadState(); 
-    renderActiveChips(); 
-    render();
-
-    const urlParams = new URLSearchParams(window.location.search);
-    const idParaAbrir = urlParams.get('id');
-
-    if (idParaAbrir) {
-        const welcomeModal = document.getElementById('welcome-overlay');
-        if (welcomeModal) welcomeModal.style.display = 'none';
-        document.getElementById('app').classList.add('visible');
-
-        const modelo = modelosData.find(m => m.id == idParaAbrir);
-        if (modelo) {
-            setTimeout(() => openDet(modelo.objname, modelo.objsystem, modelo.id), 100);
-        }
-    }
-
-    const searchInput = document.querySelector('.hd-search input');
-    if (searchInput) searchInput.addEventListener('input', render);
-
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') closeDet();
-    });
-}
-
-
-function renderizarCards(lista) {
-    const grid = document.getElementById('cards-grid');
-    grid.innerHTML = lista.map(modelo => `
-        <div class="m-card" onclick="openDet('${modelo.objname}', '${modelo.objsystem}', ${modelo.id})">
-            <div class="c-thumb">
-                <img src="models/${modelo.id}.png" class="thumb-img" alt="${modelo.objname}">
-                <div class="c-overlay">
-                    <button class="v3d-btn">Visualizar 3D</button>
-                </div>
-            </div>
-            <div class="c-body">
-                <div class="c-name">${modelo.objname}</div>
-                <div class="c-sys">${modelo.objsystem}</div>
-            </div>
-        </div>
-    `).join('');
-}
-
+// Evento disparado quando o DOM é totalmente carregado; inicializa filtros, estados de visualização e escuta cliques/atalhos de teclado.
   window.onload = () => {
     carregarModelos();
     loadState(); 
@@ -178,6 +132,7 @@ function renderizarCards(lista) {
   });
   };
 
+  // Verifica se existe um ID de modelo na URL atual e, se houver, pula a tela de boas-vindas para abri-lo automaticamente.
   function verificarUrlParaAbrir() {
     const urlParams = new URLSearchParams(window.location.search);
     const idParaAbrir = urlParams.get('id');
@@ -194,6 +149,7 @@ function renderizarCards(lista) {
     }
 }
 
+// Salva as preferências atuais do usuário (modo de exibição, ordenação, tema e favoritos) no LocalStorage do navegador.
   function saveState() {
     const state = {
       view: currentView,
@@ -204,6 +160,7 @@ function renderizarCards(lista) {
     localStorage.setItem('ra_explorer_prefs', JSON.stringify(state));
   }
 
+  // Recupera as configurações salvas no LocalStorage e as reaplica na interface durante a inicialização do app.
   function loadState() {
     const saved = localStorage.getItem('ra_explorer_prefs');
     if (saved) {
@@ -225,6 +182,7 @@ function renderizarCards(lista) {
     updateViewButtons();
   }
 
+  // Atualiza o estado visual ativo dos botões seletores entre os modos de exibição em Grade (Grid) ou Lista (List).
   function updateViewButtons() {
     const btns = document.querySelectorAll('.vbtn');
     if (btns.length < 2) return;
@@ -234,6 +192,7 @@ function renderizarCards(lista) {
     else btns[1].classList.add('active');
   }
 
+  // Função central de renderização que filtra, ordena e constrói dinamicamente o HTML dos cards dos modelos na tela principal.
   function render() {
     const grid = document.querySelector('.cards-grid');
     if (!grid) return;
@@ -299,18 +258,19 @@ function renderizarCards(lista) {
     }, 10);
 }
 
+// Alterna a abertura e fechamento do painel dropdown de filtros por sistema anatômico.
   function toggleFdd() {
     const btn = document.getElementById('filter-btn');
     const dd = document.getElementById('fdd');
     const open = dd.classList.toggle('open');
     btn.classList.toggle('open', open);
     
-    pendingFilters = new Set(activeFilters);
     syncDropdownUI();
 
     if (open) setTimeout(() => document.addEventListener('click', outsideFdd), 10);
   }
 
+  // Monitora cliques na página para fechar automaticamente o dropdown de filtros caso o usuário clique fora da área do menu.
   function outsideFdd(e) {
     const wrap = document.querySelector('.fdd-wrap');
     if (!wrap.contains(e.target)) {
@@ -320,6 +280,7 @@ function renderizarCards(lista) {
     }
   }
 
+  // Adiciona ou remove um sistema anatômico do conjunto de filtros ativos ao interagir com as opções do dropdown.
   function toggleDdChip(el, key) {
     if (key === 'all') {
         activeFilters = new Set(['all']);
@@ -338,6 +299,7 @@ function renderizarCards(lista) {
     render();
   }
 
+  // Sincroniza as classes visuais do dropdown de filtros e atualiza os contadores numéricos de modelos em cada categoria.
   function syncDropdownUI() {
     const counts = getCounts(); 
     
@@ -352,14 +314,7 @@ function renderizarCards(lista) {
     });
   }
 
-  function applyFilters() {
-    activeFilters = new Set(pendingFilters);
-    document.getElementById('fdd').classList.remove('open');
-    document.getElementById('filter-btn').classList.remove('open');
-    renderActiveChips();
-    render();
-  }
-
+  // Renderiza os "chips" (etiquetas removíveis) logo acima da grade para indicar quais filtros de sistemas estão ativos no momento.
   function renderActiveChips() {
     const row = document.getElementById('active-chips-row');
     const badge = document.getElementById('filter-badge');
@@ -386,21 +341,22 @@ function renderizarCards(lista) {
     `).join('');
   }
 
+  // Remove um filtro específico do conjunto de buscas ativas e atualiza a exibição da tela.
   function removeFilter(key) {
     activeFilters.delete(key);
     if (activeFilters.size === 0) activeFilters.add('all');
-    pendingFilters = new Set(activeFilters);
     renderActiveChips();
     render();
   }
 
+  // Reseta todos os filtros aplicados de volta para o estado padrão ("Todos") e limpa as etiquetas da tela.
   function clearAllFilters() {
     activeFilters = new Set(['all']);
-    pendingFilters = new Set(['all']);
     renderActiveChips();
     render();
   }
 
+  // Varre todos os modelos carregados para calcular e retornar a quantidade exata pertencente a cada sistema anatômico.
   function getCounts() {
     const counts = {};
     Object.keys(FILTER_LABELS).forEach(key => counts[key] = 0);
@@ -415,18 +371,21 @@ function renderizarCards(lista) {
     return counts;
   }
 
+  // Define o critério de ordenação dos modelos (A-Z ou Z-A) e dispara uma nova renderização na tela.
   function handleSort(value) {
     currentSort = value;
     saveState();
     render();
   }
 
+  // Inverte o estado do modo escuro global do aplicativo, aplicando as mudanças visuais e salvando a preferência.
   function toggleDarkMode() {
     isDark = !isDark;
     applyTheme();
     saveState();
   }
 
+  // Aplica as classes CSS corretas no corpo da página e altera o ícone indicador do tema baseado no estado atual.
   function applyTheme() {
       const btn = document.getElementById('theme-icon');
       if (isDark) {
@@ -438,6 +397,7 @@ function renderizarCards(lista) {
       }
   }
 
+  // Alterna o status de favorito (coração) de um modelo diretamente pelo card da tela principal e salva a alteração.
   function togFav(btn, id) {
     const item = modelosData.find(m => m.id === id);
     if (item) {
@@ -450,6 +410,7 @@ function renderizarCards(lista) {
     }
   }
 
+  // Abre a modal de detalhes injetando a URL do visualizador 3D com as queries correspondentes dentro do Iframe principal.
   function openDet(nome, sistema, id) {
     currentOpenId = id;
     const frame = document.getElementById('viewer-frame');
@@ -462,65 +423,7 @@ function renderizarCards(lista) {
     document.body.style.overflow = 'hidden';
 }
 
-  function shareModel(id, btnEl) {
-    const targetId = id || currentOpenId;
-    if (!targetId) return;
-
-    // Pega a base da URL atual do projeto (ex: http://localhost/projeto/ ou https://site.com/)
-    const baseUrl = window.location.href.split('?')[0];
-    
-    // Remove o "index.html" do final da URL base, caso ele exista, para mapear o viewer corretamente
-    const dirUrl = baseUrl.substring(0, baseUrl.lastIndexOf('/'));
-    
-    // Define o tema ativo baseado no estado atual da interface
-    const theme = isDark ? 'dark' : 'light';
-
-    // Monta a URL limpa apontando diretamente para o arquivo do viewer
-    const shareUrl = `${dirUrl}/viewer.html?id=${targetId}&theme=${theme}`;
-
-    navigator.clipboard.writeText(shareUrl).then(() => {
-        if (btnEl) {
-            const originalHTML = btnEl.innerHTML;
-            
-            btnEl.innerHTML = "✅ Copiado!";
-            btnEl.classList.add('copied');
-            
-            setTimeout(() => {
-                btnEl.innerHTML = originalHTML;
-                btnEl.classList.remove('copied');
-            }, 2000);
-        }
-    }).catch(err => {
-        console.error('Erro ao copiar:', err);
-    });
-}
-
-  function togFavModal(btn) {
-    if (currentOpenId === null) return;
-    
-    const item = modelosData.find(m => m.id === currentOpenId);
-    if (item) {
-        item.fav = !item.fav;
-        
-        btn.classList.toggle('active', item.fav);
-        btn.innerHTML = item.fav ? '❤️ Favoritado' : '🤍 Favoritar';
-        
-        saveState();
-        render();
-    }
-  }
-
-  function openModel(modelId) {
-    const modal = document.getElementById('det-ov');
-    const frame = document.getElementById('viewer-frame');
-    
-    const viewerUrl = `viewer.html?id=${modelId}`;
-    
-    frame.src = viewerUrl;
-    modal.style.display = 'flex';
-    
-}
-
+// Fecha a modal de visualização 3D, limpa a origem do Iframe para liberar memória e restaura a rolagem da página.
   function closeDet() {
     const modal = document.getElementById('det-ov');
     const frame = document.getElementById('viewer-frame');
@@ -528,6 +431,7 @@ function renderizarCards(lista) {
     frame.src = "";
   }
 
+  // Executa a animação de esmaecimento e encerramento da tela de boas-vindas, exibindo a aplicação principal.
   function closeWelcome() {
     const o = document.getElementById('welcome-overlay');
     o.style.opacity = '0';
@@ -537,61 +441,7 @@ function renderizarCards(lista) {
     }, 310);
   }
 
-  function swTab(id, btn) {
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    ['ch','desc','res'].forEach(t => { 
-      document.getElementById('tc-'+t).style.display = t === id ? 'block' : 'none'; 
-    });
-  }
-
-  function toggleSearch() {
-    const searchPanel = document.getElementById('anatomy-search');
-    if (!searchPanel) return;
-
-    const isOpen = searchPanel.classList.toggle('open');
-
-    if (isOpen) {
-        const input = searchPanel.querySelector('input');
-        if (input) setTimeout(() => input.focus(), 100);
-    }
-  }
-
-  function filterAnatomy(term) {
-      const items = document.querySelectorAll('.as-item');
-      const filter = term.toLowerCase();
-
-      items.forEach(item => {
-          const text = item.textContent.toLowerCase();
-          item.style.display = text.includes(filter) ? 'flex' : 'none';
-      });
-  }
-
-  function selectAnatomy(el) {
-      document.querySelectorAll('.as-item').forEach(i => i.classList.remove('active'));
-      el.classList.add('active');
-      
-      console.log("Estrutura selecionada:", el.textContent);
-  }
-
-  function toggleFullscreen() {
-    const elem = document.getElementById('det-ov'); 
-
-    if (!document.fullscreenElement) {
-        if (elem.requestFullscreen) {
-            elem.requestFullscreen();
-        } else if (elem.webkitRequestFullscreen) {
-            elem.webkitRequestFullscreen();
-        } else if (elem.msRequestFullscreen) {
-            elem.msRequestFullscreen();
-        }
-    } else {
-        if (document.exitFullscreen) {
-            document.exitFullscreen();
-        }
-    }
-  }
-
+  // Evento que intercepta a carga do DOM para ler parâmetros iniciais da URL e preencher os campos de títulos e cabeçalhos.
   window.addEventListener('DOMContentLoaded', () => {
     carregarModelos();
     const params = new URLSearchParams(window.location.search);
@@ -604,3 +454,33 @@ function renderizarCards(lista) {
     
     if (titulo) document.getElementById('det-bc').textContent = titulo;
 });
+
+window.abrirAjuda = abrirAjuda;
+window.fecharAjuda = fecharAjuda;
+window.switchHelpTab = switchHelpTab;
+
+function abrirAjuda() {
+    const helpModal = document.getElementById('help-modal');
+    if (helpModal) helpModal.style.display = 'flex';
+}
+
+function fecharAjuda() {
+    const helpModal = document.getElementById('help-modal');
+    if (helpModal) helpModal.style.display = 'none';
+}
+
+function switchHelpTab(tabId, btn) {
+    // Esconde todos os conteúdos de abas de ajuda
+    document.querySelectorAll('.help-tab-content').forEach(tab => {
+        tab.style.display = 'none';
+    });
+    
+    // Desativa todos os botões de abas de ajuda
+    document.querySelectorAll('.help-tab-btn').forEach(b => {
+        b.classList.remove('active');
+    });
+    
+    // Exibe o conteúdo selecionado e ativa o botão atual
+    document.getElementById(tabId).style.display = 'block';
+    btn.classList.add('active');
+}

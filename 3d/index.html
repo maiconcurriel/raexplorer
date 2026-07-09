@@ -82,12 +82,49 @@
             <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>
           </button>
         </div>
-        <button class="ic-btn" title="Ajuda" onclick="showAnn('Use Tab e ←/→ para navegar. Pressione Enter para abrir um modelo. Ctrl+K abre a busca rápida.')">
-          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></svg>
-        </button>
+        <button class="ic-btn" title="Ajuda" onclick="abrirAjuda()"><span id="theme-icon">?</span></button>
       </div>
     </div>
   </header>
+
+  <div id="help-modal" class="help-overlay" onclick="if(event.target===this) fecharAjuda()">
+    <div class="help-modal-card">
+        <div class="help-header">
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <h2 style="margin: 0; font-size: 18px; font-weight: 600;">Central de Ajuda</h2>
+            </div>
+            <button class="nav-arr" onclick="fecharAjuda()">×</button>
+        </div>
+        
+        <div class="help-tabs">
+            <button class="help-tab-btn active" onclick="switchHelpTab('tab-principal', this)">Plataforma Principal</button>
+            <button class="help-tab-btn" onclick="switchHelpTab('tab-viewer', this)">Visualizador 3D</button>
+        </div>
+
+        <div id="tab-principal" class="help-tab-content" style="display: block;">
+            <h3>🔍 Como navegar pelos Modelos</h3>
+            <p>Utilize a barra de pesquisa no topo para buscar órgãos, sistemas ou peças específicas em tempo real.</p>
+            
+            <h3>🎛️ Filtros Avançados</h3>
+            <p>Clique no botão <strong>Filtrar</strong> para abrir a listagem de categorias por Sistemas Anatômicos (Cardiovascular, Nervoso, etc.). Você pode selecionar múltiplos filtros ao mesmo tempo.</p>
+        </div>
+
+        <div id="tab-viewer" class="help-tab-content" style="display: none;">
+            <h3>🖱️ Controles do Mouse no Cenário 3D</h3>
+            <ul class="help-list">
+                <li><strong>Botão Esquerdo (Arrastar):</strong> Rotaciona o modelo anatômico no espaço.</li>
+                <li><strong>Botão Direito (Arrastar):</strong> Movimenta o modelo anatômico no espaço.</li>
+                <li><strong>Scroll do Mouse (Roda):</strong> Aplica Zoom para aproximar ou afastar os detalhes.</li>
+                <li><strong>Clique Esquerdo em uma peça:</strong> Destaca a sub-mesh e gera um balão de texto explicativo (Callout).</li>
+            </ul>
+
+            <h3>⚙️ Recursos de Operação</h3>
+            <p><strong>Modo Isolamento:</strong> Esconde as demais estruturas para você focar apenas no componente ativo.</p>
+            <p><strong>Linha do Tempo (Animações):</strong> Use os botões inferiores para pausar, controlar a velocidade ou arrastar o progresso de modelos animados.</p>
+            <p><strong>Acessibilidade:</strong> Use o seletor de daltonismo para alterar a matriz de cor e melhorar o contraste de veias, nervos e artérias.</p>
+        </div>
+    </div>
+  </div>
 
   <div class="filter-bar">
     <div class="filter-bar-inner">
@@ -109,7 +146,6 @@
             <div class="ddchip" onclick="toggleDdChip(this,'digest')"><span>Digestivo</span><span class="ddcnt"></span></div>
             <div class="ddchip" onclick="toggleDdChip(this,'urin')"><span>Urinário</span><span class="ddcnt"></span></div>
             <div class="ddchip" onclick="toggleDdChip(this,'senso')"><span>Sensorial</span><span class="ddcnt"></span></div>
-            <!-- <div class="ddchip" onclick="toggleDdChip(this,'fav')">❤️ Favoritos<span class="ddcnt"></span></div> -->
           </div>
         </div>
       </div>
