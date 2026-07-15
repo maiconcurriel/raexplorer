@@ -519,12 +519,11 @@ function animate() {
 }
 
 const RESOURCE_CONFIG = {
-    pdf: { icon: '📄', color: '#f1f5f9' },
     doc: { icon: '📄', color: '#f1f5f9' },
     video: { icon: '🎥', color: 'var(--accent2-lt)' },
     image: { icon: '📊', color: '#f0eef8' },
     link: { icon: '🔗', color: '#fef5ec' },
-    podcast: { icon: '🎙️', color: '#eefcf0' }
+    audio: { icon: '🎙️', color: '#eefcf0' }
 };
 
 // Renderiza na aba correspondente a lista de mídias e materiais de apoio globais atrelados ao modelo.
@@ -577,8 +576,45 @@ window.abrirMedia = (res) => {
     else if (res.type === 'image') {
         body.innerHTML = `<img src="${finalPath}" style="display:block; max-height:80vh; width:100%; object-fit:contain; border:none;" />`;
     }
-    else if (res.type === 'podcast') {
-        body.innerHTML = `<div style="padding: 40px; background: #f8f9fa; display: flex; justify-content: center;"><audio controls src="${finalPath}" style="width: 100%;"></audio></div>`;
+    else if (res.type === 'audio') {
+        // 1. Cria a estrutura do player + container de legendas
+        body.innerHTML = `
+            <div style="padding: 30px; background: #1e293b; display: flex; flex-direction: column; align-items: center; gap: 20px;">
+                <audio id="audio-player" controls src="${finalPath}" style="width: 100%;"></audio>
+                <div id="audio-caption-box" style="width: 100%; min-height: 50px; text-align: center; color: #38bdf8; font-family: sans-serif; font-size: 16px; font-weight: 500; line-height: 1.4; transition: all 0.2s; padding: 10px; border-radius: 6px; background: rgba(15, 23, 42, 0.6); display: none;">
+                    ...
+                </div>
+            </div>
+        `;
+
+        // 2. Tenta carregar o arquivo .srt correspondente
+        const srtPath = finalPath.substring(0, finalPath.lastIndexOf('.')) + '.srt';
+        
+        fetch(srtPath)
+            .then(response => {
+                if (!response.ok) throw new Error('SRT não encontrado');
+                return response.text();
+            })
+            .then(srtText => {
+                const captions = parseSRT(srtText);
+                const audio = document.getElementById('audio-player');
+                const captionBox = document.getElementById('audio-caption-box');
+                
+                // Exibe a caixa de legendas se o arquivo existir
+                captionBox.style.display = 'block';
+                captionBox.innerText = 'Legendas carregadas.';
+
+                // Escuta o tempo do áudio para atualizar a legenda
+                audio.addEventListener('timeupdate', () => {
+                    const currentTime = audio.currentTime;
+                    const activeCaption = captions.find(c => currentTime >= c.start && currentTime <= c.end);
+                    
+                    captionBox.innerHTML = activeCaption ? activeCaption.text : '';
+                });
+            })
+            .catch(err => {
+                console.log('Sem legendas para este áudio:', err.message);
+            });
     }
     else {
         window.open(finalPath, '_blank');
@@ -587,6 +623,34 @@ window.abrirMedia = (res) => {
 
     modal.style.display = 'flex';
 };
+
+// Função auxiliar para converter o formato de tempo do SRT (00:00:00,000) para segundos decimais
+function timeToSeconds(timeString) {
+    const parts = timeString.replace(',', '.').split(':');
+    const hours = parseFloat(parts[0]) * 3600;
+    const minutes = parseFloat(parts[1]) * 60;
+    const seconds = parseFloat(parts[2]);
+    return hours + minutes + seconds;
+}
+
+// Função auxiliar para processar a string bruta do SRT e transformá-la em um Array de objetos interativos
+function parseSRT(data) {
+    const regex = /(\d+)\r?\n(\d\d:\d\d:\d\d[,\.]\d\d\d) --> (\d\d:\d\d:\d\d[,\.]\d\d\d)\r?\n([\s\S]*?)(?=\n{2,}|\r?\n\r?\n|\n*$)/g;
+    const captions = [];
+    let matches;
+
+    data = data.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+
+    while ((matches = regex.exec(data)) !== null) {
+        captions.push({
+            id: matches[1],
+            start: timeToSeconds(matches[2]),
+            end: timeToSeconds(matches[3]),
+            text: matches[4].replace(/\n/g, '<br>') // Preserva quebras de linha na legenda se houver
+        });
+    }
+    return captions;
+}
 
 // Fecha a modal de exibição de mídias e limpa o contêiner interno para interromper reproduções em background.
 window.closeMediaModal = () => {

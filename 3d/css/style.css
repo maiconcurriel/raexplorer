@@ -582,7 +582,7 @@ body.dark-mode .vbtn {
   .nav-arr {
     width: 36px; height: 36px; background: var(--surface2); border: 1px solid var(--border);
     border-radius: 6px; color: var(--text-3); display: flex; align-items: center; justify-content: center;
-    cursor: pointer; font-size: 24px; transition: all .15s;
+    cursor: pointer; font-size: 12px; transition: all .15s;
   }
   .nav-arr:hover { background: var(--accent-lt); color: #ef4444;; border-color: var(--accent-md); }
 
@@ -869,3 +869,19 @@ body.dark-mode kbd { background: #0f172a; border-color: #334155; color: #00ffff;
     from { opacity: 0; transform: scale(0.96); }
     to { opacity: 1; transform: scale(1); }
 }
+
+  .ch-item {
+    padding: 11px 13px; border-radius: 9px; border: 1px solid var(--border);
+    margin-bottom: 7px; cursor: pointer;
+    display: flex; align-items: center; justify-content: space-between;
+    transition: all .15s; background: var(--surface);
+  }
+  .ch-item:hover { background: var(--accent-lt); border-color: var(--accent-md); }
+  .ch-item.hl { border-color: var(--accent-md); background: var(--accent-lt); }
+  .ch-name { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 2px; }
+  .ch-desc { font-size: 13px; color: var(--text-3); line-height: 1.5; }
+  .ch-badge {
+    font-size: 10px; padding: 3px 8px;
+    background: var(--accent); color: #fff;
+    border-radius: 5px; font-weight: 600; white-space: nowrap;
+  }

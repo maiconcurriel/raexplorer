@@ -2,18 +2,12 @@
   "objname": "Esqueleto Humano",
   "objsystem": "Esquelético",
   "objdescription": "Modelo anatômico completo do esqueleto humano, representando a estrutura óssea responsável por sustentação, proteção dos órgãos e suporte aos movimentos do corpo.",
-  "resources": [
-    {
-      "type": "pdf",
-      "name": "Manual de Anatomia",
-      "info": "PDF · 2.4 MB",
-      "url": "manual.pdf"
-    },
+  "resources": [    
     {
       "type": "doc",
-      "name": "Documento",
-      "info": "DOC · 1.5 MB",
-      "url": "documento.docx"
+      "name": "PDF",
+      "info": "Documento · 178 KB",
+      "url": "Esqueleto_humano.pdf"
     },
     {
       "type": "video",
@@ -29,15 +23,15 @@
     },
     {
       "type": "link",
-      "name": "Link Externo",
+      "name": "Wikipedia",
       "info": "Link externo",
-      "url": "link.html"
+      "url": "https://pt.wikipedia.org/wiki/Esqueleto_humano"
     },
     {
-      "type": "podcast",
-      "name": "Podcast",
+      "type": "audio",
+      "name": "Áudio descritivo",
       "info": "Áudio · 8 min",
-      "url": "audio.mp3"
+      "url": "descesqu.mp3"
     },
     {
       "type": "video",
