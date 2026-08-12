@@ -1,0 +1,75 @@
+{
+  "objname": "Sistema Urinário Feminino",
+  "objsystem": "Urinário",
+  "objdescription": "O sistema urinário feminino é responsável pela produção, armazenamento e eliminação da urina, contribuindo para a manutenção do equilíbrio interno do organismo. Os rins filtram o sangue, removem resíduos metabólicos e regulam água, eletrólitos e outras substâncias. A urina formada nos rins passa pelos ureteres até a bexiga, onde é armazenada temporariamente. Durante a micção, a musculatura da bexiga se contrai e a urina é conduzida pela uretra até o exterior. Esfíncteres urinários controlam a passagem da urina e ajudam a manter a continência.",
+  "linkedModels": [],
+  "resources": [],
+  "RenalCapsule": {
+    "objname": "Cápsula Renal",
+    "description": "Camada de tecido conjuntivo resistente que envolve externamente o rim, protegendo o órgão contra traumas e ajudando a manter seu formato."
+  },
+  "RenalCortex": {
+    "objname": "Córtex Renal",
+    "description": "Região mais externa do rim, localizada abaixo da cápsula renal. Contém os corpúsculos renais e partes dos túbulos renais, participando da filtração e do processamento do filtrado."
+  },
+  "RenalPyramids": {
+    "objname": "Pirâmides Renais",
+    "description": "Estruturas cônicas localizadas na medula renal, formadas principalmente por túbulos e ductos coletores. Conduzem a urina em direção às papilas renais e aos cálices."
+  },
+  "RenalColumns": {
+    "objname": "Colunas Renais",
+    "description": "Extensões do córtex renal que se projetam entre as pirâmides renais. Contêm vasos sanguíneos e tecido cortical, contribuindo para a sustentação e organização interna do rim."
+  },
+  "RenalSinus": {
+    "objname": "Seio Renal",
+    "description": "Espaço interno do rim que contém a pelve renal, cálices, vasos sanguíneos, nervos e tecido adiposo. Funciona como uma região de passagem e acomodação dessas estruturas."
+  },
+  "RenalPelvis": {
+    "objname": "Pelve Renal",
+    "description": "Estrutura em forma de funil que recebe a urina dos cálices renais e a direciona para o ureter. Representa a região inicial do sistema de condução da urina para fora do rim."
+  },
+  "Ureter": {
+    "objname": "Ureter",
+    "description": "Tubo muscular que conduz a urina de cada rim até a bexiga. Seus movimentos peristálticos impulsionam a urina ao longo do trajeto, independentemente da posição do corpo."
+  },
+  "BladderBody": {
+    "objname": "Corpo da Bexiga",
+    "description": "Principal região da bexiga urinária, responsável por armazenar temporariamente a urina até o momento da micção. Sua parede se distende conforme o volume de urina aumenta."
+  },
+  "DetrusorMuscle": {
+    "objname": "Músculo Detrusor",
+    "description": "Camada de músculo liso presente na parede da bexiga. Durante a micção, sua contração aumenta a pressão interna e promove a expulsão da urina através da uretra."
+  },
+  "BladderInner": {
+    "objname": "Revestimento Interno da Bexiga",
+    "description": "Camada interna formada principalmente por urotélio, um epitélio especializado capaz de se distender. Atua como barreira protetora contra a urina e permite mudanças no volume da bexiga."
+  },
+  "UreteralOrifice": {
+    "objname": "Óstio Ureteral",
+    "description": "Abertura onde o ureter se conecta à bexiga. Existem dois óstios ureterais, um para cada ureter, pelos quais a urina entra na bexiga."
+  },
+  "BladderTrigone": {
+    "objname": "Trígono Vesical",
+    "description": "Área triangular localizada no interior da bexiga, delimitada pelos dois óstios ureterais e pelo óstio interno da uretra. Possui mucosa relativamente lisa e permanece pouco enrugada."
+  },
+  "InternalUrethralSphincter": {
+    "objname": "Esfíncter Interno da Uretra",
+    "description": "Anel de músculo liso localizado na região do colo da bexiga. Participa do controle involuntário da saída da urina e ajuda a evitar seu fluxo involuntário para a uretra."
+  },
+  "BladderNeck": {
+    "objname": "Colo da Bexiga",
+    "description": "Região inferior e estreita da bexiga que se continua com a uretra. Atua como uma passagem entre a bexiga e o canal responsável pela eliminação da urina."
+  },
+  "Urethra": {
+    "objname": "Uretra",
+    "description": "Tubo que conduz a urina da bexiga para o exterior do corpo. Na mulher, é relativamente curta e termina anteriormente à abertura vaginal, desempenhando função exclusivamente urinária."
+  },
+  "ExternalUrethralSphincter": {
+    "objname": "Esfíncter Externo da Uretra",
+    "description": "Músculo estriado que envolve a uretra e permite o controle voluntário da micção. Sua contração ajuda a manter a continência urinária, enquanto seu relaxamento facilita a passagem da urina."
+  },
+  "UrethralOrifice": {
+    "objname": "Óstio Uretral",
+    "description": "Abertura externa da uretra por onde a urina é eliminada do organismo. Está localizada no vestíbulo da vulva, anteriormente à abertura vaginal."
+  }
+}

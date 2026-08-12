@@ -1,0 +1,117 @@
+{
+  "objname": "Sistema Urinário Masculino",
+  "objsystem": "Urinário",
+  "objdescription": "O sistema urinário masculino é responsável pela filtração do sangue, formação, transporte, armazenamento e eliminação da urina. Os rins removem resíduos metabólicos e ajudam a regular o equilíbrio de água e eletrólitos do organismo. A urina passa pelos cálices e pela pelve renal, segue pelos ureteres até a bexiga e é eliminada pela uretra. A uretra masculina também atravessa estruturas do sistema reprodutor, sendo dividida em porções prostática, membranosa e esponjosa. Esfíncteres e músculos da bexiga participam do controle da micção.",
+  "linkedModels": [],
+  "resources": [],
+
+  "RenalCapsule": {
+    "objname": "Cápsula Renal",
+    "description": "Camada externa de tecido conjuntivo resistente que envolve o rim. Atua na proteção do órgão, ajuda a manter seu formato e constitui uma barreira contra traumas e a propagação de processos infecciosos."
+  },
+
+  "RenalCortex": {
+    "objname": "Córtex Renal",
+    "description": "Região externa do rim, localizada imediatamente abaixo da cápsula renal. Contém os corpúsculos renais e partes dos túbulos, participando da filtração do sangue e das etapas iniciais da formação da urina."
+  },
+
+  "RenalSinus": {
+    "objname": "Seio Renal",
+    "description": "Espaço interno do rim que contém a pelve renal, os cálices, vasos sanguíneos, nervos e tecido adiposo. Serve como região de acomodação e passagem das principais estruturas internas do órgão."
+  },
+
+  "RenalPyramids": {
+    "objname": "Pirâmides Renais",
+    "description": "Estruturas cônicas da medula renal formadas principalmente por túbulos e ductos coletores. Conduzem a urina em direção às papilas renais, que se conectam aos cálices menores."
+  },
+
+  "MajorCalycesOfTheRenalPelvis": {
+    "objname": "Cálices Renais Maiores",
+    "description": "Estruturas que recebem a urina de vários cálices menores e a conduzem em direção à pelve renal. Geralmente existem dois ou três cálices maiores em cada rim."
+  },
+
+  "MinorCalycesOfTheRenalPelvis": {
+    "objname": "Cálices Renais Menores",
+    "description": "Pequenas estruturas em forma de taça que recebem diretamente a urina das papilas renais. Vários cálices menores se unem para formar os cálices maiores."
+  },
+
+  "RenalPelvis": {
+    "objname": "Pelve Renal",
+    "description": "Estrutura em forma de funil localizada no interior do rim que recebe a urina dos cálices maiores. Continua-se com o ureter, direcionando a urina para fora do rim."
+  },
+
+  "RenalPapillae": {
+    "objname": "Papilas Renais",
+    "description": "Extremidades das pirâmides renais que se projetam para os cálices menores. Os ductos coletores desembocam nas papilas, permitindo que a urina formada no rim alcance o sistema coletor."
+  },
+
+  "RenalColumns": {
+    "objname": "Colunas Renais",
+    "description": "Extensões do córtex renal que se projetam entre as pirâmides renais. Contêm vasos sanguíneos e tecido cortical, contribuindo para a sustentação e organização interna do rim."
+  },
+
+  "Ureter": {
+    "objname": "Ureter",
+    "description": "Tubo muscular que conduz a urina de cada rim até a bexiga. Contrações peristálticas de sua parede impulsionam a urina ao longo do trajeto, independentemente da posição do corpo."
+  },
+
+  "Bladder": {
+    "objname": "Bexiga Urinária",
+    "description": "Órgão muscular oco responsável pelo armazenamento temporário da urina. Sua parede pode se distender para acomodar diferentes volumes de urina e se contrai durante a micção para promover sua eliminação."
+  },
+
+  "Detrusor": {
+    "objname": "Músculo Detrusor",
+    "description": "Camada de músculo liso presente na parede da bexiga. Sua contração aumenta a pressão interna da bexiga e impulsiona a urina em direção à uretra durante a micção."
+  },
+
+  "BladderInnerSurface": {
+    "objname": "Superfície Interna da Bexiga",
+    "description": "Revestimento interno da bexiga formado principalmente por urotélio, epitélio especializado capaz de se distender. Protege os tecidos subjacentes e permite que a bexiga aumente seu volume."
+  },
+
+  "UreteralOrifice": {
+    "objname": "Óstio Ureteral",
+    "description": "Abertura localizada na parede da bexiga onde cada ureter desemboca. Existem dois óstios ureterais, responsáveis pela entrada da urina proveniente dos rins na bexiga."
+  },
+
+  "BladderTrigone": {
+    "objname": "Trígono Vesical",
+    "description": "Área triangular localizada na base interna da bexiga, delimitada pelos dois óstios ureterais e pelo óstio interno da uretra. Sua superfície é relativamente lisa e permanece pouco enrugada durante a distensão."
+  },
+
+  "BladderNeck": {
+    "objname": "Colo da Bexiga",
+    "description": "Região inferior e estreita da bexiga que se continua com a uretra. Localiza-se na transição entre o reservatório urinário e o canal responsável pela eliminação da urina."
+  },
+
+  "InternalUrethralSphincter": {
+    "objname": "Esfíncter Interno da Uretra",
+    "description": "Anel de músculo liso localizado na saída da bexiga. Atua de forma involuntária no controle da passagem da urina e contribui para a continência urinária."
+  },
+
+  "UrethraProstaticPortion": {
+    "objname": "Uretra Prostática",
+    "description": "Porção da uretra masculina que atravessa a próstata, estendendo-se do colo da bexiga até o ápice da próstata. Recebe os ductos ejaculatórios e está relacionada ao sistema reprodutor masculino."
+  },
+
+  "VerumontanumSeminalColliculusOfProstaticUrethra": {
+    "objname": "Colículo Seminal",
+    "description": "Elevação localizada na parede posterior da uretra prostática. Contém a abertura do utrículo prostático e, lateralmente, as aberturas dos ductos ejaculatórios."
+  },
+
+  "ExternalUrethralSphincter": {
+    "objname": "Esfíncter Externo da Uretra",
+    "description": "Músculo estriado que envolve a uretra na região do períneo. Seu controle voluntário permite participar da continência urinária e do controle consciente da micção."
+  },
+
+  "UrethraMembranous": {
+    "objname": "Uretra Membranosa",
+    "description": "Curta porção da uretra localizada entre a uretra prostática e a uretra esponjosa. Atravessa o espaço perineal profundo e está envolvida pelo esfíncter externo da uretra."
+  },
+
+  "UrethraSpongyPortionPenile": {
+    "objname": "Uretra Esponjosa (Peniana)",
+    "description": "Porção mais longa da uretra masculina, localizada no interior do corpo esponjoso do pênis. Estende-se da uretra membranosa até o óstio externo e conduz a urina para fora do corpo."
+  }
+}

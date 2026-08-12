@@ -1,0 +1,122 @@
+{
+  "objname": "Sistema Reprodutor Feminino",
+  "objsystem": "Reprodutor",
+  "objdescription": "O sistema reprodutor feminino é formado por órgãos e estruturas responsáveis pela produção de gametas, reprodução, fecundação, gestação e, quando ocorre, lactação. Os ovários produzem os óvulos e hormônios sexuais, enquanto as tubas uterinas conduzem o óvulo e são o local mais comum da fecundação. O útero abriga e sustenta o embrião durante a gestação. A vagina participa da relação sexual, da eliminação do fluxo menstrual e do parto. A genitália externa protege as estruturas internas e inclui os lábios, vestíbulo e clitóris. As mamas e suas glândulas mamárias produzem e conduzem o leite materno.",
+  "linkedModels": [],
+  "resources": [],
+
+  "Breast": {
+    "objname": "Mama",
+    "description": "Órgão formado por tecido glandular, adiposo e conjuntivo, localizado sobre o tórax. Sua principal função reprodutiva é produzir leite após a gestação, fornecendo nutrientes e componentes imunológicos ao recém-nascido."
+  },
+
+  "LactiferousDucts": {
+    "objname": "Ductos Lactíferos",
+    "description": "Canais que transportam o leite produzido pelas glândulas mamárias em direção ao mamilo. Formam uma rede de condução que permite a passagem do leite durante a amamentação."
+  },
+
+  "MammaryGlandLobules": {
+    "objname": "Lóbulos da Glândula Mamária",
+    "description": "Pequenas unidades glandulares da mama constituídas por alvéolos produtores de leite. Durante a lactação, as células secretoras produzem o leite, que posteriormente é conduzido pelos ductos lactíferos."
+  },
+
+  "UterusFundus": {
+    "objname": "Fundo do Útero",
+    "description": "Porção superior e arredondada do útero, localizada acima dos pontos de entrada das tubas uterinas. Durante a gestação, participa da expansão do útero para acomodar o desenvolvimento do feto."
+  },
+
+  "UterusBody": {
+    "objname": "Corpo do Útero",
+    "description": "Principal e maior porção do útero, localizada entre o fundo e o colo uterino. É revestida pelo endométrio e possui uma espessa camada muscular, sendo o local onde ocorre a implantação e o desenvolvimento da gestação."
+  },
+
+  "UterusEndometrium": {
+    "objname": "Endométrio",
+    "description": "Camada interna do útero que sofre alterações durante o ciclo menstrual. Prepara-se para receber um embrião e, quando não ocorre fecundação e implantação, parte dessa camada é eliminada durante a menstruação."
+  },
+
+  "UterusCornu": {
+    "objname": "Corno Uterino",
+    "description": "Região superior e lateral do útero onde o corpo uterino se conecta à tuba uterina. Está localizada próxima ao fundo uterino e representa a transição entre o útero e a tuba."
+  },
+
+  "FallopianTubeOviductUterineTubes": {
+    "objname": "Tuba Uterina",
+    "description": "Estrutura tubular que se estende do útero em direção ao ovário. Conduz o ovócito e, na maioria dos casos, é o local onde ocorre a fecundação. Suas células ciliadas e contrações auxiliam o transporte."
+  },
+
+  "Fimbriae": {
+    "objname": "Fímbrias",
+    "description": "Projeções semelhantes a dedos localizadas na extremidade da tuba uterina, próximas ao ovário. Auxiliam na captura e condução do ovócito liberado durante a ovulação para dentro da tuba."
+  },
+
+  "OvaryAnterior": {
+    "objname": "Ovário Anterior",
+    "description": "Porção anterior do ovário, órgão responsável pela produção e maturação dos ovócitos e pela secreção dos principais hormônios sexuais femininos, como estrogênio e progesterona."
+  },
+
+  "OvarianLigamentUteroOvarianLigamentProperOvaria": {
+    "objname": "Ligamento do Ovário",
+    "description": "Faixa de tecido conjuntivo que conecta o ovário ao útero. Também chamado ligamento próprio do ovário, contribui para manter o ovário em sua posição anatômica."
+  },
+
+  "OvaryPosterior": {
+    "objname": "Ovário Posterior",
+    "description": "Porção posterior do ovário, órgão que contém os folículos ovarianos e participa da produção dos ovócitos e hormônios sexuais femininos ao longo da vida reprodutiva."
+  },
+
+  "UterusCervixNeck": {
+    "objname": "Colo do Útero",
+    "description": "Porção inferior e estreita do útero que se conecta à vagina. Possui um canal que permite a passagem dos espermatozoides, do fluxo menstrual e do bebê durante o parto."
+  },
+
+  "Vagina": {
+    "objname": "Vagina",
+    "description": "Canal muscular e elástico que se estende do colo do útero até a abertura vaginal. Participa da relação sexual, permite a saída do fluxo menstrual e funciona como canal de parto."
+  },
+
+  "LabiaMinora": {
+    "objname": "Lábios Menores",
+    "description": "Pregas de tecido localizadas no interior dos lábios maiores, ao redor do vestíbulo vaginal. Protegem as aberturas vaginal e uretral e contribuem para a sensibilidade da genitália externa."
+  },
+
+  "GreaterVestibularGlandBartholinSGland": {
+    "objname": "Glândulas Vestibulares Maiores",
+    "description": "Também conhecidas como glândulas de Bartholin, estão localizadas próximas à entrada da vagina. Produzem uma secreção mucosa que contribui para a lubrificação do vestíbulo vaginal."
+  },
+
+  "Vestibule": {
+    "objname": "Vestíbulo da Vagina",
+    "description": "Espaço da genitália externa localizado entre os lábios menores. Contém as aberturas da uretra e da vagina, além das estruturas associadas às glândulas vestibulares."
+  },
+
+  "Urethral": {
+    "objname": "Uretra",
+    "description": "Canal que conduz a urina da bexiga até o exterior do corpo. Na mulher, sua abertura está localizada no vestíbulo da vagina, anteriormente à abertura vaginal."
+  },
+
+  "ClitoralGlans": {
+    "objname": "Glande do Clitóris",
+    "description": "Porção externa e altamente sensível do clitóris, rica em terminações nervosas. Está localizada na parte anterior da vulva e participa principalmente da resposta sexual."
+  },
+
+  "PrepuceHood": {
+    "objname": "Prepúcio do Clitóris",
+    "description": "Dobra de pele formada pelos tecidos dos lábios menores que recobre e protege parcialmente a glande do clitóris, especialmente em sua posição anterior."
+  },
+
+  "ClitoralShaft": {
+    "objname": "Corpo do Clitóris",
+    "description": "Porção alongada do clitóris que se estende posteriormente a partir da glande. É constituída por tecido erétil e possui rica inervação, participando da resposta sexual."
+  },
+
+  "ClitoralCrus": {
+    "objname": "Ramos do Clitóris",
+    "description": "Duas extensões do corpo do clitóris que se projetam lateralmente e posteriormente, acompanhando os ramos inferiores dos ossos púbicos. São formadas principalmente por tecido erétil."
+  },
+
+  "CorpusCavernosum": {
+    "objname": "Corpos Cavernosos",
+    "description": "Estruturas de tecido erétil que formam grande parte do corpo e dos ramos do clitóris. Durante a excitação sexual, o aumento do fluxo sanguíneo provoca sua congestão e aumento de volume."
+  }
+}

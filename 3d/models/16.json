@@ -1,0 +1,102 @@
+{
+  "objname": "Pulmões de Pacientes com COVID-19",
+  "objsystem": "Respiratório",
+  "objdescription": "Modelo anatômico dos pulmões e das principais estruturas das vias respiratórias, representando alterações pulmonares associadas à COVID-19. A infecção pelo SARS-CoV-2 pode provocar inflamação e lesões no tecido pulmonar, comprometendo as trocas gasosas. O modelo apresenta os pulmões, traqueia, brônquios, vasos pulmonares e estruturas da laringe, além de uma região de inflamação pulmonar. O sistema respiratório é responsável pela condução do ar e pelas trocas de oxigênio e dióxido de carbono entre os pulmões e o sangue.",
+  "linkedModels": [],
+  "resources": [],
+
+  "LungRight": {
+    "objname": "Pulmão Direito",
+    "description": "Pulmão localizado no lado direito do tórax. Possui três lobos e participa das trocas gasosas, recebendo ar através das vias respiratórias e permitindo a passagem de oxigênio para o sangue e de dióxido de carbono para o ar."
+  },
+
+  "LungLeft": {
+    "objname": "Pulmão Esquerdo",
+    "description": "Pulmão localizado no lado esquerdo do tórax. Possui dois lobos e apresenta uma região adaptada à posição do coração. Participa das trocas gasosas entre o ar inspirado e o sangue."
+  },
+
+  "InflamationLeft": {
+    "objname": "Inflamação Pulmonar",
+    "description": "Região do pulmão que apresenta inflamação associada à infecção. A resposta inflamatória pode causar alterações no tecido pulmonar e nos alvéolos, prejudicando a eficiência das trocas gasosas."
+  },
+
+  "Trachea": {
+    "objname": "Traqueia",
+    "description": "Tubo respiratório que conecta a laringe aos brônquios. Conduz o ar para os pulmões e possui anéis de cartilagem que ajudam a manter sua luz aberta durante a respiração."
+  },
+
+  "BronchiLeft": {
+    "objname": "Brônquio Esquerdo",
+    "description": "Principal via aérea que se origina da bifurcação da traqueia e conduz o ar para o pulmão esquerdo. Divide-se progressivamente em estruturas menores dentro do pulmão."
+  },
+
+  "PulmonaryArteries": {
+    "objname": "Artérias Pulmonares",
+    "description": "Vasos sanguíneos que transportam sangue pobre em oxigênio do ventrículo direito do coração até os pulmões. Nos capilares pulmonares, o sangue recebe oxigênio e elimina dióxido de carbono."
+  },
+
+  "PulmonaryVeins": {
+    "objname": "Veias Pulmonares",
+    "description": "Vasos sanguíneos que transportam sangue rico em oxigênio dos pulmões até o átrio esquerdo do coração. Normalmente existem quatro veias pulmonares principais."
+  },
+
+  "Diaphragm": {
+    "objname": "Diafragma",
+    "description": "Principal músculo da respiração, localizado entre as cavidades torácica e abdominal. Sua contração aumenta o volume do tórax e favorece a entrada de ar nos pulmões."
+  },
+
+  "HyoidBone": {
+    "objname": "Osso Hioide",
+    "description": "Pequeno osso localizado no pescoço, abaixo da mandíbula. Sustenta a língua e participa da organização das estruturas relacionadas à deglutição e à laringe."
+  },
+
+  "ThyrohyoidMembrane": {
+    "objname": "Membrana Tireo-Hioidea",
+    "description": "Membrana de tecido conjuntivo que conecta o osso hioide à cartilagem tireoidea. Auxilia na sustentação e movimentação das estruturas superiores da laringe."
+  },
+
+  "Epiglosttis": {
+    "objname": "Epiglote",
+    "description": "Estrutura cartilaginosa localizada na entrada da laringe. Durante a deglutição, movimenta-se para ajudar a direcionar alimentos e líquidos para o esôfago, protegendo as vias respiratórias."
+  },
+
+  "ThyroidCartilage": {
+    "objname": "Cartilagem Tireoidea",
+    "description": "Maior cartilagem da laringe, formando grande parte de sua parede anterior. Dá suporte às estruturas laríngeas e protege componentes envolvidos na produção da voz."
+  },
+
+  "Larynx": {
+    "objname": "Laringe",
+    "description": "Órgão localizado entre a faringe e a traqueia que conduz o ar e participa da produção da voz. Suas estruturas cartilaginosas também ajudam a proteger as vias respiratórias durante a deglutição."
+  },
+
+  "VocalChords": {
+    "objname": "Pregas Vocais",
+    "description": "Duas estruturas localizadas no interior da laringe que vibram com a passagem do ar, produzindo sons. Também participam da proteção das vias respiratórias ao fecharem a entrada da laringe."
+  },
+
+  "ThyrocricoidLigament": {
+    "objname": "Ligamento Tireo-Cricoide",
+    "description": "Estrutura ligamentar que conecta a cartilagem tireoidea à cartilagem cricoidea. Contribui para a sustentação da laringe e para a relação entre suas principais cartilagens."
+  },
+
+  "Arytenoid": {
+    "objname": "Cartilagem Aritenoidea",
+    "description": "Par de pequenas cartilagens da laringe localizadas posteriormente à cartilagem cricoidea. Participam do movimento das pregas vocais e, consequentemente, da produção da voz e proteção das vias respiratórias."
+  },
+
+  "Corniculate": {
+    "objname": "Cartilagens Corniculadas",
+    "description": "Pequenas cartilagens localizadas sobre as cartilagens aritenoideas, formando parte da estrutura posterior da laringe. Contribuem para a sustentação das pregas e das estruturas laríngeas."
+  },
+
+  "Cricoid": {
+    "objname": "Cartilagem Cricoidea",
+    "description": "Cartilagem em formato de anel localizada abaixo da cartilagem tireoidea e acima da traqueia. Mantém a estrutura aberta da laringe e serve de suporte para outras cartilagens laríngeas."
+  },
+
+  "MedianCricothyroidLigament": {
+    "objname": "Ligamento Cricotireoideo Mediano",
+    "description": "Estrutura fibrosa localizada entre as cartilagens tireoidea e cricoidea. Contribui para a união e estabilidade dessas cartilagens e participa da mecânica da laringe."
+  }
+}

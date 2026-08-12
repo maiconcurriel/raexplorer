@@ -1,0 +1,111 @@
+{
+  "objname": "Sistema Reprodutor Masculino",
+  "objsystem": "Reprodutor",
+  "objdescription": "O sistema reprodutor masculino é responsável pela produção, armazenamento e transporte dos espermatozoides, além da produção de hormônios sexuais, principalmente a testosterona. Os testículos produzem os espermatozoides e hormônios, enquanto o epidídimo participa da maturação e armazenamento dos gametas. O ducto deferente conduz os espermatozoides até os ductos ejaculatórios. As vesículas seminais, a próstata e as glândulas bulbouretrais produzem secreções que formam o sêmen. O pênis contém tecidos eréteis que permitem a ereção e a deposição do sêmen no sistema reprodutor feminino.",
+  "linkedModels": [],
+  "resources": [],
+
+  "SpermaticFascia": {
+    "objname": "Fáscia Espermática",
+    "description": "Camada de tecido conjuntivo que envolve o cordão espermático e as estruturas associadas ao testículo. Contribui para a proteção e sustentação dessas estruturas dentro do escroto."
+  },
+
+  "TesticleTestisLateral": {
+    "objname": "Testículo Lateral",
+    "description": "Porção lateral do testículo, órgão responsável pela produção dos espermatozoides e pela secreção de testosterona. Os túbulos seminíferos presentes em seu interior são o local onde ocorre a espermatogênese."
+  },
+
+  "TesticleTestisMedial": {
+    "objname": "Testículo Medial",
+    "description": "Porção medial do testículo, que contém os túbulos seminíferos responsáveis pela produção dos espermatozoides e células especializadas envolvidas na produção de testosterona."
+  },
+
+  "Epididymis": {
+    "objname": "Epidídimo",
+    "description": "Estrutura tubular localizada sobre a superfície posterior do testículo. É responsável pela maturação, armazenamento e transporte dos espermatozoides antes que eles sigam para o ducto deferente."
+  },
+
+  "VasDeferens": {
+    "objname": "Ducto Deferente",
+    "description": "Tubo muscular que conduz os espermatozoides do epidídimo até o ducto ejaculatório. Suas contrações ajudam a impulsionar os espermatozoides durante a ejaculação."
+  },
+
+  "SeminalVesicle": {
+    "objname": "Vesícula Seminal",
+    "description": "Glândula localizada posteriormente à bexiga que produz uma secreção rica em substâncias nutritivas, especialmente frutose. Essa secreção representa uma parte importante do volume do sêmen."
+  },
+
+  "ProstaticCapsule": {
+    "objname": "Cápsula Prostática",
+    "description": "Camada de tecido conjuntivo que envolve a próstata. Fornece suporte estrutural e delimita externamente o tecido glandular e muscular da próstata."
+  },
+
+  "Prostate": {
+    "objname": "Próstata",
+    "description": "Glândula localizada abaixo da bexiga e ao redor da uretra prostática. Produz parte do líquido seminal, que contribui para a composição e proteção dos espermatozoides."
+  },
+
+  "ProstatePosteriorLobe": {
+    "objname": "Lobo Posterior da Próstata",
+    "description": "Região posterior da próstata, localizada atrás da uretra. É uma área clinicamente importante por ser frequentemente avaliada em exames para alterações prostáticas."
+  },
+
+  "ProstateLateralLobe": {
+    "objname": "Lobo Lateral da Próstata",
+    "description": "Porção lateral da próstata que circunda a uretra prostática e contém tecido glandular responsável pela produção de parte do líquido seminal."
+  },
+
+  "ProstateMedianLobe": {
+    "objname": "Lobo Mediano da Próstata",
+    "description": "Região da próstata localizada entre a uretra e os ductos ejaculatórios. Sua posição pode fazer com que alterações de volume interfiram no fluxo urinário."
+  },
+
+  "ProstateAnteriorLobe": {
+    "objname": "Lobo Anterior da Próstata",
+    "description": "Porção anterior da próstata localizada à frente da uretra. É constituída predominantemente por tecido fibromuscular e possui menor quantidade de tecido glandular."
+  },
+
+  "EjaculatoryDuct": {
+    "objname": "Ducto Ejaculatório",
+    "description": "Canal formado pela união do ducto deferente com o ducto da vesícula seminal. Atravessa a próstata e desemboca na uretra prostática, conduzindo o sêmen."
+  },
+
+  "BulbourethralCowperGland": {
+    "objname": "Glândula Bulbouretral (de Cowper)",
+    "description": "Pequena glândula localizada abaixo da próstata. Produz uma secreção mucosa que contribui para a lubrificação da uretra e ajuda a neutralizar sua acidez antes da passagem do sêmen."
+  },
+
+  "BuckFasciaLower": {
+    "objname": "Fáscia de Buck",
+    "description": "Camada profunda de tecido conjuntivo que envolve os corpos eréteis do pênis. Fornece suporte estrutural e ajuda a manter unidos os tecidos do pênis."
+  },
+
+  "CorpusSpongiosum": {
+    "objname": "Corpo Esponjoso",
+    "description": "Tecido erétil que envolve a uretra ao longo da porção peniana. Durante a ereção, permanece relativamente menos rígido que os corpos cavernosos, ajudando a manter a uretra aberta."
+  },
+
+  "TunicaAlbuginea": {
+    "objname": "Túnica Albugínea",
+    "description": "Cápsula de tecido conjuntivo resistente que envolve o tecido erétil dos corpos cavernosos e também está relacionada ao revestimento do testículo. No pênis, contribui para a sustentação e rigidez durante a ereção."
+  },
+
+  "CorpusCavernosum": {
+    "objname": "Corpos Cavernosos",
+    "description": "Dois cilindros de tecido erétil localizados na parte dorsal do pênis. Durante a excitação sexual, seus espaços vasculares se enchem de sangue, promovendo a maior parte da rigidez peniana."
+  },
+
+  "GlansPenis": {
+    "objname": "Glande do Pênis",
+    "description": "Extremidade expandida do pênis, formada pela continuação do corpo esponjoso. Possui grande quantidade de terminações nervosas e envolve a extremidade distal da uretra, onde se encontra o óstio uretral externo."
+  },
+
+  "DartosFascia": {
+    "objname": "Fáscia de Dartos",
+    "description": "Camada de tecido conjuntivo e músculo liso localizada no escroto, abaixo da pele. Sua contração provoca o enrugamento da pele escrotal e auxilia na regulação da temperatura dos testículos."
+  },
+  "BuckFasciaUpper": {
+  "objname": "Fáscia de Buck Superior",
+  "description": "Camada profunda de tecido conjuntivo que envolve e sustenta os tecidos eréteis do pênis. Contribui para a organização estrutural do órgão e auxilia na proteção dos vasos sanguíneos e nervos presentes em seu interior."
+  }
+}

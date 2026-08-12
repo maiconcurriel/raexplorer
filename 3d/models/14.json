@@ -1,0 +1,23 @@
+{
+  "objname": "Covid-19",
+  "objsystem": "Infeccioso",
+  "objdescription": "O SARS-CoV-2 é um vírus envelopado responsável pela COVID-19. Possui material genético constituído por RNA, envolvido por proteínas estruturais e protegido por um envelope lipídico. Em sua superfície encontram-se as proteínas Spike (S), responsáveis pela ligação e entrada do vírus nas células, além das proteínas de membrana (M) e do envelope (E), que participam da formação, organização e liberação das partículas virais. O envelope viral envolve o conteúdo interno e contém as proteínas estruturais necessárias para a montagem do vírus.",
+  "linkedModels": [],
+  "resources": [],
+  "Envelope+nisolar": {
+    "objname": "Proteína do Envelope (E)",
+    "description": "Pequena proteína estrutural presente no envelope do SARS-CoV-2. Participa da montagem, formação e liberação das partículas virais, além de contribuir para a organização do envelope viral."
+  },
+  "Membrana+nisolar": {
+    "objname": "Proteína de Membrana (M)",
+    "description": "Principal proteína estrutural do envelope viral e uma das mais abundantes na superfície do SARS-CoV-2. Contribui para a forma do vírus e desempenha papel fundamental na montagem das novas partículas virais."
+  },
+  "Spike+nisolar": {
+    "objname": "Proteína Spike (S)",
+    "description": "Proteína localizada na superfície do SARS-CoV-2, formando as características espículas do coronavírus. Reconhece receptores presentes nas células hospedeiras e participa da entrada do vírus na célula."
+  },
+  "EViral+nisolar": {
+    "objname": "Envelope Viral",
+    "description": "Camada externa formada principalmente por uma bicamada lipídica derivada da célula hospedeira. Envolve e protege o conteúdo interno do vírus e contém as proteínas Spike, de membrana e do envelope."
+  }
+}

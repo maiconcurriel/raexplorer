@@ -1,44 +1,89 @@
 {
-  "objname": "Cérebro Humano",
-  "objdescription": "Modelo anatômico completo do cérebro humano, responsável pelo controle das funções cognitivas, motoras, sensoriais, emocionais e autonômicas do corpo.",
-  "objsystem": "Nervoso",
-  "amigdala": {
+  "objname": "Cérebro",
+  "objsystem": "Sistema Nervoso",
+  "objdescription": "O cérebro é o principal órgão do sistema nervoso central, responsável pelo processamento das informações sensoriais, controle dos movimentos, memória, linguagem, emoções e funções vitais.",
+  "Amygdala": {
     "objname": "Amígdala",
-    "description": "Estrutura do sistema límbico ligada ao processamento das emoções, especialmente medo, prazer, agressividade e formação de memórias emocionais."
+    "description": "Estrutura responsável pelo processamento das emoções, especialmente medo, ansiedade e memória emocional."
   },
-
-  "cortex": {
-    "objname": "Córtex cerebral",
-    "description": "Camada externa do cérebro responsável pelo pensamento, percepção sensorial, linguagem, memória e controle dos movimentos voluntários."
+  "Anteriorcommissure": {
+    "objname": "Comissura anterior",
+    "description": "Feixe de fibras nervosas que conecta regiões dos dois hemisférios cerebrais, participando da comunicação entre eles."
   },
-
-  "cerebeloesquerdo": {
-    "objname": "Cerebelo esquerdo",
-    "description": "Parte do cerebelo responsável pela coordenação motora, equilíbrio e precisão dos movimentos do lado esquerdo do corpo."
+  "Caudatenucleus": {
+    "objname": "Núcleo caudado",
+    "description": "Componente dos núcleos da base envolvido no controle dos movimentos, aprendizagem e cognição."
   },
-
-  "cerebelodireito": {
-    "objname": "Cerebelo direito",
-    "description": "Região do cerebelo que auxilia no equilíbrio, postura e coordenação dos movimentos do lado direito do corpo."
+  "Cerebellum": {
+    "objname": "Cerebelo",
+    "description": "Coordena os movimentos, o equilíbrio, a postura e a precisão motora."
   },
-
-  "hemisferiodireito": {
-    "objname": "Hemisfério direito",
-    "description": "Hemisfério cerebral associado à criatividade, percepção espacial, reconhecimento de padrões e controle do lado esquerdo do corpo."
+  "Cerebrum": {
+    "objname": "Cérebro (Hemisfério Esquerdo)",
+    "description": "Responsável por funções superiores como raciocínio, memória, linguagem, percepção e controle motor voluntário."
   },
-
-  "corpo": {
+  "Cingulategyrus": {
+    "objname": "Giro do cíngulo",
+    "description": "Participa do processamento das emoções, atenção, memória e tomada de decisões."
+  },
+  "Corpuscallosum": {
     "objname": "Corpo caloso",
-    "description": "Feixe de fibras nervosas que conecta os dois hemisférios cerebrais, permitindo a comunicação entre eles."
+    "description": "Principal feixe de fibras que conecta os hemisférios cerebrais, permitindo a comunicação entre eles."
   },
-
-  "corpomamilar": {
-    "objname": "Corpo mamilar",
-    "description": "Estrutura ligada ao sistema límbico, importante para processos de memória e integração emocional."
+  "Dentategyrus": {
+    "objname": "Giro denteado",
+    "description": "Região do hipocampo importante para a formação de novas memórias e aprendizagem."
   },
-
-  "corpoamigdaloide": {
-    "objname": "Corpo amigdaloide",
-    "description": "Conjunto de núcleos relacionados à amígdala, envolvidos no controle das emoções, comportamento e respostas ao estresse."
+  "Fornix": {
+    "objname": "Fórnix",
+    "description": "Feixe de fibras nervosas que conecta o hipocampo a outras estruturas relacionadas à memória."
+  },
+  "Globuspalliduslateral": {
+    "objname": "Globo pálido lateral",
+    "description": "Parte dos núcleos da base envolvida na regulação e coordenação dos movimentos voluntários."
+  },
+  "Globuspallidusmedial": {
+    "objname": "Globo pálido medial",
+    "description": "Participa do controle motor enviando sinais para outras regiões do cérebro."
+  },
+  "Hippocampus": {
+    "objname": "Hipocampo",
+    "description": "Essencial para a formação de memórias, aprendizagem e orientação espacial."
+  },
+  "Hypothalamus": {
+    "objname": "Hipotálamo",
+    "description": "Controla funções vitais como temperatura corporal, fome, sede, sono e atividade hormonal."
+  },
+  "Indusiumgriseum": {
+    "objname": "Indúsio cinzento",
+    "description": "Fina camada de substância cinzenta localizada sobre o corpo caloso, relacionada ao sistema límbico."
+  },
+  "Lateralventricle": {
+    "objname": "Ventrículo lateral",
+    "description": "Cavidade cerebral preenchida por líquido cefalorraquidiano, responsável pela proteção e nutrição do sistema nervoso."
+  },
+  "Medullaoblongata": {
+    "objname": "Bulbo (Medula oblonga)",
+    "description": "Controla funções automáticas essenciais, como respiração, frequência cardíaca e pressão arterial."
+  },
+  "Midbrain": {
+    "objname": "Mesencéfalo",
+    "description": "Região do tronco encefálico envolvida no controle dos movimentos oculares, reflexos visuais e auditivos."
+  },
+  "Pons": {
+    "objname": "Ponte",
+    "description": "Parte do tronco encefálico que conecta diferentes regiões do cérebro e auxilia no controle da respiração e do sono."
+  },
+  "Putamen": {
+    "objname": "Putâmen",
+    "description": "Estrutura dos núcleos da base responsável pela coordenação dos movimentos voluntários e aprendizagem motora."
+  },
+  "Septalnucleus": {
+    "objname": "Núcleo septal",
+    "description": "Estrutura do sistema límbico relacionada às emoções, recompensa e memória."
+  },
+  "Thalamus": {
+    "objname": "Tálamo",
+    "description": "Principal centro de retransmissão das informações sensoriais e motoras para o córtex cerebral."
   }
 }

@@ -1,0 +1,14 @@
+{
+  "objname": "Osso Osteoporótico",
+  "objsystem": "Esquelético",
+  "objdescription": "A osteoporose é uma doença caracterizada pela redução da densidade e da qualidade do tecido ósseo, tornando os ossos mais frágeis e suscetíveis a fraturas. Ocorre quando a reabsorção óssea supera a formação de novo osso, processo associado ao envelhecimento, alterações hormonais, deficiência de cálcio e vitamina D, sedentarismo e outros fatores de risco. Frequentemente não apresenta sintomas até a ocorrência de uma fratura, sendo mais comum em mulheres após a menopausa e idosos. O diagnóstico precoce e medidas preventivas, como alimentação adequada, exercícios físicos e tratamento quando indicado, ajudam a preservar a saúde óssea e reduzir o risco de complicações."
+,
+  "saudavel+saudavel1": {
+    "objname": "Saudável",
+    "description": "Observa-se um osso esponjoso com trabéculas espessas, numerosas e bem conectadas, além de uma camada de osso compacto preservada. Essa arquitetura proporciona maior resistência mecânica, sustentação e capacidade de suportar impactos, reduzindo o risco de fraturas quando comparado ao osso afetado pela osteoporose."
+  },
+  "osteoporose+osteoporose1": {
+    "objname": "Osteoporose",
+    "description": "A osteoporose é representada neste modelo pela redução da densidade do osso esponjoso, com trabéculas mais finas, espaçadas e frágeis, enquanto a camada externa de osso compacto pode apresentar afinamento. Essas alterações comprometem a resistência mecânica do osso, aumentando significativamente o risco de fraturas, mesmo após pequenos impactos ou esforços cotidianos."
+  }
+}

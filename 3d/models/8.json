@@ -1,0 +1,18 @@
+{
+  "objname": "Microestrutura do Osso Humano – Ósteon e Sistema de Havers",
+  "objsystem": "Esquelético",
+  "objdescription": "A microestrutura do osso humano é organizada em unidades chamadas ósteons, que compõem o osso compacto. Cada ósteon é formado por lamelas ósseas concêntricas dispostas ao redor do canal de Havers, por onde passam vasos sanguíneos e nervos responsáveis pela nutrição e manutenção do tecido ósseo. Os canais de Havers comunicam-se entre si por meio dos canais de Volkmann, formando uma rede que distribui nutrientes e oxigênio. Essa organização confere ao osso elevada resistência mecânica, capacidade de remodelação e suporte às funções de sustentação, proteção e locomoção do organismo."
+,
+  "vsangue+nisolar": {
+    "objname": "Vasos Sanguíneos",
+    "description": "Percorrem os canais de Havers e de Volkmann, fornecendo oxigênio e nutrientes às células ósseas e removendo resíduos metabólicos, essenciais para a manutenção e remodelação do osso."
+  },
+  "ossocompacto+nisolar": {
+    "objname": "Osso Compacto",
+    "description": "Camada externa, densa e resistente, formada por ósteons organizados em lamelas concêntricas. Confere sustentação, proteção e resistência às cargas mecânicas."
+  },
+  "ossoesponjoso+nisolar": {
+    "objname": "Osso Esponjoso",
+    "description": "Tecido interno constituído por trabéculas interligadas que reduzem o peso do osso, distribuem as forças mecânicas e abrigam a medula óssea."
+  }
+}

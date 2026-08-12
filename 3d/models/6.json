@@ -1,0 +1,33 @@
+{
+  "objname": "Tecido do Intestino Delgado",
+  "objsystem": "Digestivo",
+  "objdescription": "O intestino delgado é revestido por tecido especializado na digestão e absorção de nutrientes. Sua parede é formada por mucosa, submucosa, camada muscular e serosa. A mucosa apresenta vilosidades e microvilosidades que ampliam a superfície absortiva, além de vasos sanguíneos e linfáticos responsáveis pelo transporte dos nutrientes absorvidos.",
+  "mucmusc": {
+    "objname": "Mucosa Muscularica",
+    "description": "Fina camada de músculo liso localizada na base da mucosa. Promove pequenos movimentos que auxiliam o contato da mucosa com o conteúdo intestinal e favorecem a absorção."
+  },
+  "mucosa": {
+    "objname": "Mucosa",
+    "description": "Camada mais interna do intestino delgado, formada por epitélio, lâmina própria e muscular da mucosa. É responsável pela digestão final e absorção dos nutrientes."
+  },
+  "serosa": {
+    "objname": "Serosa",
+    "description": "Camada mais externa do intestino delgado, composta por tecido conjuntivo e mesotélio. Protege o órgão e reduz o atrito com estruturas vizinhas durante os movimentos."
+  },
+  "submucosa": {
+    "objname": "Submucosa",
+    "description": "Camada de tecido conjuntivo que sustenta a mucosa, contendo vasos sanguíneos, vasos linfáticos, nervos e glândulas, fornecendo suporte estrutural e nutrição."
+  },
+  "villus": {
+    "objname": "Villus",
+    "description": "Projeções da mucosa que aumentam significativamente a área de absorção. Cada vilo contém capilares sanguíneos e um vaso linfático central."
+  },
+  "vlinf": {
+    "objname": "Vasos Linfáticos",
+    "description": "Vasos localizados no interior das vilosidades que absorvem lipídios e vitaminas lipossolúveis, transportando-os pela linfa até a circulação."
+  },
+  "vsangue": {
+    "objname": "Vasos Sanguíneos",
+    "description": "Rede de capilares presente nas vilosidades que recebe glicose, aminoácidos, sais minerais e outras moléculas absorvidas, conduzindo-as à circulação."
+  }
+}

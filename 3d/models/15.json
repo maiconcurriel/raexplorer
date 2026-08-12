@@ -1,0 +1,87 @@
+{
+  "objname": "Anatomia das Camadas da Pele Humana",
+  "objsystem": "Tegumentar",
+  "objdescription": "A pele é o maior órgão do corpo humano e forma a principal barreira entre o organismo e o ambiente externo. É composta principalmente pela epiderme, derme e tecido subcutâneo. A epiderme contém diferentes camadas de células, incluindo queratinócitos e melanócitos, enquanto a derme abriga vasos sanguíneos, folículos pilosos, músculos, receptores sensoriais e outras estruturas. O tecido subcutâneo contém principalmente gordura e tecido conjuntivo, contribuindo para proteção, isolamento térmico e armazenamento de energia. A pele também participa da percepção sensorial, regulação da temperatura e proteção contra agentes externos.",
+  "linkedModels": [],
+  "resources": [],
+
+  "ArrectorPili": {
+    "objname": "Músculo Eretor do Pelo",
+    "description": "Pequeno músculo liso ligado ao folículo piloso. Sua contração provoca a elevação do pelo e pode produzir o aspecto de pele arrepiada, além de estar associada à atividade das glândulas sebáceas."
+  },
+
+  "StratumReticulare": {
+    "objname": "Camada Reticular",
+    "description": "Região profunda da derme formada principalmente por tecido conjuntivo denso e fibras de colágeno e elastina. Proporciona resistência, elasticidade e sustentação à pele."
+  },
+
+  "SubcutanousTissue": {
+    "objname": "Tecido Subcutâneo",
+    "description": "Camada localizada abaixo da derme, formada principalmente por tecido adiposo e conjuntivo. Atua no armazenamento de energia, isolamento térmico, proteção contra impactos e fixação da pele aos tecidos subjacentes."
+  },
+
+  "StratumSpinosum": {
+    "objname": "Estrato Espinhoso",
+    "description": "Camada da epiderme localizada acima do estrato basal. É formada principalmente por queratinócitos unidos por desmossomos, contribuindo para a resistência mecânica e para a produção de queratina."
+  },
+
+  "Melanocytes": {
+    "objname": "Melanócitos",
+    "description": "Células especializadas localizadas principalmente no estrato basal da epiderme. Produzem melanina, pigmento que contribui para a coloração da pele e ajuda a proteger as células contra a radiação ultravioleta."
+  },
+
+  "Dermis": {
+    "objname": "Derme",
+    "description": "Camada de tecido conjuntivo localizada abaixo da epiderme. Contém vasos sanguíneos, nervos, receptores sensoriais, folículos pilosos, glândulas e músculos, fornecendo sustentação, nutrição e resistência à pele."
+  },
+
+  "Arteries": {
+    "objname": "Artérias",
+    "description": "Vasos sanguíneos que transportam sangue sob maior pressão para os tecidos da pele. Fornecem oxigênio e nutrientes e participam da regulação da temperatura corporal por meio da alteração do fluxo sanguíneo."
+  },
+
+  "Veins": {
+    "objname": "Veias",
+    "description": "Vasos sanguíneos que conduzem o sangue dos tecidos da pele de volta à circulação. Participam da drenagem sanguínea e também contribuem para a regulação da temperatura corporal."
+  },
+
+  "StratumGranulosum": {
+    "objname": "Estrato Granuloso",
+    "description": "Camada da epiderme localizada acima do estrato espinhoso. Suas células acumulam grânulos relacionados à formação de queratina e de uma barreira que reduz a perda de água pela pele."
+  },
+
+  "StratumCorneum": {
+    "objname": "Estrato Córneo",
+    "description": "Camada mais superficial da epiderme, formada principalmente por células queratinizadas. Atua como uma importante barreira física e química, protegendo o organismo contra agentes externos e reduzindo a perda de água."
+  },
+
+  "Hair": {
+    "objname": "Pelo",
+    "description": "Estrutura queratinizada produzida pelos folículos pilosos. Participa da proteção da pele e pode contribuir para a percepção sensorial e para a conservação de calor em determinadas regiões do corpo."
+  },
+
+  "FoliculusPili": {
+    "objname": "Folículo Piloso",
+    "description": "Estrutura localizada na derme que envolve e sustenta a raiz do pelo. É responsável pela formação e crescimento do pelo e está associado ao músculo eretor e às glândulas sebáceas."
+  },
+
+  "HairShaft": {
+    "objname": "Haste do Pelo",
+    "description": "Porção do pelo que se projeta acima da superfície da pele. É formada principalmente por células queratinizadas e pode ser dividida em cutícula, córtex e, em pelos mais espessos, medula."
+  },
+
+  "PacinianCorpuscles": {
+    "objname": "Corpúsculos de Pacini",
+    "description": "Receptores sensoriais localizados principalmente na derme profunda e no tecido subcutâneo. Detectam especialmente pressão profunda e vibrações, contribuindo para a percepção tátil."
+  },
+
+  "MekelCells": {
+    "objname": "Células de Merkel",
+    "description": "Células especializadas localizadas na camada basal da epiderme, associadas a terminações nervosas. Participam da percepção de estímulos mecânicos leves e do tato discriminativo."
+  },
+
+  "LangerhanCells": {
+    "objname": "Células de Langerhans",
+    "description": "Células do sistema imunológico encontradas principalmente na epiderme. Capturam e processam substâncias estranhas, participando da defesa imunológica e da identificação de possíveis agentes invasores."
+  }
+}

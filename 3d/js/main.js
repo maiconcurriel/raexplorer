@@ -8,12 +8,22 @@ window.handleSort = handleSort;
 window.removeFilter = removeFilter;
 window.clearAllFilters = clearAllFilters;
 
-const modelosIDs = [1, 2, 3, 4, 5];
+const modelosIDs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
 
 const FILTER_LABELS = {
-    all: 'Todos', nervoso: 'Nervoso', cardio: 'Cardiovascular',
-    esqueletico: 'Esquelético', muscular: 'Muscular', resp: 'Respiratório',
-    digest: 'Digestivo', urin: 'Urinário', senso: 'Sensorial'
+    all: 'Todos', 
+    nervoso: 'Nervoso', 
+    cardio: 'Cardiovascular', 
+    tegum: 'Tegumentar', 
+    celul: 'Célula', 
+    esqueletico: 'Esquelético', 
+    muscular: 'Muscular', 
+    resp: 'Respiratório', 
+    digest: 'Digestivo', 
+    urin: 'Urinário', 
+    senso: 'Sensorial', 
+    repro: 'Reprodutor', 
+    infec: 'Infeccioso'
 };
 
 let modelosData = [];
@@ -39,14 +49,22 @@ async function carregarModelos() {
     const sistemaBruto = data.objsystem || "";
     let categoriaChave = 'all';
 
-    if (sistemaBruto.toLowerCase().includes('nervoso')) categoriaChave = 'nervoso';
-    else if (sistemaBruto.toLowerCase().includes('cardio')) categoriaChave = 'cardio';
-    else if (sistemaBruto.toLowerCase().includes('esquel')) categoriaChave = 'esqueletico';
-    else if (sistemaBruto.toLowerCase().includes('muscular')) categoriaChave = 'muscular';
-    else if (sistemaBruto.toLowerCase().includes('respira')) categoriaChave = 'resp';
-    else if (sistemaBruto.toLowerCase().includes('digest')) categoriaChave = 'digest';
-    else if (sistemaBruto.toLowerCase().includes('urin')) categoriaChave = 'urin';
-    else if (sistemaBruto.toLowerCase().includes('senso')) categoriaChave = 'senso';
+    // 👇 ADICIONE ESTA LINHA para remover acentos (ex: "célula" vira "celula")
+    const sistemaLimpo = sistemaBruto.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
+    // 🔽 Mude as checagens para ler 'sistemaLimpo' em vez de 'sistemaBruto.toLowerCase()'
+    if (sistemaLimpo.includes('nervoso')) categoriaChave = 'nervoso';
+    else if (sistemaLimpo.includes('cardio')) categoriaChave = 'cardio';
+    else if (sistemaLimpo.includes('tegum')) categoriaChave = 'tegum';
+    else if (sistemaLimpo.includes('celul')) categoriaChave = 'celul'; // 👈 Agora vai bater perfeitamente!
+    else if (sistemaLimpo.includes('esquel')) categoriaChave = 'esqueletico';
+    else if (sistemaLimpo.includes('muscular')) categoriaChave = 'muscular';
+    else if (sistemaLimpo.includes('respira')) categoriaChave = 'resp';
+    else if (sistemaLimpo.includes('digest')) categoriaChave = 'digest';
+    else if (sistemaLimpo.includes('urin')) categoriaChave = 'urin';
+    else if (sistemaLimpo.includes('senso')) categoriaChave = 'senso';
+    else if (sistemaLimpo.includes('repro')) categoriaChave = 'repro';
+    else if (sistemaLimpo.includes('infec')) categoriaChave = 'infec';
 
     return { 
         ...data, 
@@ -429,6 +447,7 @@ async function carregarModelos() {
     const frame = document.getElementById('viewer-frame');
     modal.style.display = 'none';
     frame.src = "";
+    document.body.style.overflow = 'auto';
   }
 
   // Executa a animação de esmaecimento e encerramento da tela de boas-vindas, exibindo a aplicação principal.

@@ -1,0 +1,909 @@
+{
+  "objname": "Sistema Muscular Masculino",
+  "objsystem": "Muscular",
+  "objdescription": "O sistema muscular masculino é constituído principalmente por músculos esqueléticos, responsáveis pelos movimentos voluntários, manutenção da postura, estabilização das articulações e produção de calor. O modelo apresenta músculos da cabeça, pescoço, tronco, membros superiores, membros inferiores e região pélvica, além de fáscias, tendões e algumas estruturas musculares profundas. Os músculos da face participam das expressões faciais, mastigação, movimentos dos olhos, língua e deglutição. Os músculos do pescoço auxiliam nos movimentos da cabeça, da coluna cervical e da laringe. No tronco, diferentes grupos musculares participam da respiração, movimentação da coluna, estabilização do tórax e abdome. Nos membros superiores, os músculos controlam movimentos dos ombros, braços, antebraços, punhos e mãos. Nos membros inferiores, atuam na movimentação dos quadris, joelhos, tornozelos e pés, permitindo ações como caminhar, correr e manter o equilíbrio. Estruturas como tendões conectam músculos aos ossos, enquanto fáscias envolvem e organizam grupos musculares. O conjunto dessas estruturas permite a execução coordenada dos movimentos e contribui para a sustentação e proteção do corpo.",
+
+  "linkedModels": [],
+  "resources": [],
+
+  "Occipitofrontalis_epicranius": {
+    "objname": "Músculo Occipitofrontal",
+    "description": "Musculus occipitofrontalis"
+  },
+  "Temporal_fascia": {
+    "objname": "Fáscia Temporal",
+    "description": "Fascia temporalis"
+  },
+  "Temporalis": {
+    "objname": "Músculo Temporal",
+    "description": "Musculus temporalis"
+  },
+  "Auricularis_superior": {
+    "objname": "Músculo Auricular Superior",
+    "description": "Musculus auricularis superior"
+  },
+  "Auricularis_anterior": {
+    "objname": "Músculo Auricular Anterior",
+    "description": "Musculus auricularis anterior"
+  },
+  "Orbicularis_oculi": {
+    "objname": "Músculo Orbicular dos Olhos",
+    "description": "Musculus orbicularis oculi"
+  },
+  "Depressor_supercilli": {
+    "objname": "Músculo Depressor da Sobrancelha",
+    "description": "Musculus depressor supercilii"
+  },
+  "Corrugator_supercilii": {
+    "objname": "Músculo Corrugador do Supercílio",
+    "description": "Musculus corrugator supercilii"
+  },
+  "Levator_palpebrae_superioris": {
+    "objname": "Músculo Levantador da Pálpebra Superior",
+    "description": "Musculus levator palpebrae superioris"
+  },
+  "Procerus": {
+    "objname": "Músculo Prócero",
+    "description": "Musculus procerus"
+  },
+  "Nasalis_transverse_portion": {
+    "objname": "Músculo Nasal – Porção Transversa",
+    "description": "Musculus nasalis, pars transversa"
+  },
+  "Levator_labii_superioris": {
+    "objname": "Músculo Levantador do Lábio Superior",
+    "description": "Musculus levator labii superioris"
+  },
+  "Zygomaticus_minor": {
+    "objname": "Músculo Zigomático Menor",
+    "description": "Musculus zygomaticus minor"
+  },
+  "Levator_anguli_oris": {
+    "objname": "Músculo Levantador do Ângulo da Boca",
+    "description": "Musculus levator anguli oris"
+  },
+  "Levator_labii_superioris_alaeque_nasi": {
+    "objname": "Músculo Levantador do Lábio Superior e da Asa do Nariz",
+    "description": "Musculus levator labii superioris alaeque nasi"
+  },
+  "Superior_oblique": {
+    "objname": "Músculo Oblíquo Superior do Olho",
+    "description": "Musculus obliquus superior"
+  },
+  "superior_rectus": {
+    "objname": "Músculo Reto Superior do Olho",
+    "description": "Musculus rectus superior"
+  },
+  "Supinator": {
+    "objname": "Músculo Supinador",
+    "description": "Musculus supinator"
+  },
+  "Supraspinatus": {
+    "objname": "Músculo Supraespinal",
+    "description": "Musculus supraspinatus"
+  },
+  "Tibialis_anterior": {
+    "objname": "Músculo Tibial Anterior",
+    "description": "Musculus tibialis anterior"
+  },
+  "Tibialis_posterior": {
+    "objname": "Músculo Tibial Posterior",
+    "description": "Musculus tibialis posterior"
+  },
+  "Thyrohyoid": {
+    "objname": "Músculo Tireo-Hioideo",
+    "description": "Musculus thyrohyoideus"
+  },
+  "Tensor_fascia_lata": {
+    "objname": "Músculo Tensor da Fáscia Lata",
+    "description": "Musculus tensor fasciae latae"
+  },
+  "Transversus_abdominis": {
+    "objname": "Músculo Transverso do Abdome",
+    "description": "Musculus transversus abdominis"
+  },
+  "Transversus_thoracis": {
+    "objname": "Músculo Transverso do Tórax",
+    "description": "Musculus transversus thoracis"
+  },
+  "Trapezius": {
+    "objname": "Músculo Trapézio",
+    "description": "Musculus trapezius"
+  },
+  "Tres_major": {
+    "objname": "Músculo Redondo Maior",
+    "description": "Musculus teres major"
+  },
+  "Triceps": {
+    "objname": "Músculo Tríceps Braquial",
+    "description": "Musculus triceps brachii"
+  },
+  "Triceps_lateral_head": {
+    "objname": "Cabeça Lateral do Tríceps Braquial",
+    "description": "Caput laterale musculi tricipitis brachii"
+  },
+  "Triceps_long_head": {
+    "objname": "Cabeça Longa do Tríceps Braquial",
+    "description": "Caput longum musculi tricipitis brachii"
+  },
+  "Triceps_tendon": {
+    "objname": "Tendão do Tríceps Braquial",
+    "description": "Tendo musculi tricipitis brachii"
+  },
+  "Vastus_intermedius": {
+    "objname": "Músculo Vasto Intermédio",
+    "description": "Musculus vastus intermedius"
+  },
+  "Vastus_Lateralis": {
+    "objname": "Músculo Vasto Lateral",
+    "description": "Musculus vastus lateralis"
+  },
+  "Vastus_medialis": {
+    "objname": "Músculo Vasto Medial",
+    "description": "Musculus vastus medialis"
+  },
+  "Zygomaticus_major": {
+    "objname": "Músculo Zigomático Maior",
+    "description": "Musculus zygomaticus major"
+  },
+  "Superior_gemellus": {
+    "objname": "Músculo Gêmeo Superior",
+    "description": "Musculus gemellus superior"
+  },
+  "Superficial_transverse_perineal": {
+    "objname": "Músculo Transverso Superficial do Períneo",
+    "description": "Musculus transversus perinei superficialis"
+  },
+  "Subscapularis": {
+    "objname": "Músculo Subescapular",
+    "description": "Musculus subscapularis"
+  },
+  "Subcostal": {
+    "objname": "Músculo Subcostal",
+    "description": "Musculi subcostales"
+  },
+  "Subclavius": {
+    "objname": "Músculo Subclávio",
+    "description": "Musculus subclavius"
+  },
+  "Stylohyoid": {
+    "objname": "Músculo Estilo-Hioideo",
+    "description": "Musculus stylohyoideus"
+  },
+  "Styloglossus": {
+    "objname": "Músculo Estiloglosso",
+    "description": "Musculus styloglossus"
+  },
+  "Sternothyroid": {
+    "objname": "Músculo Esternotireoideo",
+    "description": "Musculus sternothyroideus"
+  },
+  "Sternohyoid": {
+    "objname": "Músculo Esterno-Hioideo",
+    "description": "Musculus sternohyoideus"
+  },
+  "Sternocleidomastoid": {
+    "objname": "Músculo Esternocleidomastóideo",
+    "description": "Musculus sternocleidomastoideus"
+  },
+  "Sternalis": {
+    "objname": "Músculo Esternal",
+    "description": "Musculus sternalis"
+  },
+  "Splenius_cervicis": {
+    "objname": "Músculo Esplênio do Pescoço",
+    "description": "Musculus splenius cervicis"
+  },
+  "Splenius_capitis": {
+    "objname": "Músculo Esplênio da Cabeça",
+    "description": "Musculus splenius capitis"
+  },
+  "Spinalis_thoracis": {
+    "objname": "Músculo Espinal do Tórax",
+    "description": "Musculus spinalis thoracis"
+  },
+  "Spinalis_cervicis": {
+    "objname": "Músculo Espinal do Pescoço",
+    "description": "Musculus spinalis cervicis"
+  },
+  "Soleus": {
+    "objname": "Músculo Sóleo",
+    "description": "Musculus soleus"
+  },
+  "Serratus_posterior_superior": {
+    "objname": "Músculo Serrátil Posterior Superior",
+    "description": "Musculus serratus posterior superior"
+  },
+  "Serratus_posterior_inferior": {
+    "objname": "Músculo Serrátil Posterior Inferior",
+    "description": "Musculus serratus posterior inferior"
+  },
+  "Serratus_anterior": {
+    "objname": "Músculo Serrátil Anterior",
+    "description": "Musculus serratus anterior"
+  },
+  "Semitendinosus": {
+    "objname": "Músculo Semitendíneo",
+    "description": "Musculus semitendinosus"
+  },
+  "Semispinalis_thoracis": {
+    "objname": "Músculo Semiespinal do Tórax",
+    "description": "Musculus semispinalis thoracis"
+  },
+  "Semispinalis_cervicis": {
+    "objname": "Músculo Semiespinal do Pescoço",
+    "description": "Musculus semispinalis cervicis"
+  },
+  "Semispinalis_capitis": {
+    "objname": "Músculo Semiespinal da Cabeça",
+    "description": "Musculus semispinalis capitis"
+  },
+  "Semimembranosus": {
+    "objname": "Músculo Semimembranáceo",
+    "description": "Musculus semimembranosus"
+  },
+  "Scalene_posterior": {
+    "objname": "Músculo Escaleno Posterior",
+    "description": "Musculus scalenus posterior"
+  },
+  "Scalene_middle": {
+    "objname": "Músculo Escaleno Médio",
+    "description": "Musculus scalenus medius"
+  },
+  "Scalene_anterior": {
+    "objname": "Músculo Escaleno Anterior",
+    "description": "Musculus scalenus anterior"
+  },
+  "Sartorius": {
+    "objname": "Músculo Sartório",
+    "description": "Musculus sartorius"
+  },
+  "Rotatores_thoracis_longi": {
+    "objname": "Músculos Rotadores Longos do Tórax",
+    "description": "Musculi rotatores thoracis longi"
+  },
+  "Rotatores_thoracis_breves": {
+    "objname": "Músculos Rotadores Curtos do Tórax",
+    "description": "Musculi rotatores thoracis breves"
+  },
+  "Risorius": {
+    "objname": "Músculo Risório",
+    "description": "Musculus risorius"
+  },
+  "Rhomboideus_minor": {
+    "objname": "Músculo Romboide Menor",
+    "description": "Musculus rhomboideus minor"
+  },
+  "Rhomboideus_major": {
+    "objname": "Músculo Romboide Maior",
+    "description": "Musculus rhomboideus major"
+  },
+  "Rectus_femoris": {
+    "objname": "Músculo Reto Femoral",
+    "description": "Musculus rectus femoris"
+  },
+  "Rectus_capitis_posterior_minor": {
+    "objname": "Músculo Reto Posterior Menor da Cabeça",
+    "description": "Musculus rectus capitis posterior minor"
+  },
+  "Rectus_capitis_posterior_major": {
+    "objname": "Músculo Reto Posterior Maior da Cabeça",
+    "description": "Musculus rectus capitis posterior major"
+  },
+  "Rectus_capitis_lateralis": {
+    "objname": "Músculo Reto Lateral da Cabeça",
+    "description": "Musculus rectus capitis lateralis"
+  },
+  "Rectus_capitis_anterior": {
+    "objname": "Músculo Reto Anterior da Cabeça",
+    "description": "Musculus rectus capitis anterior"
+  },
+  "Rectus_abodominis": {
+    "objname": "Músculo Reto do Abdome",
+    "description": "Musculus rectus abdominis"
+  },
+  "Quadratus_plantea": {
+    "objname": "Músculo Quadrado Plantar",
+    "description": "Musculus quadratus plantae"
+  },
+  "Quadratus_lumborum": {
+    "objname": "Músculo Quadrado Lombar",
+    "description": "Musculus quadratus lumborum"
+  },
+  "Quadratus_femoris": {
+    "objname": "Músculo Quadrado Femoral",
+    "description": "Musculus quadratus femoris"
+  },
+  "Pyramidalis": {
+    "objname": "Músculo Piramidal",
+    "description": "Musculus pyramidalis"
+  },
+  "Pubococccygeus": {
+    "objname": "Músculo Pubococcígeo",
+    "description": "Musculus pubococcygeus"
+  },
+  "Psoas_minor": {
+    "objname": "Músculo Psoas Menor",
+    "description": "Musculus psoas minor"
+  },
+  "Psoas_major": {
+    "objname": "Músculo Psoas Maior",
+    "description": "Musculus psoas major"
+  },
+  "Pronator_teres": {
+    "objname": "Músculo Pronador Redondo",
+    "description": "Musculus pronator teres"
+  },
+  "Pronator_quadratus": {
+    "objname": "Músculo Pronador Quadrado",
+    "description": "Musculus pronator quadratus"
+  },
+  "Posterior_cricoarytenoid": {
+    "objname": "Músculo Cricoaritenoideo Posterior",
+    "description": "Musculus cricoarytenoideus posterior"
+  },
+  "Popliteus": {
+    "objname": "Músculo Poplíteo",
+    "description": "Musculus popliteus"
+  },
+  "Platysma": {
+    "objname": "Músculo Platisma",
+    "description": "Musculus platysma"
+  },
+  "Plantaris": {
+    "objname": "Músculo Plantar",
+    "description": "Musculus plantaris"
+  },
+  "Plantar_interossei": {
+    "objname": "Músculos Interósseos Plantares",
+    "description": "Musculi interossei plantares"
+  },
+  "Piriformis": {
+    "objname": "Músculo Piriforme",
+    "description": "Musculus piriformis"
+  },
+  "Pectoralis_miinor": {
+    "objname": "Músculo Peitoral Menor",
+    "description": "Musculus pectoralis minor"
+  },
+  "Pectoralis_major": {
+    "objname": "Músculo Peitoral Maior",
+    "description": "Musculus pectoralis major"
+  },
+  "Pectineus": {
+    "objname": "Músculo Pectíneo",
+    "description": "Musculus pectineus"
+  },
+  "Palmaris_longus": {
+    "objname": "Músculo Palmar Longo",
+    "description": "Musculus palmaris longus"
+  },
+  "Palmaris_brevis": {
+    "objname": "Músculo Palmar Curto",
+    "description": "Musculus palmaris brevis"
+  },
+  "Palmar_interosseous_3rd": {
+    "objname": "Músculo Interósseo Palmar do Terceiro Dedo",
+    "description": "Musculus interosseus palmaris tertius"
+  },
+  "Palmar_interosseous_2nd": {
+    "objname": "Músculo Interósseo Palmar do Segundo Dedo",
+    "description": "Musculus interosseus palmaris secundus"
+  },
+  "Palmar_interosseous_1st": {
+    "objname": "Músculo Interósseo Palmar do Primeiro Dedo",
+    "description": "Musculus interosseus palmaris primus"
+  },
+  "Palatoglossus": {
+    "objname": "Músculo Palatoglosso",
+    "description": "Musculus palatoglossus"
+  },
+  "Orbicularis_oris": {
+    "objname": "Músculo Orbicular da Boca",
+    "description": "Musculus orbicularis oris"
+  },
+  "Opponens_pollicis": {
+    "objname": "Músculo Oponente do Polegar",
+    "description": "Musculus opponens pollicis"
+  },
+  "Opponens_digiti_minimi": {
+    "objname": "Músculo Oponente do Dedo Mínimo",
+    "description": "Musculus opponens digiti minimi"
+  },
+  "Omohyoid": {
+    "objname": "Músculo Omo-Hioideo",
+    "description": "Musculus omohyoideus"
+  },
+  "Obturator_internus": {
+    "objname": "Músculo Obturador Interno",
+    "description": "Musculus obturatorius internus"
+  },
+  "Obturator_externus": {
+    "objname": "Músculo Obturador Externo",
+    "description": "Musculus obturatorius externus"
+  },
+  "Obliqyys_capitis_superior": {
+    "objname": "Músculo Oblíquo Superior da Cabeça",
+    "description": "Musculus obliquus capitis superior"
+  },
+  "Nasalis_alarportion": {
+    "objname": "Músculo Nasal – Porção Alar",
+    "description": "Musculus nasalis, pars alaris"
+  },
+  "Mylohyoid": {
+    "objname": "Músculo Milo-Hioideo",
+    "description": "Musculus mylohyoideus"
+  },
+  "Multifidus": {
+    "objname": "Músculo Multífido",
+    "description": "Musculus multifidus"
+  },
+  "Mentalis": {
+    "objname": "Músculo Mentual",
+    "description": "Musculus mentalis"
+  },
+  "Medial_rectus": {
+    "objname": "Músculo Reto Medial do Olho",
+    "description": "Musculus rectus medialis"
+  },
+  "Medial_pterygoid": {
+    "objname": "Músculo Pterigoideo Medial",
+    "description": "Musculus pterygoideus medialis"
+  },
+  "Masseter_superficial": {
+    "objname": "Músculo Masseter – Porção Superficial",
+    "description": "Musculus masseter, pars superficialis"
+  },
+  "Masseter_deep": {
+    "objname": "Músculo Masseter – Porção Profunda",
+    "description": "Musculus masseter, pars profunda"
+  },
+  "Lumbricals": {
+    "objname": "Músculos Lumbricais",
+    "description": "Musculi lumbricales"
+  },
+  "Lumbrical_4th": {
+    "objname": "Quarto Músculo Lumbrical",
+    "description": "Musculus lumbricalis quartus"
+  },
+  "Lumbrical_3rd": {
+    "objname": "Terceiro Músculo Lumbrical",
+    "description": "Musculus lumbricalis tertius"
+  },
+  "Lumbrical_2nd": {
+    "objname": "Segundo Músculo Lumbrical",
+    "description": "Musculus lumbricalis secundus"
+  },
+  "Lumbrical_1st": {
+    "objname": "Primeiro Músculo Lumbrical",
+    "description": "Musculus lumbricalis primus"
+  },
+  "Longus_colli": {
+    "objname": "Músculo Longo do Pescoço",
+    "description": "Musculus longus colli"
+  },
+  "Longus_capitis": {
+    "objname": "Músculo Longo da Cabeça",
+    "description": "Musculus longus capitis"
+  },
+  "Longissimus_thoracis": {
+    "objname": "Músculo Longuíssimo do Tórax",
+    "description": "Musculus longissimus thoracis"
+  },
+  "Longissimus_cervicis": {
+    "objname": "Músculo Longuíssimo do Pescoço",
+    "description": "Musculus longissimus cervicis"
+  },
+  "Longissimus_capitis": {
+    "objname": "Músculo Longuíssimo da Cabeça",
+    "description": "Musculus longissimus capitis"
+  },
+  "Ligament_Treitz": {
+    "objname": "Ligamento de Treitz",
+    "description": "Musculus suspensorius duodeni"
+  },
+  "Levatores_costarum_breves": {
+    "objname": "Músculos Levantadores Curtos das Costelas",
+    "description": "Musculi levatores costarum breves"
+  },
+  "Levatores_costarum": {
+    "objname": "Músculos Levantadores das Costelas",
+    "description": "Musculi levatores costarum"
+  },
+  "Lesser_omentum": {
+    "objname": "Omento Menor",
+    "description": "Omentum minus"
+  },
+  "Latissimus_dorsi": {
+    "objname": "Músculo Latíssimo do Dorso",
+    "description": "Musculus latissimus dorsi"
+  },
+  "Lateral_rectus": {
+    "objname": "Músculo Reto Lateral do Olho",
+    "description": "Musculus rectus lateralis"
+  },
+  "Lateral_pterygoid": {
+    "objname": "Músculo Pterigoideo Lateral",
+    "description": "Musculus pterygoideus lateralis"
+  },
+  "Intertransversii_laterales_lumborum": {
+    "objname": "Músculos Intertransversários Laterais Lombares",
+    "description": "Musculi intertransversarii laterales lumborum"
+  },
+  "Intertransversarii_mediales_lumborum": {
+    "objname": "Músculos Intertransversários Mediais Lombares",
+    "description": "Musculi intertransversarii mediales lumborum"
+  },
+  "Intertransversarii_anteriores_cervicis": {
+    "objname": "Músculos Intertransversários Anteriores do Pescoço",
+    "description": "Musculi intertransversarii anteriores cervicis"
+  },
+  "Interspinales_cervicis": {
+    "objname": "Músculos Interespinhais do Pescoço",
+    "description": "Musculi interspinales cervicis"
+  },
+  "Internal_oblique": {
+    "objname": "Músculo Oblíquo Interno do Abdome",
+    "description": "Musculus obliquus internus abdominis"
+  },
+  "Internal_intercostal": {
+    "objname": "Músculos Intercostais Internos",
+    "description": "Musculi intercostales interni"
+  },
+  "Interansversarii_posteriores_cervicis": {
+    "objname": "Músculos Intertransversários Posteriores do Pescoço",
+    "description": "Musculi intertransversarii posteriores cervicis"
+  },
+  "Infraspinatus": {
+    "objname": "Músculo Infraespinal",
+    "description": "Musculus infraspinatus"
+  },
+  "Inferior_rectus": {
+    "objname": "Músculo Reto Inferior do Olho",
+    "description": "Musculus rectus inferior"
+  },
+  "Inferior_oblique": {
+    "objname": "Músculo Oblíquo Inferior do Olho",
+    "description": "Musculus obliquus inferior"
+  },
+  "Inferior_gemellus": {
+    "objname": "Músculo Gêmeo Inferior",
+    "description": "Musculus gemellus inferior"
+  },
+  "Illiocostalis_thoracis": {
+    "objname": "Músculo Iliocostal do Tórax",
+    "description": "Musculus iliocostalis thoracis"
+  },
+  "Illiocostalis_cervicis": {
+    "objname": "Músculo Iliocostal do Pescoço",
+    "description": "Musculus iliocostalis cervicis"
+  },
+  "Illiococcygeus": {
+    "objname": "Músculo Iliococcígeo",
+    "description": "Musculus iliococcygeus"
+  },
+  "Iliocostalis_lumborum": {
+    "objname": "Músculo Iliocostal Lombar",
+    "description": "Musculus iliocostalis lumborum"
+  },
+  "Iliacus": {
+    "objname": "Músculo Ilíaco",
+    "description": "Musculus iliacus"
+  },
+  "Hyoglossus": {
+    "objname": "Músculo Hio-glosso",
+    "description": "Musculus hyoglossus"
+  },
+  "Greater_omentum": {
+    "objname": "Omento Maior",
+    "description": "Omentum majus"
+  },
+  "Gracilis": {
+    "objname": "Músculo Grácil",
+    "description": "Musculus gracilis"
+  },
+  "Gluteus_minimus": {
+    "objname": "Músculo Glúteo Mínimo",
+    "description": "Musculus gluteus minimus"
+  },
+  "Gluteus_medius": {
+    "objname": "Músculo Glúteo Médio",
+    "description": "Musculus gluteus medius"
+  },
+  "Gluteus_maximus": {
+    "objname": "Músculo Glúteo Máximo",
+    "description": "Musculus gluteus maximus"
+  },
+  "Geniohyoid": {
+    "objname": "Músculo Gênio-Hioideo",
+    "description": "Musculus geniohyoideus"
+  },
+  "Genioglossus": {
+    "objname": "Músculo Genioglosso",
+    "description": "Musculus genioglossus"
+  },
+  "Gastrocnemius": {
+    "objname": "Músculo Gastrocnêmio",
+    "description": "Musculus gastrocnemius"
+  },
+  "Flexor_pollicis_longus": {
+    "objname": "Músculo Flexor Longo do Polegar",
+    "description": "Musculus flexor pollicis longus"
+  },
+  "Flexor_pollicis_brevis": {
+    "objname": "Músculo Flexor Curto do Polegar",
+    "description": "Musculus flexor pollicis brevis"
+  },
+  "Flexor_Hallucis_longus": {
+    "objname": "Músculo Flexor Longo do Hálux",
+    "description": "Musculus flexor hallucis longus"
+  },
+  "Flexor_hallucis_brevis": {
+    "objname": "Músculo Flexor Curto do Hálux",
+    "description": "Musculus flexor hallucis brevis"
+  },
+  "Flexor_digitorum_superficialis": {
+    "objname": "Músculo Flexor Superficial dos Dedos",
+    "description": "Musculus flexor digitorum superficialis"
+  },
+  "Flexor_digitorum_profundus": {
+    "objname": "Músculo Flexor Profundo dos Dedos",
+    "description": "Musculus flexor digitorum profundus"
+  },
+  "Flexor_digitorum": {
+    "objname": "Músculo Flexor dos Dedos",
+    "description": "Musculus flexor digitorum"
+  },
+  "Flexor_digitorum_brevis": {
+    "objname": "Músculo Flexor Curto dos Dedos",
+    "description": "Musculus flexor digitorum brevis"
+  },
+  "Flexor_digiti_minimi_brevis": {
+    "objname": "Músculo Flexor Curto do Dedo Mínimo",
+    "description": "Musculus flexor digiti minimi brevis"
+  },
+  "Flexor_Carpi_ulnaris": {
+    "objname": "Músculo Flexor Ulnar do Carpo",
+    "description": "Musculus flexor carpi ulnaris"
+  },
+  "Flexor_carpi_radialis": {
+    "objname": "Músculo Flexor Radial do Carpo",
+    "description": "Musculus flexor carpi radialis"
+  },
+  "Fibularis_tertius": {
+    "objname": "Músculo Fibular Terceiro",
+    "description": "Musculus fibularis tertius"
+  },
+  "Fibularis_longus": {
+    "objname": "Músculo Fibular Longo",
+    "description": "Musculus fibularis longus"
+  },
+  "Fibularis_brevis": {
+    "objname": "Músculo Fibular Curto",
+    "description": "Musculus fibularis brevis"
+  },
+  "External_oblique": {
+    "objname": "Músculo Oblíquo Externo do Abdome",
+    "description": "Musculus obliquus externus abdominis"
+  },
+  "External_intercostal": {
+    "objname": "Músculos Intercostais Externos",
+    "description": "Musculi intercostales externi"
+  },
+  "Extensor_pollicis_longus": {
+    "objname": "Músculo Extensor Longo do Polegar",
+    "description": "Musculus extensor pollicis longus"
+  },
+  "Extensor_pollicis_brevis": {
+    "objname": "Músculo Extensor Curto do Polegar",
+    "description": "Musculus extensor pollicis brevis"
+  },
+  "Extensor_indicis": {
+    "objname": "Músculo Extensor do Indicador",
+    "description": "Musculus extensor indicis"
+  },
+  "Extensor_Hallucis_longus": {
+    "objname": "Músculo Extensor Longo do Hálux",
+    "description": "Musculus extensor hallucis longus"
+  },
+  "Extensor_hallucis_brevis": {
+    "objname": "Músculo Extensor Curto do Hálux",
+    "description": "Musculus extensor hallucis brevis"
+  },
+  "Extensor_digitorum": {
+    "objname": "Músculo Extensor dos Dedos",
+    "description": "Musculus extensor digitorum"
+  },
+  "Extensor_digitorum_longus": {
+    "objname": "Músculo Extensor Longo dos Dedos",
+    "description": "Musculus extensor digitorum longus"
+  },
+  "Extensor_digitorum_brevis": {
+    "objname": "Músculo Extensor Curto dos Dedos",
+    "description": "Musculus extensor digitorum brevis"
+  },
+  "Extensor_digiti_minimi": {
+    "objname": "Músculo Extensor do Dedo Mínimo",
+    "description": "Musculus extensor digiti minimi"
+  },
+  "Extensor_carpi_ulnaris": {
+    "objname": "Músculo Extensor Ulnar do Carpo",
+    "description": "Musculus extensor carpi ulnaris"
+  },
+  "Extensor_carpi_radialis_longus": {
+    "objname": "Músculo Extensor Radial Longo do Carpo",
+    "description": "Musculus extensor carpi radialis longus"
+  },
+  "Extensor_carpi_radialis_brevis": {
+    "objname": "Músculo Extensor Radial Curto do Carpo",
+    "description": "Musculus extensor carpi radialis brevis"
+  },
+  "Dorsal_interosseous_4th": {
+    "objname": "Quarto Músculo Interósseo Dorsal",
+    "description": "Musculus interosseus dorsalis quartus"
+  },
+  "Dorsal_interosseous_2nd": {
+    "objname": "Segundo Músculo Interósseo Dorsal",
+    "description": "Musculus interosseus dorsalis secundus"
+  },
+  "Dorsal_interosseous_1st": {
+    "objname": "Primeiro Músculo Interósseo Dorsal",
+    "description": "Musculus interosseus dorsalis primus"
+  },
+  "Dorsal_interossei": {
+    "objname": "Músculos Interósseos Dorsais",
+    "description": "Musculi interossei dorsales"
+  },
+  "Dorsal_intereosseous": {
+    "objname": "Músculo Interósseo Dorsal",
+    "description": "Musculus interosseus dorsalis"
+  },
+  "Digastric_fibrous_loop": {
+    "objname": "Alça Fibrosa do Músculo Digástrico",
+    "description": "Ansa tendinea musculi digastrici"
+  },
+  "Digastiric": {
+    "objname": "Músculo Digástrico",
+    "description": "Musculus digastricus"
+  },
+  "Diaphragm": {
+    "objname": "Diafragma",
+    "description": "Diaphragma"
+  },
+  "Depressor_septi": {
+    "objname": "Músculo Depressor do Septo Nasal",
+    "description": "Musculus depressor septi nasi"
+  },
+  "Depressor_labii_inferioris": {
+    "objname": "Músculo Depressor do Lábio Inferior",
+    "description": "Musculus depressor labii inferioris"
+  },
+  "Depressor_anguli": {
+    "objname": "Músculo Depressor do Ângulo da Boca",
+    "description": "Musculus depressor anguli oris"
+  },
+  "Deltoid_posterior_head": {
+    "objname": "Cabeça Posterior do Deltoide",
+    "description": "Musculus deltoideus, pars spinalis"
+  },
+  "Deltoid_middle_head": {
+    "objname": "Cabeça Média do Deltoide",
+    "description": "Musculus deltoideus, pars acromialis"
+  },
+  "Deltoid_anterior_head": {
+    "objname": "Cabeça Anterior do Deltoide",
+    "description": "Musculus deltoideus, pars clavicularis"
+  },
+  "Deep_transverse_perineal": {
+    "objname": "Músculo Transverso Profundo do Períneo",
+    "description": "Musculus transversus perinei profundus"
+  },
+  "Cricothyroid_straight_part": {
+    "objname": "Músculo Cricotireoideo – Porção Reta",
+    "description": "Musculus cricothyroideus, pars recta"
+  },
+  "Cricothyroid_oblique_part": {
+    "objname": "Músculo Cricotireoideo – Porção Oblíqua",
+    "description": "Musculus cricothyroideus, pars obliqua"
+  },
+  "Coracobrachialis": {
+    "objname": "Músculo Coracobraquial",
+    "description": "Musculus coracobrachialis"
+  },
+  "Common_tendinous_ring": {
+    "objname": "Anel Tendíneo Comum",
+    "description": "Anulus tendineus communis"
+  },
+  "Coccygeuis": {
+    "objname": "Músculo Coccígeo",
+    "description": "Musculus coccygeus"
+  },
+  "Buccinator": {
+    "objname": "Músculo Bucinador",
+    "description": "Musculus buccinator"
+  },
+  "Brachioradialis": {
+    "objname": "Músculo Braquiorradial",
+    "description": "Musculus brachioradialis"
+  },
+  "Brachialis": {
+    "objname": "Músculo Braquial",
+    "description": "Musculus brachialis"
+  },
+  "Bicipital_aponeurosis": {
+    "objname": "Aponeurose do Bíceps Braquial",
+    "description": "Aponeurosis musculi bicipitis brachii"
+  },
+  "Biceps_femoris_short_head": {
+    "objname": "Cabeça Curta do Bíceps Femoral",
+    "description": "Caput breve musculi bicipitis femoris"
+  },
+  "Biceps_brachii_short_head": {
+    "objname": "Cabeça Curta do Bíceps Braquial",
+    "description": "Caput breve musculi bicipitis brachii"
+  },
+  "Biceps_brachii_long_head": {
+    "objname": "Cabeça Longa do Bíceps Braquial",
+    "description": "Caput longum musculi bicipitis brachii"
+  },
+  "Auricularis_posterior": {
+    "objname": "Músculo Auricular Posterior",
+    "description": "Musculus auricularis posterior"
+  },
+  "Articularis_genu": {
+    "objname": "Músculo Articular do Joelho",
+    "description": "Musculus articularis genus"
+  },
+  "Anconeus": {
+    "objname": "Músculo Ancôneo",
+    "description": "Musculus anconeus"
+  },
+  "Anal_sphincter_internal": {
+    "objname": "Esfíncter Interno do Ânus",
+    "description": "Musculus sphincter ani internus"
+  },
+  "Anal_sphincter_external": {
+    "objname": "Esfíncter Externo do Ânus",
+    "description": "Musculus sphincter ani externus"
+  },
+  "Adductor_pollicis": {
+    "objname": "Músculo Adutor do Polegar",
+    "description": "Musculus adductor pollicis"
+  },
+  "Adductor_magnus": {
+    "objname": "Músculo Adutor Magno",
+    "description": "Musculus adductor magnus"
+  },
+  "Adductor_longus": {
+    "objname": "Músculo Adutor Longo",
+    "description": "Musculus adductor longus"
+  },
+  "Adductor_hallucis": {
+    "objname": "Músculo Adutor do Hálux",
+    "description": "Musculus adductor hallucis"
+  },
+  "Adductor_brevis": {
+    "objname": "Músculo Adutor Curto",
+    "description": "Musculus adductor brevis"
+  },
+  "Achilles_tendon": {
+    "objname": "Tendão de Aquiles",
+    "description": "Tendo calcaneus"
+  },
+  "Abductor_pollicis_longus": {
+    "objname": "Músculo Abdutor Longo do Polegar",
+    "description": "Musculus abductor pollicis longus"
+  },
+  "Abductor_pollicis_brevis": {
+    "objname": "Músculo Abdutor Curto do Polegar",
+    "description": "Musculus abductor pollicis brevis"
+  },
+  "Abductor_hallucis": {
+    "objname": "Músculo Abdutor do Hálux",
+    "description": "Musculus abductor hallucis"
+  },
+  "Abductor_digiti_minimi": {
+    "objname": "Músculo Abdutor do Dedo Mínimo",
+    "description": "Musculus abductor digiti minimi"
+  }
+}

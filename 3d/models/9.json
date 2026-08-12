@@ -1,0 +1,95 @@
+{
+  "objname": "Olho Humano",
+  "objsystem": "Sensorial",
+  "objdescription": "O olho humano é o órgão responsável pela visão, captando a luz do ambiente e convertendo-a em sinais nervosos interpretados pelo cérebro. Sua estrutura inclui componentes transparentes que permitem a passagem e focalização da luz, como a córnea, o humor vítreo e o cristalino, além de estruturas especializadas no controle da entrada de luz, como a íris e a pupila. A retina contém células fotorreceptoras que detectam estímulos luminosos, enquanto a coroide e os vasos sanguíneos fornecem nutrientes aos tecidos oculares. Músculos, nervos e estruturas anexas auxiliam nos movimentos, proteção, lubrificação e funcionamento adequado do olho.",
+
+  "BloodVessels": {
+    "objname": "Vasos Sanguíneos",
+    "description": "Rede de vasos responsável por fornecer oxigênio e nutrientes aos tecidos do olho e remover resíduos metabólicos. É especialmente importante para a manutenção da retina, coroide e demais estruturas oculares."
+  },
+
+  "Choroid": {
+    "objname": "Coroide",
+    "description": "Camada vascular localizada entre a retina e a esclera. É rica em vasos sanguíneos e fornece oxigênio e nutrientes à retina, além de conter pigmentos que ajudam a absorver o excesso de luz."
+  },
+
+  "CiliaryMuscles": {
+    "objname": "Músculos Ciliares",
+    "description": "Músculos responsáveis por alterar a tensão das fibras zonulares e modificar a curvatura do cristalino. Esse mecanismo, chamado acomodação, permite focalizar objetos localizados a diferentes distâncias."
+  },
+
+  "CiliaryProcesses": {
+    "objname": "Processos Ciliares",
+    "description": "Projeções da região ciliar responsáveis principalmente pela produção do humor aquoso. Também participam da sustentação do cristalino por meio das fibras zonulares."
+  },
+
+  "Cornea": {
+    "objname": "Córnea",
+    "description": "Estrutura transparente localizada na parte anterior do olho. Permite a entrada da luz e realiza grande parte da refração necessária para focalizá-la sobre a retina."
+  },
+
+  "CranialNerve": {
+    "objname": "Nervo Craniano",
+    "description": "O nervo óptico, associado ao segundo par craniano, transmite os sinais elétricos gerados pela retina até o cérebro, onde as informações visuais são processadas e interpretadas."
+  },
+
+  "HyaloidVitreous": {
+    "objname": "Humor Vítreo",
+    "description": "Substância transparente e gelatinosa que preenche a maior parte do interior do olho, entre o cristalino e a retina. Contribui para manter o formato do globo ocular e sustentar a retina."
+  },
+
+  "Iris": {
+    "objname": "Íris",
+    "description": "Estrutura muscular e pigmentada localizada entre a córnea e o cristalino. Controla a quantidade de luz que entra no olho ao modificar o diâmetro da pupila."
+  },
+
+  "LacrimalGland": {
+    "objname": "Glândula Lacrimal",
+    "description": "Glândula localizada na região superior e lateral da órbita, responsável pela produção da maior parte da lágrima. A secreção lacrimal lubrifica, protege e mantém a superfície ocular."
+  },
+
+  "Lens": {
+    "objname": "Cristalino",
+    "description": "Estrutura transparente e flexível localizada atrás da íris. Atua na focalização da luz sobre a retina e altera sua curvatura durante a acomodação para permitir a visão de objetos próximos ou distantes."
+  },
+
+  "Muscles": {
+    "objname": "Músculos Extrínsecos do Olho",
+    "description": "Conjunto de músculos responsáveis pelos movimentos do globo ocular. Permitem direcionar o olhar para diferentes posições e coordenar os movimentos dos dois olhos."
+  },
+
+  "NasolacrimalDuct": {
+    "objname": "Ducto Nasolacrimal",
+    "description": "Canal que conduz as lágrimas da região do saco lacrimal até a cavidade nasal. Participa da drenagem das lágrimas após elas percorrerem a superfície do olho."
+  },
+
+  "PapillaryDilator": {
+    "objname": "Músculo Dilatador da Pupila",
+    "description": "Músculo da íris responsável pela dilatação da pupila. Sua contração aumenta o diâmetro pupilar, permitindo a entrada de maior quantidade de luz no olho."
+  },
+
+  "PapillarySphincteer": {
+    "objname": "Músculo Esfíncter da Pupila",
+    "description": "Músculo circular localizado na íris que provoca a constrição da pupila. Sua contração reduz a entrada de luz no olho, especialmente em ambientes muito iluminados."
+  },
+
+  "Pupil": {
+    "objname": "Pupila",
+    "description": "Abertura localizada no centro da íris que permite a passagem da luz para o interior do olho. Seu diâmetro varia conforme a intensidade luminosa, regulando a quantidade de luz que atinge a retina."
+  },
+
+  "Retina": {
+    "objname": "Retina",
+    "description": "Camada interna do olho que contém células especializadas na detecção da luz, como cones e bastonetes. Converte os estímulos luminosos em sinais nervosos que são transmitidos ao cérebro pelo nervo óptico."
+  },
+
+  "Sclera": {
+    "objname": "Esclera",
+    "description": "Camada externa, resistente e esbranquiçada que envolve a maior parte do globo ocular. Protege as estruturas internas, mantém o formato do olho e serve como ponto de fixação para os músculos oculares."
+  },
+
+  "ZonularFibers": {
+    "objname": "Fibras Zonulares",
+    "description": "Fibras que conectam o cristalino aos processos ciliares. Transmitem a ação dos músculos ciliares ao cristalino, permitindo alterar sua curvatura durante o processo de acomodação visual."
+  }
+}

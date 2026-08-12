@@ -133,12 +133,14 @@
         }
 
         function addModeloRelacionado() {
+            salvarDadosDosCampos(); // Preserva o que já foi digitado antes de re-renderizar
             dados.linkedModels.push({ id: "", label: "" });
             renderizarModelosRelacionados();
             sincronizar();
         }
 
         function addPeca() {
+            salvarDadosDosCampos(); // Preserva o que já foi digitado antes de re-renderizar
             const id = "nova_mesh_" + Date.now();
             dados[id] = { objname: "Nova Peça", description: "" };
             renderizarPecas();
@@ -147,6 +149,7 @@
         }
 
         function addRecurso() {
+            salvarDadosDosCampos(); // Preserva o que já foi digitado antes de re-renderizar
             dados.resources.push({ type: "video", name: "", info: "Vídeo · 0 min", url: "" });
             renderizarRecursos();
             sincronizar();
@@ -169,7 +172,8 @@
             dados.objname = document.getElementById('objname').value;
             dados.objsystem = document.getElementById('objsystem').value;
             dados.objdescription = document.getElementById('objdescription').value;
-            atualizarCodigo();
+            salvarDadosDosCampos(); 
+            atualizarCodigo(); // 👈 Corrigido aqui (com "a"!)
         }
 
         function atualizarCodigo() { document.getElementById('jsonOutput').value = JSON.stringify(dados, null, 2); }
@@ -184,9 +188,63 @@
             document.body.removeChild(dl);
         }
 
+        function salvarDadosDosCampos() {
+    // 1. Salva os Modelos Relacionados
+    const containerRel = document.getElementById('containerRelacionados');
+    if (containerRel) {
+        const itens = containerRel.querySelectorAll('.link-item');
+        itens.forEach((div, index) => {
+            if (dados.linkedModels[index]) {
+                const inputs = div.querySelectorAll('input[type="text"]');
+                dados.linkedModels[index].id = inputs[0].value;
+                dados.linkedModels[index].label = inputs[1].value;
+            }
+        });
+    }
+
+    // 2. Salva as Peças (Meshes)
+    const containerPecas = document.getElementById('containerPecas');
+    if (containerPecas) {
+        const itens = containerPecas.querySelectorAll('.mesh-item');
+        itens.forEach((div) => {
+            const inputs = div.querySelectorAll('input[type="text"]');
+            const textarea = div.querySelector('textarea');
+            const chaveAtual = inputs[0].value; // ID da Mesh
+
+            if (dados[chaveAtual]) {
+                dados[chaveAtual].objname = inputs[1].value;
+                dados[chaveAtual].description = textarea.value;
+            }
+        });
+    }
+
+    // 3. Salva os Recursos
+    const containerRes = document.getElementById('containerRecursos');
+    if (containerRes) {
+        const itens = containerRes.querySelectorAll('.res-item');
+        itens.forEach((div, index) => {
+            if (dados.resources[index]) {
+                const select = div.querySelector('select');
+                const inputs = div.querySelectorAll('input[type="text"]');
+                dados.resources[index].type = select.value;
+                dados.resources[index].name = inputs[0].value;
+                dados.resources[index].info = inputs[1].value;
+                dados.resources[index].url = inputs[2].value;
+            }
+        });
+    }
+}
+
+
+
+// No final do seu arquivo js/editor.js, adicione esta linha:
+window.renomearChave = renomearChave;
+
+// Ela deve ficar junto com as outras que você já tem aí:
 window.lerArquivo = lerArquivo;
 window.baixarJSON = baixarJSON;
 window.sincronizar = sincronizar;
 window.addModeloRelacionado = addModeloRelacionado;
 window.addPeca = addPeca;
 window.addRecurso = addRecurso;
+window.salvarDadosDosCampos = salvarDadosDosCampos; // A que adicionamos no passo anterior

@@ -285,33 +285,87 @@ function renderizarCapitulos(data) {
 
 // Evento global para focar em uma parte específica, aplicando realce (highlight), gerando o callout e atualizando a descrição.
 window.focarParte = (id, intersectionPoint = null) => {
-    const data = objectData[id];
-    if (!data) return;
+    // 1. MÁGICA DE RESOLUÇÃO DA CHAVE: Procura de forma cirúrgica no JSON
+    const chaveJson = Object.keys(objectData).find(key => {
+        // Se a chave do JSON for exatamente igual ao ID que veio do clique ou do menu
+        if (key === id) return true;
+        
+        // Remove a tag "+nisolar" e limpa o texto para testar os nomes puros das meshes
+        const chaveLimpa = key.replace('+nisolar', '');
+        if (chaveLimpa === id) return true;
+        
+        // Se a chave for composta por múltiplos "+", verifica se o ID atual está no meio deles
+        const partes = chaveLimpa.split('+');
+        return partes.includes(id);
+    }) || id;
+
+    const data = objectData[chaveJson];
+    
+    if (!data) {
+        console.warn("BioExplora: Dados não encontrados no JSON para a chave:", chaveJson);
+        return;
+    }
+
+    const ehIsolavel = !chaveJson.includes('+nisolar');
+
+    // 2. BUSCA DA MESH NA CENA: Descobre qual o nome físico real para dar o foco visual
+    // Se o clique veio do Explore (ID composto com "+"), pegamos a primeira mesh. 
+    // Se veio do clique físico, usamos o próprio ID que é o nome direto da malha!
+    let nomeParaBuscar = id;
+    if (id.includes('+')) {
+        nomeParaBuscar = id.replace('+nisolar', '').split('+')[0];
+    }
+    
     let objTarget = null;
     scene.traverse(child => {
-        if (child.name === id) {
+        if ((child.isMesh || child.isSkinnedMesh) && child.name === nomeParaBuscar) {
             objTarget = child;
         }
     });
-    if (!objTarget) return;
-    const nomeDoObjeto = data.objname || id;
+
+    // Se não achou pelo método direto, faz uma busca secundária pelo grupo limpo (Garante compatibilidade total)
+    if (!objTarget) {
+        const malhasDoGrupo = chaveJson.replace('+nisolar', '').split('+');
+        scene.traverse(child => {
+            if (child.isMesh || child.isSkinnedMesh) {
+                if (malhasDoGrupo.includes(child.name) && !objTarget) {
+                    objTarget = child;
+                }
+            }
+        });
+    }
+
+    if (!objTarget) {
+        console.warn("BioExplora: Mesh física correspondente não encontrada na cena para:", nomeParaBuscar);
+        return;
+    }
+
+    const nomeDoObjeto = data.objname || chaveJson;
     
+    // 3. Gerenciamento do Callout
     if (isIsolatedMode) {
         removerCallout();
     } else {
         criarCallout(objTarget, nomeDoObjeto, intersectionPoint); 
     }
     
-    if (isIsolatedMode && selectedObject && selectedObject.name === id) {
-        renderButtons(id, data);
+    // 4. Fluxo de Isolamento ou Destaque Lateral
+    if (isIsolatedMode && selectedObject && selectedObject.name === objTarget.name) {
+        renderButtons(chaveJson, data);
         return;
     }
+
     if (isIsolatedMode) {
-        isolarObjeto(id);
+        if (ehIsolavel) {
+            isolarObjeto(chaveJson);
+        } else {
+            renderButtons(chaveJson, data);
+        }
     } else {
         highlightObject(objTarget);
-        renderButtons(id, data);
+        renderButtons(chaveJson, data);
     }
+
     window.swTab('desc', document.querySelector('.tab-btn'));
     if (typeof renderizarRecursos === 'function') renderizarRecursos(data);
 };
@@ -400,6 +454,7 @@ function onPointerDown(event) {
     if (intersects.length > 0) {
         const clicked = intersects[0].object;
         const intersectionPoint = intersects[0].point;
+
         window.focarParte(clicked.name, intersectionPoint);
     }
 }
@@ -408,6 +463,7 @@ function onPointerDown(event) {
 function highlightObject(object) {
     if (isIsolatedMode) return;
 
+    // Se já havia um objeto selecionado antes, restaura o emissive dele
     if (selectedObject && selectedObject.material) {
         selectedObject.material.emissive.copy(originalEmissive);
         selectedObject.material.emissiveIntensity = 0.5;
@@ -416,13 +472,20 @@ function highlightObject(object) {
     selectedObject = object;
 
     if (selectedObject.material) {
+        // Preserva os estados de transparência originais ANTES de clonar
+        const eraTransparente = selectedObject.material.transparent;
+        const opacidadeOriginal = selectedObject.material.opacity;
+
         selectedObject.material = selectedObject.material.clone();
         originalEmissive.copy(selectedObject.material.emissive);
         
+        // Aplica o brilho verde de seleção
         selectedObject.material.emissive.setHex(0x00FF00); 
         selectedObject.material.emissiveIntensity = 0.2; 
-        selectedObject.material.transparent = false;
-        selectedObject.material.opacity = 0.8; 
+        
+        // CORREÇÃO: Mantém as propriedades nativas do material extraído do Blender
+        selectedObject.material.transparent = eraTransparente;
+        selectedObject.material.opacity = opacidadeOriginal; 
     }
 }
 
@@ -436,39 +499,44 @@ function clearHighlight() {
 
 // Oculta todas as outras meshes da cena e foca a câmera exclusivamente na peça anatômica selecionada.
 window.isolarObjeto = (id) => {
-    const targetObj = id ? scene.getObjectByName(id) : selectedObject;
+    const chaveJson = obterChaveJson(id);
+    
+    // Bloqueia o isolamento se contiver o sufixo proibido
+    if (chaveJson.includes('+nisolar')) {
+        console.warn("Este objeto foi configurado para não ser isolado.");
+        return;
+    }
+
+    const malhasParaExibir = chaveJson.split('+');
+    const targetObj = scene.getObjectByName(malhasParaExibir[0]);
     if (!targetObj) return;
 
     visibilidadeAntesDoIsolamento = {};
-
     scene.traverse(obj => {
         if (obj.isMesh || obj.isSkinnedMesh) {
             visibilidadeAntesDoIsolamento[obj.uuid] = obj.visible;
         }
     });
 
-    const data = objectData[targetObj.name];
+    const data = objectData[chaveJson];
     clearHighlight();
     selectedObject = targetObj;
     isIsolatedMode = true;
-
-    let root = targetObj;
-    while (root.parent && root.parent !== scene && !root.parent.isScene) {
-        if (root.parent.children.length > 5) break;
-        root = root.parent;
-    }
 
     scene.traverse(obj => {
         if (obj.isMesh || obj.isSkinnedMesh) obj.visible = false;
     });
 
-    targetObj.traverse(obj => {
-        if (obj.isMesh || obj.isSkinnedMesh) obj.visible = true;
+    scene.traverse(obj => {
+        if (obj.isMesh || obj.isSkinnedMesh) {
+            if (malhasParaExibir.includes(obj.name)) {
+                obj.visible = true;
+            }
+        }
     });
 
-    renderButtons(targetObj.name, data);
+    renderButtons(chaveJson, data);
     window.aproximarObjeto(targetObj.name);
-
     removerCallout();
 };
 
@@ -483,12 +551,23 @@ window.voltarDoIsolamento = (id) => {
     });
 
     setDefaultCamera();
-    const data = objectData[id];
-    renderButtons(id, data);
+
+    // Resolve a chave do JSON para o ID atual
+    const chaveJson = Object.keys(objectData).find(key => {
+        return key === id || key.split('+').includes(id);
+    }) || id;
+
+    const data = objectData[chaveJson];
+    renderButtons(chaveJson, data);
+
     if (selectedObject) {
-        const data = objectData[selectedObject.name];
-        if (data) {
-            const nomeDoObjeto = data.objname || selectedObject.name;
+        const chavePeca = Object.keys(objectData).find(key => {
+            return key === selectedObject.name || key.split('+').includes(selectedObject.name);
+        }) || selectedObject.name;
+
+        const dataPeca = objectData[chavePeca];
+        if (dataPeca) {
+            const nomeDoObjeto = dataPeca.objname || selectedObject.name;
             criarCallout(selectedObject, nomeDoObjeto);
         }
     }
@@ -499,6 +578,7 @@ function animate() {
     requestAnimationFrame(animate);
     const delta = clock.getDelta();
     
+    // 1. Atualiza as animações do esqueleto/objeto
     if (mixer) {
         if (isProgressBarDragging) {
             mixer.update(0);
@@ -512,9 +592,19 @@ function animate() {
         }
     }
     
+    // 2. Atualiza a câmera primeiro para não dar atraso na linha do callout
     if (controls) controls.update();
-    if (composer) composer.render();
 
+    // 3. Força a atualização da posição da malha 3D e move o Callout
+    if (objetoAlvoCallout) {
+        objetoAlvoCallout.updateMatrixWorld(true);
+        atualizarPosicaoCallout();
+    }
+    
+    // 4. Renderiza a cena 3D pura (O visual bonitão que você quer!)
+    renderer.render(scene, camera);
+    
+    // 5. Desenha as plaquinhas HTML perfeitamente sincronizadas por cima
     if (labelRenderer) labelRenderer.render(scene, camera);
 }
 
@@ -694,33 +784,51 @@ window.toggleVisibility = (id, action) => {
 
 // Constrói e injeta o bloco de texto descritivo do objeto focado junto com seus botões de ação contextual (Isolar/Esconder/Mostrar).
 function renderButtons(id, data) {
+    // 1. Remove as tags "+nisolar" e quebras de "+" para descobrir o nome físico da mesh no 3D
+    const malhasDoGrupo = id.replace('+nisolar', '').split('+');
+    
     let isVisible = true;
     scene.traverse(obj => {
-        if (obj.isMesh && obj.name === id) isVisible = obj.visible;
+        if (obj.isMesh && obj.name === malhasDoGrupo[0]) isVisible = obj.visible;
     });
 
+    // Checa se este objeto possui a tag que proíbe o isolamento
+    const naoPodeIsolar = id.includes('+nisolar');
+
     let botoesHtml = "";
+    let colunasGrid = "1fr 1fr 1fr"; // Padrão com 3 botões
+
     if (isIsolatedMode) {
         botoesHtml = `
             <button class="dp-act" style="background:#555; color:#fff;" onclick="resetScene()">Geral</button>
             <button class="dp-act" style="background:#f1c40f; color:#000;" onclick="voltarDoIsolamento('${id}')">Voltar</button>
         `;
+        colunasGrid = "1fr 1fr"; // Modo isolado usa 2 botões
     } else {
-        const hideShowBtn = isVisible 
-            ? `<button class="dp-act btn-hide" onclick="toggleVisibility('${id}', 'hide')">Esconder</button>`
-            : `<button class="dp-act btn-show" onclick="toggleVisibility('${id}', 'show')">Mostrar</button>`;
+        if (naoPodeIsolar) {
+            // MÁGICA: Se não for isolável, exibe APENAS o botão Geral ocupando 100% da largura
+            botoesHtml = `
+                <button class="dp-act" style="background:#555; color:#fff;" onclick="resetScene()">Geral</button>
+            `;
+            colunasGrid = "1fr";
+        } else {
+            // Comportamento completo padrão para objetos interativos normais
+            const hideShowBtn = isVisible 
+                ? `<button class="dp-act btn-hide" onclick="toggleVisibility('${id}', 'hide')">Esconder</button>`
+                : `<button class="dp-act btn-show" onclick="toggleVisibility('${id}', 'show')">Mostrar</button>`;
 
-        botoesHtml = `
-            <button class="dp-act" style="background:#555; color:#fff;" onclick="resetScene()">Geral</button>
-            <button class="dp-act" style="background:#00ffff; color:#000;" onclick="isolarObjeto('${id}')">Isolar</button>
-            ${hideShowBtn}
-        `;
+            botoesHtml = `
+                <button class="dp-act" style="background:#555; color:#fff;" onclick="resetScene()">Geral</button>
+                <button class="dp-act" style="background:#00ffff; color:#000;" onclick="isolarObjeto('${id}')">Isolar</button>
+                ${hideShowBtn}
+            `;
+        }
     }
 
     document.querySelector('.desc-tx').innerHTML = `
         <h3>${data.objname || id}</h3>
         ${parseDescriptionMedia(data.description || 'Sem descrição.')}
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 15px;">
+        <div style="display: grid; grid-template-columns: ${colunasGrid}; gap: 10px; margin-top: 15px;">
             ${botoesHtml}
         </div>
     `;
@@ -930,34 +1038,50 @@ function renderizarDescricaoComAlternador() {
     `;
 }
 
+// Variáveis de controle globais (coloque no topo do seu script se já não estiverem lá)
+let objetoAlvoCallout = null;
+let pontoLocalClique = null;
+let vetorDeslocamentoEtiqueta = null;
+
 // Cria e posiciona no espaço 3D a bolinha indicadora, a linha conectora e a etiqueta flutuante HTML (CSS2D) no ponto especificado.
 function criarCallout(object, texto, clickPoint = null) {
     removerCallout();
 
+    // Salva as referências para o loop de renderização seguir
+    objetoAlvoCallout = object;
+    
     const box = new THREE.Box3().setFromObject(object);
     const size = box.getSize(new THREE.Vector3());
     const maxDim = Math.max(size.x, size.y, size.z);
 
-    const basePosition = clickPoint ? clickPoint.clone() : box.getCenter(new THREE.Vector3());
+    // Se houver ponto de clique, calcula a posição dele relativa ao objeto. Se não, usa o centro.
+    const pontoMundoBase = clickPoint ? clickPoint.clone() : box.getCenter(new THREE.Vector3());
+    pontoLocalClique = object.worldToLocal(pontoMundoBase.clone());
 
+    // Define para onde a plaquinha vai apontar (deslocamento)
+    vetorDeslocamentoEtiqueta = new THREE.Vector3(maxDim * 0.4, maxDim * 0.5, 0);
+    const labelPosition = pontoMundoBase.clone().add(vetorDeslocamentoEtiqueta);
+
+    // 1. Criar a Bolinha Indicadora
     const dotGeo = new THREE.SphereGeometry(maxDim * 0.02, 16, 16);
     const dotMat = new THREE.MeshBasicMaterial({ color: 0x00ffff });
     labelDot = new THREE.Mesh(dotGeo, dotMat);
-    labelDot.position.copy(basePosition);
+    labelDot.position.copy(pontoMundoBase);
     scene.add(labelDot);
 
-    const labelPosition = basePosition.clone().add(new THREE.Vector3(maxDim * 0.4, maxDim * 0.5, 0));
-
-    const distance = basePosition.distanceTo(labelPosition);
+    // 2. Criar a Linha Conectora (usamos um cilindro padrão)
+    const distance = pontoMundoBase.distanceTo(labelPosition);
     const cylinderGeo = new THREE.CylinderGeometry(0.003, 0.003, distance, 4);
     const cylinderMat = new THREE.MeshBasicMaterial({ color: 0x00ffff });
     labelLine = new THREE.Mesh(cylinderGeo, cylinderMat);
-
-    labelLine.position.copy(basePosition).add(labelPosition).multiplyScalar(0.5);
+    
+    // Posiciona e rotaciona a linha inicialmente
+    labelLine.position.copy(pontoMundoBase).add(labelPosition).multiplyScalar(0.5);
     labelLine.lookAt(labelPosition);
     labelLine.rotateX(Math.PI / 2);
     scene.add(labelLine);
 
+    // 3. Criar a Etiqueta HTML CSS2D
     const div = document.createElement('div');
     div.className = 'callout-label';
     div.innerHTML = `
@@ -972,9 +1096,50 @@ function criarCallout(object, texto, clickPoint = null) {
 
 // Remove da cena e descarta da memória gráfica os vértices e materiais que compunham o callout anterior.
 function removerCallout() {
-    if (labelDot) { scene.remove(labelDot); labelDot.geometry.dispose(); labelDot.material.dispose(); }
-    if (labelLine) { scene.remove(labelLine); labelLine.geometry.dispose(); labelLine.material.dispose(); }
-    if (label2DObject) { scene.remove(label2DObject); }
+    objetoAlvoCallout = null;
+    pontoLocalClique = null;
+    vetorDeslocamentoEtiqueta = null;
+
+    if (labelDot) { scene.remove(labelDot); labelDot.geometry.dispose(); labelDot.material.dispose(); labelDot = null; }
+    if (labelLine) { scene.remove(labelLine); labelLine.geometry.dispose(); labelLine.material.dispose(); labelLine = null; }
+    if (label2DObject) { scene.remove(label2DObject); label2DObject = null; }
+}
+
+function atualizarPosicaoCallout() {
+    // Se não há um callout ativo ou o objeto sumiu, não faz nada
+    if (!objetoAlvoCallout || !pontoLocalClique) return;
+
+    // 1. Descobre a nova posição do ponto de clique no mundo 3D (acompanhando a animação)
+    const novaPosicaoBase = pontoLocalClique.clone().applyMatrix4(objetoAlvoCallout.matrixWorld);
+    
+    // 2. Calcula a nova posição da plaquinha de texto
+    const novaPosicaoEtiqueta = novaPosicaoBase.clone().add(vetorDeslocamentoEtiqueta);
+
+    // 3. Move a bolinha para o ponto exato atualizado
+    if (labelDot) {
+        labelDot.position.copy(novaPosicaoBase);
+    }
+
+    // 4. Move a etiqueta CSS2D
+    if (label2DObject) {
+        label2DObject.position.copy(novaPosicaoEtiqueta);
+    }
+
+    // 5. Redimensiona, move e aponta a linha conectora entre os dois novos pontos
+    if (labelLine) {
+        const novaDistancia = novaPosicaoBase.distanceTo(novaPosicaoEtiqueta);
+        
+        // Atualiza a posição central da linha
+        labelLine.position.copy(novaPosicaoBase).add(novaPosicaoEtiqueta).multiplyScalar(0.5);
+        
+        // Faz a linha olhar para a nova posição da etiqueta
+        labelLine.lookAt(novaPosicaoEtiqueta);
+        labelLine.rotateX(Math.PI / 2);
+        
+        // Ajusta a escala vertical da linha para bater com a nova distância (caso o objeto mude de escala)
+        const escalaOriginalCilindro = labelLine.geometry.parameters.height;
+        labelLine.scale.set(1, novaDistancia / escalaOriginalCilindro, 1);
+    }
 }
 
 window.toggleFloatingSearch = toggleFloatingSearch;
@@ -1072,6 +1237,16 @@ function toggleDarkMode() {
 window.abrirAjuda = abrirAjuda;
 window.fecharAjuda = fecharAjuda;
 window.switchHelpTab = switchHelpTab;
+
+// Função auxiliar para encontrar a chave certa no JSON ignorando a tag de isolamento
+function obterChaveJson(id) {
+    return Object.keys(objectData).find(key => {
+        // Remove a tag "+nisolar" temporariamente para fazer a comparação de nomes
+        const chaveLimpa = key.replace('+nisolar', '');
+        
+        return chaveLimpa === id || chaveLimpa.split('+').includes(id);
+    }) || id;
+}
 
 function abrirAjuda() {
     const helpModal = document.getElementById('help-modal');
