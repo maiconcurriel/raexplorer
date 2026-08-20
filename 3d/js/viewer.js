@@ -8,9 +8,34 @@ import * as SkeletonUtils from 'three/addons/utils/SkeletonUtils.js';
 import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer.js';
 
 const ColorBlindShader = {
-    uniforms: { tDiffuse: { value: null }, uMatrix: { value: new THREE.Matrix3() } },
-    vertexShader: `varying vec2 vUv; void main() { vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position,1.0); }`,
-    fragmentShader: `uniform sampler2D tDiffuse; uniform mat3 uMatrix; varying vec2 vUv; void main() { vec4 color = texture2D(tDiffuse, vUv); vec3 corrected = uMatrix * color.rgb; gl_FragColor = vec4(corrected, color.a); }`
+    uniforms: { 
+        tDiffuse: { value: null }, 
+        uMatrix: { value: new THREE.Matrix3() } 
+    },
+    vertexShader: `
+        varying vec2 vUv; 
+        void main() { 
+            vUv = uv; 
+            gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); 
+        }
+    `,
+    fragmentShader: `
+        uniform sampler2D tDiffuse; 
+        uniform mat3 uMatrix; 
+        varying vec2 vUv; 
+
+        void main() { 
+            vec4 color = texture2D(tDiffuse, vUv); 
+            
+            // 1. Aplica a matriz do filtro de cor
+            vec3 corrected = uMatrix * color.rgb; 
+            
+            // 2. Aplica correção Gamma (pow 1.0/2.2) para devolver o brilho/exposição correto
+            corrected = pow(corrected, vec3(1.0 / 2.2));
+            
+            gl_FragColor = vec4(corrected, color.a); 
+        }
+    `
 };
 
 const COLOR_FILTERS = {
@@ -600,19 +625,23 @@ function animate() {
         }
     }
     
-    // 2. Atualiza a câmera primeiro para não dar atraso na linha do callout
+    // 2. Atualiza a câmera primeiro
     if (controls) controls.update();
 
-    // 3. Força a atualização da posição da malha 3D e move o Callout
+    // 3. Atualiza a posição do Callout
     if (objetoAlvoCallout) {
         objetoAlvoCallout.updateMatrixWorld(true);
         atualizarPosicaoCallout();
     }
     
-    // 4. Renderiza a cena 3D pura (O visual bonitão que você quer!)
-    renderer.render(scene, camera);
+    // 4. ✅ CORREÇÃO AQUI: Renderiza através do Composer para aplicar o Shader de Daltonismo!
+    if (composer) {
+        composer.render();
+    } else {
+        renderer.render(scene, camera);
+    }
     
-    // 5. Desenha as plaquinhas HTML perfeitamente sincronizadas por cima
+    // 5. Desenha as plaquinhas HTML CSS2D por cima
     if (labelRenderer) labelRenderer.render(scene, camera);
 }
 

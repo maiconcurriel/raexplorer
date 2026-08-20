@@ -1,81 +1,32 @@
 {
-  "objname": "Célula Animal",
-  "objsystem": "Célula",
-  "objdescription": "Modelo anatômico de uma célula eucariótica animal, contendo organelas responsáveis por metabolismo, produção de energia, síntese de proteínas e controle das funções celulares.",
-  "linkedModels": [],
+  "objname": "Neurônio",
+  "objsystem": "Nervoso",
+  "objdescription": "O neurônio é a principal célula responsável pela recepção e transmissão de impulsos nervosos. Na cena, dois neurônios estão organizados em sequência: o neurônio superior recebe um impulso por meio de seus dendritos, processa e conduz o sinal pelo corpo celular e pelo prolongamento neuronal. O impulso percorre a fibra nervosa e é transmitido ao neurônio inferior, permitindo a continuidade da informação pelo sistema nervoso. A mielina presente ao redor da fibra auxilia na condução mais rápida do impulso. A comunicação entre neurônios ocorre por meio de sinais elétricos e químicos, permitindo que informações sejam transmitidas de uma célula para outra.",
+  "linkedModels": [
+    {
+      "id": "21",
+      "label": "Sistema Nervoso"
+    },
+    {
+      "id": "2",
+      "label": "Cérebro"
+    }
+  ],
   "resources": [],
-  "Centriolos": {
-    "objname": "Centríolos",
-    "description": "Estruturas cilíndricas envolvidas na divisão celular, auxiliando na formação do fuso mitótico e na organização do citoesqueleto."
+  "Corpo": {
+    "objname": "Corpo Celular",
+    "description": "Região do neurônio que contém o núcleo e a maior parte das estruturas responsáveis pelo metabolismo e manutenção celular. Recebe sinais dos dendritos e participa da integração dos impulsos nervosos antes que o sinal seja conduzido ao longo do neurônio."
   },
-
-  "Citoesqueleto": {
-    "objname": "Citoesqueleto",
-    "description": "Rede de filamentos proteicos que mantém a forma da célula, auxilia no transporte interno e permite movimentos celulares."
+  "Dendrito": {
+    "objname": "Dendrito",
+    "description": "Prolongamento especializado do neurônio responsável principalmente pela recepção de sinais provenientes de outras células. Na cena, os dendritos do neurônio superior recebem o impulso nervoso, que é integrado no corpo celular e posteriormente conduzido para outras regiões do neurônio."
   },
-
-  "Citoplasma": {
-    "objname": "Citoplasma",
-    "description": "Região interna da célula onde ficam as organelas, responsável por abrigar reações metabólicas essenciais."
+  "Mielina": {
+    "objname": "Bainha de Mielina",
+    "description": "Camada rica em lipídios que envolve determinados prolongamentos dos neurônios. Atua como isolante elétrico e aumenta a velocidade de propagação dos impulsos nervosos ao longo da fibra, permitindo que o sinal seja conduzido de forma mais eficiente entre os neurônios."
   },
-
-  "ComplexodeGolgi": {
-    "objname": "Complexo de Golgi",
-    "description": "Organela responsável por modificar, empacotar e distribuir proteínas e lipídios para diferentes partes da célula."
-  },
-
-  "Lisossomo": {
-    "objname": "Lisossomo",
-    "description": "Vesícula rica em enzimas digestivas, responsável pela digestão celular e reciclagem de componentes desgastados."
-  },
-
-  "Mitocondria": {
-    "objname": "Mitocôndria",
-    "description": "Organela responsável pela produção de energia na forma de ATP, sendo essencial para o funcionamento celular."
-  },
-
-  "Interno001": {
-    "objname": "Membrana interna",
-    "description": "Camada interna associada a compartimentos celulares, participando do controle de substâncias e processos internos."
-  },
-
-  "Nucleocelular": {
-    "objname": "Núcleo celular",
-    "description": "Estrutura que armazena o DNA e controla as atividades da célula, como crescimento, metabolismo e divisão."
-  },
-
-  "Externo": {
-    "objname": "Membrana plasmática",
-    "description": "Envoltório externo da célula que controla a entrada e saída de substâncias e mantém a integridade celular."
-  },
-
-  "Interno": {
-    "objname": "Membrana nuclear",
-    "description": "Envoltório que protege o núcleo celular e regula a troca de substâncias entre o núcleo e o citoplasma."
-  },
-
-  "Nucleolo": {
-    "objname": "Nucléolo",
-    "description": "Região interna do núcleo responsável pela produção de ribossomos, essenciais para a síntese de proteínas."
-  },
-
-  "Reticuloendoliso": {
-    "objname": "Retículo endoplasmático liso",
-    "description": "Organela envolvida na síntese de lipídios, desintoxicação celular e armazenamento de cálcio."
-  },
-
-  "Reticuloendorugoso": {
-    "objname": "Retículo endoplasmático rugoso",
-    "description": "Possui ribossomos aderidos e atua na síntese e transporte de proteínas."
-  },
-
-  "Vacuolo": {
-    "objname": "Vacúolo",
-    "description": "Compartimento responsável pelo armazenamento de substâncias e auxílio no equilíbrio celular."
-  },
-
-  "Vesicula": {
-    "objname": "Vesícula",
-    "description": "Pequena estrutura de transporte que move substâncias entre organelas ou para fora da célula."
+  "Nucleous": {
+    "objname": "Núcleo",
+    "description": "Estrutura localizada no corpo celular que contém o material genético do neurônio. Controla diversas atividades celulares, incluindo a produção de proteínas e a manutenção da célula, contribuindo para seu funcionamento e sobrevivência."
   }
 }
