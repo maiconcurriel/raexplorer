@@ -1,0 +1,27 @@
+{
+  "objname": "Sistema Linfático",
+  "objsystem": "Linfático",
+  "objdescription": "Sistema responsável pela drenagem do excesso de líquido dos tecidos, transporte de células e substâncias relacionadas à resposta imunológica e defesa do organismo. É formado por uma extensa rede de vasos linfáticos, linfonodos e órgãos linfoides, como o timo e o baço. Atua na manutenção do equilíbrio dos líquidos corporais, na filtragem da linfa e na participação das respostas imunológicas.",
+  "linkedModels": [],
+  "resources": [],
+  "Thyroid": {
+    "objname": "Tireoide",
+    "description": "Glândula endócrina localizada na região anterior do pescoço, responsável principalmente pela produção dos hormônios tireoidianos, que regulam o metabolismo, o crescimento e o desenvolvimento. Embora esteja presente no modelo do sistema linfático, a tireoide pertence principalmente ao sistema endócrino."
+  },
+  "Timo": {
+    "objname": "Timo",
+    "description": "Órgão linfoide localizado no mediastino, atrás do esterno. É responsável pela maturação e seleção dos linfócitos T, células fundamentais para a resposta imunológica. Apresenta maior atividade durante a infância e sofre involução progressiva após a puberdade."
+  },
+  "Spleen": {
+    "objname": "Baço",
+    "description": "Maior órgão linfoide do organismo, localizado no lado esquerdo do abdome, próximo ao estômago. Atua na filtragem do sangue, na remoção de células sanguíneas envelhecidas e na participação das respostas imunológicas contra agentes presentes na circulação sanguínea."
+  },
+  "LymphVessel": {
+    "objname": "Vaso Linfático",
+    "description": "Estrutura tubular que transporta a linfa pelos tecidos e pelo organismo. Os vasos linfáticos coletam o excesso de líquido presente no espaço intersticial e o conduzem progressivamente em direção à circulação venosa, contribuindo para o equilíbrio dos líquidos corporais e para o transporte de células e substâncias do sistema imunológico."
+  },
+  "LymphNodes": {
+    "objname": "Linfonodos",
+    "description": "Pequenas estruturas linfoides distribuídas ao longo dos vasos linfáticos. Funcionam como filtros da linfa e constituem importantes locais de ativação e proliferação de células do sistema imunológico, auxiliando na identificação e resposta contra microrganismos e outras substâncias estranhas."
+  }
+}

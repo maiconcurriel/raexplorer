@@ -1,0 +1,59 @@
+{
+  "objname": "Sistema Venoso",
+  "objsystem": "Circulatório",
+  "objdescription": "Conjunto de veias responsável por transportar o sangue dos tecidos e órgãos de volta ao coração. O sistema venoso recebe o sangue proveniente da circulação sistêmica e o conduz ao coração, enquanto as veias pulmonares transportam sangue oxigenado dos pulmões até o átrio esquerdo. Suas ramificações formam uma extensa rede vascular que auxilia no retorno venoso e na manutenção da circulação sanguínea.",
+  "linkedModels": [
+    {
+      "id": "4",
+      "label": "Coração"
+    },{
+      "id": "19",
+      "label": "Sistema Arterial"
+    }
+  ],
+  "resources": [],
+  "UpperLimbVeins": {
+    "objname": "Veias dos Membros Superiores",
+    "description": "Conjunto de veias responsáveis pela drenagem sanguínea dos membros superiores, incluindo ombro, braço, antebraço e mão. Essas veias conduzem o sangue dos tecidos dos membros superiores em direção às veias de maior calibre e posteriormente ao coração."
+  },
+  "ThoraxVeins": {
+    "objname": "Veias do Tórax",
+    "description": "Conjunto de veias responsáveis pela drenagem sanguínea da parede torácica e de estruturas localizadas no tórax. Seus vasos conduzem o sangue em direção às veias maiores que desembocam na veia cava superior ou no sistema ázigos."
+  },
+  "SuperiorVenaCavaVeins": {
+    "objname": "Veia Cava Superior",
+    "description": "Grande veia responsável por transportar para o átrio direito o sangue venoso proveniente da cabeça, pescoço, membros superiores e grande parte do tórax. Forma-se pela união das veias braquiocefálicas e desemboca diretamente no coração."
+  },
+  "PulmonaryVeins": {
+    "objname": "Veias Pulmonares",
+    "description": "Veias responsáveis por transportar sangue oxigenado dos pulmões até o átrio esquerdo do coração. Normalmente existem quatro veias pulmonares principais, duas provenientes de cada pulmão."
+  },
+  "PelvisVeins": {
+    "objname": "Veias da Pelve",
+    "description": "Conjunto de veias responsáveis pela drenagem sanguínea das estruturas da pelve, incluindo órgãos pélvicos, músculos, ossos e tecidos adjacentes. O sangue é direcionado principalmente para as veias ilíacas internas e externas e posteriormente para as veias ilíacas comuns."
+  },
+  "LowerLimbVeins": {
+    "objname": "Veias dos Membros Inferiores",
+    "description": "Conjunto de veias responsáveis pela drenagem sanguínea dos membros inferiores, incluindo quadril, coxa, perna e pé. O sistema inclui veias superficiais e profundas que conduzem o sangue em direção às veias femorais e ilíacas."
+  },
+  "LiverVeins": {
+    "objname": "Veias do Fígado",
+    "description": "Conjunto de vasos venosos responsáveis pela drenagem do sangue proveniente do fígado. As principais veias hepáticas conduzem o sangue do fígado diretamente para a veia cava inferior."
+  },
+  "KidneyVeins": {
+    "objname": "Veias Renais",
+    "description": "Veias responsáveis pela drenagem sanguínea dos rins. As veias renais geralmente desembocam diretamente na veia cava inferior, transportando o sangue que deixou o tecido renal."
+  },
+  "HeadNeckVeins": {
+    "objname": "Veias da Cabeça e do Pescoço",
+    "description": "Conjunto de veias responsáveis pela drenagem sanguínea da cabeça, face, pescoço e estruturas associadas. Entre os principais vasos estão as veias jugulares e vertebrais, que conduzem o sangue em direção às veias braquiocefálicas e posteriormente à veia cava superior."
+  },
+  "GutVeins": {
+    "objname": "Veias do Trato Gastrointestinal",
+    "description": "Conjunto de veias responsáveis pela drenagem sanguínea dos órgãos do sistema digestório. Grande parte do sangue proveniente do estômago, intestinos, pâncreas e baço é direcionada ao sistema porta hepático antes de alcançar a circulação sistêmica."
+  },
+  "AbdomenInferiorVenaCavaVeins": {
+    "objname": "Veias Abdominais e Veia Cava Inferior",
+    "description": "Conjunto de grandes veias responsáveis pela drenagem sanguínea do abdome, pelve e membros inferiores. A veia cava inferior é a principal via de retorno venoso dessas regiões e transporta o sangue até o átrio direito do coração."
+  }
+}

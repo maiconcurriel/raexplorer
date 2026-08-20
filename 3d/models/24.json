@@ -1,0 +1,105 @@
+{
+  "objname": "Sistema Digestório",
+  "objsystem": [
+    "Digestório"
+  ],
+  "objdescription": "Conjunto de órgãos responsáveis pela ingestão, digestão, absorção de nutrientes e eliminação dos resíduos alimentares.",
+  "linkedModels": [],
+  "resources": [],
+  "Uvula": {
+    "objname": "Úvula",
+    "description": "Pequena estrutura muscular localizada na parte posterior do palato mole. Auxilia na deglutição e participa do fechamento da comunicação entre a cavidade oral e a nasofaringe."
+  },
+  "Stomach_cap2": {
+    "objname": "Capa do Estômago",
+    "description": "Objeto 3D auxiliar utilizado para ocultar parte do estômago e facilitar a visualização de suas estruturas internas."
+  },
+  "Stomach_cap": {
+    "objname": "Capa do Estômago",
+    "description": "Objeto 3D auxiliar utilizado para ocultar parte do estômago e facilitar a visualização de suas estruturas internas."
+  },
+  "Stomach": {
+    "objname": "Estômago",
+    "description": "Órgão muscular localizado entre o esôfago e o duodeno. Armazena e mistura o alimento, produzindo secreções que iniciam principalmente a digestão das proteínas."
+  },
+  "SmallIntestine": {
+    "objname": "Intestino Delgado",
+    "description": "Porção do sistema digestório responsável pela maior parte da digestão e absorção dos nutrientes. É formado pelo duodeno, jejuno e íleo."
+  },
+  "SalivaryGland": {
+    "objname": "Glândula Salivar",
+    "description": "Glândula responsável pela produção de saliva, que lubrifica o alimento e contém enzimas que iniciam a digestão dos carboidratos."
+  },
+  "SalivaryDuct": {
+    "objname": "Ducto Salivar",
+    "description": "Canal que conduz a saliva produzida pelas glândulas salivares até a cavidade oral."
+  },
+  "Right_Lobe": {
+    "objname": "Lobo Direito do Fígado",
+    "description": "Maior dos dois lobos anatômicos principais do fígado. Participa das funções metabólicas, da produção de bile, do armazenamento de nutrientes e da desintoxicação do organismo."
+  },
+  "PyloricSphincterValve": {
+    "objname": "Esfíncter Pilórico",
+    "description": "Anel de músculo localizado na saída do estômago. Controla a passagem do conteúdo gástrico para o duodeno."
+  },
+  "PancreasTail": {
+    "objname": "Cauda do Pâncreas",
+    "description": "Extremidade esquerda do pâncreas, localizada próxima ao baço. Faz parte do órgão responsável por funções digestivas e endócrinas."
+  },
+  "PancreasHead": {
+    "objname": "Cabeça do Pâncreas",
+    "description": "Porção mais larga do pâncreas, localizada junto à curvatura do duodeno. Produz enzimas digestivas e hormônios envolvidos no controle da glicose."
+  },
+  "PancreasBody": {
+    "objname": "Corpo do Pâncreas",
+    "description": "Porção central do pâncreas, situada entre a cabeça e a cauda. Participa tanto da produção de enzimas digestivas quanto da secreção de hormônios."
+  },
+  "OralCavity": {
+    "objname": "Cavidade Oral",
+    "description": "Primeira região do sistema digestório, onde o alimento é recebido, mastigado e misturado à saliva, iniciando o processo de digestão."
+  },
+  "Ligaments": {
+    "objname": "Ligamentos do Fígado",
+    "description": "Estruturas de tecido conjuntivo que ajudam a sustentar e fixar o fígado às estruturas próximas e à parede abdominal."
+  },
+  "Left_Lobe": {
+    "objname": "Lobo Esquerdo do Fígado",
+    "description": "Porção esquerda do fígado, menor que o lobo direito. Participa das mesmas funções metabólicas e digestivas realizadas pelo fígado."
+  },
+  "LargeIntestine": {
+    "objname": "Intestino Grosso",
+    "description": "Porção final do sistema digestório. Absorve principalmente água e eletrólitos e participa da formação, armazenamento e eliminação das fezes."
+  },
+  "GallBladder": {
+    "objname": "Vesícula Biliar",
+    "description": "Pequeno órgão localizado sob o fígado que armazena e concentra a bile produzida pelo fígado, liberando-a no duodeno durante a digestão."
+  },
+  "Esophagus": {
+    "objname": "Esôfago",
+    "description": "Tubo muscular que conduz o alimento da faringe até o estômago por meio de movimentos peristálticos."
+  },
+  "Duodenum_001": {
+    "objname": "Capa do Duodeno",
+    "description": "Objeto 3D auxiliar utilizado para remover parte da parede do duodeno e facilitar a visualização de seu interior."
+  },
+  "Duodenum": {
+    "objname": "Duodeno",
+    "description": "Primeira porção do intestino delgado, localizada após o estômago. Recebe o quimo gástrico, a bile e as secreções pancreáticas, desempenhando importante papel na digestão."
+  },
+  "DuctsB": {
+    "objname": "Ductos Biliares",
+    "description": "Canais que conduzem a bile produzida pelo fígado e armazenada na vesícula biliar até o duodeno."
+  },
+  "DuctsA": {
+    "objname": "Ductos Pancreáticos",
+    "description": "Canais que conduzem as secreções digestivas produzidas pelo pâncreas até o duodeno."
+  },
+  "Cardiac": {
+    "objname": "Cárdia",
+    "description": "Região de transição entre o esôfago e o estômago. Permite a passagem do alimento para o estômago e está relacionada ao mecanismo que ajuda a evitar o refluxo do conteúdo gástrico."
+  },
+  "Tongue": {
+  "objname": "Língua",
+  "description": "Órgão muscular localizado na cavidade oral, responsável pela movimentação e manipulação dos alimentos, auxiliando na mastigação, deglutição, fala e percepção dos sabores."
+}
+}

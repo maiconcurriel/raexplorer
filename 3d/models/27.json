@@ -1,0 +1,41 @@
+{
+  "objname": "Sistema Estomatognático",
+  "objsystem": [
+    "Estomatognático"
+  ],
+  "objdescription": "O sistema estomatognático é o conjunto de estruturas anatômicas envolvidas principalmente na mastigação, deglutição, fonação, respiração e comunicação. É formado por dentes, língua, lábios, bochechas, gengiva, palato, cavidade oral, glândulas e ductos salivares, além de músculos, ossos e articulações relacionados aos movimentos da mandíbula. A mandíbula e a maxila fornecem suporte para os dentes e delimitam parte da cavidade oral, enquanto músculos como masseter, temporal e pterigoideos controlam os movimentos mandibulares. A língua participa da manipulação dos alimentos, deglutição e fala. As glândulas salivares produzem saliva, que lubrifica a cavidade oral e auxilia na digestão. O conjunto dessas estruturas atua de forma integrada para realizar a mastigação e outras funções essenciais do aparelho oral.",
+  "linkedModels": [],
+  "resources": [],
+  "Skin": {
+    "objname": "Músculo Bucinador",
+    "description": "Músculo da bochecha que comprime as paredes da cavidade oral contra os dentes, auxiliando na mastigação, na movimentação dos alimentos e em ações como assoprar e sugar."
+  },
+  "Veins": {
+    "objname": "Músculo Bucinador",
+    "description": "Músculo da bochecha que comprime as paredes da cavidade oral contra os dentes, auxiliando na mastigação, na movimentação dos alimentos e em ações como assoprar e sugar."
+  },
+  "Organs": {
+    "objname": "Músculo Bucinador",
+    "description": "Músculo da bochecha que comprime as paredes da cavidade oral contra os dentes, auxiliando na mastigação, na movimentação dos alimentos e em ações como assoprar e sugar."
+  },
+  "Nervous": {
+    "objname": "Músculo Bucinador",
+    "description": "Músculo da bochecha que comprime as paredes da cavidade oral contra os dentes, auxiliando na mastigação, na movimentação dos alimentos e em ações como assoprar e sugar."
+  },
+  "Muscles": {
+    "objname": "Músculo Bucinador",
+    "description": "Músculo da bochecha que comprime as paredes da cavidade oral contra os dentes, auxiliando na mastigação, na movimentação dos alimentos e em ações como assoprar e sugar."
+  },
+  "Lymphatic": {
+    "objname": "Músculo Bucinador",
+    "description": "Músculo da bochecha que comprime as paredes da cavidade oral contra os dentes, auxiliando na mastigação, na movimentação dos alimentos e em ações como assoprar e sugar."
+  },
+  "Bones": {
+    "objname": "Músculo Bucinador",
+    "description": "Músculo da bochecha que comprime as paredes da cavidade oral contra os dentes, auxiliando na mastigação, na movimentação dos alimentos e em ações como assoprar e sugar."
+  },
+  "Arteries": {
+    "objname": "Músculo Bucinador",
+    "description": "Músculo da bochecha que comprime as paredes da cavidade oral contra os dentes, auxiliando na mastigação, na movimentação dos alimentos e em ações como assoprar e sugar."
+  }
+}

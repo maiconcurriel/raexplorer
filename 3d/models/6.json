@@ -1,6 +1,6 @@
 {
   "objname": "Tecido do Intestino Delgado",
-  "objsystem": "Digestivo",
+  "objsystem": "Digestório",
   "objdescription": "O intestino delgado é revestido por tecido especializado na digestão e absorção de nutrientes. Sua parede é formada por mucosa, submucosa, camada muscular e serosa. A mucosa apresenta vilosidades e microvilosidades que ampliam a superfície absortiva, além de vasos sanguíneos e linfáticos responsáveis pelo transporte dos nutrientes absorvidos.",
   "mucmusc": {
     "objname": "Mucosa Muscularica",

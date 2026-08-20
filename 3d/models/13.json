@@ -2,7 +2,18 @@
   "objname": "Sistema Reprodutor Masculino",
   "objsystem": "Reprodutor",
   "objdescription": "O sistema reprodutor masculino é responsável pela produção, armazenamento e transporte dos espermatozoides, além da produção de hormônios sexuais, principalmente a testosterona. Os testículos produzem os espermatozoides e hormônios, enquanto o epidídimo participa da maturação e armazenamento dos gametas. O ducto deferente conduz os espermatozoides até os ductos ejaculatórios. As vesículas seminais, a próstata e as glândulas bulbouretrais produzem secreções que formam o sêmen. O pênis contém tecidos eréteis que permitem a ereção e a deposição do sêmen no sistema reprodutor feminino.",
-  "linkedModels": [],
+  "linkedModels": [
+    {
+      "id": "11",
+      "label": "Sistema Reprodutor Feminino"
+    },{
+      "id": "12",
+      "label": "Sistema Urinário Masculino"
+    },{
+      "id": "10",
+      "label": "Sistema Urinário Femininoo"
+    }
+  ],
   "resources": [],
 
   "SpermaticFascia": {
@@ -107,5 +118,9 @@
   "BuckFasciaUpper": {
   "objname": "Fáscia de Buck Superior",
   "description": "Camada profunda de tecido conjuntivo que envolve e sustenta os tecidos eréteis do pênis. Contribui para a organização estrutural do órgão e auxilia na proteção dos vasos sanguíneos e nervos presentes em seu interior."
+  },
+  "UrethraSpongyPortionPenile": {
+  "objname": "Porção Esponjosa da Uretra",
+  "description": "Porção da uretra que percorre o corpo esponjoso do pênis. Conduz a urina e o sêmen até o óstio uretral externo, participando dos sistemas urinário e reprodutor masculino."
   }
 }

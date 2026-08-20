@@ -1,0 +1,124 @@
+{
+  "objname": "Sistema Nervoso",
+  "objsystem": "Nervoso",
+  "objdescription": "Conjunto de estruturas responsáveis por receber, processar e transmitir informações pelo organismo, coordenando funções motoras, sensoriais, cognitivas e autonômicas. O sistema nervoso é formado pelo encéfalo, medula espinal e estruturas associadas, incluindo nervos, núcleos, vias de comunicação e membranas que protegem o sistema nervoso central.",
+  "linkedModels": [
+    {
+      "id": "2",
+      "label": "Cérebro"
+    }
+  ],
+  "resources": [],
+  "SpinalCords": {
+    "objname": "Medula Espinal",
+    "description": "Parte do sistema nervoso central localizada no interior do canal vertebral. A medula espinal conduz informações entre o encéfalo e o restante do corpo e participa da integração de diversos reflexos."
+  },
+  "SpinalCordMembrane": {
+    "objname": "Membranas da Medula Espinal",
+    "description": "Conjunto de membranas que envolvem e protegem a medula espinal. Essas estruturas fazem parte das meninges e contribuem para a proteção mecânica do sistema nervoso central."
+  },
+  "OlfactoryNerves": {
+    "objname": "Nervos Olfatórios",
+    "description": "Conjunto de fibras nervosas responsáveis por transmitir ao encéfalo informações relacionadas ao sentido do olfato. Essas fibras conectam os receptores olfatórios da cavidade nasal ao bulbo olfatório."
+  },
+  "OlfactoryBulb": {
+    "objname": "Bulbo Olfatório",
+    "description": "Estrutura localizada na região anterior do encéfalo que recebe e processa inicialmente as informações provenientes dos nervos olfatórios antes de encaminhá-las para outras regiões cerebrais."
+  },
+  "Nervous": {
+    "objname": "Estruturas do Sistema Nervoso",
+    "description": "Representação geral de estruturas pertencentes ao sistema nervoso, incluindo componentes do sistema nervoso central e estruturas associadas responsáveis pela comunicação e integração das informações no organismo."
+  },
+  "BrainMembrane": {
+    "objname": "Meninges do Encéfalo",
+    "description": "Conjunto de membranas que envolve e protege o encéfalo. As meninges são constituídas pela dura-máter, aracnoide e pia-máter e contribuem para a proteção mecânica e o suporte das estruturas nervosas."
+  },
+  "Thalamus": {
+    "objname": "Tálamo",
+    "description": "Grande estrutura de substância cinzenta localizada no diencéfalo. Atua como importante centro de retransmissão e processamento de informações sensoriais e motoras, além de participar da regulação da consciência, atenção e outras funções cerebrais."
+  },
+  "SeptalNucleus": {
+    "objname": "Núcleo Septal",
+    "description": "Grupo de núcleos localizado na região septal do cérebro. Está relacionado a circuitos límbicos envolvidos na regulação emocional, motivação, recompensa e outras funções comportamentais."
+  },
+  "Putamen": {
+    "objname": "Putâmen",
+    "description": "Estrutura de substância cinzenta localizada no interior dos hemisférios cerebrais e componente dos núcleos da base. Participa principalmente do controle e da modulação dos movimentos."
+  },
+  "Pons": {
+    "objname": "Ponte",
+    "description": "Parte do tronco encefálico localizada entre o mesencéfalo e o bulbo. Atua na comunicação entre diferentes regiões do sistema nervoso e participa do controle de funções como respiração, sono e movimentos."
+  },
+  "Midbrain": {
+    "objname": "Mesencéfalo",
+    "description": "Porção superior do tronco encefálico localizada entre a ponte e o diencéfalo. Participa do controle dos movimentos oculares, reflexos visuais e auditivos e da transmissão de informações entre diferentes regiões do sistema nervoso."
+  },
+  "MedullaOblongata": {
+    "objname": "Bulbo",
+    "description": "Porção inferior do tronco encefálico, localizada entre a ponte e a medula espinal. Contém centros responsáveis pela regulação de funções vitais, incluindo respiração, frequência cardíaca, pressão arterial e reflexos como deglutição e tosse."
+  },
+  "LateralVentricle": {
+    "objname": "Ventrículo Lateral",
+    "description": "Cavidade localizada no interior de cada hemisfério cerebral que faz parte do sistema ventricular. Contém líquido cerebrospinal e comunica-se com outras cavidades ventriculares, contribuindo para a circulação e proteção do sistema nervoso central."
+  },
+  "IndusiumGriseum": {
+    "objname": "Indúsio Cinzento",
+    "description": "Delgada camada de substância cinzenta localizada sobre a superfície superior do corpo caloso. É considerada uma estrutura remanescente relacionada à formação hipocampal."
+  },
+  "Hypothalamus": {
+    "objname": "Hipotálamo",
+    "description": "Região do diencéfalo localizada abaixo do tálamo. Atua na regulação da homeostase, temperatura corporal, fome, sede, sono, comportamento e funções endócrinas por meio de sua relação com a hipófise."
+  },
+  "Hippocampus": {
+    "objname": "Hipocampo",
+    "description": "Estrutura localizada no lobo temporal medial e integrante do sistema límbico. Está fortemente relacionada à formação e consolidação de memórias e à orientação espacial."
+  },
+  "GlobusPallidusMedial": {
+    "objname": "Globo Pálido Medial",
+    "description": "Porção medial do globo pálido, integrante dos núcleos da base. Participa dos circuitos responsáveis pela modulação e controle dos movimentos voluntários."
+  },
+  "GlobusPallidusLateral": {
+    "objname": "Globo Pálido Lateral",
+    "description": "Porção lateral do globo pálido, integrante dos núcleos da base. Participa dos circuitos neurais envolvidos na regulação e coordenação da atividade motora."
+  },
+  "FourthVentricle": {
+    "objname": "Quarto Ventrículo",
+    "description": "Cavidade do sistema ventricular localizada entre o tronco encefálico e o cerebelo. Contém líquido cerebrospinal e estabelece comunicação entre os ventrículos superiores e o espaço subaracnoideo."
+  },
+  "Fornix": {
+    "objname": "Fórnix",
+    "description": "Feixe de fibras nervosas que conecta estruturas do sistema límbico, especialmente o hipocampo, a regiões do diencéfalo. Participa de circuitos relacionados à memória."
+  },
+  "DentateGyrus": {
+    "objname": "Giro Denteado",
+    "description": "Estrutura localizada na formação hipocampal do lobo temporal medial. Participa dos processos relacionados à formação e organização das memórias e apresenta importante papel na neurogênese adulta."
+  },
+  "CorpusCallosum": {
+    "objname": "Corpo Caloso",
+    "description": "Grande feixe de fibras nervosas que conecta os dois hemisférios cerebrais. Permite a comunicação e integração de informações entre regiões correspondentes dos hemisférios direito e esquerdo."
+  },
+  "CingulateGyrus": {
+    "objname": "Giro do Cíngulo",
+    "description": "Estrutura cortical localizada na face medial dos hemisférios cerebrais e integrante do sistema límbico. Participa de processos relacionados às emoções, motivação, memória, atenção e comportamento."
+  },
+  "Cerebrum": {
+    "objname": "Cérebro",
+    "description": "Maior parte do encéfalo, formada pelos dois hemisférios cerebrais e suas estruturas associadas. É responsável por funções complexas como percepção sensorial, movimento voluntário, linguagem, memória, raciocínio, aprendizagem e consciência."
+  },
+  "Cerebellum": {
+    "objname": "Cerebelo",
+    "description": "Estrutura localizada na região posterior do encéfalo, atrás do tronco encefálico. Atua principalmente na coordenação dos movimentos, equilíbrio, postura e ajuste da atividade motora."
+  },
+  "CaudateNucleus": {
+    "objname": "Núcleo Caudado",
+    "description": "Estrutura de substância cinzenta pertencente aos núcleos da base. Participa da modulação dos movimentos e também está relacionada a processos de aprendizagem, memória e comportamento."
+  },
+  "AnteriorCommissure": {
+    "objname": "Comissura Anterior",
+    "description": "Pequeno feixe de fibras nervosas que conecta regiões correspondentes dos dois hemisférios cerebrais. Participa principalmente da comunicação entre estruturas relacionadas aos sistemas olfatório e temporal."
+  },
+  "Amygdala": {
+    "objname": "Amígdala",
+    "description": "Conjunto de núcleos localizado no lobo temporal medial e integrante do sistema límbico. Está relacionado ao processamento das emoções, especialmente respostas de medo e ameaça, além de participar da memória emocional."
+  }
+}

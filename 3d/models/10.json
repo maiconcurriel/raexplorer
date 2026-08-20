@@ -2,7 +2,18 @@
   "objname": "Sistema Urinário Feminino",
   "objsystem": "Urinário",
   "objdescription": "O sistema urinário feminino é responsável pela produção, armazenamento e eliminação da urina, contribuindo para a manutenção do equilíbrio interno do organismo. Os rins filtram o sangue, removem resíduos metabólicos e regulam água, eletrólitos e outras substâncias. A urina formada nos rins passa pelos ureteres até a bexiga, onde é armazenada temporariamente. Durante a micção, a musculatura da bexiga se contrai e a urina é conduzida pela uretra até o exterior. Esfíncteres urinários controlam a passagem da urina e ajudam a manter a continência.",
-  "linkedModels": [],
+  "linkedModels": [
+    {
+      "id": "11",
+      "label": "Sistema Reprodutor Feminino"
+    },{
+      "id": "13",
+      "label": "Sistema Reprodutor Masculino"
+    },{
+      "id": "12",
+      "label": "Sistema Urinário Masculino"
+    }
+  ],
   "resources": [],
   "RenalCapsule": {
     "objname": "Cápsula Renal",
@@ -71,5 +82,19 @@
   "UrethralOrifice": {
     "objname": "Óstio Uretral",
     "description": "Abertura externa da uretra por onde a urina é eliminada do organismo. Está localizada no vestíbulo da vulva, anteriormente à abertura vaginal."
-  }
+  },
+  "Major_calyces_of_the_renal_pelvis__L__302910.001": {
+  "objname": "Cálices Renais Maiores",
+  "description": "Estruturas que recebem a urina dos cálices menores e a conduzem em direção à pelve renal. Formam parte do sistema coletor do rim e geralmente se unem para formar a pelve renal."
+},
+
+"Minor_calyces_of_the_renal_pelvis__L__302911.001": {
+  "objname": "Cálices Renais Menores",
+  "description": "Pequenas estruturas em forma de taça que recebem a urina diretamente das papilas renais. A urina passa dos cálices menores para os cálices maiores e, posteriormente, para a pelve renal."
+},
+
+"Renal_papillae__front_half__L__302919.001": {
+  "objname": "Papilas Renais",
+  "description": "Extremidades das pirâmides renais que se projetam para os cálices menores. Os ductos coletores desembocam nas papilas, permitindo que a urina formada no rim seja conduzida ao sistema coletor."
+}
 }

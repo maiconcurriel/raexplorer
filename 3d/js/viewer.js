@@ -393,6 +393,14 @@ window.resetScene = () => {
     removerCallout();
 };
 
+window.botaoGeral = () => {
+    isIsolatedMode = false;
+    clearHighlight();
+    selectedObject = null;
+    renderizarDescricaoComAlternador();
+    removerCallout();
+}
+
 // Define a posição e o alvo (target) padrão da câmera de visualização.
 function setDefaultCamera() {
     camera.position.set(0, 2, 3);
@@ -800,7 +808,7 @@ function renderButtons(id, data) {
 
     if (isIsolatedMode) {
         botoesHtml = `
-            <button class="dp-act" style="background:#555; color:#fff;" onclick="resetScene()">Geral</button>
+            <button class="dp-act" style="background:#555; color:#fff;" onclick="botaoGeral()">Geral</button>
             <button class="dp-act" style="background:#f1c40f; color:#000;" onclick="voltarDoIsolamento('${id}')">Voltar</button>
         `;
         colunasGrid = "1fr 1fr"; // Modo isolado usa 2 botões
@@ -808,7 +816,7 @@ function renderButtons(id, data) {
         if (naoPodeIsolar) {
             // MÁGICA: Se não for isolável, exibe APENAS o botão Geral ocupando 100% da largura
             botoesHtml = `
-                <button class="dp-act" style="background:#555; color:#fff;" onclick="resetScene()">Geral</button>
+                <button class="dp-act" style="background:#555; color:#fff;" onclick="botaoGeral()">Geral</button>
             `;
             colunasGrid = "1fr";
         } else {
@@ -818,7 +826,7 @@ function renderButtons(id, data) {
                 : `<button class="dp-act btn-show" onclick="toggleVisibility('${id}', 'show')">Mostrar</button>`;
 
             botoesHtml = `
-                <button class="dp-act" style="background:#555; color:#fff;" onclick="resetScene()">Geral</button>
+                <button class="dp-act" style="background:#555; color:#fff;" onclick="botaoGeral()">Geral</button>
                 <button class="dp-act" style="background:#00ffff; color:#000;" onclick="isolarObjeto('${id}')">Isolar</button>
                 ${hideShowBtn}
             `;
@@ -993,7 +1001,7 @@ function renderizarDescricaoComAlternador() {
 
     let alternadorHTML = '';
 
-    if (previousModelId) {
+    /*if (previousModelId) {
         alternadorHTML += `
             <div class="divaltbutton" id="divaltbutton-main" style="margin-bottom: 15px;">
                 <button onclick="window.carregarNovoModelo('${previousModelId}', true)" class="altbutton" id="altbutton-main">
@@ -1002,7 +1010,7 @@ function renderizarDescricaoComAlternador() {
                 <span style="font-weight: bold;">Modelo Principal</span>
             </div>
         `;
-    } 
+    }*/
 
     const relacionados = objectData.linkedModels || (objectData.linkedModel ? [objectData.linkedModel] : []);
 

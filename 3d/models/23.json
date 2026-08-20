@@ -1,0 +1,95 @@
+{
+  "objname": "Sistema Respiratório",
+  "objsystem": "Respiratório",
+  "objdescription": "Conjunto de órgãos e estruturas responsáveis pela condução do ar, pelas trocas gasosas e pela ventilação pulmonar. Inclui as vias aéreas, os pulmões, a laringe, a traqueia e o diafragma, permitindo a entrada de oxigênio no organismo e a eliminação de dióxido de carbono.",
+  "linkedModels": [],
+  "resources": [],
+  "VestibularLigament": {
+    "objname": "Ligamento Vestibular",
+    "description": "Estrutura fibrosa da laringe que forma o suporte do ligamento vocal e participa da formação das pregas vestibulares, auxiliando na proteção das vias respiratórias."
+  },
+  "Trachea": {
+    "objname": "Traqueia",
+    "description": "Tubo que conduz o ar da laringe até os brônquios. É sustentada por anéis de cartilagem que mantêm sua luz aberta durante a respiração."
+  },
+  "ThyroidCartilage": {
+    "objname": "Cartilagem Tireoidea",
+    "description": "Maior cartilagem da laringe, formando grande parte de sua parede anterior. Protege estruturas internas da laringe e serve de suporte para as pregas vocais."
+  },
+  "ThyrohyoidMembrane": {
+    "objname": "Membrana Tireo-hióidea",
+    "description": "Membrana que conecta a cartilagem tireoidea ao osso hioide, contribuindo para a sustentação e a mobilidade da laringe."
+  },
+  "ThyroglossalDuct": {
+    "objname": "Ducto Tireoglosso",
+    "description": "Estrutura embrionária relacionada à formação da glândula tireoide, conectando inicialmente a região da língua ao local de desenvolvimento da tireoide. Normalmente desaparece durante o desenvolvimento."
+  },
+  "Thyro-epiglotticLigament": {
+    "objname": "Ligamento Tireoepiglótico",
+    "description": "Ligamento que conecta a epiglote à cartilagem tireoidea, contribuindo para a fixação da epiglote na laringe."
+  },
+  "RightLung": {
+    "objname": "Pulmão Direito",
+    "description": "Pulmão localizado no lado direito do tórax. Possui três lobos e realiza as trocas gasosas entre o ar e o sangue através dos alvéolos pulmonares."
+  },
+  "RightBronchus": {
+    "objname": "Brônquio Direito",
+    "description": "Principal via aérea que conduz o ar da traqueia para o pulmão direito. É mais curto, largo e vertical que o brônquio esquerdo."
+  },
+  "QuadrangularMembrane": {
+    "objname": "Membrana Quadrangular",
+    "description": "Membrana localizada na laringe que se estende entre a epiglote e as cartilagens aritenoides. Sua margem inferior contribui para a formação do ligamento vestibular."
+  },
+  "MedianThyrohyoid": {
+    "objname": "Ligamento Tireo-hióideo Mediano",
+    "description": "Porção mediana da membrana tireo-hióidea, responsável por reforçar a conexão entre o osso hioide e a cartilagem tireoidea."
+  },
+  "LeftLung": {
+    "objname": "Pulmão Esquerdo",
+    "description": "Pulmão localizado no lado esquerdo do tórax. Possui dois lobos e uma incisura cardíaca que acomoda parte do coração."
+  },
+  "LeftBronchus": {
+    "objname": "Brônquio Esquerdo",
+    "description": "Principal via aérea que conduz o ar da traqueia para o pulmão esquerdo. É mais longo e mais horizontal que o brônquio direito."
+  },
+  "HyoioBone": {
+    "objname": "Osso Hioide",
+    "description": "Osso em forma de ferradura localizado no pescoço, entre a mandíbula e a laringe. Serve de suporte para a língua e para diversos músculos e estruturas relacionadas à deglutição e à respiração."
+  },
+  "HYO-EpiglotticLigament": {
+    "objname": "Ligamento Hioepiglótico",
+    "description": "Ligamento que conecta o osso hioide à epiglote, contribuindo para a fixação e o movimento da epiglote durante a deglutição."
+  },
+  "EpiglottiCartilage": {
+    "objname": "Cartilagem Epiglótica",
+    "description": "Cartilagem elástica que forma a base da epiglote. Durante a deglutição, a epiglote ajuda a direcionar o alimento para o esôfago e a proteger a entrada da laringe."
+  },
+  "Diaphragm": {
+    "objname": "Diafragma",
+    "description": "Principal músculo da respiração, localizado entre as cavidades torácica e abdominal. Sua contração aumenta o volume do tórax e promove a entrada de ar nos pulmões."
+  },
+  "CuneiformCartilage": {
+    "objname": "Cartilagem Cuneiforme",
+    "description": "Pequena cartilagem elástica localizada na prega ariepiglótica. Contribui para a sustentação da entrada da laringe."
+  },
+  "CricopharyngealLigament": {
+    "objname": "Ligamento Cricofaríngeo",
+    "description": "Estrutura fibrosa relacionada à região inferior da faringe e ao músculo constritor inferior, contribuindo para a sustentação da transição entre a faringe e o esôfago."
+  },
+  "CricoidCartilage": {
+    "objname": "Cartilagem Cricoidea",
+    "description": "Cartilagem da laringe localizada abaixo da cartilagem tireoidea. Forma um anel completo ao redor da via aérea e conecta a laringe à traqueia."
+  },
+  "CorniculateCartilage": {
+    "objname": "Cartilagem Corniculada",
+    "description": "Pequena cartilagem elástica localizada no ápice das cartilagens aritenoides. Contribui para a formação das pregas ariepiglóticas."
+  },
+  "ConusElasticus": {
+    "objname": "Cone Elástico",
+    "description": "Membrana fibroelástica da laringe que se estende entre a cartilagem cricoidea e as pregas vocais. Sua margem superior forma os ligamentos vocais."
+  },
+  "ArythenoidCartilage": {
+    "objname": "Cartilagem Aritenoidea",
+    "description": "Cartilagem par localizada na parte posterior da laringe. Participa do controle da posição e da tensão das pregas vocais, sendo essencial para a produção da voz."
+  }
+}

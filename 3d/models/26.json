@@ -1,0 +1,245 @@
+{
+  "objname": "Sistema Estomatognático",
+  "objsystem": [
+    "Estomatognático"
+  ],
+  "objdescription": "O sistema estomatognático é o conjunto de estruturas anatômicas envolvidas principalmente na mastigação, deglutição, fonação, respiração e comunicação. É formado por dentes, língua, lábios, bochechas, gengiva, palato, cavidade oral, glândulas e ductos salivares, além de músculos, ossos e articulações relacionados aos movimentos da mandíbula. A mandíbula e a maxila fornecem suporte para os dentes e delimitam parte da cavidade oral, enquanto músculos como masseter, temporal e pterigoideos controlam os movimentos mandibulares. A língua participa da manipulação dos alimentos, deglutição e fala. As glândulas salivares produzem saliva, que lubrifica a cavidade oral e auxilia na digestão. O conjunto dessas estruturas atua de forma integrada para realizar a mastigação e outras funções essenciais do aparelho oral.",
+
+  "linkedModels": [],
+  "resources": [],
+
+  "Buccinator": {
+    "objname": "Músculo Bucinador",
+    "description": "Músculo da bochecha que comprime as paredes da cavidade oral contra os dentes, auxiliando na mastigação, na movimentação dos alimentos e em ações como assoprar e sugar."
+  },
+
+  "DepressorAnguli": {
+    "objname": "Músculo Depressor do Ângulo da Boca",
+    "description": "Músculo da expressão facial que traciona o ângulo da boca para baixo e lateralmente, participando principalmente de expressões relacionadas à tristeza ou descontentamento."
+  },
+
+  "DepressorSepti": {
+    "objname": "Músculo Depressor do Septo Nasal",
+    "description": "Pequeno músculo localizado na região inferior do nariz que movimenta a parte inferior do septo nasal e auxilia nos movimentos da abertura das narinas e do lábio superior."
+  },
+
+  "Digastiric": {
+    "objname": "Músculo Digástrico",
+    "description": "Músculo formado por dois ventres musculares unidos por um tendão intermediário. Auxilia na abertura da boca e na depressão da mandíbula, além de participar da elevação do osso hioide durante a deglutição."
+  },
+
+  "Genioglossus": {
+    "objname": "Músculo Genioglosso",
+    "description": "Principal músculo da língua, responsável por projetá-la anteriormente e contribuir para seus movimentos durante a fala, mastigação e deglutição. Também ajuda a manter a língua afastada da parede posterior da faringe."
+  },
+
+  "Geniohyoid": {
+    "objname": "Músculo Gênio-Hioideo",
+    "description": "Músculo localizado acima do milo-hioideo, entre a mandíbula e o osso hioide. Auxilia na elevação e anteriorização do hioide e pode contribuir para a abertura da mandíbula."
+  },
+
+  "Gengiva": {
+    "objname": "Gengiva",
+    "description": "Tecido da mucosa oral que circunda e protege os dentes, cobrindo parte dos processos alveolares da maxila e mandíbula. Atua como uma barreira protetora contra agentes mecânicos e microrganismos presentes na cavidade oral."
+  },
+
+  "Hyoglossus": {
+    "objname": "Músculo Hio-Glosso",
+    "description": "Músculo extrínseco da língua que se origina no osso hioide e se dirige à língua. Atua principalmente na depressão e retração da língua, participando dos movimentos necessários à mastigação e deglutição."
+  },
+
+  "LateralPterygoid": {
+    "objname": "Músculo Pterigoideo Lateral",
+    "description": "Músculo da mastigação que participa da protrusão e dos movimentos laterais da mandíbula. Sua contração bilateral auxilia na abertura da boca, enquanto a contração unilateral contribui para os movimentos de lateralidade mandibular."
+  },
+
+  "LevatorAnguliOris": {
+    "objname": "Músculo Levantador do Ângulo da Boca",
+    "description": "Músculo da expressão facial localizado na região lateral da boca. Eleva o ângulo da boca e participa dos movimentos dos lábios durante expressões faciais e na comunicação."
+  },
+
+  "LevatorLabiiSuperioris": {
+    "objname": "Músculo Levantador do Lábio Superior",
+    "description": "Músculo da expressão facial responsável principalmente pela elevação do lábio superior. Participa dos movimentos dos lábios durante expressões faciais e auxilia na exposição dos dentes superiores."
+  },
+
+  "LevatorLabiiSuperiorisAlaequeNasi": {
+    "objname": "Músculo Levantador do Lábio Superior e da Asa do Nariz",
+    "description": "Músculo que eleva o lábio superior e a asa do nariz. Participa dos movimentos da região nasolabial e das expressões faciais, contribuindo também para a dilatação das narinas."
+  },
+
+  "Lips": {
+    "objname": "Lábios",
+    "description": "Estruturas musculomembranosas que formam a entrada anterior da cavidade oral. Participam da apreensão dos alimentos, sucção, mastigação, fala, expressão facial e controle da passagem de alimentos e líquidos."
+  },
+
+  "Mandibula": {
+    "objname": "Mandíbula",
+    "description": "Único osso móvel do crânio. Forma a arcada dentária inferior e sustenta os dentes inferiores. Seus movimentos são essenciais para a mastigação, fala e deglutição, sendo realizados principalmente pela articulação temporomandibular e pelos músculos da mastigação."
+  },
+
+  "MasseterDeep": {
+    "objname": "Músculo Masseter – Porção Profunda",
+    "description": "Porção profunda do músculo masseter, localizada na face lateral da mandíbula. Atua principalmente na elevação da mandíbula e participa da produção da força necessária para a mastigação."
+  },
+
+  "MasseterSuperficial": {
+    "objname": "Músculo Masseter – Porção Superficial",
+    "description": "Porção superficial do músculo masseter, um dos principais músculos da mastigação. Eleva a mandíbula e contribui para o fechamento da boca e para a geração de força durante a mastigação."
+  },
+
+  "Maxilla": {
+    "objname": "Maxila",
+    "description": "Osso par do crânio que forma a arcada dentária superior e contribui para a formação da cavidade oral, cavidade nasal e órbita. Sustenta os dentes superiores e participa da estruturação da face."
+  },
+
+  "MaxillaHardPalate": {
+    "objname": "Palato Duro",
+    "description": "Porção anterior e óssea do teto da cavidade oral, formada principalmente pelos processos palatinos das maxilas e pelas lâminas horizontais dos ossos palatinos. Separa a cavidade oral da cavidade nasal e auxilia na mastigação e deglutição."
+  },
+
+  "MedialPterygoid": {
+    "objname": "Músculo Pterigoideo Medial",
+    "description": "Músculo da mastigação localizado na face medial da mandíbula. Atua principalmente na elevação da mandíbula e também participa dos movimentos de protrusão e lateralidade necessários para triturar os alimentos."
+  },
+
+  "Mentalis": {
+    "objname": "Músculo Mentual",
+    "description": "Músculo localizado na região do queixo, responsável pela elevação e projeção do lábio inferior. Participa das expressões faciais e auxilia no controle dos movimentos do lábio inferior."
+  },
+
+  "Mylohyoid": {
+    "objname": "Músculo Milo-Hioideo",
+    "description": "Músculo que forma grande parte do assoalho da cavidade oral. Eleva o assoalho da boca e o osso hioide durante a deglutição e auxilia na movimentação da mandíbula."
+  },
+
+  "OralCavity": {
+    "objname": "Cavidade Oral",
+    "description": "Espaço anatômico que constitui a porção inicial do sistema digestório e participa da mastigação, formação do bolo alimentar, deglutição, fala e percepção de sabores. É delimitada pelos lábios, bochechas, palato, língua e assoalho da boca."
+  },
+
+  "OrbicularisOris": {
+    "objname": "Músculo Orbicular da Boca",
+    "description": "Músculo circular que envolve a abertura da boca e controla os movimentos dos lábios. Participa do fechamento e protrusão dos lábios, sendo importante para a fala, mastigação, sucção e expressões faciais."
+  },
+
+  "OsTemporale": {
+    "objname": "Osso Temporal",
+    "description": "Osso localizado nas regiões laterais e inferiores do crânio. Participa da formação da base craniana e da articulação temporomandibular, que conecta a mandíbula ao crânio e permite seus movimentos durante a mastigação e fala."
+  },
+
+  "Palatine": {
+    "objname": "Osso Palatino",
+    "description": "Osso par localizado posteriormente à maxila. Participa da formação da porção posterior do palato duro e contribui para a separação entre as cavidades oral e nasal."
+  },
+
+  "Palatoglossus": {
+    "objname": "Músculo Palatoglosso",
+    "description": "Músculo que conecta o palato mole à língua. Atua na elevação da parte posterior da língua e na redução da abertura entre a cavidade oral e a orofaringe durante a deglutição."
+  },
+
+  "Risorius": {
+    "objname": "Músculo Risório",
+    "description": "Músculo da expressão facial que traciona lateralmente o ângulo da boca. Participa de expressões faciais relacionadas ao sorriso e à movimentação dos lábios."
+  },
+
+  "SalivaryDuct": {
+    "objname": "Ductos Salivares",
+    "description": "Canais responsáveis por transportar a saliva produzida pelas glândulas salivares até a cavidade oral. Permitem que a saliva alcance diferentes regiões da boca, contribuindo para lubrificação, proteção e início da digestão."
+  },
+
+  "SalivaryGland": {
+    "objname": "Glândulas Salivares",
+    "description": "Glândulas responsáveis pela produção e secreção da saliva. As principais são as parótidas, submandibulares e sublinguais. A saliva lubrifica os alimentos, facilita a mastigação e deglutição, protege os tecidos orais e inicia a digestão de carboidratos."
+  },
+
+  "Styloglossus": {
+    "objname": "Músculo Estiloglosso",
+    "description": "Músculo extrínseco da língua que se origina no processo estiloide do osso temporal. Atua principalmente na retração e elevação da língua, contribuindo para a movimentação do alimento durante a mastigação e deglutição."
+  },
+
+  "Stylohyoid": {
+    "objname": "Músculo Estilo-Hioideo",
+    "description": "Músculo localizado entre o processo estiloide e o osso hioide. Eleva e retrai o hioide, participando principalmente dos movimentos relacionados à deglutição."
+  },
+
+  "TemporalFascia": {
+    "objname": "Fáscia Temporal",
+    "description": "Camada de tecido conjuntivo que recobre o músculo temporal e contribui para sua organização e fixação. Faz parte dos tecidos fasciais da região temporal e auxilia na transmissão e distribuição das forças musculares."
+  },
+
+  "Temporalis": {
+    "objname": "Músculo Temporal",
+    "description": "Um dos principais músculos da mastigação. Localizado na região lateral do crânio, eleva e retrai a mandíbula, contribuindo para o fechamento da boca e para o posicionamento da mandíbula durante a mastigação."
+  },
+
+  "Tongue": {
+    "objname": "Língua",
+    "description": "Órgão muscular localizado no interior da cavidade oral, formado por músculos intrínsecos e extrínsecos. Participa da mastigação, manipulação e formação do bolo alimentar, deglutição, fala e percepção do paladar."
+  },
+
+  "Uvula": {
+    "objname": "Úvula Palatina",
+    "description": "Projeção muscular localizada na margem posterior do palato mole. Participa dos movimentos do palato durante a deglutição, ajudando a direcionar o alimento e a impedir sua passagem para a cavidade nasal."
+  },
+
+  "Zygomatic": {
+    "objname": "Osso Zigomático",
+    "description": "Osso par da face localizado lateralmente à maxila. Forma parte da parede e do assoalho da órbita e participa da estrutura das bochechas e do arco zigomático, fornecendo inserção e suporte para músculos relacionados à mastigação e expressão facial."
+  },
+
+  "ZygomaticusMajor": {
+    "objname": "Músculo Zigomático Maior",
+    "description": "Músculo da expressão facial que se estende do osso zigomático até o ângulo da boca. Eleva e traciona lateralmente o canto da boca, sendo um dos principais músculos envolvidos no sorriso."
+  },
+
+  "ZygomaticusMinor": {
+    "objname": "Músculo Zigomático Menor",
+    "description": "Músculo da expressão facial localizado acima do zigomático maior. Eleva o lábio superior e contribui para movimentos e expressões da região ao redor da boca."
+  },
+
+  "Skin": {
+    "objname": "Pele da Cabeça",
+    "description": "Objeto 3D transparente que representa a camada externa da cabeça e permite visualizar as estruturas anatômicas internas. Pode ser ocultado para facilitar a observação dos músculos, ossos e demais componentes do sistema estomatognático."
+  },
+
+  "DentesIncisivosCentrais": {
+    "objname": "Incisivos Centrais",
+    "description": "Dentes anteriores localizados próximos à linha média das arcadas superior e inferior. Possuem bordas cortantes e são utilizados principalmente para cortar e apreender os alimentos, além de contribuírem para a fala e estética facial."
+  },
+
+  "DentesIncisivosLaterais": {
+    "objname": "Incisivos Laterais",
+    "description": "Dentes anteriores localizados lateralmente aos incisivos centrais. Participam principalmente do corte dos alimentos e também contribuem para a formação das palavras e para a aparência da arcada dentária."
+  },
+
+  "DentesCaninos": {
+    "objname": "Caninos",
+    "description": "Dentes pontiagudos localizados entre os incisivos laterais e os pré-molares. Possuem raízes longas e são especialmente adaptados para perfurar e rasgar os alimentos, além de contribuírem para a orientação dos movimentos mandibulares."
+  },
+
+  "2DentesPreMolares": {
+    "objname": "Segundos Pré-Molares",
+    "description": "Dentes localizados posteriormente aos primeiros pré-molares. Possuem superfícies mastigatórias adaptadas para triturar e fragmentar os alimentos, participando da transição entre a função dos caninos e dos molares."
+  },
+
+  "1DentesPreMolares": {
+    "objname": "Primeiros Pré-Molares",
+    "description": "Dentes localizados entre os caninos e os segundos pré-molares. Participam da trituração e fragmentação dos alimentos e apresentam características intermediárias entre caninos e molares."
+  },
+
+  "2DentesMolares": {
+    "objname": "Segundos Molares",
+    "description": "Dentes posteriores da dentição permanente localizados atrás dos primeiros molares. Apresentam superfícies amplas destinadas principalmente à trituração dos alimentos durante a mastigação."
+  },
+
+  "1DentesMolares": {
+    "objname": "Primeiros Molares",
+    "description": "Grandes dentes posteriores da dentição permanente, localizados atrás dos pré-molares. Possuem amplas superfícies mastigatórias e desempenham importante papel na trituração dos alimentos."
+  },
+
+  "3DentesMolares": {
+    "objname": "Terceiros Molares",
+    "description": "Últimos dentes da dentição permanente, localizados na região mais posterior das arcadas dentárias e conhecidos como dentes do siso. Sua função está relacionada à mastigação, embora possam apresentar variações de posição e desenvolvimento."
+  }
+}

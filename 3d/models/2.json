@@ -1,7 +1,14 @@
 {
   "objname": "Cérebro",
-  "objsystem": "Sistema Nervoso",
+  "objsystem": "Nervoso",
   "objdescription": "O cérebro é o principal órgão do sistema nervoso central, responsável pelo processamento das informações sensoriais, controle dos movimentos, memória, linguagem, emoções e funções vitais.",
+  "linkedModels": [
+    {
+      "id": "21",
+      "label": "Sistema Nervoso"
+    }
+  ],
+  "resources": [],
   "Amygdala": {
     "objname": "Amígdala",
     "description": "Estrutura responsável pelo processamento das emoções, especialmente medo, ansiedade e memória emocional."

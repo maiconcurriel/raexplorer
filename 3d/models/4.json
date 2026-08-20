@@ -6,6 +6,14 @@
     {
       "id": "5",
       "label": "Coração (Animado)"
+    },
+    {
+      "id": "19",
+      "label": "Sistema Arterial"
+    },
+    {
+      "id": "20",
+      "label": "Sistema Venoso"
     }
   ],
   "resources": [

@@ -2,6 +2,8 @@
   "objname": "Célula Animal",
   "objsystem": "Célula",
   "objdescription": "Modelo anatômico de uma célula eucariótica animal, contendo organelas responsáveis por metabolismo, produção de energia, síntese de proteínas e controle das funções celulares.",
+  "linkedModels": [],
+  "resources": [],
   "Centriolos": {
     "objname": "Centríolos",
     "description": "Estruturas cilíndricas envolvidas na divisão celular, auxiliando na formação do fuso mitótico e na organização do citoesqueleto."

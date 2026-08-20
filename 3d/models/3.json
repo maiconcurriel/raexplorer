@@ -1,107 +1,1031 @@
 {
-  "objname": "Esqueleto Humano",
+  "objname": "Sistema Esquelético Masculino",
   "objsystem": "Esquelético",
-  "objdescription": "Modelo anatômico completo do esqueleto humano, representando a estrutura óssea responsável por sustentação, proteção dos órgãos e suporte aos movimentos do corpo.",
-  "resources": [    
-    {
-      "type": "doc",
-      "name": "PDF",
-      "info": "Documento · 178 KB",
-      "url": "Esqueleto_humano.pdf"
-    },
-    {
-      "type": "video",
-      "name": "Vimeo",
-      "info": "Vídeo · 11 sec",
-      "url": "https://vimeo.com/486984055"
-    },
-    {
-      "type": "image",
-      "name": "Imagem",
-      "info": "Imagem · 37,8 kb",
-      "url": "esqueleto.png"
-    },
-    {
-      "type": "link",
-      "name": "Wikipedia",
-      "info": "Link externo",
-      "url": "https://pt.wikipedia.org/wiki/Esqueleto_humano"
-    },
-    {
-      "type": "audio",
-      "name": "Áudio descritivo",
-      "info": "Áudio · 8 min",
-      "url": "descesqu.mp3"
-    },
-    {
-      "type": "video",
-      "name": "YouTube",
-      "info": "Vídeo · 10 hrs",
-      "url": "https://www.youtube.com/watch?v=KZk8crBYDcY"
-    }
-  ],
-  "RibCage": {
-    "objname": "Caixa torácica",
-    "description": "Estrutura óssea formada por costelas, esterno e vértebras torácicas, responsável por proteger órgãos vitais como coração e pulmões."
+  "objdescription": "Conjunto de ossos, articulações, cartilagens e estruturas ligamentares que compõem o sistema esquelético masculino. O esqueleto fornece sustentação e forma ao corpo, protege órgãos internos, permite os movimentos em conjunto com o sistema muscular, participa da produção de células sanguíneas e atua como reserva de minerais, especialmente cálcio e fósforo. O modelo apresenta estruturas do esqueleto axial e apendicular, incluindo crânio, coluna vertebral, caixa torácica, cintura escapular, membros superiores, pelve e membros inferiores, além de suas principais articulações e ligamentos.",
+  "linkedModels": [],
+  "resources": [],
+  "Zygomatic": {
+    "objname": "Osso zigomático",
+    "description": "Osso da face que forma parte da parede lateral e do assoalho da órbita e participa da formação do arco zigomático."
   },
-  "Cranium": {
-    "objname": "Crânio",
-    "description": "Conjunto de ossos que protege o cérebro e forma a estrutura da cabeça e do rosto."
+  "XiphoidProcess": {
+    "objname": "Processo xifoide",
+    "description": "Extremidade inferior do esterno, localizada abaixo do corpo do esterno e que serve de ponto de fixação para músculos e ligamentos."
   },
-  "Pelvis": {
-    "objname": "Quadril",
-    "description": "Região formada pelos ossos da pelve, conectando o tronco aos membros inferiores e auxiliando na sustentação do corpo."
+  "Vomer": {
+    "objname": "Vômer",
+    "description": "Osso fino e mediano que forma a parte inferior do septo nasal."
   },
-  "Humerus": {
-    "objname": "Úmero",
-    "description": "Osso longo do braço localizado entre o ombro e o cotovelo, essencial para os movimentos do membro superior."
+  "UlnorcarpalJoint": {
+    "objname": "Articulação ulnocarpal",
+    "description": "Região de articulação entre a extremidade distal da ulna e as estruturas do carpo, relacionada aos movimentos do punho."
   },
-  "Radius": {
-    "objname": "Rádio",
-    "description": "Osso do antebraço localizado do lado do polegar, importante para os movimentos de rotação da mão e do punho."
+  "UlnarCollateral": {
+    "objname": "Ligamento colateral ulnar",
+    "description": "Ligamento localizado no lado ulnar de uma articulação, contribuindo para sua estabilidade."
+  },
+  "UlnarCollateralLigament": {
+    "objname": "Ligamento colateral ulnar",
+    "description": "Ligamento que reforça o lado medial do cotovelo e limita movimentos excessivos em valgo."
   },
   "Ulna": {
     "objname": "Ulna",
-    "description": "Osso do antebraço localizado ao lado do dedo mínimo, responsável pela estabilidade e movimentação do cotovelo."
+    "description": "Osso do antebraço localizado no lado medial, do lado do dedo mínimo, articulando-se com o úmero e o rádio."
   },
-  "Spine": {
-    "objname": "Coluna vertebral",
-    "description": "Estrutura composta por vértebras que sustenta o corpo, protege a medula espinhal e permite movimentos do tronco."
+  "TwelfthRib": {
+    "objname": "Décima segunda costela",
+    "description": "Última costela verdadeira do conjunto das costelas flutuantes, localizada na porção inferior do tórax."
   },
-  "Mandible": {
-    "objname": "Mandibula",
-    "description": "Maior e único osso móvel da face, responsável pela mastigação, fala e sustentação dos dentes inferiores."
+  "Triquetral": {
+    "objname": "Osso piramidal",
+    "description": "Osso do carpo localizado na fileira proximal, no lado ulnar do punho."
   },
-  "Clavicle": {
-    "objname": "Clavícula",
-    "description": "Osso alongado que conecta o ombro ao tórax, auxiliando na sustentação e movimentação dos braços."
+  "Trapezoid": {
+    "objname": "Osso trapezoide",
+    "description": "Pequeno osso do carpo localizado entre o trapézio e o capitato, articulando-se principalmente com o segundo metacarpal."
   },
-  "Femur": {
-    "objname": "Fêmur",
-    "description": "Maior e mais resistente osso do corpo humano, localizado na coxa e fundamental para locomoção e sustentação."
+  "Trapezium": {
+    "objname": "Osso trapézio",
+    "description": "Osso do carpo localizado na base do polegar e que participa da articulação carpometacarpal do primeiro dedo."
   },
-  "Tibia": {
+  "TibiofibularLigament": {
+    "objname": "Ligamento tibiofibular",
+    "description": "Ligamento que une a tíbia e a fíbula e contribui para a estabilidade da perna e do tornozelo."
+  },
+  "TibiaLeg": {
     "objname": "Tíbia",
-    "description": "Principal osso da perna, responsável por suportar grande parte do peso corporal entre o joelho e o tornozelo."
+    "description": "Maior osso da perna, localizado medialmente, responsável por transmitir grande parte do peso corporal do joelho ao tornozelo."
   },
-  "Fibula": {
-    "objname": "Fíbula",
-    "description": "Osso fino localizado ao lado da tíbia, contribuindo para estabilidade e suporte da perna e tornozelo."
+  "ThirdRib": {
+    "objname": "Terceira costela",
+    "description": "Costela localizada na terceira posição da parede torácica."
   },
-  "Tarsal": {
-    "objname": "Ossos tarsais",
-    "description": "Conjunto de ossos do tornozelo e parte posterior do pé, responsáveis pela sustentação e mobilidade."
+  "TenthRib": {
+    "objname": "Décima costela",
+    "description": "Costela inferior que geralmente se conecta ao arco costal por meio da cartilagem da costela superior."
   },
-  "Carpals": {
-    "objname": "Ossos carpais",
-    "description": "Pequenos ossos localizados no punho, responsáveis pela flexibilidade e movimentos das mãos."
+  "TeethPremolarSecond29": {
+    "objname": "Segundo pré-molar superior direito",
+    "description": "Segundo pré-molar localizado no lado superior direito da dentição permanente."
+  },
+  "TeethPremolarSecond20": {
+    "objname": "Segundo pré-molar inferior esquerdo",
+    "description": "Segundo pré-molar localizado no lado inferior esquerdo da dentição permanente."
+  },
+  "TeethPremolarSecond13": {
+    "objname": "Segundo pré-molar superior esquerdo",
+    "description": "Segundo pré-molar localizado no lado superior esquerdo da dentição permanente."
+  },
+  "TeethPremolarSecond04": {
+    "objname": "Segundo pré-molar inferior direito",
+    "description": "Segundo pré-molar localizado no lado inferior direito da dentição permanente."
+  },
+  "TeethPremolarFirst28": {
+    "objname": "Primeiro pré-molar superior direito",
+    "description": "Primeiro pré-molar localizado no lado superior direito da dentição permanente."
+  },
+  "TeethPremolarFirst21": {
+    "objname": "Primeiro pré-molar inferior esquerdo",
+    "description": "Primeiro pré-molar localizado no lado inferior esquerdo da dentição permanente."
+  },
+  "TeethPremolarFirst12": {
+    "objname": "Primeiro pré-molar superior esquerdo",
+    "description": "Primeiro pré-molar localizado no lado superior esquerdo da dentição permanente."
+  },
+  "TeethPremolarFirst05": {
+    "objname": "Primeiro pré-molar inferior direito",
+    "description": "Primeiro pré-molar localizado no lado inferior direito da dentição permanente."
+  },
+  "TeethMolarThird32": {
+    "objname": "Terceiro molar inferior direito",
+    "description": "Terceiro molar permanente localizado na região posterior inferior direita, conhecido como dente do siso."
+  },
+  "TeethMolarThird17": {
+    "objname": "Terceiro molar superior esquerdo",
+    "description": "Terceiro molar permanente localizado na região posterior superior esquerda, conhecido como dente do siso."
+  },
+  "TeethMolarThird16": {
+    "objname": "Terceiro molar superior direito",
+    "description": "Terceiro molar permanente localizado na região posterior superior direita, conhecido como dente do siso."
+  },
+  "TeethMolarThird01": {
+    "objname": "Terceiro molar inferior esquerdo",
+    "description": "Terceiro molar permanente localizado na região posterior inferior esquerda, conhecido como dente do siso."
+  },
+  "TeethMolarSecond31": {
+    "objname": "Segundo molar inferior direito",
+    "description": "Segundo molar permanente localizado atrás do primeiro molar inferior direito."
+  },
+  "TeethMolarSecond18": {
+    "objname": "Segundo molar superior esquerdo",
+    "description": "Segundo molar permanente localizado atrás do primeiro molar superior esquerdo."
+  },
+  "TeethMolarSecond15": {
+    "objname": "Segundo molar superior direito",
+    "description": "Segundo molar permanente localizado atrás do primeiro molar superior direito."
+  },
+  "TeethMolarSecond02": {
+    "objname": "Segundo molar inferior esquerdo",
+    "description": "Segundo molar permanente localizado atrás do primeiro molar inferior esquerdo."
+  },
+  "TeethMolarFirst30": {
+    "objname": "Primeiro molar inferior direito",
+    "description": "Primeiro molar permanente localizado na região posterior da mandíbula direita."
+  },
+  "TeethMolarFirst19": {
+    "objname": "Primeiro molar superior esquerdo",
+    "description": "Primeiro molar permanente localizado na região posterior da maxila esquerda."
+  },
+  "TeethMolarFirst14": {
+    "objname": "Primeiro molar superior direito",
+    "description": "Primeiro molar permanente localizado na região posterior da maxila direita."
+  },
+  "TeethMolarFirst03": {
+    "objname": "Primeiro molar inferior esquerdo",
+    "description": "Primeiro molar permanente localizado na região posterior da mandíbula esquerda."
+  },
+  "TeethIncisorLateral23": {
+    "objname": "Incisivo lateral inferior esquerdo",
+    "description": "Dente anterior permanente localizado ao lado do incisivo central inferior esquerdo."
+  },
+  "TeethIncisorLateral10": {
+    "objname": "Incisivo lateral superior direito",
+    "description": "Dente anterior permanente localizado ao lado do incisivo central superior direito."
+  },
+  "TeethIncisorLateral07": {
+    "objname": "Incisivo lateral inferior direito",
+    "description": "Dente anterior permanente localizado ao lado do incisivo central inferior direito."
+  },
+  "TeethIncisorCentral25": {
+    "objname": "Incisivo central inferior esquerdo",
+    "description": "Dente anterior localizado na região central da mandíbula esquerda."
+  },
+  "TeethIncisorLateral26": {
+    "objname": "Incisivo lateral inferior esquerdo",
+    "description": "Dente localizado lateralmente ao incisivo central inferior esquerdo."
+  },
+  "TeethIncisorCentral24": {
+    "objname": "Incisivo central superior esquerdo",
+    "description": "Dente anterior localizado na região central da maxila esquerda."
+  },
+  "TeethIncisorCentral09": {
+    "objname": "Incisivo central superior direito",
+    "description": "Dente anterior localizado na região central da maxila direita."
+  },
+  "TeethIncisorCentral08": {
+    "objname": "Incisivo central inferior direito",
+    "description": "Dente anterior localizado na região central da mandíbula direita."
+  },
+  "TeethCanine27": {
+    "objname": "Canino inferior esquerdo",
+    "description": "Dente pontiagudo localizado entre o incisivo lateral e o primeiro pré-molar inferiores do lado esquerdo."
+  },
+  "TeethCanine22": {
+    "objname": "Canino superior esquerdo",
+    "description": "Dente pontiagudo localizado entre o incisivo lateral e o primeiro pré-molar superiores do lado esquerdo."
+  },
+  "TeethCanine11": {
+    "objname": "Canino superior direito",
+    "description": "Dente pontiagudo localizado entre o incisivo lateral e o primeiro pré-molar superiores do lado direito."
+  },
+  "TeethCanine06": {
+    "objname": "Canino inferior direito",
+    "description": "Dente pontiagudo localizado entre o incisivo lateral e o primeiro pré-molar inferiores do lado direito."
+  },
+  "TectorialMembraneOfAtlanto": {
+    "objname": "Membrana tectória do complexo atlantoaxial",
+    "description": "Continuação superior do ligamento longitudinal posterior que recobre estruturas da articulação atlantoaxial."
+  },
+  "Talus": {
+    "objname": "Tálus",
+    "description": "Osso do tornozelo que conecta a perna ao pé e participa das articulações do tornozelo e subtalar."
+  },
+  "TalonavicularLigament": {
+    "objname": "Ligamento talonavicular",
+    "description": "Ligamento que conecta o tálus ao osso navicular e auxilia na estabilidade da articulação talonavicular."
+  },
+  "T12Vertebra": {
+    "objname": "Décima segunda vértebra torácica",
+    "description": "Última vértebra da região torácica da coluna vertebral."
+  },
+  "T11Vertebra": {
+    "objname": "Décima primeira vértebra torácica",
+    "description": "Vértebra da região torácica localizada entre T10 e T12."
+  },
+  "T10Vertebra": {
+    "objname": "Décima vértebra torácica",
+    "description": "Vértebra da região torácica localizada entre T9 e T11."
+  },
+  "T09Vertebra": {
+    "objname": "Nona vértebra torácica",
+    "description": "Vértebra da região torácica localizada entre T8 e T10."
+  },
+  "T08Vertebra": {
+    "objname": "Oitava vértebra torácica",
+    "description": "Vértebra da região torácica localizada entre T7 e T9."
+  },
+  "T07Vertebra": {
+    "objname": "Sétima vértebra torácica",
+    "description": "Vértebra da região torácica localizada entre T6 e T8."
+  },
+  "T06Vertebra": {
+    "objname": "Sexta vértebra torácica",
+    "description": "Vértebra da região torácica localizada entre T5 e T7."
+  },
+  "T05Vertebra": {
+    "objname": "Quinta vértebra torácica",
+    "description": "Vértebra da região torácica localizada entre T4 e T6."
+  },
+  "T04Vertebra": {
+    "objname": "Quarta vértebra torácica",
+    "description": "Vértebra da região torácica localizada entre T3 e T5."
+  },
+  "T03Vertebra": {
+    "objname": "Terceira vértebra torácica",
+    "description": "Vértebra da região torácica localizada entre T2 e T4."
+  },
+  "T02Vertebra": {
+    "objname": "Segunda vértebra torácica",
+    "description": "Vértebra da região torácica localizada entre T1 e T3."
+  },
+  "T01Vertebra": {
+    "objname": "Primeira vértebra torácica",
+    "description": "Primeira vértebra da região torácica da coluna vertebral."
+  },
+  "SupraspinousLigament": {
+    "objname": "Ligamento supraespinhoso",
+    "description": "Ligamento que une os processos espinhosos das vértebras, estendendo-se ao longo da coluna."
+  },
+  "SuperiorTransverseScapularLigament": {
+    "objname": "Ligamento transverso superior da escápula",
+    "description": "Ligamento que atravessa a incisura da escápula e mantém o nervo supraescapular em relação à incisura."
+  },
+  "SuperiorPeronealRetinaculumLigament": {
+    "objname": "Retináculo superior dos músculos fibulares",
+    "description": "Estrutura fibrosa que mantém os tendões dos músculos fibulares junto à região lateral do tornozelo."
+  },
+  "SuperiorGlenohumeralLigament": {
+    "objname": "Ligamento glenoumeral superior",
+    "description": "Ligamento da articulação do ombro que ajuda a estabilizar a cabeça do úmero."
+  },
+  "SuperiorExtensorRetinaculumLigament": {
+    "objname": "Retináculo extensor superior",
+    "description": "Estrutura fibrosa que mantém os tendões extensores junto ao tornozelo."
+  },
+  "SuperficialTransverseMetacarpalLigament": {
+    "objname": "Ligamento metacarpal transverso superficial",
+    "description": "Estrutura ligamentar que conecta as regiões anteriores dos metacarpais e auxilia na estabilidade da mão."
+  },
+  "StylomandibularLigamentSkull": {
+    "objname": "Ligamento estilomandibular",
+    "description": "Ligamento que se estende do processo estiloide do temporal até a mandíbula."
+  },
+  "StylohyoidLigament": {
+    "objname": "Ligamento estilo-hióideo",
+    "description": "Ligamento que conecta o processo estiloide do temporal ao osso hioide."
+  },
+  "SternoclavicularLigament": {
+    "objname": "Ligamento esternoclavicular",
+    "description": "Ligamento que reforça a articulação entre a clavícula e o esterno."
+  },
+  "SphenomandibularLigamentSkull": {
+    "objname": "Ligamento esfenomandibular",
+    "description": "Ligamento que se estende do osso esfenoide até a mandíbula e auxilia na sustentação da articulação temporomandibular."
+  },
+  "SphenoidSkull": {
+    "objname": "Osso esfenoide",
+    "description": "Osso da base do crânio que participa da formação da cavidade craniana e das órbitas."
+  },
+  "SixthRib": {
+    "objname": "Sexta costela",
+    "description": "Costela localizada na sexta posição da parede torácica."
+  },
+  "SeventhRib": {
+    "objname": "Sétima costela",
+    "description": "Costela localizada na sétima posição da parede torácica."
+  },
+  "SeptalCartilageSkull": {
+    "objname": "Cartilagem do septo nasal",
+    "description": "Cartilagem que forma parte do septo nasal e separa as cavidades nasais."
+  },
+  "SecondRib": {
+    "objname": "Segunda costela",
+    "description": "Costela localizada na segunda posição da parede torácica."
   },
   "Scapula": {
     "objname": "Escápula",
-    "description": "Osso plano localizado nas costas, conhecido como omoplata, essencial para os movimentos do ombro."
+    "description": "Osso plano do ombro que articula com a clavícula e o úmero e serve de origem ou inserção para diversos músculos."
   },
-  "Patella": {
+  "Scaphoid": {
+    "objname": "Osso escafoide",
+    "description": "Osso do carpo localizado na fileira proximal, no lado radial do punho."
+  },
+  "SacrotuberousLigament": {
+    "objname": "Ligamento sacrotuberoso",
+    "description": "Ligamento que conecta o sacro e o cóccix à tuberosidade isquiática."
+  },
+  "SacrospinousLigament": {
+    "objname": "Ligamento sacroespinhoso",
+    "description": "Ligamento que conecta o sacro e o cóccix à espinha isquiática."
+  },
+  "S0105Sacrum": {
+    "objname": "Sacro (S1–S5)",
+    "description": "Osso formado pela fusão das cinco vértebras sacrais, localizado entre a coluna lombar e o cóccix."
+  },
+  "Radius": {
+    "objname": "Rádio",
+    "description": "Osso do antebraço localizado no lado lateral, do lado do polegar."
+  },
+  "RadialCollateralLigament": {
+    "objname": "Ligamento colateral radial",
+    "description": "Ligamento localizado no lado radial do cotovelo que contribui para sua estabilidade."
+  },
+  "PubofemoralLigament": {
+    "objname": "Ligamento pubofemoral",
+    "description": "Ligamento da articulação do quadril que se estende da região púbica ao fêmur e limita determinados movimentos do quadril."
+  },
+  "PubicSymphysis": {
+    "objname": "Sínfise púbica",
+    "description": "Articulação cartilaginosa que une anteriormente os dois ossos púbicos."
+  },
+  "ProximalCommissuralLigament": {
+    "objname": "Ligamento comissural proximal",
+    "description": "Ligamento localizado na região proximal dos dedos, contribuindo para a estabilidade das articulações digitais."
+  },
+  "PosteriorTalocacanealLigament": {
+    "objname": "Ligamento talocalcâneo posterior",
+    "description": "Ligamento que conecta o tálus ao calcâneo na região posterior da articulação subtalar."
+  },
+  "PosteriorSacroiliacLigament": {
+    "objname": "Ligamento sacroilíaco posterior",
+    "description": "Ligamento que reforça posteriormente a articulação entre o sacro e o ílio."
+  },
+  "PosteriorCruciateLigament": {
+    "objname": "Ligamento cruzado posterior",
+    "description": "Ligamento do joelho que conecta o fêmur à tíbia e limita o deslocamento posterior da tíbia."
+  },
+  "PosteriorAtlantoOccipitalMembrane": {
+    "objname": "Membrana atlanto-occipital posterior",
+    "description": "Membrana que conecta o atlas ao osso occipital posteriormente."
+  },
+  "PlantarCalcaneonavicularLigament": {
+    "objname": "Ligamento calcaneonavicular plantar",
+    "description": "Ligamento que conecta o calcâneo ao navicular e auxilia na sustentação do arco medial do pé."
+  },
+  "PlantarCalcaneocuboidLigament": {
+    "objname": "Ligamento calcaneocubóideo plantar",
+    "description": "Ligamento que conecta o calcâneo ao cuboide na região plantar do pé."
+  },
+  "PlantarAponeurosis": {
+    "objname": "Aponeurose plantar",
+    "description": "Faixa espessa de tecido conjuntivo na planta do pé que auxilia na sustentação do arco plantar."
+  },
+  "Pisiform": {
+    "objname": "Osso pisiforme",
+    "description": "Pequeno osso do carpo localizado na face palmar, articulado com o piramidal."
+  },
+  "PhalangoglenoidLigaments5th": {
+    "objname": "Ligamentos falangoglenoides do 5º dedo",
+    "description": "Ligamentos que reforçam a região palmar da articulação metacarpofalângica do quinto dedo."
+  },
+  "PhalangoglenoidLigaments4th": {
+    "objname": "Ligamentos falangoglenoides do 4º dedo",
+    "description": "Ligamentos que reforçam a região palmar da articulação metacarpofalângica do quarto dedo."
+  },
+  "PhalangoglenoidLigaments3rd": {
+    "objname": "Ligamentos falangoglenoides do 3º dedo",
+    "description": "Ligamentos que reforçam a região palmar da articulação metacarpofalângica do terceiro dedo."
+  },
+  "PhalangoglenoidLigaments2nd": {
+    "objname": "Ligamentos falangoglenoides do 2º dedo",
+    "description": "Ligamentos que reforçam a região palmar da articulação metacarpofalângica do segundo dedo."
+  },
+  "PerinealMembrane": {
+    "objname": "Membrana do períneo",
+    "description": "Estrutura fibrosa da região perineal que contribui para o suporte das estruturas pélvicas."
+  },
+  "PatellarLigament": {
+    "objname": "Ligamento patelar",
+    "description": "Estrutura que conecta a patela à tuberosidade da tíbia e transmite a força do quadríceps para a perna."
+  },
+  "PatellaKneeCap": {
     "objname": "Patela",
-    "description": "Osso localizado na frente do joelho, responsável por proteger a articulação e auxiliar nos movimentos da perna."
+    "description": "Osso sesamoide localizado anteriormente ao joelho, incorporado ao tendão do quadríceps."
+  },
+  "ParietalLeftSkull": {
+    "objname": "Osso parietal esquerdo",
+    "description": "Osso que forma grande parte da parede superior e lateral esquerda do crânio."
+  },
+  "ParietalRightSkull": {
+    "objname": "Osso parietal direito",
+    "description": "Osso que forma grande parte da parede superior e lateral direita do crânio."
+  },
+  "PalmarRadioulnar": {
+    "objname": "Ligamento radioulnar palmar",
+    "description": "Ligamento da região palmar que reforça a relação entre rádio e ulna."
+  },
+  "PalmarRadiocarpalLigament": {
+    "objname": "Ligamento radiocarpal palmar",
+    "description": "Ligamento que reforça anteriormente a articulação do punho, conectando o rádio aos ossos do carpo."
+  },
+  "PalmarPlateOfMCP5th": {
+    "objname": "Placa palmar da articulação metacarpofalângica do 5º dedo",
+    "description": "Estrutura fibrocartilaginosa que reforça a face palmar da articulação metacarpofalângica do quinto dedo."
+  },
+  "PalmarPlateOfMCP4th": {
+    "objname": "Placa palmar da articulação metacarpofalângica do 4º dedo",
+    "description": "Estrutura fibrocartilaginosa que reforça a face palmar da articulação metacarpofalângica do quarto dedo."
+  },
+  "PalmarPlateOfMCP3th": {
+    "objname": "Placa palmar da articulação metacarpofalângica do 3º dedo",
+    "description": "Estrutura fibrocartilaginosa que reforça a face palmar da articulação metacarpofalângica do terceiro dedo."
+  },
+  "PalmarPlateOfMCP2nd": {
+    "objname": "Placa palmar da articulação metacarpofalângica do 2º dedo",
+    "description": "Estrutura fibrocartilaginosa que reforça a face palmar da articulação metacarpofalângica do segundo dedo."
+  },
+  "PalmarLigaments": {
+    "objname": "Ligamentos palmares",
+    "description": "Conjunto de ligamentos localizados na face palmar da mão que reforçam e estabilizam as articulações."
+  },
+  "PalmarIntermetacarpalLigaments": {
+    "objname": "Ligamentos intermetacarpais palmares",
+    "description": "Ligamentos que conectam os metacarpais na face palmar da mão."
+  },
+  "PalmarCarpometacarpalLigaments": {
+    "objname": "Ligamentos carpometacarpais palmares",
+    "description": "Ligamentos que reforçam as articulações entre os ossos do carpo e os metacarpais."
+  },
+  "PalmarAponeurosis": {
+    "objname": "Aponeurose palmar",
+    "description": "Tecido conjuntivo espesso localizado na palma da mão que protege estruturas profundas e auxilia na fixação da pele."
+  },
+  "PalmarAponeurosisTransverse": {
+    "objname": "Fibras transversas da aponeurose palmar",
+    "description": "Fibras transversais da aponeurose palmar que ajudam a estabilizar os tecidos da palma."
+  },
+  "PalatineSkull": {
+    "objname": "Osso palatino",
+    "description": "Osso que forma a parte posterior do palato duro e contribui para as paredes da cavidade nasal e da órbita."
+  },
+  "OsTemporale": {
+    "objname": "Osso temporal",
+    "description": "Osso lateral do crânio que participa da formação da base craniana e abriga estruturas do ouvido."
+  },
+  "Occipital": {
+    "objname": "Osso occipital",
+    "description": "Osso posterior do crânio que contém o forame magno e articula-se com o atlas."
+  },
+  "ObturatorMembrane": {
+    "objname": "Membrana obturatória",
+    "description": "Membrana que recobre grande parte do forame obturado da pelve, deixando passagem para estruturas neurovasculares."
+  },
+  "ObliqueCord": {
+    "objname": "Corda oblíqua",
+    "description": "Estrutura fibrosa que conecta o rádio e a ulna proximalmente, contribuindo para a estabilidade do antebraço."
+  },
+  "obj_5thProximalPhalanx": {
+    "objname": "Falange proximal do 5º dedo",
+    "description": "Falange proximal do quinto dedo. Na mão corresponde ao dedo mínimo; no pé corresponde ao quinto dedo."
+  },
+  "obj_5thMiddlePhalanx": {
+    "objname": "Falange média do 5º dedo",
+    "description": "Falange intermediária do quinto dedo, presente tanto na mão quanto no pé."
+  },
+  "obj_5thMetatarsal": {
+    "objname": "Quinto metatarsal",
+    "description": "Osso lateral do antepé que conecta o quinto dedo ao tarso."
+  },
+  "obj_5thDistalPhalanx": {
+    "objname": "Falange distal do 5º dedo",
+    "description": "Falange terminal do quinto dedo, presente tanto na mão quanto no pé."
+  },
+  "obj_4thProximalPhalanx": {
+    "objname": "Falange proximal do 4º dedo",
+    "description": "Falange proximal do quarto dedo. Na mão corresponde ao dedo anelar; no pé corresponde ao quarto dedo."
+  },
+  "obj_4thMiddlePhalanx": {
+    "objname": "Falange média do 4º dedo",
+    "description": "Falange intermediária do quarto dedo, presente tanto na mão quanto no pé."
+  },
+  "obj_4thMetatarsal": {
+    "objname": "Quarto metatarsal",
+    "description": "Osso do antepé localizado entre o terceiro e o quinto metatarsais."
+  },
+  "obj_4thDistalPhalanx": {
+    "objname": "Falange distal do 4º dedo",
+    "description": "Falange terminal do quarto dedo, presente tanto na mão quanto no pé."
+  },
+  "obj_3rdProximalPhalanx": {
+    "objname": "Falange proximal do 3º dedo",
+    "description": "Falange proximal do terceiro dedo, correspondente ao dedo médio na mão e ao terceiro dedo no pé."
+  },
+  "obj_3rdMiddlePhalanx": {
+    "objname": "Falange média do 3º dedo",
+    "description": "Falange intermediária do terceiro dedo, presente tanto na mão quanto no pé."
+  },
+  "obj_3rdMetatarsal": {
+    "objname": "Terceiro metatarsal",
+    "description": "Osso do antepé localizado entre o segundo e o quarto metatarsais."
+  },
+  "obj_3rdDistalPhalanx": {
+    "objname": "Falange distal do 3º dedo",
+    "description": "Falange terminal do terceiro dedo, presente tanto na mão quanto no pé."
+  },
+  "obj_2ndProximalPhalanx": {
+    "objname": "Falange proximal do 2º dedo",
+    "description": "Falange proximal do segundo dedo. Na mão corresponde ao indicador; no pé corresponde ao segundo dedo."
+  },
+  "obj_2ndMiddlePhalanx": {
+    "objname": "Falange média do 2º dedo",
+    "description": "Falange intermediária do segundo dedo, presente tanto na mão quanto no pé."
+  },
+  "obj_2ndMetatarsal": {
+    "objname": "Segundo metatarsal",
+    "description": "Osso do antepé localizado entre o primeiro e o terceiro metatarsais."
+  },
+  "obj_2ndDistalPhalanx": {
+    "objname": "Falange distal do 2º dedo",
+    "description": "Falange terminal do segundo dedo, presente tanto na mão quanto no pé."
+  },
+  "obj_1stProximalPhalanx": {
+    "objname": "Falange proximal do 1º dedo",
+    "description": "Falange proximal do primeiro dedo. Na mão corresponde ao polegar; no pé corresponde ao hálux."
+  },
+  "obj_1stMetatarsal": {
+    "objname": "Primeiro metatarsal",
+    "description": "Osso do antepé que conecta o tarso ao hálux e suporta grande parte da carga durante a marcha."
+  },
+  "obj_1stMetacarpal": {
+    "objname": "Primeiro metacarpal",
+    "description": "Osso da mão que conecta o carpo ao polegar."
+  },
+  "obj_1stDistalPhalanx": {
+    "objname": "Falange distal do 1º dedo",
+    "description": "Falange terminal do primeiro dedo. Na mão corresponde ao polegar; no pé corresponde ao hálux."
+  },
+  "NuchalLigament": {
+    "objname": "Ligamento nucal",
+    "description": "Estrutura fibrosa localizada na região posterior do pescoço, que se estende da protuberância occipital aos processos espinhosos cervicais."
+  },
+  "NinthRib": {
+    "objname": "Nona costela",
+    "description": "Costela localizada na nona posição da parede torácica."
+  },
+  "Navicular": {
+    "objname": "Osso navicular",
+    "description": "Osso do tarso localizado na região medial do pé, entre o tálus e os ossos cuneiformes."
+  },
+  "Nasal": {
+    "objname": "Osso nasal",
+    "description": "Pequeno osso que forma a ponte óssea do nariz."
+  },
+  "MiddleGlenohumeralLigament": {
+    "objname": "Ligamento glenoumeral médio",
+    "description": "Ligamento da articulação do ombro que reforça sua cápsula anterior."
+  },
+  "MetatarsophalangealArticularCapsules": {
+    "objname": "Cápsulas articulares metatarsofalângicas",
+    "description": "Cápsulas fibrosas que envolvem e estabilizam as articulações entre os metatarsais e as falanges."
+  },
+  "MetatarsophalangealArticularCapsuleOfHallux": {
+    "objname": "Cápsula articular metatarsofalângica do hálux",
+    "description": "Cápsula que envolve e estabiliza a articulação entre o primeiro metatarsal e a falange proximal do hálux."
+  },
+  "MedialTalocalcanealLigament": {
+    "objname": "Ligamento talocalcâneo medial",
+    "description": "Ligamento localizado medialmente entre o tálus e o calcâneo, contribuindo para a estabilidade da articulação subtalar."
+  },
+  "MedialPatellarRetinaculumLigament": {
+    "objname": "Retináculo patelar medial",
+    "description": "Estrutura fibrosa localizada medialmente à patela que contribui para sua estabilidade."
+  },
+  "MedialMeniscus": {
+    "objname": "Menisco medial",
+    "description": "Estrutura fibrocartilaginosa em forma de C localizada entre o fêmur e a tíbia no lado medial do joelho."
+  },
+  "MedialDeltoidLigament": {
+    "objname": "Ligamento deltoide medial",
+    "description": "Complexo ligamentar medial do tornozelo que estabiliza a articulação e limita movimentos excessivos."
+  },
+  "MedialCuneiform": {
+    "objname": "Cuneiforme medial",
+    "description": "Osso do tarso localizado na região medial do pé, entre o navicular e o primeiro metatarsal."
+  },
+  "MedialCollateralLigament": {
+    "objname": "Ligamento colateral medial",
+    "description": "Ligamento que reforça a face medial do joelho e limita o movimento excessivo em valgo."
+  },
+  "MaxillaSkull": {
+    "objname": "Maxila",
+    "description": "Osso da face que forma parte da mandíbula superior, do palato, da cavidade nasal e das órbitas."
+  },
+  "MaxillaHardPalateSkull": {
+    "objname": "Maxila – palato duro",
+    "description": "Porção da maxila que participa da formação anterior do palato duro."
+  },
+  "Manubrium": {
+    "objname": "Manúbrio do esterno",
+    "description": "Porção superior do esterno que se articula com as clavículas e com a primeira costela."
+  },
+  "Mandibula": {
+    "objname": "Mandíbula",
+    "description": "Osso móvel da face que forma a arcada dentária inferior e participa da articulação temporomandibular."
+  },
+  "Lunate": {
+    "objname": "Osso semilunar",
+    "description": "Osso do carpo localizado na fileira proximal entre o escafoide e o piramidal."
+  },
+  "LongPlantarLigament": {
+    "objname": "Ligamento plantar longo",
+    "description": "Ligamento que se estende do calcâneo aos ossos do pé e ajuda a sustentar o arco plantar."
+  },
+  "LineaAlba": {
+    "objname": "Linha alba",
+    "description": "Faixa fibrosa mediana formada pelo entrelaçamento das aponeuroses dos músculos da parede abdominal."
+  },
+  "LigamentaFlava": {
+    "objname": "Ligamentos amarelos",
+    "description": "Ligamentos elásticos que conectam as lâminas de vértebras adjacentes e ajudam a manter a estabilidade da coluna."
+  },
+  "LateralTalocalcanealLigament": {
+    "objname": "Ligamento talocalcâneo lateral",
+    "description": "Ligamento que conecta lateralmente o tálus ao calcâneo e auxilia na estabilidade subtalar."
+  },
+  "LateralPatellarRetinaculumLigament": {
+    "objname": "Retináculo patelar lateral",
+    "description": "Estrutura fibrosa localizada lateralmente à patela que contribui para sua estabilização."
+  },
+  "LateralMeniscus": {
+    "objname": "Menisco lateral",
+    "description": "Estrutura fibrocartilaginosa localizada entre o fêmur e a tíbia no lado lateral do joelho."
+  },
+  "LateralLigamentSkull": {
+    "objname": "Ligamento lateral da articulação temporomandibular",
+    "description": "Ligamento que reforça lateralmente a cápsula da articulação temporomandibular."
+  },
+  "LateralCuneiform": {
+    "objname": "Cuneiforme lateral",
+    "description": "Osso do tarso localizado entre o cuneiforme intermediário, o cuboide e o navicular."
+  },
+  "LateralCollateral": {
+    "objname": "Ligamento colateral lateral",
+    "description": "Ligamento localizado no lado lateral de uma articulação, contribuindo para sua estabilidade."
+  },
+  "LateralCollateralLigament": {
+    "objname": "Ligamento colateral lateral",
+    "description": "Ligamento do joelho que reforça sua face lateral e limita movimentos excessivos."
+  },
+  "LateralCartilageSkull": {
+    "objname": "Cartilagem lateral do nariz",
+    "description": "Cartilagem que contribui para a formação da parede lateral do nariz."
+  },
+  "LateralLigament": {
+    "objname": "Ligamento lateral",
+    "description": "Estrutura ligamentar localizada na face lateral de uma articulação, contribuindo para sua estabilidade."
+  },
+  "LacrimalSkull": {
+    "objname": "Osso lacrimal",
+    "description": "Pequeno osso da face que forma parte da parede medial da órbita e participa do sulco lacrimal."
+  },
+  "L05Vertebra": {
+    "objname": "Quinta vértebra lombar",
+    "description": "Última vértebra lombar, localizada entre L4 e o sacro."
+  },
+  "L04Vertebra": {
+    "objname": "Quarta vértebra lombar",
+    "description": "Vértebra da região lombar localizada entre L3 e L5."
+  },
+  "L03Vertebra": {
+    "objname": "Terceira vértebra lombar",
+    "description": "Vértebra da região lombar localizada entre L2 e L4."
+  },
+  "L02Vertebra": {
+    "objname": "Segunda vértebra lombar",
+    "description": "Vértebra da região lombar localizada entre L1 e L3."
+  },
+  "L01Vertebra": {
+    "objname": "Primeira vértebra lombar",
+    "description": "Primeira vértebra da região lombar, localizada abaixo de T12."
+  },
+  "JointCapsuleSkull": {
+    "objname": "Cápsula articular da articulação temporomandibular",
+    "description": "Cápsula fibrosa que envolve a articulação entre a mandíbula e o osso temporal."
+  },
+  "IschiofemoralLigament": {
+    "objname": "Ligamento isquiofemoral",
+    "description": "Ligamento posterior da articulação do quadril que conecta o ísquio ao fêmur."
+  },
+  "IntervertebralDisc": {
+    "objname": "Disco intervertebral",
+    "description": "Estrutura fibrocartilaginosa localizada entre corpos vertebrais, absorvendo cargas e permitindo movimentos da coluna."
+  },
+  "IntertransverseLigaments": {
+    "objname": "Ligamentos intertransversários",
+    "description": "Ligamentos que conectam os processos transversos de vértebras adjacentes."
+  },
+  "InterphalangealLigamentsOfFoot": {
+    "objname": "Ligamentos interfalângicos do pé",
+    "description": "Ligamentos que estabilizam as articulações interfalângicas dos dedos do pé."
+  },
+  "InterphalangealLigamentOfHallux": {
+    "objname": "Ligamento interfalângico do hálux",
+    "description": "Ligamento que estabiliza a articulação interfalângica do hálux."
+  },
+  "InterphalangealDistalLigamentsOfHallux": {
+    "objname": "Ligamentos interfalângicos distais do hálux",
+    "description": "Ligamentos que reforçam a articulação interfalângica distal do hálux."
+  },
+  "InterosseousMembrane": {
+    "objname": "Membrana interóssea do antebraço",
+    "description": "Membrana fibrosa que conecta rádio e ulna ao longo do antebraço."
+  },
+  "InterosseousMembraneOfTheLegLigament": {
+    "objname": "Membrana interóssea da perna",
+    "description": "Membrana fibrosa que conecta tíbia e fíbula ao longo da perna."
+  },
+  "IntermediateCuneiform": {
+    "objname": "Cuneiforme intermédio",
+    "description": "Osso do tarso localizado entre os cuneiformes medial e lateral e articulado com o segundo metatarsal."
+  },
+  "InguinalLigament": {
+    "objname": "Ligamento inguinal",
+    "description": "Faixa fibrosa que se estende da espinha ilíaca anterossuperior ao tubérculo púbico."
+  },
+  "InferiorPeronealRetinaculumLigament": {
+    "objname": "Retináculo inferior dos músculos fibulares",
+    "description": "Estrutura fibrosa que mantém os tendões dos músculos fibulares junto à região lateral do tornozelo."
+  },
+  "InferiorGlenohumeralLigament": {
+    "objname": "Ligamento glenoumeral inferior",
+    "description": "Complexo ligamentar que reforça a região inferior da cápsula da articulação do ombro."
+  },
+  "InferiorExtensorRetinaculumLigament": {
+    "objname": "Retináculo extensor inferior",
+    "description": "Estrutura fibrosa que mantém os tendões extensores junto ao tornozelo."
+  },
+  "IliolumbarLigament": {
+    "objname": "Ligamento iliolombar",
+    "description": "Ligamento que conecta os processos transversos lombares ao ílio e estabiliza a transição lombossacral."
+  },
+  "IliofemoralLigament": {
+    "objname": "Ligamento iliofemoral",
+    "description": "Ligamento forte da articulação do quadril que conecta o ílio ao fêmur e limita a hiperextensão."
+  },
+  "Humerus": {
+    "objname": "Úmero",
+    "description": "Osso do braço que se articula proximalmente com a escápula e distalmente com rádio e ulna."
+  },
+  "Hip": {
+    "objname": "Quadril",
+    "description": "Região e complexo articular que conecta o membro inferior à pelve, principalmente por meio da articulação entre acetábulo e cabeça do fêmur."
+  },
+  "Hamate": {
+    "objname": "Osso hamato",
+    "description": "Osso do carpo localizado na fileira distal, caracterizado pelo seu gancho."
+  },
+  "GreaterAlarCartilageSkull": {
+    "objname": "Cartilagem alar maior",
+    "description": "Cartilagem do nariz que forma grande parte do contorno das asas nasais."
+  },
+  "FrontalSkull": {
+    "objname": "Osso frontal",
+    "description": "Osso que forma a testa, parte do teto das órbitas e parte anterior da cavidade craniana."
+  },
+  "FourthRib": {
+    "objname": "Quarta costela",
+    "description": "Costela localizada na quarta posição da parede torácica."
+  },
+  "FlexorRetinaculum": {
+    "objname": "Retináculo dos músculos flexores",
+    "description": "Faixa fibrosa que mantém os tendões flexores junto ao punho e forma o teto do túnel do carpo."
+  },
+  "FirstRib": {
+    "objname": "Primeira costela",
+    "description": "Primeira costela, curta e larga, localizada na base do pescoço e na porção superior do tórax."
+  },
+  "FifthRib": {
+    "objname": "Quinta costela",
+    "description": "Costela localizada na quinta posição da parede torácica."
+  },
+  "FibulaLeg": {
+    "objname": "Fíbula",
+    "description": "Osso lateral da perna, mais delgado que a tíbia, que contribui para a estabilidade do tornozelo."
+  },
+  "FemurThigh": {
+    "objname": "Fêmur",
+    "description": "Maior osso do corpo humano, localizado na coxa e articulado com o quadril e o joelho."
+  },
+  "ExtensorRetinaculum": {
+    "objname": "Retináculo dos músculos extensores",
+    "description": "Estrutura fibrosa que mantém os tendões extensores junto ao punho ou tornozelo, conforme a região anatômica."
+  },
+  "EthmoidSkull": {
+    "objname": "Osso etmoide",
+    "description": "Osso situado entre as órbitas que participa da formação da cavidade nasal e da base anterior do crânio."
+  },
+  "EndopelvicFascia": {
+    "objname": "Fáscia endopélvica",
+    "description": "Tecido conjuntivo que reveste e sustenta estruturas da cavidade pélvica."
+  },
+  "EleventhRib": {
+    "objname": "Décima primeira costela",
+    "description": "Costela flutuante localizada imediatamente acima da décima segunda costela."
+  },
+  "EighthRib": {
+    "objname": "Oitava costela",
+    "description": "Costela localizada na oitava posição da parede torácica."
+  },
+  "DorsalTarsometatarsalLigaments": {
+    "objname": "Ligamentos tarsometatarsais dorsais",
+    "description": "Ligamentos que reforçam dorsalmente as articulações entre o tarso e os metatarsais."
+  },
+  "DorsalMetatarsalLigaments": {
+    "objname": "Ligamentos metatarsais dorsais",
+    "description": "Ligamentos que conectam e estabilizam os metatarsais na face dorsal do pé."
+  },
+  "DorsalIntercuneiformLigament": {
+    "objname": "Ligamento intercuneiforme dorsal",
+    "description": "Ligamento que conecta os ossos cuneiformes na face dorsal do pé."
+  },
+  "DorsalCuneonavicularLigament": {
+    "objname": "Ligamento cuneonavicular dorsal",
+    "description": "Ligamento que conecta os ossos cuneiformes ao navicular na região dorsal do pé."
+  },
+  "DorsalCuneocuboidLigament": {
+    "objname": "Ligamento cuneocubóideo dorsal",
+    "description": "Ligamento que conecta estruturas cuneiformes ao cuboide na região dorsal do pé."
+  },
+  "DorsalCuboideonavicularLigament": {
+    "objname": "Ligamento cuboideonavicular dorsal",
+    "description": "Ligamento que conecta o cuboide ao navicular na face dorsal do pé."
+  },
+  "DorsalCalcaneocuboidLigaments": {
+    "objname": "Ligamentos calcaneocubóideos dorsais",
+    "description": "Ligamentos que reforçam dorsalmente a articulação entre o calcâneo e o cuboide."
+  },
+  "DistalCommissuralLigament": {
+    "objname": "Ligamento comissural distal",
+    "description": "Ligamento localizado na região distal dos dedos e que contribui para a estabilidade das articulações digitais."
+  },
+  "DeepTransverseMetatarssalLigaments": {
+    "objname": "Ligamentos metatarsais transversos profundos",
+    "description": "Ligamentos que conectam as cabeças dos metatarsais e estabilizam o antepé."
+  },
+  "DeepTransverseMetacarpalLigament": {
+    "objname": "Ligamento metacarpal transverso profundo",
+    "description": "Ligamento que conecta as cabeças dos metacarpais e ajuda a manter a estabilidade da mão."
+  },
+  "Cuboid": {
+    "objname": "Osso cuboide",
+    "description": "Osso do tarso localizado na região lateral do pé, entre o calcâneo e os metatarsais."
+  },
+  "CruciateLigaments5th": {
+    "objname": "Ligamentos cruzados do 5º dedo",
+    "description": "Ligamentos que se cruzam na região plantar do quinto dedo e contribuem para a estabilidade das estruturas digitais."
+  },
+  "CruciateLigaments4th": {
+    "objname": "Ligamentos cruzados do 4º dedo",
+    "description": "Ligamentos que se cruzam na região plantar do quarto dedo e contribuem para sua estabilidade."
+  },
+  "CruciateLigaments3rd": {
+    "objname": "Ligamentos cruzados do 3º dedo",
+    "description": "Ligamentos que se cruzam na região plantar do terceiro dedo e contribuem para sua estabilidade."
+  },
+  "CruciateLigaments1st": {
+    "objname": "Ligamentos cruzados do 1º dedo",
+    "description": "Ligamentos que reforçam a região plantar do primeiro dedo e contribuem para sua estabilidade."
+  },
+  "CoracohumeralLigament": {
+    "objname": "Ligamento coracoumeral",
+    "description": "Ligamento que se estende do processo coracoide ao úmero e reforça a articulação do ombro."
+  },
+  "CoracoacromialLigament": {
+    "objname": "Ligamento coracoacromial",
+    "description": "Ligamento que conecta os processos coracoide e acrômio, formando parte do arco coracoacromial."
+  },
+  "CoracoacromialLigamentTrapeizoid": {
+    "objname": "Ligamento trapezoide",
+    "description": "Porção do ligamento coracoclavicular que conecta o processo coracoide à clavícula."
+  },
+  "CoracoacromialLigamentConoid": {
+    "objname": "Ligamento conoide",
+    "description": "Porção do ligamento coracoclavicular que conecta o processo coracoide à clavícula."
+  },
+  "Coccyx": {
+    "objname": "Cóccix",
+    "description": "Pequeno segmento ósseo localizado na extremidade inferior da coluna vertebral, formado pela fusão de vértebras coccígeas."
+  },
+  "Clavicle": {
+    "objname": "Clavícula",
+    "description": "Osso longo que conecta o esterno à escápula e atua como suporte entre o membro superior e o tronco."
+  },
+  "CircothyroidMembraneAndLigament": {
+    "objname": "Membrana e ligamento cricotireóideo",
+    "description": "Estrutura que conecta as cartilagens tireoide e cricoide e participa da sustentação da laringe."
+  },
+  "Capitate": {
+    "objname": "Osso capitato",
+    "description": "Maior osso do carpo, localizado centralmente na fileira distal."
+  },
+  "Calcaneus": {
+    "objname": "Calcâneo",
+    "description": "Maior osso do tarso e principal osso do calcanhar, responsável por transmitir cargas ao solo."
+  },
+  "C07Vertebra": {
+    "objname": "Sétima vértebra cervical",
+    "description": "Última vértebra cervical da coluna vertebral, localizada entre C6 e T1."
+  },
+  "C06Vertebra": {
+    "objname": "Sexta vértebra cervical",
+    "description": "Vértebra da região cervical localizada entre C5 e C7."
+  },
+  "C05Vertebra": {
+    "objname": "Quinta vértebra cervical",
+    "description": "Vértebra da região cervical localizada entre C4 e C6."
+  },
+  "C04Vertebra": {
+    "objname": "Quarta vértebra cervical",
+    "description": "Vértebra da região cervical localizada entre C3 e C5."
+  },
+  "C03Vertebra": {
+    "objname": "Terceira vértebra cervical",
+    "description": "Vértebra da região cervical localizada entre C2 e C4."
+  },
+  "C02Axis": {
+    "objname": "Áxis",
+    "description": "Segunda vértebra cervical, caracterizada pelo processo odontoide, que permite a rotação do atlas."
+  },
+  "C01Atlas": {
+    "objname": "Atlas",
+    "description": "Primeira vértebra cervical, que sustenta o crânio e participa dos movimentos de flexão e extensão da cabeça."
+  },
+  "BodyOfSternum": {
+    "objname": "Corpo do esterno",
+    "description": "Porção central e mais longa do esterno, articulada com o manúbrio e as cartilagens costais."
+  },
+  "BifurcateLigament": {
+    "objname": "Ligamento bifurcado",
+    "description": "Ligamento dorsal do pé que se divide em ramos para conectar o calcâneo ao cuboide e ao navicular."
+  },
+  "AtlantoOccipitalCapsule": {
+    "objname": "Cápsula atlanto-occipital",
+    "description": "Cápsula fibrosa que envolve as articulações entre o atlas e os côndilos occipitais."
+  },
+  "Articular": {
+    "objname": "Processo articular",
+    "description": "Estrutura óssea de uma vértebra que participa das articulações facetárias com vértebras adjacentes."
+  },
+  "ArticularCapsule": {
+    "objname": "Cápsula articular",
+    "description": "Estrutura fibrosa que envolve uma articulação sinovial e ajuda a manter as superfícies articulares unidas."
+  },
+  "ArticularCapsuleUpper": {
+    "objname": "Cápsula articular superior",
+    "description": "Porção superior de uma cápsula articular que envolve e estabiliza a articulação correspondente."
+  },
+  "ArticularCapsuleOfKnee": {
+    "objname": "Cápsula articular do joelho",
+    "description": "Cápsula que envolve a articulação do joelho e contribui para sua estabilidade."
+  },
+  "AnteriorSacroiliacLigament": {
+    "objname": "Ligamento sacroilíaco anterior",
+    "description": "Ligamento que reforça anteriormente a articulação entre o sacro e o ílio."
+  },
+  "AnteriorLongitudinalLigament": {
+    "objname": "Ligamento longitudinal anterior",
+    "description": "Ligamento que percorre a face anterior dos corpos vertebrais e limita a hiperextensão da coluna."
+  },
+  "AnteriorCruciateLigament": {
+    "objname": "Ligamento cruzado anterior",
+    "description": "Ligamento do joelho que conecta o fêmur à tíbia e limita o deslocamento anterior da tíbia."
+  },
+  "AnnularLigaments5th": {
+    "objname": "Ligamentos anulares do 5º dedo",
+    "description": "Ligamentos em forma de anel que mantêm os tendões flexores próximos às falanges do quinto dedo."
+  },
+  "AnnularLigaments4th": {
+    "objname": "Ligamentos anulares do 4º dedo",
+    "description": "Ligamentos em forma de anel que mantêm os tendões flexores próximos às falanges do quarto dedo."
+  },
+  "AnnularLigaments3rd": {
+    "objname": "Ligamentos anulares do 3º dedo",
+    "description": "Ligamentos em forma de anel que mantêm os tendões flexores próximos às falanges do terceiro dedo."
+  },
+  "AnnularLigaments2nd": {
+    "objname": "Ligamentos anulares do 2º dedo",
+    "description": "Ligamentos em forma de anel que mantêm os tendões flexores próximos às falanges do segundo dedo."
+  },
+  "AnnularLigaments1st": {
+    "objname": "Ligamentos anulares do 1º dedo",
+    "description": "Ligamentos em forma de anel que mantêm os tendões flexores próximos às falanges do primeiro dedo."
+  },
+  "AnnularLigamentOfRadius": {
+    "objname": "Ligamento anular do rádio",
+    "description": "Ligamento que envolve a cabeça do rádio e a mantém articulada com a incisura radial da ulna."
+  },
+  "AcromioclavicularLigament": {
+    "objname": "Ligamento acromioclavicular",
+    "description": "Ligamento que reforça a articulação entre o acrômio da escápula e a clavícula."
   }
 }

@@ -1,0 +1,63 @@
+{
+  "objname": "Sistema Arterial",
+  "objsystem": "Circulatório",
+  "objdescription": "Conjunto de artérias responsável por transportar o sangue do coração para os diferentes tecidos e órgãos do corpo. O sistema arterial distribui sangue rico em oxigênio pela circulação sistêmica e participa da circulação pulmonar, conduzindo o sangue até os pulmões para as trocas gasosas. Suas ramificações formam uma extensa rede vascular que garante o fornecimento de oxigênio e nutrientes e auxilia na manutenção da pressão e do fluxo sanguíneo.",
+  "linkedModels": [
+    {
+      "id": "4",
+      "label": "Coração"
+    },{
+      "id": "20",
+      "label": "Sistema Venoso"
+    }
+  ],
+  "resources": [],
+  "UpperLimbArteries": {
+    "objname": "Artérias dos Membros Superiores",
+    "description": "Conjunto de artérias que irrigam os membros superiores, incluindo regiões do ombro, braço, antebraço e mão. Essas artérias conduzem sangue aos músculos, ossos, articulações e demais tecidos dos membros superiores."
+  },
+  "ThoraxArteries": {
+    "objname": "Artérias do Tórax",
+    "description": "Conjunto de artérias responsáveis pela irrigação das estruturas do tórax, incluindo a parede torácica e órgãos torácicos. São originadas principalmente da aorta torácica e de seus principais ramos."
+  },
+  "PulmonarySuperiorArteries": {
+    "objname": "Artérias Pulmonares Superiores",
+    "description": "Ramos arteriais destinados às regiões superiores dos pulmões. Participam da circulação pulmonar, conduzindo sangue do coração em direção aos pulmões para realização das trocas gasosas."
+  },
+  "PulmonaryInferiorArteries": {
+    "objname": "Artérias Pulmonares Inferiores",
+    "description": "Ramos arteriais destinados às regiões inferiores dos pulmões. Fazem parte da circulação pulmonar e conduzem sangue aos tecidos pulmonares para as trocas de oxigênio e dióxido de carbono."
+  },
+  "PelvisArteries": {
+    "objname": "Artérias da Pelve",
+    "description": "Conjunto de artérias responsáveis pela irrigação da pelve e de suas estruturas, incluindo órgãos pélvicos, músculos, ossos e tecidos adjacentes. Grande parte desses vasos deriva das artérias ilíacas internas e de seus ramos."
+  },
+  "LowerLimbArteries": {
+    "objname": "Artérias dos Membros Inferiores",
+    "description": "Conjunto de artérias que irrigam os membros inferiores, incluindo quadril, coxa, perna e pé. Essas artérias fornecem sangue aos músculos, ossos, articulações e demais tecidos dos membros inferiores."
+  },
+  "LiverArteries": {
+    "objname": "Artérias do Fígado",
+    "description": "Conjunto de vasos arteriais responsáveis pelo suprimento de sangue oxigenado ao fígado. A principal fonte de irrigação arterial hepática é a artéria hepática própria, que se ramifica no interior do órgão."
+  },
+  "KidneyArteries": {
+    "objname": "Artérias Renais",
+    "description": "Artérias responsáveis pelo suprimento sanguíneo dos rins. As artérias renais geralmente se originam diretamente da aorta abdominal e se dividem em diversos ramos antes de penetrar e distribuir sangue pelo tecido renal."
+  },
+  "HeadNeckArteries": {
+    "objname": "Artérias da Cabeça e do Pescoço",
+    "description": "Conjunto de artérias responsáveis pela irrigação da cabeça, face, pescoço e estruturas associadas. Entre os principais vasos estão as artérias carótidas e vertebrais, que fornecem sangue ao encéfalo e aos tecidos da região."
+  },
+  "GutArteries": {
+    "objname": "Artérias do Trato Gastrointestinal",
+    "description": "Conjunto de artérias responsáveis pela irrigação dos órgãos do sistema digestório. Seus principais vasos originam-se da aorta abdominal e incluem os troncos e artérias que irrigam o estômago, intestinos, pâncreas, baço e outras estruturas relacionadas."
+  },
+  "AorticArteries": {
+    "objname": "Artérias da Aorta",
+    "description": "Conjunto de grandes artérias e ramos que se originam da aorta, principal artéria do corpo. A aorta distribui o sangue bombeado pelo ventrículo esquerdo para a circulação sistêmica por meio de seus diferentes segmentos e ramificações."
+  },
+  "AbdomenAortaAbdominalisArteries": {
+    "objname": "Artérias da Aorta Abdominal",
+    "description": "Conjunto de artérias originadas da aorta abdominal que irrigam estruturas do abdome, pelve e membros inferiores. Inclui ramos destinados aos órgãos digestórios, rins, glândulas suprarrenais, gônadas, parede abdominal e demais estruturas da região."
+  }
+}

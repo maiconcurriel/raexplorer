@@ -142,7 +142,7 @@
         function addPeca() {
             salvarDadosDosCampos(); // Preserva o que já foi digitado antes de re-renderizar
             const id = "nova_mesh_" + Date.now();
-            dados[id] = { objname: "Nova Peça", description: "" };
+            dados[id] = { objname: "?", description: "?" };
             renderizarPecas();
             sincronizar();
             window.scrollTo(0, document.body.scrollHeight);
@@ -170,10 +170,14 @@
 
         function sincronizar() {
             dados.objname = document.getElementById('objname').value;
-            dados.objsystem = document.getElementById('objsystem').value;
+            
+            // Converte a string digitada no input em uma array no JSON
+            const sistemaInput = document.getElementById('objsystem').value;
+            dados.objsystem = sistemaInput.split(',').map(s => s.trim()).filter(Boolean);
+            
             dados.objdescription = document.getElementById('objdescription').value;
-            salvarDadosDosCampos(); 
-            atualizarCodigo(); // 👈 Corrigido aqui (com "a"!)
+            salvarDadosDosCampos();
+            atualizarCodigo();
         }
 
         function atualizarCodigo() { document.getElementById('jsonOutput').value = JSON.stringify(dados, null, 2); }

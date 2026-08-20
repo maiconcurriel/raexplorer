@@ -2,7 +2,18 @@
   "objname": "Sistema Urinário Masculino",
   "objsystem": "Urinário",
   "objdescription": "O sistema urinário masculino é responsável pela filtração do sangue, formação, transporte, armazenamento e eliminação da urina. Os rins removem resíduos metabólicos e ajudam a regular o equilíbrio de água e eletrólitos do organismo. A urina passa pelos cálices e pela pelve renal, segue pelos ureteres até a bexiga e é eliminada pela uretra. A uretra masculina também atravessa estruturas do sistema reprodutor, sendo dividida em porções prostática, membranosa e esponjosa. Esfíncteres e músculos da bexiga participam do controle da micção.",
-  "linkedModels": [],
+  "linkedModels": [
+    {
+      "id": "10",
+      "label": "Sistema Urinário Feminino"
+    },{
+      "id": "13",
+      "label": "Sistema Reprodutor Masculino"
+    },{
+      "id": "11",
+      "label": "Sistema Reprodutor Feminino"
+    }
+  ],
   "resources": [],
 
   "RenalCapsule": {

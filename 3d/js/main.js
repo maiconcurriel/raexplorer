@@ -8,7 +8,7 @@ window.handleSort = handleSort;
 window.removeFilter = removeFilter;
 window.clearAllFilters = clearAllFilters;
 
-const modelosIDs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
+const modelosIDs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26];
 
 const FILTER_LABELS = {
     all: 'Todos', 
@@ -23,7 +23,12 @@ const FILTER_LABELS = {
     urin: 'Urinário', 
     senso: 'Sensorial', 
     repro: 'Reprodutor', 
-    infec: 'Infeccioso'
+    infec: 'Infeccioso',
+    linf: 'Linfático',
+    circ: 'Circulatório',
+    audi: 'Auditivo',
+    endoc: 'Endócrino',
+    estom: 'Estomatognático'
 };
 
 let modelosData = [];
@@ -46,33 +51,49 @@ async function carregarModelos() {
                     return res.json();
                 })
                 .then(data => {
-    const sistemaBruto = data.objsystem || "";
-    let categoriaChave = 'all';
+    // Transforma em array mesmo se no JSON for string única ou lista
+    let sistemasBrutos = [];
+    if (Array.isArray(data.objsystem)) {
+        sistemasBrutos = data.objsystem;
+    } else if (typeof data.objsystem === 'string') {
+        sistemasBrutos = data.objsystem.split(/[,/]/).map(s => s.trim());
+    }
 
-    // 👇 ADICIONE ESTA LINHA para remover acentos (ex: "célula" vira "celula")
-    const sistemaLimpo = sistemaBruto.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    // Array de categorias correspondentes ao modelo
+    let categoriasChave = [];
 
-    // 🔽 Mude as checagens para ler 'sistemaLimpo' em vez de 'sistemaBruto.toLowerCase()'
-    if (sistemaLimpo.includes('nervoso')) categoriaChave = 'nervoso';
-    else if (sistemaLimpo.includes('cardio')) categoriaChave = 'cardio';
-    else if (sistemaLimpo.includes('tegum')) categoriaChave = 'tegum';
-    else if (sistemaLimpo.includes('celul')) categoriaChave = 'celul'; // 👈 Agora vai bater perfeitamente!
-    else if (sistemaLimpo.includes('esquel')) categoriaChave = 'esqueletico';
-    else if (sistemaLimpo.includes('muscular')) categoriaChave = 'muscular';
-    else if (sistemaLimpo.includes('respira')) categoriaChave = 'resp';
-    else if (sistemaLimpo.includes('digest')) categoriaChave = 'digest';
-    else if (sistemaLimpo.includes('urin')) categoriaChave = 'urin';
-    else if (sistemaLimpo.includes('senso')) categoriaChave = 'senso';
-    else if (sistemaLimpo.includes('repro')) categoriaChave = 'repro';
-    else if (sistemaLimpo.includes('infec')) categoriaChave = 'infec';
+    sistemasBrutos.forEach(sis => {
+        const sisLimpo = sis.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
+    if (sisLimpo.includes('nervoso') && !categoriasChave.includes('nervoso')) categoriasChave.push('nervoso');
+    if (sisLimpo.includes('cardio') && !categoriasChave.includes('cardio')) categoriasChave.push('cardio');
+    if (sisLimpo.includes('tegum') && !categoriasChave.includes('tegum')) categoriasChave.push('tegum');
+    if (sisLimpo.includes('celul') && !categoriasChave.includes('celul')) categoriasChave.push('celul');
+    if (sisLimpo.includes('esquel') && !categoriasChave.includes('esqueletico')) categoriasChave.push('esqueletico');
+    if (sisLimpo.includes('muscular') && !categoriasChave.includes('muscular')) categoriasChave.push('muscular');
+    if (sisLimpo.includes('respira') && !categoriasChave.includes('resp')) categoriasChave.push('resp');
+    if (sisLimpo.includes('digest') && !categoriasChave.includes('digest')) categoriasChave.push('digest');
+    if (sisLimpo.includes('urin') && !categoriasChave.includes('urin')) categoriasChave.push('urin');
+    if (sisLimpo.includes('senso') && !categoriasChave.includes('senso')) categoriasChave.push('senso');
+    if (sisLimpo.includes('repro') && !categoriasChave.includes('repro')) categoriasChave.push('repro');
+    if (sisLimpo.includes('infec') && !categoriasChave.includes('infec')) categoriasChave.push('infec');
+    if (sisLimpo.includes('linf') && !categoriasChave.includes('linf')) categoriasChave.push('linf');
+    if (sisLimpo.includes('circ') && !categoriasChave.includes('circ')) categoriasChave.push('circ');
+    if (sisLimpo.includes('audi') && !categoriasChave.includes('audi')) categoriasChave.push('audi');
+    if (sisLimpo.includes('endoc') && !categoriasChave.includes('endoc')) categoriasChave.push('endoc');
+    if (sisLimpo.includes('estom') && !categoriasChave.includes('estom')) categoriasChave.push('estom');
+
+    });
+
+    if (categoriasChave.length === 0) categoriasChave.push('all');
 
     return { 
         ...data, 
         id, 
         nome: data.objname || "Sem Nome",
-        sistema: sistemaBruto,
+        sistema: sistemasBrutos.join(' / '), // Exibe "Sensorial / Nervoso" no card
         img: `models/${id}.png`, 
-        cat: categoriaChave
+        cat: categoriasChave // Agora é uma array de categorias!
     };
 })
         );
@@ -224,14 +245,16 @@ async function carregarModelos() {
     grid.className = `cards-grid ${currentView === 'list' ? 'list-mode' : ''}`;
 
     let filtrados = modelosData.filter(m => {
-        const nome = m.objname ? m.objname.toLowerCase() : "";
-        const sistema = m.objsystem ? m.objsystem.toLowerCase() : "";
-        
-        const matchesSearch = nome.includes(searchTerm) || sistema.includes(searchTerm);
-        const matchesCat = activeFilters.has('all') || activeFilters.has(m.cat);
+      const nome = m.objname ? m.objname.toLowerCase() : "";
+      const sistema = m.sistema ? m.sistema.toLowerCase() : "";
+      
+      const matchesSearch = nome.includes(searchTerm) || sistema.includes(searchTerm);
+      
+      // Verifica se m.cat (que agora é Array) tem interseção com os filtros ativos
+      const matchesCat = activeFilters.has('all') || m.cat.some(c => activeFilters.has(c));
 
-        return matchesSearch && matchesCat;
-    });
+      return matchesSearch && matchesCat;
+  });
 
     const spanFiltrados = document.getElementById('count-filtrados');
     if (spanFiltrados) spanFiltrados.textContent = filtrados.length;
@@ -375,19 +398,23 @@ async function carregarModelos() {
   }
 
   // Varre todos os modelos carregados para calcular e retornar a quantidade exata pertencente a cada sistema anatômico.
-  function getCounts() {
+function getCounts() {
     const counts = {};
     Object.keys(FILTER_LABELS).forEach(key => counts[key] = 0);
 
     modelosData.forEach(m => {
-        if (counts[m.cat] !== undefined) {
-            counts[m.cat]++;
+        if (Array.isArray(m.cat)) {
+            m.cat.forEach(categoria => {
+                if (counts[categoria] !== undefined) {
+                    counts[categoria]++;
+                }
+            });
         }
     });
 
     counts['all'] = modelosData.length;
     return counts;
-  }
+}
 
   // Define o critério de ordenação dos modelos (A-Z ou Z-A) e dispara uma nova renderização na tela.
   function handleSort(value) {

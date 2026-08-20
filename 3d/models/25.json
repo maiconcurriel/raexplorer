@@ -1,0 +1,55 @@
+{
+  "objname": "Sistema Endócrino",
+  "objsystem": [
+    "Endócrino"
+  ],
+  "objdescription": "O sistema endócrino é formado por glândulas e órgãos que produzem hormônios, mensageiros químicos responsáveis por regular diversas funções do organismo. Seus hormônios participam do crescimento e desenvolvimento, metabolismo, reprodução, equilíbrio de água e sais minerais, controle da glicemia, resposta ao estresse, sono e manutenção da homeostase. O hipotálamo e a hipófise coordenam grande parte da atividade endócrina, controlando outras glândulas por meio de sinais hormonais. A tireoide regula principalmente o metabolismo, enquanto as glândulas suprarrenais participam da resposta ao estresse e do controle da pressão arterial e do equilíbrio hidroeletrolítico. O pâncreas produz hormônios importantes para o controle da glicose no sangue. As gônadas, representadas pelos testículos e ovários, produzem hormônios sexuais relacionados à reprodução e às características sexuais. A glândula pineal participa da regulação dos ciclos de sono e vigília. O timo também possui função hormonal, especialmente durante o desenvolvimento, além de sua importante participação na maturação do sistema imunológico. A atuação integrada dessas estruturas permite que diferentes órgãos se comuniquem e mantenham o funcionamento adequado do organismo.",
+
+  "linkedModels": [],
+  "resources": [],
+
+  "Testicle": {
+    "objname": "Testículo",
+    "description": "O testículo é a gônada masculina e possui funções reprodutiva e endócrina. Sua função endócrina ocorre principalmente nas células de Leydig, que produzem testosterona. Esse hormônio participa do desenvolvimento e manutenção das características sexuais masculinas, da produção de espermatozoides, da massa muscular e óssea e da libido. A atividade dos testículos é regulada pelo eixo hipotálamo-hipófise-gonadal."
+  },
+
+  "Ovarium": {
+    "objname": "Ovário",
+    "description": "O ovário é a gônada feminina e exerce funções reprodutiva e endócrina. Produz principalmente estrogênios e progesterona, hormônios envolvidos no desenvolvimento das características sexuais femininas, no ciclo menstrual, na ovulação e na preparação do organismo para a gestação. A atividade ovariana é regulada pelo eixo hipotálamo-hipófise-gonadal."
+  },
+
+  "Adrenal": {
+    "objname": "Glândula Suprarrenal",
+    "description": "As glândulas suprarrenais estão localizadas sobre os rins e são divididas em córtex e medula. O córtex produz hormônios como cortisol, aldosterona e andrógenos, relacionados ao metabolismo, resposta ao estresse e equilíbrio de água e sais. A medula produz adrenalina e noradrenalina, importantes na resposta rápida do organismo ao estresse."
+  },
+
+  "Pancreas": {
+    "objname": "Pâncreas",
+    "description": "O pâncreas possui funções digestiva e endócrina. Sua porção endócrina é formada principalmente pelas ilhotas pancreáticas, que produzem hormônios como insulina e glucagon. A insulina reduz a concentração de glicose no sangue ao favorecer sua utilização e armazenamento, enquanto o glucagon aumenta a glicemia. Esses hormônios são fundamentais para o controle energético do organismo."
+  },
+
+  "Thymus": {
+    "objname": "Timo",
+    "description": "O timo é um órgão localizado no mediastino e possui importante função no desenvolvimento do sistema imunológico. Durante a infância, participa da maturação dos linfócitos T, células essenciais para a resposta imune. O timo também produz substâncias com atividade hormonal, como timosina e outros fatores tímicos, que auxiliam na diferenciação e maturação das células do sistema imunológico."
+  },
+
+  "Thyroid": {
+    "objname": "Glândula Tireoide",
+    "description": "A tireoide está localizada na região anterior do pescoço e produz principalmente os hormônios T3 e T4, que regulam o metabolismo, o consumo de energia, a produção de calor e diversos processos de crescimento e desenvolvimento. Também produz calcitonina, relacionada ao metabolismo do cálcio. Sua atividade é regulada principalmente pelo eixo hipotálamo-hipófise-tireoide."
+  },
+
+  "Hypothalamus": {
+    "objname": "Hipotálamo",
+    "description": "O hipotálamo é uma região do encéfalo que conecta os sistemas nervoso e endócrino. Produz hormônios reguladores que controlam a atividade da hipófise e participa da regulação da temperatura corporal, fome, sede, equilíbrio hídrico, sono e reprodução. Também produz vasopressina e ocitocina, que são armazenadas e liberadas pela hipófise posterior."
+  },
+
+  "GlandulaPituitaria": {
+    "objname": "Glândula Hipófise",
+    "description": "A hipófise é uma pequena glândula localizada na base do encéfalo e exerce papel central no controle do sistema endócrino. Seus hormônios regulam estruturas como tireoide, suprarrenais e gônadas, além de participarem do crescimento, lactação e equilíbrio hídrico. A hipófise é dividida em adeno-hipófise e neuro-hipófise, que possuem funções distintas."
+  },
+
+  "GlandulaPineal": {
+    "objname": "Glândula Pineal",
+    "description": "A glândula pineal é uma pequena estrutura endócrina localizada no encéfalo. Sua principal função é produzir melatonina, hormônio relacionado à regulação dos ritmos circadianos e do ciclo sono-vigília. A produção de melatonina varia de acordo com a exposição à luz, sendo geralmente maior durante a noite. Dessa forma, a glândula pineal contribui para a organização temporal de diversas funções do organismo."
+  }
+}

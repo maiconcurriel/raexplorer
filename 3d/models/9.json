@@ -1,6 +1,6 @@
 {
   "objname": "Olho Humano",
-  "objsystem": "Sensorial",
+  "objsystem": ["Sensorial", "Nervoso"],
   "objdescription": "O olho humano é o órgão responsável pela visão, captando a luz do ambiente e convertendo-a em sinais nervosos interpretados pelo cérebro. Sua estrutura inclui componentes transparentes que permitem a passagem e focalização da luz, como a córnea, o humor vítreo e o cristalino, além de estruturas especializadas no controle da entrada de luz, como a íris e a pupila. A retina contém células fotorreceptoras que detectam estímulos luminosos, enquanto a coroide e os vasos sanguíneos fornecem nutrientes aos tecidos oculares. Músculos, nervos e estruturas anexas auxiliam nos movimentos, proteção, lubrificação e funcionamento adequado do olho.",
 
   "BloodVessels": {

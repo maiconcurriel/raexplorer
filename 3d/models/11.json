@@ -2,7 +2,18 @@
   "objname": "Sistema Reprodutor Feminino",
   "objsystem": "Reprodutor",
   "objdescription": "O sistema reprodutor feminino é formado por órgãos e estruturas responsáveis pela produção de gametas, reprodução, fecundação, gestação e, quando ocorre, lactação. Os ovários produzem os óvulos e hormônios sexuais, enquanto as tubas uterinas conduzem o óvulo e são o local mais comum da fecundação. O útero abriga e sustenta o embrião durante a gestação. A vagina participa da relação sexual, da eliminação do fluxo menstrual e do parto. A genitália externa protege as estruturas internas e inclui os lábios, vestíbulo e clitóris. As mamas e suas glândulas mamárias produzem e conduzem o leite materno.",
-  "linkedModels": [],
+  "linkedModels": [
+    {
+      "id": "10",
+      "label": "Sistema Urinário Feminino"
+    },{
+      "id": "13",
+      "label": "Sistema Reprodutor Masculino"
+    },{
+      "id": "12",
+      "label": "Sistema Urinário Masculino"
+    }
+  ],
   "resources": [],
 
   "Breast": {
@@ -118,5 +129,9 @@
   "CorpusCavernosum": {
     "objname": "Corpos Cavernosos",
     "description": "Estruturas de tecido erétil que formam grande parte do corpo e dos ramos do clitóris. Durante a excitação sexual, o aumento do fluxo sanguíneo provoca sua congestão e aumento de volume."
+  },
+  "VestibularBulbClitoralBulb": {
+  "objname": "Bulbo do Vestíbulo",
+  "description": "Estrutura de tecido erétil localizada lateralmente à abertura vaginal, formada por duas massas alongadas. Durante a excitação sexual, aumenta de volume devido ao fluxo sanguíneo e contribui para a resposta sexual."
   }
 }

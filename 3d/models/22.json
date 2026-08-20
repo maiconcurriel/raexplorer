@@ -1,0 +1,75 @@
+{
+  "objname": "Sistema Auditivo",
+  "objsystem": ["Sensorial", "Auditivo"],
+  "objdescription": "Conjunto de órgãos, estruturas e nervos responsáveis pela audição e pelo equilíbrio. O sistema auditivo compreende as estruturas do ouvido externo, médio e interno, além das vias nervosas associadas à percepção dos sons e à manutenção do equilíbrio corporal.",
+  "linkedModels": [],
+  "resources": [],
+  "Vestibulocochlear": {
+    "objname": "Nervo Vestibulococlear",
+    "description": "O oitavo nervo craniano, responsável por conduzir informações relacionadas à audição e ao equilíbrio do ouvido interno até o sistema nervoso central. É formado pelas porções coclear e vestibular."
+  },
+  "Vestibule": {
+    "objname": "Vestíbulo",
+    "description": "Porção central do ouvido interno localizada entre a cóclea e os canais semicirculares. Contém estruturas responsáveis pela percepção da posição da cabeça e das acelerações lineares, contribuindo para o equilíbrio corporal."
+  },
+  "TympanicNerve": {
+    "objname": "Nervo Timpânico",
+    "description": "Ramo do nervo glossofaríngeo que participa da inervação sensitiva da cavidade timpânica e contribui para a formação do plexo timpânico. Também participa da inervação secretomotora da glândula parótida por meio de suas conexões nervosas."
+  },
+  "TympanicMembrane": {
+    "objname": "Membrana Timpânica",
+    "description": "Estrutura fina que separa o ouvido externo do ouvido médio. Vibra em resposta às ondas sonoras e transmite essas vibrações para os ossículos do ouvido médio."
+  },
+  "Stapes": {
+    "objname": "Estribo",
+    "description": "Menor dos três ossículos do ouvido médio. Recebe as vibrações transmitidas pela bigorna e as conduz à janela oval do ouvido interno, contribuindo para a transmissão mecânica do som."
+  },
+  "MiddleEarChamber": {
+    "objname": "Cavidade do Ouvido Médio",
+    "description": "Espaço preenchido por ar localizado entre a membrana timpânica e o ouvido interno. Contém os ossículos da audição e participa da transmissão das vibrações sonoras em direção ao ouvido interno."
+  },
+  "Malleus": {
+    "objname": "Martelo",
+    "description": "Primeiro dos três ossículos do ouvido médio. Está conectado à membrana timpânica e transmite suas vibrações para a bigorna durante o processo de condução do som."
+  },
+  "MalleusLigament": {
+    "objname": "Ligamento do Martelo",
+    "description": "Estrutura ligamentar que auxilia na fixação e sustentação do martelo dentro da cavidade do ouvido médio, contribuindo para sua posição e movimentação durante a transmissão das vibrações sonoras."
+  },
+  "LevatorVeliPalatini": {
+    "objname": "Músculo Levantador do Véu Palatino",
+    "description": "Músculo localizado na região do palato mole que participa da elevação do véu palatino durante a deglutição. Atua em conjunto com estruturas relacionadas à tuba auditiva e auxilia na regulação da pressão no ouvido médio."
+  },
+  "Incus": {
+    "objname": "Bigorna",
+    "description": "Segundo dos três ossículos do ouvido médio. Localiza-se entre o martelo e o estribo e transmite as vibrações recebidas do martelo em direção ao estribo."
+  },
+  "FacialCN": {
+    "objname": "Nervo Facial",
+    "description": "Sétimo nervo craniano, responsável principalmente pela inervação dos músculos da expressão facial. Também participa de funções relacionadas ao paladar e apresenta ramos associados a estruturas do ouvido médio, incluindo o músculo estapédio."
+  },
+  "ExternalAcousticMeatus": {
+    "objname": "Meato Acústico Externo",
+    "description": "Canal que se estende desde a abertura externa da orelha até a membrana timpânica. Sua principal função é conduzir as ondas sonoras do ambiente até o tímpano."
+  },
+  "EustachianTube": {
+    "objname": "Tuba Auditiva",
+    "description": "Canal que conecta a cavidade do ouvido médio à nasofaringe. Sua principal função é equalizar a pressão entre o ouvido médio e o ambiente externo, além de auxiliar na drenagem de secreções do ouvido médio."
+  },
+  "CochlearCN": {
+    "objname": "Nervo Coclear",
+    "description": "Porção coclear do nervo vestibulococlear responsável por transmitir ao sistema nervoso central os sinais nervosos gerados na cóclea em resposta às vibrações sonoras."
+  },
+  "Cochlea": {
+    "objname": "Cóclea",
+    "description": "Estrutura espiralada do ouvido interno responsável pela transformação das vibrações mecânicas produzidas pelo som em sinais nervosos. Contém o órgão de Corti, onde estão localizadas as células sensoriais da audição."
+  },
+  "ChodraTympani": {
+    "objname": "Corda do Tímpano",
+    "description": "Ramo do nervo facial que atravessa a cavidade do ouvido médio e conduz fibras relacionadas ao paladar dos dois terços anteriores da língua. Também transporta fibras parassimpáticas destinadas às glândulas submandibular e sublingual."
+  },
+  "Ears": {
+    "objname": "Orelhas",
+    "description": "Conjunto de estruturas responsáveis pela captação e transmissão dos sons e pela participação no equilíbrio. Cada orelha é dividida em ouvido externo, ouvido médio e ouvido interno, contendo estruturas especializadas para condução sonora e percepção do equilíbrio."
+  }
+}
