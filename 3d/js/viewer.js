@@ -6,6 +6,7 @@ import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
 import * as SkeletonUtils from 'three/addons/utils/SkeletonUtils.js';
 import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer.js';
+import { SMAAPass } from 'three/addons/postprocessing/SMAAPass.js';
 
 const ColorBlindShader = {
     uniforms: { 
@@ -168,9 +169,17 @@ function initThree() {
     };
 
     composer = new EffectComposer(renderer);
+    
+    composer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
     composer.addPass(new RenderPass(scene, camera));
+
     colorPass = new ShaderPass(ColorBlindShader);
     composer.addPass(colorPass);
+
+    const pixelRatio = renderer.getPixelRatio();
+    const smaaPass = new SMAAPass(width * pixelRatio, height * pixelRatio);
+    composer.addPass(smaaPass);
 
     setColorBlindMode('normal');
     setDefaultCamera();
@@ -189,6 +198,16 @@ function load3DModel(id) {
                 obj.castShadow = false;
                 obj.receiveShadow = false;
                 obj.frustumCulled = false;
+
+                if (obj.material) {
+                    const maxAnisotropy = renderer.capabilities.getMaxAnisotropy();
+                    
+                    // Se o material tiver textura de cor base
+                    if (obj.material.map) {
+                        obj.material.map.anisotropy = maxAnisotropy;
+                        obj.material.map.needsUpdate = true;
+                    }
+                }
             }
         });
 
@@ -800,13 +819,19 @@ window.addEventListener('resize', () => {
     const container = document.getElementById('three-container');
     if (!container) return;
 
-    camera.aspect = container.offsetWidth / container.offsetHeight;
+    const width = container.offsetWidth;
+    const height = container.offsetHeight;
+
+    camera.aspect = width / height;
     camera.updateProjectionMatrix();
 
-    renderer.setSize(container.offsetWidth, container.offsetHeight);
-    composer.setSize(container.offsetWidth, container.offsetHeight);
+    renderer.setSize(width, height);
+    composer.setSize(width, height);
+    
+    // 👈 Garante que o pixel ratio se mantenha preciso no resize
+    composer.setPixelRatio(Math.min(window.devicePixelRatio, 2)); 
 
-    if (labelRenderer) labelRenderer.setSize(container.offsetWidth, container.offsetHeight);
+    if (labelRenderer) labelRenderer.setSize(width, height);
 });
 
 // Alterna a visibilidade (visible = true/false) de uma sub-mesh específica na cena tridimensional.
