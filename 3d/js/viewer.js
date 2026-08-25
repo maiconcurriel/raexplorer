@@ -7,6 +7,8 @@ import { ShaderPass } from 'three/addons/postprocessing/ShaderPass.js';
 import * as SkeletonUtils from 'three/addons/utils/SkeletonUtils.js';
 import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer.js';
 import { SMAAPass } from 'three/addons/postprocessing/SMAAPass.js';
+import { SAOPass } from 'three/addons/postprocessing/SAOPass.js';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 
 const ColorBlindShader = {
     uniforms: { 
@@ -130,12 +132,11 @@ function initThree() {
     }
 
     scene = new THREE.Scene();   
-    const isDark = document.body.classList.contains('dark-mode');
 
-    scene.background = new THREE.Color(isDark ? 0x0f172a : 0xf2f2f2);
     camera = new THREE.PerspectiveCamera(40, width / height, 0.1, 1000);
     camera.position.set(0, 2, 3);
 
+    // 1. Instanciar o Renderer PRIMEIRO
     renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     renderer.setSize(width, height);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
@@ -144,6 +145,15 @@ function initThree() {
 
     container.appendChild(renderer.domElement);
 
+    // 2. Agora sim podemos usar o renderer no PMREMGenerator
+    const pmremGenerator = new THREE.PMREMGenerator(renderer);
+    scene.environment = pmremGenerator.fromScene(new RoomEnvironment(), 0.04).texture;
+    pmremGenerator.dispose(); // Descarta o gerador da memória após gerar a textura
+
+    const isDark = document.body.classList.contains('dark-mode');
+    scene.background = new THREE.Color(isDark ? 0x0f172a : 0xf2f2f2);
+
+    // 3. LabelRenderer (CSS2D)
     labelRenderer = new CSS2DRenderer();
     labelRenderer.setSize(width, height);
     labelRenderer.domElement.style.position = 'absolute';
@@ -151,36 +161,54 @@ function initThree() {
     labelRenderer.domElement.style.pointerEvents = 'none';
     container.appendChild(labelRenderer.domElement);
 
-    scene.add(new THREE.AmbientLight(0xffffff, 0.9));
-    const dirLight = new THREE.DirectionalLight(0xffffff, 1.6);
-    dirLight.position.set(5, 10, 7);
-    scene.add(dirLight);
+    // 4. Luzes
+    scene.add(new THREE.AmbientLight(0xffffff, 0.6));
+    
+    const mainLight = new THREE.DirectionalLight(0xffffff, 1.0);
+    mainLight.position.set(5, 10, 7);
+    scene.add(mainLight);
 
+    const rimLight = new THREE.DirectionalLight(0x90e0ef, 1.0);
+    rimLight.position.set(-5, -5, -5);
+    scene.add(rimLight);
+
+    // 5. OrbitControls
     controls = new OrbitControls(camera, renderer.domElement);
     controls.enableDamping = true;
     controls.dampingFactor = 0.03;
     controls.screenSpacePanning = true;
     controls.enablePan = true;
-
     controls.mouseButtons = {
         LEFT: THREE.MOUSE.ROTATE,
         MIDDLE: THREE.MOUSE.DOLLY,
         RIGHT: THREE.MOUSE.PAN
     };
 
+    // 6. EffectComposer - Ordem correta dos Passes:
     composer = new EffectComposer(renderer);
-    
     composer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
+    // Passo 1: Renderiza a cena base
     composer.addPass(new RenderPass(scene, camera));
 
+    // Passo 2: Aplica Oclusão de Ambiente (SAO)
+    const saoPass = new SAOPass(scene, camera, false, true);
+    saoPass.params.saoBias = 0.5;
+    saoPass.params.saoIntensity = 0.002; 
+    saoPass.params.saoScale = 10;
+    saoPass.params.saoKernelRadius = 50;
+    composer.addPass(saoPass);
+
+    // Passo 3: Filtro de Daltonismo
     colorPass = new ShaderPass(ColorBlindShader);
     composer.addPass(colorPass);
 
+    // Passo 4: Antialiasing (SMAA por último)
     const pixelRatio = renderer.getPixelRatio();
     const smaaPass = new SMAAPass(width * pixelRatio, height * pixelRatio);
     composer.addPass(smaaPass);
 
+    // 7. Configurações Finais
     setColorBlindMode('normal');
     setDefaultCamera();
 
@@ -198,13 +226,15 @@ function load3DModel(id) {
                 obj.castShadow = false;
                 obj.receiveShadow = false;
                 obj.frustumCulled = false;
+                obj.material.roughness = 0.4;
+                obj.material.metalness = 0.1;
 
                 if (obj.material) {
                     const maxAnisotropy = renderer.capabilities.getMaxAnisotropy();
                     
                     // Se o material tiver textura de cor base
                     if (obj.material.map) {
-                        obj.material.map.anisotropy = maxAnisotropy;
+                        obj.material.map.anisotropy = renderer.capabilities.getMaxAnisotropy();
                         obj.material.map.needsUpdate = true;
                     }
                 }
