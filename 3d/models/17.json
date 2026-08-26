@@ -1,909 +1,896 @@
 {
   "objname": "Sistema Muscular Masculino",
   "objsystem": "Muscular",
-  "objdescription": "O sistema muscular masculino é constituído principalmente por músculos esqueléticos, responsáveis pelos movimentos voluntários, manutenção da postura, estabilização das articulações e produção de calor. O modelo apresenta músculos da cabeça, pescoço, tronco, membros superiores, membros inferiores e região pélvica, além de fáscias, tendões e algumas estruturas musculares profundas. Os músculos da face participam das expressões faciais, mastigação, movimentos dos olhos, língua e deglutição. Os músculos do pescoço auxiliam nos movimentos da cabeça, da coluna cervical e da laringe. No tronco, diferentes grupos musculares participam da respiração, movimentação da coluna, estabilização do tórax e abdome. Nos membros superiores, os músculos controlam movimentos dos ombros, braços, antebraços, punhos e mãos. Nos membros inferiores, atuam na movimentação dos quadris, joelhos, tornozelos e pés, permitindo ações como caminhar, correr e manter o equilíbrio. Estruturas como tendões conectam músculos aos ossos, enquanto fáscias envolvem e organizam grupos musculares. O conjunto dessas estruturas permite a execução coordenada dos movimentos e contribui para a sustentação e proteção do corpo.",
-
+  "objdescription": "O sistema muscular masculino é constituído principalmente por músculos esqueléticos, responsáveis pelos movimentos voluntários, manutenção da postura, estabilização das articulações e produção de calor. O modelo apresenta músculos da cabeça, pescoço, tronco, membros superiores, membros inferiores e região pélvica. Os músculos da face participam das expressões faciais, mastigação e movimentos dos olhos, língua e lábios. Os músculos do pescoço movimentam e estabilizam a cabeça e participam da deglutição e da produção da voz. No tronco, os músculos auxiliam na respiração, movimentação da coluna e estabilização do abdome e tórax. Nos membros superiores, controlam os movimentos dos ombros, braços, antebraços, punhos e mãos. Nos membros inferiores, permitem movimentos dos quadris, joelhos, tornozelos e pés, essenciais para caminhar, correr e manter o equilíbrio. Tendões e aponeuroses conectam músculos aos ossos ou distribuem suas forças, enquanto estruturas como fáscias auxiliam na organização dos tecidos musculares.",
   "linkedModels": [],
   "resources": [],
 
   "Occipitofrontalis_epicranius": {
     "objname": "Músculo Occipitofrontal",
-    "description": "Musculus occipitofrontalis"
+    "description": "Eleva as sobrancelhas e movimenta o couro cabeludo, participando das expressões faciais."
   },
   "Temporal_fascia": {
     "objname": "Fáscia Temporal",
-    "description": "Fascia temporalis"
+    "description": "Envolve e sustenta o músculo temporal, auxiliando na organização e transmissão das forças musculares."
   },
   "Temporalis": {
     "objname": "Músculo Temporal",
-    "description": "Musculus temporalis"
+    "description": "Eleva e retrai a mandíbula, participando principalmente da mastigação."
   },
   "Auricularis_superior": {
     "objname": "Músculo Auricular Superior",
-    "description": "Musculus auricularis superior"
+    "description": "Eleva levemente a orelha e participa dos movimentos da orelha externa."
   },
   "Auricularis_anterior": {
     "objname": "Músculo Auricular Anterior",
-    "description": "Musculus auricularis anterior"
+    "description": "Move a orelha para frente, participando dos movimentos da orelha externa."
   },
   "Orbicularis_oculi": {
     "objname": "Músculo Orbicular dos Olhos",
-    "description": "Musculus orbicularis oculi"
+    "description": "Fecha as pálpebras e participa do piscar e da proteção dos olhos."
   },
   "Depressor_supercilli": {
     "objname": "Músculo Depressor da Sobrancelha",
-    "description": "Musculus depressor supercilii"
+    "description": "Abaixa a sobrancelha e participa das expressões faciais."
   },
   "Corrugator_supercilii": {
     "objname": "Músculo Corrugador do Supercílio",
-    "description": "Musculus corrugator supercilii"
+    "description": "Aproxima e abaixa as sobrancelhas, formando rugas verticais na testa."
   },
   "Levator_palpebrae_superioris": {
     "objname": "Músculo Levantador da Pálpebra Superior",
-    "description": "Musculus levator palpebrae superioris"
+    "description": "Eleva a pálpebra superior, permitindo a abertura dos olhos."
   },
   "Procerus": {
     "objname": "Músculo Prócero",
-    "description": "Musculus procerus"
+    "description": "Abaixa a região medial das sobrancelhas e enruga a pele sobre a raiz do nariz."
   },
   "Nasalis_transverse_portion": {
     "objname": "Músculo Nasal – Porção Transversa",
-    "description": "Musculus nasalis, pars transversa"
+    "description": "Comprime a abertura nasal, reduzindo o diâmetro das narinas."
   },
   "Levator_labii_superioris": {
     "objname": "Músculo Levantador do Lábio Superior",
-    "description": "Musculus levator labii superioris"
+    "description": "Eleva o lábio superior, participando das expressões faciais."
   },
   "Zygomaticus_minor": {
     "objname": "Músculo Zigomático Menor",
-    "description": "Musculus zygomaticus minor"
+    "description": "Eleva o lábio superior e participa da expressão do sorriso."
   },
   "Levator_anguli_oris": {
     "objname": "Músculo Levantador do Ângulo da Boca",
-    "description": "Musculus levator anguli oris"
+    "description": "Eleva o ângulo da boca, participando principalmente do sorriso."
   },
   "Levator_labii_superioris_alaeque_nasi": {
     "objname": "Músculo Levantador do Lábio Superior e da Asa do Nariz",
-    "description": "Musculus levator labii superioris alaeque nasi"
+    "description": "Eleva o lábio superior e auxilia na dilatação das narinas."
   },
   "Superior_oblique": {
     "objname": "Músculo Oblíquo Superior do Olho",
-    "description": "Musculus obliquus superior"
+    "description": "Move o globo ocular, contribuindo principalmente para sua rotação e direcionamento."
   },
   "superior_rectus": {
     "objname": "Músculo Reto Superior do Olho",
-    "description": "Musculus rectus superior"
+    "description": "Eleva o globo ocular e também contribui para sua rotação e adução."
   },
   "Supinator": {
     "objname": "Músculo Supinador",
-    "description": "Musculus supinator"
+    "description": "Gira o antebraço lateralmente, realizando o movimento de supinação."
   },
   "Supraspinatus": {
     "objname": "Músculo Supraespinal",
-    "description": "Musculus supraspinatus"
+    "description": "Inicia a abdução do braço e auxilia na estabilização da articulação do ombro."
   },
   "Tibialis_anterior": {
     "objname": "Músculo Tibial Anterior",
-    "description": "Musculus tibialis anterior"
+    "description": "Realiza a dorsiflexão e auxilia na inversão do pé."
   },
   "Tibialis_posterior": {
     "objname": "Músculo Tibial Posterior",
-    "description": "Musculus tibialis posterior"
+    "description": "Realiza a inversão e auxilia na flexão plantar do pé, sustentando o arco plantar."
   },
   "Thyrohyoid": {
     "objname": "Músculo Tireo-Hioideo",
-    "description": "Musculus thyrohyoideus"
+    "description": "Abaixa o osso hioide ou eleva a laringe durante a deglutição."
   },
   "Tensor_fascia_lata": {
     "objname": "Músculo Tensor da Fáscia Lata",
-    "description": "Musculus tensor fasciae latae"
+    "description": "Tensiona a fáscia lata e auxilia na abdução e estabilização do quadril e joelho."
   },
   "Transversus_abdominis": {
     "objname": "Músculo Transverso do Abdome",
-    "description": "Musculus transversus abdominis"
+    "description": "Comprime o conteúdo abdominal e contribui para a estabilidade do tronco."
   },
   "Transversus_thoracis": {
     "objname": "Músculo Transverso do Tórax",
-    "description": "Musculus transversus thoracis"
+    "description": "Auxilia na expiração ao abaixar as cartilagens das costelas."
   },
   "Trapezius": {
     "objname": "Músculo Trapézio",
-    "description": "Musculus trapezius"
+    "description": "Move e estabiliza a escápula e auxilia nos movimentos do pescoço e ombro."
   },
   "Tres_major": {
     "objname": "Músculo Redondo Maior",
-    "description": "Musculus teres major"
+    "description": "Aduz, estende e gira medialmente o braço."
   },
   "Triceps": {
     "objname": "Músculo Tríceps Braquial",
-    "description": "Musculus triceps brachii"
+    "description": "Principal extensor do antebraço, atuando na extensão do cotovelo."
   },
   "Triceps_lateral_head": {
     "objname": "Cabeça Lateral do Tríceps Braquial",
-    "description": "Caput laterale musculi tricipitis brachii"
+    "description": "Contribui para a extensão do antebraço e estabilização do cotovelo."
   },
   "Triceps_long_head": {
     "objname": "Cabeça Longa do Tríceps Braquial",
-    "description": "Caput longum musculi tricipitis brachii"
+    "description": "Estende o cotovelo e auxilia na extensão e adução do braço."
   },
   "Triceps_tendon": {
     "objname": "Tendão do Tríceps Braquial",
-    "description": "Tendo musculi tricipitis brachii"
+    "description": "Transmite a força do tríceps ao olécrano, permitindo a extensão do cotovelo."
   },
   "Vastus_intermedius": {
     "objname": "Músculo Vasto Intermédio",
-    "description": "Musculus vastus intermedius"
+    "description": "Estende a perna na articulação do joelho."
   },
   "Vastus_Lateralis": {
     "objname": "Músculo Vasto Lateral",
-    "description": "Musculus vastus lateralis"
+    "description": "Estende o joelho e contribui para a estabilidade da patela."
   },
   "Vastus_medialis": {
     "objname": "Músculo Vasto Medial",
-    "description": "Musculus vastus medialis"
+    "description": "Estende o joelho e auxilia na estabilização medial da patela."
   },
   "Zygomaticus_major": {
     "objname": "Músculo Zigomático Maior",
-    "description": "Musculus zygomaticus major"
+    "description": "Eleva o ângulo da boca, sendo importante para o sorriso."
   },
   "Superior_gemellus": {
     "objname": "Músculo Gêmeo Superior",
-    "description": "Musculus gemellus superior"
+    "description": "Auxilia na rotação lateral e estabilização da articulação do quadril."
   },
   "Superficial_transverse_perineal": {
     "objname": "Músculo Transverso Superficial do Períneo",
-    "description": "Musculus transversus perinei superficialis"
+    "description": "Auxilia na estabilização do centro tendíneo do períneo."
   },
   "Subscapularis": {
     "objname": "Músculo Subescapular",
-    "description": "Musculus subscapularis"
+    "description": "Realiza rotação medial do braço e estabiliza a articulação do ombro."
   },
   "Subcostal": {
     "objname": "Músculo Subcostal",
-    "description": "Musculi subcostales"
+    "description": "Auxilia na expiração ao abaixar as costelas."
   },
   "Subclavius": {
     "objname": "Músculo Subclávio",
-    "description": "Musculus subclavius"
+    "description": "Abaixa e estabiliza a clavícula durante os movimentos do ombro."
   },
   "Stylohyoid": {
     "objname": "Músculo Estilo-Hioideo",
-    "description": "Musculus stylohyoideus"
+    "description": "Eleva e retrai o osso hioide durante a deglutição."
   },
   "Styloglossus": {
     "objname": "Músculo Estiloglosso",
-    "description": "Musculus styloglossus"
+    "description": "Retrai e eleva a língua, auxiliando na deglutição."
   },
   "Sternothyroid": {
     "objname": "Músculo Esternotireoideo",
-    "description": "Musculus sternothyroideus"
+    "description": "Abaixa a laringe após sua elevação durante a deglutição."
   },
   "Sternohyoid": {
     "objname": "Músculo Esterno-Hioideo",
-    "description": "Musculus sternohyoideus"
+    "description": "Abaixa o osso hioide após a deglutição."
   },
   "Sternocleidomastoid": {
     "objname": "Músculo Esternocleidomastóideo",
-    "description": "Musculus sternocleidomastoideus"
+    "description": "Move e gira a cabeça e auxilia na flexão do pescoço."
   },
   "Sternalis": {
     "objname": "Músculo Esternal",
-    "description": "Musculus sternalis"
+    "description": "Músculo variável da parede torácica, com função pouco definida."
   },
   "Splenius_cervicis": {
     "objname": "Músculo Esplênio do Pescoço",
-    "description": "Musculus splenius cervicis"
+    "description": "Estende e gira o pescoço, especialmente quando atua unilateralmente."
   },
   "Splenius_capitis": {
     "objname": "Músculo Esplênio da Cabeça",
-    "description": "Musculus splenius capitis"
+    "description": "Estende e gira a cabeça e o pescoço."
   },
   "Spinalis_thoracis": {
     "objname": "Músculo Espinal do Tórax",
-    "description": "Musculus spinalis thoracis"
+    "description": "Auxilia na extensão e estabilização da coluna vertebral."
   },
   "Spinalis_cervicis": {
     "objname": "Músculo Espinal do Pescoço",
-    "description": "Musculus spinalis cervicis"
+    "description": "Auxilia na extensão e estabilização da coluna cervical."
   },
   "Soleus": {
     "objname": "Músculo Sóleo",
-    "description": "Musculus soleus"
+    "description": "Realiza a flexão plantar do pé e contribui para a manutenção da postura."
   },
   "Serratus_posterior_superior": {
     "objname": "Músculo Serrátil Posterior Superior",
-    "description": "Musculus serratus posterior superior"
+    "description": "Eleva as costelas e auxilia nos movimentos respiratórios."
   },
   "Serratus_posterior_inferior": {
     "objname": "Músculo Serrátil Posterior Inferior",
-    "description": "Musculus serratus posterior inferior"
+    "description": "Abaixa as costelas inferiores e auxilia na respiração."
   },
   "Serratus_anterior": {
     "objname": "Músculo Serrátil Anterior",
-    "description": "Musculus serratus anterior"
+    "description": "Projeta e estabiliza a escápula contra o tórax."
   },
   "Semitendinosus": {
     "objname": "Músculo Semitendíneo",
-    "description": "Musculus semitendinosus"
+    "description": "Flexiona o joelho e estende o quadril."
   },
   "Semispinalis_thoracis": {
     "objname": "Músculo Semiespinal do Tórax",
-    "description": "Musculus semispinalis thoracis"
+    "description": "Estende e auxilia na rotação da coluna torácica."
   },
   "Semispinalis_cervicis": {
     "objname": "Músculo Semiespinal do Pescoço",
-    "description": "Musculus semispinalis cervicis"
+    "description": "Estende e gira a coluna cervical."
   },
   "Semispinalis_capitis": {
     "objname": "Músculo Semiespinal da Cabeça",
-    "description": "Musculus semispinalis capitis"
+    "description": "Estende e gira a cabeça e a coluna cervical."
   },
   "Semimembranosus": {
     "objname": "Músculo Semimembranáceo",
-    "description": "Musculus semimembranosus"
+    "description": "Flexiona o joelho e estende o quadril."
   },
   "Scalene_posterior": {
     "objname": "Músculo Escaleno Posterior",
-    "description": "Musculus scalenus posterior"
+    "description": "Eleva as costelas superiores e auxilia na flexão lateral do pescoço."
   },
   "Scalene_middle": {
     "objname": "Músculo Escaleno Médio",
-    "description": "Musculus scalenus medius"
+    "description": "Eleva a primeira costela e auxilia na flexão lateral do pescoço."
   },
   "Scalene_anterior": {
     "objname": "Músculo Escaleno Anterior",
-    "description": "Musculus scalenus anterior"
+    "description": "Eleva a primeira costela e auxilia na flexão lateral do pescoço."
   },
   "Sartorius": {
     "objname": "Músculo Sartório",
-    "description": "Musculus sartorius"
+    "description": "Flexiona, abduz e gira lateralmente a coxa e também flexiona o joelho."
   },
   "Rotatores_thoracis_longi": {
     "objname": "Músculos Rotadores Longos do Tórax",
-    "description": "Musculi rotatores thoracis longi"
+    "description": "Auxiliam na rotação e estabilização das vértebras torácicas."
   },
   "Rotatores_thoracis_breves": {
     "objname": "Músculos Rotadores Curtos do Tórax",
-    "description": "Musculi rotatores thoracis breves"
+    "description": "Auxiliam na rotação e estabilização da coluna torácica."
   },
   "Risorius": {
     "objname": "Músculo Risório",
-    "description": "Musculus risorius"
+    "description": "Puxa lateralmente o ângulo da boca, participando das expressões faciais."
   },
   "Rhomboideus_minor": {
     "objname": "Músculo Romboide Menor",
-    "description": "Musculus rhomboideus minor"
+    "description": "Retrai e estabiliza a escápula, auxiliando sua rotação."
   },
   "Rhomboideus_major": {
     "objname": "Músculo Romboide Maior",
-    "description": "Musculus rhomboideus major"
+    "description": "Retrai e estabiliza a escápula contra a parede torácica."
   },
   "Rectus_femoris": {
     "objname": "Músculo Reto Femoral",
-    "description": "Musculus rectus femoris"
+    "description": "Estende o joelho e auxilia na flexão do quadril."
   },
   "Rectus_capitis_posterior_minor": {
     "objname": "Músculo Reto Posterior Menor da Cabeça",
-    "description": "Musculus rectus capitis posterior minor"
+    "description": "Auxilia na extensão e estabilização da cabeça."
   },
   "Rectus_capitis_posterior_major": {
     "objname": "Músculo Reto Posterior Maior da Cabeça",
-    "description": "Musculus rectus capitis posterior major"
+    "description": "Estende e gira a cabeça para o mesmo lado."
   },
   "Rectus_capitis_lateralis": {
     "objname": "Músculo Reto Lateral da Cabeça",
-    "description": "Musculus rectus capitis lateralis"
+    "description": "Auxilia na flexão lateral e estabilização da cabeça."
   },
   "Rectus_capitis_anterior": {
     "objname": "Músculo Reto Anterior da Cabeça",
-    "description": "Musculus rectus capitis anterior"
+    "description": "Flexiona e estabiliza a cabeça sobre a coluna cervical."
   },
   "Rectus_abodominis": {
     "objname": "Músculo Reto do Abdome",
-    "description": "Musculus rectus abdominis"
+    "description": "Flexiona o tronco e auxilia na compressão do conteúdo abdominal."
   },
   "Quadratus_plantea": {
     "objname": "Músculo Quadrado Plantar",
-    "description": "Musculus quadratus plantae"
+    "description": "Auxilia os flexores dos dedos na flexão dos dedos do pé."
   },
   "Quadratus_lumborum": {
     "objname": "Músculo Quadrado Lombar",
-    "description": "Musculus quadratus lumborum"
+    "description": "Flexiona lateralmente o tronco e estabiliza a coluna lombar."
   },
   "Quadratus_femoris": {
     "objname": "Músculo Quadrado Femoral",
-    "description": "Musculus quadratus femoris"
+    "description": "Realiza rotação lateral e auxilia na adução da coxa."
   },
   "Pyramidalis": {
     "objname": "Músculo Piramidal",
-    "description": "Musculus pyramidalis"
+    "description": "Tensiona a linha alba e auxilia na estabilização da parede abdominal."
   },
   "Pubococccygeus": {
     "objname": "Músculo Pubococcígeo",
-    "description": "Musculus pubococcygeus"
+    "description": "Integra o assoalho pélvico e auxilia na sustentação dos órgãos pélvicos."
   },
   "Psoas_minor": {
     "objname": "Músculo Psoas Menor",
-    "description": "Musculus psoas minor"
+    "description": "Auxilia discretamente na flexão do tronco e na estabilização da coluna lombar."
   },
   "Psoas_major": {
     "objname": "Músculo Psoas Maior",
-    "description": "Musculus psoas major"
+    "description": "Principal flexor do quadril e importante estabilizador da coluna lombar."
   },
   "Pronator_teres": {
     "objname": "Músculo Pronador Redondo",
-    "description": "Musculus pronator teres"
+    "description": "Realiza a pronação do antebraço e auxilia na flexão do cotovelo."
   },
   "Pronator_quadratus": {
     "objname": "Músculo Pronador Quadrado",
-    "description": "Musculus pronator quadratus"
+    "description": "Realiza a pronação do antebraço e estabiliza a articulação radioulnar."
   },
   "Posterior_cricoarytenoid": {
     "objname": "Músculo Cricoaritenoideo Posterior",
-    "description": "Musculus cricoarytenoideus posterior"
+    "description": "Abre as pregas vocais, sendo importante para a passagem do ar."
   },
   "Popliteus": {
     "objname": "Músculo Poplíteo",
-    "description": "Musculus popliteus"
+    "description": "Desbloqueia o joelho e auxilia na rotação da perna."
   },
   "Platysma": {
     "objname": "Músculo Platisma",
-    "description": "Musculus platysma"
+    "description": "Tensiona a pele do pescoço e auxilia nos movimentos do lábio inferior."
   },
   "Plantaris": {
     "objname": "Músculo Plantar",
-    "description": "Musculus plantaris"
+    "description": "Auxilia na flexão do joelho e na flexão plantar do pé."
   },
   "Plantar_interossei": {
     "objname": "Músculos Interósseos Plantares",
-    "description": "Musculi interossei plantares"
+    "description": "Aduzem os dedos do pé e auxiliam na estabilização dos dedos."
   },
   "Piriformis": {
     "objname": "Músculo Piriforme",
-    "description": "Musculus piriformis"
+    "description": "Realiza rotação lateral da coxa e auxilia na estabilização do quadril."
   },
   "Pectoralis_miinor": {
     "objname": "Músculo Peitoral Menor",
-    "description": "Musculus pectoralis minor"
+    "description": "Desloca a escápula para frente e para baixo e auxilia na inspiração."
   },
   "Pectoralis_major": {
     "objname": "Músculo Peitoral Maior",
-    "description": "Musculus pectoralis major"
+    "description": "Aduz e gira medialmente o braço, participando também da flexão do ombro."
   },
   "Pectineus": {
     "objname": "Músculo Pectíneo",
-    "description": "Musculus pectineus"
+    "description": "Aduz e flexiona a coxa e auxilia na estabilização do quadril."
   },
   "Palmaris_longus": {
     "objname": "Músculo Palmar Longo",
-    "description": "Musculus palmaris longus"
+    "description": "Flexiona o punho e tensiona a aponeurose palmar."
   },
   "Palmaris_brevis": {
     "objname": "Músculo Palmar Curto",
-    "description": "Musculus palmaris brevis"
+    "description": "Enruga a pele da palma da mão e melhora a aderência da mão."
   },
   "Palmar_interosseous_3rd": {
     "objname": "Músculo Interósseo Palmar do Terceiro Dedo",
-    "description": "Musculus interosseus palmaris tertius"
+    "description": "Aduz o terceiro dedo em direção ao eixo da mão."
   },
   "Palmar_interosseous_2nd": {
     "objname": "Músculo Interósseo Palmar do Segundo Dedo",
-    "description": "Musculus interosseus palmaris secundus"
+    "description": "Aduz o segundo dedo em direção ao eixo da mão."
   },
   "Palmar_interosseous_1st": {
     "objname": "Músculo Interósseo Palmar do Primeiro Dedo",
-    "description": "Musculus interosseus palmaris primus"
+    "description": "Aduz o polegar em direção ao eixo da mão."
   },
   "Palatoglossus": {
     "objname": "Músculo Palatoglosso",
-    "description": "Musculus palatoglossus"
+    "description": "Eleva a parte posterior da língua e auxilia na deglutição."
   },
   "Orbicularis_oris": {
     "objname": "Músculo Orbicular da Boca",
-    "description": "Musculus orbicularis oris"
+    "description": "Fecha e movimenta os lábios, participando da fala e das expressões faciais."
   },
   "Opponens_pollicis": {
     "objname": "Músculo Oponente do Polegar",
-    "description": "Musculus opponens pollicis"
+    "description": "Realiza a oposição do polegar, permitindo movimentos precisos da mão."
   },
   "Opponens_digiti_minimi": {
     "objname": "Músculo Oponente do Dedo Mínimo",
-    "description": "Musculus opponens digiti minimi"
+    "description": "Move o quinto dedo e auxilia na oposição do dedo mínimo."
   },
   "Omohyoid": {
     "objname": "Músculo Omo-Hioideo",
-    "description": "Musculus omohyoideus"
+    "description": "Abaixa e estabiliza o osso hioide durante a deglutição."
   },
   "Obturator_internus": {
     "objname": "Músculo Obturador Interno",
-    "description": "Musculus obturatorius internus"
+    "description": "Realiza rotação lateral da coxa e estabiliza a articulação do quadril."
   },
   "Obturator_externus": {
     "objname": "Músculo Obturador Externo",
-    "description": "Musculus obturatorius externus"
+    "description": "Realiza rotação lateral da coxa e auxilia na estabilização do quadril."
   },
   "Obliqyys_capitis_superior": {
     "objname": "Músculo Oblíquo Superior da Cabeça",
-    "description": "Musculus obliquus capitis superior"
+    "description": "Auxilia na extensão e flexão lateral da cabeça."
   },
   "Nasalis_alarportion": {
     "objname": "Músculo Nasal – Porção Alar",
-    "description": "Musculus nasalis, pars alaris"
+    "description": "Auxilia na abertura e dilatação das narinas."
   },
   "Mylohyoid": {
     "objname": "Músculo Milo-Hioideo",
-    "description": "Musculus mylohyoideus"
+    "description": "Forma o assoalho da boca e eleva a língua e o osso hioide durante a deglutição."
   },
   "Multifidus": {
     "objname": "Músculo Multífido",
-    "description": "Musculus multifidus"
+    "description": "Estabiliza a coluna e auxilia na extensão e rotação vertebral."
   },
   "Mentalis": {
     "objname": "Músculo Mentual",
-    "description": "Musculus mentalis"
+    "description": "Eleva e projeta o lábio inferior, participando das expressões faciais."
   },
   "Medial_rectus": {
     "objname": "Músculo Reto Medial do Olho",
-    "description": "Musculus rectus medialis"
+    "description": "Move o globo ocular medialmente, realizando a adução do olho."
   },
   "Medial_pterygoid": {
     "objname": "Músculo Pterigoideo Medial",
-    "description": "Musculus pterygoideus medialis"
+    "description": "Eleva e auxilia nos movimentos laterais da mandíbula durante a mastigação."
   },
   "Masseter_superficial": {
     "objname": "Músculo Masseter – Porção Superficial",
-    "description": "Musculus masseter, pars superficialis"
+    "description": "Eleva a mandíbula e participa da força de fechamento da boca."
   },
   "Masseter_deep": {
     "objname": "Músculo Masseter – Porção Profunda",
-    "description": "Musculus masseter, pars profunda"
+    "description": "Eleva e auxilia na estabilização da mandíbula durante a mastigação."
   },
   "Lumbricals": {
     "objname": "Músculos Lumbricais",
-    "description": "Musculi lumbricales"
+    "description": "Auxiliam na flexão das articulações metacarpofalângicas e extensão dos dedos."
   },
   "Lumbrical_4th": {
     "objname": "Quarto Músculo Lumbrical",
-    "description": "Musculus lumbricalis quartus"
+    "description": "Flexiona a articulação metacarpofalângica e estende as articulações dos dedos."
   },
   "Lumbrical_3rd": {
     "objname": "Terceiro Músculo Lumbrical",
-    "description": "Musculus lumbricalis tertius"
+    "description": "Flexiona a articulação metacarpofalângica e estende as articulações dos dedos."
   },
   "Lumbrical_2nd": {
     "objname": "Segundo Músculo Lumbrical",
-    "description": "Musculus lumbricalis secundus"
+    "description": "Flexiona a articulação metacarpofalângica e estende as articulações dos dedos."
   },
   "Lumbrical_1st": {
     "objname": "Primeiro Músculo Lumbrical",
-    "description": "Musculus lumbricalis primus"
+    "description": "Flexiona a articulação metacarpofalângica e estende as articulações dos dedos."
   },
   "Longus_colli": {
     "objname": "Músculo Longo do Pescoço",
-    "description": "Musculus longus colli"
+    "description": "Flexiona e estabiliza a coluna cervical."
   },
   "Longus_capitis": {
     "objname": "Músculo Longo da Cabeça",
-    "description": "Musculus longus capitis"
+    "description": "Flexiona a cabeça e auxilia na estabilização da região cervical."
   },
   "Longissimus_thoracis": {
     "objname": "Músculo Longuíssimo do Tórax",
-    "description": "Musculus longissimus thoracis"
+    "description": "Estende e auxilia na flexão lateral da coluna torácica."
   },
   "Longissimus_cervicis": {
     "objname": "Músculo Longuíssimo do Pescoço",
-    "description": "Musculus longissimus cervicis"
+    "description": "Estende e auxilia na flexão lateral da coluna cervical."
   },
   "Longissimus_capitis": {
     "objname": "Músculo Longuíssimo da Cabeça",
-    "description": "Musculus longissimus capitis"
-  },
-  "Ligament_Treitz": {
-    "objname": "Ligamento de Treitz",
-    "description": "Musculus suspensorius duodeni"
+    "description": "Estende e gira a cabeça e auxilia na estabilização cervical."
   },
   "Levatores_costarum_breves": {
     "objname": "Músculos Levantadores Curtos das Costelas",
-    "description": "Musculi levatores costarum breves"
+    "description": "Elevam as costelas e auxiliam nos movimentos respiratórios."
   },
   "Levatores_costarum": {
     "objname": "Músculos Levantadores das Costelas",
-    "description": "Musculi levatores costarum"
-  },
-  "Lesser_omentum": {
-    "objname": "Omento Menor",
-    "description": "Omentum minus"
+    "description": "Elevam as costelas e auxiliam na expansão do tórax durante a inspiração."
   },
   "Latissimus_dorsi": {
     "objname": "Músculo Latíssimo do Dorso",
-    "description": "Musculus latissimus dorsi"
+    "description": "Estende, aduz e gira medialmente o braço."
   },
   "Lateral_rectus": {
     "objname": "Músculo Reto Lateral do Olho",
-    "description": "Musculus rectus lateralis"
+    "description": "Move o globo ocular lateralmente, realizando a abdução do olho."
   },
   "Lateral_pterygoid": {
     "objname": "Músculo Pterigoideo Lateral",
-    "description": "Musculus pterygoideus lateralis"
+    "description": "Projeta e movimenta lateralmente a mandíbula, participando da mastigação."
   },
   "Intertransversii_laterales_lumborum": {
     "objname": "Músculos Intertransversários Laterais Lombares",
-    "description": "Musculi intertransversarii laterales lumborum"
+    "description": "Estabilizam a coluna lombar e auxiliam na flexão lateral do tronco."
   },
   "Intertransversarii_mediales_lumborum": {
     "objname": "Músculos Intertransversários Mediais Lombares",
-    "description": "Musculi intertransversarii mediales lumborum"
+    "description": "Auxiliam na estabilização e flexão lateral da coluna lombar."
   },
   "Intertransversarii_anteriores_cervicis": {
     "objname": "Músculos Intertransversários Anteriores do Pescoço",
-    "description": "Musculi intertransversarii anteriores cervicis"
+    "description": "Auxiliam na flexão lateral e estabilização da coluna cervical."
   },
   "Interspinales_cervicis": {
     "objname": "Músculos Interespinhais do Pescoço",
-    "description": "Musculi interspinales cervicis"
+    "description": "Auxiliam na extensão e estabilização das vértebras cervicais."
   },
   "Internal_oblique": {
     "objname": "Músculo Oblíquo Interno do Abdome",
-    "description": "Musculus obliquus internus abdominis"
+    "description": "Comprime o abdome e auxilia na flexão e rotação do tronco."
   },
   "Internal_intercostal": {
     "objname": "Músculos Intercostais Internos",
-    "description": "Musculi intercostales interni"
+    "description": "Auxiliam principalmente na expiração ao movimentar as costelas."
   },
   "Interansversarii_posteriores_cervicis": {
     "objname": "Músculos Intertransversários Posteriores do Pescoço",
-    "description": "Musculi intertransversarii posteriores cervicis"
+    "description": "Auxiliam na estabilização e nos movimentos laterais da coluna cervical."
   },
   "Infraspinatus": {
     "objname": "Músculo Infraespinal",
-    "description": "Musculus infraspinatus"
+    "description": "Realiza rotação lateral do braço e estabiliza a articulação do ombro."
   },
   "Inferior_rectus": {
     "objname": "Músculo Reto Inferior do Olho",
-    "description": "Musculus rectus inferior"
+    "description": "Move o globo ocular para baixo e auxilia em sua rotação."
   },
   "Inferior_oblique": {
     "objname": "Músculo Oblíquo Inferior do Olho",
-    "description": "Musculus obliquus inferior"
+    "description": "Move o globo ocular para cima e lateralmente, participando da rotação."
   },
   "Inferior_gemellus": {
     "objname": "Músculo Gêmeo Inferior",
-    "description": "Musculus gemellus inferior"
+    "description": "Auxilia na rotação lateral da coxa e estabilização do quadril."
   },
   "Illiocostalis_thoracis": {
     "objname": "Músculo Iliocostal do Tórax",
-    "description": "Musculus iliocostalis thoracis"
+    "description": "Estende e auxilia na flexão lateral da coluna torácica."
   },
   "Illiocostalis_cervicis": {
     "objname": "Músculo Iliocostal do Pescoço",
-    "description": "Musculus iliocostalis cervicis"
+    "description": "Estende e auxilia na flexão lateral da coluna cervical."
   },
   "Illiococcygeus": {
     "objname": "Músculo Iliococcígeo",
-    "description": "Musculus iliococcygeus"
+    "description": "Integra o assoalho pélvico e auxilia na sustentação dos órgãos pélvicos."
   },
   "Iliocostalis_lumborum": {
     "objname": "Músculo Iliocostal Lombar",
-    "description": "Musculus iliocostalis lumborum"
+    "description": "Estende e auxilia na flexão lateral da coluna lombar."
   },
   "Iliacus": {
     "objname": "Músculo Ilíaco",
-    "description": "Musculus iliacus"
+    "description": "Flexiona a coxa e atua em conjunto com o psoas maior."
   },
   "Hyoglossus": {
     "objname": "Músculo Hio-glosso",
-    "description": "Musculus hyoglossus"
-  },
-  "Greater_omentum": {
-    "objname": "Omento Maior",
-    "description": "Omentum majus"
+    "description": "Abaixa e retrai a língua durante movimentos da fala e deglutição."
   },
   "Gracilis": {
     "objname": "Músculo Grácil",
-    "description": "Musculus gracilis"
+    "description": "Aduz a coxa e auxilia na flexão e rotação medial do joelho."
   },
   "Gluteus_minimus": {
     "objname": "Músculo Glúteo Mínimo",
-    "description": "Musculus gluteus minimus"
+    "description": "Abduz e gira medialmente a coxa e estabiliza a pelve."
   },
   "Gluteus_medius": {
     "objname": "Músculo Glúteo Médio",
-    "description": "Musculus gluteus medius"
+    "description": "Abduz a coxa e estabiliza a pelve durante a marcha."
   },
   "Gluteus_maximus": {
     "objname": "Músculo Glúteo Máximo",
-    "description": "Musculus gluteus maximus"
+    "description": "Estende e gira lateralmente a coxa, sendo importante para correr e subir."
   },
   "Geniohyoid": {
     "objname": "Músculo Gênio-Hioideo",
-    "description": "Musculus geniohyoideus"
+    "description": "Eleva e projeta o osso hioide e auxilia na abertura da boca."
   },
   "Genioglossus": {
     "objname": "Músculo Genioglosso",
-    "description": "Musculus genioglossus"
+    "description": "Projeta e movimenta a língua, sendo importante para fala e deglutição."
   },
   "Gastrocnemius": {
     "objname": "Músculo Gastrocnêmio",
-    "description": "Musculus gastrocnemius"
+    "description": "Realiza a flexão plantar do pé e auxilia na flexão do joelho."
   },
   "Flexor_pollicis_longus": {
     "objname": "Músculo Flexor Longo do Polegar",
-    "description": "Musculus flexor pollicis longus"
+    "description": "Flexiona o polegar, especialmente sua articulação interfalângica."
   },
   "Flexor_pollicis_brevis": {
     "objname": "Músculo Flexor Curto do Polegar",
-    "description": "Musculus flexor pollicis brevis"
+    "description": "Flexiona o polegar e participa dos movimentos de preensão."
   },
   "Flexor_Hallucis_longus": {
     "objname": "Músculo Flexor Longo do Hálux",
-    "description": "Musculus flexor hallucis longus"
+    "description": "Flexiona o hálux e auxilia na propulsão durante a marcha."
   },
   "Flexor_hallucis_brevis": {
     "objname": "Músculo Flexor Curto do Hálux",
-    "description": "Musculus flexor hallucis brevis"
+    "description": "Flexiona o hálux e auxilia na sustentação do arco plantar."
   },
   "Flexor_digitorum_superficialis": {
     "objname": "Músculo Flexor Superficial dos Dedos",
-    "description": "Musculus flexor digitorum superficialis"
+    "description": "Flexiona principalmente as articulações interfalângicas proximais dos dedos."
   },
   "Flexor_digitorum_profundus": {
     "objname": "Músculo Flexor Profundo dos Dedos",
-    "description": "Musculus flexor digitorum profundus"
+    "description": "Flexiona as articulações interfalângicas distais dos dedos."
   },
   "Flexor_digitorum": {
     "objname": "Músculo Flexor dos Dedos",
-    "description": "Musculus flexor digitorum"
+    "description": "Participa da flexão dos dedos durante movimentos de preensão e apoio."
   },
   "Flexor_digitorum_brevis": {
     "objname": "Músculo Flexor Curto dos Dedos",
-    "description": "Musculus flexor digitorum brevis"
+    "description": "Flexiona principalmente as articulações proximais dos dedos do pé."
   },
   "Flexor_digiti_minimi_brevis": {
     "objname": "Músculo Flexor Curto do Dedo Mínimo",
-    "description": "Musculus flexor digiti minimi brevis"
+    "description": "Flexiona o quinto dedo do pé."
   },
   "Flexor_Carpi_ulnaris": {
     "objname": "Músculo Flexor Ulnar do Carpo",
-    "description": "Musculus flexor carpi ulnaris"
+    "description": "Flexiona e aduz a mão no punho."
   },
   "Flexor_carpi_radialis": {
     "objname": "Músculo Flexor Radial do Carpo",
-    "description": "Musculus flexor carpi radialis"
+    "description": "Flexiona e abduz a mão na articulação do punho."
   },
   "Fibularis_tertius": {
     "objname": "Músculo Fibular Terceiro",
-    "description": "Musculus fibularis tertius"
+    "description": "Realiza dorsiflexão e auxilia na eversão do pé."
   },
   "Fibularis_longus": {
     "objname": "Músculo Fibular Longo",
-    "description": "Musculus fibularis longus"
+    "description": "Realiza eversão e auxilia na flexão plantar, sustentando o arco do pé."
   },
   "Fibularis_brevis": {
     "objname": "Músculo Fibular Curto",
-    "description": "Musculus fibularis brevis"
+    "description": "Realiza a eversão do pé e auxilia na flexão plantar."
   },
   "External_oblique": {
     "objname": "Músculo Oblíquo Externo do Abdome",
-    "description": "Musculus obliquus externus abdominis"
+    "description": "Comprime o abdome e auxilia na flexão e rotação do tronco."
   },
   "External_intercostal": {
     "objname": "Músculos Intercostais Externos",
-    "description": "Musculi intercostales externi"
+    "description": "Elevam as costelas durante a inspiração."
   },
   "Extensor_pollicis_longus": {
     "objname": "Músculo Extensor Longo do Polegar",
-    "description": "Musculus extensor pollicis longus"
+    "description": "Estende o polegar, especialmente sua articulação interfalângica."
   },
   "Extensor_pollicis_brevis": {
     "objname": "Músculo Extensor Curto do Polegar",
-    "description": "Musculus extensor pollicis brevis"
+    "description": "Estende o polegar principalmente na articulação metacarpofalângica."
   },
   "Extensor_indicis": {
     "objname": "Músculo Extensor do Indicador",
-    "description": "Musculus extensor indicis"
+    "description": "Estende o dedo indicador e auxilia na extensão do punho."
   },
   "Extensor_Hallucis_longus": {
     "objname": "Músculo Extensor Longo do Hálux",
-    "description": "Musculus extensor hallucis longus"
+    "description": "Estende o hálux e auxilia na dorsiflexão do pé."
   },
   "Extensor_hallucis_brevis": {
     "objname": "Músculo Extensor Curto do Hálux",
-    "description": "Musculus extensor hallucis brevis"
+    "description": "Estende o hálux na articulação metatarsofalângica."
   },
   "Extensor_digitorum": {
     "objname": "Músculo Extensor dos Dedos",
-    "description": "Musculus extensor digitorum"
+    "description": "Estende os dedos e auxilia na extensão do punho."
   },
   "Extensor_digitorum_longus": {
     "objname": "Músculo Extensor Longo dos Dedos",
-    "description": "Musculus extensor digitorum longus"
+    "description": "Estende os dedos do pé e auxilia na dorsiflexão."
   },
   "Extensor_digitorum_brevis": {
     "objname": "Músculo Extensor Curto dos Dedos",
-    "description": "Musculus extensor digitorum brevis"
+    "description": "Auxilia na extensão dos dedos do pé."
   },
   "Extensor_digiti_minimi": {
     "objname": "Músculo Extensor do Dedo Mínimo",
-    "description": "Musculus extensor digiti minimi"
+    "description": "Estende o dedo mínimo e auxilia na extensão do punho."
   },
   "Extensor_carpi_ulnaris": {
     "objname": "Músculo Extensor Ulnar do Carpo",
-    "description": "Musculus extensor carpi ulnaris"
+    "description": "Estende e aduz a mão no punho."
   },
   "Extensor_carpi_radialis_longus": {
     "objname": "Músculo Extensor Radial Longo do Carpo",
-    "description": "Musculus extensor carpi radialis longus"
+    "description": "Estende e abduz a mão na articulação do punho."
   },
   "Extensor_carpi_radialis_brevis": {
     "objname": "Músculo Extensor Radial Curto do Carpo",
-    "description": "Musculus extensor carpi radialis brevis"
+    "description": "Estende e auxilia na abdução da mão no punho."
   },
   "Dorsal_interosseous_4th": {
     "objname": "Quarto Músculo Interósseo Dorsal",
-    "description": "Musculus interosseus dorsalis quartus"
+    "description": "Abduz o quinto dedo e auxilia na flexão das articulações metacarpofalângicas."
   },
   "Dorsal_interosseous_2nd": {
     "objname": "Segundo Músculo Interósseo Dorsal",
-    "description": "Musculus interosseus dorsalis secundus"
+    "description": "Abduz os dedos e auxilia na flexão das articulações metacarpofalângicas."
   },
   "Dorsal_interosseous_1st": {
     "objname": "Primeiro Músculo Interósseo Dorsal",
-    "description": "Musculus interosseus dorsalis primus"
+    "description": "Abduz o segundo dedo e auxilia na flexão da articulação metacarpofalângica."
   },
   "Dorsal_interossei": {
     "objname": "Músculos Interósseos Dorsais",
-    "description": "Musculi interossei dorsales"
+    "description": "Abduzem os dedos da mão e auxiliam na flexão das articulações metacarpofalângicas."
   },
   "Dorsal_intereosseous": {
     "objname": "Músculo Interósseo Dorsal",
-    "description": "Musculus interosseus dorsalis"
+    "description": "Auxilia na abdução e estabilização dos dedos da mão."
   },
   "Digastric_fibrous_loop": {
     "objname": "Alça Fibrosa do Músculo Digástrico",
-    "description": "Ansa tendinea musculi digastrici"
+    "description": "Mantém o tendão intermediário do digástrico em posição durante seus movimentos."
   },
   "Digastiric": {
     "objname": "Músculo Digástrico",
-    "description": "Musculus digastricus"
+    "description": "Eleva o osso hioide e auxilia na abertura da mandíbula e na deglutição."
   },
   "Diaphragm": {
     "objname": "Diafragma",
-    "description": "Diaphragma"
+    "description": "Principal músculo da inspiração, aumentando o volume da cavidade torácica."
   },
   "Depressor_septi": {
     "objname": "Músculo Depressor do Septo Nasal",
-    "description": "Musculus depressor septi nasi"
+    "description": "Abaixa o septo nasal e auxilia nos movimentos das narinas."
   },
   "Depressor_labii_inferioris": {
     "objname": "Músculo Depressor do Lábio Inferior",
-    "description": "Musculus depressor labii inferioris"
+    "description": "Abaixa e everte o lábio inferior durante expressões faciais."
   },
   "Depressor_anguli": {
     "objname": "Músculo Depressor do Ângulo da Boca",
-    "description": "Musculus depressor anguli oris"
+    "description": "Abaixa o ângulo da boca, participando de expressões faciais."
   },
   "Deltoid_posterior_head": {
     "objname": "Cabeça Posterior do Deltoide",
-    "description": "Musculus deltoideus, pars spinalis"
+    "description": "Estende e gira lateralmente o braço."
   },
   "Deltoid_middle_head": {
     "objname": "Cabeça Média do Deltoide",
-    "description": "Musculus deltoideus, pars acromialis"
+    "description": "Principal responsável pela abdução do braço."
   },
   "Deltoid_anterior_head": {
     "objname": "Cabeça Anterior do Deltoide",
-    "description": "Musculus deltoideus, pars clavicularis"
+    "description": "Flexiona e gira medialmente o braço e auxilia na abdução."
   },
   "Deep_transverse_perineal": {
     "objname": "Músculo Transverso Profundo do Períneo",
-    "description": "Musculus transversus perinei profundus"
+    "description": "Auxilia na sustentação do assoalho pélvico e na estabilização do períneo."
   },
   "Cricothyroid_straight_part": {
     "objname": "Músculo Cricotireoideo – Porção Reta",
-    "description": "Musculus cricothyroideus, pars recta"
+    "description": "Tensiona as pregas vocais, contribuindo para a produção de sons mais agudos."
   },
   "Cricothyroid_oblique_part": {
     "objname": "Músculo Cricotireoideo – Porção Oblíqua",
-    "description": "Musculus cricothyroideus, pars obliqua"
+    "description": "Tensiona as pregas vocais e participa do controle da voz."
   },
   "Coracobrachialis": {
     "objname": "Músculo Coracobraquial",
-    "description": "Musculus coracobrachialis"
+    "description": "Flexiona e aduz o braço e auxilia na estabilização do ombro."
   },
   "Common_tendinous_ring": {
     "objname": "Anel Tendíneo Comum",
-    "description": "Anulus tendineus communis"
+    "description": "Anel fibroso que origina músculos que movimentam o globo ocular."
   },
   "Coccygeuis": {
     "objname": "Músculo Coccígeo",
-    "description": "Musculus coccygeus"
+    "description": "Integra o assoalho pélvico e auxilia na sustentação dos órgãos pélvicos."
   },
   "Buccinator": {
     "objname": "Músculo Bucinador",
-    "description": "Musculus buccinator"
+    "description": "Comprime a bochecha, auxiliando na mastigação, fala e controle do alimento."
   },
   "Brachioradialis": {
     "objname": "Músculo Braquiorradial",
-    "description": "Musculus brachioradialis"
+    "description": "Flexiona o antebraço, especialmente quando ele está em posição neutra."
   },
   "Brachialis": {
     "objname": "Músculo Braquial",
-    "description": "Musculus brachialis"
+    "description": "É um dos principais flexores do antebraço na articulação do cotovelo."
   },
   "Bicipital_aponeurosis": {
     "objname": "Aponeurose do Bíceps Braquial",
-    "description": "Aponeurosis musculi bicipitis brachii"
+    "description": "Expansão tendínea que transmite parte da força do bíceps e protege estruturas do antebraço."
   },
   "Biceps_femoris_short_head": {
     "objname": "Cabeça Curta do Bíceps Femoral",
-    "description": "Caput breve musculi bicipitis femoris"
+    "description": "Flexiona o joelho e auxilia na rotação lateral da perna."
   },
   "Biceps_brachii_short_head": {
     "objname": "Cabeça Curta do Bíceps Braquial",
-    "description": "Caput breve musculi bicipitis brachii"
+    "description": "Flexiona o cotovelo e auxilia na supinação e flexão do braço."
   },
   "Biceps_brachii_long_head": {
     "objname": "Cabeça Longa do Bíceps Braquial",
-    "description": "Caput longum musculi bicipitis brachii"
+    "description": "Flexiona o cotovelo, supina o antebraço e auxilia na flexão do ombro."
   },
   "Auricularis_posterior": {
     "objname": "Músculo Auricular Posterior",
-    "description": "Musculus auricularis posterior"
+    "description": "Move a orelha para trás e participa dos movimentos da orelha externa."
   },
   "Articularis_genu": {
     "objname": "Músculo Articular do Joelho",
-    "description": "Musculus articularis genus"
+    "description": "Puxa a membrana sinovial para evitar seu pinçamento durante a extensão do joelho."
   },
   "Anconeus": {
     "objname": "Músculo Ancôneo",
-    "description": "Musculus anconeus"
+    "description": "Auxilia na extensão e estabilização do cotovelo."
   },
   "Anal_sphincter_internal": {
     "objname": "Esfíncter Interno do Ânus",
-    "description": "Musculus sphincter ani internus"
+    "description": "Mantém o fechamento do canal anal por contração involuntária."
   },
   "Anal_sphincter_external": {
     "objname": "Esfíncter Externo do Ânus",
-    "description": "Musculus sphincter ani externus"
+    "description": "Controla voluntariamente a abertura do canal anal."
   },
   "Adductor_pollicis": {
     "objname": "Músculo Adutor do Polegar",
-    "description": "Musculus adductor pollicis"
+    "description": "Aduz o polegar e participa da força de preensão da mão."
   },
   "Adductor_magnus": {
     "objname": "Músculo Adutor Magno",
-    "description": "Musculus adductor magnus"
+    "description": "Aduz a coxa e suas fibras posteriores também auxiliam na extensão do quadril."
   },
   "Adductor_longus": {
     "objname": "Músculo Adutor Longo",
-    "description": "Musculus adductor longus"
+    "description": "Aduz a coxa e auxilia na flexão e estabilização do quadril."
   },
   "Adductor_hallucis": {
     "objname": "Músculo Adutor do Hálux",
-    "description": "Musculus adductor hallucis"
+    "description": "Aduz o hálux e auxilia na sustentação do arco transversal do pé."
   },
   "Adductor_brevis": {
     "objname": "Músculo Adutor Curto",
-    "description": "Musculus adductor brevis"
+    "description": "Aduz a coxa e auxilia na flexão do quadril."
   },
   "Achilles_tendon": {
     "objname": "Tendão de Aquiles",
-    "description": "Tendo calcaneus"
+    "description": "Transmite a força do tríceps sural ao calcâneo, permitindo a flexão plantar."
   },
   "Abductor_pollicis_longus": {
     "objname": "Músculo Abdutor Longo do Polegar",
-    "description": "Musculus abductor pollicis longus"
+    "description": "Abduz e auxilia na extensão do polegar."
   },
   "Abductor_pollicis_brevis": {
     "objname": "Músculo Abdutor Curto do Polegar",
-    "description": "Musculus abductor pollicis brevis"
+    "description": "Abduz o polegar e participa dos movimentos de preensão."
   },
   "Abductor_hallucis": {
     "objname": "Músculo Abdutor do Hálux",
-    "description": "Musculus abductor hallucis"
+    "description": "Abduz o hálux e auxilia na sustentação do arco medial do pé."
   },
   "Abductor_digiti_minimi": {
     "objname": "Músculo Abdutor do Dedo Mínimo",
-    "description": "Musculus abductor digiti minimi"
+    "description": "Abduz o quinto dedo e auxilia na estabilidade do pé."
   }
 }

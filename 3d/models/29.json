@@ -1,0 +1,78 @@
+{
+  "objname": "Anatomia Corpo Feminino",
+
+  "objsystem": [
+    "Anatomia"
+  ],
+
+  "objdescription": "Modelo anatômico do corpo feminino que apresenta uma visão geral dos principais sistemas e estruturas do organismo, incluindo sistemas muscular, nervoso, linfático, arterial, venoso e esquelético, além dos órgãos internos. Permite explorar a organização e a relação entre diferentes estruturas anatômicas do corpo humano feminino.",
+
+  "linkedModels": [
+    {
+      "id": "18",
+      "label": "Sistema Linfático"
+    },
+    {
+      "id": "19",
+      "label": "Sistema Arterial"
+    },
+    {
+      "id": "20",
+      "label": "Sistema Venoso"
+    },
+    {
+      "id": "21",
+      "label": "Sistema Nervoso"
+    },
+    {
+      "id": "27",
+      "label": "Sistema Muscular"
+    },
+    {
+      "id": "28",
+      "label": "Sistema Esquelético"
+    }
+  ],
+
+  "resources": [],
+
+  "Skin_2+Skin_4+Skin_3+Skin_1": {
+    "objname": "Corpo Humano",
+    "description": "Visão geral do corpo humano feminino, apresentando a organização externa do corpo e sua relação com os principais sistemas e estruturas anatômicas. A pele reveste e protege o organismo, contribuindo para a percepção sensorial, controle da temperatura e proteção contra agentes externos."
+  },
+
+  "Muscle_1+Muscle_2+Muscle_3+Muscle_4+Muscle_5": {
+    "objname": "Sistema Muscular",
+    "description": "O sistema muscular feminino é formado pelos músculos responsáveis pelos movimentos do corpo, manutenção da postura, estabilidade das articulações e produção de força. Os músculos esqueléticos participam dos movimentos dos membros, tronco, cabeça e face, além da respiração, mastigação e deglutição. A musculatura do assoalho pélvico auxilia na sustentação dos órgãos pélvicos e no controle das funções urinária e intestinal."
+  },
+
+  "Organs_1+Organs_2+Organs_3+Organs_4+Organs_5+Organs_6+Organs_7+Organs_8+Organs_9+Organs_10+Organs_11+Organs_12+Organs_13+Organs_14+Organs_15+Organs_16+Organs_17+Organs_18+Organs_19+": {
+    "objname": "Órgãos",
+    "description": "Visão geral dos principais órgãos do corpo feminino, incluindo estruturas dos sistemas digestório, respiratório, cardiovascular, urinário, reprodutor e outros sistemas. Os órgãos desempenham funções especializadas e trabalham de forma integrada para manter o funcionamento e o equilíbrio do organismo."
+  },
+
+  "Nervous_1+Nervous_2+Nervous_3": {
+    "objname": "Sistema Nervoso",
+    "description": "Conjunto de estruturas responsáveis por receber, processar e transmitir informações pelo organismo, coordenando funções motoras, sensoriais, cognitivas e autonômicas. O sistema nervoso é formado pelo encéfalo, medula espinal e estruturas associadas, incluindo nervos, núcleos, vias de comunicação e membranas que protegem o sistema nervoso central."
+  },
+
+  "Lymph_1+Lymph_2": {
+    "objname": "Sistema Linfático",
+    "description": "Sistema responsável pela drenagem do excesso de líquido dos tecidos, transporte de células e substâncias relacionadas à resposta imunológica e defesa do organismo. É formado por vasos linfáticos, linfonodos e órgãos linfoides, como o timo e o baço. Atua na manutenção do equilíbrio dos líquidos corporais, filtragem da linfa e participação nas respostas imunológicas."
+  },
+
+  "Arteries": {
+    "objname": "Sistema Arterial",
+    "description": "Conjunto de artérias responsável por transportar o sangue do coração para os diferentes tecidos e órgãos do corpo. Distribui sangue rico em oxigênio pela circulação sistêmica e participa da circulação pulmonar. Suas ramificações formam uma extensa rede vascular que fornece oxigênio e nutrientes aos tecidos e auxilia na manutenção da pressão e do fluxo sanguíneo."
+  },
+
+  "Veins": {
+    "objname": "Sistema Venoso",
+    "description": "Conjunto de veias responsável por transportar o sangue dos tecidos e órgãos de volta ao coração. Recebe o sangue proveniente da circulação sistêmica e o conduz ao coração, enquanto as veias pulmonares transportam sangue oxigenado dos pulmões até o átrio esquerdo. Sua extensa rede auxilia no retorno venoso e na manutenção da circulação sanguínea."
+  },
+
+  "Skeleton_1+Skeleton_2+Skeleton_3+Skeleton_4+Skeleton_5+Skeleton_6+Skeleton_7": {
+    "objname": "Sistema Esquelético",
+    "description": "Conjunto de ossos, articulações, cartilagens, ligamentos e estruturas de suporte que sustentam e protegem o corpo, permitem movimentos e participam da produção de células sanguíneas e do armazenamento de minerais. O modelo apresenta estruturas do esqueleto axial e apendicular, incluindo crânio, coluna, caixa torácica, pelve e membros."
+  }
+}

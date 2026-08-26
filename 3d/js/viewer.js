@@ -56,7 +56,7 @@ const COLOR_FILTERS = {
 let scene, camera, renderer, controls, composer, colorPass, modelId;
 let models = [];
 let objectData = {};
-let selectedObject = null;
+let selectedObjects = [];
 let originalEmissive = new THREE.Color();
 let isIsolatedMode = false;
 let visibilidadeAntesDoIsolamento = {};
@@ -424,7 +424,7 @@ window.focarParte = (id, intersectionPoint = null) => {
     }
     
     // 4. Fluxo de Isolamento ou Destaque Lateral
-    if (isIsolatedMode && selectedObject && selectedObject.name === objTarget.name) {
+    if (isIsolatedMode && selectedObjects.some(obj => obj.name === objTarget.name)) {
         renderButtons(chaveJson, data);
         return;
     }
@@ -436,7 +436,7 @@ window.focarParte = (id, intersectionPoint = null) => {
             renderButtons(chaveJson, data);
         }
     } else {
-        highlightObject(objTarget);
+        highlightObject(chaveJson);
         renderButtons(chaveJson, data);
     }
 
@@ -448,7 +448,6 @@ window.focarParte = (id, intersectionPoint = null) => {
 window.resetScene = () => {
     isIsolatedMode = false;
     clearHighlight();
-    selectedObject = null;
 
     if (currentAction) {
         currentAction.reset();
@@ -470,7 +469,6 @@ window.resetScene = () => {
 window.botaoGeral = () => {
     isIsolatedMode = false;
     clearHighlight();
-    selectedObject = null;
     renderizarDescricaoComAlternador();
     removerCallout();
 }
@@ -542,54 +540,86 @@ function onPointerDown(event) {
 }
 
 // Aplica um efeito de brilho verde (emissive) temporário na sub-mesh selecionada para destacá-la visualmente.
-function highlightObject(object) {
+function highlightObject(chaveJson) {
     if (isIsolatedMode) return;
 
-    // Se já havia um objeto selecionado antes, restaura o emissive dele
-    if (selectedObject && selectedObject.material) {
-        selectedObject.material.emissive.copy(originalEmissive);
-        selectedObject.material.emissiveIntensity = 0.5;
-    }
+    clearHighlight();
 
-    selectedObject = object;
+    const malhasDoGrupo = chaveJson.replace('+nisolar', '').split('+');
 
-    if (selectedObject.material) {
-        // Preserva os estados de transparência originais ANTES de clonar
-        const eraTransparente = selectedObject.material.transparent;
-        const opacidadeOriginal = selectedObject.material.opacity;
+    scene.traverse(child => {
+        if ((child.isMesh || child.isSkinnedMesh) && malhasDoGrupo.includes(child.name)) {
+            if (child.material) {
+                // Trata caso o objeto use um array de materiais
+                const materials = Array.isArray(child.material) ? child.material : [child.material];
 
-        selectedObject.material = selectedObject.material.clone();
-        originalEmissive.copy(selectedObject.material.emissive);
-        
-        // Aplica o brilho verde de seleção
-        selectedObject.material.emissive.setHex(0x00FF00); 
-        selectedObject.material.emissiveIntensity = 0.2; 
-        
-        // CORREÇÃO: Mantém as propriedades nativas do material extraído do Blender
-        selectedObject.material.transparent = eraTransparente;
-        selectedObject.material.opacity = opacidadeOriginal; 
-    }
+                materials.forEach((mat, index) => {
+                    // SÓ APLICA SE O MATERIAL TIVER A PROPRIEDADE EMISSIVE
+                    if (mat && mat.emissive) {
+                        const eraTransparente = mat.transparent;
+                        const opacidadeOriginal = mat.opacity;
+
+                        const clonedMat = mat.clone();
+
+                        // Salva o emissive original com fallback seguro
+                        if (!child.userData[`originalEmissive_${index}`]) {
+                            child.userData[`originalEmissive_${index}`] = new THREE.Color().copy(clonedMat.emissive);
+                        }
+
+                        clonedMat.emissive.setHex(0x00FF00);
+                        clonedMat.emissiveIntensity = 0.2;
+
+                        clonedMat.transparent = eraTransparente;
+                        clonedMat.opacity = opacidadeOriginal;
+
+                        if (Array.isArray(child.material)) {
+                            child.material[index] = clonedMat;
+                        } else {
+                            child.material = clonedMat;
+                        }
+                    }
+                });
+
+                selectedObjects.push(child);
+            }
+        }
+    });
 }
 
 // Remove o efeito de brilho (emissive) da peça que estava selecionada anteriormente.
 function clearHighlight() {
-    if (selectedObject && selectedObject.material) {
-        selectedObject.material.emissive.copy(originalEmissive);
-        selectedObject.material.emissiveIntensity = 1.0;
+    if (Array.isArray(selectedObjects)) {
+        selectedObjects.forEach(obj => {
+            if (obj && obj.material) {
+                const materials = Array.isArray(obj.material) ? obj.material : [obj.material];
+
+                materials.forEach((mat, index) => {
+                    if (mat && mat.emissive) {
+                        const savedEmissive = obj.userData[`originalEmissive_${index}`];
+                        if (savedEmissive) {
+                            mat.emissive.copy(savedEmissive);
+                        }
+                        mat.emissiveIntensity = 1.0;
+                    }
+                });
+            }
+        });
     }
+    selectedObjects = [];
 }
 
 // Oculta todas as outras meshes da cena e foca a câmera exclusivamente na peça anatômica selecionada.
 window.isolarObjeto = (id) => {
     const chaveJson = obterChaveJson(id);
     
-    // Bloqueia o isolamento se contiver o sufixo proibido
     if (chaveJson.includes('+nisolar')) {
         console.warn("Este objeto foi configurado para não ser isolado.");
         return;
     }
 
     const malhasParaExibir = chaveJson.split('+');
+    
+    // Busca a primeira mesh só para ter referência técnica, se precisar
     const targetObj = scene.getObjectByName(malhasParaExibir[0]);
     if (!targetObj) return;
 
@@ -601,18 +631,23 @@ window.isolarObjeto = (id) => {
     });
 
     const data = objectData[chaveJson];
+    
+    // 1. Limpa o brilho de destaque do modo normal
     clearHighlight();
-    selectedObject = targetObj;
+    
     isIsolatedMode = true;
 
+    // 2. Oculta tudo
     scene.traverse(obj => {
         if (obj.isMesh || obj.isSkinnedMesh) obj.visible = false;
     });
 
+    // 3. Exibe TODAS as peças do grupo e guarda elas no selectedObjects
     scene.traverse(obj => {
         if (obj.isMesh || obj.isSkinnedMesh) {
             if (malhasParaExibir.includes(obj.name)) {
                 obj.visible = true;
+                selectedObjects.push(obj); // ✅ Popula a lista com todas as peças visíveis do grupo
             }
         }
     });
@@ -626,6 +661,7 @@ window.isolarObjeto = (id) => {
 window.voltarDoIsolamento = (id) => {
     isIsolatedMode = false;
 
+    // 1. Restaura a visibilidade de tudo na cena
     scene.traverse(obj => {
         if ((obj.isMesh || obj.isSkinnedMesh) && visibilidadeAntesDoIsolamento[obj.uuid] !== undefined) {
             obj.visible = visibilidadeAntesDoIsolamento[obj.uuid];
@@ -634,7 +670,6 @@ window.voltarDoIsolamento = (id) => {
 
     setDefaultCamera();
 
-    // Resolve a chave do JSON para o ID atual
     const chaveJson = Object.keys(objectData).find(key => {
         return key === id || key.split('+').includes(id);
     }) || id;
@@ -642,16 +677,22 @@ window.voltarDoIsolamento = (id) => {
     const data = objectData[chaveJson];
     renderButtons(chaveJson, data);
 
-    if (selectedObject) {
+    // 2. ✅ Ajustado para ler o array selectedObjects
+    if (selectedObjects.length > 0) {
+        const principalMesh = selectedObjects[0];
+        
         const chavePeca = Object.keys(objectData).find(key => {
-            return key === selectedObject.name || key.split('+').includes(selectedObject.name);
-        }) || selectedObject.name;
+            return key === principalMesh.name || key.split('+').includes(principalMesh.name);
+        }) || principalMesh.name;
 
         const dataPeca = objectData[chavePeca];
         if (dataPeca) {
-            const nomeDoObjeto = dataPeca.objname || selectedObject.name;
-            criarCallout(selectedObject, nomeDoObjeto);
+            const nomeDoObjeto = dataPeca.objname || principalMesh.name;
+            criarCallout(principalMesh, nomeDoObjeto);
         }
+        
+        // 3. Re-aplica o destaque verde em todas as peças do grupo agora que saiu do isolamento
+        highlightObject(chaveJson);
     }
 };
 
@@ -866,12 +907,26 @@ window.addEventListener('resize', () => {
 
 // Alterna a visibilidade (visible = true/false) de uma sub-mesh específica na cena tridimensional.
 window.toggleVisibility = (id, action) => {
+    // 1. Resolve a chave completa do JSON (ex: se id for "peça1", encontra "peça1+peça2")
+    const chaveJson = Object.keys(objectData).find(key => {
+        if (key === id) return true;
+        const chaveLimpa = key.replace('+nisolar', '');
+        return chaveLimpa === id || chaveLimpa.split('+').includes(id);
+    }) || id;
+
+    // 2. Extrai os nomes de todas as malhas pertencentes ao grupo
+    const malhasDoGrupo = chaveJson.replace('+nisolar', '').split('+');
+
+    // 3. Varre a cena e altera a visibilidade de TODAS as peças do grupo
     scene.traverse(obj => {
-        if (obj.isMesh && obj.name === id) {
+        if ((obj.isMesh || obj.isSkinnedMesh) && malhasDoGrupo.includes(obj.name)) {
             obj.visible = (action === 'show');
         }
     });
-    renderButtons(id, objectData[id]);
+
+    // 4. Renderiza os botões usando a chave resolvida do JSON
+    const data = objectData[chaveJson];
+    renderButtons(chaveJson, data);
 };
 
 // Constrói e injeta o bloco de texto descritivo do objeto focado junto com seus botões de ação contextual (Isolar/Esconder/Mostrar).
