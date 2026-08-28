@@ -1,7 +1,7 @@
 {
   "objname": "Coração (Animado)",
   "objsystem": "Cardiovascular",
-  "objdescription": "Modelo anatômico detalhado do coração humano, representando a complexa estrutura muscular responsável pelo bombeamento rítmico do sangue, garantindo a oxigenação dos tecidos e a nutrição celular através das circulações sistêmica e pulmonar, processos fundamentais para a vida.",
+  "objdescription": "Modelo anatômico 3D animado do coração humano, representando o órgão em movimento durante o ciclo cardíaco. A animação permite observar visualmente o batimento do coração e compreender sua dinâmica durante a contração e o relaxamento, responsáveis pelo bombeamento contínuo do sangue. O modelo possibilita explorar a anatomia cardíaca de forma interativa, relacionando sua estrutura externa ao funcionamento interno e ao fluxo sanguíneo. A estrutura externa pode ser ocultada para revelar o interior do coração enquanto ele continua batendo, permitindo observar as câmaras cardíacas e outras estruturas internas em movimento. O modelo é um recurso didático para auxiliar no estudo da anatomia e fisiologia do coração e sua função no sistema cardiovascular.",
   "linkedModels": [
     {
       "id": "4",
@@ -23,5 +23,9 @@
       "info": "Imagem · 262 KB",
       "url": "coracao.png"
     }
-  ]
+  ],
+  "heart_closed_animation": {
+    "objname": "Coração em Batimento",
+    "description": "Representa o coração durante o ciclo cardíaco, com movimentos de contração e relaxamento. Pode ser ocultado para permitir a visualização das estruturas internas do coração enquanto a animação de batimento continua."
+  }
 }
