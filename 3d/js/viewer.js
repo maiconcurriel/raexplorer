@@ -136,24 +136,23 @@ function initThree() {
     camera = new THREE.PerspectiveCamera(40, width / height, 0.1, 1000);
     camera.position.set(0, 2, 3);
 
-    // 1. Instanciar o Renderer PRIMEIRO
     renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     renderer.setSize(width, height);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     renderer.toneMappingExposure = 1.0;
+    scene.environmentIntensity = 0.2;
 
     container.appendChild(renderer.domElement);
 
-    // 2. Agora sim podemos usar o renderer no PMREMGenerator
     const pmremGenerator = new THREE.PMREMGenerator(renderer);
-    scene.environment = pmremGenerator.fromScene(new RoomEnvironment(), 0.04).texture;
-    pmremGenerator.dispose(); // Descarta o gerador da memória após gerar a textura
+    //scene.environment = pmremGenerator.fromScene(new RoomEnvironment(), 0.04).texture;
+    scene.environment = null;
+    pmremGenerator.dispose();
 
     const isDark = document.body.classList.contains('dark-mode');
     scene.background = new THREE.Color(isDark ? 0x0f172a : 0xf2f2f2);
 
-    // 3. LabelRenderer (CSS2D)
     labelRenderer = new CSS2DRenderer();
     labelRenderer.setSize(width, height);
     labelRenderer.domElement.style.position = 'absolute';
@@ -162,13 +161,13 @@ function initThree() {
     container.appendChild(labelRenderer.domElement);
 
     // 4. Luzes
-    scene.add(new THREE.AmbientLight(0xffffff, 0.6));
+    scene.add(new THREE.AmbientLight(0xffffff, 1.0));
     
-    const mainLight = new THREE.DirectionalLight(0xffffff, 1.0);
+    const mainLight = new THREE.DirectionalLight(0xffffff, 1.5);
     mainLight.position.set(5, 10, 7);
     scene.add(mainLight);
 
-    const rimLight = new THREE.DirectionalLight(0x90e0ef, 1.0);
+    const rimLight = new THREE.DirectionalLight(0xffffff, 1.5);
     rimLight.position.set(-5, -5, -5);
     scene.add(rimLight);
 
@@ -188,10 +187,8 @@ function initThree() {
     composer = new EffectComposer(renderer);
     composer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
-    // Passo 1: Renderiza a cena base
     composer.addPass(new RenderPass(scene, camera));
 
-    // Passo 2: Aplica Oclusão de Ambiente (SAO)
     const saoPass = new SAOPass(scene, camera, false, true);
     saoPass.params.saoBias = 0.5;
     saoPass.params.saoIntensity = 0.002; 
@@ -226,8 +223,8 @@ function load3DModel(id) {
                 obj.castShadow = false;
                 obj.receiveShadow = false;
                 obj.frustumCulled = false;
-                obj.material.roughness = 0.4;
-                obj.material.metalness = 0.1;
+                //obj.material.roughness = 0.4;
+                //obj.material.metalness = 0.1;
 
                 if (obj.material) {
                     const maxAnisotropy = renderer.capabilities.getMaxAnisotropy();
@@ -240,6 +237,8 @@ function load3DModel(id) {
                 }
             }
         });
+
+
 
         scene.add(model);
         models.push(model);
@@ -740,26 +739,64 @@ const RESOURCE_CONFIG = {
     video: { icon: '🎥', color: 'var(--accent2-lt)' },
     image: { icon: '📊', color: '#f0eef8' },
     link: { icon: '🔗', color: '#fef5ec' },
-    audio: { icon: '🎙️', color: '#eefcf0' }
+    audio: { icon: '🎙️', color: '#eefcf0' },
+    model: { icon: '🧬', color: '#eefcf0' }
 };
 
 // Renderiza na aba correspondente a lista de mídias e materiais de apoio globais atrelados ao modelo.
 function renderizarRecursosGlobais(data) {
     const container = document.getElementById('tc-res');
-    if (!container || !data.resources) return;
+    if (!container) return;
 
-    container.innerHTML = data.resources.map(res => {
-        const config = RESOURCE_CONFIG[res.type] || RESOURCE_CONFIG.link;
-        return `
-            <div class="res-item" onclick='abrirMedia(${JSON.stringify(res)})'>
-                <div class="res-ic" style="background:${config.color}">${config.icon}</div>
-                <div>
-                    <div class="res-name">${res.name}</div>
-                    <div class="res-type">${res.info}</div>
-                </div>
+    let html = '';
+
+    // Modelos relacionados
+    const relacionados = data.linkedModels ||
+        (data.linkedModel ? [data.linkedModel] : []);
+
+    relacionados.forEach((modelo, index) => {
+    const targetId = modelo.id;
+    const nameobj = modelo.label || `Modelo relacionado ${index + 1}`;
+
+    if (typeof preloadModel === 'function') {
+        preloadModel(targetId);
+    }
+
+    html += `
+        <div class="res-item" onclick="window.carregarNovoModelo('${targetId}')">
+            <div class="res-ic" style="background:#eefcf0; overflow:hidden;">
+                <img 
+                    src="models/${targetId}.png" 
+                    style="width:100%; height:100%; object-fit:cover; border-radius:6px;"
+                    onerror="this.style.display='none'"
+                >
             </div>
-        `;
-    }).join('');
+            <div>
+                <div class="res-name">${nameobj}</div>
+                <div class="res-type">Modelo anatômico relacionado</div>
+            </div>
+        </div>
+    `;
+});
+
+    // Recursos normais
+    if (data.resources) {
+        html += data.resources.map(res => {
+            const config = RESOURCE_CONFIG[res.type] || RESOURCE_CONFIG.link;
+
+            return `
+                <div class="res-item" onclick='abrirMedia(${JSON.stringify(res)})'>
+                    <div class="res-ic" style="background:${config.color}">${config.icon}</div>
+                    <div>
+                        <div class="res-name">${res.name}</div>
+                        <div class="res-type">${res.info}</div>
+                    </div>
+                </div>
+            `;
+        }).join('');
+    }
+
+    container.innerHTML = html;
 }
 
 // Abre e injeta o player de mídia adequado (Iframe de vídeo, imagem ou áudio) dentro da modal interna de recursos.
@@ -923,6 +960,10 @@ window.toggleVisibility = (id, action) => {
             obj.visible = (action === 'show');
         }
     });
+
+    if (action === 'hide') {
+        removerCallout();
+    }
 
     // 4. Renderiza os botões usando a chave resolvida do JSON
     const data = objectData[chaveJson];
@@ -1138,50 +1179,8 @@ function renderizarDescricaoComAlternador() {
     const descContainer = document.querySelector('.desc-tx');
     if (!descContainer) return;
 
-    let alternadorHTML = '';
-
-    /*if (previousModelId) {
-        alternadorHTML += `
-            <div class="divaltbutton" id="divaltbutton-main" style="margin-bottom: 15px;">
-                <button onclick="window.carregarNovoModelo('${previousModelId}', true)" class="altbutton" id="altbutton-main">
-                    <img src="models/${previousModelId}.png" style="width: 60px; height: 60px; object-fit: cover; border-radius: 4px;" onerror="this.style.display='none'">                    
-                </button>
-                <span style="font-weight: bold;">Modelo Principal</span>
-            </div>
-        `;
-    }*/
-
-    const relacionados = objectData.linkedModels || (objectData.linkedModel ? [objectData.linkedModel] : []);
-
-    if (relacionados.length > 0) {
-        alternadorHTML += `
-            <div>
-        `;
-
-        alternadorHTML += relacionados.map((modelo, index) => {
-            const targetId = modelo.id;
-            const nameobj = modelo.label || `Relacionado ${index + 1}`;
-            
-            if (typeof preloadModel === 'function') {
-                preloadModel(targetId);
-            }
-
-            return `
-                <div class="divaltbutton" style="display: flex; flex-direction: column; align-items: center; gap: 6px;">
-                    <button onclick="window.carregarNovoModelo('${targetId}')" class="altbutton">
-                        <img src="models/${targetId}.png" style="width: 60px; height: 60px; object-fit: cover; border-radius: 4px;" onerror="this.style.display='none'">                    
-                    </button>
-                    <span style="font-weight: bold; font-size: 12px; text-align: center; max-width: 90px; display: block; line-height: 1.2;">${nameobj}</span>
-                </div>
-            `;
-        }).join('');
-
-        alternadorHTML += `</div>`;
-    }
-
     descContainer.innerHTML = `
         ${parseDescriptionMedia(objectData.objdescription)}
-        ${alternadorHTML}
     `;
 }
 
@@ -1194,41 +1193,46 @@ let vetorDeslocamentoEtiqueta = null;
 function criarCallout(object, texto, clickPoint = null) {
     removerCallout();
 
-    // Salva as referências para o loop de renderização seguir
     objetoAlvoCallout = object;
     
+    // Ponto base do clique
     const box = new THREE.Box3().setFromObject(object);
-    const size = box.getSize(new THREE.Vector3());
-    const maxDim = Math.max(size.x, size.y, size.z);
-
-    // Se houver ponto de clique, calcula a posição dele relativa ao objeto. Se não, usa o centro.
     const pontoMundoBase = clickPoint ? clickPoint.clone() : box.getCenter(new THREE.Vector3());
     pontoLocalClique = object.worldToLocal(pontoMundoBase.clone());
 
-    // Define para onde a plaquinha vai apontar (deslocamento)
-    vetorDeslocamentoEtiqueta = new THREE.Vector3(maxDim * 0.4, maxDim * 0.5, 0);
+    // 1. Vetor de Deslocamento Inteligente (Projeta para fora do objeto na perspectiva da câmera)
+    const direcaoCamera = new THREE.Vector3();
+    camera.getWorldDirection(direcaoCamera);
+    
+    // Calcula um vetor perpendicular à visão da câmera (jogando a etiqueta levemente para a direita e para cima)
+    const vetorCima = new THREE.Vector3(0, 1, 0);
+    const vetorDireita = new THREE.Vector3().crossVectors(direcaoCamera, vetorCima).normalize();
+    
+    // Offset fixo no mundo 3D (ajuste os valores 0.15 e 0.2 de acordo com a escala padrão do seu modelo)
+    vetorDeslocamentoEtiqueta = vetorDireita.clone().multiplyScalar(0.25).add(vetorCima.clone().multiplyScalar(0.2));
+    
     const labelPosition = pontoMundoBase.clone().add(vetorDeslocamentoEtiqueta);
 
-    // 1. Criar a Bolinha Indicadora
-    const dotGeo = new THREE.SphereGeometry(maxDim * 0.02, 16, 16);
-    const dotMat = new THREE.MeshBasicMaterial({ color: 0x00ffff });
+    // 2. Bolinha Indicadora com tamanho fixo e controlado
+    const dotGeo = new THREE.SphereGeometry(0.008, 16, 16);
+    const dotMat = new THREE.MeshBasicMaterial({ color: 0x00ffff, depthTest: false }); // depthTest: false impede que ela fique escondida dentro da malha
     labelDot = new THREE.Mesh(dotGeo, dotMat);
+    labelDot.renderOrder = 999;
     labelDot.position.copy(pontoMundoBase);
     scene.add(labelDot);
 
-    // 2. Criar a Linha Conectora (usamos um cilindro padrão)
-    const distance = pontoMundoBase.distanceTo(labelPosition);
-    const cylinderGeo = new THREE.CylinderGeometry(0.003, 0.003, distance, 4);
-    const cylinderMat = new THREE.MeshBasicMaterial({ color: 0x00ffff });
-    labelLine = new THREE.Mesh(cylinderGeo, cylinderMat);
-    
-    // Posiciona e rotaciona a linha inicialmente
-    labelLine.position.copy(pontoMundoBase).add(labelPosition).multiplyScalar(0.5);
-    labelLine.lookAt(labelPosition);
-    labelLine.rotateX(Math.PI / 2);
+    // 3. Linha Conectora Nativa (THREE.Line é imune a distorções de escala)
+    const lineGeo = new THREE.BufferGeometry().setFromPoints([pontoMundoBase, labelPosition]);
+    const lineMat = new THREE.LineBasicMaterial({ 
+        color: 0x00ffff, 
+        linewidth: 2, // Espessura uniforme
+        depthTest: false 
+    });
+    labelLine = new THREE.Line(lineGeo, lineMat);
+    labelLine.renderOrder = 998;
     scene.add(labelLine);
 
-    // 3. Criar a Etiqueta HTML CSS2D
+    // 4. Etiqueta HTML CSS2D
     const div = document.createElement('div');
     div.className = 'callout-label';
     div.innerHTML = `
@@ -1253,39 +1257,29 @@ function removerCallout() {
 }
 
 function atualizarPosicaoCallout() {
-    // Se não há um callout ativo ou o objeto sumiu, não faz nada
     if (!objetoAlvoCallout || !pontoLocalClique) return;
 
-    // 1. Descobre a nova posição do ponto de clique no mundo 3D (acompanhando a animação)
-    const novaPosicaoBase = pontoLocalClique.clone().applyMatrix4(objetoAlvoCallout.matrixWorld);
-    
-    // 2. Calcula a nova posição da plaquinha de texto
+    const novaPosicaoBase = pontoLocalClique.clone().applyMatrix4(objetoAlvoCallout.matrixWorld);    
     const novaPosicaoEtiqueta = novaPosicaoBase.clone().add(vetorDeslocamentoEtiqueta);
 
-    // 3. Move a bolinha para o ponto exato atualizado
     if (labelDot) {
         labelDot.position.copy(novaPosicaoBase);
     }
-
-    // 4. Move a etiqueta CSS2D
     if (label2DObject) {
         label2DObject.position.copy(novaPosicaoEtiqueta);
     }
-
-    // 5. Redimensiona, move e aponta a linha conectora entre os dois novos pontos
     if (labelLine) {
-        const novaDistancia = novaPosicaoBase.distanceTo(novaPosicaoEtiqueta);
+        const positions = labelLine.geometry.attributes.position.array;
         
-        // Atualiza a posição central da linha
-        labelLine.position.copy(novaPosicaoBase).add(novaPosicaoEtiqueta).multiplyScalar(0.5);
-        
-        // Faz a linha olhar para a nova posição da etiqueta
-        labelLine.lookAt(novaPosicaoEtiqueta);
-        labelLine.rotateX(Math.PI / 2);
-        
-        // Ajusta a escala vertical da linha para bater com a nova distância (caso o objeto mude de escala)
-        const escalaOriginalCilindro = labelLine.geometry.parameters.height;
-        labelLine.scale.set(1, novaDistancia / escalaOriginalCilindro, 1);
+        positions[0] = novaPosicaoBase.x;
+        positions[1] = novaPosicaoBase.y;
+        positions[2] = novaPosicaoBase.z;
+
+        positions[3] = novaPosicaoEtiqueta.x;
+        positions[4] = novaPosicaoEtiqueta.y;
+        positions[5] = novaPosicaoEtiqueta.z;
+
+        labelLine.geometry.attributes.position.needsUpdate = true;
     }
 }
 
