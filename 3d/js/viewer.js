@@ -54,6 +54,8 @@ const COLOR_FILTERS = {
 };
 
 let scene, camera, renderer, controls, composer, colorPass, modelId;
+let saoPass, smaaPass;
+let qualidadeAtual = 'media';
 let models = [];
 let objectData = {};
 let selectedObjects = [];
@@ -136,11 +138,18 @@ function initThree() {
     camera = new THREE.PerspectiveCamera(40, width / height, 0.1, 1000);
     camera.position.set(0, 2, 3);
 
-    renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer = new THREE.WebGLRenderer({
+    antialias: false,
+    alpha: true,
+    powerPreference: 'high-performance'
+    });
+
     renderer.setSize(width, height);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setPixelRatio(1);
+
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     renderer.toneMappingExposure = 1.0;
+
     scene.environmentIntensity = 0.2;
 
     container.appendChild(renderer.domElement);
@@ -189,20 +198,19 @@ function initThree() {
 
     composer.addPass(new RenderPass(scene, camera));
 
-    const saoPass = new SAOPass(scene, camera, false, true);
+    saoPass = new SAOPass(scene, camera, false, true);
+
     saoPass.params.saoBias = 0.5;
-    saoPass.params.saoIntensity = 0.002; 
+    saoPass.params.saoIntensity = 0.002;
     saoPass.params.saoScale = 10;
     saoPass.params.saoKernelRadius = 50;
+
     composer.addPass(saoPass);
 
-    // Passo 3: Filtro de Daltonismo
     colorPass = new ShaderPass(ColorBlindShader);
     composer.addPass(colorPass);
 
-    // Passo 4: Antialiasing (SMAA por último)
-    const pixelRatio = renderer.getPixelRatio();
-    const smaaPass = new SMAAPass(width * pixelRatio, height * pixelRatio);
+    smaaPass = new SMAAPass(width, height);
     composer.addPass(smaaPass);
 
     // 7. Configurações Finais
@@ -222,7 +230,7 @@ function load3DModel(id) {
             if (obj.isMesh) {
                 obj.castShadow = false;
                 obj.receiveShadow = false;
-                obj.frustumCulled = false;
+                obj.frustumCulled = true;
                 //obj.material.roughness = 0.4;
                 //obj.material.metalness = 0.1;
 
@@ -231,7 +239,12 @@ function load3DModel(id) {
                     
                     // Se o material tiver textura de cor base
                     if (obj.material.map) {
-                        obj.material.map.anisotropy = renderer.capabilities.getMaxAnisotropy();
+                        obj.material.map.anisotropy = Math.min(
+                        renderer.capabilities.getMaxAnisotropy(),
+                        qualidadeAtual === 'alta' ? 16 :
+                        qualidadeAtual === 'equilibrada' ? 8 :
+                        qualidadeAtual === 'media' ? 4 : 2
+                    );
                         obj.material.map.needsUpdate = true;
                     }
                 }
@@ -494,6 +507,128 @@ window.setColorBlindMode = (mode) => {
     const m = COLOR_FILTERS[mode] || COLOR_FILTERS.normal;
     colorPass.uniforms.uMatrix.value.set(m[0], m[1], m[2], m[3], m[4], m[5], m[6], m[7], m[8]);
 };
+
+window.alterarQualidade = function (qualidade) {
+
+    qualidadeAtual = qualidade;
+
+    const configuracoes = {
+
+        baixa: {
+            pixelRatio: 1,
+            sao: false,
+            smaa: false,
+            anisotropy: 4
+        },
+
+        media: {
+            pixelRatio: Math.min(window.devicePixelRatio, 1.5),
+            sao: true,
+            smaa: true,
+            anisotropy: 8
+        },
+
+        alta: {
+            pixelRatio: Math.min(window.devicePixelRatio, 2),
+            sao: true,
+            smaa: true,
+            anisotropy: 16
+        }
+    };
+
+    const config = configuracoes[qualidade] || configuracoes.media;
+
+    // Pixel Ratio
+    renderer.setPixelRatio(config.pixelRatio);
+    composer.setPixelRatio(config.pixelRatio);
+
+    // SAO
+    saoPass.enabled = config.sao;
+
+    // SMAA
+    smaaPass.enabled = config.smaa;
+
+    // Atualiza anisotropia das texturas
+    scene.traverse(obj => {
+
+        if (obj.isMesh && obj.material) {
+
+            const materiais = Array.isArray(obj.material)
+                ? obj.material
+                : [obj.material];
+
+            materiais.forEach(material => {
+
+                if (material.map) {
+                    material.map.anisotropy =
+                        Math.min(
+                            renderer.capabilities.getMaxAnisotropy(),
+                            config.anisotropy
+                        );
+
+                    material.map.needsUpdate = true;
+                }
+
+            });
+        }
+    });
+
+    // Redimensiona corretamente
+    const container = document.getElementById('three-container');
+
+    if (container) {
+        const width = container.clientWidth;
+        const height = container.clientHeight;
+
+        renderer.setSize(width, height);
+        composer.setSize(width, height);
+
+        if (labelRenderer) {
+            labelRenderer.setSize(width, height);
+        }
+    }
+
+    // Atualiza botão
+    const btn = document.getElementById('quality-btn');
+
+    if (btn) {
+        const nomes = {
+            baixa: 'Baixa',
+            media: 'Média',
+            equilibrada: 'Equilibrada',
+            alta: 'Alta'
+        };
+
+        btn.title = `Qualidade: ${nomes[qualidade]}`;
+    }
+
+    toggleQualityMenu();
+};
+
+window.toggleQualityMenu = function () {
+
+    const menu = document.getElementById('quality-menu');
+
+    if (!menu) return;
+
+    menu.classList.toggle('open');
+};
+
+document.addEventListener('click', (event) => {
+
+    const menu = document.getElementById('quality-menu');
+    const button = document.getElementById('quality-btn');
+
+    if (!menu || !button) return;
+
+    if (
+        !menu.contains(event.target) &&
+        !button.contains(event.target)
+    ) {
+        menu.classList.remove('open');
+    }
+
+});
 
 // Alterna o estado da janela do navegador entre modo tela cheia (Fullscreen) e modo normal.
 window.toggleFullscreen = () => {
