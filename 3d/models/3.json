@@ -3,7 +3,32 @@
   "objsystem": "Esquelético",
   "objdescription": "Conjunto de ossos, articulações, cartilagens e estruturas ligamentares que compõem o sistema esquelético masculino. O esqueleto fornece sustentação e forma ao corpo, protege órgãos internos, permite os movimentos em conjunto com o sistema muscular, participa da produção de células sanguíneas e atua como reserva de minerais, especialmente cálcio e fósforo. O modelo apresenta estruturas do esqueleto axial e apendicular, incluindo crânio, coluna vertebral, caixa torácica, cintura escapular, membros superiores, pelve e membros inferiores, além de suas principais articulações e ligamentos.",
   "linkedModels": [],
-  "resources": [],
+  "resources": [
+    {
+      "type": "image",
+      "name": "Detalhes",
+      "info": "2 Mb",
+      "url": "esqueleto.png"
+    },
+    {
+      "type": "doc",
+      "name": "Esqueleto Humano",
+      "info": "PDF",
+      "url": "Esqueleto_humano.pdf"
+    },
+    {
+      "type": "audio",
+      "name": "Descrição",
+      "info": "10 sec",
+      "url": "descesqu.mp3"
+    },
+    {
+      "type": "doc",
+      "name": "Esqueleto Humano",
+      "info": "DOC",
+      "url": "esqueleto.docx"
+    }
+  ],
   "Zygomatic": {
     "objname": "Osso zigomático",
     "description": "Osso da face que forma parte da parede lateral e do assoalho da órbita e participa da formação do arco zigomático."

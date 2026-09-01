@@ -800,16 +800,38 @@ function renderizarRecursosGlobais(data) {
 }
 
 // Abre e injeta o player de mídia adequado (Iframe de vídeo, imagem ou áudio) dentro da modal interna de recursos.
+function fazerDownload(url, nomeArquivo) {
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = nomeArquivo || 'download';
+    a.target = '_blank';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+}
+
 window.abrirMedia = (res) => {
     const modal = document.getElementById('media-modal');
     const body = document.getElementById('modal-body');
     const title = document.getElementById('modal-title');
+    const downloadBtn = document.getElementById('modal-download-btn');
     
     title.innerText = res.name;
     body.innerHTML = ''; 
 
     const isExternal = res.url.startsWith('http');
     const finalPath = isExternal ? res.url : `models/${res.url}`;
+
+    // Configura a visibilidade e ação do botão de download
+    if (downloadBtn) {
+        if (res.type === 'image' || res.type === 'audio') {
+            downloadBtn.style.display = 'inline-block';
+            downloadBtn.onclick = () => fazerDownload(finalPath, res.name);
+        } else {
+            downloadBtn.style.display = 'none';
+            downloadBtn.onclick = null;
+        }
+    }
 
     if (res.type === 'video') {
         let embedUrl = finalPath;
@@ -831,9 +853,8 @@ window.abrirMedia = (res) => {
         body.innerHTML = `<img src="${finalPath}" style="display:block; max-height:80vh; width:100%; object-fit:contain; border:none;" />`;
     }
     else if (res.type === 'audio') {
-        // 1. Cria a estrutura do player + container de legendas
         body.innerHTML = `
-            <div style="padding: 30px; background: #1e293b; display: flex; flex-direction: column; align-items: center; gap: 20px;">
+            <div style="padding: 30px; background: #1e293b; display: flex; flex-direction: column; align-items: center; gap: 20px; border-radius: 8px;">
                 <audio id="audio-player" controls src="${finalPath}" style="width: 100%;"></audio>
                 <div id="audio-caption-box" style="width: 100%; min-height: 50px; text-align: center; color: #38bdf8; font-family: sans-serif; font-size: 16px; font-weight: 500; line-height: 1.4; transition: all 0.2s; padding: 10px; border-radius: 6px; background: rgba(15, 23, 42, 0.6); display: none;">
                     ...
@@ -841,7 +862,6 @@ window.abrirMedia = (res) => {
             </div>
         `;
 
-        // 2. Tenta carregar o arquivo .srt correspondente
         const srtPath = finalPath.substring(0, finalPath.lastIndexOf('.')) + '.srt';
         
         fetch(srtPath)
@@ -854,15 +874,12 @@ window.abrirMedia = (res) => {
                 const audio = document.getElementById('audio-player');
                 const captionBox = document.getElementById('audio-caption-box');
                 
-                // Exibe a caixa de legendas se o arquivo existir
                 captionBox.style.display = 'block';
                 captionBox.innerText = 'Legendas carregadas.';
 
-                // Escuta o tempo do áudio para atualizar a legenda
                 audio.addEventListener('timeupdate', () => {
                     const currentTime = audio.currentTime;
                     const activeCaption = captions.find(c => currentTime >= c.start && currentTime <= c.end);
-                    
                     captionBox.innerHTML = activeCaption ? activeCaption.text : '';
                 });
             })
@@ -1410,6 +1427,45 @@ function switchHelpTab(tabId, btn) {
     
     document.getElementById(tabId).style.display = 'block';
     btn.classList.add('active');
+}
+
+window.toggleDetailPanel = function () {
+    const modal = document.querySelector('.det-modal');
+    const button = document.getElementById('toggle-dp-btn');
+
+    if (!modal || !button) return;
+
+    modal.classList.toggle('panel-hidden');
+
+    if (modal.classList.contains('panel-hidden')) {
+        button.textContent = '◀';
+        button.title = 'Mostrar painel';
+    } else {
+        button.textContent = '▶';
+        button.title = 'Esconder painel';
+    }
+
+    setTimeout(() => {
+        window.dispatchEvent(new Event('resize'));
+    }, 300);
+};
+
+// Função auxiliar para baixar arquivos de mídia sem abrir no navegador
+function baixarArquivo(url, nomeArquivo) {
+    fetch(url)
+        .then(response => response.blob())
+        .then(blob => {
+            const blobUrl = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.style.display = 'none';
+            a.href = blobUrl;
+            a.download = nomeArquivo || 'recurso';
+            document.body.appendChild(a);
+            a.click();
+            window.URL.revokeObjectURL(blobUrl);
+            a.remove();
+        })
+        .catch(err => console.error('Erro ao baixar o recurso:', err));
 }
 
 initViewer();

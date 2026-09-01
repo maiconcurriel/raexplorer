@@ -19,6 +19,12 @@
 </head>
 <body>
 <div class="det-modal">
+        <button id="toggle-dp-btn"
+            class="toggle-dp-btn"
+            onclick="toggleDetailPanel()"
+            title="Esconder painel">
+            ▶
+        </button>
     <div class="v-panel">
         <div class="v-nav">
             <div class="breadcrumb">
@@ -129,10 +135,11 @@
     <div class="modal-content">
         <div class="modal-header">
             <span id="modal-title">Recurso</span>
-            <button onclick="closeMediaModal()" class="close-btn">&times;</button>
+            <button class="nav-arr2" id="modal-download-btn" class="close-btn" style="margin-left: auto; margin-right: 12px; font-size: 15px;">📥</button>
+            <button class="nav-arr2" onclick="closeMediaModal()" class="close-btn">❌</button>
         </div>
         <div id="modal-body">
-            </div>
+        </div>
     </div>
 </div>
 <div id="help-modal" class="help-overlay" onclick="if(event.target===this) fecharAjuda()">
@@ -141,7 +148,7 @@
             <div style="display: flex; align-items: center; gap: 8px;">
                 <h2 style="margin: 0; font-size: 18px; font-weight: 600;">❓Central de Ajuda</h2>
             </div>
-            <button class="nav-arr" onclick="fecharAjuda()">❌</button>
+            <button class="nav-arr2" onclick="fecharAjuda()">❌</button>
         </div>
         
         <div class="help-tabs">
