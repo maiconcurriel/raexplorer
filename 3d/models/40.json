@@ -1,0 +1,30 @@
+{
+  "objname": "Queratose Pilar",
+  "objsystem": [
+    "Tegumentar"
+  ],
+  "objdescription": "A queratose pilar é uma alteração da pele caracterizada pelo acúmulo de queratina nos folículos pilosos, formando pequenas elevações e áreas ásperas na superfície cutânea. O excesso de queratina pode obstruir a abertura dos folículos, dificultando a passagem normal dos pelos. No modelo, essa alteração é representada por áreas de acúmulo de queratina ao redor dos pelos e por mudanças na superfície da pele, permitindo visualizar a relação entre os folículos, a epiderme e as camadas mais profundas da pele.",
+  "linkedModels": [
+    {
+      "id": "15",
+      "label": "Anatomia das Camadas da Pele Humana"
+    }
+  ],
+  "resources": [],
+  "HairShaft+nisolar": {
+    "objname": "Pelo",
+    "description": "Estrutura que emerge dos folículos pilosos e se projeta para fora da superfície da pele. No modelo, os pelos atravessam a região onde ocorre o acúmulo de queratina, permitindo visualizar a relação entre o pelo e a obstrução do folículo."
+  },
+  "StratumCorneum+nisolar": {
+    "objname": "Estrato Córneo",
+    "description": "Camada mais superficial da epiderme, formada principalmente por células queratinizadas e responsável por parte da proteção da pele. No modelo, apresenta áreas associadas ao acúmulo de queratina, que se concentra ao redor das aberturas dos folículos pilosos."
+  },
+  "StratumSpinosum+nisolar": {
+    "objname": "Estrato Espinhoso",
+    "description": "Camada da epiderme localizada abaixo do estrato córneo, formada por células que contribuem para a resistência e a integridade da pele. No modelo, participa da representação das camadas epidérmicas envolvidas na região afetada pela queratose pilar."
+  },
+  "Dermis+nisolar": {
+    "objname": "Derme",
+    "description": "Camada localizada abaixo da epiderme, formada por tecido conjuntivo que fornece sustentação à pele e contém vasos sanguíneos, nervos e estruturas como os folículos pilosos. No modelo, permite visualizar a localização dos folículos e sua relação com as camadas mais superficiais da pele."
+  }
+}

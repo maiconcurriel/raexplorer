@@ -1,0 +1,50 @@
+{
+  "objname": "Ansiedade",
+  "objsystem": [
+    "Nervoso"
+  ],
+  "objdescription": "A ansiedade envolve a atividade integrada de diferentes regiões do cérebro responsáveis pela percepção de ameaças, processamento das emoções, memória e controle das respostas ao estresse. A amígdala participa da identificação de estímulos potencialmente ameaçadores, enquanto o córtex pré-frontal contribui para avaliar e regular essas respostas. O hipocampo relaciona informações ao contexto e às memórias, e o hipotálamo participa das respostas fisiológicas ao estresse. A ínsula e o córtex cingulado anterior também integram informações corporais, emocionais e cognitivas. Na animação, estímulos destacados em amarelo representam de forma didática a comunicação entre regiões envolvidas no processamento e na regulação da ansiedade.",
+  "linkedModels": [
+    {
+      "id": "2",
+      "label": "Cérebro"
+    }
+  ],
+  "resources": [],
+  "CerebrumL": {
+    "objname": "Hemisfério Cerebral Esquerdo",
+    "description": "Metade esquerda do cérebro, composta por diferentes áreas envolvidas no processamento de informações sensoriais, cognitivas e emocionais. No modelo, permite contextualizar a atividade das regiões cerebrais relacionadas ao processamento da ansiedade."
+  },
+  "CerebrumR": {
+    "objname": "Hemisfério Cerebral Direito",
+    "description": "Metade direita do cérebro, composta por diferentes áreas envolvidas no processamento de informações sensoriais, cognitivas e emocionais. No modelo, permite contextualizar a atividade das regiões cerebrais relacionadas ao processamento da ansiedade."
+  },
+  "CerebrumL2": {
+    "objname": "Córtex Pré-Frontal Esquerdo",
+    "description": "Região anterior do cérebro envolvida na avaliação de situações, tomada de decisões e regulação das emoções. Participa do controle das respostas geradas por outras regiões cerebrais envolvidas na ansiedade e na percepção de possíveis ameaças."
+  },
+  "CerebrumR2": {
+    "objname": "Córtex Pré-Frontal Direito",
+    "description": "Região anterior do cérebro envolvida no processamento cognitivo e emocional. Participa da avaliação de estímulos e da regulação das respostas relacionadas à ansiedade, interagindo com estruturas como a amígdala."
+  },
+  "Amygdala": {
+    "objname": "Amígdala",
+    "description": "Estrutura cerebral fundamental para o processamento das emoções e a identificação de estímulos potencialmente ameaçadores. Na ansiedade, participa da geração de respostas de alerta e medo e se comunica com outras regiões responsáveis pela regulação emocional e pelas respostas do organismo."
+  },
+  "Hippocampus": {
+    "objname": "Hipocampo",
+    "description": "Estrutura relacionada à formação e recuperação de memórias e à identificação do contexto em que os estímulos ocorrem. Na ansiedade, auxilia o cérebro a relacionar situações atuais com experiências anteriores e a determinar se determinado contexto pode representar uma ameaça."
+  },
+  "Hypothalamus": {
+    "objname": "Hipotálamo",
+    "description": "Região que participa do controle de diversas respostas fisiológicas do organismo. Diante de situações percebidas como ameaçadoras ou estressantes, contribui para ativar respostas autonômicas e hormonais associadas ao estresse e à ansiedade."
+  },
+  "Cingulategyrus": {
+    "objname": "Giro do cíngulo",
+    "description": "Participa do processamento das emoções, atenção, memória e tomada de decisões."
+  },
+  "Head+ninteract": {
+    "objname": "",
+    "description": ""
+  }
+}

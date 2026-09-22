@@ -26,7 +26,7 @@
                 <input type="text" id="objname" oninput="sincronizar()">
             </div>
             <div class="field-group">
-                <label>Sistema</label>
+                <label>Sistema (Separados por vírgula)</label>
                 <input type="text" id="objsystem" oninput="sincronizar()">
             </div>
             <div class="field-group">
@@ -40,7 +40,7 @@
                 <h2>Modelos Relacionados (Alternadores)</h2>
             </div>
             <div id="containerRelacionados"></div>
-            <button class="btn-add" style="background: var(--warning); color: white;" onclick="addModeloRelacionado()">+ Adicionar Modelo Relacionado</button>
+            <button class="btn-add" style="background: var(--warning, #f39c12); color: white;" onclick="addModeloRelacionado()">+ Adicionar Modelo Relacionado</button>
         </div>
 
         <div class="card">
@@ -56,9 +56,10 @@
                 <h2>Recursos Globais</h2>
             </div>
             <div id="containerRecursos"></div>
-            <button class="btn-add" style="background: var(--success)" onclick="addRecurso()">+ Adicionar Novo Recurso</button>
+            <button class="btn-add" style="background: var(--success, #2ecc71); color: white;" onclick="addRecurso()">+ Adicionar Novo Recurso</button>
         </div>
     </div>
-<script type="module" src="js/editor.js"></script>
+
+    <script type="module" src="js/editor.js"></script>
 </body>
 </html>

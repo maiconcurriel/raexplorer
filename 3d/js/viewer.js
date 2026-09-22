@@ -9,6 +9,7 @@ import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer
 import { SMAAPass } from 'three/addons/postprocessing/SMAAPass.js';
 import { SAOPass } from 'three/addons/postprocessing/SAOPass.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+import { OutlinePass } from 'three/addons/postprocessing/OutlinePass.js';
 
 const ColorBlindShader = {
     uniforms: { 
@@ -30,10 +31,8 @@ const ColorBlindShader = {
         void main() { 
             vec4 color = texture2D(tDiffuse, vUv); 
             
-            // 1. Aplica a matriz do filtro de cor
             vec3 corrected = uMatrix * color.rgb; 
             
-            // 2. Aplica correção Gamma (pow 1.0/2.2) para devolver o brilho/exposição correto
             corrected = pow(corrected, vec3(1.0 / 2.2));
             
             gl_FragColor = vec4(corrected, color.a); 
@@ -54,7 +53,7 @@ const COLOR_FILTERS = {
 };
 
 let scene, camera, renderer, controls, composer, colorPass, modelId;
-let saoPass, smaaPass;
+let saoPass, smaaPass, outlinePass;
 let qualidadeAtual = 'media';
 let models = [];
 let objectData = {};
@@ -169,7 +168,6 @@ function initThree() {
     labelRenderer.domElement.style.pointerEvents = 'none';
     container.appendChild(labelRenderer.domElement);
 
-    // 4. Luzes
     scene.add(new THREE.AmbientLight(0xffffff, 1.0));
     
     const mainLight = new THREE.DirectionalLight(0xffffff, 1.5);
@@ -180,7 +178,6 @@ function initThree() {
     rimLight.position.set(-5, -5, -5);
     scene.add(rimLight);
 
-    // 5. OrbitControls
     controls = new OrbitControls(camera, renderer.domElement);
     controls.enableDamping = true;
     controls.dampingFactor = 0.03;
@@ -192,11 +189,25 @@ function initThree() {
         RIGHT: THREE.MOUSE.PAN
     };
 
-    // 6. EffectComposer - Ordem correta dos Passes:
     composer = new EffectComposer(renderer);
     composer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
     composer.addPass(new RenderPass(scene, camera));
+
+    outlinePass = new OutlinePass(
+    new THREE.Vector2(window.innerWidth, window.innerHeight),
+    scene,
+    camera
+    );
+
+    // Configuração do efeito estilo raio-X (visível através de outras malhas)
+    outlinePass.edgeStrength = 4.0;      // Intensidade da borda
+    outlinePass.edgeGlow = 0.5;          // Suavização do contorno
+    outlinePass.edgeThickness = 1.0;     // Espessura da linha
+    outlinePass.visibleEdgeColor.set(0x007bff); // Cor quando VISÍVEL (Verde)
+    outlinePass.hiddenEdgeColor.set(0x007bff);  // Cor quando OCULTO ATRÁS DE OUTRAS MESHES (Verde)
+
+    composer.addPass(outlinePass);
 
     saoPass = new SAOPass(scene, camera, false, true);
 
@@ -213,7 +224,6 @@ function initThree() {
     smaaPass = new SMAAPass(width, height);
     composer.addPass(smaaPass);
 
-    // 7. Configurações Finais
     setColorBlindMode('normal');
     setDefaultCamera();
 
@@ -237,7 +247,6 @@ function load3DModel(id) {
                 if (obj.material) {
                     const maxAnisotropy = renderer.capabilities.getMaxAnisotropy();
                     
-                    // Se o material tiver textura de cor base
                     if (obj.material.map) {
                         obj.material.map.anisotropy = Math.min(
                         renderer.capabilities.getMaxAnisotropy(),
@@ -362,7 +371,6 @@ function renderizarCapitulos(data) {
             <div class="ch-item" onclick="focarParte('${key}')">
                 <div>
                     <div class="ch-name">${data[key].objname || key}</div>
-                    <div class="ch-desc">${data[key].description || ''}</div>
                 </div>
             </div>`).join('');   
 
@@ -371,16 +379,12 @@ function renderizarCapitulos(data) {
 
 // Evento global para focar em uma parte específica, aplicando realce (highlight), gerando o callout e atualizando a descrição.
 window.focarParte = (id, intersectionPoint = null) => {
-    // 1. MÁGICA DE RESOLUÇÃO DA CHAVE: Procura de forma cirúrgica no JSON
     const chaveJson = Object.keys(objectData).find(key => {
-        // Se a chave do JSON for exatamente igual ao ID que veio do clique ou do menu
         if (key === id) return true;
         
-        // Remove a tag "+nisolar" e limpa o texto para testar os nomes puros das meshes
         const chaveLimpa = key.replace('+nisolar', '');
         if (chaveLimpa === id) return true;
         
-        // Se a chave for composta por múltiplos "+", verifica se o ID atual está no meio deles
         const partes = chaveLimpa.split('+');
         return partes.includes(id);
     }) || id;
@@ -394,9 +398,6 @@ window.focarParte = (id, intersectionPoint = null) => {
 
     const ehIsolavel = !chaveJson.includes('+nisolar');
 
-    // 2. BUSCA DA MESH NA CENA: Descobre qual o nome físico real para dar o foco visual
-    // Se o clique veio do Explore (ID composto com "+"), pegamos a primeira mesh. 
-    // Se veio do clique físico, usamos o próprio ID que é o nome direto da malha!
     let nomeParaBuscar = id;
     if (id.includes('+')) {
         nomeParaBuscar = id.replace('+nisolar', '').split('+')[0];
@@ -409,7 +410,6 @@ window.focarParte = (id, intersectionPoint = null) => {
         }
     });
 
-    // Se não achou pelo método direto, faz uma busca secundária pelo grupo limpo (Garante compatibilidade total)
     if (!objTarget) {
         const malhasDoGrupo = chaveJson.replace('+nisolar', '').split('+');
         scene.traverse(child => {
@@ -428,14 +428,12 @@ window.focarParte = (id, intersectionPoint = null) => {
 
     const nomeDoObjeto = data.objname || chaveJson;
     
-    // 3. Gerenciamento do Callout
     if (isIsolatedMode) {
         removerCallout();
     } else {
-        criarCallout(objTarget, nomeDoObjeto, intersectionPoint); 
+        criarCallout(objTarget, nomeDoObjeto, intersectionPoint, chaveJson);
     }
     
-    // 4. Fluxo de Isolamento ou Destaque Lateral
     if (isIsolatedMode && selectedObjects.some(obj => obj.name === objTarget.name)) {
         renderButtons(chaveJson, data);
         return;
@@ -481,9 +479,19 @@ window.resetScene = () => {
 window.botaoGeral = () => {
     isIsolatedMode = false;
     clearHighlight();
-    renderizarDescricaoComAlternador();
+
+    scene.traverse(obj => {
+        if (obj.isMesh || obj.isSkinnedMesh) {
+            obj.visible = true;
+        }
+    });
+
+    //setDefaultCamera();
+
     removerCallout();
-}
+
+    renderizarDescricaoComAlternador();
+};
 
 // Define a posição e o alvo (target) padrão da câmera de visualização.
 function setDefaultCamera() {
@@ -538,17 +546,13 @@ window.alterarQualidade = function (qualidade) {
 
     const config = configuracoes[qualidade] || configuracoes.media;
 
-    // Pixel Ratio
     renderer.setPixelRatio(config.pixelRatio);
     composer.setPixelRatio(config.pixelRatio);
 
-    // SAO
     saoPass.enabled = config.sao;
 
-    // SMAA
     smaaPass.enabled = config.smaa;
 
-    // Atualiza anisotropia das texturas
     scene.traverse(obj => {
 
         if (obj.isMesh && obj.material) {
@@ -573,7 +577,6 @@ window.alterarQualidade = function (qualidade) {
         }
     });
 
-    // Redimensiona corretamente
     const container = document.getElementById('three-container');
 
     if (container) {
@@ -588,7 +591,6 @@ window.alterarQualidade = function (qualidade) {
         }
     }
 
-    // Atualiza botão
     const btn = document.getElementById('quality-btn');
 
     if (btn) {
@@ -659,15 +661,40 @@ window.shareModel = (btnEl) => {
 // Captura o clique do mouse no canvas, converte para coordenadas normalizadas e dispara o Raycaster para detectar a mesh clicada.
 function onPointerDown(event) {
     if (event.button !== 0) return;
+
     const rect = renderer.domElement.getBoundingClientRect();
+
     mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
     mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+
     raycaster.setFromCamera(mouse, camera);
-    const intersects = raycaster.intersectObjects(models, true).filter(i => i.object.visible);
-    
-    if (intersects.length > 0) {
-        const clicked = intersects[0].object;
-        const intersectionPoint = intersects[0].point;
+
+    const intersects = raycaster
+        .intersectObjects(models, true)
+        .filter(i => i.object.visible);
+
+    const intersecaoValida = intersects.find(i => {
+        const nomeMesh = i.object.name;
+
+        const chaveJson = Object.keys(objectData).find(key => {
+            const chaveLimpa = key
+                .replace('+nisolar', '')
+                .replace('+ninteract', '');
+
+            return chaveLimpa === nomeMesh ||
+                   chaveLimpa.split('+').includes(nomeMesh);
+        });
+
+        if (chaveJson && chaveJson.includes('+ninteract')) {
+            return false;
+        }
+
+        return true;
+    });
+
+    if (intersecaoValida) {
+        const clicked = intersecaoValida.object;
+        const intersectionPoint = intersecaoValida.point;
 
         window.focarParte(clicked.name, intersectionPoint);
     }
@@ -680,64 +707,25 @@ function highlightObject(chaveJson) {
     clearHighlight();
 
     const malhasDoGrupo = chaveJson.replace('+nisolar', '').split('+');
+    const objetosParaDestacar = [];
 
     scene.traverse(child => {
         if ((child.isMesh || child.isSkinnedMesh) && malhasDoGrupo.includes(child.name)) {
-            if (child.material) {
-                // Trata caso o objeto use um array de materiais
-                const materials = Array.isArray(child.material) ? child.material : [child.material];
-
-                materials.forEach((mat, index) => {
-                    // SÓ APLICA SE O MATERIAL TIVER A PROPRIEDADE EMISSIVE
-                    if (mat && mat.emissive) {
-                        const eraTransparente = mat.transparent;
-                        const opacidadeOriginal = mat.opacity;
-
-                        const clonedMat = mat.clone();
-
-                        // Salva o emissive original com fallback seguro
-                        if (!child.userData[`originalEmissive_${index}`]) {
-                            child.userData[`originalEmissive_${index}`] = new THREE.Color().copy(clonedMat.emissive);
-                        }
-
-                        clonedMat.emissive.setHex(0x00FF00);
-                        clonedMat.emissiveIntensity = 0.2;
-
-                        clonedMat.transparent = eraTransparente;
-                        clonedMat.opacity = opacidadeOriginal;
-
-                        if (Array.isArray(child.material)) {
-                            child.material[index] = clonedMat;
-                        } else {
-                            child.material = clonedMat;
-                        }
-                    }
-                });
-
-                selectedObjects.push(child);
-            }
+            objetosParaDestacar.push(child);
+            selectedObjects.push(child);
         }
     });
+
+    // Atribui as malhas encontradas diretamente ao OutlinePass
+    if (outlinePass) {
+        outlinePass.selectedObjects = objetosParaDestacar;
+    }
 }
 
-// Remove o efeito de brilho (emissive) da peça que estava selecionada anteriormente.
+// Remove o contorno e limpa a seleção
 function clearHighlight() {
-    if (Array.isArray(selectedObjects)) {
-        selectedObjects.forEach(obj => {
-            if (obj && obj.material) {
-                const materials = Array.isArray(obj.material) ? obj.material : [obj.material];
-
-                materials.forEach((mat, index) => {
-                    if (mat && mat.emissive) {
-                        const savedEmissive = obj.userData[`originalEmissive_${index}`];
-                        if (savedEmissive) {
-                            mat.emissive.copy(savedEmissive);
-                        }
-                        mat.emissiveIntensity = 1.0;
-                    }
-                });
-            }
-        });
+    if (outlinePass) {
+        outlinePass.selectedObjects = [];
     }
     selectedObjects = [];
 }
@@ -753,7 +741,6 @@ window.isolarObjeto = (id) => {
 
     const malhasParaExibir = chaveJson.split('+');
     
-    // Busca a primeira mesh só para ter referência técnica, se precisar
     const targetObj = scene.getObjectByName(malhasParaExibir[0]);
     if (!targetObj) return;
 
@@ -766,28 +753,30 @@ window.isolarObjeto = (id) => {
 
     const data = objectData[chaveJson];
     
-    // 1. Limpa o brilho de destaque do modo normal
     clearHighlight();
     
     isIsolatedMode = true;
 
-    // 2. Oculta tudo
     scene.traverse(obj => {
         if (obj.isMesh || obj.isSkinnedMesh) obj.visible = false;
     });
 
-    // 3. Exibe TODAS as peças do grupo e guarda elas no selectedObjects
+    // Limpa a lista antes de repopular
+    selectedObjects = [];
+
     scene.traverse(obj => {
         if (obj.isMesh || obj.isSkinnedMesh) {
             if (malhasParaExibir.includes(obj.name)) {
                 obj.visible = true;
-                selectedObjects.push(obj); // ✅ Popula a lista com todas as peças visíveis do grupo
+                selectedObjects.push(obj); // Popula a lista
             }
         }
     });
 
     renderButtons(chaveJson, data);
-    window.aproximarObjeto(targetObj.name);
+    
+    // MUDANÇA AQUI: Passamos a lista de objetos realmente visíveis para o zoom
+    window.aproximarObjeto(selectedObjects);
     removerCallout();
 };
 
@@ -795,14 +784,11 @@ window.isolarObjeto = (id) => {
 window.voltarDoIsolamento = (id) => {
     isIsolatedMode = false;
 
-    // 1. Restaura a visibilidade de tudo na cena
     scene.traverse(obj => {
         if ((obj.isMesh || obj.isSkinnedMesh) && visibilidadeAntesDoIsolamento[obj.uuid] !== undefined) {
             obj.visible = visibilidadeAntesDoIsolamento[obj.uuid];
         }
     });
-
-    setDefaultCamera();
 
     const chaveJson = Object.keys(objectData).find(key => {
         return key === id || key.split('+').includes(id);
@@ -811,7 +797,6 @@ window.voltarDoIsolamento = (id) => {
     const data = objectData[chaveJson];
     renderButtons(chaveJson, data);
 
-    // 2. ✅ Ajustado para ler o array selectedObjects
     if (selectedObjects.length > 0) {
         const principalMesh = selectedObjects[0];
         
@@ -822,10 +807,9 @@ window.voltarDoIsolamento = (id) => {
         const dataPeca = objectData[chavePeca];
         if (dataPeca) {
             const nomeDoObjeto = dataPeca.objname || principalMesh.name;
-            criarCallout(principalMesh, nomeDoObjeto);
+            criarCallout(principalMesh, nomeDoObjeto, null, chavePeca);
         }
         
-        // 3. Re-aplica o destaque verde em todas as peças do grupo agora que saiu do isolamento
         highlightObject(chaveJson);
     }
 };
@@ -835,7 +819,6 @@ function animate() {
     requestAnimationFrame(animate);
     const delta = clock.getDelta();
     
-    // 1. Atualiza as animações do esqueleto/objeto
     if (mixer) {
         if (isProgressBarDragging) {
             mixer.update(0);
@@ -849,23 +832,19 @@ function animate() {
         }
     }
     
-    // 2. Atualiza a câmera primeiro
     if (controls) controls.update();
 
-    // 3. Atualiza a posição do Callout
     if (objetoAlvoCallout) {
         objetoAlvoCallout.updateMatrixWorld(true);
         atualizarPosicaoCallout();
     }
     
-    // 4. ✅ CORREÇÃO AQUI: Renderiza através do Composer para aplicar o Shader de Daltonismo!
     if (composer) {
         composer.render();
     } else {
         renderer.render(scene, camera);
     }
     
-    // 5. Desenha as plaquinhas HTML CSS2D por cima
     if (labelRenderer) labelRenderer.render(scene, camera);
 }
 
@@ -885,7 +864,6 @@ function renderizarRecursosGlobais(data) {
 
     let html = '';
 
-    // Modelos relacionados
     const relacionados = data.linkedModels ||
         (data.linkedModel ? [data.linkedModel] : []);
 
@@ -914,7 +892,6 @@ function renderizarRecursosGlobais(data) {
     `;
 });
 
-    // Recursos normais
     if (data.resources) {
         html += data.resources.map(res => {
             const config = RESOURCE_CONFIG[res.type] || RESOURCE_CONFIG.link;
@@ -934,7 +911,6 @@ function renderizarRecursosGlobais(data) {
     container.innerHTML = html;
 }
 
-// Abre e injeta o player de mídia adequado (Iframe de vídeo, imagem ou áudio) dentro da modal interna de recursos.
 function fazerDownload(url, nomeArquivo) {
     const a = document.createElement('a');
     a.href = url;
@@ -957,7 +933,6 @@ window.abrirMedia = (res) => {
     const isExternal = res.url.startsWith('http');
     const finalPath = isExternal ? res.url : `models/${res.url}`;
 
-    // Configura a visibilidade e ação do botão de download
     if (downloadBtn) {
         if (res.type === 'image' || res.type === 'audio') {
             downloadBtn.style.display = 'inline-block';
@@ -1088,7 +1063,6 @@ window.addEventListener('resize', () => {
     renderer.setSize(width, height);
     composer.setSize(width, height);
     
-    // 👈 Garante que o pixel ratio se mantenha preciso no resize
     composer.setPixelRatio(Math.min(window.devicePixelRatio, 2)); 
 
     if (labelRenderer) labelRenderer.setSize(width, height);
@@ -1096,17 +1070,14 @@ window.addEventListener('resize', () => {
 
 // Alterna a visibilidade (visible = true/false) de uma sub-mesh específica na cena tridimensional.
 window.toggleVisibility = (id, action) => {
-    // 1. Resolve a chave completa do JSON (ex: se id for "peça1", encontra "peça1+peça2")
     const chaveJson = Object.keys(objectData).find(key => {
         if (key === id) return true;
         const chaveLimpa = key.replace('+nisolar', '');
         return chaveLimpa === id || chaveLimpa.split('+').includes(id);
     }) || id;
 
-    // 2. Extrai os nomes de todas as malhas pertencentes ao grupo
     const malhasDoGrupo = chaveJson.replace('+nisolar', '').split('+');
 
-    // 3. Varre a cena e altera a visibilidade de TODAS as peças do grupo
     scene.traverse(obj => {
         if ((obj.isMesh || obj.isSkinnedMesh) && malhasDoGrupo.includes(obj.name)) {
             obj.visible = (action === 'show');
@@ -1117,14 +1088,12 @@ window.toggleVisibility = (id, action) => {
         removerCallout();
     }
 
-    // 4. Renderiza os botões usando a chave resolvida do JSON
     const data = objectData[chaveJson];
     renderButtons(chaveJson, data);
 };
 
 // Constrói e injeta o bloco de texto descritivo do objeto focado junto com seus botões de ação contextual (Isolar/Esconder/Mostrar).
 function renderButtons(id, data) {
-    // 1. Remove as tags "+nisolar" e quebras de "+" para descobrir o nome físico da mesh no 3D
     const malhasDoGrupo = id.replace('+nisolar', '').split('+');
     
     let isVisible = true;
@@ -1132,27 +1101,24 @@ function renderButtons(id, data) {
         if (obj.isMesh && obj.name === malhasDoGrupo[0]) isVisible = obj.visible;
     });
 
-    // Checa se este objeto possui a tag que proíbe o isolamento
     const naoPodeIsolar = id.includes('+nisolar');
 
     let botoesHtml = "";
-    let colunasGrid = "1fr 1fr 1fr"; // Padrão com 3 botões
+    let colunasGrid = "1fr 1fr 1fr";
 
     if (isIsolatedMode) {
         botoesHtml = `
             <button class="dp-act" style="background:#555; color:#fff;" onclick="botaoGeral()">Geral</button>
             <button class="dp-act" style="background:#f1c40f; color:#000;" onclick="voltarDoIsolamento('${id}')">Voltar</button>
         `;
-        colunasGrid = "1fr 1fr"; // Modo isolado usa 2 botões
+        colunasGrid = "1fr 1fr";
     } else {
         if (naoPodeIsolar) {
-            // MÁGICA: Se não for isolável, exibe APENAS o botão Geral ocupando 100% da largura
             botoesHtml = `
                 <button class="dp-act" style="background:#555; color:#fff;" onclick="botaoGeral()">Geral</button>
             `;
             colunasGrid = "1fr";
         } else {
-            // Comportamento completo padrão para objetos interativos normais
             const hideShowBtn = isVisible 
                 ? `<button class="dp-act btn-hide" onclick="toggleVisibility('${id}', 'hide')">Esconder</button>`
                 : `<button class="dp-act btn-show" onclick="toggleVisibility('${id}', 'show')">Mostrar</button>`;
@@ -1234,7 +1200,7 @@ window.aproximarObjeto = (id) => {
 
     const maxDim = Math.max(size.x, size.y, size.z);
     const fov = camera.fov * (Math.PI / 180);
-    let cameraZ = Math.abs(maxDim / 2 / Math.tan(fov / 2)) * 1.5;
+    let cameraZ = Math.abs(maxDim / 0.25 / Math.tan(fov / 2)) * 1.5;
 
     controls.target.copy(center);
     camera.position.set(center.x, center.y, center.z + cameraZ);
@@ -1342,54 +1308,73 @@ let pontoLocalClique = null;
 let vetorDeslocamentoEtiqueta = null;
 
 // Cria e posiciona no espaço 3D a bolinha indicadora, a linha conectora e a etiqueta flutuante HTML (CSS2D) no ponto especificado.
-function criarCallout(object, texto, clickPoint = null) {
+function criarCallout(object, texto, clickPoint = null, chaveJson = null) {
     removerCallout();
 
     objetoAlvoCallout = object;
     
-    // Ponto base do clique
     const box = new THREE.Box3().setFromObject(object);
     const pontoMundoBase = clickPoint ? clickPoint.clone() : box.getCenter(new THREE.Vector3());
     pontoLocalClique = object.worldToLocal(pontoMundoBase.clone());
 
-    // 1. Vetor de Deslocamento Inteligente (Projeta para fora do objeto na perspectiva da câmera)
     const direcaoCamera = new THREE.Vector3();
     camera.getWorldDirection(direcaoCamera);
     
-    // Calcula um vetor perpendicular à visão da câmera (jogando a etiqueta levemente para a direita e para cima)
     const vetorCima = new THREE.Vector3(0, 1, 0);
     const vetorDireita = new THREE.Vector3().crossVectors(direcaoCamera, vetorCima).normalize();
     
-    // Offset fixo no mundo 3D (ajuste os valores 0.15 e 0.2 de acordo com a escala padrão do seu modelo)
     vetorDeslocamentoEtiqueta = vetorDireita.clone().multiplyScalar(0.25).add(vetorCima.clone().multiplyScalar(0.2));
     
     const labelPosition = pontoMundoBase.clone().add(vetorDeslocamentoEtiqueta);
 
-    // 2. Bolinha Indicadora com tamanho fixo e controlado
     const dotGeo = new THREE.SphereGeometry(0.008, 16, 16);
-    const dotMat = new THREE.MeshBasicMaterial({ color: 0x00ffff, depthTest: false }); // depthTest: false impede que ela fique escondida dentro da malha
+    const dotMat = new THREE.MeshBasicMaterial({ color: 0x007bff, depthTest: false });
     labelDot = new THREE.Mesh(dotGeo, dotMat);
     labelDot.renderOrder = 999;
     labelDot.position.copy(pontoMundoBase);
     scene.add(labelDot);
 
-    // 3. Linha Conectora Nativa (THREE.Line é imune a distorções de escala)
     const lineGeo = new THREE.BufferGeometry().setFromPoints([pontoMundoBase, labelPosition]);
     const lineMat = new THREE.LineBasicMaterial({ 
-        color: 0x00ffff, 
-        linewidth: 2, // Espessura uniforme
+        color: 0x007bff, 
+        linewidth: 2,
         depthTest: false 
     });
     labelLine = new THREE.Line(lineGeo, lineMat);
     labelLine.renderOrder = 998;
     scene.add(labelLine);
 
-    // 4. Etiqueta HTML CSS2D
     const div = document.createElement('div');
     div.className = 'callout-label';
+    const podeIsolar = chaveJson && !chaveJson.includes('+nisolar');
+
     div.innerHTML = `
         <div class="callout-arrow"></div>
-        <div class="callout-content">${texto}</div>
+
+        <div class="callout-content">
+            <div class="callout-title">${texto}</div>
+
+            ${chaveJson ? `
+                <div class="callout-actions">
+
+                    ${podeIsolar ? `
+                    <button
+                        class="callout-btn callout-isolate"
+                        onclick="event.stopPropagation(); window.isolarObjeto('${chaveJson}')">
+                        Isolar
+                    </button>
+                ` : ''}
+
+                <button
+                    class="callout-btn callout-hide"
+                    onclick="event.stopPropagation(); window.toggleVisibility('${chaveJson}', 'hide')">
+                    Esconder
+                </button>
+
+                </div>
+            ` : ''}
+
+        </div>
     `;
 
     label2DObject = new CSS2DObject(div);
@@ -1534,9 +1519,10 @@ window.switchHelpTab = switchHelpTab;
 // Função auxiliar para encontrar a chave certa no JSON ignorando a tag de isolamento
 function obterChaveJson(id) {
     return Object.keys(objectData).find(key => {
-        // Remove a tag "+nisolar" temporariamente para fazer a comparação de nomes
-        const chaveLimpa = key.replace('+nisolar', '');
-        
+        const chaveLimpa = key
+            .replace('+nisolar', '')
+            .replace('+ninteract', '');
+
         return chaveLimpa === id || chaveLimpa.split('+').includes(id);
     }) || id;
 }

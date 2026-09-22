@@ -1,0 +1,104 @@
+{
+  "objname": "Elevação do braço",
+  "objsystem": [
+    "Muscular",
+    "Esquelético"
+  ],
+  "objdescription": "A elevação do braço é um movimento coordenado que envolve a articulação do ombro, a escápula e a ação conjunta de diferentes músculos. O deltoide exerce papel importante na elevação do úmero, enquanto o supraespinal auxilia no início do movimento e na estabilização da articulação. Ao mesmo tempo, o trapézio e o serrátil anterior atuam sobre a escápula, promovendo sua rotação superior e permitindo que o braço continue sendo elevado acima da cabeça. Essa ação coordenada entre úmero e escápula é fundamental para ampliar a amplitude do movimento e manter a estabilidade do ombro. Na animação, o braço é elevado enquanto os músculos envolvidos são destacados, permitindo observar sua participação e o esforço muscular necessário durante o movimento.",
+  "linkedModels": [
+    {
+      "id": "3",
+      "label": "Sistema Esquelético Masculino"
+    },
+    {
+      "id": "28",
+      "label": "Sistema Esquelético Feminino"
+    },
+    {
+      "id": "17",
+      "label": "Sistema Muscular Masculino"
+    },
+    {
+      "id": "27",
+      "label": "Sistema Muscular Feminino"
+    }
+  ],
+  "resources": [],
+  "Trapezius": {
+    "objname": "Trapézio",
+    "description": "Músculo amplo da região posterior do pescoço e do tronco que exerce papel importante no movimento da escápula. Durante a elevação do braço, suas fibras superiores e inferiores contribuem para a rotação superior da escápula, atuando em conjunto com o serrátil anterior para permitir que o braço alcance posições mais elevadas."
+  },
+  "SupraspinatusL": {
+    "objname": "Supraespinal",
+    "description": "Músculo do manguito rotador que auxilia no início da elevação do braço e atua em conjunto com o deltoide. Também contribui para estabilizar a cabeça do úmero na articulação do ombro durante o movimento, ajudando a manter o alinhamento articular enquanto o braço é elevado."
+  },
+  "SerratusanteriorL003": {
+    "objname": "Serrátil Anterior",
+    "description": "Músculo localizado na parede lateral do tórax e inserido na escápula. Durante a elevação do braço, atua em conjunto com o trapézio para promover a rotação superior da escápula e mantê-la estabilizada contra o tórax, contribuindo para que o braço possa ser elevado acima da cabeça."
+  },
+  "SerratusanteriorL021": {
+    "objname": "Serrátil Anterior",
+    "description": "Músculo localizado na parede lateral do tórax e inserido na escápula. Durante a elevação do braço, atua em conjunto com o trapézio para promover a rotação superior da escápula e mantê-la estabilizada contra o tórax, contribuindo para que o braço possa ser elevado acima da cabeça."
+  },
+  "SerratusanteriorL018": {
+    "objname": "Serrátil Anterior",
+    "description": "Músculo localizado na parede lateral do tórax e inserido na escápula. Durante a elevação do braço, atua em conjunto com o trapézio para promover a rotação superior da escápula e mantê-la estabilizada contra o tórax, contribuindo para que o braço possa ser elevado acima da cabeça."
+  },
+  "SerratusanteriorL016": {
+    "objname": "Serrátil Anterior",
+    "description": "Músculo localizado na parede lateral do tórax e inserido na escápula. Durante a elevação do braço, atua em conjunto com o trapézio para promover a rotação superior da escápula e mantê-la estabilizada contra o tórax, contribuindo para que o braço possa ser elevado acima da cabeça."
+  },
+  "SerratusanteriorL014": {
+    "objname": "Serrátil Anterior",
+    "description": "Músculo localizado na parede lateral do tórax e inserido na escápula. Durante a elevação do braço, atua em conjunto com o trapézio para promover a rotação superior da escápula e mantê-la estabilizada contra o tórax, contribuindo para que o braço possa ser elevado acima da cabeça."
+  },
+  "SerratusanteriorL011": {
+    "objname": "Serrátil Anterior",
+    "description": "Músculo localizado na parede lateral do tórax e inserido na escápula. Durante a elevação do braço, atua em conjunto com o trapézio para promover a rotação superior da escápula e mantê-la estabilizada contra o tórax, contribuindo para que o braço possa ser elevado acima da cabeça."
+  },
+  "SerratusanteriorL009": {
+    "objname": "Serrátil Anterior",
+    "description": "Músculo localizado na parede lateral do tórax e inserido na escápula. Durante a elevação do braço, atua em conjunto com o trapézio para promover a rotação superior da escápula e mantê-la estabilizada contra o tórax, contribuindo para que o braço possa ser elevado acima da cabeça."
+  },
+  "SerratusanteriorL006": {
+    "objname": "Serrátil Anterior",
+    "description": "Músculo localizado na parede lateral do tórax e inserido na escápula. Durante a elevação do braço, atua em conjunto com o trapézio para promover a rotação superior da escápula e mantê-la estabilizada contra o tórax, contribuindo para que o braço possa ser elevado acima da cabeça."
+  },
+  "SerratusanteriorL005": {
+    "objname": "Serrátil Anterior",
+    "description": "Músculo localizado na parede lateral do tórax e inserido na escápula. Durante a elevação do braço, atua em conjunto com o trapézio para promover a rotação superior da escápula e mantê-la estabilizada contra o tórax, contribuindo para que o braço possa ser elevado acima da cabeça."
+  },
+  "Deltoidposteriorhead": {
+    "objname": "Deltoide Posterior",
+    "description": "Porção posterior do músculo deltoide. Participa principalmente da extensão e rotação externa do braço e pode contribuir para sua estabilização durante a elevação. Sua atuação varia conforme a direção e o plano em que o braço está sendo movimentado."
+  },
+  "DeltoidmiddleheadL": {
+    "objname": "Deltoide Médio",
+    "description": "Porção do deltoide com papel importante na abdução e elevação do braço. Após o início do movimento, exerce força para elevar o úmero lateralmente, trabalhando em conjunto com o supraespinal e com os músculos que movimentam e estabilizam a escápula."
+  },
+  "DeltoidanteriorheadL": {
+    "objname": "Deltoide Anterior",
+    "description": "Porção anterior do músculo deltoide que participa principalmente da flexão e rotação interna do braço. Contribui de forma importante para a elevação quando o braço é levantado anteriormente, trabalhando em conjunto com outras porções do deltoide e músculos estabilizadores do ombro."
+  },
+  "UlnorcarpaljointL": {
+    "objname": "Articulação Ulnocarpal",
+    "description": "Região articular do punho que participa dos movimentos e do posicionamento da mão. Não exerce papel principal na elevação do ombro, mas acompanha o deslocamento do membro superior durante a animação."
+  },
+  "HumerusL": {
+    "objname": "Úmero",
+    "description": "Osso do braço que se articula com a escápula para formar a principal articulação do ombro. Durante a elevação, movimenta-se em relação à escápula pela ação dos músculos do ombro, enquanto sua cabeça é mantida estabilizada na articulação."
+  },
+  "ScapulaL": {
+    "objname": "Escápula",
+    "description": "Osso localizado na região posterior do tórax que serve de base para diversos músculos do ombro. Durante a elevação do braço, realiza rotação superior e outros ajustes de posição, acompanhando o movimento do úmero e contribuindo para ampliar a elevação e manter a estabilidade do ombro."
+  },
+  "AcromioclavicularligamentL014": {
+    "objname": "Ligamento Acromioclavicular",
+    "description": "Ligamento que reforça a articulação entre o acrômio da escápula e a clavícula. Durante a elevação do braço, contribui para a estabilidade da articulação acromioclavicular enquanto a escápula modifica sua posição e realiza rotação superior."
+  }
+  ,
+  "AcromioclavicularligamentR004+ninteract": {
+    "objname": "",
+    "description": ""
+  }
+}

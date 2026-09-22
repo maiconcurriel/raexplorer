@@ -1,0 +1,38 @@
+{
+  "objname": "Via de Recompensa",
+  "objsystem": [
+    "Nervoso"
+  ],
+  "objdescription": "A via de recompensa é um conjunto de circuitos cerebrais relacionado à motivação, ao aprendizado e ao reforço de comportamentos associados a experiências consideradas recompensadoras. A comunicação entre regiões do mesencéfalo e estruturas como o núcleo accumbens envolve a ação da dopamina e contribui para a sensação de recompensa e para a motivação de repetir determinados comportamentos. Outras regiões, como o córtex pré-frontal, a amígdala e o hipocampo, participam da avaliação das consequências, das emoções e da formação de memórias associadas às experiências. Esse sistema pode ser ativado por recompensas naturais e também pode ser intensamente afetado por substâncias capazes de alterar a sinalização cerebral, desempenhando papel importante nos mecanismos relacionados à dependência.",
+  "linkedModels": [
+    {
+      "id": "2",
+      "label": "Cérebro"
+    }
+  ],
+  "resources": [],
+  "CortexPreFrontal": {
+    "objname": "Córtex Pré-Frontal",
+    "description": "Região cerebral envolvida no planejamento, tomada de decisões, atenção e controle do comportamento. Na via de recompensa, participa da avaliação das consequências das ações e da regulação de comportamentos motivados pela busca de recompensas."
+  },
+  "Amygdala": {
+    "objname": "Amígdala",
+    "description": "Estrutura envolvida no processamento das emoções e na atribuição de significado emocional aos estímulos. Na via de recompensa, contribui para associar experiências e estímulos às respostas emocionais, influenciando comportamentos de aproximação ou evitação."
+  },
+  "Hippocampus": {
+    "objname": "Hipocampo",
+    "description": "Estrutura fundamental para a formação e recuperação de memórias. Nos circuitos de recompensa, contribui para registrar o contexto e as experiências relacionadas a uma recompensa, permitindo que situações e estímulos sejam posteriormente reconhecidos e associados a essas experiências."
+  },
+  "Mesencefalo": {
+    "objname": "Mesencéfalo",
+    "description": "Região do tronco encefálico que contém grupos de neurônios importantes para os circuitos de recompensa. Entre eles estão neurônios dopaminérgicos da área tegmental ventral, que enviam sinais para estruturas como o núcleo accumbens e o córtex pré-frontal, participando da motivação, aprendizagem e reforço."
+  },
+  "NucleusAccumbens": {
+    "objname": "Núcleo Accumbens",
+    "description": "Estrutura cerebral com papel importante no processamento da recompensa, motivação e reforço. Recebe sinais dopaminérgicos provenientes do mesencéfalo e integra essas informações com outros circuitos cerebrais, contribuindo para a aprendizagem e para a repetição de comportamentos associados a recompensas."
+  },
+  "Head+ninteract": {
+    "objname": "",
+    "description": ""
+  }
+}

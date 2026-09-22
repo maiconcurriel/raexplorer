@@ -1,0 +1,275 @@
+{
+  "objname": "Neurotransmissores",
+  "objsystem": [
+    "Nervoso",
+    "Célula"
+  ],
+  "objdescription": "Os neurotransmissores são substâncias responsáveis pela comunicação entre neurônios, permitindo a transmissão de informações de uma célula nervosa para outra. Quando o impulso nervoso chega à extremidade do axônio, vesículas liberam neurotransmissores no espaço entre os neurônios. Essas substâncias atravessam esse espaço e se ligam a receptores presentes na membrana do neurônio seguinte, desencadeando uma resposta. O modelo representa esse processo de comunicação, mostrando a liberação dos neurotransmissores, sua passagem até o neurônio seguinte e a interação com seus receptores.",
+  "linkedModels": [
+    {
+      "id": "2",
+      "label": "Cérebro"
+    },
+    {
+      "id": "21",
+      "label": "Sistema Nervoso"
+    },
+    {
+      "id": "1",
+      "label": "Impulso Nervoso"
+    }
+  ],
+  "resources": [],
+  "dentrito004": {
+    "objname": "Dentrito",
+    "description": "Prolongamento do neurônio que recebe sinais de outras células nervosas. No modelo, representa a região do neurônio que recebe a informação transmitida pelos neurotransmissores."
+  },
+  "dentrito005": {
+    "objname": "Dentrito",
+    "description": "Prolongamento do neurônio que recebe sinais de outras células nervosas. No modelo, representa a região do neurônio que recebe a informação transmitida pelos neurotransmissores."
+  },
+  "dentrito006": {
+    "objname": "Dentrito",
+    "description": "Prolongamento do neurônio que recebe sinais de outras células nervosas. No modelo, representa a região do neurônio que recebe a informação transmitida pelos neurotransmissores."
+  },
+  "dentrito003+nisolar": {
+    "objname": "Dentrito",
+    "description": "Prolongamento do neurônio que recebe sinais de outras células nervosas. No modelo, representa a região do neurônio que recebe a informação transmitida pelos neurotransmissores."
+  },
+  "axonio": {
+    "objname": "Axônio",
+    "description": "Prolongamento responsável pela condução do impulso nervoso até a extremidade do neurônio. No modelo, representa a região por onde o impulso chega ao local de liberação dos neurotransmissores."
+  },
+  "axonio004": {
+    "objname": "Axônio",
+    "description": "Prolongamento responsável pela condução do impulso nervoso até a extremidade do neurônio. No modelo, representa a região por onde o impulso chega ao local de liberação dos neurotransmissores."
+  },
+  "axonio005": {
+    "objname": "Axônio",
+    "description": "Prolongamento responsável pela condução do impulso nervoso até a extremidade do neurônio. No modelo, representa a região por onde o impulso chega ao local de liberação dos neurotransmissores."
+  },
+  "vesiculaB": {
+    "objname": "Vesícula",
+    "description": "Pequena estrutura localizada na extremidade do axônio que armazena neurotransmissores. Quando o impulso nervoso chega à região, as vesículas liberam os neurotransmissores para que a informação seja transmitida ao neurônio seguinte."
+  },
+  "vesiculaB001": {
+    "objname": "Vesícula",
+    "description": "Pequena estrutura localizada na extremidade do axônio que armazena neurotransmissores. Quando o impulso nervoso chega à região, as vesículas liberam os neurotransmissores para que a informação seja transmitida ao neurônio seguinte."
+  },
+  "vesiculaA": {
+    "objname": "Vesícula",
+    "description": "Pequena estrutura localizada na extremidade do axônio que armazena neurotransmissores. Quando o impulso nervoso chega à região, as vesículas liberam os neurotransmissores para que a informação seja transmitida ao neurônio seguinte."
+  },
+  "vesiculaA001": {
+    "objname": "Vesícula",
+    "description": "Pequena estrutura localizada na extremidade do axônio que armazena neurotransmissores. Quando o impulso nervoso chega à região, as vesículas liberam os neurotransmissores para que a informação seja transmitida ao neurônio seguinte."
+  },
+  "vesiculaA002": {
+    "objname": "Vesícula",
+    "description": "Pequena estrutura localizada na extremidade do axônio que armazena neurotransmissores. Quando o impulso nervoso chega à região, as vesículas liberam os neurotransmissores para que a informação seja transmitida ao neurônio seguinte."
+  },
+  "vesiculaA003": {
+    "objname": "Vesícula",
+    "description": "Pequena estrutura localizada na extremidade do axônio que armazena neurotransmissores. Quando o impulso nervoso chega à região, as vesículas liberam os neurotransmissores para que a informação seja transmitida ao neurônio seguinte."
+  },
+  "vesiculaC": {
+    "objname": "Vesícula",
+    "description": "Pequena estrutura localizada na extremidade do axônio que armazena neurotransmissores. Quando o impulso nervoso chega à região, as vesículas liberam os neurotransmissores para que a informação seja transmitida ao neurônio seguinte."
+  },
+  "vesiculaC001": {
+    "objname": "Vesícula",
+    "description": "Pequena estrutura localizada na extremidade do axônio que armazena neurotransmissores. Quando o impulso nervoso chega à região, as vesículas liberam os neurotransmissores para que a informação seja transmitida ao neurônio seguinte."
+  },
+  "recpneuro": {
+    "objname": "Receptor neurotransmissor",
+    "description": "Proteína presente na membrana do neurônio que recebe a ação dos neurotransmissores. A ligação entre o neurotransmissor e seu receptor permite que o sinal químico seja reconhecido e desencadeie uma resposta no neurônio seguinte."
+  },
+  "recpneuro001": {
+    "objname": "Receptor neurotransmissor",
+    "description": "Proteína presente na membrana do neurônio que recebe a ação dos neurotransmissores. A ligação entre o neurotransmissor e seu receptor permite que o sinal químico seja reconhecido e desencadeie uma resposta no neurônio seguinte."
+  },
+  "recpneuro002": {
+    "objname": "Receptor neurotransmissor",
+    "description": "Proteína presente na membrana do neurônio que recebe a ação dos neurotransmissores. A ligação entre o neurotransmissor e seu receptor permite que o sinal químico seja reconhecido e desencadeie uma resposta no neurônio seguinte."
+  },
+  "recpneuro003": {
+    "objname": "Receptor neurotransmissor",
+    "description": "Proteína presente na membrana do neurônio que recebe a ação dos neurotransmissores. A ligação entre o neurotransmissor e seu receptor permite que o sinal químico seja reconhecido e desencadeie uma resposta no neurônio seguinte."
+  },
+  "recpneuro004": {
+    "objname": "Receptor neurotransmissor",
+    "description": "Proteína presente na membrana do neurônio que recebe a ação dos neurotransmissores. A ligação entre o neurotransmissor e seu receptor permite que o sinal químico seja reconhecido e desencadeie uma resposta no neurônio seguinte."
+  },
+  "recpneuro005": {
+    "objname": "Receptor neurotransmissor",
+    "description": "Proteína presente na membrana do neurônio que recebe a ação dos neurotransmissores. A ligação entre o neurotransmissor e seu receptor permite que o sinal químico seja reconhecido e desencadeie uma resposta no neurônio seguinte."
+  },
+  "recpneuro006": {
+    "objname": "Receptor neurotransmissor",
+    "description": "Proteína presente na membrana do neurônio que recebe a ação dos neurotransmissores. A ligação entre o neurotransmissor e seu receptor permite que o sinal químico seja reconhecido e desencadeie uma resposta no neurônio seguinte."
+  },
+  "recpneuro007": {
+    "objname": "Receptor neurotransmissor",
+    "description": "Proteína presente na membrana do neurônio que recebe a ação dos neurotransmissores. A ligação entre o neurotransmissor e seu receptor permite que o sinal químico seja reconhecido e desencadeie uma resposta no neurônio seguinte."
+  },
+  "recpneuro008": {
+    "objname": "Receptor neurotransmissor",
+    "description": "Proteína presente na membrana do neurônio que recebe a ação dos neurotransmissores. A ligação entre o neurotransmissor e seu receptor permite que o sinal químico seja reconhecido e desencadeie uma resposta no neurônio seguinte."
+  },
+  "recpneuro009": {
+    "objname": "Receptor neurotransmissor",
+    "description": "Proteína presente na membrana do neurônio que recebe a ação dos neurotransmissores. A ligação entre o neurotransmissor e seu receptor permite que o sinal químico seja reconhecido e desencadeie uma resposta no neurônio seguinte."
+  },
+  "recpneuro010": {
+    "objname": "Receptor neurotransmissor",
+    "description": "Proteína presente na membrana do neurônio que recebe a ação dos neurotransmissores. A ligação entre o neurotransmissor e seu receptor permite que o sinal químico seja reconhecido e desencadeie uma resposta no neurônio seguinte."
+  },
+  "recpneuro011": {
+    "objname": "Receptor neurotransmissor",
+    "description": "Proteína presente na membrana do neurônio que recebe a ação dos neurotransmissores. A ligação entre o neurotransmissor e seu receptor permite que o sinal químico seja reconhecido e desencadeie uma resposta no neurônio seguinte."
+  },
+  "recpneuro012": {
+    "objname": "Receptor neurotransmissor",
+    "description": "Proteína presente na membrana do neurônio que recebe a ação dos neurotransmissores. A ligação entre o neurotransmissor e seu receptor permite que o sinal químico seja reconhecido e desencadeie uma resposta no neurônio seguinte."
+  },
+  "recpneuro013": {
+    "objname": "Receptor neurotransmissor",
+    "description": "Proteína presente na membrana do neurônio que recebe a ação dos neurotransmissores. A ligação entre o neurotransmissor e seu receptor permite que o sinal químico seja reconhecido e desencadeie uma resposta no neurônio seguinte."
+  },
+  "recpneuro014": {
+    "objname": "Receptor neurotransmissor",
+    "description": "Proteína presente na membrana do neurônio que recebe a ação dos neurotransmissores. A ligação entre o neurotransmissor e seu receptor permite que o sinal químico seja reconhecido e desencadeie uma resposta no neurônio seguinte."
+  },
+  "recpneuro015": {
+    "objname": "Receptor neurotransmissor",
+    "description": "Proteína presente na membrana do neurônio que recebe a ação dos neurotransmissores. A ligação entre o neurotransmissor e seu receptor permite que o sinal químico seja reconhecido e desencadeie uma resposta no neurônio seguinte."
+  },
+  "recpneuro016": {
+    "objname": "Receptor neurotransmissor",
+    "description": "Proteína presente na membrana do neurônio que recebe a ação dos neurotransmissores. A ligação entre o neurotransmissor e seu receptor permite que o sinal químico seja reconhecido e desencadeie uma resposta no neurônio seguinte."
+  },
+  "recpneuro017": {
+    "objname": "Receptor neurotransmissor",
+    "description": "Proteína presente na membrana do neurônio que recebe a ação dos neurotransmissores. A ligação entre o neurotransmissor e seu receptor permite que o sinal químico seja reconhecido e desencadeie uma resposta no neurônio seguinte."
+  },
+  "recpneuro018": {
+    "objname": "Receptor neurotransmissor",
+    "description": "Proteína presente na membrana do neurônio que recebe a ação dos neurotransmissores. A ligação entre o neurotransmissor e seu receptor permite que o sinal químico seja reconhecido e desencadeie uma resposta no neurônio seguinte."
+  },
+  "recpneuro019": {
+    "objname": "Receptor neurotransmissor",
+    "description": "Proteína presente na membrana do neurônio que recebe a ação dos neurotransmissores. A ligação entre o neurotransmissor e seu receptor permite que o sinal químico seja reconhecido e desencadeie uma resposta no neurônio seguinte."
+  },
+  "recpneuro020": {
+    "objname": "Receptor neurotransmissor",
+    "description": "Proteína presente na membrana do neurônio que recebe a ação dos neurotransmissores. A ligação entre o neurotransmissor e seu receptor permite que o sinal químico seja reconhecido e desencadeie uma resposta no neurônio seguinte."
+  },
+  "recpneuro021": {
+    "objname": "Receptor neurotransmissor",
+    "description": "Proteína presente na membrana do neurônio que recebe a ação dos neurotransmissores. A ligação entre o neurotransmissor e seu receptor permite que o sinal químico seja reconhecido e desencadeie uma resposta no neurônio seguinte."
+  },
+  "recpneuro022": {
+    "objname": "Receptor neurotransmissor",
+    "description": "Proteína presente na membrana do neurônio que recebe a ação dos neurotransmissores. A ligação entre o neurotransmissor e seu receptor permite que o sinal químico seja reconhecido e desencadeie uma resposta no neurônio seguinte."
+  },
+  "recpneuro023": {
+    "objname": "Receptor neurotransmissor",
+    "description": "Proteína presente na membrana do neurônio que recebe a ação dos neurotransmissores. A ligação entre o neurotransmissor e seu receptor permite que o sinal químico seja reconhecido e desencadeie uma resposta no neurônio seguinte."
+  },
+  "neuroA": {
+    "objname": "Neurotransmissor A",
+    "description": "Molécula mensageira liberada pelo neurônio para transmitir uma informação ao neurônio seguinte. É liberada pelas vesículas e atravessa o espaço entre as células até alcançar os receptores."
+  },
+  "neuroA001": {
+    "objname": "Neurotransmissor A",
+    "description": "Molécula mensageira liberada pelo neurônio para transmitir uma informação ao neurônio seguinte. É liberada pelas vesículas e atravessa o espaço entre as células até alcançar os receptores."
+  },
+  "neuroA002": {
+    "objname": "Neurotransmissor A",
+    "description": "Molécula mensageira liberada pelo neurônio para transmitir uma informação ao neurônio seguinte. É liberada pelas vesículas e atravessa o espaço entre as células até alcançar os receptores."
+  },
+  "neuroA003": {
+    "objname": "Neurotransmissor A",
+    "description": "Molécula mensageira liberada pelo neurônio para transmitir uma informação ao neurônio seguinte. É liberada pelas vesículas e atravessa o espaço entre as células até alcançar os receptores."
+  },
+  "neuroA004": {
+    "objname": "Neurotransmissor A",
+    "description": "Molécula mensageira liberada pelo neurônio para transmitir uma informação ao neurônio seguinte. É liberada pelas vesículas e atravessa o espaço entre as células até alcançar os receptores."
+  },
+  "neuroA005": {
+    "objname": "Neurotransmissor A",
+    "description": "Molécula mensageira liberada pelo neurônio para transmitir uma informação ao neurônio seguinte. É liberada pelas vesículas e atravessa o espaço entre as células até alcançar os receptores."
+  },
+  "neuroA006": {
+    "objname": "Neurotransmissor A",
+    "description": "Molécula mensageira liberada pelo neurônio para transmitir uma informação ao neurônio seguinte. É liberada pelas vesículas e atravessa o espaço entre as células até alcançar os receptores."
+  },
+  "neuroA007": {
+    "objname": "Neurotransmissor A",
+    "description": "Molécula mensageira liberada pelo neurônio para transmitir uma informação ao neurônio seguinte. É liberada pelas vesículas e atravessa o espaço entre as células até alcançar os receptores."
+  },
+  "neuroA008": {
+    "objname": "Neurotransmissor A",
+    "description": "Molécula mensageira liberada pelo neurônio para transmitir uma informação ao neurônio seguinte. É liberada pelas vesículas e atravessa o espaço entre as células até alcançar os receptores."
+  },
+  "neuroA009": {
+    "objname": "Neurotransmissor A",
+    "description": "Molécula mensageira liberada pelo neurônio para transmitir uma informação ao neurônio seguinte. É liberada pelas vesículas e atravessa o espaço entre as células até alcançar os receptores."
+  },
+  "neuroA010": {
+    "objname": "Neurotransmissor A",
+    "description": "Molécula mensageira liberada pelo neurônio para transmitir uma informação ao neurônio seguinte. É liberada pelas vesículas e atravessa o espaço entre as células até alcançar os receptores."
+  },
+  "neuroA011": {
+    "objname": "Neurotransmissor A",
+    "description": "Molécula mensageira liberada pelo neurônio para transmitir uma informação ao neurônio seguinte. É liberada pelas vesículas e atravessa o espaço entre as células até alcançar os receptores."
+  },
+  "neuroB": {
+    "objname": "Neurotransmissor B",
+    "description": "Molécula mensageira envolvida na comunicação entre neurônios. Após ser liberada pela célula nervosa, atravessa o espaço entre os neurônios e pode se ligar a receptores específicos na célula seguinte."
+  },
+  "neuroB001": {
+    "objname": "Neurotransmissor B",
+    "description": "Molécula mensageira envolvida na comunicação entre neurônios. Após ser liberada pela célula nervosa, atravessa o espaço entre os neurônios e pode se ligar a receptores específicos na célula seguinte."
+  },
+  "neuroB002": {
+    "objname": "Neurotransmissor B",
+    "description": "Molécula mensageira envolvida na comunicação entre neurônios. Após ser liberada pela célula nervosa, atravessa o espaço entre os neurônios e pode se ligar a receptores específicos na célula seguinte."
+  },
+  "neuroB003": {
+    "objname": "Neurotransmissor B",
+    "description": "Molécula mensageira envolvida na comunicação entre neurônios. Após ser liberada pela célula nervosa, atravessa o espaço entre os neurônios e pode se ligar a receptores específicos na célula seguinte."
+  },
+  "neuroB004": {
+    "objname": "Neurotransmissor B",
+    "description": "Molécula mensageira envolvida na comunicação entre neurônios. Após ser liberada pela célula nervosa, atravessa o espaço entre os neurônios e pode se ligar a receptores específicos na célula seguinte."
+  },
+  "neuroB005": {
+    "objname": "Neurotransmissor B",
+    "description": "Molécula mensageira envolvida na comunicação entre neurônios. Após ser liberada pela célula nervosa, atravessa o espaço entre os neurônios e pode se ligar a receptores específicos na célula seguinte."
+  },
+  "neuroC": {
+    "objname": "Neurotransmissor C",
+    "description": "Molécula mensageira que participa da transmissão de informações entre neurônios. É liberada na região de comunicação entre as células e atua ao se ligar a receptores presentes no neurônio seguinte."
+  },
+  "neuroC001": {
+    "objname": "Neurotransmissor C",
+    "description": "Molécula mensageira que participa da transmissão de informações entre neurônios. É liberada na região de comunicação entre as células e atua ao se ligar a receptores presentes no neurônio seguinte."
+  },
+  "neuroC002": {
+    "objname": "Neurotransmissor C",
+    "description": "Molécula mensageira que participa da transmissão de informações entre neurônios. É liberada na região de comunicação entre as células e atua ao se ligar a receptores presentes no neurônio seguinte."
+  },
+  "neuroC003": {
+    "objname": "Neurotransmissor C",
+    "description": "Molécula mensageira que participa da transmissão de informações entre neurônios. É liberada na região de comunicação entre as células e atua ao se ligar a receptores presentes no neurônio seguinte."
+  },
+  "neuroC004": {
+    "objname": "Neurotransmissor C",
+    "description": "Molécula mensageira que participa da transmissão de informações entre neurônios. É liberada na região de comunicação entre as células e atua ao se ligar a receptores presentes no neurônio seguinte."
+  },
+  "neuroC005": {
+    "objname": "Neurotransmissor C",
+    "description": "Molécula mensageira que participa da transmissão de informações entre neurônios. É liberada na região de comunicação entre as células e atua ao se ligar a receptores presentes no neurônio seguinte."
+  }
+}

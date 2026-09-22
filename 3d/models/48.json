@@ -1,0 +1,45 @@
+{
+  "objname": "Hipertireoidismo",
+  "objsystem": [
+    "?"
+  ],
+  "objdescription": "?",
+  "linkedModels": [],
+  "resources": [],
+  "T3": {
+    "objname": "?",
+    "description": "?"
+  },
+  "T4": {
+    "objname": "?",
+    "description": "?"
+  },
+  "TH": {
+    "objname": "?",
+    "description": "?"
+  },
+  "TSH": {
+    "objname": "?",
+    "description": "?"
+  },
+  "Hipofise": {
+    "objname": "?",
+    "description": "?"
+  },
+  "Hipotalamo": {
+    "objname": "?",
+    "description": "?"
+  },
+  "Thyroid": {
+    "objname": "?",
+    "description": "?"
+  },
+  "Head+ninteract": {
+    "objname": "?",
+    "description": "(chat, não precisa descrição, objeto marcado como sem interação)"
+  },
+  "Skin+ninteract": {
+    "objname": "?",
+    "description": "(chat, não precisa descrição, objeto marcado como sem interação)"
+  }
+}

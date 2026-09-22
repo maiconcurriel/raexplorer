@@ -1,0 +1,43 @@
+{
+  "objname": "Depressão Bipolar",
+  "objsystem": [
+    "Nervoso"
+  ],
+  "objdescription": "A depressão bipolar corresponde aos episódios depressivos que podem ocorrer no transtorno bipolar, condição caracterizada por alterações do humor e da atividade cerebral. Estudos de neuroimagem identificam, em grupos de pessoas com transtorno bipolar, diferenças estruturais e funcionais em regiões envolvidas na regulação das emoções, incluindo áreas do córtex frontal e estruturas do sistema límbico. O modelo apresenta uma representação didática dessas alterações, comparando um cérebro de referência com outro em que o volume da região frontal está reduzido. Essa representação não significa que todas as pessoas com transtorno bipolar apresentem a mesma alteração anatômica, pois existem diferenças individuais e os achados podem variar entre estudos.",
+  "linkedModels": [
+    {
+      "id": "2",
+      "label": "Cérebro"
+    }
+  ],
+  "resources": [],
+  "CerebrumL": {
+    "objname": "Cérebro com Alteração na Região Frontal",
+    "description": "Representação didática de um cérebro com redução de volume na região frontal. Alterações estruturais e de espessura cortical em regiões frontais foram observadas em estudos com grupos de pessoas com transtorno bipolar. Essas regiões participam de funções como planejamento, tomada de decisões e regulação das emoções."
+  },
+  "CerebrumR": {
+    "objname": "Cérebro de Referência",
+    "description": "Representação utilizada como referência para comparação com o cérebro que apresenta redução de volume na região frontal, permitindo visualizar a diferença anatômica demonstrada pelo modelo."
+  },
+  "Amygdala": {
+    "objname": "Amígdala",
+    "description": "Estrutura envolvida no processamento das emoções e na resposta a estímulos emocionalmente relevantes. Integra circuitos cerebrais relacionados à regulação do humor e apresenta alterações estruturais ou funcionais em alguns estudos sobre transtorno bipolar."
+  },
+  "Hippocampus": {
+    "objname": "Hipocampo",
+    "description": "Estrutura envolvida principalmente na formação de memórias e no processamento de informações relacionadas ao contexto. Estudos de neuroimagem identificam diferenças no volume do hipocampo em grupos de pessoas com transtorno bipolar, embora os achados apresentem variação entre indivíduos."
+  },
+  "Thalamus_R": {
+    "objname": "Tálamo",
+    "description": "Estrutura que participa da integração e retransmissão de informações para diferentes regiões do cérebro. Faz parte de circuitos que conectam regiões corticais e estruturas relacionadas ao processamento emocional, sendo investigado em estudos sobre o transtorno bipolar."
+  },
+  "CingulategyrusR": {
+    "objname": "Giro do Cíngulo",
+    "description": "Região envolvida no processamento das emoções, atenção, motivação e regulação do comportamento. Suas conexões com áreas frontais e estruturas do sistema límbico fazem parte dos circuitos cerebrais estudados no transtorno bipolar."
+  }
+  ,
+  "Head+ninteract": {
+    "objname": "",
+    "description": ""
+  }
+}

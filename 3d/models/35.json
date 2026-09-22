@@ -1,0 +1,26 @@
+{
+  "objname": "Atelectasia",
+  "objsystem": [
+    "Respiratório"
+  ],
+  "objdescription": "A atelectasia é uma condição caracterizada pelo colapso parcial ou total de uma região do pulmão, levando à redução da quantidade de ar presente nos alvéolos. Pode ocorrer por obstrução das vias aéreas, compressão do pulmão ou outras alterações que impeçam sua adequada expansão. A redução da ventilação pode comprometer as trocas gasosas e, dependendo da extensão, causar falta de ar e outros sintomas respiratórios. O modelo permite comparar um pulmão com aspecto normal a um pulmão colapsado, facilitando a compreensão visual da alteração provocada pela atelectasia.",
+  "linkedModels": [
+    {
+      "id": "23",
+      "label": "Sistema Respiratório"
+    }
+  ],
+  "resources": [],
+  "Skeleton+ninteract": {
+    "objname": "Esqueleto Humano",
+    "description": "Representação simplificada do esqueleto humano utilizada para contextualizar a localização dos pulmões dentro da cavidade torácica."
+  },
+  "LeftLung": {
+    "objname": "Pulmão Normal",
+    "description": "Pulmão apresentado com aspecto normal, servindo como referência para comparação com o pulmão afetado pela atelectasia. Sua estrutura está expandida, permitindo visualizar a diferença em relação ao pulmão colapsado."
+  },
+  "RightLung": {
+    "objname": "Pulmão Colapsado",
+    "description": "Pulmão que apresenta redução de sua expansão devido ao colapso de parte ou de todo o tecido pulmonar, característica da atelectasia. A comparação com o pulmão normal permite visualizar a redução do volume e da expansão pulmonar."
+  }
+}

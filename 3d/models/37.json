@@ -1,0 +1,42 @@
+{
+  "objname": "AVC Hemorrágico",
+  "objsystem": [
+    "Nervoso"
+  ],
+  "objdescription": "O AVC hemorrágico ocorre quando um vaso sanguíneo no cérebro se rompe, provocando o extravasamento de sangue para o tecido cerebral ou para regiões próximas. O acúmulo de sangue pode aumentar a pressão sobre as estruturas cerebrais e causar danos às células nervosas, comprometendo as funções da região afetada. O modelo representa a hemorragia e a área do cérebro atingida, permitindo visualizar a relação entre o rompimento do vaso sanguíneo, o extravasamento de sangue e os danos provocados ao tecido cerebral.",
+  "linkedModels": [
+    {
+      "id": "2",
+      "label": "Cérebro"
+    },
+    {
+      "id": "21",
+      "label": "Sistema Nervoso"
+    },
+    {
+      "id": "19",
+      "label": "Sistema Arterial"
+    },
+    {
+      "id": "36",
+      "label": "AVC Isquêmico"
+    }
+  ],
+  "resources": [],
+  "hemorr_1+hemorr_2": {
+    "objname": "Hemorragia",
+    "description": "Extravasamento de sangue causado pelo rompimento de um vaso sanguíneo. No AVC hemorrágico, o sangue se acumula no interior ou ao redor do tecido cerebral, podendo exercer pressão sobre as estruturas próximas e provocar danos às células nervosas."
+  },
+  "arteries": {
+    "objname": "Artérias",
+    "description": "Vasos sanguíneos responsáveis por transportar o sangue do coração para os tecidos do organismo. No modelo, representam os vasos que irrigam o cérebro e estão relacionados à ocorrência da hemorragia."
+  },
+  "brain+ninteract": {
+    "objname": "Cérebro",
+    "description": "Órgão do sistema nervoso central responsável por funções como movimento, sensibilidade, linguagem, memória e controle de diversas atividades do organismo. No modelo, permite visualizar a região cerebral afetada pela hemorragia."
+  },
+  "braindan": {
+    "objname": "Área do Tecido Cerebral Afetada pela Hemorragia",
+    "description": "Região do tecido cerebral atingida pelo extravasamento de sangue. O acúmulo de sangue pode comprimir estruturas próximas e causar danos às células nervosas, comprometendo o funcionamento da área afetada."
+  }
+}

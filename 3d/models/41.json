@@ -1,0 +1,26 @@
+{
+  "objname": "Queimadura Solar",
+  "objsystem": [
+    "Tegumentar"
+  ],
+  "objdescription": "A queimadura solar é uma lesão da pele causada pela exposição excessiva à radiação ultravioleta, principalmente proveniente do Sol. Essa radiação pode danificar as células da epiderme e desencadear uma resposta inflamatória, provocando vermelhidão, sensibilidade, dor e, em casos mais intensos, formação de bolhas e descamação. O modelo representa os danos provocados nas camadas superficiais da pele, destacando a alteração do tecido, a formação de uma bolha e a participação da derme na resposta inflamatória. A representação permite compreender como uma exposição intensa à radiação solar pode comprometer a integridade e a função protetora da pele.",
+  "linkedModels": [
+    {
+      "id": "15",
+      "label": "Anatomia das Camadas da Pele Humana"
+    }
+  ],
+  "resources": [],
+  "bubble_1+nisolar": {
+    "objname": "Bolha",
+    "description": "Elevação da pele formada pelo acúmulo de líquido entre suas camadas após uma lesão mais intensa. Na queimadura solar, pode surgir como consequência do dano às células e da resposta inflamatória, ajudando a proteger temporariamente o tecido localizado abaixo da área lesionada."
+  },
+  "StratumSpinosum+nisolar": {
+    "objname": "Estrato Córneo e Estrato Espinhoso",
+    "description": "Camadas da epiderme afetadas pela exposição excessiva à radiação ultravioleta. No modelo, apresentam alterações que representam o dano às células e à barreira superficial da pele. Em queimaduras mais intensas, a lesão dessas camadas pode contribuir para inflamação, descamação e formação de bolhas."
+  },
+  "Dermis+nisolar": {
+    "objname": "Derme",
+    "description": "Camada localizada abaixo da epiderme, rica em tecido conjuntivo, vasos sanguíneos e terminações nervosas. Durante uma queimadura solar, a resposta inflamatória provoca dilatação dos vasos sanguíneos e contribui para a vermelhidão, o calor, a sensibilidade e a dor. No modelo, a derme contextualiza os tecidos localizados abaixo da região superficial lesionada."
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "objname": "Estenose Aórtica",
+  "objsystem": [
+    "Cardiovascular"
+  ],
+  "objdescription": "A estenose aórtica é caracterizada pelo estreitamento da abertura da valva aórtica, localizada entre o ventrículo esquerdo e a aorta. Frequentemente, esse estreitamento está relacionado ao espessamento e à calcificação das cúspides da valva, que se tornam menos flexíveis e não conseguem se abrir completamente durante a contração do coração. Como consequência, o ventrículo esquerdo precisa exercer maior força para bombear o sangue através da abertura reduzida. O modelo representa a valva aórtica calcificada e com mobilidade limitada, permitindo observar como a estenose dificulta a passagem do sangue do coração para a aorta.",
+  "linkedModels": [
+    {
+      "id": "4",
+      "label": "Coração"
+    },
+    {
+      "id": "5",
+      "label": "Coração (Animado)"
+    }
+  ],
+  "resources": [],
+  "heart_section_animation": {
+    "objname": "Coração (Base)",
+    "description": "Representação do coração utilizada como base anatômica para visualizar a localização das valvas cardíacas e compreender a posição da valva aórtica afetada pela estenose."
+  },
+  "aortic_valve_section_animation": {
+    "objname": "Valva Aórtica com Estenose",
+    "description": "Valva localizada entre o ventrículo esquerdo e a aorta. No modelo, suas cúspides apresentam espessamento e calcificação, tornando-se mais rígidas e com menor mobilidade. Como resultado, a valva não consegue se abrir completamente, reduzindo a abertura disponível para a passagem do sangue e representando a estenose aórtica."
+  },
+  "tricuspid_valve_section_animation": {
+    "objname": "Valva Tricúspide",
+    "description": "Valva localizada entre o átrio direito e o ventrículo direito. Controla a passagem do sangue entre essas câmaras e impede seu retorno ao átrio durante a contração ventricular. No modelo, auxilia na contextualização das demais valvas cardíacas."
+  },
+  "mitral_valve_section_animation": {
+    "objname": "Valva Mitral",
+    "description": "Valva localizada entre o átrio esquerdo e o ventrículo esquerdo. Permite a passagem do sangue para o ventrículo e impede seu retorno ao átrio durante a contração ventricular. Está localizada antes da valva aórtica no trajeto do sangue pelo lado esquerdo do coração."
+  },
+  "pulmonary_valve_section_animation": {
+    "objname": "Valva Pulmonar",
+    "description": "Valva localizada entre o ventrículo direito e o tronco pulmonar. Abre para permitir a saída do sangue em direção aos pulmões e fecha para impedir seu retorno ao ventrículo."
+  }
+}

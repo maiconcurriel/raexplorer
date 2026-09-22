@@ -1,0 +1,62 @@
+{
+  "objname": "Artéria",
+  "objsystem": [
+    "Cardiovascular"
+  ],
+  "objdescription": "As artérias são vasos sanguíneos responsáveis por conduzir o sangue para fora do coração e distribuí-lo aos tecidos do organismo. Sua parede é formada por diferentes camadas que proporcionam resistência, elasticidade e capacidade de controlar o calibre do vaso. A túnica íntima reveste internamente a artéria e fica em contato direto com o sangue; a túnica média contém músculo liso e fibras elásticas que auxiliam no controle do diâmetro vascular; e a túnica adventícia forma a camada externa de sustentação. Na animação, a artéria é apresentada em corte, permitindo observar sua organização interna e as hemácias circulando pelo lúmen.",
+  "linkedModels": [
+    {
+      "id": "19",
+      "label": "Sistema Arterial"
+    }
+  ],
+  "resources": [],
+  "07_Involucro": {
+    "objname": "Túnica Adventícia",
+    "description": "Camada mais externa da parede da artéria, formada principalmente por tecido conjuntivo. Atua na proteção e sustentação do vaso, ajudando a fixá-lo aos tecidos próximos e conferindo resistência à parede arterial."
+  },
+  "06_Fibroblastos": {
+    "objname": "Fibroblastos",
+    "description": "Células do tecido conjuntivo responsáveis pela produção e manutenção de componentes da matriz extracelular, como fibras de colágeno e elastina. Na parede arterial, contribuem para a resistência, elasticidade e manutenção estrutural do vaso."
+  },
+  "06_Conjuntivo_externo": {
+    "objname": "Tecido Conjuntivo Externo",
+    "description": "Tecido que compõe grande parte da região externa da parede arterial. Contém fibras que proporcionam sustentação e resistência ao vaso, contribuindo para a organização da túnica adventícia e sua integração com os tecidos ao redor."
+  },
+  "05_Elastica_externa_1+05_Elastica_externa_2": {
+    "objname": "Lâmina Elástica Externa",
+    "description": "Camada de fibras elásticas localizada entre a túnica média e a túnica adventícia. Contribui para a elasticidade da parede arterial e auxilia na delimitação entre a camada muscular e o tecido conjuntivo externo."
+  },
+  "04_Musculo_liso": {
+    "objname": "Músculo Liso",
+    "description": "Principal componente muscular da túnica média da artéria. Suas células podem contrair ou relaxar, alterando o diâmetro do vaso e contribuindo para o controle da resistência vascular, da distribuição do fluxo sanguíneo e da pressão arterial."
+  },
+  "04_Fasciculos_musculares_relevo_1+04_Fasciculos_musculares_relevo_2": {
+    "objname": "Fascículos de Músculo Liso",
+    "description": "Representação dos conjuntos de células musculares lisas organizadas na túnica média. Sua disposição ao redor do vaso permite que a parede arterial altere seu calibre por contração ou relaxamento, contribuindo para a regulação do fluxo sanguíneo."
+  },
+  "03_Elastica_interna_1+03_Elastica_interna_2": {
+    "objname": "Lâmina Elástica Interna",
+    "description": "Camada rica em fibras elásticas localizada entre a túnica íntima e a túnica média. Permite que a parede arterial se distenda com a passagem do sangue e retorne à sua forma, contribuindo para a elasticidade do vaso."
+  },
+  "02_Conjuntivo_interno": {
+    "objname": "Tecido Conjuntivo Subendotelial",
+    "description": "Tecido conjuntivo localizado abaixo do endotélio e integrante da túnica íntima. Oferece suporte às células endoteliais e contribui para a organização estrutural da camada mais interna da parede arterial."
+  },
+  "01_Relevo_celular_do_endotelio": {
+    "objname": "Relevo das Células Endoteliais",
+    "description": "Representação da superfície das células que formam o endotélio. Essas células revestem internamente a artéria e constituem a superfície que permanece em contato direto com o sangue circulante."
+  },
+  "01_Nucleos_endoteliais": {
+    "objname": "Núcleos das Células Endoteliais",
+    "description": "Núcleos das células que constituem o endotélio da artéria. Contêm o material genético e participam do controle das atividades celulares necessárias para a manutenção do revestimento interno do vaso."
+  },
+  "01_Endotelio_1+01_Endotelio_2": {
+    "objname": "Endotélio",
+    "description": "Camada de células que reveste a superfície interna da artéria e fica em contato direto com o sangue. Forma uma barreira entre o sangue e a parede vascular e participa da regulação do tônus vascular, da coagulação e de outras funções dos vasos sanguíneos."
+  },
+  "Hemacia_001": {
+    "objname": "Hemácia",
+    "description": "Célula sanguínea especializada no transporte de oxigênio dos pulmões para os tecidos e de parte do dióxido de carbono no sentido inverso. Na animação, as hemácias circulam pelo lúmen da artéria, representando o fluxo sanguíneo no interior do vaso."
+  }
+}

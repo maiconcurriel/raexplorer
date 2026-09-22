@@ -1,0 +1,21 @@
+{
+  "objname": "Dores Abdominais",
+  "objsystem": [
+    "Digestório"
+  ],
+  "objdescription": "As dores abdominais podem estar relacionadas a diferentes estruturas e condições que afetam a região do abdômen. No sistema digestório, alterações no intestino podem estar associadas a sintomas como dor, cólicas, distensão e desconforto abdominal. Este modelo apresenta uma representação visual das estruturas intestinais, destacando o intestino delgado e o intestino grosso em vermelho durante a ocorrência da dor e retornando posteriormente ao aspecto normal. A alteração visual tem finalidade didática e busca chamar a atenção para a região abdominal relacionada ao desconforto, facilitando a compreensão de que diferentes estruturas do sistema digestório podem estar envolvidas na manifestação de dores abdominais.",
+  "linkedModels": [],
+  "resources": [],
+  "SmallIntestine001+SmallIntestine002+nisolar": {
+    "objname": "Intestino Delgado",
+    "description": "Órgão responsável por grande parte da digestão e absorção de nutrientes. No modelo, sua coloração em vermelho destaca visualmente a região relacionada à representação das dores abdominais, retornando posteriormente ao aspecto normal."
+  },
+  "LargeIntestine001+LargeIntestine002+nisolar": {
+    "objname": "Intestino Grosso",
+    "description": "Órgão responsável principalmente pela absorção de água e eletrólitos e pela formação e condução das fezes. No modelo, sua coloração em vermelho destaca visualmente a região relacionada à representação das dores abdominais, retornando posteriormente ao aspecto normal."
+  },
+  "Body_Skin002+ninteract": {
+    "objname": "Silhueta do Corpo Humano",
+    "description": "Representação simplificada da silhueta do corpo humano utilizada para contextualizar a localização das estruturas do sistema digestório dentro da região abdominal."
+  }
+}

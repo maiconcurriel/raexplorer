@@ -1,0 +1,59 @@
+{
+  "objname": "AVC Isquêmico",
+  "objsystem": [
+    "Nervoso"
+  ],
+  "objdescription": "O AVC isquêmico ocorre quando o fluxo sanguíneo para uma região do cérebro é interrompido, reduzindo o fornecimento de oxigênio e nutrientes às células nervosas. Essa interrupção pode ser causada pela formação de um trombo em uma artéria ou pela obstrução provocada por um êmbolo. A falta de irrigação adequada pode causar danos ao tecido cerebral e comprometer funções controladas pela região afetada. O modelo representa uma obstrução na artéria carótida interna esquerda, a formação de um trombo e o dano provocado ao tecido cerebral, permitindo compreender visualmente a relação entre a interrupção do fluxo sanguíneo e o AVC isquêmico.",
+  "linkedModels": [
+    {
+      "id": "2",
+      "label": "Cérebro"
+    },
+    {
+      "id": "21",
+      "label": "Sistema Nervoso"
+    },
+    {
+      "id": "19",
+      "label": "Sistema Arterial"
+    }
+    ,
+    {
+      "id": "37",
+      "label": "AVC Hemorrágico"
+    }
+  ],
+  "resources": [],
+  "artieries": {
+    "objname": "Artérias",
+    "description": "Conjunto de vasos sanguíneos responsáveis por transportar o sangue do coração para os diferentes tecidos do organismo. No modelo, permite visualizar a rede arterial relacionada à circulação que fornece sangue ao cérebro."
+  },
+  "arterie": {
+    "objname": "Artéria Carótida Interna Esquerda",
+    "description": "Artéria que conduz sangue para o cérebro, contribuindo para seu suprimento de oxigênio e nutrientes. No modelo, apresenta a região relacionada à formação do trombo responsável pela interrupção do fluxo sanguíneo."
+  },
+  "brain": {
+    "objname": "Cérebro",
+    "description": "Órgão do sistema nervoso central responsável por funções como movimento, sensibilidade, linguagem, memória e controle de diversas atividades do organismo. No modelo, representa o cérebro utilizado para evidenciar a região afetada pelo AVC isquêmico."
+  },
+  "braindan": {
+    "objname": "Cérebro (Tecido Cerebral Danificado)",
+    "description": "Região do tecido cerebral que sofreu danos devido à interrupção do fornecimento de sangue. A redução do fluxo sanguíneo limita a chegada de oxigênio e nutrientes às células nervosas, podendo causar lesão e perda de função na área afetada."
+  },
+  "coagemb": {
+    "objname": "Coágulo Êmbolo",
+    "description": "Coágulo que se desloca pela circulação sanguínea e pode atingir uma artéria de menor calibre, provocando sua obstrução. Essa interrupção impede a passagem adequada do sangue e pode causar isquemia em uma região do cérebro."
+  },
+  "coagtrom": {
+    "objname": "Coágulo Trombo",
+    "description": "Coágulo formado no interior de um vaso sanguíneo, podendo crescer e reduzir ou interromper o fluxo de sangue. No modelo, o trombo está associado à artéria carótida interna esquerda e representa a obstrução que contribui para o desenvolvimento do AVC isquêmico."
+  },
+  "pl1": {
+    "objname": "Placa Aterosclerótica",
+    "description": "Acúmulo de materiais na parede da artéria que pode provocar seu estreitamento e alterar o fluxo sanguíneo. A superfície da placa pode favorecer a formação de um trombo, que pode aumentar a obstrução e comprometer o fornecimento de sangue ao cérebro."
+  },
+  "pl2": {
+    "objname": "Placa Aterosclerótica",
+    "description": "Acúmulo de materiais na parede da artéria que pode provocar seu estreitamento e alterar o fluxo sanguíneo. A superfície da placa pode favorecer a formação de um trombo, que pode aumentar a obstrução e comprometer o fornecimento de sangue ao cérebro."
+  }
+}

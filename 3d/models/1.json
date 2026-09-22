@@ -1,7 +1,10 @@
 {
-  "objname": "Neurônio",
-  "objsystem": "Nervoso",
-  "objdescription": "O neurônio é a principal célula responsável pela recepção e transmissão de impulsos nervosos. Na cena, dois neurônios estão organizados em sequência: o neurônio superior recebe um impulso por meio de seus dendritos, processa e conduz o sinal pelo corpo celular e pelo prolongamento neuronal. O impulso percorre a fibra nervosa e é transmitido ao neurônio inferior, permitindo a continuidade da informação pelo sistema nervoso. A mielina presente ao redor da fibra auxilia na condução mais rápida do impulso. A comunicação entre neurônios ocorre por meio de sinais elétricos e químicos, permitindo que informações sejam transmitidas de uma célula para outra.",
+  "objname": "Impulso Nervoso",
+  "objsystem": [
+    "Nervoso",
+    "Célula"
+  ],
+  "objdescription": "O impulso nervoso é um sinal responsável pela transmissão de informações entre as células do sistema nervoso. Na animação, dois neurônios estão posicionados em sequência e o impulso percorre o primeiro neurônio, passando pelos dendritos, corpo celular e prolongamento neuronal, até alcançar a região de comunicação com o segundo neurônio. Em seguida, o impulso é transmitido ao segundo neurônio, demonstrando a continuidade da informação entre as células nervosas. A bainha de mielina contribui para aumentar a velocidade de condução do impulso ao longo da fibra nervosa. A animação permite visualizar de forma didática como os sinais são propagados de um neurônio para outro.",
   "linkedModels": [
     {
       "id": "21",
@@ -15,18 +18,18 @@
   "resources": [],
   "Corpo": {
     "objname": "Corpo Celular",
-    "description": "Região do neurônio que contém o núcleo e a maior parte das estruturas responsáveis pelo metabolismo e manutenção celular. Recebe sinais dos dendritos e participa da integração dos impulsos nervosos antes que o sinal seja conduzido ao longo do neurônio."
+    "description": "Região do neurônio que contém o núcleo e as estruturas responsáveis pela manutenção da célula. Participa da integração dos sinais recebidos e da condução da informação para o prolongamento neuronal."
   },
   "Dendrito": {
     "objname": "Dendrito",
-    "description": "Prolongamento especializado do neurônio responsável principalmente pela recepção de sinais provenientes de outras células. Na cena, os dendritos do neurônio superior recebem o impulso nervoso, que é integrado no corpo celular e posteriormente conduzido para outras regiões do neurônio."
+    "description": "Prolongamento do neurônio especializado principalmente na recepção de sinais. Na animação, representa uma das regiões pelas quais o impulso nervoso é recebido antes de seguir pelo neurônio."
   },
   "Mielina": {
     "objname": "Bainha de Mielina",
-    "description": "Camada rica em lipídios que envolve determinados prolongamentos dos neurônios. Atua como isolante elétrico e aumenta a velocidade de propagação dos impulsos nervosos ao longo da fibra, permitindo que o sinal seja conduzido de forma mais eficiente entre os neurônios."
+    "description": "Camada que envolve determinados prolongamentos dos neurônios e atua como isolante elétrico. Contribui para aumentar a velocidade de propagação do impulso nervoso ao longo da fibra."
   },
   "Nucleous": {
     "objname": "Núcleo",
-    "description": "Estrutura localizada no corpo celular que contém o material genético do neurônio. Controla diversas atividades celulares, incluindo a produção de proteínas e a manutenção da célula, contribuindo para seu funcionamento e sobrevivência."
+    "description": "Estrutura localizada no corpo celular que contém o material genético e participa do controle das atividades da célula. No modelo, integra a representação da estrutura interna do neurônio durante a propagação do impulso."
   }
 }

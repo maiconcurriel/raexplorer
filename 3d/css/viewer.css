@@ -230,16 +230,88 @@ canvas {
 
 .callout-label {
     background: #1e293b;
-    border: 2px solid #00ffff;
+    border: 2px solid #007bff;
     color: #ffffff;
-    padding: 6px 12px;
+
+    padding: 8px;
+    min-width: 150px;
+
     font-family: sans-serif;
     font-size: 13px;
-    font-weight: bold;
-    border-radius: 6px;
-    box-shadow: 0 4px 12px rgba(0, 255, 255, 0.2);
+
+    border-radius: 8px;
+
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.25);
+
     white-space: nowrap;
+
     transition: opacity 0.2s ease;
+
+    pointer-events: auto;
+}
+
+.callout-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.callout-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #ffffff;
+
+    padding: 2px 5px 7px 5px;
+
+    text-align: center;
+}
+
+.callout-actions {
+    display: flex;
+    gap: 5px;
+
+    padding-top: 6px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.callout-btn {
+    flex: 1;
+
+    border: none;
+    border-radius: 5px;
+
+    padding: 5px 9px;
+
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+
+    transition:
+        background 0.15s ease,
+        transform 0.15s ease;
+}
+
+.callout-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.callout-btn:active {
+    transform: scale(0.96);
+}
+
+.callout-isolate:hover {
+    background: #007bff;
+    color: #ffffff;
+}
+
+.callout-hide:hover {
+    background: #ff4757;
+    color: #ffffff;
 }
 
 /* Container Geral */

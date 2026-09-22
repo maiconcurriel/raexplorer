@@ -1,0 +1,50 @@
+{
+  "objname": "Meningite",
+  "objsystem": [
+    "?"
+  ],
+  "objdescription": "?",
+  "linkedModels": [
+    {
+      "id": "2",
+      "label": "Cérebro"
+    },
+    {
+      "id": "21",
+      "label": "Sistema Nervoso"
+    }
+  ],
+  "resources": [],
+  "Neck": {
+    "objname": "Endurecimento do pescoço",
+    "description": "?"
+  },
+  "PiaMater": {
+    "objname": "?",
+    "description": "?"
+  },
+  "Cerebro": {
+    "objname": "?",
+    "description": "?"
+  },
+  "BrainMembrane": {
+    "objname": "?",
+    "description": "?"
+  },
+  "DuraMater": {
+    "objname": "?",
+    "description": "?"
+  },
+  "SpinalCords+ninteract": {
+    "objname": "?",
+    "description": "(sem descrição)"
+  },
+  "Head+ninteract": {
+    "objname": "?",
+    "description": "(sem descrição)"
+  },
+  "Skin+ninteract": {
+    "objname": "?",
+    "description": "(sem descrição)"
+  }
+}

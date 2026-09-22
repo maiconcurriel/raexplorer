@@ -1,0 +1,33 @@
+{
+  "objname": "Artrose",
+  "objsystem": [
+    "Esquelético"
+  ],
+  "objdescription": "Modelo que representa alterações características da artrose em uma articulação do membro inferior, permitindo comparar uma articulação com estruturas preservadas a outra com alterações degenerativas. O modelo evidencia o desgaste da cartilagem articular e alterações nas superfícies do fêmur e da tíbia associadas ao processo degenerativo. A cápsula articular e a pele são representadas de forma parcialmente transparente e podem ser ocultadas para facilitar a visualização das estruturas internas. É um recurso didático para auxiliar na compreensão das alterações anatômicas relacionadas à artrose.",
+  "linkedModels": [
+    {
+      "id": "3",
+      "label": "Sistema Esquelético"
+    }
+  ],
+  "resources": [],
+  "Femur_gasto": {
+  "objname": "Fêmur com Artrose",
+  "description": "Osso da coxa que participa da articulação do joelho. Nesta representação, a superfície articular apresenta alterações associadas à artrose, com desgaste e irregularidade da cartilagem que recobre o osso. As áreas avermelhadas indicam regiões afetadas pelo processo degenerativo, evidenciando a perda da proteção da superfície articular."
+},
+
+"Tibia_gasto": {
+  "objname": "Tíbia com Artrose",
+  "description": "Osso da perna que participa da articulação do joelho. Nesta representação, a superfície articular apresenta desgaste e irregularidades da cartilagem associadas à artrose. As áreas avermelhadas indicam regiões afetadas pelo processo degenerativo, evidenciando a deterioração da cobertura cartilaginosa e a exposição de áreas da superfície óssea."
+},
+
+"Femur_saudavel": {
+  "objname": "Fêmur Normal",
+  "description": "Osso da coxa que participa da articulação do joelho. Nesta representação, a superfície articular apresenta aspecto preservado, com cobertura cartilaginosa uniforme e sem as alterações degenerativas observadas no fêmur afetado pela artrose."
+},
+
+"Tibia_saudavel": {
+  "objname": "Tíbia Normal",
+  "description": "Osso da perna que participa da articulação do joelho. Nesta representação, a superfície articular apresenta aspecto preservado, com cobertura cartilaginosa uniforme e sem as alterações degenerativas observadas na tíbia afetada pela artrose."
+}
+}

@@ -1,0 +1,67 @@
+{
+  "objname": "Via Visual",
+  "objsystem": [
+    "Sensorial",
+    "Nervoso"
+  ],
+  "objdescription": "A via visual é responsável por conduzir e processar as informações captadas pelos olhos até o cérebro. A luz que alcança a retina é detectada por células fotorreceptoras e convertida em sinais nervosos, que seguem pelos nervos ópticos e por outras estruturas da via visual. Parte dessas informações é retransmitida pelo tálamo antes de alcançar o córtex visual, localizado principalmente no lobo occipital, onde ocorre o processamento de características da imagem. Na animação, a mudança de coloração dos nervos ópticos representa de forma didática a transmissão dos sinais provenientes dos olhos em direção ao cérebro.",
+  "linkedModels": [
+    {
+      "id": "9",
+      "label": "Olho Humano"
+    },
+    {
+      "id": "2",
+      "label": "Cérebro"
+    },
+    {
+      "id": "21",
+      "label": "Sistema Nervoso"
+    }
+  ],
+  "resources": [],
+  "EyeL": {
+    "objname": "Olho Esquerdo",
+    "description": "Órgão responsável pela captação da luz e formação inicial da informação visual. A retina transforma os estímulos luminosos em sinais nervosos que são conduzidos pelo nervo óptico em direção ao cérebro."
+  },
+  "EyeR": {
+    "objname": "Olho Direito",
+    "description": "Órgão responsável pela captação da luz e formação inicial da informação visual. A retina transforma os estímulos luminosos em sinais nervosos que são conduzidos pelo nervo óptico em direção ao cérebro."
+  },
+  "SuperiorRectus": {
+    "objname": "Músculo Reto Superior",
+    "description": "Músculo extrínseco do olho que participa dos movimentos do globo ocular, contribuindo principalmente para sua elevação e auxiliando no direcionamento do olhar."
+  },
+  "OpticNervRY": {
+    "objname": "Nervo Óptico Direito (Ativo)",
+    "description": "Nervo responsável por conduzir informações visuais da retina do olho direito em direção ao cérebro. Na animação, a coloração amarela representa de forma didática a transmissão do sinal nervoso."
+  },
+  "OpticNervLY": {
+    "objname": "Nervo Óptico Esquerdo (Ativo)",
+    "description": "Nervo responsável por conduzir informações visuais da retina do olho esquerdo em direção ao cérebro. Na animação, a coloração amarela representa de forma didática a transmissão do sinal nervoso."
+  },
+  "OpticNervLW": {
+    "objname": "Nervo Óptico Esquerdo",
+    "description": "Nervo que conduz as informações visuais da retina do olho esquerdo em direção ao cérebro. A coloração clara representa visualmente o nervo antes ou após a passagem do sinal destacado na animação."
+  },
+  "OpticNervRW": {
+    "objname": "Nervo Óptico Direito",
+    "description": "Nervo que conduz as informações visuais da retina do olho direito em direção ao cérebro. A coloração clara representa visualmente o nervo antes ou após a passagem do sinal destacado na animação."
+  },
+  "Thalamus": {
+    "objname": "Tálamo",
+    "description": "Estrutura cerebral que atua como importante centro de retransmissão de informações sensoriais. Na via visual, uma região especializada do tálamo recebe sinais provenientes dos olhos e os encaminha para áreas do córtex cerebral responsáveis pelo processamento da visão."
+  },
+  "VisualCortex": {
+    "objname": "Córtex Visual",
+    "description": "Região localizada principalmente no lobo occipital, na parte posterior do cérebro, responsável pelo processamento das informações visuais recebidas pelas vias nervosas. Participa da análise de características como formas, cores, movimento e localização dos estímulos visuais."
+  },
+  "Head+ninteract": {
+    "objname": "Representação do Corpo Humano",
+    "description": "Representação parcialmente transparente do corpo humano utilizada para contextualizar a posição dos olhos, nervos ópticos e cérebro."
+  },
+  "Brain+ninteract": {
+    "objname": "Cérebro",
+    "description": "Órgão responsável por receber e processar as informações conduzidas pelas vias visuais, permitindo que os estímulos captados pelos olhos sejam interpretados."
+  }
+}

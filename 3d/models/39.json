@@ -1,0 +1,42 @@
+{
+  "objname": "Envelhecimento do Tecido da Pele",
+  "objsystem": [
+    "Tegumentar"
+  ],
+  "objdescription": "O envelhecimento da pele está associado a alterações progressivas em suas diferentes camadas e estruturas. Com o passar do tempo, ocorre redução da produção e degradação de componentes como colágeno e elastina, contribuindo para a perda de firmeza e elasticidade da pele. Também podem ocorrer alterações e afinamento das camadas da epiderme, redução do tecido adiposo subcutâneo e diminuição da espessura e sustentação da pele. Os pelos podem perder pigmentação e adquirir coloração esbranquiçada. O modelo representa essas alterações por meio de diferenças na coloração e na espessura das camadas, permitindo comparar visualmente características relacionadas ao envelhecimento do tecido cutâneo.",
+  "linkedModels": [
+    {
+      "id": "15",
+      "label": "Anatomia das Camadas da Pele Humana"
+    }
+  ],
+  "resources": [],
+  "Hair": {
+    "objname": "Pelos",
+    "description": "Estruturas que recobrem determinadas regiões da pele. Com o envelhecimento, podem ocorrer alterações na produção de melanina, levando à redução da pigmentação e ao surgimento de pelos grisalhos ou brancos, como representado no modelo."
+  },
+  "StratumCorneum": {
+    "objname": "Estrato Córneo",
+    "description": "Camada mais superficial da epiderme, formada principalmente por células queratinizadas que contribuem para a proteção da pele. No modelo, apresenta uma coloração mais escura para representar visualmente uma alteração associada ao envelhecimento da pele."
+  },
+  "StratumGranulosum": {
+    "objname": "Estrato Granuloso",
+    "description": "Camada da epiderme localizada abaixo do estrato córneo, envolvida no processo de queratinização e na formação da barreira cutânea. No modelo, apresenta uma coloração mais escura para destacar visualmente as alterações representadas no tecido envelhecido."
+  },
+  "StratumSpinosum": {
+    "objname": "Estrato Espinhoso",
+    "description": "Camada da epiderme formada por células que contribuem para a estrutura e resistência do tecido cutâneo. No modelo, apresenta uma coloração mais escura como representação visual das alterações observadas nas camadas da pele durante o envelhecimento."
+  },
+  "Dermis": {
+    "objname": "Derme",
+    "description": "Camada localizada abaixo da epiderme, rica em fibras de colágeno e elastina, que contribuem para a resistência, sustentação e elasticidade da pele. Com o envelhecimento, ocorre redução e degradação dessas fibras, contribuindo para a perda de firmeza e elasticidade. No modelo, a coloração mais clara representa visualmente essa alteração estrutural."
+  },
+  "StratumReticulare": {
+    "objname": "Camada Reticular da Derme",
+    "description": "Região mais profunda da derme, formada por tecido conjuntivo rico em fibras de colágeno e elastina. Com o envelhecimento, podem ocorrer alterações na organização e na quantidade dessas fibras, reduzindo a sustentação e a elasticidade da pele. No modelo, sua menor espessura representa visualmente essas alterações."
+  },
+  "SubcutanousTissue": {
+    "objname": "Tecido Subcutâneo",
+    "description": "Camada localizada abaixo da derme, constituída em grande parte por tecido adiposo, que contribui para o preenchimento, isolamento térmico e proteção mecânica do corpo. Com o envelhecimento, pode ocorrer redução e redistribuição da gordura subcutânea. No modelo, sua menor espessura representa visualmente essa redução."
+  }
+}
