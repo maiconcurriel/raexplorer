@@ -1,0 +1,22 @@
+{
+  "objname": "Úlcera Gástrica",
+  "objsystem": [
+    "Digestório"
+  ],
+  "objdescription": "A úlcera gástrica é uma lesão que ocorre quando há perda da integridade da mucosa do estômago, formando uma ferida que se aprofunda na parede gástrica. Entre as causas mais comuns estão a infecção pela bactéria Helicobacter pylori e o uso prolongado de medicamentos anti-inflamatórios não esteroides, que podem comprometer os mecanismos de proteção da mucosa. A exposição do tecido lesionado ao ácido e às enzimas do suco gástrico pode dificultar a cicatrização e provocar sintomas como dor ou queimação na região superior do abdômen, náuseas e desconforto. Algumas úlceras podem causar complicações, como sangramento ou perfuração. O modelo apresenta um corte do estômago e destaca didaticamente uma área de ulceração na mucosa gástrica.",
+  "linkedModels": [
+    {
+      "id": "24",
+      "label": "Sistema Digestório"
+    }
+  ],
+  "resources": [],
+  "Stomach_1+Stomach_2+nisolar": {
+    "objname": "Estômago",
+    "description": "Órgão do sistema digestório responsável por armazenar temporariamente os alimentos e misturá-los ao suco gástrico. Sua superfície interna é revestida pela mucosa gástrica, que possui mecanismos de proteção contra a ação do ácido e das enzimas digestivas. Quando essa barreira protetora é comprometida, o tecido pode ficar mais suscetível ao desenvolvimento de lesões como a úlcera gástrica."
+  },
+  "Ulcera+nisolar": {
+    "objname": "Úlcera Gástrica",
+    "description": "Lesão localizada na parede interna do estômago caracterizada pela perda da mucosa e pelo aprofundamento da ferida nos tecidos subjacentes. Pode se desenvolver quando os mecanismos de proteção da mucosa são prejudicados, permitindo maior ação do conteúdo gástrico sobre a parede. No modelo, a região destacada representa didaticamente o local da ulceração."
+  }
+}

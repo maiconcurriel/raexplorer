@@ -1,0 +1,62 @@
+{
+  "objname": "Aterosclerose",
+  "objsystem": [
+    "Cardiovascular"
+  ],
+  "objdescription": "A aterosclerose é uma doença crônica das artérias caracterizada pelo desenvolvimento de placas na camada interna da parede arterial. O processo envolve retenção e modificação de lipídios, resposta inflamatória, participação de células do sistema imunológico e alterações progressivas da parede do vaso. Com o crescimento das placas, o lúmen da artéria pode se estreitar e dificultar o fluxo sanguíneo. Algumas placas também podem se romper, favorecendo a formação de trombos capazes de obstruir o vaso e causar complicações como infarto do miocárdio ou acidente vascular cerebral. No modelo, a região amarelada representa didaticamente o acúmulo de lipídios associado ao desenvolvimento da aterosclerose.",
+  "linkedModels": [
+    {
+      "id": "46",
+      "label": "Artéria"
+    }
+  ],
+  "resources": [],
+  "01_Endotelio": {
+    "objname": "Endotélio",
+    "description": "Camada de células que reveste internamente a artéria e permanece em contato direto com o sangue. Alterações na função endotelial participam do início e da progressão do processo aterosclerótico."
+  },
+  "01_Nucleos_endoteliais": {
+    "objname": "Núcleos das Células Endoteliais",
+    "description": "Núcleos das células que constituem o endotélio, camada mais interna da parede arterial e importante na regulação da interação entre o sangue e a parede do vaso."
+  },
+  "01_Relevo_celular_do_endotelio": {
+    "objname": "Relevo das Células Endoteliais",
+    "description": "Representação da superfície das células endoteliais que revestem o interior da artéria. O endotélio participa da regulação do fluxo sanguíneo, da coagulação e de processos inflamatórios envolvidos na aterosclerose."
+  },
+  "02_Conjuntivo_interno": {
+    "objname": "Tecido Conjuntivo Subendotelial",
+    "description": "Tecido localizado abaixo do endotélio e integrante da túnica íntima. É nessa região da parede arterial que ocorre a retenção de lipídios e o desenvolvimento inicial das lesões ateroscleróticas."
+  },
+  "03_Elastica_interna": {
+    "objname": "Lâmina Elástica Interna",
+    "description": "Camada rica em fibras elásticas que separa principalmente a túnica íntima da túnica média e contribui para a elasticidade da parede arterial."
+  },
+  "04_Fasciculos_musculares_relevo": {
+    "objname": "Fascículos de Músculo Liso",
+    "description": "Conjuntos de células musculares lisas da túnica média da artéria. Essas células participam do controle do calibre vascular e também podem contribuir para a formação e evolução das placas ateroscleróticas."
+  },
+  "04_Musculo_liso": {
+    "objname": "Músculo Liso",
+    "description": "Principal componente muscular da túnica média. Sua contração e seu relaxamento ajudam a controlar o diâmetro da artéria. Na aterosclerose, células musculares lisas também podem participar do remodelamento da parede e da formação da placa."
+  },
+  "05_Elastica_externa": {
+    "objname": "Lâmina Elástica Externa",
+    "description": "Camada de tecido elástico localizada entre a túnica média e a região mais externa da parede arterial, contribuindo para a organização e elasticidade do vaso."
+  },
+  "06_Conjuntivo_externo": {
+    "objname": "Tecido Conjuntivo Externo",
+    "description": "Tecido conjuntivo da região externa da artéria, responsável por fornecer sustentação e contribuir para a integração do vaso com os tecidos ao seu redor."
+  },
+  "06_Fibroblastos": {
+    "objname": "Fibroblastos",
+    "description": "Células do tecido conjuntivo responsáveis pela produção de componentes da matriz extracelular, como fibras de colágeno, contribuindo para a estrutura e manutenção da parede vascular."
+  },
+  "07_Involucro": {
+    "objname": "Túnica Adventícia",
+    "description": "Camada mais externa da parede arterial, formada principalmente por tecido conjuntivo. Fornece sustentação e proteção ao vaso e estabelece sua relação com os tecidos adjacentes."
+  },
+  "08_Acumulo_Gordura": {
+    "objname": "Acúmulo de Lipídios",
+    "description": "Representação didática do acúmulo de lipídios associado à formação da placa aterosclerótica. Na aterosclerose, partículas lipídicas podem ficar retidas na túnica íntima e participar de uma resposta inflamatória que leva ao crescimento da lesão e ao possível estreitamento do lúmen arterial."
+  }
+}

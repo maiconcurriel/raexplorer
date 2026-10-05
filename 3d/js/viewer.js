@@ -364,8 +364,15 @@ function renderizarCapitulos(data) {
     const html = Object.keys(data)
         .filter(key => {
             const isNotIgnored = !ignoreKeys.includes(key);
-            const hasDescription = data[key] && data[key].description && data[key].description.trim() !== "";
-            return isNotIgnored && hasDescription;
+
+            const hasDescription =
+                data[key] &&
+                data[key].description &&
+                data[key].description.trim() !== "";
+
+            const isInteractive = !key.includes('+ninteract');
+
+            return isNotIgnored && hasDescription && isInteractive;
         })
         .map(key => `
             <div class="ch-item" onclick="focarParte('${key}')">
@@ -480,11 +487,11 @@ window.botaoGeral = () => {
     isIsolatedMode = false;
     clearHighlight();
 
-    scene.traverse(obj => {
+    /*scene.traverse(obj => {
         if (obj.isMesh || obj.isSkinnedMesh) {
             obj.visible = true;
         }
-    });
+    });*/
 
     //setDefaultCamera();
 
@@ -1108,7 +1115,6 @@ function renderButtons(id, data) {
 
     if (isIsolatedMode) {
         botoesHtml = `
-            <button class="dp-act" style="background:#555; color:#fff;" onclick="botaoGeral()">Geral</button>
             <button class="dp-act" style="background:#f1c40f; color:#000;" onclick="voltarDoIsolamento('${id}')">Voltar</button>
         `;
         colunasGrid = "1fr 1fr";
@@ -1354,16 +1360,14 @@ function criarCallout(object, texto, clickPoint = null, chaveJson = null) {
         <div class="callout-content">
             <div class="callout-title">${texto}</div>
 
-            ${chaveJson ? `
-                <div class="callout-actions">
+            ${chaveJson && podeIsolar ? `
+            <div class="callout-actions">
 
-                    ${podeIsolar ? `
-                    <button
-                        class="callout-btn callout-isolate"
-                        onclick="event.stopPropagation(); window.isolarObjeto('${chaveJson}')">
-                        Isolar
-                    </button>
-                ` : ''}
+                <button
+                    class="callout-btn callout-isolate"
+                    onclick="event.stopPropagation(); window.isolarObjeto('${chaveJson}')">
+                    Isolar
+                </button>
 
                 <button
                     class="callout-btn callout-hide"
@@ -1371,7 +1375,7 @@ function criarCallout(object, texto, clickPoint = null, chaveJson = null) {
                     Esconder
                 </button>
 
-                </div>
+            </div>
             ` : ''}
 
         </div>

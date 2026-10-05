@@ -1,0 +1,62 @@
+{
+  "objname": "Transtorno do Déficit de Atenção e Hiperatividade (TDAH)",
+  "objsystem": [
+    "Nervoso"
+  ],
+  "objdescription": "O Transtorno do Déficit de Atenção e Hiperatividade (TDAH) é uma condição do neurodesenvolvimento caracterizada por padrões persistentes de desatenção e/ou hiperatividade e impulsividade que podem interferir nas atividades cotidianas. O transtorno está relacionado ao funcionamento de redes cerebrais envolvidas na atenção, controle inibitório, planejamento, memória de trabalho, motivação e regulação do comportamento. Entre as regiões estudadas estão o córtex pré-frontal, áreas do cíngulo, núcleos da base, tálamo e cerebelo. Essas estruturas funcionam de maneira integrada, formando circuitos responsáveis pelo processamento e controle de diferentes aspectos do comportamento. No modelo, algumas dessas regiões são destacadas por efeitos luminosos para representar didaticamente sua participação nas redes cerebrais relacionadas ao TDAH, sem indicar que uma única área seja responsável pelo transtorno.",
+  "linkedModels": [
+    {
+      "id": "2",
+      "label": "Cérebro"
+    }
+  ],
+  "resources": [],
+  "CerebrumL+ninteract": {
+    "objname": "Hemisfério Cerebral Esquerdo",
+    "description": ""
+  },
+  "CerebrumR+ninteract": {
+    "objname": "Hemisfério Cerebral Direito",
+    "description": ""
+  },
+  "Head+ninteract": {
+    "objname": "Hemisfério Cerebral Direito",
+    "description": ""
+  },
+  "Cingulategyrus": {
+    "objname": "Giro do Cíngulo",
+    "description": "Região cerebral envolvida na integração de informações cognitivas e emocionais, atenção, motivação e monitoramento do comportamento. Áreas do cíngulo, especialmente sua porção anterior, participam de redes de controle cognitivo e atenção investigadas no TDAH."
+  },
+  "Putamen": {
+    "objname": "Putâmen",
+    "description": "Estrutura pertencente aos núcleos da base que participa de circuitos relacionados ao controle dos movimentos, aprendizagem, formação de hábitos e seleção de ações. Suas conexões com regiões corticais integram redes cerebrais envolvidas no controle do comportamento e da atividade motora."
+  },
+  "Caudatenucleus": {
+    "objname": "Núcleo Caudado",
+    "description": "Componente dos núcleos da base conectado a regiões do córtex cerebral, incluindo áreas pré-frontais. Participa de processos relacionados à atenção, aprendizagem, seleção de ações e controle do comportamento, integrando circuitos frequentemente investigados no TDAH."
+  },
+  "Thalamus": {
+    "objname": "Tálamo",
+    "description": "Estrutura responsável pela integração e retransmissão de informações entre diferentes regiões do cérebro. Participa de circuitos relacionados à atenção, processamento de estímulos e controle cognitivo, mantendo conexões com o córtex e outras estruturas envolvidas nessas funções."
+  },
+  "Cerebellum": {
+    "objname": "Cerebelo",
+    "description": "Além de sua função conhecida na coordenação, equilíbrio e precisão dos movimentos, o cerebelo participa de redes relacionadas à atenção, percepção do tempo, aprendizagem e controle cognitivo. Diferenças em estruturas e circuitos cerebelares também são investigadas em estudos sobre o TDAH."
+  },
+  "CorPFD": {
+    "objname": "Córtex Pré-Frontal Direito",
+    "description": "Região anterior do cérebro envolvida em funções executivas, como atenção, planejamento, memória de trabalho, tomada de decisões e controle inibitório. No modelo, é destacada para representar sua participação nas redes cerebrais relacionadas à regulação da atenção e do comportamento no TDAH."
+  },
+  "CorPFE": {
+    "objname": "Córtex Pré-Frontal Esquerdo",
+    "description": "Região anterior do cérebro envolvida em funções executivas, como atenção, planejamento, memória de trabalho, tomada de decisões e controle inibitório. No modelo, é destacada para representar sua participação nas redes cerebrais relacionadas à regulação da atenção e do comportamento no TDAH."
+  },
+  "CerebrumRClone+ninteract": {
+    "objname": "Hemisfério Cerebral Direito",
+    "description": ""
+  },
+  "CerebrumLClone+ninteract": {
+    "objname": "Hemisfério Cerebral Direito",
+    "description": ""
+  }
+}

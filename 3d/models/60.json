@@ -1,0 +1,17 @@
+{
+  "objname": "Herpes Labial",
+  "objsystem": [
+    "Tegumentar"
+  ],
+  "objdescription": "O herpes labial é uma infecção causada principalmente pelo vírus herpes simples tipo 1 (HSV-1). Após a infecção inicial, o vírus pode permanecer em estado latente em neurônios sensitivos e ser reativado posteriormente, provocando novos episódios. As manifestações geralmente surgem nos lábios ou ao redor da boca e podem começar com formigamento, ardor ou coceira, seguidos pelo aparecimento de pequenas vesículas agrupadas e preenchidas por líquido. Essas vesículas podem se romper e formar pequenas feridas e crostas durante o processo de cicatrização. O herpes labial é contagioso, especialmente quando existem lesões ativas. O modelo representa didaticamente um agrupamento de vesículas característico dessa manifestação.",
+  "linkedModels": [],
+  "resources": [],
+  "Head+nisolar+ninteract": {
+    "objname": "Cabeça",
+    "description": ""
+  },
+  "Herpes+nisolar": {
+    "objname": "Lesão de Herpes Labial",
+    "description": "Representação de vesículas agrupadas características do herpes labial. As pequenas elevações preenchidas por líquido surgem devido à infecção e à resposta inflamatória local, podendo causar ardor, coceira, formigamento ou dor. Durante a evolução da lesão, as vesículas podem se romper, formar pequenas feridas e posteriormente desenvolver crostas até a cicatrização."
+  }
+}

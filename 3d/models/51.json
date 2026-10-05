@@ -1,0 +1,50 @@
+{
+  "objname": "Paralisia Cerebral",
+  "objsystem": [
+    "Nervoso"
+  ],
+  "objdescription": "A paralisia cerebral é um grupo de alterações permanentes que afetam principalmente o movimento, a postura e a coordenação, resultantes de lesões ou alterações ocorridas no cérebro em desenvolvimento. Dependendo da região cerebral afetada e da extensão da lesão, podem ocorrer diferentes manifestações motoras, como fraqueza, alterações do tônus muscular, dificuldades de equilíbrio e movimentos involuntários. Algumas formas de paralisia cerebral estão associadas a lesões da substância branca, tecido formado principalmente por fibras nervosas responsáveis pela comunicação entre diferentes regiões do sistema nervoso. Alterações próximas aos ventrículos cerebrais também podem comprometer fibras relacionadas ao controle motor. Neste modelo, a região afetada é representada no hemisfério cerebral esquerdo, com destaque para a substância branca danificada e para o ventrículo lateral esquerdo. Outras estruturas relacionadas ao processamento, coordenação e regulação dos movimentos são apresentadas para contextualizar os circuitos motores envolvidos.",
+  "linkedModels": [
+    {
+      "id": "2",
+      "label": "Cérebro"
+    }
+  ],
+  "resources": [],
+  "MatBranca": {
+    "objname": "Substância Branca Danificada",
+    "description": "Representação de uma área de substância branca cerebral afetada no hemisfério esquerdo. A substância branca contém fibras nervosas que conectam diferentes regiões do cérebro. Lesões nessas fibras podem prejudicar a transmissão dos sinais relacionados ao controle dos movimentos, contribuindo para alterações motoras."
+  },
+  "CerebroL": {
+    "objname": "Hemisfério Cerebral Esquerdo",
+    "description": "Hemisfério cerebral no qual o modelo representa a região de substância branca afetada. Lesões em áreas responsáveis pelas vias motoras podem comprometer o controle dos movimentos, frequentemente produzindo manifestações mais evidentes no lado oposto do corpo."
+  },
+  "Cérebro+ninteract": {
+    "objname": "Cérebro",
+    "description": "Representação do cérebro utilizada como referência anatômica para demonstrar a localização da área afetada e sua relação com outras estruturas cerebrais. Esta estrutura não possui interação no modelo."
+  },
+  "Head+ninteract": {
+    "objname": "Cérebro",
+    "description": "Representação do cérebro utilizada como referência anatômica para demonstrar a localização da área afetada e sua relação com outras estruturas cerebrais. Esta estrutura não possui interação no modelo."
+  },
+  "VentriculoLatEsq": {
+    "objname": "Ventrículo Lateral Esquerdo",
+    "description": "Cavidade localizada no interior do hemisfério cerebral esquerdo e preenchida por líquido cefalorraquidiano. No modelo, serve como referência para a localização da lesão na substância branca próxima ao ventrículo, região que pode ser afetada em determinados padrões de lesão cerebral relacionados à paralisia cerebral."
+  },
+  "Talamo": {
+    "objname": "Tálamo",
+    "description": "Estrutura cerebral que participa da integração e retransmissão de informações sensoriais e motoras entre diferentes regiões do sistema nervoso. Suas conexões com o córtex, cerebelo e núcleos da base contribuem para os circuitos envolvidos no planejamento e controle dos movimentos."
+  },
+  "Putamen": {
+    "objname": "Putâmen",
+    "description": "Estrutura pertencente aos núcleos da base e envolvida na regulação dos movimentos. Participa de circuitos responsáveis pela seleção, iniciação e ajuste da atividade motora. Alterações nos circuitos dos núcleos da base podem estar relacionadas a dificuldades no controle dos movimentos e do tônus muscular."
+  },
+  "GloboPalido": {
+    "objname": "Globo Pálido",
+    "description": "Componente dos núcleos da base que participa da regulação da atividade motora. Atua em circuitos que modulam os sinais enviados às áreas responsáveis pelo movimento, contribuindo para controlar a intensidade e a execução adequada das ações motoras."
+  },
+  "Cerebelo": {
+    "objname": "Cerebelo",
+    "description": "Estrutura fundamental para a coordenação dos movimentos, equilíbrio, postura e aprendizagem motora. Compara informações relacionadas ao movimento planejado e executado, contribuindo para ajustes de precisão. Alterações que envolvem seus circuitos podem produzir dificuldades de equilíbrio, coordenação e controle motor."
+  }
+}

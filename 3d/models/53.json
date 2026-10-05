@@ -1,0 +1,102 @@
+{
+  "objname": "Síndrome de Guillain-Barré (SGB)",
+  "objsystem": [
+    "Nervoso"
+  ],
+  "objdescription": "A Síndrome de Guillain-Barré (SGB) é uma condição neurológica em que o sistema imunológico ataca componentes do sistema nervoso periférico, comprometendo a transmissão dos impulsos nervosos. Frequentemente provoca fraqueza muscular que começa nos membros inferiores e pode progredir para outras regiões do corpo, além de alterações de sensibilidade e redução dos reflexos. Em formas desmielinizantes, ocorre dano à bainha de mielina dos nervos, enquanto algumas variantes apresentam maior comprometimento dos axônios. As raízes dos nervos espinais também podem ser afetadas. Em casos mais graves, a fraqueza pode atingir os músculos responsáveis pela respiração, incluindo o diafragma. O modelo destaca nervos, raízes nervosas e estruturas relacionadas para demonstrar as regiões que podem ser comprometidas pela síndrome.",
+  "linkedModels": [
+    {
+      "id": "2",
+      "label": "Cérebro"
+    },
+    {
+      "id": "21",
+      "label": "Sistema Nervoso"
+    }
+  ],
+  "resources": [],
+  "Cerebro": {
+    "objname": "Cérebro",
+    "description": "Principal órgão do sistema nervoso central. Na Síndrome de Guillain-Barré, o comprometimento ocorre predominantemente no sistema nervoso periférico, portanto o cérebro é apresentado principalmente como referência anatômica."
+  },
+  "MuscPernas_1+MuscPernas_2": {
+    "objname": "Músculos dos Membros Inferiores",
+    "description": "Conjunto de músculos dos membros inferiores. A fraqueza muscular da Síndrome de Guillain-Barré frequentemente começa nas pernas e pode progredir para regiões superiores do corpo devido ao comprometimento da condução dos impulsos pelos nervos periféricos."
+  },
+  "Diaphragm": {
+    "objname": "Diafragma",
+    "description": "Principal músculo da inspiração. Em casos graves da Síndrome de Guillain-Barré, o comprometimento dos nervos responsáveis pela musculatura respiratória pode causar fraqueza do diafragma e dificuldade para respirar."
+  },
+  "Skin_1+Skin_2+ninteract": {
+    "objname": "Pele",
+    "description": ""
+  },
+  "FilamentosRaizDorsal": {
+    "objname": "Filamentos da Raiz Dorsal",
+    "description": "Pequenos feixes de fibras nervosas sensitivas que entram na medula espinal e convergem para formar a raiz dorsal. Fazem parte das vias responsáveis por conduzir informações sensitivas provenientes da periferia."
+  },
+  "FilamentosRaizVentral": {
+    "objname": "Filamentos da Raiz Ventral",
+    "description": "Pequenos feixes de fibras nervosas motoras que emergem da medula espinal e convergem para formar a raiz ventral, conduzindo comandos motores em direção aos músculos."
+  },
+  "GanglioEspinhal": {
+    "objname": "Gânglio Espinal",
+    "description": "Dilatação localizada na raiz dorsal que contém os corpos celulares de neurônios sensitivos. Participa da condução de informações sensoriais da periferia em direção ao sistema nervoso central."
+  },
+  "NervoEspinhal": {
+    "objname": "Nervo Espinal",
+    "description": "Nervo formado pela união das raízes dorsal e ventral. Contém fibras sensitivas e motoras e conecta a medula espinal a diferentes regiões do corpo. Nervos e raízes periféricas podem ser comprometidos na Síndrome de Guillain-Barré."
+  },
+  "NervoFemoral": {
+    "objname": "Nervo Femoral",
+    "description": "Importante nervo do membro inferior, responsável pela inervação motora de músculos da região anterior da coxa e pela sensibilidade de áreas da coxa e da perna. Seu comprometimento pode contribuir para alterações motoras e sensitivas."
+  },
+  "NervoFrenicos": {
+    "objname": "Nervos Frênicos",
+    "description": "Nervos responsáveis principalmente pela inervação motora do diafragma. Em formas graves da Síndrome de Guillain-Barré, o comprometimento da função desses nervos pode contribuir para fraqueza respiratória."
+  },
+  "NervoIsquiático": {
+    "objname": "Nervo Isquiático",
+    "description": "Grande nervo do membro inferior que percorre a região posterior da coxa e origina ramos responsáveis pela inervação de grande parte da perna e do pé. Integra as vias motoras e sensitivas dos membros inferiores."
+  },
+  "NervoMediano": {
+    "objname": "Nervo Mediano",
+    "description": "Nervo do membro superior com funções motoras e sensitivas, participando dos movimentos do antebraço, punho e mão e da sensibilidade de parte da mão."
+  },
+  "NervoRadial": {
+    "objname": "Nervo Radial",
+    "description": "Nervo do membro superior responsável pela inervação de músculos envolvidos principalmente na extensão do cotovelo, punho e dedos, além da sensibilidade de regiões do membro superior."
+  },
+  "NervosPerifericos": {
+    "objname": "Nervos Periféricos",
+    "description": "Conjunto de nervos representados nos membros superiores e inferiores que conduzem informações motoras e sensitivas entre o sistema nervoso central e o restante do corpo. São estruturas especialmente relevantes na Síndrome de Guillain-Barré, pois podem sofrer comprometimento da mielina ou, em algumas variantes, dos axônios."
+  },
+  "NervoTibial": {
+    "objname": "Nervo Tibial",
+    "description": "Ramo do nervo isquiático que percorre a região posterior da perna e participa da inervação motora e sensitiva da perna e do pé."
+  },
+  "NervoUlnar": {
+    "objname": "Nervo Ulnar",
+    "description": "Nervo do membro superior com funções motoras e sensitivas importantes para o antebraço e a mão, especialmente para diversos músculos responsáveis pelos movimentos finos dos dedos."
+  },
+  "RaizDorsal": {
+    "objname": "Raiz Dorsal",
+    "description": "Raiz sensitiva do nervo espinal. Conduz informações provenientes da periferia em direção à medula espinal e apresenta o gânglio espinal associado. As raízes nervosas periféricas podem ser comprometidas na Síndrome de Guillain-Barré."
+  },
+  "RaizVentral": {
+    "objname": "Raiz Ventral",
+    "description": "Raiz predominantemente motora do nervo espinal. Conduz sinais da medula espinal em direção aos músculos. O comprometimento das raízes e dos nervos periféricos pode prejudicar a transmissão dos comandos motores e contribuir para a fraqueza muscular."
+  },
+  "SistemaNervoso": {
+    "objname": "Sistema Nervoso",
+    "description": "Representação das estruturas do sistema nervoso que não estão individualizadas no modelo. Na Síndrome de Guillain-Barré, o comprometimento ocorre principalmente nos nervos periféricos e nas raízes dos nervos espinais, afetando a transmissão dos impulsos nervosos motores e sensitivos."
+  },
+  "SpinalCordMembrane": {
+    "objname": "Meninges da Medula Espinal",
+    "description": "Membranas que envolvem e protegem a medula espinal. São apresentadas como referência anatômica e não constituem o principal local de comprometimento na Síndrome de Guillain-Barré."
+  },
+  "SpinalCords_1+SpinalCords_2": {
+    "objname": "Medula Espinal",
+    "description": "Estrutura do sistema nervoso central responsável pela comunicação entre o encéfalo e grande parte do corpo. Na Síndrome de Guillain-Barré, a medula espinal não é o principal local da lesão; o comprometimento ocorre predominantemente nos nervos periféricos e em suas raízes."
+  }
+}

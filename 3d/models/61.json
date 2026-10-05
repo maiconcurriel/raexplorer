@@ -1,0 +1,18 @@
+{
+  "objname": "Gastrite",
+  "objsystem": [
+    "Digestório"
+  ],
+  "objdescription": "A gastrite é uma inflamação da mucosa gástrica, camada que reveste internamente o estômago e o protege da ação do ácido e das enzimas digestivas. Pode ser aguda ou crônica e apresentar diferentes causas, incluindo infecção pela bactéria Helicobacter pylori, uso de anti-inflamatórios e processos autoimunes. Dependendo da causa e da intensidade, pode provocar dor ou desconforto na região superior do abdômen, náuseas e sensação de estômago cheio, embora também possa ocorrer sem sintomas. Em alguns casos, a inflamação persistente pode causar alterações na mucosa e comprometer seus mecanismos de proteção. O modelo apresenta um corte anatômico do estômago, destacando sua estrutura interna e a mucosa gástrica, principal região acometida pela gastrite.",
+  "linkedModels": [
+    {
+      "id": "24",
+      "label": "Sistema Digestório"
+    }
+  ],
+  "resources": [],
+  "Stomach_1+Stomach_2+nisolar": {
+    "objname": "Estômago com Gastrite",
+    "description": "Órgão do sistema digestório responsável por armazenar e misturar os alimentos com o suco gástrico, iniciando parte de sua digestão. Sua superfície interna é revestida pela mucosa gástrica, que produz muco e bicarbonato para proteger a parede do estômago. Na gastrite, essa mucosa apresenta inflamação, que pode comprometer sua integridade e seus mecanismos de proteção. O corte anatômico permite observar as pregas da mucosa e as camadas musculares do estômago."
+  }
+}

@@ -1,9 +1,9 @@
 {
   "objname": "Meningite",
   "objsystem": [
-    "?"
+    "Nervoso"
   ],
-  "objdescription": "?",
+  "objdescription": "A meningite é uma inflamação das meninges, membranas que envolvem e protegem o cérebro e a medula espinal. Pode ser causada por diferentes agentes, incluindo vírus, bactérias e, menos frequentemente, fungos e outros microrganismos. As meninges são formadas pela dura-máter, aracnoide e pia-máter, e a inflamação dessas estruturas pode provocar sintomas como dor de cabeça intensa, febre, náuseas, sensibilidade à luz e rigidez do pescoço. A inflamação também pode envolver o espaço subaracnoideo, onde circula o líquido cefalorraquidiano. O modelo permite observar as membranas que revestem o cérebro e sua relação com o tecido cerebral, além de representar a rigidez do pescoço como um dos sinais que podem ocorrer na meningite.",
   "linkedModels": [
     {
       "id": "2",
@@ -16,35 +16,35 @@
   ],
   "resources": [],
   "Neck": {
-    "objname": "Endurecimento do pescoço",
-    "description": "?"
+    "objname": "Rigidez do Pescoço",
+    "description": "A rigidez do pescoço é um sinal que pode ocorrer na meningite devido à irritação e inflamação das meninges. Pode provocar dificuldade e dor ao movimentar ou flexionar o pescoço, sendo um dos sinais clínicos associados à irritação meníngea."
   },
   "PiaMater": {
-    "objname": "?",
-    "description": "?"
+    "objname": "Pia-Máter",
+    "description": "Camada mais interna das meninges, fina e vascularizada, que permanece intimamente aderida à superfície do cérebro e acompanha seus sulcos e giros. Na meningite, participa da região envolvida pelo processo inflamatório das meninges."
   },
   "Cerebro": {
-    "objname": "?",
-    "description": "?"
+    "objname": "Cérebro",
+    "description": "Principal órgão do sistema nervoso central, envolvido externamente pelas meninges. Na meningite, a inflamação ocorre principalmente nas membranas que o revestem e no espaço subaracnoideo, embora casos graves possam apresentar complicações que também comprometem o funcionamento cerebral."
   },
   "BrainMembrane": {
-    "objname": "?",
-    "description": "?"
+    "objname": "Aracnoide",
+    "description": "Camada intermediária das meninges, localizada entre a dura-máter e a pia-máter. Abaixo dela encontra-se o espaço subaracnoideo, que contém líquido cefalorraquidiano e vasos sanguíneos. Essa região tem grande importância na meningite, pois o processo inflamatório pode atingir as meninges e o líquido presente nesse espaço."
   },
   "DuraMater": {
-    "objname": "?",
-    "description": "?"
+    "objname": "Dura-Máter",
+    "description": "Camada mais externa e resistente das meninges, responsável por contribuir para a proteção e sustentação do sistema nervoso central. Na meningite, integra o conjunto de membranas que revestem o cérebro, embora o processo inflamatório frequentemente tenha maior relação com as leptomeninges e o espaço subaracnoideo."
   },
   "SpinalCords+ninteract": {
-    "objname": "?",
-    "description": "(sem descrição)"
+    "objname": "Medula Espinal",
+    "description": ""
   },
   "Head+ninteract": {
-    "objname": "?",
-    "description": "(sem descrição)"
+    "objname": "Cabeça",
+    "description": ""
   },
   "Skin+ninteract": {
-    "objname": "?",
-    "description": "(sem descrição)"
+    "objname": "Pele",
+    "description": ""
   }
 }

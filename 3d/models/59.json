@@ -1,0 +1,21 @@
+{
+  "objname": "Psoríase",
+  "objsystem": [
+    "Tegumentar"
+  ],
+  "objdescription": "A psoríase é uma doença inflamatória crônica, imunomediada e não contagiosa que afeta principalmente a pele. Ocorre uma aceleração do processo de renovação das células da epiderme associada à inflamação, favorecendo o acúmulo de células na superfície cutânea e a formação de lesões características. A forma em placas, uma das apresentações mais comuns, geralmente apresenta áreas avermelhadas e bem delimitadas recobertas por escamas esbranquiçadas ou prateadas, podendo causar coceira, ardor ou desconforto. As lesões podem surgir em diferentes regiões do corpo, sendo frequentes nos cotovelos, joelhos e couro cabeludo. O modelo representa didaticamente uma lesão de psoríase em placa sobre a pele.",
+  "linkedModels": [],
+  "resources": [],
+  "Psoriase+nisolar": {
+    "objname": "Lesão de Psoríase",
+    "description": "Representação de uma placa de psoríase, caracterizada pela inflamação da pele e pela renovação acelerada das células da epiderme. Esse processo favorece o espessamento e o acúmulo de células na superfície, formando uma área avermelhada que pode apresentar escamas esbranquiçadas ou prateadas. A aparência, extensão e intensidade das lesões podem variar entre indivíduos."
+  },
+  "Arm+nisolar": {
+    "objname": "Braço com Psoríase",
+    "description": "Região do membro superior utilizada para demonstrar uma manifestação cutânea da psoríase. No modelo, a lesão está localizada próxima ao cotovelo, uma região frequentemente acometida pela psoríase em placas."
+  },
+  "Body+ninteract": {
+    "objname": "Corpo Humano",
+    "description": ""
+  }
+}

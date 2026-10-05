@@ -1,0 +1,66 @@
+{
+  "objname": "Anticoagulantes",
+  "objsystem": [
+    "Cardiovascular"
+  ],
+  "objdescription": "Anticoagulantes são medicamentos que reduzem a capacidade de formação e expansão de coágulos sanguíneos ao interferirem em diferentes etapas da coagulação. São utilizados na prevenção e no tratamento de condições relacionadas à trombose, como trombose venosa profunda, embolia pulmonar e prevenção de eventos tromboembólicos em determinadas situações clínicas. Esses medicamentos não dissolvem diretamente um trombo já formado e não impedem completamente a coagulação, mas reduzem sua progressão e a formação de novos coágulos enquanto os mecanismos naturais do organismo atuam sobre o trombo existente. O modelo representa didaticamente a ação de anticoagulantes sobre o processo de formação e crescimento de um coágulo no interior de um vaso sanguíneo.",
+  "linkedModels": [
+    {
+      "id": "46",
+      "label": "Artéria"
+    }
+  ],
+  "resources": [],
+  "01_Endotelio": {
+    "objname": "Endotélio",
+    "description": "Camada de células que reveste internamente o vaso sanguíneo e permanece em contato direto com o sangue. O endotélio participa da regulação da coagulação e ajuda a manter o equilíbrio entre mecanismos que favorecem e que limitam a formação de trombos."
+  },
+  "01_Nucleos_endoteliais": {
+    "objname": "Núcleos das Células Endoteliais",
+    "description": "Núcleos das células que formam o endotélio, camada mais interna da parede vascular e importante na interação entre o sangue e o vaso."
+  },
+  "01_Relevo_celular_do_endotelio": {
+    "objname": "Relevo das Células Endoteliais",
+    "description": "Representação da superfície das células endoteliais que revestem o interior do vaso sanguíneo. Um endotélio íntegro apresenta propriedades que ajudam a limitar a ativação inadequada da coagulação."
+  },
+  "02_Conjuntivo_interno": {
+    "objname": "Tecido Conjuntivo Subendotelial",
+    "description": "Tecido localizado abaixo do endotélio e integrante da camada interna da parede vascular. Quando ocorre lesão endotelial, componentes dessa região podem ficar expostos ao sangue e participar da ativação dos mecanismos de hemostasia."
+  },
+  "03_Elastica_interna": {
+    "objname": "Lâmina Elástica Interna",
+    "description": "Camada rica em fibras elásticas que separa principalmente a túnica íntima da túnica média e contribui para a elasticidade da parede arterial."
+  },
+  "04_Fasciculos_musculares_relevo": {
+    "objname": "Fascículos de Músculo Liso",
+    "description": "Conjuntos de células musculares lisas presentes na túnica média da artéria, participando da contração e do relaxamento da parede vascular."
+  },
+  "04_Musculo_liso": {
+    "objname": "Músculo Liso",
+    "description": "Componente predominante da túnica média das artérias. Sua contração ou relaxamento modifica o calibre do vaso e contribui para a regulação do fluxo sanguíneo."
+  },
+  "05_Elastica_externa": {
+    "objname": "Lâmina Elástica Externa",
+    "description": "Camada de tecido elástico que delimita externamente a túnica média em determinadas artérias e contribui para a elasticidade e organização da parede vascular."
+  },
+  "06_Conjuntivo_externo": {
+    "objname": "Tecido Conjuntivo Externo",
+    "description": "Tecido conjuntivo localizado na região externa da artéria, responsável por fornecer sustentação e contribuir para a integração do vaso com os tecidos ao redor."
+  },
+  "06_Fibroblastos": {
+    "objname": "Fibroblastos",
+    "description": "Células do tecido conjuntivo responsáveis pela produção e manutenção de componentes da matriz extracelular, incluindo fibras de colágeno que contribuem para a estrutura da parede vascular."
+  },
+  "07_Involucro": {
+    "objname": "Túnica Adventícia",
+    "description": "Camada mais externa da parede arterial, composta principalmente por tecido conjuntivo e responsável por fornecer sustentação e proteção ao vaso."
+  },
+  "HemaciaAnt+HemaciaAnt001+HemaciaAnt002+HemaciaAnt003+HemaciaAnt004+HemaciaAnt005+HemaciaAnt006+HemaciaAnt007": {
+    "objname": "Anticoagulante",
+    "description": "Representação didática do medicamento anticoagulante presente na circulação. Os anticoagulantes atuam sobre diferentes componentes da cascata de coagulação, reduzindo a formação de fibrina e dificultando a formação ou expansão de trombos. O mecanismo específico depende do medicamento utilizado."
+  },
+  "HemaciaA+HemaciaA001+HemaciaA002+HemaciaA003+HemaciaA004+HemaciaA005+HemaciaA006+HemaciaA007+HemaciaA008+HemaciaA009": {
+    "objname": "Formação de Trombo",
+    "description": "Representação didática do acúmulo de componentes sanguíneos durante a formação de um trombo. Na coagulação real, o trombo envolve principalmente a ativação de plaquetas e a formação de uma rede de fibrina, que pode aprisionar hemácias e outras células. Os anticoagulantes reduzem a progressão desse processo ao interferirem na formação da fibrina."
+  }
+}

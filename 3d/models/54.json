@@ -1,0 +1,17 @@
+{
+  "objname": "Micose",
+  "objsystem": [
+    "Tegumentar"
+  ],
+  "objdescription": "Micose é o nome dado a infecções causadas por fungos que podem atingir a pele, os pelos, as unhas e outras regiões do corpo. As micoses superficiais da pele podem provocar alterações como manchas, vermelhidão, descamação, coceira e lesões de diferentes formatos, dependendo do fungo e da região afetada. Algumas infecções, como as dermatofitoses, utilizam a queratina presente nas camadas superficiais da pele como fonte de nutrientes. A transmissão pode ocorrer pelo contato com pessoas ou animais infectados, objetos contaminados ou ambientes favoráveis ao desenvolvimento dos fungos. No modelo, as áreas alteradas da pele representam didaticamente lesões associadas a uma infecção fúngica cutânea.",
+  "linkedModels": [],
+  "resources": [],
+  "Skin+ninteract": {
+    "objname": "Pele",
+    "description": ""
+  },
+  "Micose+nisolar": {
+    "objname": "Lesões de Micose",
+    "description": "Representação de áreas da pele afetadas por uma infecção fúngica superficial. Dependendo do tipo de micose, as lesões podem apresentar vermelhidão, descamação, coceira, alterações de pigmentação e diferentes formatos e distribuições pelo corpo."
+  }
+}

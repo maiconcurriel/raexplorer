@@ -1,45 +1,45 @@
 {
   "objname": "Hipotireoidismo",
   "objsystem": [
-    "?"
+    "Endócrino"
   ],
-  "objdescription": "?",
+  "objdescription": "O hipotireoidismo é uma condição caracterizada pela produção insuficiente de hormônios tireoidianos, principalmente T3 e T4, resultando na redução de seus efeitos metabólicos sobre o organismo. A atividade da tireoide é regulada pelo eixo hipotálamo–hipófise–tireoide: o hipotálamo produz TRH, que estimula a hipófise a liberar TSH; o TSH, por sua vez, estimula a tireoide a produzir T3 e T4. No hipotireoidismo primário, a redução dos hormônios tireoidianos diminui a retroalimentação negativa sobre o hipotálamo e a hipófise, levando ao aumento dos estímulos de TRH e TSH na tentativa de aumentar a atividade da tireoide. Na animação, esse mecanismo é representado pela grande quantidade de TRH e TSH e pela pequena quantidade de T3 e T4 liberada para o organismo.",
   "linkedModels": [],
   "resources": [],
   "T3": {
-    "objname": "?",
-    "description": "?"
+    "objname": "Triiodotironina (T3)",
+    "description": "Hormônio tireoidiano biologicamente ativo que participa da regulação do metabolismo, consumo de energia, produção de calor e funcionamento de diversos órgãos. Na animação, é representado em verde e aparece em pequena quantidade, demonstrando a redução dos hormônios tireoidianos."
   },
   "T4": {
-    "objname": "?",
-    "description": "?"
+    "objname": "Tiroxina (T4)",
+    "description": "Principal hormônio produzido e liberado pela tireoide. Grande parte do T4 pode ser convertida em T3 nos tecidos. Na animação, é representado em roxo e aparece em pequena quantidade, indicando a produção reduzida de hormônios tireoidianos."
   },
   "TH": {
-    "objname": "?",
-    "description": "?"
+    "objname": "TRH (Hormônio Liberador de Tireotropina)",
+    "description": "Hormônio produzido pelo hipotálamo que estimula a hipófise a secretar TSH. Na animação, é representado em azul e aparece em maior quantidade devido à redução da retroalimentação negativa causada pelos baixos níveis de T3 e T4."
   },
   "TSH": {
-    "objname": "?",
-    "description": "?"
+    "objname": "TSH (Hormônio Estimulante da Tireoide)",
+    "description": "Hormônio produzido pela hipófise que estimula a tireoide a produzir e liberar T3 e T4. Na animação, é representado em rosa e aparece em maior quantidade, demonstrando a tentativa do organismo de estimular uma tireoide com produção insuficiente de hormônios."
   },
   "Hipofise": {
-    "objname": "?",
-    "description": "?"
+    "objname": "Hipófise",
+    "description": "Glândula localizada na base do cérebro que participa do controle da tireoide. Recebe o estímulo do TRH produzido pelo hipotálamo e libera TSH. Quando os níveis de T3 e T4 estão reduzidos, aumenta a secreção de TSH para estimular a atividade da tireoide."
   },
   "Hipotalamo": {
-    "objname": "?",
-    "description": "?"
+    "objname": "Hipotálamo",
+    "description": "Região cerebral que participa do controle do sistema endócrino e produz TRH. Quando os níveis de T3 e T4 estão reduzidos, a menor retroalimentação negativa favorece o aumento do estímulo do hipotálamo sobre a hipófise."
   },
   "Thyroid": {
-    "objname": "?",
-    "description": "?"
+    "objname": "Glândula Tireoide",
+    "description": "Glândula endócrina localizada na região anterior do pescoço e responsável pela produção dos hormônios T3 e T4. No hipotireoidismo primário, sua atividade é insuficiente mesmo diante do aumento do estímulo produzido pelo eixo hipotálamo–hipófise."
   },
   "Head+ninteract": {
-    "objname": "?",
-    "description": "(chat, não precisa descrição, objeto marcado como sem interação)"
+    "objname": "Cabeça",
+    "description": ""
   },
   "Skin+ninteract": {
-    "objname": "?",
-    "description": "(chat, não precisa descrição, objeto marcado como sem interação)"
+    "objname": "Pele",
+    "description": ""
   }
 }

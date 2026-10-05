@@ -1,0 +1,82 @@
+{
+  "objname": "Ablação Septal com Álcool",
+  "objsystem": [
+    "Cardiovascular"
+  ],
+  "objdescription": "A ablação septal com álcool é um procedimento minimamente invasivo utilizado em pacientes selecionados com cardiomiopatia hipertrófica obstrutiva, condição em que o espessamento do septo interventricular pode dificultar a saída do sangue do ventrículo esquerdo. Durante o procedimento, um cateter é conduzido pelo sistema arterial até uma pequena artéria septal que irriga a região hipertrofiada. Uma pequena quantidade de álcool é administrada seletivamente nesse vaso, provocando uma lesão controlada no tecido muscular. Com a cicatrização e o remodelamento subsequentes, a região tratada pode diminuir de espessura, reduzindo a obstrução da via de saída do ventrículo esquerdo e facilitando o fluxo sanguíneo.",
+  "linkedModels": [
+    {
+      "id": "19",
+      "label": "Sistema Arterial"
+    },
+    {
+      "id": "20",
+      "label": "Sistema Venoso"
+    },
+    {
+      "id": "4",
+      "label": "Coração"
+    },
+    {
+      "id": "32",
+      "label": "Sistema Cardiovascular"
+    }
+  ],
+  "resources": [],
+  "Skin_1+Skin_2+ninteract": {
+    "objname": "Pele",
+    "description": ""
+  },
+  "Veins": {
+    "objname": "Veias",
+    "description": "Vasos sanguíneos responsáveis pelo retorno do sangue ao coração. São apresentadas no modelo como referência do sistema cardiovascular, enquanto o acesso utilizado para a ablação septal é realizado pelo sistema arterial."
+  },
+  "Arteries": {
+    "objname": "Artérias",
+    "description": "Vasos sanguíneos que conduzem o sangue para diferentes regiões do organismo. Na ablação septal com álcool, o cateter percorre o sistema arterial até alcançar a circulação coronariana e a artéria septal responsável pela irrigação da região que será tratada."
+  },
+  "ArterieFemoral": {
+    "objname": "Artéria Femoral",
+    "description": "Importante artéria do membro inferior que pode ser utilizada como via de acesso para a introdução do cateter. A partir dela, o cateter pode ser conduzido pelo sistema arterial em direção à aorta e às artérias coronárias até alcançar o vaso septal selecionado para o procedimento."
+  },
+  "Aortaa": {
+    "objname": "Aorta",
+    "description": "Maior artéria do organismo, responsável por receber o sangue ejetado pelo ventrículo esquerdo e distribuí-lo para a circulação sistêmica. Durante o procedimento, integra o trajeto arterial utilizado para alcançar a circulação coronariana."
+  },
+  "Aortic_valve": {
+    "objname": "Valva Aórtica",
+    "description": "Valva localizada entre o ventrículo esquerdo e a aorta. Permite a passagem do sangue para a circulação sistêmica e impede seu retorno. O septo hipertrofiado pode estreitar a via de saída do ventrículo esquerdo abaixo dessa valva."
+  },
+  "Capslice_Type2": {
+    "objname": "Parte Anterior do Coração",
+    "description": "Porção anterior do coração utilizada no modelo para completar sua anatomia externa. Pode ser ocultada para permitir a visualização das câmaras cardíacas, das valvas, do septo interventricular e das alterações representadas no interior do coração."
+  },
+  "Mitral_valve": {
+    "objname": "Valva Mitral",
+    "description": "Valva localizada entre o átrio esquerdo e o ventrículo esquerdo. Na cardiomiopatia hipertrófica obstrutiva, alterações do fluxo na via de saída ventricular podem estar associadas ao movimento anormal da valva mitral durante a contração cardíaca."
+  },
+  "Pulmonary_valve": {
+    "objname": "Valva Pulmonar",
+    "description": "Valva localizada entre o ventrículo direito e o tronco pulmonar, permitindo a passagem do sangue em direção aos pulmões e impedindo seu retorno ao ventrículo."
+  },
+  "Pulmonary_vein": {
+    "objname": "Veia Pulmonar",
+    "description": "Vaso responsável por conduzir sangue oxigenado dos pulmões para o átrio esquerdo, participando da circulação pulmonar."
+  },
+  "Pulmoneryartery": {
+    "objname": "Artéria Pulmonar",
+    "description": "Vaso que conduz o sangue do ventrículo direito em direção aos pulmões para realização das trocas gasosas."
+  },
+  "Tricuspic_valve": {
+    "objname": "Valva Tricúspide",
+    "description": "Valva localizada entre o átrio direito e o ventrículo direito, permitindo a passagem do sangue entre essas câmaras e ajudando a impedir seu refluxo durante a contração ventricular."
+  },
+  "TuboCateter": {
+    "objname": "Cateter",
+    "description": "Tubo fino e flexível introduzido no sistema arterial e conduzido até o coração. Na ablação septal com álcool, permite alcançar seletivamente uma artéria septal e administrar uma pequena quantidade de álcool na região destinada ao tratamento."
+  },
+  "Back_Heart": {
+    "objname": "Coração com Septo Interventricular Hipertrofiado",
+    "description": "Representação do coração com espessamento do septo interventricular, alteração que pode estreitar a via de saída do ventrículo esquerdo na cardiomiopatia hipertrófica obstrutiva. Na ablação septal, o álcool é administrado em uma artéria que irriga uma região selecionada do septo, provocando uma lesão controlada. Durante a cicatrização ocorre formação de tecido cicatricial e remodelamento da área tratada, que pode apresentar redução de espessura e, consequentemente, diminuir a obstrução ao fluxo de sangue."
+  }
+}

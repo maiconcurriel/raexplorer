@@ -1,45 +1,45 @@
 {
   "objname": "Hipertireoidismo",
   "objsystem": [
-    "?"
+    "Endócrino"
   ],
-  "objdescription": "?",
+  "objdescription": "O hipertireoidismo é uma condição caracterizada pela produção ou liberação excessiva dos hormônios tireoidianos T3 e T4, aumentando a atividade metabólica do organismo. A função da tireoide é regulada pelo eixo hipotálamo–hipófise–tireoide: o hipotálamo produz TRH, que estimula a hipófise a liberar TSH; o TSH, por sua vez, estimula a tireoide a produzir T3 e T4. Quando os níveis de hormônios tireoidianos estão elevados, T3 e T4 exercem retroalimentação negativa sobre o hipotálamo e a hipófise, reduzindo a liberação de TRH e TSH. Na animação, esse mecanismo é representado pela pequena quantidade de TRH e TSH e pela grande quantidade de T3 e T4 direcionada ao organismo. As cores utilizadas permitem diferenciar os hormônios durante esse processo.",
   "linkedModels": [],
   "resources": [],
   "T3": {
-    "objname": "?",
-    "description": "?"
+    "objname": "Triiodotironina (T3)",
+    "description": "Hormônio tireoidiano biologicamente ativo que participa da regulação do metabolismo, consumo de energia, produção de calor e funcionamento de diversos órgãos. Na animação, é representado em verde e aparece em grande quantidade, indicando níveis elevados associados ao hipertireoidismo."
   },
   "T4": {
-    "objname": "?",
-    "description": "?"
+    "objname": "Tiroxina (T4)",
+    "description": "Principal hormônio produzido e liberado pela tireoide. Grande parte do T4 pode ser convertida em T3 nos tecidos, contribuindo para a regulação do metabolismo. Na animação, é representado em roxo e aparece em grande quantidade, indicando a elevação dos hormônios tireoidianos."
   },
   "TH": {
-    "objname": "?",
-    "description": "?"
+    "objname": "TRH (Hormônio Liberador de Tireotropina)",
+    "description": "Hormônio produzido pelo hipotálamo que estimula a hipófise a secretar TSH. Na animação, é representado em azul e aparece em pequena quantidade devido à retroalimentação negativa exercida pelos níveis elevados de T3 e T4."
   },
   "TSH": {
-    "objname": "?",
-    "description": "?"
+    "objname": "TSH (Hormônio Estimulante da Tireoide)",
+    "description": "Hormônio produzido pela hipófise que estimula a tireoide a produzir e liberar hormônios tireoidianos. Na animação, é representado em rosa e aparece em pequena quantidade, demonstrando a redução de sua liberação em resposta aos níveis elevados de T3 e T4."
   },
   "Hipofise": {
-    "objname": "?",
-    "description": "?"
+    "objname": "Hipófise",
+    "description": "Glândula localizada na base do cérebro que participa do controle da tireoide. Em resposta ao TRH produzido pelo hipotálamo, libera TSH. Quando os níveis de T3 e T4 estão elevados, a retroalimentação negativa reduz a secreção de TSH pela hipófise."
   },
   "Hipotalamo": {
-    "objname": "?",
-    "description": "?"
+    "objname": "Hipotálamo",
+    "description": "Região cerebral que participa do controle do sistema endócrino. Produz TRH, hormônio responsável por estimular a hipófise. Níveis elevados de T3 e T4 exercem retroalimentação negativa sobre esse eixo, contribuindo para a redução da liberação de TRH."
   },
   "Thyroid": {
-    "objname": "?",
-    "description": "?"
+    "objname": "Glândula Tireoide",
+    "description": "Glândula endócrina localizada na região anterior do pescoço e responsável pela produção dos hormônios T3 e T4. No hipertireoidismo, ocorre produção ou liberação excessiva de hormônios tireoidianos, aumentando seus efeitos sobre diversos tecidos do organismo."
   },
   "Head+ninteract": {
-    "objname": "?",
-    "description": "(chat, não precisa descrição, objeto marcado como sem interação)"
+    "objname": "Cabeça",
+    "description": ""
   },
   "Skin+ninteract": {
-    "objname": "?",
-    "description": "(chat, não precisa descrição, objeto marcado como sem interação)"
+    "objname": "Pele",
+    "description": ""
   }
 }
