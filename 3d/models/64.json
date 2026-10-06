@@ -1,0 +1,58 @@
+{
+  "objname": "Incontinência Urinária",
+  "objsystem": [
+    "Urinário"
+  ],
+  "objdescription": "A incontinência urinária é a perda involuntária de urina e pode ocorrer por diferentes alterações nos mecanismos responsáveis pelo armazenamento e pela eliminação urinária. O controle da micção depende da integração entre a bexiga, os esfíncteres urinários, a medula espinal, nervos periféricos e centros do encéfalo. Conforme a bexiga se enche, receptores de estiramento em sua parede enviam informações ao sistema nervoso sobre o volume urinário. Quando a micção é apropriada, circuitos nervosos coordenam a contração do músculo detrusor da bexiga e o relaxamento dos mecanismos esfincterianos, permitindo a saída da urina. Alterações nessa coordenação, hiperatividade da bexiga, comprometimento dos esfíncteres ou outras condições podem resultar em diferentes formas de incontinência. A animação representa didaticamente a comunicação nervosa envolvida no enchimento e esvaziamento da bexiga.",
+  "linkedModels": [
+    {
+      "id": "10",
+      "label": "Sistema Urinário Feminino"
+    },
+    {
+      "id": "21",
+      "label": "Sistema Nervoso"
+    }
+  ],
+  "resources": [],
+  "Nervous001": {
+    "objname": "Sistema Nervoso",
+    "description": "Participa do controle do armazenamento e da eliminação da urina por meio de circuitos que envolvem nervos periféricos, medula espinal e centros do encéfalo. Essas estruturas recebem informações sobre o enchimento da bexiga e coordenam as respostas necessárias para manter a continência ou iniciar a micção."
+  },
+  "Signal+nisolar": {
+    "objname": "Sinal Nervoso da Micção",
+    "description": "Representação didática da comunicação entre a bexiga e o sistema nervoso. Durante o enchimento, receptores de estiramento da parede da bexiga enviam sinais sensitivos principalmente para a medula espinal sacral e para centros superiores. Durante a micção, comandos nervosos coordenam a contração da bexiga e o relaxamento dos mecanismos responsáveis pela retenção da urina."
+  },
+  "Urine+nisolar": {
+    "objname": "Urina",
+    "description": "Líquido produzido pelos rins e transportado pelos ureteres até a bexiga, onde permanece armazenado até a micção. Na animação, seu aumento de volume representa o enchimento progressivo da bexiga e seu escoamento pela uretra representa o esvaziamento vesical."
+  },
+  "Bladder": {
+    "objname": "Bexiga Urinária",
+    "description": "Órgão muscular responsável pelo armazenamento temporário da urina. Conforme seu volume aumenta, o estiramento da parede ativa receptores que enviam informações ao sistema nervoso. Durante a micção, o músculo detrusor da parede vesical se contrai para favorecer a expulsão da urina."
+  },
+  "Ureter_1Ureter_2": {
+    "objname": "Ureteres",
+    "description": "Canais musculares que transportam continuamente a urina produzida pelos rins até a bexiga por meio de movimentos peristálticos. Participam do enchimento da bexiga, mas não são responsáveis pelo mecanismo de continência urinária."
+  },
+  "Kidneyfront": {
+    "objname": "Rim - Porção Anterior",
+    "description": "O rim filtra o sangue, participa da regulação do equilíbrio de água e eletrólitos e produz a urina. A urina formada é direcionada para as vias urinárias e posteriormente transportada pelos ureteres até a bexiga."
+  },
+  "KidneyBack": {
+    "objname": "Rim - Porção Posterior",
+    "description": "Porção posterior do rim, órgão responsável pela filtração do sangue e formação da urina. É apresentada no modelo para contextualizar a origem da urina antes de seu transporte até a bexiga."
+  },
+  "Pyramids": {
+    "objname": "Pirâmides Renais",
+    "description": "Estruturas da medula renal que recebem a urina formada nos néfrons e a conduzem em direção aos cálices e à pelve renal, de onde segue para o ureter."
+  },
+  "Externalurethralsphincter": {
+    "objname": "Esfíncter Externo da Uretra",
+    "description": "Músculo que participa do controle voluntário da micção. Durante o armazenamento da urina, sua contração contribui para manter a uretra fechada. Quando a micção é voluntariamente permitida, seu relaxamento contribui para a passagem da urina pela uretra. Alterações em mecanismos de fechamento uretral podem contribuir para determinados tipos de incontinência."
+  },
+  "Urethra": {
+    "objname": "Uretra",
+    "description": "Canal responsável por conduzir a urina da bexiga para o exterior do corpo durante a micção. A manutenção adequada da continência depende, entre outros fatores, dos mecanismos musculares e nervosos que controlam o fechamento e a abertura da via urinária."
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "objname": "Infecção Urinária",
+  "objsystem": [
+    "Urinário"
+  ],
+  "objdescription": "A infecção do trato urinário (ITU) ocorre quando microrganismos, geralmente bactérias, colonizam e se multiplicam em estruturas do sistema urinário. A maioria das infecções começa nas vias urinárias inferiores, podendo envolver a uretra e a bexiga. Em alguns casos, a infecção pode ascender pelos ureteres e alcançar os rins, causando uma infecção mais grave. Entre os sintomas podem ocorrer ardor ou dor ao urinar, aumento da frequência e urgência urinária, desconforto na região inferior do abdômen e alterações na urina. Quando os rins são acometidos, podem surgir febre, calafrios e dor lombar. O modelo apresenta estruturas do sistema urinário feminino e permite visualizar o possível trajeto ascendente da infecção desde a uretra e a bexiga até os ureteres e rins.",
+  "linkedModels": [
+    {
+      "id": "10",
+      "label": "Sistema Urinário Feminino"
+    },
+    {
+      "id": "11",
+      "label": "Sistema Reprodutor Feminino"
+    }
+  ],
+  "resources": [],
+  "Urine+nisolar": {
+    "objname": "Urina com Representação de Infecção",
+    "description": "Representação didática da urina em uma infecção do trato urinário. A presença de bactérias e da resposta inflamatória pode estar associada a alterações urinárias, como leucócitos e, em alguns casos, sangue ou mudanças na aparência e no odor da urina. A infecção ocorre nos tecidos do trato urinário, portanto esta peça não significa que a urina, isoladamente, seja o local da doença."
+  },
+  "Bladder": {
+    "objname": "Bexiga Urinária",
+    "description": "Órgão responsável pelo armazenamento temporário da urina. A infecção da bexiga é denominada cistite e constitui uma das formas mais comuns de infecção do trato urinário, podendo causar ardor ao urinar, urgência, aumento da frequência urinária e desconforto na região inferior do abdômen."
+  },
+  "Ureter_1+Ureter_2": {
+    "objname": "Ureter",
+    "description": "Canal que transporta a urina do rim até a bexiga. Em uma infecção urinária ascendente, microrganismos provenientes das vias urinárias inferiores podem percorrer o ureter e alcançar o rim."
+  },
+  "Pyramids": {
+    "objname": "Pirâmides Renais",
+    "description": "Estruturas da medula renal que conduzem a urina formada nos néfrons em direção aos cálices renais. São apresentadas para contextualizar a anatomia interna do rim em casos nos quais uma infecção urinária ascendente alcança o trato urinário superior."
+  },
+  "Kidneyfront": {
+    "objname": "Rim - Porção Anterior",
+    "description": "O rim filtra o sangue, regula a composição dos líquidos corporais e produz a urina. Uma infecção urinária que ascende da bexiga pelos ureteres pode alcançar o rim e provocar pielonefrite, condição que pode causar febre, calafrios e dor na região lombar."
+  },
+  "KidneyBack": {
+    "objname": "Rim - Porção Posterior",
+    "description": "Porção posterior do rim, órgão responsável pela filtração do sangue e formação da urina. O comprometimento renal por uma infecção ascendente caracteriza uma forma de infecção do trato urinário superior e requer maior atenção devido ao risco de complicações."
+  },
+  "Externalurethralsphincter": {
+    "objname": "Esfíncter Externo da Uretra",
+    "description": "Músculo responsável pelo controle voluntário da saída da urina através da uretra. É apresentado principalmente como referência anatômica e não constitui o principal local da infecção urinária."
+  },
+  "Urethra": {
+    "objname": "Uretra",
+    "description": "Canal que conduz a urina da bexiga para o exterior do corpo. A uretra pode funcionar como porta de entrada para microrganismos que ascendem pelo trato urinário. Quando ocorre inflamação infecciosa da uretra, o quadro é denominado uretrite."
+  },
+  "Urethra001+nisolar+ninteract": {
+    "objname": "Uretra Feminina",
+    "description": "Representação da uretra feminina utilizada para contextualizar a via de entrada e ascensão de microrganismos no trato urinário. A uretra feminina é relativamente curta e sua abertura está próxima às regiões genital e anal, características anatômicas que facilitam a ascensão de bactérias até a bexiga."
+  }
+}

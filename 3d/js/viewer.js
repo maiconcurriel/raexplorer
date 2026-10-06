@@ -296,7 +296,7 @@ function load3DModel(id) {
     }
 
     gltfLoader.load(
-        `models/${id}.glb`,
+        `https://maiconcurriel.github.io/raexplorer/3d/models/${id}.glb`,
         (gltf) => {
             modelCache.set(id, gltf);
             finishSetup(gltf);
@@ -824,8 +824,9 @@ window.voltarDoIsolamento = (id) => {
 // Loop principal de renderização (60fps) que atualiza o relógio, o mixer de animações, os controles de órbita e renderiza os seletores.
 function animate() {
     requestAnimationFrame(animate);
+
     const delta = clock.getDelta();
-    
+
     if (mixer) {
         if (isProgressBarDragging) {
             mixer.update(0);
@@ -834,25 +835,36 @@ function animate() {
         }
 
         if (progressBarEl && currentAction && !isProgressBarDragging) {
-            const progress = (mixer.time % currentAction.getClip().duration) / currentAction.getClip().duration * 100;
+            const progress =
+                (mixer.time % currentAction.getClip().duration) /
+                currentAction.getClip().duration * 100;
+
             progressBarEl.value = progress;
         }
     }
-    
+
     if (controls) controls.update();
 
+    // Atualiza TODO o callout antes de renderizar
     if (objetoAlvoCallout) {
         objetoAlvoCallout.updateMatrixWorld(true);
-        atualizarPosicaoCallout();
+
+        atualizarLimiteCallout();
+
+        if (labelDot) {
+            atualizarTamanhoCalloutDot();
+        }
     }
-    
+
     if (composer) {
         composer.render();
     } else {
         renderer.render(scene, camera);
     }
-    
-    if (labelRenderer) labelRenderer.render(scene, camera);
+
+    if (labelRenderer) {
+        labelRenderer.render(scene, camera);
+    }
 }
 
 const RESOURCE_CONFIG = {
@@ -1292,7 +1304,7 @@ async function loadObjectData(id) {
 // Carrega de forma silenciosa e antecipada o arquivo .glb de modelos vinculados ou relacionados para acelerar a troca de telas.
 function preloadModel(id) {
     if (!id || modelCache.has(id)) return;
-    gltfLoader.load(`models/${id}.glb`, (gltf) => {
+    gltfLoader.load(`https://maiconcurriel.github.io/raexplorer/3d/models/${id}.glb`, (gltf) => {
         modelCache.set(id, gltf);
         console.log(`[PRELOAD] Modelo ${id} carregado em cache`);
     });
@@ -1333,7 +1345,7 @@ function criarCallout(object, texto, clickPoint = null, chaveJson = null) {
     
     const labelPosition = pontoMundoBase.clone().add(vetorDeslocamentoEtiqueta);
 
-    const dotGeo = new THREE.SphereGeometry(0.008, 16, 16);
+    const dotGeo = new THREE.SphereGeometry(0.006, 16, 16);
     const dotMat = new THREE.MeshBasicMaterial({ color: 0x007bff, depthTest: false });
     labelDot = new THREE.Mesh(dotGeo, dotMat);
     labelDot.renderOrder = 999;
@@ -1394,7 +1406,14 @@ function removerCallout() {
 
     if (labelDot) { scene.remove(labelDot); labelDot.geometry.dispose(); labelDot.material.dispose(); labelDot = null; }
     if (labelLine) { scene.remove(labelLine); labelLine.geometry.dispose(); labelLine.material.dispose(); labelLine = null; }
-    if (label2DObject) { scene.remove(label2DObject); label2DObject = null; }
+    if (label2DObject) {
+        if (label2DObject.element) {
+            label2DObject.element.style.translate = '';
+        }
+
+        scene.remove(label2DObject);
+        label2DObject = null;
+    }
 }
 
 function atualizarPosicaoCallout() {
@@ -1422,6 +1441,154 @@ function atualizarPosicaoCallout() {
 
         labelLine.geometry.attributes.position.needsUpdate = true;
     }
+}
+
+function atualizarLimiteCallout() {
+    if (!label2DObject || !camera || !objetoAlvoCallout || !pontoLocalClique) {
+        return;
+    }
+
+    const container = document.getElementById('three-container');
+    if (!container) return;
+
+    const element = label2DObject.element;
+
+    const largura = container.clientWidth;
+    const altura = container.clientHeight;
+
+    if (largura <= 0 || altura <= 0) return;
+
+    // ========================================
+    // 1. PONTO REAL CLICADO NO OBJETO
+    // ========================================
+
+    const origem = pontoLocalClique
+        .clone()
+        .applyMatrix4(objetoAlvoCallout.matrixWorld);
+
+    // ========================================
+    // 2. POSIÇÃO 3D NATURAL DO CARD
+    // ========================================
+
+    const posicaoNatural = origem
+        .clone()
+        .add(vetorDeslocamentoEtiqueta);
+
+    // ========================================
+    // 3. PROJETA O CARD PARA A TELA
+    // ========================================
+
+    const projetado = posicaoNatural
+        .clone()
+        .project(camera);
+
+    let x = (projetado.x * 0.5 + 0.5) * largura;
+    let y = (-projetado.y * 0.5 + 0.5) * altura;
+
+    // ========================================
+    // 4. LIMITES DO CARD
+    // ========================================
+
+    const cardWidth = element.offsetWidth;
+    const cardHeight = element.offsetHeight;
+
+    const margem = 15;
+
+    const metadeW = cardWidth / 2;
+    const metadeH = cardHeight / 2;
+
+    const minX = margem + metadeW;
+    const maxX = largura - margem - metadeW;
+
+    const minY = margem + metadeH;
+    const maxY = altura - margem - metadeH;
+
+    // ========================================
+    // 5. LIMITA À VIEWPORT
+    // ========================================
+
+    const xLimitado = THREE.MathUtils.clamp(
+        x,
+        minX,
+        maxX
+    );
+
+    const yLimitado = THREE.MathUtils.clamp(
+        y,
+        minY,
+        maxY
+    );
+
+    // ========================================
+    // 6. CONVERTE DE VOLTA PARA NDC
+    // ========================================
+
+    const ndcX = (xLimitado / largura) * 2 - 1;
+    const ndcY = -(yLimitado / altura) * 2 + 1;
+
+    // Mantemos a profundidade original do card
+    const posicaoFinal = new THREE.Vector3(
+        ndcX,
+        ndcY,
+        projetado.z
+    );
+
+    posicaoFinal.unproject(camera);
+
+    // ========================================
+    // 7. MOVE O CSS2DOBJECT DE VERDADE
+    // ========================================
+
+    label2DObject.position.copy(posicaoFinal);
+
+    // ========================================
+    // 8. ATUALIZA A LINHA
+    // ========================================
+
+    if (labelLine) {
+
+        const positions =
+            labelLine.geometry.attributes.position.array;
+
+        // início = ponto clicado
+        positions[0] = origem.x;
+        positions[1] = origem.y;
+        positions[2] = origem.z;
+
+        // final = posição REAL do card
+        positions[3] = posicaoFinal.x;
+        positions[4] = posicaoFinal.y;
+        positions[5] = posicaoFinal.z;
+
+        labelLine.geometry.attributes.position.needsUpdate = true;
+
+        // Importante porque estamos alterando
+        // manualmente os vértices da geometria
+        labelLine.geometry.computeBoundingSphere();
+    }
+
+    // ========================================
+    // 9. PONTO AZUL CONTINUA NO CLIQUE
+    // ========================================
+
+    if (labelDot) {
+        labelDot.position.copy(origem);
+    }
+}
+
+function atualizarTamanhoCalloutDot() {
+    if (!labelDot || !camera) return;
+
+    const distancia = camera.position.distanceTo(labelDot.position);
+
+    // Quanto mais perto a câmera, menor a bolinha
+    const escala = THREE.MathUtils.clamp(
+        distancia * 0.35,
+        0.15,
+        1
+    );
+
+    labelDot.scale.setScalar(escala);
 }
 
 window.toggleFloatingSearch = toggleFloatingSearch;

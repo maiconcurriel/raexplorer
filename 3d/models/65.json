@@ -1,0 +1,62 @@
+{
+  "objname": "Insuficiência Renal",
+  "objsystem": [
+    "Urinário"
+  ],
+  "objdescription": "A insuficiência renal ocorre quando os rins perdem parcial ou significativamente a capacidade de filtrar o sangue, eliminar resíduos e excesso de líquidos e contribuir para o equilíbrio de eletrólitos e outras funções do organismo. Pode ocorrer de forma aguda ou estar relacionada à progressão de uma doença renal crônica. Com a perda crônica de tecido renal funcional, alguns rins podem apresentar atrofia e redução de tamanho, embora essa alteração não esteja presente em todas as causas de insuficiência renal. No modelo, o rim esquerdo apresenta tamanho reduzido para representar didaticamente uma alteração renal crônica, enquanto o rim direito mantém dimensões preservadas para comparação. A aparência e o tamanho dos rins podem variar conforme a causa e o estágio da doença.",
+  "linkedModels": [
+    {
+      "id": "10",
+      "label": "Sistema Urinário Feminino"
+    }
+  ],
+  "resources": [],
+  "KidneyArteriesL": {
+    "objname": "Artérias do Rim Esquerdo",
+    "description": "Vasos responsáveis pelo fornecimento de sangue ao rim esquerdo. O fluxo sanguíneo renal é essencial para que os néfrons realizem a filtração do sangue. No modelo, acompanham o rim esquerdo reduzido, utilizado para representar uma alteração renal crônica."
+  },
+  "KidneyVeinsL": {
+    "objname": "Veias do Rim Esquerdo",
+    "description": "Vasos responsáveis pela drenagem do sangue do rim esquerdo após sua passagem pela circulação renal. São apresentadas junto ao rim reduzido para contextualizar sua vascularização."
+  },
+  "Bladder": {
+    "objname": "Bexiga Urinária",
+    "description": "Órgão responsável pelo armazenamento temporário da urina produzida pelos rins. A bexiga não é o local primário da insuficiência renal, mas integra o sistema responsável pelo armazenamento e posterior eliminação da urina."
+  },
+  "KidneyBackL": {
+    "objname": "Porção Posterior do Rim Esquerdo com Atrofia",
+    "description": "Porção posterior do rim esquerdo representada com tamanho reduzido. A atrofia renal pode ocorrer em determinadas doenças renais crônicas devido à perda progressiva de tecido funcional e formação de alterações estruturais. A redução de tamanho apresentada no modelo é uma representação didática e não ocorre em todas as formas de insuficiência renal."
+  },
+  "KidneyfrontL": {
+    "objname": "Porção Anterior do Rim Esquerdo com Atrofia",
+    "description": "Porção anterior do rim esquerdo representada com redução de tamanho associada à perda crônica de tecido renal funcional. Conforme determinadas doenças renais progridem, podem ocorrer alterações estruturais e diminuição das dimensões do rim."
+  },
+  "PyramidsL": {
+    "objname": "Pirâmides Renais Esquerdas",
+    "description": "Estruturas da medula do rim esquerdo que participam da condução da urina formada nos néfrons em direção aos cálices renais. No modelo, acompanham a redução estrutural do rim esquerdo afetado."
+  },
+  "UreterL_1+UreterL_2": {
+    "objname": "Ureter Esquerdo",
+    "description": "Canal que transporta a urina produzida pelo rim esquerdo até a bexiga. É apresentado para demonstrar o trajeto da urina e não representa, por si só, o local responsável pela insuficiência renal."
+  },
+  "KidneyBackR": {
+    "objname": "Porção Posterior do Rim Direito",
+    "description": "Porção posterior do rim direito, apresentada com tamanho preservado no modelo para comparação com o rim esquerdo reduzido. Os rins participam da filtração do sangue, eliminação de resíduos e manutenção do equilíbrio interno do organismo."
+  },
+  "KidneyfrontR": {
+    "objname": "Porção Anterior do Rim Direito",
+    "description": "Porção anterior do rim direito, representada com dimensões preservadas para servir como referência anatômica em comparação ao rim esquerdo atrófico."
+  },
+  "PyramidsR": {
+    "objname": "Pirâmides Renais Direitas",
+    "description": "Estruturas localizadas na medula do rim direito que recebem a urina formada nos néfrons e a conduzem em direção aos cálices e à pelve renal."
+  },
+  "UreterR_1+UreterR_2": {
+    "objname": "Ureter Direito",
+    "description": "Canal responsável por transportar a urina produzida pelo rim direito até a bexiga por meio de movimentos peristálticos."
+  },
+  "Body_Skin_2+Body_Skin_1+nisolar+ninteract": {
+    "objname": "Corpo Humano",
+    "description": ""
+  }
+}
