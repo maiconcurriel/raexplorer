@@ -1,0 +1,21 @@
+{
+  "objname": "Dinâmica respiratória",
+  "objsystem": [
+    "?"
+  ],
+  "objdescription": "?",
+  "linkedModels": [],
+  "resources": [],
+  "Diaphragm": {
+    "objname": "Diafragma",
+    "description": "?"
+  },
+  "LeftLung+RightLung": {
+    "objname": "Pulmão",
+    "description": "?"
+  },
+  "Caixa_1": {
+    "objname": "Caixa Torácica",
+    "description": "?"
+  }
+}

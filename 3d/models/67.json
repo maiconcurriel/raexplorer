@@ -1,0 +1,33 @@
+{
+  "objname": "Dinâmica respiratória com o coração",
+  "objsystem": [
+    "?"
+  ],
+  "objdescription": "?",
+  "linkedModels": [],
+  "resources": [],
+  "Aorta+AorticValve+Capslice_1+Capslice_2+MitralValve+PulmonaryValve+PulmonaryVein+PulmonaryArtery+TricuspicValve": {
+    "objname": "Coração",
+    "description": "?"
+  },
+  "Arteries": {
+    "objname": "Artérias",
+    "description": "?"
+  },
+  "Veins": {
+    "objname": "Veias",
+    "description": "?"
+  },
+  "Diaphragm": {
+    "objname": "Diafragma",
+    "description": "?"
+  },
+  "LeftLung+RightLung": {
+    "objname": "Pulmão",
+    "description": "?"
+  },
+  "Caixa_1": {
+    "objname": "Caixa Torácica",
+    "description": "?"
+  }
+}

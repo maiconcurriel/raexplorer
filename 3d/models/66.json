@@ -1,0 +1,17 @@
+{
+  "objname": "Sarcoma de Kaposi",
+  "objsystem": [
+    "Tegumentar"
+  ],
+  "objdescription": "O Sarcoma de Kaposi é uma neoplasia vascular associada à infecção pelo herpesvírus humano tipo 8 (HHV-8), caracterizada pela proliferação anormal de células relacionadas ao revestimento dos vasos sanguíneos e linfáticos. Pode provocar o surgimento de manchas, placas ou nódulos na pele, geralmente com coloração avermelhada, violácea ou acastanhada. As lesões podem aparecer em diferentes regiões do corpo e, em alguns casos, comprometer mucosas, linfonodos e órgãos internos. A doença pode ocorrer em diferentes contextos, sendo especialmente importante em pessoas com imunossupressão, incluindo aquelas com HIV/AIDS. O modelo representa didaticamente múltiplas lesões cutâneas associadas ao Sarcoma de Kaposi, distribuídas principalmente pelo tronco e membros superiores.",
+  "linkedModels": [],
+  "resources": [],
+  "Skin+ninteract": {
+    "objname": "Pele",
+    "description": ""
+  },
+  "Sarcoma+nisolar": {
+    "objname": "Lesões Cutâneas do Sarcoma de Kaposi",
+    "description": "Representação de lesões cutâneas provocadas pelo Sarcoma de Kaposi, uma neoplasia caracterizada pela proliferação anormal de células associadas aos vasos sanguíneos e linfáticos. Essas lesões podem apresentar-se como manchas, placas ou nódulos de coloração avermelhada, violácea ou acastanhada, variando em tamanho, quantidade e distribuição. No modelo, as regiões destacadas representam didaticamente manifestações da doença na superfície da pele."
+  }
+}

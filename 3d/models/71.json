@@ -1,0 +1,57 @@
+{
+  "objname": "Pressão Arterial",
+  "objsystem": [
+    "?"
+  ],
+  "objdescription": "?",
+  "linkedModels": [],
+  "resources": [],
+  "07_Involucro": {
+    "objname": "Túnica Adventícia",
+    "description": "?"
+  },
+  "06_Fibroblastos": {
+    "objname": "Fibroblastos",
+    "description": "?"
+  },
+  "06_Conjuntivo_externo": {
+    "objname": "Tecido Conjuntivo Externo",
+    "description": "?"
+  },
+  "05_Elastica_externa_105_Elastica_externa_2": {
+    "objname": "Lâmina Elástica Externa",
+    "description": "?"
+  },
+  "04_Musculo_liso": {
+    "objname": "Músculo Liso",
+    "description": "?"
+  },
+  "04_Fasciculos_musculares_relevo_104_Fasciculos_musculares_relevo_2": {
+    "objname": "Fascículos de Músculo Liso",
+    "description": "?"
+  },
+  "03_Elastica_interna_103_Elastica_interna_2": {
+    "objname": "Lâmina Elástica Interna",
+    "description": "?"
+  },
+  "02_Conjuntivo_interno": {
+    "objname": "Tecido Conjuntivo Subendotelial",
+    "description": "?"
+  },
+  "01_Relevo_celular_do_endotelio": {
+    "objname": "Relevo das Células Endoteliais",
+    "description": "?"
+  },
+  "01_Nucleos_endoteliais": {
+    "objname": "Núcleos das Células Endoteliais",
+    "description": "?"
+  },
+  "01_Endotelio_101_Endotelio_2": {
+    "objname": "Endotélio",
+    "description": "?"
+  },
+  "Hemacia_001": {
+    "objname": "Hemácia",
+    "description": "?"
+  }
+}

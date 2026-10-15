@@ -296,7 +296,7 @@ function load3DModel(id) {
     }
 
     gltfLoader.load(
-        `https://maiconcurriel.github.io/raexplorer/3d/models/${id}.glb`,
+        `models/${id}.glb`,
         (gltf) => {
             modelCache.set(id, gltf);
             finishSetup(gltf);
@@ -1304,7 +1304,7 @@ async function loadObjectData(id) {
 // Carrega de forma silenciosa e antecipada o arquivo .glb de modelos vinculados ou relacionados para acelerar a troca de telas.
 function preloadModel(id) {
     if (!id || modelCache.has(id)) return;
-    gltfLoader.load(`https://maiconcurriel.github.io/raexplorer/3d/models/${id}.glb`, (gltf) => {
+    gltfLoader.load(`models/${id}.glb`, (gltf) => {
         modelCache.set(id, gltf);
         console.log(`[PRELOAD] Modelo ${id} carregado em cache`);
     });
