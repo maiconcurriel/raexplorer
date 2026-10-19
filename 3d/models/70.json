@@ -1,21 +1,26 @@
 {
-  "objname": "Dinâmica respiratória",
+  "objname": "Dinâmica Respiratória",
   "objsystem": [
-    "?"
+    "Respiratório"
   ],
-  "objdescription": "?",
-  "linkedModels": [],
+  "objdescription": "A dinâmica respiratória corresponde aos movimentos de inspiração e expiração que permitem a entrada e a saída de ar dos pulmões. Durante a inspiração, o diafragma se contrai e desce, enquanto a caixa torácica se expande, aumentando o volume da cavidade torácica e reduzindo a pressão no interior dos pulmões, o que favorece a entrada de ar. Durante a expiração tranquila, o diafragma relaxa e retorna à sua posição elevada, enquanto a caixa torácica diminui seu volume e os pulmões retraem elasticamente, promovendo a saída do ar. Esses movimentos são fundamentais para a ventilação pulmonar e a renovação do ar nos alvéolos. O modelo apresenta uma animação didática da movimentação coordenada do diafragma, dos pulmões e da caixa torácica durante o ciclo respiratório.",
+  "linkedModels": [
+    {
+    "id": "23",
+    "label": "Sistema Respiratório"
+  }
+  ],
   "resources": [],
   "Diaphragm": {
     "objname": "Diafragma",
-    "description": "?"
+    "description": "Principal músculo da inspiração, localizado abaixo dos pulmões e responsável por separar as cavidades torácica e abdominal. Durante a inspiração, contrai-se e desce, aumentando o volume da cavidade torácica e favorecendo a entrada de ar nos pulmões. Durante a expiração tranquila, relaxa e retorna à sua posição elevada, contribuindo para a redução do volume torácico."
   },
   "LeftLung+RightLung": {
-    "objname": "Pulmão",
-    "description": "?"
+    "objname": "Pulmões",
+    "description": "Órgãos do sistema respiratório responsáveis pelas trocas gasosas entre o ar e o sangue. Durante a inspiração, expandem-se passivamente em resposta ao aumento do volume torácico e à redução da pressão intrapulmonar. Durante a expiração, retraem-se elasticamente, favorecendo a saída do ar. A animação demonstra a expansão e a retração dos pulmões ao longo do ciclo respiratório."
   },
   "Caixa_1": {
     "objname": "Caixa Torácica",
-    "description": "?"
+    "description": "Estrutura formada pelas costelas, esterno, vértebras torácicas e suas articulações, responsável por proteger os órgãos da cavidade torácica e participar dos movimentos respiratórios. Durante a inspiração, a ação dos músculos respiratórios promove sua expansão, aumentando o volume da cavidade torácica. Durante a expiração tranquila, ocorre o retorno à posição de repouso, acompanhando a retração pulmonar."
   }
 }

@@ -1,0 +1,102 @@
+{
+  "objname": "Câncer de Mama: Estágio 3",
+  "objsystem": [
+    "Reprodutor"
+  ],
+  "objdescription": "O câncer de mama em estágio III corresponde a uma fase localmente avançada da doença, caracterizada por maior extensão tumoral, comprometimento significativo dos linfonodos regionais ou invasão de estruturas próximas, dependendo do subestágio. O carcinoma invasivo pode apresentar crescimento acentuado no tecido mamário e disseminação para linfonodos axilares, infraclaviculares, supraclaviculares ou mamários internos. Em determinadas situações, também pode comprometer a pele ou a parede torácica. Apesar da extensão local ou regional, o estágio III não apresenta metástases à distância. O modelo representa didaticamente uma lesão mamária de maior dimensão e múltiplos focos tumorais associados às vias linfáticas regionais, demonstrando a progressão local e a possibilidade de disseminação para os linfonodos próximos à mama.",
+  "linkedModels": [
+    {
+      "id": "11",
+      "label": "Sistema Reprodutor Feminino"
+    }
+  ],
+  "resources": [],
+  "Body_Skin+Body_Skin_2+nisolar+ninteract": {
+    "objname": "Pele",
+    "description": ""
+  },
+  "3": {
+    "objname": "Carcinoma Mamário Invasivo",
+    "description": "Representação de um tumor maligno que ultrapassou os limites dos ductos ou lóbulos mamários e infiltrou o tecido circundante. No estágio III, o carcinoma pode apresentar crescimento local extenso ou estar associado a comprometimento linfonodal regional avançado. A região destacada no modelo demonstra didaticamente uma lesão de maior dimensão no tecido mamário, com potencial de invasão de estruturas próximas e disseminação pelas vias linfáticas."
+  },
+  "3a": {
+    "objname": "Foco de Disseminação Linfática",
+    "description": "Representação didática de células tumorais associadas às vias linfáticas próximas à mama. O carcinoma invasivo pode penetrar nos vasos linfáticos e alcançar linfonodos regionais, onde pode estabelecer depósitos metastáticos. No estágio III, o comprometimento linfonodal pode ser mais extenso, dependendo das características e da localização dos linfonodos afetados."
+  },
+  "3a1": {
+    "objname": "Foco de Disseminação Linfática Regional",
+    "description": "Representação de um foco tumoral associado à drenagem linfática regional da mama. Células cancerígenas podem alcançar os linfonodos axilares por meio dos vasos linfáticos. A presença de metástases em múltiplos linfonodos ou em determinadas cadeias linfonodais pode caracterizar comprometimento regional avançado."
+  },
+  "3a2": {
+    "objname": "Foco de Disseminação Linfática Regional",
+    "description": "Representação didática de um foco de disseminação tumoral próximo às estruturas linfáticas da região axilar. Os vasos linfáticos podem transportar células provenientes do carcinoma mamário invasivo até os linfonodos regionais. A localização e a extensão do comprometimento linfonodal são importantes para determinar o estágio da doença."
+  },
+  "3a3": {
+    "objname": "Foco de Disseminação Linfática Regional",
+    "description": "Representação de um foco tumoral associado às vias de drenagem linfática da mama. No câncer de mama localmente avançado, pode ocorrer comprometimento de diferentes linfonodos regionais, incluindo cadeias axilares e outras regiões próximas. A disseminação regional demonstra a capacidade invasiva do carcinoma, sem indicar necessariamente metástases em órgãos distantes."
+  },
+  "3a4": {
+    "objname": "Foco de Disseminação Linfática Regional",
+    "description": "Representação didática de um foco adicional de disseminação tumoral associado ao sistema linfático regional. O comprometimento de linfonodos próximos à mama pode indicar maior extensão regional do carcinoma invasivo. No estágio III, a classificação depende da combinação entre características do tumor primário, localização e extensão do comprometimento linfonodal e ausência de metástases à distância."
+  },
+  "AlveoliBreast": {
+    "objname": "Alvéolos Mamários",
+    "description": "Pequenas estruturas secretoras das glândulas mamárias, responsáveis pela produção de leite durante a lactação. Estão organizadas em unidades glandulares conectadas aos ductos mamários. São apresentadas como referência anatômica para compreender a organização do tecido glandular da mama."
+  },
+  "BreastFatTissue": {
+    "objname": "Tecido Adiposo Mamário",
+    "description": "Tecido formado principalmente por células adiposas, responsável por preencher espaços entre as estruturas glandulares e contribuir para o volume e formato das mamas. No carcinoma ductal in situ, as células neoplásicas permanecem confinadas aos ductos, sem invadir o tecido adiposo ao redor."
+  },
+  "LactiferousMilkDucts": {
+    "objname": "Ductos Lactíferos",
+    "description": "Canais responsáveis por conduzir o leite produzido pelas glândulas mamárias em direção ao mamilo. O carcinoma ductal in situ desenvolve-se no interior dos ductos mamários, onde células anormais proliferam sem ultrapassar a membrana basal. A ausência de invasão dos tecidos adjacentes caracteriza o estágio 0."
+  },
+  "MammaryGlandLobules": {
+    "objname": "Lóbulos da Glândula Mamária",
+    "description": "Conjuntos de estruturas glandulares responsáveis pela produção de leite durante a lactação. Estão conectados ao sistema de ductos mamários e integram as unidades ductolobulares terminais, regiões de origem de diversas alterações benignas e neoplásicas da mama."
+  },
+  "LymphVessel": {
+    "objname": "Vasos Linfáticos",
+    "description": "Vasos responsáveis por transportar a linfa dos tecidos em direção aos linfonodos. Participam da drenagem linfática da mama e são importantes na disseminação de determinados cânceres invasivos. No carcinoma ductal in situ puro, não há invasão dos tecidos adjacentes nem disseminação linfática da lesão."
+  },
+  "LymphNodes": {
+    "objname": "Linfonodos",
+    "description": "Estruturas do sistema linfático responsáveis pela filtragem da linfa e participação nas respostas imunológicas. Os linfonodos axilares são importantes na avaliação da disseminação de cânceres mamários invasivos. No carcinoma ductal in situ puro, não ocorre comprometimento linfonodal metastático."
+  },
+  "Thymus": {
+    "objname": "Timo",
+    "description": "Órgão linfático localizado principalmente no mediastino anterior, responsável pela maturação dos linfócitos T, especialmente durante a infância. É apresentado como referência anatômica e não constitui uma estrutura diretamente envolvida no carcinoma ductal in situ."
+  },
+  "PectoralisMajor": {
+    "objname": "Músculo Peitoral Maior",
+    "description": "Músculo localizado na parede anterior do tórax, posteriormente à mama, responsável por movimentos do membro superior, como adução e rotação medial do braço. No modelo, serve como referência anatômica para a posição da glândula mamária."
+  },
+  "Diaphragm": {
+    "objname": "Diafragma",
+    "description": "Principal músculo da inspiração, responsável por separar as cavidades torácica e abdominal. É apresentado como referência anatômica e não participa diretamente do desenvolvimento do carcinoma ductal in situ."
+  },
+  "Lungs": {
+    "objname": "Pulmões",
+    "description": "Órgãos do sistema respiratório responsáveis pelas trocas gasosas entre o ar e o sangue. Estão localizados na cavidade torácica e são apresentados como referência anatômica. O carcinoma ductal in situ puro não apresenta disseminação para os pulmões."
+  },
+  "Bronchus": {
+    "objname": "Brônquios",
+    "description": "Ramificações das vias respiratórias responsáveis por conduzir o ar da traqueia para o interior dos pulmões. São apresentados como referência anatômica, sem participação direta no carcinoma ductal in situ."
+  },
+  "Trachea+nisolar+ninteract": {
+    "objname": "Traqueia",
+    "description": ""
+  },
+  "Liver": {
+    "objname": "Fígado",
+    "description": "Órgão localizado principalmente na região superior direita do abdômen, responsável por funções como metabolismo de nutrientes, produção de bile, síntese de proteínas e processamento de substâncias presentes no sangue. No câncer de mama em estágio IV, pode ser acometido por metástases, que correspondem à formação de tumores secundários a partir de células cancerígenas originadas na mama."
+  },
+  "Humerus": {
+    "objname": "Úmero",
+    "description": "Osso longo do braço que participa das articulações do ombro e do cotovelo. É apresentado como referência anatômica para a região torácica e axilar, próxima às estruturas mamárias e aos linfonodos axilares."
+  },
+  "Humerus_L+nisolar+ninteract": {
+    "objname": "Úmero Esquerdo",
+    "description": ""
+  }
+}

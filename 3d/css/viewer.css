@@ -710,3 +710,52 @@ body.dark-mode .toggle-dp-btn:hover {
 
     color: var(--text-4);
 }
+
+/* Campo de pesquisa da aba Explore */
+.explore-search {
+    position: relative;
+    z-index: 2;
+    padding: 8px 0 12px;
+    background: transparent;
+}
+
+#explore-list {
+    overflow-y: auto;
+    min-height: 0;
+}
+
+#explore-search-input {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 9px;
+    background: #ffffff;
+    color: #1f2937;
+    font: inherit;
+    font-size: 13px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+#explore-search-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.12);
+}
+
+#explore-search-input::placeholder {
+    color: #9ca3af;
+}
+
+#explore-empty {
+    padding: 16px 8px;
+    text-align: center;
+    color: #888;
+    font-size: 13px;
+}
+
+/* Compatibilidade com modo escuro */
+.dark-mode #explore-search-input {
+    background: #0f172a;
+    border-color: #475569;
+    color: #f8fafc;
+}

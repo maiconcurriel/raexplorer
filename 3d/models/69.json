@@ -1,13 +1,31 @@
 {
-  "objname": "Mecânica de corrida",
+  "objname": "Mecânica da Corrida",
   "objsystem": [
-    "?"
+    "Muscular",
+    "Esquelético"
   ],
-  "objdescription": "?",
-  "linkedModels": [],
+  "objdescription": "A mecânica da corrida envolve movimentos coordenados dos membros superiores e inferiores, realizados pela ação integrada dos músculos, ossos e articulações. Diferentemente da caminhada, a corrida apresenta uma fase de voo, durante a qual nenhum dos pés permanece em contato com o solo. O ciclo da corrida alterna fases de apoio, impulsão, voo e recuperação dos membros inferiores. Músculos como o quadríceps femoral, os isquiotibiais, os glúteos e os músculos da panturrilha participam da absorção de impactos, estabilização das articulações e geração de força para o deslocamento. Os braços realizam movimentos alternados que auxiliam no equilíbrio e na coordenação corporal. A animação demonstra a movimentação do esqueleto e da musculatura durante a corrida, destacando a flexão e extensão das articulações e a alternância dos membros ao longo do movimento.",
+  "linkedModels": [
+    {
+      "id": "3",
+      "label": "Sistema Esquelético Masculino"
+    },
+    {
+      "id": "28",
+      "label": "Sistema Esquelético Feminino"
+    },
+    {
+      "id": "17",
+      "label": "Sistema Muscular Masculino"
+    },
+    {
+      "id": "27",
+      "label": "Sistema Muscular Feminino"
+    }
+  ],
   "resources": [],
-  "Sarcoma+nisolar": {
-    "objname": "?",
-    "description": "?"
+  "a65_L_001_2+a65_L_001_7+a65_L_001_3+a65_L_001_4+a65_L_001_1+a65_L_001+nisolar": {
+    "objname": "Movimentação da Corrida",
+    "description": "Representação animada da movimentação corporal durante a corrida. Os membros inferiores alternam movimentos de flexão e extensão do quadril, joelho e tornozelo, permitindo o apoio, a impulsão e a recuperação das pernas. Os músculos glúteos, quadríceps, isquiotibiais e da panturrilha atuam na produção e no controle dos movimentos. Simultaneamente, os braços se movimentam de maneira coordenada, contribuindo para o equilíbrio e a estabilidade do corpo. A animação permite observar a interação entre o sistema muscular e o esqueleto durante o ciclo da corrida."
   }
 }

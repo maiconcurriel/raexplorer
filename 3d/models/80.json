@@ -1,0 +1,67 @@
+{
+  "objname": "Artrite Psoriática: Articulações das Mãos",
+  "objsystem": [
+    "Esquelético",
+    "Muscular"
+  ],
+  "objdescription": "A artrite psoriática é uma doença inflamatória crônica, imunomediada, que pode afetar as articulações das mãos, provocando dor, inchaço, rigidez e limitação dos movimentos. A inflamação pode comprometer a membrana sinovial, os tendões e suas inserções nos ossos, atingindo frequentemente as articulações interfalângicas, incluindo as distais. Em casos persistentes, podem ocorrer erosões ósseas e alterações estruturais das articulações. A doença também pode provocar dactilite, caracterizada pelo inchaço difuso de um dedo. O modelo apresenta os ossos, músculos e tendões da mão, destacando por meio de esferas vermelhas animadas as regiões articulares que podem apresentar inflamação e dor, permitindo compreender sua distribuição e os possíveis efeitos sobre a mobilidade e a função das mãos.",
+  "linkedModels": [
+    {
+      "id": "73",
+      "label": "Psoríase Cutânea Associada à Artrite Psoriática"
+    },
+    {
+      "id": "79",
+      "label": "Artrite Psoriática: Inflamações nas Articulações"
+    }
+  ],
+  "resources": [],
+  "Ske": {
+    "objname": "Ossos da Mão",
+    "description": "Conjunto de ossos formado pelo carpo, metacarpo e falanges, responsáveis pela sustentação e movimentação das mãos. Na artrite psoriática, as articulações entre esses ossos podem apresentar inflamação, dor e rigidez. Em casos de inflamação persistente, podem ocorrer erosões ósseas e alterações estruturais que comprometem a mobilidade e a função articular."
+  },
+  "MusculosMao": {
+    "objname": "Músculos da Mão",
+    "description": "Conjunto de músculos responsáveis pelos movimentos e pela estabilidade da mão e dos dedos. Permitem ações como flexão, extensão, aproximação, afastamento e oposição dos dedos. Na artrite psoriática, a inflamação das articulações e das estruturas tendíneas pode provocar dor, rigidez e dificuldade na execução de movimentos finos."
+  },
+  "FlexorPollicisLongus": {
+    "objname": "Flexor Longo do Polegar",
+    "description": "Músculo do antebraço cujo tendão alcança o polegar, sendo responsável principalmente pela flexão de sua articulação interfalângica. Na artrite psoriática, processos inflamatórios envolvendo o tendão ou sua bainha podem contribuir para dor, inchaço e dificuldade de movimentação do polegar."
+  },
+  "FlexorDigitorumSuperficialis": {
+    "objname": "Flexor Superficial dos Dedos",
+    "description": "Músculo do antebraço responsável principalmente pela flexão das articulações interfalângicas proximais dos dedos indicador, médio, anelar e mínimo. Seus tendões atravessam a região palmar da mão. A inflamação das estruturas tendíneas pode contribuir para dor, rigidez e limitação dos movimentos dos dedos."
+  },
+  "FlexorDigitorumProfundus": {
+    "objname": "Flexor Profundo dos Dedos",
+    "description": "Músculo do antebraço responsável principalmente pela flexão das articulações interfalângicas distais dos quatro dedos mediais. Seus tendões alcançam as falanges distais e participam dos movimentos de preensão. Na artrite psoriática, o comprometimento inflamatório das estruturas tendíneas pode prejudicar a flexão e a função dos dedos."
+  },
+  "ExtensorPollicisLongus": {
+    "objname": "Extensor Longo do Polegar",
+    "description": "Músculo do antebraço cujo tendão alcança a falange distal do polegar, promovendo principalmente a extensão de sua articulação interfalângica. Alterações inflamatórias envolvendo o tendão ou suas estruturas adjacentes podem causar dor e dificuldade de movimentação."
+  },
+  "ExtensorPollicisBrevis": {
+    "objname": "Extensor Curto do Polegar",
+    "description": "Músculo do antebraço responsável principalmente pela extensão da articulação metacarpofalângica do polegar. Atua em conjunto com outros músculos para controlar seus movimentos. A inflamação de estruturas tendíneas próximas pode contribuir para desconforto e limitação funcional."
+  },
+  "ExtensorIndicis": {
+    "objname": "Extensor do Indicador",
+    "description": "Músculo do antebraço responsável por auxiliar a extensão do dedo indicador, permitindo movimentos relativamente independentes dos demais dedos. Na artrite psoriática, alterações inflamatórias articulares ou tendíneas podem provocar dor e dificultar a extensão do indicador."
+  },
+  "ExtensorDigitorum": {
+    "objname": "Extensor dos Dedos",
+    "description": "Músculo do antebraço responsável pela extensão dos dedos indicador, médio, anelar e mínimo, atuando principalmente nas articulações metacarpofalângicas e auxiliando a extensão das interfalângicas. A inflamação das articulações e das estruturas tendíneas pode comprometer sua função e provocar dor durante os movimentos."
+  },
+  "ExtensorDigitiMinimi": {
+    "objname": "Extensor do Dedo Mínimo",
+    "description": "Músculo do antebraço que auxilia a extensão do dedo mínimo, contribuindo para seus movimentos independentes. Na artrite psoriática, processos inflamatórios envolvendo articulações ou tendões podem provocar dor, rigidez e dificuldade de movimentação desse dedo."
+  },
+  "Skin+nisolar+ninteract": {
+    "objname": "Pele",
+    "description": ""
+  },
+  "B1+B2+B3+B4+B5+B6+B7+B8+B9+B10+B11+B12+B13+nisolar": {
+    "objname": "Regiões de Inflamação e Dor Articular",
+    "description": "Representação didática das regiões das mãos que podem apresentar inflamação e dor devido à artrite psoriática. A doença pode comprometer as articulações interfalângicas, metacarpofalângicas e outras estruturas articulares, provocando inchaço, rigidez e limitação dos movimentos. Na animação, as esferas vermelhas aumentam e diminuem de tamanho para destacar visualmente os locais potencialmente afetados. Esse efeito é ilustrativo e não representa alterações reais de volume das articulações."
+  }
+}

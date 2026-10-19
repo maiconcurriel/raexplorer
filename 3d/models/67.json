@@ -1,33 +1,51 @@
 {
-  "objname": "Dinâmica respiratória com o coração",
+  "objname": "Dinâmica Respiratória com o Coração",
   "objsystem": [
-    "?"
+    "Respiratório",
+    "Cardiovascular"
   ],
-  "objdescription": "?",
-  "linkedModels": [],
+  "objdescription": "A dinâmica respiratória envolve os movimentos de inspiração e expiração, responsáveis pela entrada e saída de ar dos pulmões. Durante a inspiração, o diafragma se contrai e desce, enquanto a caixa torácica se expande, aumentando o volume da cavidade torácica e permitindo a entrada de ar. Na expiração tranquila, o diafragma relaxa e retorna à sua posição elevada, enquanto os pulmões retraem elasticamente, favorecendo a saída do ar. Nos alvéolos pulmonares ocorrem as trocas gasosas, pelas quais o oxigênio passa para o sangue e o dióxido de carbono é eliminado. O coração participa desse processo ao bombear sangue para os pulmões, onde ocorre sua oxigenação, e posteriormente para o restante do organismo. O modelo apresenta uma animação didática dos movimentos respiratórios e da relação anatômica entre pulmões, diafragma, caixa torácica, coração e vasos sanguíneos.",
+  "linkedModels": [
+  {
+    "id": "4",
+    "label": "Coração"
+  },
+  {
+    "id": "5",
+    "label": "Coração (Animado)"
+  },
+  {
+    "id": "23",
+    "label": "Sistema Respiratório"
+  },
+  {
+    "id": "32",
+    "label": "Sistema Cardiovascular"
+  }
+],
   "resources": [],
   "Aorta+AorticValve+Capslice_1+Capslice_2+MitralValve+PulmonaryValve+PulmonaryVein+PulmonaryArtery+TricuspicValve": {
     "objname": "Coração",
-    "description": "?"
+    "description": "Órgão muscular responsável por impulsionar o sangue pelas circulações pulmonar e sistêmica. O lado direito bombeia sangue para os pulmões, onde ocorre a troca de dióxido de carbono por oxigênio, enquanto o lado esquerdo recebe o sangue oxigenado e o distribui pelo organismo. Durante os movimentos respiratórios, o coração permanece localizado no mediastino, entre os pulmões, acompanhando as alterações de posição e pressão da cavidade torácica."
   },
   "Arteries": {
     "objname": "Artérias",
-    "description": "?"
+    "description": "Vasos sanguíneos responsáveis por transportar o sangue para fora do coração. Na circulação pulmonar, as artérias pulmonares conduzem sangue pobre em oxigênio do ventrículo direito até os pulmões. Na circulação sistêmica, as artérias distribuem o sangue oxigenado aos tecidos do organismo, permitindo o fornecimento de oxigênio necessário às atividades celulares."
   },
   "Veins": {
     "objname": "Veias",
-    "description": "?"
+    "description": "Vasos sanguíneos responsáveis pelo retorno do sangue ao coração. As veias sistêmicas transportam sangue geralmente pobre em oxigênio dos tecidos até o átrio direito, enquanto as veias pulmonares conduzem sangue oxigenado dos pulmões até o átrio esquerdo. Participam da circulação que integra o transporte de gases respiratórios pelo organismo."
   },
   "Diaphragm": {
     "objname": "Diafragma",
-    "description": "?"
+    "description": "Principal músculo da inspiração, localizado abaixo dos pulmões e responsável por separar as cavidades torácica e abdominal. Durante a inspiração, contrai-se e desce, aumentando o volume da cavidade torácica e favorecendo a entrada de ar nos pulmões. Durante a expiração tranquila, relaxa e retorna à sua posição elevada, contribuindo para a redução do volume torácico."
   },
   "LeftLung+RightLung": {
-    "objname": "Pulmão",
-    "description": "?"
+    "objname": "Pulmões",
+    "description": "Órgãos do sistema respiratório responsáveis pelas trocas gasosas entre o ar e o sangue. Durante a inspiração, expandem-se conforme o volume da cavidade torácica aumenta e o ar entra pelas vias respiratórias. Durante a expiração, retraem-se elasticamente, favorecendo a saída do ar. Nos alvéolos pulmonares, o oxigênio passa para o sangue e o dióxido de carbono é transferido do sangue para o ar alveolar."
   },
   "Caixa_1": {
     "objname": "Caixa Torácica",
-    "description": "?"
+    "description": "Estrutura formada pelas costelas, esterno, vértebras torácicas e suas articulações, responsável por proteger órgãos como o coração e os pulmões. Durante a inspiração, a ação dos músculos respiratórios eleva e expande a caixa torácica, aumentando o volume disponível para a expansão pulmonar. Durante a expiração tranquila, ocorre o retorno progressivo à posição de repouso, acompanhando a redução do volume torácico."
   }
 }

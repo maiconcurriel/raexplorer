@@ -1,0 +1,14 @@
+{
+  "objname": "Psoríase Cutânea Associada à Artrite Psoriática",
+  "objsystem": [
+    "Tegumentar",
+    "Esquelético"
+  ],
+  "objdescription": "A artrite psoriática é uma doença inflamatória crônica, imunomediada, que afeta principalmente as articulações e pode comprometer tendões e suas inserções nos ossos. Frequentemente está associada à psoríase, uma doença cutânea caracterizada pela inflamação e renovação acelerada das células da epiderme, provocando o surgimento de placas avermelhadas, espessadas e recobertas por escamas esbranquiçadas ou prateadas. As manifestações articulares podem causar dor, inchaço, rigidez e limitação dos movimentos, enquanto as lesões cutâneas podem provocar coceira e desconforto. O modelo apresenta uma representação didática das manifestações cutâneas da psoríase no dorso da mão e nos dedos, que podem ocorrer em pessoas com artrite psoriática, sem representar diretamente o comprometimento das articulações.",
+  "linkedModels": [],
+  "resources": [],
+  "Psoriatica": {
+    "objname": "Lesões Cutâneas de Psoríase",
+    "description": "Representação de lesões cutâneas associadas à psoríase, caracterizadas por áreas avermelhadas, espessadas e com possível descamação. Essas alterações resultam de processos inflamatórios imunomediados e da renovação acelerada das células da epiderme. No modelo, as lesões aparecem no dorso da mão e nos dedos, demonstrando uma manifestação cutânea que pode estar presente em pessoas com artrite psoriática."
+  }
+}

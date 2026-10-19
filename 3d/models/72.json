@@ -1,0 +1,35 @@
+{
+  "objname": "Ciclo da Marcha",
+  "objsystem": [
+    "Muscular",
+    "Esquelético"
+  ],
+  "objdescription": "O ciclo da marcha corresponde à sequência de movimentos realizados pelo corpo durante a caminhada, desde o contato inicial de um pé com o solo até o próximo contato do mesmo pé. É dividido em duas fases principais: apoio, quando o membro inferior sustenta o peso corporal, e balanço, quando avança para iniciar um novo passo. Durante esse processo, músculos, ossos e articulações atuam de maneira coordenada para proporcionar estabilidade, equilíbrio e deslocamento. Os músculos glúteos, quadríceps, isquiotibiais e da panturrilha participam do controle dos movimentos, da sustentação corporal e da propulsão. As articulações do quadril, joelho e tornozelo realizam movimentos coordenados de flexão e extensão. A animação demonstra a alternância dos membros inferiores e a interação entre os sistemas muscular e esquelético durante o ciclo da marcha.",
+  "linkedModels": [
+    {
+      "id": "3",
+      "label": "Sistema Esquelético Masculino"
+    },
+    {
+      "id": "28",
+      "label": "Sistema Esquelético Feminino"
+    },
+    {
+      "id": "17",
+      "label": "Sistema Muscular Masculino"
+    },
+    {
+      "id": "27",
+      "label": "Sistema Muscular Feminino"
+    }
+  ],
+  "resources": [],
+  "Muscle_1+Muscle_2+nisolar": {
+    "objname": "Músculos dos Membros Inferiores",
+    "description": "Conjunto de músculos responsáveis pela movimentação e estabilização dos membros inferiores durante a marcha. Os glúteos estabilizam a pelve e participam dos movimentos do quadril; o quadríceps contribui para o controle do joelho; os isquiotibiais auxiliam na flexão do joelho e na extensão do quadril; e os músculos da panturrilha participam do controle do tornozelo e da propulsão. Na animação, a musculatura acompanha os movimentos de apoio e balanço realizados durante a caminhada."
+  },
+  "Skeleton_3+Skeleton_4+Skeleton_1+nisolar": {
+    "objname": "Esqueleto dos Membros Inferiores",
+    "description": "Conjunto de estruturas ósseas que sustentam o corpo e permitem a realização dos movimentos da marcha. A pelve, o fêmur, a patela, a tíbia, a fíbula e os ossos dos pés participam da transmissão do peso corporal e da movimentação das articulações. Durante a caminhada, quadril, joelho e tornozelo realizam movimentos coordenados que permitem o apoio, a transferência de peso e o avanço alternado dos membros inferiores."
+  }
+}

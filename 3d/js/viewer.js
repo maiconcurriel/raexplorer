@@ -359,29 +359,114 @@ function injectAnimationControls() {
 // Renderiza a lista de capítulos/partes anatômicas na barra lateral baseando-se nos nós do arquivo JSON.
 function renderizarCapitulos(data) {
     const container = document.getElementById('tc-ch');
-    const ignoreKeys = ['objname', 'objsystem', 'objdescription', 'id', 'resources'];
-    
-    const html = Object.keys(data)
+    if (!container) return;
+
+    const ignoreKeys = [
+        'objname',
+        'objsystem',
+        'objdescription',
+        'id',
+        'resources'
+    ];
+
+    // Seleciona apenas as estruturas válidas
+    const objetos = Object.keys(data)
         .filter(key => {
             const isNotIgnored = !ignoreKeys.includes(key);
 
             const hasDescription =
-                data[key] &&
-                data[key].description &&
-                data[key].description.trim() !== "";
+                typeof data[key]?.description === 'string' &&
+                data[key].description.trim() !== '';
 
             const isInteractive = !key.includes('+ninteract');
 
             return isNotIgnored && hasDescription && isInteractive;
         })
-        .map(key => `
-            <div class="ch-item" onclick="focarParte('${key}')">
-                <div>
-                    <div class="ch-name">${data[key].objname || key}</div>
-                </div>
-            </div>`).join('');   
+        .map(key => ({
+            id: key,
+            nome: data[key].objname || key
+        }))
+        // Ordena pelo nome exibido, respeitando o português
+        .sort((a, b) =>
+            a.nome.localeCompare(b.nome, 'pt-BR', {
+                sensitivity: 'base',
+                numeric: true
+            })
+        );
 
-    container.innerHTML = html || '<p>Nenhum capítulo disponível.</p>';
+    // Monta a interface
+    container.innerHTML = `
+        <div class="explore-search">
+            <input
+                type="search"
+                id="explore-search-input"
+                placeholder="Pesquisar estrutura..."
+                autocomplete="off"
+                aria-label="Pesquisar estrutura anatômica"
+            >
+        </div>
+
+        <div id="explore-list"></div>
+
+        <p id="explore-empty" style="display:none;">
+            Nenhuma estrutura encontrada.
+        </p>
+    `;
+
+    const lista = container.querySelector('#explore-list');
+    const pesquisa = container.querySelector('#explore-search-input');
+    const mensagemVazia = container.querySelector('#explore-empty');
+
+    // Remove acentos e padroniza a pesquisa
+    const normalizar = texto =>
+        String(texto)
+            .normalize('NFD')
+            .replace(/[\u0300-\u036f]/g, '')
+            .toLowerCase()
+            .trim();
+
+    // Cria os itens preservando o clique original
+    objetos.forEach(objeto => {
+        const item = document.createElement('div');
+        item.className = 'ch-item';
+
+        const nome = document.createElement('div');
+        nome.className = 'ch-name';
+        nome.textContent = objeto.nome;
+
+        item.appendChild(nome);
+
+        item.addEventListener('click', () => {
+            window.focarParte(objeto.id);
+        });
+
+        lista.appendChild(item);
+    });
+
+    const itens = Array.from(lista.querySelectorAll('.ch-item'));
+
+    // Filtra os resultados em tempo real
+    pesquisa.addEventListener('input', () => {
+        const termo = normalizar(pesquisa.value);
+        let encontrados = 0;
+
+        itens.forEach((item, index) => {
+            const corresponde = normalizar(objetos[index].nome)
+                .includes(termo);
+
+            item.style.display = corresponde ? '' : 'none';
+
+            if (corresponde) encontrados++;
+        });
+
+        mensagemVazia.style.display =
+            encontrados === 0 ? 'block' : 'none';
+    });
+
+    if (objetos.length === 0) {
+        mensagemVazia.style.display = 'block';
+        mensagemVazia.textContent = 'Nenhuma estrutura disponível.';
+    }
 }
 
 // Evento global para focar em uma parte específica, aplicando realce (highlight), gerando o callout e atualizando a descrição.

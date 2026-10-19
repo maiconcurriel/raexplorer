@@ -1,13 +1,31 @@
 {
-  "objname": "Flexão e extensão do joelho",
+  "objname": "Flexão e Extensão do Joelho",
   "objsystem": [
-    "?"
+    "Muscular",
+    "Esquelético"
   ],
-  "objdescription": "?",
-  "linkedModels": [],
-  "resources": [],  
-  "Sarcoma+nisolar": {
-    "objname": "?",
-    "description": "?"
+  "objdescription": "A flexão e a extensão do joelho são movimentos fundamentais dos membros inferiores, realizados principalmente pela articulação entre o fêmur e a tíbia, com participação da patela. Na flexão, o ângulo entre a coxa e a perna diminui, aproximando a perna da região posterior da coxa, com atuação principalmente dos músculos isquiotibiais. Na extensão, esse ângulo aumenta, promovendo o alinhamento da perna com a coxa, movimento realizado principalmente pelo quadríceps femoral. Tendões, ligamentos e outras estruturas articulares contribuem para a estabilidade e a transmissão das forças musculares. A animação apresenta a transição entre as posições estendida e flexionada do joelho, demonstrando a movimentação coordenada dos músculos, tendões e ossos envolvidos.",
+  "linkedModels": [
+    {
+      "id": "3",
+      "label": "Sistema Esquelético Masculino"
+    },
+    {
+      "id": "28",
+      "label": "Sistema Esquelético Feminino"
+    },
+    {
+      "id": "17",
+      "label": "Sistema Muscular Masculino"
+    },
+    {
+      "id": "27",
+      "label": "Sistema Muscular Feminino"
+    }
+  ],
+  "resources": [],
+  "a_R_1+a_R_5+a_R+a_R_2+a_R_6+a_R_4+nisolar": {
+    "objname": "Movimentação do Joelho",
+    "description": "Representação animada da flexão e extensão do joelho. Durante a flexão, a perna se aproxima da parte posterior da coxa, movimento produzido principalmente pelos músculos isquiotibiais. Durante a extensão, o quadríceps femoral atua para endireitar o joelho e alinhar a perna com a coxa. A animação demonstra o deslocamento dos segmentos ósseos e o acompanhamento das estruturas musculares e tendíneas durante esses movimentos."
   }
 }
