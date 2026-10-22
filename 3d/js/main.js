@@ -15,7 +15,8 @@ const modelosIDs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
                     41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 
                     51, 52, 53, 54, 55, 56, 57, 58, 59, 60,
                     61, 62, 63, 64, 65, 66, 67, 68, 69, 70,
-                    71, 72, 73, 74, 75, 76, 77, 78, 79, 80];
+                    71, 72, 73, 74, 75, 76, 77, 78, 79, 80,
+                    81, 82];
 
 const FILTER_LABELS = {
     all: 'Todos', 
@@ -290,7 +291,8 @@ async function carregarModelos() {
                         <div class="c-overlay">
                             <button class="v3d-btn">
                                 <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+                                    <path d="M3.27489 15.2957C2.42496 14.1915 2 13.6394 2 12C2 10.3606 2.42496 9.80853 3.27489 8.70433C4.97196 6.49956 7.81811 4 12 4C16.1819 4 19.028 6.49956 20.7251 8.70433C21.575 9.80853 22 10.3606 22 12C22 13.6394 21.575 14.1915 20.7251 15.2957C19.028 17.5004 16.1819 20 12 20C7.81811 20 4.97196 17.5004 3.27489 15.2957Z" stroke="currentColor" stroke-linecap="round"/>
+<path d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z" stroke="currentColor" stroke-linecap="round"/>
                                 </svg>
                                 Ver 3D
                             </button>
@@ -438,16 +440,16 @@ function getCounts() {
   }
 
   // Aplica as classes CSS corretas no corpo da página e altera o ícone indicador do tema baseado no estado atual.
-  function applyTheme() {
-      const btn = document.getElementById('theme-icon');
-      if (isDark) {
-          document.body.classList.add('dark-mode');
-          btn.textContent = '☀️';
-      } else {
-          document.body.classList.remove('dark-mode');
-          btn.textContent = '🌙';
-      }
-  }
+function applyTheme() {
+    document.body.classList.toggle('dark-mode', isDark);
+
+    const btn = document.getElementById('theme-icon');
+
+    if (btn) {
+        btn.dataset.icon = isDark ? 'sun' : 'moon';
+        window.renderBioIcons(btn);
+    }
+}
 
   // Alterna o status de favorito (coração) de um modelo diretamente pelo card da tela principal e salva a alteração.
   function togFav(btn, id) {
@@ -510,7 +512,6 @@ function getCounts() {
 
 window.abrirAjuda = abrirAjuda;
 window.fecharAjuda = fecharAjuda;
-window.switchHelpTab = switchHelpTab;
 
 function abrirAjuda() {
     const helpModal = document.getElementById('help-modal');
@@ -520,20 +521,4 @@ function abrirAjuda() {
 function fecharAjuda() {
     const helpModal = document.getElementById('help-modal');
     if (helpModal) helpModal.style.display = 'none';
-}
-
-function switchHelpTab(tabId, btn) {
-    // Esconde todos os conteúdos de abas de ajuda
-    document.querySelectorAll('.help-tab-content').forEach(tab => {
-        tab.style.display = 'none';
-    });
-    
-    // Desativa todos os botões de abas de ajuda
-    document.querySelectorAll('.help-tab-btn').forEach(b => {
-        b.classList.remove('active');
-    });
-    
-    // Exibe o conteúdo selecionado e ativa o botão atual
-    document.getElementById(tabId).style.display = 'block';
-    btn.classList.add('active');
 }

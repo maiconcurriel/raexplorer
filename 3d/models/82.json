@@ -1,0 +1,34 @@
+{
+  "objname": "Reações Alérgicas Sistêmicas",
+  "objsystem": [
+    "Imunológico",
+    "Tegumentar"
+  ],
+  "objdescription": "As reações alérgicas sistêmicas ocorrem quando o sistema imunológico apresenta uma resposta de hipersensibilidade a determinadas substâncias, como alimentos, medicamentos ou venenos de insetos. Nas reações alérgicas imediatas, a ativação de mastócitos e a liberação de mediadores químicos, como a histamina, podem provocar dilatação dos vasos sanguíneos, aumento da permeabilidade vascular, vermelhidão, coceira e inchaço. Entre as manifestações estão a urticária, caracterizada por lesões elevadas e pruriginosas na pele, e o angioedema, que pode afetar lábios e pálpebras. Em situações graves, a reação pode evoluir para anafilaxia, comprometendo a respiração e a circulação. O modelo apresenta diferentes manifestações cutâneas e faciais de uma reação alérgica, incluindo urticária, angioedema e inflamação localizada após picada de inseto.",
+  "linkedModels": [],
+  "resources": [],
+  "Lab+nisolar": {
+    "objname": "Angioedema dos Lábios",
+    "description": "Inchaço dos lábios provocado pelo acúmulo de líquido nas camadas mais profundas da pele e nos tecidos submucosos. Em reações alérgicas, pode ocorrer devido à liberação de mediadores inflamatórios, como a histamina, que aumentam a permeabilidade dos vasos sanguíneos. O angioedema pode surgir isoladamente ou acompanhado de urticária. Quando envolve a língua ou a garganta, pode comprometer as vias respiratórias."
+  },
+  "Palp+nisolar": {
+    "objname": "Angioedema das Pálpebras",
+    "description": "Inchaço das pálpebras decorrente do acúmulo de líquido nos tecidos ao redor dos olhos. Pode ocorrer durante reações alérgicas devido ao aumento da permeabilidade vascular provocado por mediadores inflamatórios. A região palpebral é especialmente suscetível ao edema por apresentar tecidos relativamente frouxos. O inchaço pode afetar uma ou ambas as pálpebras e causar desconforto ou dificuldade temporária para abrir os olhos."
+  },
+  "Pic+nisolar": {
+    "objname": "Reação Inflamatória Local à Picada de Inseto",
+    "description": "Representação de uma reação inflamatória localizada após a picada ou ferroada de um inseto. A introdução de saliva, veneno ou outras substâncias pode desencadear uma resposta imunológica e inflamatória, provocando vermelhidão, coceira, dor e inchaço na região afetada. Em pessoas sensibilizadas, determinados venenos de insetos também podem desencadear reações alérgicas sistêmicas, incluindo anafilaxia. Entretanto, uma reação local não significa necessariamente que exista alergia sistêmica."
+  },
+  "Urt+nisolar": {
+    "objname": "Urticária",
+    "description": "Manifestação cutânea caracterizada pelo aparecimento de lesões elevadas, avermelhadas ou da cor da pele, geralmente acompanhadas de coceira intensa. Ocorre pela liberação de mediadores químicos, especialmente a histamina, que aumentam a permeabilidade dos pequenos vasos sanguíneos e provocam edema superficial da pele. As lesões podem surgir em diferentes regiões do corpo, variar de tamanho e desaparecer ou mudar de localização ao longo do tempo. A urticária pode ter causas alérgicas ou não alérgicas."
+  },
+  "Body+nisolar+ninteract": {
+    "objname": "Corpo Humano",
+    "description": ""
+  },
+  "Head+nisolar+ninteract": {
+    "objname": "Cabeça",
+    "description": ""
+  }
+}

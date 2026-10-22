@@ -90,6 +90,9 @@ body.dark-mode .tab-ct {
     border-radius: 4px;
     font-weight: bold;
     font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .dp-act.copied {
@@ -200,36 +203,66 @@ canvas {
     color: #333;
 }
 
+/* ============================================
+   BARRA DE PROGRESSO DA ANIMAÇÃO
+   ============================================ */
+
 #anim-progress {
     -webkit-appearance: none;
     appearance: none;
-    background: #444;
+    width: 100%;
     height: 4px;
-    border-radius: 2px;
+    border-radius: 4px;
     outline: none;
+    cursor: pointer;
+
+    /* Tema claro */
+    background: #d1d5db;
+    accent-color: #111111;
 }
 
+/* Círculo - Chrome, Edge e Safari */
 #anim-progress::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 12px;
     height: 12px;
-    background: #00ffff;
+    background: #2563a8;
     border-radius: 50%;
     cursor: pointer;
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
+/* Círculo - Firefox */
 #anim-progress::-moz-range-thumb {
     width: 12px;
     height: 12px;
-    background: #00ffff;
+    background: #2563a8;
+    border: none;
     border-radius: 50%;
     cursor: pointer;
 }
 
+/* ============================================
+   TEMA ESCURO
+   ============================================ */
+
+body.dark-mode #anim-progress {
+    background: #475569;
+    accent-color: #38bdf8;
+}
+
+body.dark-mode #anim-progress::-webkit-slider-thumb {
+    background: #38bdf8;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.25);
+}
+
+body.dark-mode #anim-progress::-moz-range-thumb {
+    background: #38bdf8;
+}
+
 .callout-label {
-    background: #1e293b;
+    background: #1e293ba9;
     border: 2px solid #007bff;
     color: #ffffff;
 
@@ -250,6 +283,12 @@ canvas {
     pointer-events: auto;
 }
 
+body.dark-mode .callout-label {
+    background: #1e293ba9;
+    border-color: #38bdf8;
+    color: #ffffff;
+}
+
 .callout-content {
     display: flex;
     flex-direction: column;
@@ -263,6 +302,9 @@ canvas {
     padding: 2px 5px 7px 5px;
 
     text-align: center;
+}
+body.dark-mode .callout-title {
+    color: #ffffff;
 }
 
 .callout-actions {
@@ -626,44 +668,122 @@ body.dark-mode .toggle-dp-btn:hover {
     color: #38bdf8;
 }
 
+/* ==========================================
+   CONFIGURAÇÕES - QUALIDADE E ACESSIBILIDADE
+   ========================================== */
+
 .quality-menu {
-
     position: absolute;
+    bottom: calc(100% + 14px);
+    right: 0;
+    left: auto;
 
-    bottom: 75px;
-    left: 50%;
+    width: 270px;
+    max-width: calc(100vw - 24px);
+    min-width: 250px;
 
-    transform: translateX(-50%) translateY(10px);
-
-    width: 220px;
+    padding: 10px;
+    box-sizing: border-box;
 
     background: var(--surface);
     border: 1px solid var(--border);
-
     border-radius: 12px;
+    box-shadow: var(--shadow-md);
 
-    padding: 6px;
-
-    box-shadow: var(--shadow-lg);
+    z-index: 1000;
 
     opacity: 0;
     visibility: hidden;
-
     pointer-events: none;
 
-    transition: all .2s ease;
+    transform: translateY(8px);
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease,
+        visibility 0.2s ease;
+}
 
-    z-index: 500;
+.settings-section-title {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-3, #64748b);
+    padding: 8px 10px;
+}
+
+.settings-divider {
+    height: 1px;
+    background: var(--border, #d1d5db);
+    margin: 10px 4px;
+}
+
+.settings-field {
+    padding: 4px 10px 10px;
+}
+
+.settings-field label {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--text-2, #475569);
+}
+
+.settings-select {
+    width: 100%;
+    min-height: 36px;
+    padding: 8px 10px;
+    border: 1px solid var(--border, #d1d5db);
+    border-radius: 8px;
+    background: var(--surface, #ffffff);
+    color: var(--text, #111111);
+    font-family: 'Onest', sans-serif;
+    font-size: 13px;
+    outline: none;
+    cursor: pointer;
+}
+
+.settings-select:focus {
+    border-color: var(--accent, #2563eb);
+}
+
+/* Tema escuro */
+
+body.dark-mode .settings-section-title {
+    color: #94a3b8;
+}
+
+body.dark-mode .settings-divider {
+    background: #334155;
+}
+
+body.dark-mode .settings-field label {
+    color: #cbd5e1;
+}
+
+body.dark-mode .settings-select {
+    background: #1e293b;
+    color: #ffffff;
+    border-color: #475569;
+}
+
+body.dark-mode .settings-select option {
+    background: #1e293b;
+    color: #ffffff;
 }
 
 .quality-menu.open {
-
     opacity: 1;
     visibility: visible;
-
     pointer-events: auto;
+    transform: translateY(0);
+}
 
-    transform: translateX(-50%) translateY(0);
+.settings-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .quality-menu button {
@@ -758,4 +878,113 @@ body.dark-mode .toggle-dp-btn:hover {
     background: #0f172a;
     border-color: #475569;
     color: #f8fafc;
+}
+
+/* ============================================
+   BIOEXPLORA - ÍCONES SVG
+   ============================================ */
+
+:root {
+    --bio-icon-color: #2563a8;
+}
+
+body.dark-mode {
+    --bio-icon-color: #38bdf8;
+}
+
+.bio-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    color: var(--bio-icon-color);
+    flex-shrink: 0;
+    vertical-align: middle;
+    pointer-events: none;
+}
+
+/* Ícones menores */
+.bio-icon-sm {
+    width: 15px;
+    height: 15px;
+}
+
+/* Ícones maiores */
+.bio-icon-lg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Centralização dos botões */
+.bt-btn,
+.ic-btn,
+.nav-arr,
+.nav-arr2,
+.search-toggle-btn {
+    align-items: center;
+    justify-content: center;
+}
+
+/* Compartilhamento */
+.dp-act .bio-icon {
+    width: 20px;
+    height: 20px;
+    display: block;
+    flex-shrink: 0;
+    margin-right: 5px;
+}
+
+/* Recursos */
+.res-ic .bio-icon {
+    width: 22px;
+    height: 22px;
+}
+
+/* Tema claro */
+body:not(.dark-mode) .bio-icon {
+    color: #2563a8;
+}
+
+/* Tema escuro */
+body.dark-mode .bio-icon {
+    color: #38bdf8;
+}
+
+/* ============================================
+   RECURSOS - ÍCONES E MINIATURAS
+   ============================================ */
+
+/* Tema claro */
+body:not(.dark-mode) .res-ic {
+    background: #f1f5f9;
+    color: #111111;
+}
+
+/* Tema escuro */
+body.dark-mode .res-ic {
+    background: #334155;
+    color: #ffffff;
+}
+
+/* SVGs dos recursos */
+.res-ic .bio-icon {
+    width: 22px;
+    height: 22px;
+    color: inherit;
+}
+
+/* Miniaturas dos modelos relacionados */
+.res-ic-model {
+    overflow: hidden;
+}
+
+.res-ic-model img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
 }

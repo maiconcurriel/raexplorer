@@ -1,0 +1,48 @@
+{
+  "objname": "Sarcoma de Kaposi: Comprometimento de Órgãos Internos",
+  "objsystem": [
+    "Linfático",
+    "Digestório",
+    "Respiratório"
+  ],
+  "objdescription": "O Sarcoma de Kaposi é uma neoplasia vascular associada à infecção pelo herpesvírus humano tipo 8 (HHV-8), caracterizada pela proliferação anormal de células de origem endotelial, relacionadas principalmente aos vasos sanguíneos e linfáticos. Embora frequentemente apresente lesões na pele e nas mucosas, também pode comprometer órgãos internos, especialmente o trato gastrointestinal, os pulmões e os linfonodos. O envolvimento visceral é particularmente importante em pessoas com imunossupressão e pode provocar sintomas como sangramentos digestivos, dor abdominal, tosse e dificuldade respiratória, dependendo da localização das lesões. O modelo apresenta uma representação didática do sistema linfático e de possíveis manifestações internas do Sarcoma de Kaposi, destacando alterações nos linfonodos, pulmões, intestinos e baço, além de estruturas anatômicas utilizadas como referência.",
+  "linkedModels": [
+    {
+      "id": "66",
+      "label": "Sarcoma de Kaposi"
+    }
+  ],
+  "resources": [],
+  "LymphVessel": {
+    "objname": "Vasos Linfáticos",
+    "description": "Rede de vasos responsáveis por transportar a linfa dos tecidos em direção aos linfonodos e à circulação sanguínea. O Sarcoma de Kaposi apresenta características de diferenciação endotelial linfática e pode comprometer estruturas relacionadas ao sistema linfático. No modelo, os vasos destacados permitem visualizar a distribuição dessa rede pelo organismo e sua relação anatômica com as regiões potencialmente afetadas."
+  },
+  "Spleen": {
+    "objname": "Sarcoma de Kaposi no Baço",
+    "description": "Representação didática de possível comprometimento do baço pelo Sarcoma de Kaposi. O baço é um órgão linfático responsável pela filtragem do sangue, remoção de células sanguíneas envelhecidas e participação nas respostas imunológicas. Embora menos frequente que o acometimento gastrointestinal ou pulmonar, a doença pode apresentar lesões esplênicas, especialmente em contextos de imunossupressão. O envolvimento pode ser assintomático ou estar associado a alterações do órgão."
+  },
+  "Thymus": {
+    "objname": "Timo",
+    "description": "Órgão linfático localizado principalmente no mediastino anterior, responsável pela maturação e seleção dos linfócitos T, células fundamentais para a resposta imunológica. Apresenta maior atividade durante a infância e sofre involução progressiva com a idade. No modelo, é utilizado como referência anatômica do sistema linfático e não representa necessariamente uma região acometida pelo Sarcoma de Kaposi."
+  },
+  "TumLim": {
+    "objname": "Sarcoma de Kaposi nos Linfonodos",
+    "description": "Representação de lesões do Sarcoma de Kaposi que podem comprometer os linfonodos, estruturas responsáveis pela filtragem da linfa e participação nas respostas imunológicas. O acometimento linfonodal pode provocar aumento dos linfonodos, conhecido como linfadenopatia, e ocorrer com ou sem manifestações cutâneas evidentes. No modelo, a região destacada representa didaticamente o envolvimento do sistema linfático pela doença."
+  },
+  "Lung": {
+    "objname": "Sarcoma de Kaposi Pulmonar",
+    "description": "Representação do comprometimento dos pulmões pelo Sarcoma de Kaposi, que pode desenvolver lesões nas estruturas brônquicas e no tecido pulmonar. O acometimento pode provocar tosse, falta de ar, dor torácica e, em alguns casos, sangramento respiratório. É uma manifestação visceral potencialmente grave, especialmente em pessoas imunossuprimidas. O modelo destaca didaticamente a presença de lesões associadas à doença na região pulmonar."
+  },
+  "TumInt": {
+    "objname": "Sarcoma de Kaposi Intestinal",
+    "description": "Representação de lesões do Sarcoma de Kaposi no trato intestinal. A doença pode comprometer diferentes segmentos do sistema gastrointestinal, formando lesões vasculares na parede dos órgãos. O acometimento intestinal pode permanecer assintomático ou provocar dor abdominal, sangramento digestivo, anemia e, em casos mais graves, obstrução intestinal. No modelo, a região destacada demonstra didaticamente uma possível manifestação gastrointestinal da doença."
+  },
+  "gordurinha": {
+    "objname": "Apêndices Epiploicos",
+    "description": "Pequenas projeções de tecido adiposo revestidas por peritônio, distribuídas principalmente ao longo da superfície externa do cólon. Contêm gordura e pequenos vasos sanguíneos, contribuindo para a organização anatômica da região intestinal. No modelo, são apresentados como referência anatômica e não constituem uma manifestação específica do Sarcoma de Kaposi."
+  },
+  "Skin+nisolar+ninteract": {
+    "objname": "Pele",
+    "description": ""
+  }
+}

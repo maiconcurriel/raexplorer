@@ -85,7 +85,12 @@ modelId = params.get('id');
 // Inicializa o visualizador, processa parâmetros da URL (ID, tema, modal) e carrega os metadados JSON do modelo.
 async function initViewer() {
     const btn = document.getElementById('theme-icon');
-    if (params.get('theme') === 'dark') {document.body.classList.add('dark-mode'); btn.textContent = '☀️'; isDark = true;} else {btn.textContent = '🌙'};
+    isDark = params.get('theme') === 'dark';
+    document.body.classList.toggle('dark-mode', isDark);
+
+    btn.dataset.icon = isDark ? 'sun' : 'moon';
+    window.renderBioIcons(btn.parentElement);
+
     if (params.get('modal') === 'true') document.body.classList.add('is-modal');
     if (!modelId) return;
 
@@ -204,8 +209,11 @@ function initThree() {
     outlinePass.edgeStrength = 4.0;      // Intensidade da borda
     outlinePass.edgeGlow = 0.5;          // Suavização do contorno
     outlinePass.edgeThickness = 1.0;     // Espessura da linha
-    outlinePass.visibleEdgeColor.set(0x007bff); // Cor quando VISÍVEL (Verde)
-    outlinePass.hiddenEdgeColor.set(0x007bff);  // Cor quando OCULTO ATRÁS DE OUTRAS MESHES (Verde)
+    
+    const corContorno = isDark ? 0x38bdf8 : 0x2563a8;
+
+    outlinePass.visibleEdgeColor.setHex(corContorno);
+    outlinePass.hiddenEdgeColor.setHex(corContorno);
 
     composer.addPass(outlinePass);
 
@@ -227,7 +235,46 @@ function initThree() {
     setColorBlindMode('normal');
     setDefaultCamera();
 
-    renderer.domElement.addEventListener('pointerdown', onPointerDown);
+    //renderer.domElement.addEventListener('pointerdown', onPointerDown);
+
+    let inicioPonteiro = null;
+
+    renderer.domElement.addEventListener('pointerdown', (event) => {
+        if (event.button !== 0) return;
+
+        inicioPonteiro = {
+            x: event.clientX,
+            y: event.clientY
+        };
+    });
+
+    renderer.domElement.addEventListener('pointerup', (event) => {
+        if (!inicioPonteiro || event.button !== 0) return;
+
+        const distancia = Math.hypot(
+            event.clientX - inicioPonteiro.x,
+            event.clientY - inicioPonteiro.y
+        );
+
+        inicioPonteiro = null;
+
+        // Arrastou o modelo: não seleciona a estrutura
+        if (distancia > 5) return;
+
+        // Clique simples: seleciona a estrutura
+        onPointerDown(event);
+    });
+
+    renderer.domElement.addEventListener('pointercancel', () => {
+        inicioPonteiro = null;
+    });
+
+    window.addEventListener('pointerup', (event) => {
+        if (event.target !== renderer.domElement) {
+            inicioPonteiro = null;
+        }
+    });
+
     animate();
 }
 
@@ -313,13 +360,12 @@ function injectAnimationControls() {
 
     const animControlsHTML = `
         <div id="anim-group" style="display: flex; align-items: center; gap: 10px; flex-grow: 1; margin: 0 15px;">
-            <div class="bt-sep"></div>
             <button class="bt-btn" id="btn-play" title="Play/Pause" onclick="window.togglePlayPause()">
-                <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                <span data-icon="pause"></span>
             </button>
-            <input type="range" id="anim-progress" min="0" max="100" value="0" step="0.1" style="flex-grow: 1; cursor: pointer; height: 4px; accent-color: #00ffff;">
+            <input type="range" id="anim-progress" min="0" max="100" value="0" step="0.1" style="flex-grow: 1;">
             <button class="bt-btn" id="btn-loop" title="Alternar Loop" onclick="window.toggleLoop()" style="color: #00ffff;">
-                <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 1l4 4-4 4M7 23l-4-4 4-4M21 13a9 9 0 0 1-18 0m0-2a9 9 0 0 1 18 0"/></svg>
+                <span data-icon="loop"></span>
             </button>
             <select class="sort-sel" onchange="window.changeSpeed(this.value)" style="width: 60px; padding: 2px;">
                 <option value="1">1x</option>
@@ -329,10 +375,16 @@ function injectAnimationControls() {
         </div>
     `;
 
-    const colorSelect = bar.querySelector('select');
-    if (colorSelect) colorSelect.insertAdjacentHTML('afterend', animControlsHTML);
+    const fullscreenBtn = bar.querySelector('#fullscreen-btn');
+
+    if (fullscreenBtn) {
+        fullscreenBtn.insertAdjacentHTML('beforebegin', animControlsHTML);
+    } else {
+        bar.insertAdjacentHTML('afterbegin', animControlsHTML);
+    }
 
     const progressBar = document.getElementById('anim-progress');
+    window.renderBioIcons(document.getElementById('anim-group'));
     if (!progressBar) return;
 
     progressBar.addEventListener('input', (e) => {
@@ -605,7 +657,12 @@ window.swTab = (id, btn) => {
 // Altera a matriz de transformação de cor do shader de pós-processamento para simular/corrigir tipos de daltonismo.
 window.setColorBlindMode = (mode) => {
     const m = COLOR_FILTERS[mode] || COLOR_FILTERS.normal;
-    colorPass.uniforms.uMatrix.value.set(m[0], m[1], m[2], m[3], m[4], m[5], m[6], m[7], m[8]);
+
+    colorPass.uniforms.uMatrix.value.set(
+        m[0], m[1], m[2],
+        m[3], m[4], m[5],
+        m[6], m[7], m[8]
+    );
 };
 
 window.alterarQualidade = function (qualidade) {
@@ -709,7 +766,6 @@ window.toggleQualityMenu = function () {
 };
 
 document.addEventListener('click', (event) => {
-
     const menu = document.getElementById('quality-menu');
     const button = document.getElementById('quality-btn');
 
@@ -721,14 +777,45 @@ document.addEventListener('click', (event) => {
     ) {
         menu.classList.remove('open');
     }
-
 });
 
-// Alterna o estado da janela do navegador entre modo tela cheia (Fullscreen) e modo normal.
-window.toggleFullscreen = () => {
-    if (!document.fullscreenElement) document.documentElement.requestFullscreen();
-    else document.exitFullscreen();
+// Alterna entre tela cheia e modo normal
+window.toggleFullscreen = async () => {
+    try {
+        if (!document.fullscreenElement) {
+            await document.documentElement.requestFullscreen();
+        } else {
+            await document.exitFullscreen();
+        }
+    } catch (error) {
+        console.error('Erro ao alternar tela cheia:', error);
+    }
 };
+
+// Atualiza o ícone conforme o estado real da tela cheia
+function atualizarIconeFullscreen() {
+    const btn = document.getElementById('fullscreen-btn');
+    if (!btn) return;
+
+    const fullscreenAtivo = !!document.fullscreenElement;
+
+    const icone = btn.querySelector('[data-icon]');
+
+    if (icone) {
+        icone.dataset.icon = fullscreenAtivo
+            ? 'fullscreen-exit'
+            : 'fullscreen';
+
+        window.renderBioIcons(icone);
+    }
+
+    btn.title = fullscreenAtivo
+        ? 'Sair da tela cheia'
+        : 'Entrar em tela cheia';
+}
+
+// Funciona também quando o usuário sai usando ESC ou F11*
+document.addEventListener('fullscreenchange', atualizarIconeFullscreen);
 
 // Remove parâmetros estéticos da URL e copia o link limpo do modelo atual para a área de transferência do usuário.
 window.shareModel = (btnEl) => {
@@ -740,7 +827,7 @@ window.shareModel = (btnEl) => {
 
     navigator.clipboard.writeText(url.toString()).then(() => {
         const original = btnEl.innerHTML;
-        btnEl.innerHTML = '✅ Copiado!';
+        btnEl.innerHTML = `${window.bioIcon('check')}`;
         btnEl.classList.add('copied');
         
         setTimeout(() => { 
@@ -953,12 +1040,12 @@ function animate() {
 }
 
 const RESOURCE_CONFIG = {
-    doc: { icon: '📄', color: '#f1f5f9' },
-    video: { icon: '🎥', color: 'var(--accent2-lt)' },
-    image: { icon: '📊', color: '#f0eef8' },
-    link: { icon: '🔗', color: '#fef5ec' },
-    audio: { icon: '🎙️', color: '#eefcf0' },
-    model: { icon: '🧬', color: '#eefcf0' }
+    doc:   { icon: 'doc' },
+    video: { icon: 'video' },
+    image: { icon: 'image' },
+    link:  { icon: 'link' },
+    audio: { icon: 'audio' },
+    model: { icon: 'model' }
 };
 
 // Renderiza na aba correspondente a lista de mídias e materiais de apoio globais atrelados ao modelo.
@@ -981,10 +1068,10 @@ function renderizarRecursosGlobais(data) {
 
     html += `
         <div class="res-item" onclick="window.carregarNovoModelo('${targetId}')">
-            <div class="res-ic" style="background:#eefcf0; overflow:hidden;">
-                <img 
-                    src="models/${targetId}.png" 
-                    style="width:100%; height:100%; object-fit:cover; border-radius:6px;"
+            <div class="res-ic res-ic-model">
+                <img
+                    src="models/${targetId}.png"
+                    alt=""
                     onerror="this.style.display='none'"
                 >
             </div>
@@ -1002,7 +1089,9 @@ function renderizarRecursosGlobais(data) {
 
             return `
                 <div class="res-item" onclick='abrirMedia(${JSON.stringify(res)})'>
-                    <div class="res-ic" style="background:${config.color}">${config.icon}</div>
+                    <div class="res-ic">
+                        ${window.bioIcon(config.icon)}
+                    </div>
                     <div>
                         <div class="res-name">${res.name}</div>
                         <div class="res-type">${res.info}</div>
@@ -1212,35 +1301,92 @@ function renderButtons(id, data) {
 
     if (isIsolatedMode) {
         botoesHtml = `
-            <button class="dp-act" style="background:#f1c40f; color:#000;" onclick="voltarDoIsolamento('${id}')">Voltar</button>
-        `;
-        colunasGrid = "1fr 1fr";
+            <button
+                        title="Voltar"
+                        class="ic-btn"
+                        onclick="voltarDoIsolamento('${id}')"
+                        type="button"
+                    >
+                        <span data-icon="back"></span>
+                    </button>
+            `;
+        colunasGrid = "1fr";
+
     } else {
         if (naoPodeIsolar) {
             botoesHtml = `
-                <button class="dp-act" style="background:#555; color:#fff;" onclick="botaoGeral()">Geral</button>
+                <button
+                    title="Geral"
+                    class="ic-btn"
+                    onclick="botaoGeral()"
+                    type="button"
+                >
+                    <span data-icon="geral"></span>
+                </button>
             `;
             colunasGrid = "1fr";
+
         } else {
-            const hideShowBtn = isVisible 
-                ? `<button class="dp-act btn-hide" onclick="toggleVisibility('${id}', 'hide')">Esconder</button>`
-                : `<button class="dp-act btn-show" onclick="toggleVisibility('${id}', 'show')">Mostrar</button>`;
+            const hideShowBtn = isVisible
+                ? `
+                    <button
+                        title="Esconder"
+                        class="ic-btn"
+                        onclick="toggleVisibility('${id}', 'hide')"
+                        type="button"
+                    >
+                        <span data-icon="eye-off"></span>
+                    </button>
+                `
+                : `
+                    <button
+                        title="Mostrar"
+                        class="ic-btn"
+                        onclick="toggleVisibility('${id}', 'show')"
+                        type="button"
+                    >
+                        <span data-icon="eye"></span>
+                    </button>
+                `;
 
             botoesHtml = `
-                <button class="dp-act" style="background:#555; color:#fff;" onclick="botaoGeral()">Geral</button>
-                <button class="dp-act" style="background:#00ffff; color:#000;" onclick="isolarObjeto('${id}')">Isolar</button>
+                <button
+                    title="Geral"
+                    class="ic-btn"
+                    onclick="botaoGeral()"
+                    type="button"
+                >
+                    <span data-icon="geral"></span>
+                </button>
+
+                <button
+                    title="Isolar"
+                    class="ic-btn"
+                    onclick="isolarObjeto('${id}')"
+                    type="button"
+                >
+                    <span data-icon="focus"></span>
+                </button>
+
                 ${hideShowBtn}
             `;
+
+            colunasGrid = "repeat(3, 36px)";
         }
     }
 
-    document.querySelector('.desc-tx').innerHTML = `
+    const descTx = document.querySelector('.desc-tx');
+
+    descTx.innerHTML = `
         <h3>${data.objname || id}</h3>
         ${parseDescriptionMedia(data.description || 'Sem descrição.')}
         <div style="display: grid; grid-template-columns: ${colunasGrid}; gap: 10px; margin-top: 15px;">
             ${botoesHtml}
         </div>
     `;
+
+    // Renderiza os ícones SVG recém-criados
+    window.renderBioIcons(descTx);
 }
 
 // Controla os estados de Play e Pause da animação do modelo, reiniciando o clipe caso ele já tenha chegado ao fim.
@@ -1264,9 +1410,10 @@ window.togglePlayPause = () => {
 function updatePlayPauseUI() {
     const btn = document.getElementById('btn-play');
     if (!btn) return;
-    btn.innerHTML = isPaused 
-        ? `<svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>`
-        : `<svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>`;
+
+    btn.innerHTML = window.bioIcon(
+        isPaused ? 'play' : 'pause'
+    );
 }
 
 // Ativa ou desativa a reprodução contínua (looping) da animação do modelo e atualiza o estilo visual do botão.
@@ -1415,40 +1562,67 @@ function criarCallout(object, texto, clickPoint = null, chaveJson = null) {
     removerCallout();
 
     objetoAlvoCallout = object;
-    
+
+    // Cor do callout conforme o tema
+    const isDarkMode = document.body.classList.contains('dark-mode');
+    const corCallout = isDarkMode ? 0x38bdf8 : 0x2563a8;
+
     const box = new THREE.Box3().setFromObject(object);
-    const pontoMundoBase = clickPoint ? clickPoint.clone() : box.getCenter(new THREE.Vector3());
+    const pontoMundoBase = clickPoint
+        ? clickPoint.clone()
+        : box.getCenter(new THREE.Vector3());
+
     pontoLocalClique = object.worldToLocal(pontoMundoBase.clone());
 
     const direcaoCamera = new THREE.Vector3();
     camera.getWorldDirection(direcaoCamera);
-    
-    const vetorCima = new THREE.Vector3(0, 1, 0);
-    const vetorDireita = new THREE.Vector3().crossVectors(direcaoCamera, vetorCima).normalize();
-    
-    vetorDeslocamentoEtiqueta = vetorDireita.clone().multiplyScalar(0.25).add(vetorCima.clone().multiplyScalar(0.2));
-    
-    const labelPosition = pontoMundoBase.clone().add(vetorDeslocamentoEtiqueta);
 
+    const vetorCima = new THREE.Vector3(0, 1, 0);
+    const vetorDireita = new THREE.Vector3()
+        .crossVectors(direcaoCamera, vetorCima)
+        .normalize();
+
+    vetorDeslocamentoEtiqueta = vetorDireita.clone()
+        .multiplyScalar(0.25)
+        .add(vetorCima.clone().multiplyScalar(0.2));
+
+    const labelPosition = pontoMundoBase.clone()
+        .add(vetorDeslocamentoEtiqueta);
+
+    // Bolinha indicadora
     const dotGeo = new THREE.SphereGeometry(0.006, 16, 16);
-    const dotMat = new THREE.MeshBasicMaterial({ color: 0x007bff, depthTest: false });
+
+    const dotMat = new THREE.MeshBasicMaterial({
+        color: corCallout,
+        depthTest: false
+    });
+
     labelDot = new THREE.Mesh(dotGeo, dotMat);
     labelDot.renderOrder = 999;
     labelDot.position.copy(pontoMundoBase);
     scene.add(labelDot);
 
-    const lineGeo = new THREE.BufferGeometry().setFromPoints([pontoMundoBase, labelPosition]);
-    const lineMat = new THREE.LineBasicMaterial({ 
-        color: 0x007bff, 
+    // Linha conectora
+    const lineGeo = new THREE.BufferGeometry().setFromPoints([
+        pontoMundoBase,
+        labelPosition
+    ]);
+
+    const lineMat = new THREE.LineBasicMaterial({
+        color: corCallout,
         linewidth: 2,
-        depthTest: false 
+        depthTest: false
     });
+
     labelLine = new THREE.Line(lineGeo, lineMat);
+    labelLine.frustumCulled = false;
     labelLine.renderOrder = 998;
     scene.add(labelLine);
 
+    // Card HTML
     const div = document.createElement('div');
     div.className = 'callout-label';
+
     const podeIsolar = chaveJson && !chaveJson.includes('+nisolar');
 
     div.innerHTML = `
@@ -1458,21 +1632,21 @@ function criarCallout(object, texto, clickPoint = null, chaveJson = null) {
             <div class="callout-title">${texto}</div>
 
             ${chaveJson && podeIsolar ? `
-            <div class="callout-actions">
+                <div class="callout-actions">
 
-                <button
-                    class="callout-btn callout-isolate"
-                    onclick="event.stopPropagation(); window.isolarObjeto('${chaveJson}')">
-                    Isolar
-                </button>
+                    <button
+                        class="callout-btn callout-isolate"
+                        onclick="event.stopPropagation(); window.isolarObjeto('${chaveJson}')">
+                        Isolar
+                    </button>
 
-                <button
-                    class="callout-btn callout-hide"
-                    onclick="event.stopPropagation(); window.toggleVisibility('${chaveJson}', 'hide')">
-                    Esconder
-                </button>
+                    <button
+                        class="callout-btn callout-hide"
+                        onclick="event.stopPropagation(); window.toggleVisibility('${chaveJson}', 'hide')">
+                        Esconder
+                    </button>
 
-            </div>
+                </div>
             ` : ''}
 
         </div>
@@ -1649,7 +1823,7 @@ function atualizarLimiteCallout() {
 
         // Importante porque estamos alterando
         // manualmente os vértices da geometria
-        labelLine.geometry.computeBoundingSphere();
+        //labelLine.geometry.computeBoundingSphere();
     }
 
     // ========================================
@@ -1753,24 +1927,41 @@ function selecionarItemViaBusca(id) {
 
 // Alterna o tema da aplicação (classes de CSS) e atualiza a cor de fundo (background) da cena do Three.js entre claro e escuro.
 function toggleDarkMode() {
-    const btn = document.getElementById('theme-icon');
-    if (isDark === false)
-    {
-        document.body.classList.add('dark-mode');
-        btn.textContent = '☀️';
-        scene.background = new THREE.Color(0x0f172a);
-        isDark = true;
-    }else{
-        document.body.classList.remove('dark-mode');
-        btn.textContent = '🌙';
-        scene.background = new THREE.Color(0xf2f2f2);
-        isDark = false;
+    isDark = !isDark;
+
+    if (outlinePass) {
+        const cor = isDark ? 0x38bdf8 : 0x2563a8;
+        outlinePass.visibleEdgeColor.setHex(cor);
+        outlinePass.hiddenEdgeColor.setHex(cor);
     }
-  }
+
+    const corCallout = document.body.classList.contains('dark-mode')
+        ? 0x38bdf8
+        : 0x2563a8;
+
+    if (labelDot) {
+        labelDot.material.color.setHex(corCallout);
+    }
+
+    if (labelLine) {
+        labelLine.material.color.setHex(corCallout);
+    }
+
+    document.body.classList.toggle('dark-mode', isDark);
+
+    const btn = document.getElementById('theme-icon');
+    btn.dataset.icon = isDark ? 'sun' : 'moon';
+    window.renderBioIcons(btn.parentElement);
+
+    if (scene) {
+        scene.background = new THREE.Color(
+            isDark ? 0x0f172a : 0xf2f2f2
+        );
+    }
+}
 
 window.abrirAjuda = abrirAjuda;
 window.fecharAjuda = fecharAjuda;
-window.switchHelpTab = switchHelpTab;
 
 // Função auxiliar para encontrar a chave certa no JSON ignorando a tag de isolamento
 function obterChaveJson(id) {
@@ -1793,19 +1984,6 @@ function fecharAjuda() {
     if (helpModal) helpModal.style.display = 'none';
 }
 
-function switchHelpTab(tabId, btn) {
-    document.querySelectorAll('.help-tab-content').forEach(tab => {
-        tab.style.display = 'none';
-    });
-    
-    document.querySelectorAll('.help-tab-btn').forEach(b => {
-        b.classList.remove('active');
-    });
-    
-    document.getElementById(tabId).style.display = 'block';
-    btn.classList.add('active');
-}
-
 window.toggleDetailPanel = function () {
     const modal = document.querySelector('.det-modal');
     const button = document.getElementById('toggle-dp-btn');
@@ -1815,10 +1993,10 @@ window.toggleDetailPanel = function () {
     modal.classList.toggle('panel-hidden');
 
     if (modal.classList.contains('panel-hidden')) {
-        button.textContent = '◀';
+        button.innerHTML = window.bioIcon('panel-open');
         button.title = 'Mostrar painel';
     } else {
-        button.textContent = '▶';
+        button.innerHTML = window.bioIcon('panel-close');
         button.title = 'Esconder painel';
     }
 
@@ -1844,5 +2022,18 @@ function baixarArquivo(url, nomeArquivo) {
         })
         .catch(err => console.error('Erro ao baixar o recurso:', err));
 }
+
+document.addEventListener('fullscreenchange', () => {
+    const btn = document.getElementById('fullscreen-btn');
+    if (!btn) return;
+
+    const ativo = !!document.fullscreenElement;
+
+    btn.innerHTML = window.bioIcon(
+        ativo ? 'fullscreen-exit' : 'fullscreen'
+    );
+
+    btn.title = ativo ? 'Sair da tela cheia' : 'Tela cheia';
+});
 
 initViewer();
