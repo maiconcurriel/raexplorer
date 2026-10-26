@@ -28,15 +28,22 @@
         </div>
       </div>
       <div class="wm-visual-label">
-        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-        Modelos interativos em 3D
-      </div>
+        <svg width="14" height="14" fill="none" stroke="currentColor"
+            stroke-width="2" viewBox="0 0 24 24">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+            <circle cx="12" cy="12" r="3"/>
+        </svg>
+        <span data-i18n="welcome.models3d">Modelos interativos em 3D</span>
+    </div>
     </div>
 
     <div class="wm-content">
       <div class="wm-badge"><span class="wm-badge-dot"></span>BioExplora</div>
-      <h1 class="wm-title">Bem-vindo!</h1>
-      <p class="wm-sub">Explore estruturas anatômicas em três dimensões e aprofunde sua compreensão a cada modelo.</p>
+      <h1 class="wm-title" data-i18n="welcome.title">Bem-vindo!</h1>
+      <p class="wm-sub" data-i18n="welcome.subtitle">
+          Explore estruturas anatômicas em três dimensões e aprofunde
+          sua compreensão a cada modelo.
+      </p>
       <div class="wm-divider"></div>
       <!-- <ul class="wm-list">
         <li>
@@ -53,8 +60,12 @@
         </li>
       </ul> -->
       <button class="btn-primary" onclick="closeWelcome()">
-        Começar a explorar
-        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <span data-i18n="welcome.start">Começar a explorar</span>
+          <svg width="15" height="15" fill="none"
+              stroke="currentColor" stroke-width="2.2"
+              viewBox="0 0 24 24">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
       </button>
     </div>
 
@@ -69,25 +80,42 @@
       <div class="hd-divider"></div>
       <div class="hd-search">
         <span class="srch-ic" data-icon="search"></span>
-        <input type="text" placeholder="Buscar modelos anatômicos...">
+        <input
+            type="text"
+            placeholder="Buscar modelos anatômicos..."
+            data-i18n-placeholder="search.placeholder"
+        >
       </div>
       <div class="hd-right">
-          <button class="ic-btn" onclick="toggleDarkMode()"
-                  id="dark-mode-btn" title="Alternar tema">
+          <button class="ic-btn"
+                  onclick="toggleDarkMode()"
+                  id="dark-mode-btn"
+                  title="Alternar tema"
+                  data-i18n-title="header.theme">
               <span id="theme-icon" data-icon="moon"></span>
           </button>
 
           <div class="vtoggle">
-              <button class="vbtn active" title="Grade">
+              <button class="vbtn active" data-i18n-title="header.grid" title="Grade">
                   <span data-icon="blocks"></span>
               </button>
 
-              <button class="vbtn" title="Lista">
-                  <span data-icon="list"></span>
+              <button class="vbtn" data-i18n-title="header.list" title="Lista">
+                  <span  data-icon="list"></span>
               </button>
           </div>
 
-          <button class="ic-btn" title="Ajuda" onclick="abrirAjuda()">
+          <button
+              class="ic-btn"
+              id="language-btn"
+              title="Alterar idioma"
+              onclick="window.nextLanguage()"
+          >
+              <span data-icon="languages"></span>
+              <span id="language-label">PT</span>
+          </button>
+
+          <button class="ic-btn" data-i18n-title="header.help" title="Ajuda" onclick="abrirAjuda()">
               <span data-icon="help"></span>
           </button>
       </div>
@@ -98,23 +126,31 @@
     <div class="help-modal-card">
         <div class="help-header">
             <div style="display: flex; align-items: center; gap: 8px;">
-                <h2 style="margin: 0; font-size: 18px; font-weight: 600;">Central de Ajuda</h2>
+                <h2 data-i18n="help.title" style="margin: 0; font-size: 18px; font-weight: 600;">Central de Ajuda</h2>
             </div>
-            <button class="nav-arr" onclick="fecharAjuda()" title="Fechar ajuda">
+            <button class="nav-arr" onclick="fecharAjuda()" data-i18n-title="help.close" title="Fechar ajuda">
                 <span data-icon="close"></span>
             </button>
         </div>
         
         <div class="help-tabs">
-            <button class="help-tab-btn">Plataforma Principal</button>
+            <button class="help-tab-btn"
+                    data-i18n="help.mainTab">
+                Plataforma Principal
+            </button>
         </div>
 
         <div id="tab-principal" class="help-tab-content">
-            <h3><span data-icon="search"></span>Como navegar pelos Modelos</h3>
-            <p>Utilize a barra de pesquisa no topo para buscar órgãos, sistemas ou peças específicas em tempo real.</p>
+            <h3>
+                <span data-icon="search"></span>
+                <span data-i18n="help.navigationTitle">
+                    Como navegar pelos Modelos
+                </span>
+            </h3>
+            <p data-i18n="help.navigationText">Utilize a barra de pesquisa no topo para buscar órgãos, sistemas ou peças específicas em tempo real.</p>
             
             <h3><span data-icon="blocks"></span> Filtros Avançados</h3>
-            <p>Clique no botão <strong>Filtrar</strong> para abrir a listagem de categorias por Sistemas Anatômicos (Cardiovascular, Nervoso, etc.). Você pode selecionar múltiplos filtros ao mesmo tempo.</p>
+            <p data-i18n="help.filtersText">Clique no botão <strong>Filtrar</strong> para abrir a listagem de categorias por Sistemas Anatômicos (Cardiovascular, Nervoso, etc.). Você pode selecionar múltiplos filtros ao mesmo tempo.</p>
         </div>
     </div>
   </div>
@@ -124,30 +160,30 @@
       <div class="fdd-wrap">
         <button class="filter-trigger" id="filter-btn" onclick="toggleFdd()">
           <span data-icon="filter"></span>
-          Filtrar
+          <span  data-i18n="filter.button">Filtrar</span>
           <span class="filter-badge" id="filter-badge" style="display:none">0</span>
         </button>
         <div class="fdd" id="fdd">
           <div class="fdd-label">Categoria</div>
           <div class="fdd-chips">
-            <div class="ddchip active" onclick="toggleDdChip(this,'all')"><span>Todos</span><span class="ddcnt"></span></div>
-            <div class="ddchip" onclick="toggleDdChip(this,'nervoso')"><span>Nervoso</span><span class="ddcnt"></span></div>
-            <div class="ddchip" onclick="toggleDdChip(this,'cardio')"><span>Cardiovascular</span><span class="ddcnt"></span></div>
-            <div class="ddchip" onclick="toggleDdChip(this,'tegum')"><span>Tegumentar</span><span class="ddcnt"></span></div>
-            <div class="ddchip" onclick="toggleDdChip(this,'celul')"><span>Célula</span><span class="ddcnt"></span></div>
-            <div class="ddchip" onclick="toggleDdChip(this,'esqueletico')"><span>Esquelético</span><span class="ddcnt"></span></div>
-            <div class="ddchip" onclick="toggleDdChip(this,'muscular')"><span>Muscular</span><span class="ddcnt"></span></div>
-            <div class="ddchip" onclick="toggleDdChip(this,'resp')"><span>Respiratório</span><span class="ddcnt"></span></div>
-            <div class="ddchip" onclick="toggleDdChip(this,'digest')"><span>Digestivo</span><span class="ddcnt"></span></div>
-            <div class="ddchip" onclick="toggleDdChip(this,'urin')"><span>Urinário</span><span class="ddcnt"></span></div>
-            <div class="ddchip" onclick="toggleDdChip(this,'senso')"><span>Sensorial</span><span class="ddcnt"></span></div>
-            <div class="ddchip" onclick="toggleDdChip(this,'repro')"><span>Reprodutor</span><span class="ddcnt"></span></div>
-            <div class="ddchip" onclick="toggleDdChip(this,'infec')"><span>Infeccioso</span><span class="ddcnt"></span></div>
-            <div class="ddchip" onclick="toggleDdChip(this,'linf')"><span>Linfático</span><span class="ddcnt"></span></div>
-            <div class="ddchip" onclick="toggleDdChip(this,'circ')"><span>Circulatório</span><span class="ddcnt"></span></div>
-            <div class="ddchip" onclick="toggleDdChip(this,'audi')"><span>Auditivo</span><span class="ddcnt"></span></div>
-            <div class="ddchip" onclick="toggleDdChip(this,'endoc')"><span>Endócrino</span><span class="ddcnt"></span></div>
-            <div class="ddchip" onclick="toggleDdChip(this,'estom')"><span>Estomatognático</span><span class="ddcnt"></span></div>
+            <div class="ddchip active" onclick="toggleDdChip(this,'all')"><span data-i18n="category.all">Todos</span><span class="ddcnt"></span></div>
+            <div class="ddchip" onclick="toggleDdChip(this,'nervoso')"><span data-i18n="category.nervoso">Nervoso</span><span class="ddcnt"></span></div>
+            <div class="ddchip" onclick="toggleDdChip(this,'cardio')"><span data-i18n="category.cardio">Cardiovascular</span><span class="ddcnt"></span></div>
+            <div class="ddchip" onclick="toggleDdChip(this,'tegum')"><span data-i18n="category.tegum">Tegumentar</span><span class="ddcnt"></span></div>
+            <div class="ddchip" onclick="toggleDdChip(this,'celul')"><span data-i18n="category.celul">Célula</span><span class="ddcnt"></span></div>
+            <div class="ddchip" onclick="toggleDdChip(this,'esqueletico')"><span data-i18n="category.esqueletico">Esquelético</span><span class="ddcnt"></span></div>
+            <div class="ddchip" onclick="toggleDdChip(this,'muscular')"><span data-i18n="category.muscular">Muscular</span><span class="ddcnt"></span></div>
+            <div class="ddchip" onclick="toggleDdChip(this,'resp')"><span data-i18n="category.resp">Respiratório</span><span class="ddcnt"></span></div>
+            <div class="ddchip" onclick="toggleDdChip(this,'digest')"><span data-i18n="category.digest">Digestivo</span><span class="ddcnt"></span></div>
+            <div class="ddchip" onclick="toggleDdChip(this,'urin')"><span data-i18n="category.urin">Urinário</span><span class="ddcnt"></span></div>
+            <div class="ddchip" onclick="toggleDdChip(this,'senso')"><span data-i18n="category.senso">Sensorial</span><span class="ddcnt"></span></div>
+            <div class="ddchip" onclick="toggleDdChip(this,'repro')"><span data-i18n="category.repro">Reprodutor</span><span class="ddcnt"></span></div>
+            <div class="ddchip" onclick="toggleDdChip(this,'infec')"><span data-i18n="category.infec">Infeccioso</span><span class="ddcnt"></span></div>
+            <div class="ddchip" onclick="toggleDdChip(this,'linf')"><span data-i18n="category.linf">Linfático</span><span class="ddcnt"></span></div>
+            <div class="ddchip" onclick="toggleDdChip(this,'circ')"><span data-i18n="category.circ">Circulatório</span><span class="ddcnt"></span></div>
+            <div class="ddchip" onclick="toggleDdChip(this,'audi')"><span data-i18n="category.audi">Auditivo</span><span class="ddcnt"></span></div>
+            <div class="ddchip" onclick="toggleDdChip(this,'endoc')"><span data-i18n="category.endoc">Endócrino</span><span class="ddcnt"></span></div>
+            <div class="ddchip" onclick="toggleDdChip(this,'estom')"><span data-i18n="category.estom">Estomatognático</span><span class="ddcnt"></span></div>
           </div>
         </div>
       </div>
@@ -165,14 +201,18 @@
     <main>
       <div class="c-head">
         <div>
-          <h2 class="c-title">Modelos Anatômicos</h2>
+          <h2 class="c-title" data-i18n="catalog.title">Modelos Anatômicos</h2>
           <p class="c-meta">
-            Exibindo <span id="count-filtrados">0</span> de <span id="count-total">0</span> modelos
+              <span data-i18n="catalog.showing">Exibindo</span>
+              <span id="count-filtrados">0</span>
+              <span data-i18n="catalog.of">de</span>
+              <span id="count-total">0</span>
+              <span data-i18n="catalog.models">modelos</span>
           </p>
         </div>
         <select class="sort-sel" onchange="handleSort(this.value)">
-          <option value="az">Ordenar: A–Z</option>
-          <option value="za">Ordenar: Z–A</option>
+          <option value="az" data-i18n="catalog.sortAZ">Ordenar: A–Z</option>
+          <option value="za" data-i18n="catalog.sortZA">Ordenar: Z–A</option>
         </select>
       </div>
 
@@ -188,6 +228,7 @@
     </div>
 </div>
 <script src="js/icons.js"></script>
+<script src="js/i18n.js"></script>
 <script type="module" src="js/main.js"></script>
 </body>
 </html>

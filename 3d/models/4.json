@@ -30,409 +30,1040 @@
     "objname": "Artéria Anterior do Ventrículo Direito",
     "description": "Pequeno ramo arterial que fornece sangue ao músculo da região anterior do ventrículo direito."
   },
-
   "Anterior_cardiac_veins_of_right_ventricle_Coronary_vein_000720": {
     "objname": "Veias Cardíacas Anteriores do Ventrículo Direito",
     "description": "Veias que drenam o sangue do músculo da parte anterior do ventrículo direito, levando-o ao sistema venoso cardíaco."
   },
-
   "Anterior_fascicle__301352": {
     "objname": "Fascículo Anterior",
     "description": "Ramo do sistema de condução cardíaca que participa da distribuição do impulso elétrico pelo ventrículo esquerdo."
   },
-
   "Anterior_internodal_bundle__000663": {
     "objname": "Feixe Internodal Anterior",
     "description": "Via de condução que transmite o impulso elétrico do nó sinoatrial em direção ao nó atrioventricular."
   },
-
   "Anterior_interventricular_branch__left_anterior_descend_547c4e3": {
     "objname": "Ramo Interventricular Anterior da Artéria Coronária Esquerda",
     "description": "Importante ramo da artéria coronária esquerda que irriga a região anterior dos ventrículos e parte do septo interventricular."
   },
-
   "Aorta__base_of___000667": {
     "objname": "Base da Aorta",
     "description": "Porção inicial da aorta, localizada na saída do ventrículo esquerdo, por onde o sangue é conduzido para a circulação sistêmica."
   },
-
   "Aortic_arch__000668": {
     "objname": "Arco da Aorta",
     "description": "Curvatura da aorta que conecta sua porção ascendente à descendente e origina importantes artérias para cabeça, pescoço e membros superiores."
   },
-
   "Aortic_valve__left_semilunar_cusp__000673": {
     "objname": "Cúspide Semilunar Esquerda da Valva Aórtica",
     "description": "Uma das três cúspides da valva aórtica, que se fecha para impedir o retorno do sangue ao ventrículo esquerdo."
   },
-
   "Aortic_valve__posterior_semilunar_cusp__000674": {
     "objname": "Cúspide Semilunar Posterior da Valva Aórtica",
     "description": "Cúspide da valva aórtica que participa do fechamento da abertura entre o ventrículo esquerdo e a aorta."
   },
-
   "Aortic_valve__right_semilunar_cusp__000672": {
     "objname": "Cúspide Semilunar Direita da Valva Aórtica",
     "description": "Uma das três cúspides da valva aórtica, responsável por contribuir para impedir o refluxo de sangue para o ventrículo esquerdo."
   },
-
   "Aortic_valve_annulus__020231": {
     "objname": "Anel da Valva Aórtica",
     "description": "Estrutura fibrosa que circunda a abertura da valva aórtica e serve de suporte para suas cúspides."
   },
-
   "Atrial_branch__300421": {
     "objname": "Ramo Atrial",
     "description": "Ramo das artérias coronárias que fornece sangue para os tecidos musculares dos átrios."
   },
-
   "Atrioventricular_bundle__bundle_of_His___000662": {
     "objname": "Feixe Atrioventricular (Feixe de His)",
     "description": "Parte do sistema de condução cardíaca que transmite o impulso elétrico do nó atrioventricular para os ventrículos."
   },
-
   "Atrioventricular_node__000661": {
     "objname": "Nó Atrioventricular",
     "description": "Estrutura que recebe o impulso dos átrios, retarda sua passagem e o conduz para o sistema elétrico dos ventrículos."
   },
-
   "Branch_to_sinoatrial_node__300420": {
     "objname": "Ramo para o Nó Sinoatrial",
     "description": "Ramo arterial que fornece sangue ao nó sinoatrial, estrutura responsável por iniciar o ritmo cardíaco."
   },
-
   "Bundle_branch__L__000658": {
     "objname": "Ramo Esquerdo do Feixe Atrioventricular",
     "description": "Ramo do sistema de condução que leva o impulso elétrico pelo lado esquerdo do septo interventricular."
   },
-
   "Bundle_branch__R__000654": {
     "objname": "Ramo Direito do Feixe Atrioventricular",
     "description": "Ramo do sistema de condução que leva o impulso elétrico pelo lado direito do septo interventricular."
   },
-
   "Circumflex_branch_of_left_coronary_artery__000714": {
     "objname": "Ramo Circunflexo da Artéria Coronária Esquerda",
     "description": "Ramo da coronária esquerda que percorre o sulco coronário e irriga principalmente regiões do átrio e ventrículo esquerdos."
   },
-
   "Conus_arteriosus__000684": {
     "objname": "Cone Arterial",
     "description": "Região de saída do ventrículo direito que conduz o sangue em direção ao tronco pulmonar."
   },
-
   "Conus_branch__300419": {
     "objname": "Ramo do Cone Arterial",
     "description": "Ramo arterial que fornece sangue à região do cone arterial e à área de saída do ventrículo direito."
   },
-
   "Coronary_sinus__000716": {
     "objname": "Seio Coronário",
     "description": "Grande vaso venoso localizado na parte posterior do coração que recebe a maior parte do sangue drenado pelas veias cardíacas."
   },
-
   "Great_cardiac__anterior_interventricular__vein_Coronary_d6300b9": {
     "objname": "Veia Cardíaca Magna",
     "description": "Veia que acompanha parte do trajeto da artéria interventricular anterior e drena sangue do músculo cardíaco."
   },
-
   "Heart__diaphragmatic_surface__000683": {
     "objname": "Superfície Diafragmática do Coração",
     "description": "Superfície inferior do coração, voltada para o diafragma e formada principalmente pelas regiões posteriores dos ventrículos."
   },
-
   "Heart__sternocostal_surface_front_000698": {
     "objname": "Superfície Esternocostal do Coração",
     "description": "Superfície anterior do coração, voltada para o esterno e as costelas, formada principalmente pelo ventrículo direito."
   },
-
   "Inferior_vena_cava__base_of___000666": {
     "objname": "Base da Veia Cava Inferior",
     "description": "Porção da veia cava inferior próxima à entrada no átrio direito, responsável por conduzir sangue venoso proveniente da parte inferior do corpo."
   },
-
   "Interatrial__Bachmann_s__bundle__000660": {
     "objname": "Feixe Interatrial (Feixe de Bachmann)",
     "description": "Via de condução que transmite o impulso elétrico do átrio direito para o átrio esquerdo."
   },
-
   "Interventricular_septum_back_surface_002614": {
     "objname": "Superfície Posterior do Septo Interventricular",
     "description": "Parte posterior do septo que separa os ventrículos direito e esquerdo e contribui para a separação das circulações cardíacas."
   },
-
   "Interventricular_septum_front_surface_000704": {
     "objname": "Superfície Anterior do Septo Interventricular",
     "description": "Parte anterior do septo que separa os ventrículos e contém estruturas importantes do sistema de condução elétrica."
   },
-
   "Left_atrium__000706": {
     "objname": "Átrio Esquerdo",
     "description": "Câmara superior esquerda que recebe o sangue oxigenado vindo dos pulmões por meio das veias pulmonares."
   },
-
   "Left_coronary_artery__000713": {
     "objname": "Artéria Coronária Esquerda",
     "description": "Artéria que fornece sangue oxigenado a grande parte do músculo cardíaco, especialmente às regiões do lado esquerdo."
   },
-
   "Left_ventricle_back_portion_000688": {
     "objname": "Porção Posterior do Ventrículo Esquerdo",
     "description": "Região posterior do ventrículo esquerdo, cuja musculatura participa da ejeção do sangue para a aorta."
   },
-
   "Left_ventricle_front_surface_000703": {
     "objname": "Superfície Anterior do Ventrículo Esquerdo",
     "description": "Região anterior do ventrículo esquerdo, formada por uma parede muscular espessa responsável pela ejeção do sangue para a circulação sistêmica."
   },
-
   "Middle_cardiac__posterior_interventricular__vein_Corona_dffc038": {
     "objname": "Veia Cardíaca Média",
     "description": "Veia que percorre a região posterior do sulco interventricular e drena sangue do músculo cardíaco para o seio coronário."
   },
-
   "Middle_fascicle__301353": {
     "objname": "Fascículo Médio",
     "description": "Ramo do sistema de condução cardíaca que participa da distribuição do impulso elétrico pelo ventrículo esquerdo."
   },
-
   "Middle_internodal_bundle__000659": {
     "objname": "Feixe Internodal Médio",
     "description": "Via de condução elétrica que auxilia na transmissão do impulso entre o nó sinoatrial e o nó atrioventricular."
   },
-
   "Mitral__bicuspid__valve__annulus__020236": {
     "objname": "Anel da Valva Mitral",
     "description": "Estrutura fibrosa que circunda a abertura entre o átrio esquerdo e o ventrículo esquerdo e sustenta a valva mitral."
   },
-
   "Mitral__bicuspid__valve__anterior_commissure__020232": {
     "objname": "Comissura Anterior da Valva Mitral",
     "description": "Região de encontro entre as cúspides da valva mitral, localizada na porção anterior da valva."
   },
-
   "Mitral__bicuspid__valve__antermedial__septal__leaflet__020234": {
     "objname": "Cúspide Anteromedial da Valva Mitral",
     "description": "Uma das duas cúspides da valva mitral, localizada entre as regiões anterior e medial da abertura atrioventricular esquerda."
   },
-
   "Mitral__bicuspid__valve__chordae_tendineae__020235": {
     "objname": "Cordas Tendíneas da Valva Mitral",
     "description": "Estruturas fibrosas que conectam as cúspides da valva mitral aos músculos papilares, evitando sua inversão durante a contração."
   },
-
   "Mitral__bicuspid__valve__posterior_commissure__020233": {
     "objname": "Comissura Posterior da Valva Mitral",
     "description": "Região de encontro entre as cúspides da valva mitral localizada na porção posterior da valva."
   },
-
   "Mitral__bicuspid__valve__posterolateral__mural__leaflet__020237": {
     "objname": "Cúspide Posterolateral da Valva Mitral",
     "description": "Cúspide posterior da valva mitral que participa do fechamento da passagem entre o átrio e o ventrículo esquerdos."
   },
-
   "Moderator_band__septomarginal_trabecula___000696": {
     "objname": "Trabécula Septomarginal (Banda Moderadora)",
     "description": "Faixa muscular do ventrículo direito que ajuda na condução do impulso elétrico até regiões do músculo ventricular."
   },
-
   "Myocardium_back_portion_000686": {
     "objname": "Porção Posterior do Miocárdio",
     "description": "Parte posterior da camada muscular do coração, responsável pela força necessária para a contração cardíaca."
   },
-
   "Myocardium_front_surface_000699": {
     "objname": "Superfície Anterior do Miocárdio",
     "description": "Camada muscular localizada na região anterior do coração, responsável pela contração e bombeamento do sangue."
   },
-
   "Papillary_muscle__anterior__L__000690": {
     "objname": "Músculo Papilar Anterior Esquerdo",
     "description": "Músculo localizado no ventrículo esquerdo que se conecta às cordas tendíneas e auxilia no fechamento da valva mitral."
   },
-
   "Papillary_muscle__anterior__R__000695": {
     "objname": "Músculo Papilar Anterior Direito",
     "description": "Músculo do ventrículo direito que se conecta às cordas tendíneas e auxilia no fechamento da valva tricúspide."
   },
-
   "Papillary_muscle__medial__000694": {
     "objname": "Músculo Papilar Medial",
     "description": "Músculo do ventrículo que se liga às cordas tendíneas e contribui para manter a valva cardíaca fechada durante a contração."
   },
-
   "Papillary_muscle__posterior__L__000689": {
     "objname": "Músculo Papilar Posterior Esquerdo",
     "description": "Músculo do ventrículo esquerdo que se conecta às cordas tendíneas e ajuda a impedir o refluxo através da valva mitral."
   },
-
   "Papillary_muscle__posterior__R__000693": {
     "objname": "Músculo Papilar Posterior Direito",
     "description": "Músculo do ventrículo direito que se conecta às cordas tendíneas e ajuda a impedir o refluxo através da valva tricúspide."
   },
-
   "Posterior_fascicle__301354": {
     "objname": "Fascículo Posterior",
     "description": "Ramo do sistema de condução elétrica que participa da distribuição do impulso pelo ventrículo esquerdo."
   },
-
   "Posterior_internodal_bundle__000656": {
     "objname": "Feixe Internodal Posterior",
     "description": "Via de condução elétrica que transmite o impulso do nó sinoatrial em direção ao nó atrioventricular."
   },
-
   "Posterior_interventricular_branch__posterior_descending_eeb5dda": {
     "objname": "Ramo Interventricular Posterior",
     "description": "Ramo coronariano que percorre a região posterior do sulco interventricular e fornece sangue ao septo e aos ventrículos."
   },
-
   "Posterior_vein_of_left_ventricle__000718": {
     "objname": "Veia Posterior do Ventrículo Esquerdo",
     "description": "Veia que drena o sangue da região posterior do ventrículo esquerdo para o sistema venoso cardíaco."
   },
-
   "Pulmonary_arteries__base_of___L__000019": {
     "objname": "Base da Artéria Pulmonar Esquerda",
     "description": "Porção inicial da artéria pulmonar esquerda, responsável por conduzir sangue do coração em direção ao pulmão esquerdo."
   },
-
   "Pulmonary_arteries__base_of___R__000015": {
     "objname": "Base da Artéria Pulmonar Direita",
     "description": "Porção inicial da artéria pulmonar direita, responsável por conduzir sangue do coração em direção ao pulmão direito."
   },
-
   "Pulmonary_trunk__000003": {
     "objname": "Tronco Pulmonar",
     "description": "Grande vaso que sai do ventrículo direito e conduz sangue pobre em oxigênio em direção às artérias pulmonares."
   },
-
   "Pulmonary_trunk__base_of___000669": {
     "objname": "Base do Tronco Pulmonar",
     "description": "Porção inicial do tronco pulmonar localizada na saída do ventrículo direito."
   },
-
   "Pulmonary_valve__annulus__020245": {
     "objname": "Anel da Valva Pulmonar",
     "description": "Estrutura fibrosa que circunda a abertura do tronco pulmonar e sustenta as cúspides da valva pulmonar."
   },
-
   "Pulmonary_valve__anterior_cusp__000679": {
     "objname": "Cúspide Anterior da Valva Pulmonar",
     "description": "Uma das três cúspides da valva pulmonar, responsável por contribuir para impedir o retorno do sangue ao ventrículo direito."
   },
-
   "Pulmonary_valve__left_cusp__000681": {
     "objname": "Cúspide Esquerda da Valva Pulmonar",
     "description": "Cúspide da valva pulmonar que participa do fechamento da saída do ventrículo direito durante o relaxamento cardíaco."
   },
-
   "Pulmonary_valve__right_cusp__000680": {
     "objname": "Cúspide Direita da Valva Pulmonar",
     "description": "Cúspide da valva pulmonar que ajuda a impedir o refluxo do sangue para o ventrículo direito."
   },
-
   "Pulmonary_veins__base_of___L__000011": {
     "objname": "Base das Veias Pulmonares Esquerdas",
     "description": "Porção inicial das veias pulmonares esquerdas, que conduzem sangue oxigenado do pulmão esquerdo ao átrio esquerdo."
   },
-
   "Pulmonary_veins__base_of___R__000006": {
     "objname": "Base das Veias Pulmonares Direitas",
     "description": "Porção inicial das veias pulmonares direitas, que conduzem sangue oxigenado do pulmão direito ao átrio esquerdo."
   },
-
   "Purkinje_fibers__L__000657": {
     "objname": "Fibras de Purkinje Esquerdas",
     "description": "Fibras especializadas que distribuem rapidamente o impulso elétrico pelo músculo do ventrículo esquerdo."
   },
-
   "Purkinje_fibers__R__000655": {
     "objname": "Fibras de Purkinje Direitas",
     "description": "Fibras especializadas que distribuem rapidamente o impulso elétrico pelo músculo do ventrículo direito."
   },
-
   "Right_atrium__000705": {
     "objname": "Átrio Direito",
     "description": "Câmara superior direita que recebe o sangue pobre em oxigênio vindo das veias cavas e do coração."
   },
-
   "Right_coronary_artery__000709": {
     "objname": "Artéria Coronária Direita",
     "description": "Artéria que fornece sangue ao músculo cardíaco, principalmente às regiões do lado direito do coração."
   },
-
   "Right_marginal_artery__000710": {
     "objname": "Artéria Marginal Direita",
     "description": "Ramo da artéria coronária direita que percorre a margem do coração e irriga principalmente o ventrículo direito."
   },
-
   "Right_ventricle_back_portion_000692": {
     "objname": "Porção Posterior do Ventrículo Direito",
     "description": "Região posterior do ventrículo direito, responsável por participar do bombeamento do sangue em direção aos pulmões."
   },
-
   "Right_ventricle_front_surface_000701": {
     "objname": "Superfície Anterior do Ventrículo Direito",
     "description": "Região anterior do ventrículo direito, que recebe sangue do átrio direito e o bombeia para o tronco pulmonar."
   },
-
   "Sinoatrial_node__000653": {
     "objname": "Nó Sinoatrial",
     "description": "Estrutura localizada no átrio direito que gera os impulsos elétricos responsáveis por iniciar e regular o ritmo cardíaco."
   },
-
   "Small_cardiac_vein__000719": {
     "objname": "Veia Cardíaca Menor",
     "description": "Veia que drena sangue de regiões do coração, especialmente do ventrículo direito, direcionando-o ao seio coronário."
   },
-
   "Superior_vena_cava__000650": {
     "objname": "Veia Cava Superior",
     "description": "Grande veia que conduz sangue pobre em oxigênio da cabeça, pescoço, membros superiores e tórax ao átrio direito."
   },
-
   "Superior_vena_cava__base_of___000665": {
     "objname": "Base da Veia Cava Superior",
     "description": "Porção da veia cava superior próxima à entrada no átrio direito, por onde o sangue venoso chega ao coração."
   },
-
   "Tricuspid_valve__annulus__020239": {
     "objname": "Anel da Valva Tricúspide",
     "description": "Estrutura fibrosa que circunda a abertura entre o átrio direito e o ventrículo direito e sustenta a valva tricúspide."
   },
-
   "Tricuspid_valve__anterior_leaflet__020240": {
     "objname": "Cúspide Anterior da Valva Tricúspide",
     "description": "Uma das cúspides da valva tricúspide, que se fecha durante a contração para impedir o retorno do sangue ao átrio direito."
   },
-
   "Tricuspid_valve__chordae_tendineae__020242": {
     "objname": "Cordas Tendíneas da Valva Tricúspide",
     "description": "Estruturas fibrosas que conectam as cúspides da valva tricúspide aos músculos papilares e ajudam a evitar sua inversão."
   },
-
   "Tricuspid_valve__commissure__002615": {
     "objname": "Comissura da Valva Tricúspide",
     "description": "Ponto de encontro entre duas cúspides da valva tricúspide, contribuindo para o fechamento adequado da valva."
   },
-
   "Tricuspid_valve__commissure__020243": {
     "objname": "Comissura da Valva Tricúspide",
     "description": "Região de união entre cúspides adjacentes da valva tricúspide que participa do fechamento da abertura atrioventricular."
   },
-
   "Tricuspid_valve__commissure__020244": {
     "objname": "Comissura da Valva Tricúspide",
     "description": "Ponto localizado entre as cúspides da valva tricúspide, permitindo que elas se aproximem durante o fechamento."
   },
-
   "Tricuspid_valve__posterior_leaflet__020238": {
     "objname": "Cúspide Posterior da Valva Tricúspide",
     "description": "Cúspide posterior da valva tricúspide que contribui para impedir o refluxo de sangue para o átrio direito."
   },
-
   "Tricuspid_valve__septal_leaflet__020241": {
     "objname": "Cúspide Septal da Valva Tricúspide",
     "description": "Cúspide da valva tricúspide localizada próxima ao septo interventricular e envolvida no fechamento da abertura atrioventricular direita."
+  },
+  "translations": {
+    "en": {
+      "objname": "Heart",
+      "objsystem": [
+        "Cardiovascular"
+      ],
+      "objdescription": "https://vimeo.com/1191660272/3f4d52023b\n\nThe heart is a muscular organ of the cardiovascular system responsible for pumping blood to the lungs and the other tissues of the body. It consists of four chambers—the right and left atria and the right and left ventricles—separated by septa and connected by valves that direct blood flow. The model shows the main external and internal structures of the heart, including the myocardium, cardiac surfaces, atrioventricular and semilunar valves, papillary muscles, chordae tendineae, trabeculae, great vessels, coronary arteries and veins, and components of the electrical conduction system, such as the sinoatrial and atrioventricular nodes, the bundle of His, bundle branches, and Purkinje fibers. These structures work together to maintain blood circulation and the heart rhythm.",
+      "linkedModels": [
+        {
+          "id": "5",
+          "label": "Heart (Animated)"
+        },
+        {
+          "id": "19",
+          "label": "Arterial System"
+        },
+        {
+          "id": "20",
+          "label": "Venous System"
+        }
+      ],
+      "resources": [
+        {
+          "name": "Heart",
+          "info": "Image · 262 KB"
+        }
+      ],
+      "Anterior_artery_of_right_ventricle__020246": {
+        "objname": "Anterior Artery of the Right Ventricle",
+        "description": "Small arterial branch that supplies blood to the muscle in the anterior region of the right ventricle."
+      },
+      "Anterior_cardiac_veins_of_right_ventricle_Coronary_vein_000720": {
+        "objname": "Anterior Cardiac Veins of the Right Ventricle",
+        "description": "Veins that drain blood from the muscle of the anterior right ventricle into the cardiac venous system."
+      },
+      "Anterior_fascicle__301352": {
+        "objname": "Anterior Fascicle",
+        "description": "Branch of the cardiac conduction system involved in distributing electrical impulses through the left ventricle."
+      },
+      "Anterior_internodal_bundle__000663": {
+        "objname": "Anterior Internodal Bundle",
+        "description": "Conduction pathway that carries electrical impulses from the sinoatrial node toward the atrioventricular node."
+      },
+      "Anterior_interventricular_branch__left_anterior_descend_547c4e3": {
+        "objname": "Anterior Interventricular Branch of the Left Coronary Artery",
+        "description": "Major branch of the left coronary artery that supplies the anterior ventricular regions and part of the interventricular septum."
+      },
+      "Aorta__base_of___000667": {
+        "objname": "Base of the Aorta",
+        "description": "Initial portion of the aorta at the outlet of the left ventricle, through which blood enters the systemic circulation."
+      },
+      "Aortic_arch__000668": {
+        "objname": "Aortic Arch",
+        "description": "Curved portion of the aorta connecting its ascending and descending segments and giving rise to major arteries supplying the head, neck, and upper limbs."
+      },
+      "Aortic_valve__left_semilunar_cusp__000673": {
+        "objname": "Left Semilunar Cusp of the Aortic Valve",
+        "description": "One of the three cusps of the aortic valve, which closes to prevent blood from flowing back into the left ventricle."
+      },
+      "Aortic_valve__posterior_semilunar_cusp__000674": {
+        "objname": "Posterior Semilunar Cusp of the Aortic Valve",
+        "description": "Cusp of the aortic valve that helps close the opening between the left ventricle and the aorta."
+      },
+      "Aortic_valve__right_semilunar_cusp__000672": {
+        "objname": "Right Semilunar Cusp of the Aortic Valve",
+        "description": "One of the three aortic valve cusps that helps prevent blood from flowing back into the left ventricle."
+      },
+      "Aortic_valve_annulus__020231": {
+        "objname": "Aortic Valve Annulus",
+        "description": "Fibrous structure surrounding the aortic valve opening and supporting its cusps."
+      },
+      "Atrial_branch__300421": {
+        "objname": "Atrial Branch",
+        "description": "Branch of the coronary arteries that supplies blood to the muscular tissues of the atria."
+      },
+      "Atrioventricular_bundle__bundle_of_His___000662": {
+        "objname": "Atrioventricular Bundle (Bundle of His)",
+        "description": "Part of the cardiac conduction system that transmits electrical impulses from the atrioventricular node to the ventricles."
+      },
+      "Atrioventricular_node__000661": {
+        "objname": "Atrioventricular Node",
+        "description": "Structure that receives impulses from the atria, delays their passage, and conducts them to the ventricular electrical system."
+      },
+      "Branch_to_sinoatrial_node__300420": {
+        "objname": "Branch to the Sinoatrial Node",
+        "description": "Arterial branch supplying the sinoatrial node, the structure responsible for initiating the heart rhythm."
+      },
+      "Bundle_branch__L__000658": {
+        "objname": "Left Bundle Branch",
+        "description": "Branch of the conduction system that carries electrical impulses along the left side of the interventricular septum."
+      },
+      "Bundle_branch__R__000654": {
+        "objname": "Right Bundle Branch",
+        "description": "Branch of the conduction system that carries electrical impulses along the right side of the interventricular septum."
+      },
+      "Circumflex_branch_of_left_coronary_artery__000714": {
+        "objname": "Circumflex Branch of the Left Coronary Artery",
+        "description": "Branch of the left coronary artery that runs along the coronary sulcus and mainly supplies regions of the left atrium and ventricle."
+      },
+      "Conus_arteriosus__000684": {
+        "objname": "Conus Arteriosus",
+        "description": "Outflow region of the right ventricle that directs blood toward the pulmonary trunk."
+      },
+      "Conus_branch__300419": {
+        "objname": "Conus Branch",
+        "description": "Arterial branch supplying the conus arteriosus and the right ventricular outflow region."
+      },
+      "Coronary_sinus__000716": {
+        "objname": "Coronary Sinus",
+        "description": "Large venous vessel on the posterior side of the heart that receives most of the blood drained by the cardiac veins."
+      },
+      "Great_cardiac__anterior_interventricular__vein_Coronary_d6300b9": {
+        "objname": "Great Cardiac Vein",
+        "description": "Vein that accompanies part of the anterior interventricular artery and drains blood from the heart muscle."
+      },
+      "Heart__diaphragmatic_surface__000683": {
+        "objname": "Diaphragmatic Surface of the Heart",
+        "description": "Inferior surface of the heart facing the diaphragm, formed mainly by the posterior regions of the ventricles."
+      },
+      "Heart__sternocostal_surface_front_000698": {
+        "objname": "Sternocostal Surface of the Heart",
+        "description": "Anterior surface of the heart facing the sternum and ribs, formed mainly by the right ventricle."
+      },
+      "Inferior_vena_cava__base_of___000666": {
+        "objname": "Base of the Inferior Vena Cava",
+        "description": "Portion of the inferior vena cava near its entry into the right atrium, carrying venous blood from the lower body."
+      },
+      "Interatrial__Bachmann_s__bundle__000660": {
+        "objname": "Interatrial Bundle (Bachmann's Bundle)",
+        "description": "Conduction pathway that transmits electrical impulses from the right atrium to the left atrium."
+      },
+      "Interventricular_septum_back_surface_002614": {
+        "objname": "Posterior Surface of the Interventricular Septum",
+        "description": "Posterior part of the septum separating the right and left ventricles and helping keep the cardiac circulations separate."
+      },
+      "Interventricular_septum_front_surface_000704": {
+        "objname": "Anterior Surface of the Interventricular Septum",
+        "description": "Anterior part of the septum separating the ventricles and containing important structures of the electrical conduction system."
+      },
+      "Left_atrium__000706": {
+        "objname": "Left Atrium",
+        "description": "Upper left chamber that receives oxygenated blood from the lungs through the pulmonary veins."
+      },
+      "Left_coronary_artery__000713": {
+        "objname": "Left Coronary Artery",
+        "description": "Artery that supplies oxygenated blood to much of the heart muscle, particularly regions on the left side."
+      },
+      "Left_ventricle_back_portion_000688": {
+        "objname": "Posterior Portion of the Left Ventricle",
+        "description": "Posterior region of the left ventricle whose muscle helps eject blood into the aorta."
+      },
+      "Left_ventricle_front_surface_000703": {
+        "objname": "Anterior Surface of the Left Ventricle",
+        "description": "Anterior region of the left ventricle, with a thick muscular wall responsible for ejecting blood into the systemic circulation."
+      },
+      "Middle_cardiac__posterior_interventricular__vein_Corona_dffc038": {
+        "objname": "Middle Cardiac Vein",
+        "description": "Vein that runs along the posterior interventricular sulcus and drains blood from the heart muscle into the coronary sinus."
+      },
+      "Middle_fascicle__301353": {
+        "objname": "Middle Fascicle",
+        "description": "Branch of the cardiac conduction system involved in distributing electrical impulses through the left ventricle."
+      },
+      "Middle_internodal_bundle__000659": {
+        "objname": "Middle Internodal Bundle",
+        "description": "Electrical conduction pathway that helps transmit impulses between the sinoatrial and atrioventricular nodes."
+      },
+      "Mitral__bicuspid__valve__annulus__020236": {
+        "objname": "Mitral Valve Annulus",
+        "description": "Fibrous structure surrounding the opening between the left atrium and left ventricle and supporting the mitral valve."
+      },
+      "Mitral__bicuspid__valve__anterior_commissure__020232": {
+        "objname": "Anterior Commissure of the Mitral Valve",
+        "description": "Region where the mitral valve leaflets meet, located in the anterior portion of the valve."
+      },
+      "Mitral__bicuspid__valve__antermedial__septal__leaflet__020234": {
+        "objname": "Anteromedial Leaflet of the Mitral Valve",
+        "description": "One of the two mitral valve leaflets, situated between the anterior and medial regions of the left atrioventricular opening."
+      },
+      "Mitral__bicuspid__valve__chordae_tendineae__020235": {
+        "objname": "Chordae Tendineae of the Mitral Valve",
+        "description": "Fibrous cords connecting the mitral valve leaflets to the papillary muscles and preventing their inversion during contraction."
+      },
+      "Mitral__bicuspid__valve__posterior_commissure__020233": {
+        "objname": "Posterior Commissure of the Mitral Valve",
+        "description": "Region where the mitral valve leaflets meet in the posterior portion of the valve."
+      },
+      "Mitral__bicuspid__valve__posterolateral__mural__leaflet__020237": {
+        "objname": "Posterolateral Leaflet of the Mitral Valve",
+        "description": "Posterior mitral valve leaflet that helps close the passage between the left atrium and ventricle."
+      },
+      "Moderator_band__septomarginal_trabecula___000696": {
+        "objname": "Septomarginal Trabecula (Moderator Band)",
+        "description": "Muscular band in the right ventricle that helps conduct electrical impulses to regions of the ventricular muscle."
+      },
+      "Myocardium_back_portion_000686": {
+        "objname": "Posterior Portion of the Myocardium",
+        "description": "Posterior portion of the heart's muscular layer, which generates the force needed for cardiac contraction."
+      },
+      "Myocardium_front_surface_000699": {
+        "objname": "Anterior Surface of the Myocardium",
+        "description": "Muscular layer on the anterior side of the heart, responsible for contraction and pumping blood."
+      },
+      "Papillary_muscle__anterior__L__000690": {
+        "objname": "Left Anterior Papillary Muscle",
+        "description": "Muscle in the left ventricle connected to the chordae tendineae that assists in closing the mitral valve."
+      },
+      "Papillary_muscle__anterior__R__000695": {
+        "objname": "Right Anterior Papillary Muscle",
+        "description": "Muscle in the right ventricle connected to the chordae tendineae that assists in closing the tricuspid valve."
+      },
+      "Papillary_muscle__medial__000694": {
+        "objname": "Medial Papillary Muscle",
+        "description": "Ventricular muscle attached to the chordae tendineae that helps keep the heart valve closed during contraction."
+      },
+      "Papillary_muscle__posterior__L__000689": {
+        "objname": "Left Posterior Papillary Muscle",
+        "description": "Muscle in the left ventricle connected to the chordae tendineae that helps prevent backflow through the mitral valve."
+      },
+      "Papillary_muscle__posterior__R__000693": {
+        "objname": "Right Posterior Papillary Muscle",
+        "description": "Muscle in the right ventricle connected to the chordae tendineae that helps prevent backflow through the tricuspid valve."
+      },
+      "Posterior_fascicle__301354": {
+        "objname": "Posterior Fascicle",
+        "description": "Branch of the electrical conduction system involved in distributing impulses through the left ventricle."
+      },
+      "Posterior_internodal_bundle__000656": {
+        "objname": "Posterior Internodal Bundle",
+        "description": "Electrical conduction pathway that carries impulses from the sinoatrial node toward the atrioventricular node."
+      },
+      "Posterior_interventricular_branch__posterior_descending_eeb5dda": {
+        "objname": "Posterior Interventricular Branch",
+        "description": "Coronary branch running along the posterior interventricular sulcus and supplying blood to the septum and ventricles."
+      },
+      "Posterior_vein_of_left_ventricle__000718": {
+        "objname": "Posterior Vein of the Left Ventricle",
+        "description": "Vein that drains blood from the posterior left ventricle into the cardiac venous system."
+      },
+      "Pulmonary_arteries__base_of___L__000019": {
+        "objname": "Base of the Left Pulmonary Artery",
+        "description": "Initial portion of the left pulmonary artery, carrying blood from the heart toward the left lung."
+      },
+      "Pulmonary_arteries__base_of___R__000015": {
+        "objname": "Base of the Right Pulmonary Artery",
+        "description": "Initial portion of the right pulmonary artery, carrying blood from the heart toward the right lung."
+      },
+      "Pulmonary_trunk__000003": {
+        "objname": "Pulmonary Trunk",
+        "description": "Large vessel arising from the right ventricle that carries oxygen-poor blood toward the pulmonary arteries."
+      },
+      "Pulmonary_trunk__base_of___000669": {
+        "objname": "Base of the Pulmonary Trunk",
+        "description": "Initial portion of the pulmonary trunk located at the outlet of the right ventricle."
+      },
+      "Pulmonary_valve__annulus__020245": {
+        "objname": "Pulmonary Valve Annulus",
+        "description": "Fibrous structure surrounding the opening of the pulmonary trunk and supporting the pulmonary valve cusps."
+      },
+      "Pulmonary_valve__anterior_cusp__000679": {
+        "objname": "Anterior Cusp of the Pulmonary Valve",
+        "description": "One of the three pulmonary valve cusps that helps prevent blood from flowing back into the right ventricle."
+      },
+      "Pulmonary_valve__left_cusp__000681": {
+        "objname": "Left Cusp of the Pulmonary Valve",
+        "description": "Pulmonary valve cusp that helps close the right ventricular outlet during cardiac relaxation."
+      },
+      "Pulmonary_valve__right_cusp__000680": {
+        "objname": "Right Cusp of the Pulmonary Valve",
+        "description": "Pulmonary valve cusp that helps prevent blood from flowing back into the right ventricle."
+      },
+      "Pulmonary_veins__base_of___L__000011": {
+        "objname": "Base of the Left Pulmonary Veins",
+        "description": "Initial portion of the left pulmonary veins, which carry oxygenated blood from the left lung to the left atrium."
+      },
+      "Pulmonary_veins__base_of___R__000006": {
+        "objname": "Base of the Right Pulmonary Veins",
+        "description": "Initial portion of the right pulmonary veins, which carry oxygenated blood from the right lung to the left atrium."
+      },
+      "Purkinje_fibers__L__000657": {
+        "objname": "Left Purkinje Fibers",
+        "description": "Specialized fibers that rapidly distribute electrical impulses through the muscle of the left ventricle."
+      },
+      "Purkinje_fibers__R__000655": {
+        "objname": "Right Purkinje Fibers",
+        "description": "Specialized fibers that rapidly distribute electrical impulses through the muscle of the right ventricle."
+      },
+      "Right_atrium__000705": {
+        "objname": "Right Atrium",
+        "description": "Upper right chamber that receives oxygen-poor blood from the venae cavae and the heart itself."
+      },
+      "Right_coronary_artery__000709": {
+        "objname": "Right Coronary Artery",
+        "description": "Artery that supplies blood to the heart muscle, mainly to regions on the right side of the heart."
+      },
+      "Right_marginal_artery__000710": {
+        "objname": "Right Marginal Artery",
+        "description": "Branch of the right coronary artery that follows the heart's margin and mainly supplies the right ventricle."
+      },
+      "Right_ventricle_back_portion_000692": {
+        "objname": "Posterior Portion of the Right Ventricle",
+        "description": "Posterior region of the right ventricle involved in pumping blood toward the lungs."
+      },
+      "Right_ventricle_front_surface_000701": {
+        "objname": "Anterior Surface of the Right Ventricle",
+        "description": "Anterior region of the right ventricle, which receives blood from the right atrium and pumps it into the pulmonary trunk."
+      },
+      "Sinoatrial_node__000653": {
+        "objname": "Sinoatrial Node",
+        "description": "Structure in the right atrium that generates the electrical impulses responsible for initiating and regulating the heart rhythm."
+      },
+      "Small_cardiac_vein__000719": {
+        "objname": "Small Cardiac Vein",
+        "description": "Vein draining blood from regions of the heart, especially the right ventricle, toward the coronary sinus."
+      },
+      "Superior_vena_cava__000650": {
+        "objname": "Superior Vena Cava",
+        "description": "Large vein that carries oxygen-poor blood from the head, neck, upper limbs, and thorax into the right atrium."
+      },
+      "Superior_vena_cava__base_of___000665": {
+        "objname": "Base of the Superior Vena Cava",
+        "description": "Portion of the superior vena cava near its entry into the right atrium, through which venous blood reaches the heart."
+      },
+      "Tricuspid_valve__annulus__020239": {
+        "objname": "Tricuspid Valve Annulus",
+        "description": "Fibrous structure surrounding the opening between the right atrium and right ventricle and supporting the tricuspid valve."
+      },
+      "Tricuspid_valve__anterior_leaflet__020240": {
+        "objname": "Anterior Leaflet of the Tricuspid Valve",
+        "description": "One of the tricuspid valve leaflets, which closes during contraction to prevent blood from flowing back into the right atrium."
+      },
+      "Tricuspid_valve__chordae_tendineae__020242": {
+        "objname": "Chordae Tendineae of the Tricuspid Valve",
+        "description": "Fibrous cords connecting the tricuspid valve leaflets to the papillary muscles and helping prevent leaflet inversion."
+      },
+      "Tricuspid_valve__commissure__002615": {
+        "objname": "Commissure of the Tricuspid Valve",
+        "description": "Meeting point between two tricuspid valve leaflets that contributes to proper valve closure."
+      },
+      "Tricuspid_valve__commissure__020243": {
+        "objname": "Commissure of the Tricuspid Valve",
+        "description": "Region where adjacent tricuspid valve leaflets join, contributing to closure of the atrioventricular opening."
+      },
+      "Tricuspid_valve__commissure__020244": {
+        "objname": "Commissure of the Tricuspid Valve",
+        "description": "Point between tricuspid valve leaflets that allows them to come together during closure."
+      },
+      "Tricuspid_valve__posterior_leaflet__020238": {
+        "objname": "Posterior Leaflet of the Tricuspid Valve",
+        "description": "Posterior tricuspid valve leaflet that helps prevent blood from flowing back into the right atrium."
+      },
+      "Tricuspid_valve__septal_leaflet__020241": {
+        "objname": "Septal Leaflet of the Tricuspid Valve",
+        "description": "Tricuspid valve leaflet near the interventricular septum that helps close the right atrioventricular opening."
+      }
+    },
+    "es": {
+      "objname": "Corazón",
+      "objsystem": [
+        "Cardiovascular"
+      ],
+      "objdescription": "https://vimeo.com/1191660272/3f4d52023b\n\nEl corazón es un órgano muscular del sistema cardiovascular encargado de bombear sangre hacia los pulmones y los demás tejidos del cuerpo. Está formado por cuatro cavidades —aurículas derecha e izquierda y ventrículos derecho e izquierdo— separadas por tabiques y conectadas mediante válvulas que dirigen el flujo sanguíneo. El modelo presenta las principales estructuras externas e internas del corazón, incluidos el miocardio, las superficies cardíacas, las válvulas auriculoventriculares y semilunares, los músculos papilares, las cuerdas tendinosas, las trabéculas, los grandes vasos, las arterias y venas coronarias y los componentes del sistema de conducción eléctrica, como los nodos sinoauricular y auriculoventricular, el haz de His, sus ramas y las fibras de Purkinje. Estas estructuras actúan de forma integrada para mantener la circulación sanguínea y el ritmo cardíaco.",
+      "linkedModels": [
+        {
+          "id": "5",
+          "label": "Corazón (Animado)"
+        },
+        {
+          "id": "19",
+          "label": "Sistema arterial"
+        },
+        {
+          "id": "20",
+          "label": "Sistema venoso"
+        }
+      ],
+      "resources": [
+        {
+          "name": "Corazón",
+          "info": "Imagen · 262 KB"
+        }
+      ],
+      "Anterior_artery_of_right_ventricle__020246": {
+        "objname": "Arteria anterior del ventrículo derecho",
+        "description": "Pequeña rama arterial que suministra sangre al músculo de la región anterior del ventrículo derecho."
+      },
+      "Anterior_cardiac_veins_of_right_ventricle_Coronary_vein_000720": {
+        "objname": "Venas cardíacas anteriores del ventrículo derecho",
+        "description": "Venas que drenan la sangre del músculo de la parte anterior del ventrículo derecho hacia el sistema venoso cardíaco."
+      },
+      "Anterior_fascicle__301352": {
+        "objname": "Fascículo anterior",
+        "description": "Rama del sistema de conducción cardíaca que participa en la distribución del impulso eléctrico por el ventrículo izquierdo."
+      },
+      "Anterior_internodal_bundle__000663": {
+        "objname": "Haz internodal anterior",
+        "description": "Vía de conducción que transmite el impulso eléctrico desde el nodo sinoauricular hacia el nodo auriculoventricular."
+      },
+      "Anterior_interventricular_branch__left_anterior_descend_547c4e3": {
+        "objname": "Rama interventricular anterior de la arteria coronaria izquierda",
+        "description": "Importante rama de la arteria coronaria izquierda que irriga la región anterior de los ventrículos y parte del tabique interventricular."
+      },
+      "Aorta__base_of___000667": {
+        "objname": "Base de la aorta",
+        "description": "Porción inicial de la aorta, situada a la salida del ventrículo izquierdo, por donde la sangre pasa a la circulación sistémica."
+      },
+      "Aortic_arch__000668": {
+        "objname": "Arco aórtico",
+        "description": "Curvatura de la aorta que conecta sus porciones ascendente y descendente y da origen a importantes arterias para la cabeza, el cuello y los miembros superiores."
+      },
+      "Aortic_valve__left_semilunar_cusp__000673": {
+        "objname": "Valva semilunar izquierda de la válvula aórtica",
+        "description": "Una de las tres valvas de la válvula aórtica, que se cierra para impedir el retorno de sangre al ventrículo izquierdo."
+      },
+      "Aortic_valve__posterior_semilunar_cusp__000674": {
+        "objname": "Valva semilunar posterior de la válvula aórtica",
+        "description": "Valva de la válvula aórtica que participa en el cierre de la abertura entre el ventrículo izquierdo y la aorta."
+      },
+      "Aortic_valve__right_semilunar_cusp__000672": {
+        "objname": "Valva semilunar derecha de la válvula aórtica",
+        "description": "Una de las tres valvas de la válvula aórtica que ayuda a impedir el reflujo de sangre hacia el ventrículo izquierdo."
+      },
+      "Aortic_valve_annulus__020231": {
+        "objname": "Anillo de la válvula aórtica",
+        "description": "Estructura fibrosa que rodea la abertura de la válvula aórtica y sostiene sus valvas."
+      },
+      "Atrial_branch__300421": {
+        "objname": "Rama auricular",
+        "description": "Rama de las arterias coronarias que suministra sangre a los tejidos musculares de las aurículas."
+      },
+      "Atrioventricular_bundle__bundle_of_His___000662": {
+        "objname": "Haz auriculoventricular (haz de His)",
+        "description": "Parte del sistema de conducción cardíaca que transmite el impulso eléctrico desde el nodo auriculoventricular hacia los ventrículos."
+      },
+      "Atrioventricular_node__000661": {
+        "objname": "Nodo auriculoventricular",
+        "description": "Estructura que recibe el impulso de las aurículas, retrasa su paso y lo conduce al sistema eléctrico de los ventrículos."
+      },
+      "Branch_to_sinoatrial_node__300420": {
+        "objname": "Rama para el nodo sinoauricular",
+        "description": "Rama arterial que suministra sangre al nodo sinoauricular, estructura encargada de iniciar el ritmo cardíaco."
+      },
+      "Bundle_branch__L__000658": {
+        "objname": "Rama izquierda del haz auriculoventricular",
+        "description": "Rama del sistema de conducción que lleva el impulso eléctrico por el lado izquierdo del tabique interventricular."
+      },
+      "Bundle_branch__R__000654": {
+        "objname": "Rama derecha del haz auriculoventricular",
+        "description": "Rama del sistema de conducción que lleva el impulso eléctrico por el lado derecho del tabique interventricular."
+      },
+      "Circumflex_branch_of_left_coronary_artery__000714": {
+        "objname": "Rama circunfleja de la arteria coronaria izquierda",
+        "description": "Rama de la coronaria izquierda que recorre el surco coronario e irriga principalmente regiones de la aurícula y el ventrículo izquierdos."
+      },
+      "Conus_arteriosus__000684": {
+        "objname": "Cono arterioso",
+        "description": "Región de salida del ventrículo derecho que conduce la sangre hacia el tronco pulmonar."
+      },
+      "Conus_branch__300419": {
+        "objname": "Rama del cono arterioso",
+        "description": "Rama arterial que suministra sangre a la región del cono arterioso y a la salida del ventrículo derecho."
+      },
+      "Coronary_sinus__000716": {
+        "objname": "Seno coronario",
+        "description": "Gran vaso venoso situado en la parte posterior del corazón que recibe la mayor parte de la sangre drenada por las venas cardíacas."
+      },
+      "Great_cardiac__anterior_interventricular__vein_Coronary_d6300b9": {
+        "objname": "Vena cardíaca magna",
+        "description": "Vena que acompaña parte del trayecto de la arteria interventricular anterior y drena sangre del músculo cardíaco."
+      },
+      "Heart__diaphragmatic_surface__000683": {
+        "objname": "Cara diafragmática del corazón",
+        "description": "Superficie inferior del corazón orientada hacia el diafragma y formada principalmente por las regiones posteriores de los ventrículos."
+      },
+      "Heart__sternocostal_surface_front_000698": {
+        "objname": "Cara esternocostal del corazón",
+        "description": "Superficie anterior del corazón orientada hacia el esternón y las costillas, formada principalmente por el ventrículo derecho."
+      },
+      "Inferior_vena_cava__base_of___000666": {
+        "objname": "Base de la vena cava inferior",
+        "description": "Porción de la vena cava inferior próxima a su entrada en la aurícula derecha, que conduce sangre venosa de la parte inferior del cuerpo."
+      },
+      "Interatrial__Bachmann_s__bundle__000660": {
+        "objname": "Haz interauricular (haz de Bachmann)",
+        "description": "Vía de conducción que transmite el impulso eléctrico de la aurícula derecha a la izquierda."
+      },
+      "Interventricular_septum_back_surface_002614": {
+        "objname": "Superficie posterior del tabique interventricular",
+        "description": "Parte posterior del tabique que separa los ventrículos derecho e izquierdo y contribuye a mantener separadas las circulaciones cardíacas."
+      },
+      "Interventricular_septum_front_surface_000704": {
+        "objname": "Superficie anterior del tabique interventricular",
+        "description": "Parte anterior del tabique que separa los ventrículos y contiene estructuras importantes del sistema de conducción eléctrica."
+      },
+      "Left_atrium__000706": {
+        "objname": "Aurícula izquierda",
+        "description": "Cavidad superior izquierda que recibe sangre oxigenada de los pulmones a través de las venas pulmonares."
+      },
+      "Left_coronary_artery__000713": {
+        "objname": "Arteria coronaria izquierda",
+        "description": "Arteria que suministra sangre oxigenada a gran parte del músculo cardíaco, especialmente a las regiones del lado izquierdo."
+      },
+      "Left_ventricle_back_portion_000688": {
+        "objname": "Porción posterior del ventrículo izquierdo",
+        "description": "Región posterior del ventrículo izquierdo cuya musculatura participa en la expulsión de sangre hacia la aorta."
+      },
+      "Left_ventricle_front_surface_000703": {
+        "objname": "Superficie anterior del ventrículo izquierdo",
+        "description": "Región anterior del ventrículo izquierdo, formada por una pared muscular gruesa que impulsa la sangre hacia la circulación sistémica."
+      },
+      "Middle_cardiac__posterior_interventricular__vein_Corona_dffc038": {
+        "objname": "Vena cardíaca media",
+        "description": "Vena que recorre la región posterior del surco interventricular y drena sangre del músculo cardíaco hacia el seno coronario."
+      },
+      "Middle_fascicle__301353": {
+        "objname": "Fascículo medio",
+        "description": "Rama del sistema de conducción cardíaca que participa en la distribución del impulso eléctrico por el ventrículo izquierdo."
+      },
+      "Middle_internodal_bundle__000659": {
+        "objname": "Haz internodal medio",
+        "description": "Vía de conducción eléctrica que ayuda a transmitir el impulso entre los nodos sinoauricular y auriculoventricular."
+      },
+      "Mitral__bicuspid__valve__annulus__020236": {
+        "objname": "Anillo de la válvula mitral",
+        "description": "Estructura fibrosa que rodea la abertura entre la aurícula izquierda y el ventrículo izquierdo y sostiene la válvula mitral."
+      },
+      "Mitral__bicuspid__valve__anterior_commissure__020232": {
+        "objname": "Comisura anterior de la válvula mitral",
+        "description": "Región donde se unen las valvas de la válvula mitral, situada en su porción anterior."
+      },
+      "Mitral__bicuspid__valve__antermedial__septal__leaflet__020234": {
+        "objname": "Valva anteromedial de la válvula mitral",
+        "description": "Una de las dos valvas de la válvula mitral, situada entre las regiones anterior y medial del orificio auriculoventricular izquierdo."
+      },
+      "Mitral__bicuspid__valve__chordae_tendineae__020235": {
+        "objname": "Cuerdas tendinosas de la válvula mitral",
+        "description": "Estructuras fibrosas que conectan las valvas de la válvula mitral con los músculos papilares y evitan su inversión durante la contracción."
+      },
+      "Mitral__bicuspid__valve__posterior_commissure__020233": {
+        "objname": "Comisura posterior de la válvula mitral",
+        "description": "Región donde se unen las valvas de la válvula mitral, situada en su porción posterior."
+      },
+      "Mitral__bicuspid__valve__posterolateral__mural__leaflet__020237": {
+        "objname": "Valva posterolateral de la válvula mitral",
+        "description": "Valva posterior de la válvula mitral que contribuye al cierre del paso entre la aurícula y el ventrículo izquierdos."
+      },
+      "Moderator_band__septomarginal_trabecula___000696": {
+        "objname": "Trabécula septomarginal (banda moderadora)",
+        "description": "Banda muscular del ventrículo derecho que ayuda a conducir el impulso eléctrico hacia regiones del músculo ventricular."
+      },
+      "Myocardium_back_portion_000686": {
+        "objname": "Porción posterior del miocardio",
+        "description": "Parte posterior de la capa muscular del corazón, responsable de generar la fuerza necesaria para la contracción cardíaca."
+      },
+      "Myocardium_front_surface_000699": {
+        "objname": "Superficie anterior del miocardio",
+        "description": "Capa muscular situada en la región anterior del corazón, responsable de la contracción y del bombeo de sangre."
+      },
+      "Papillary_muscle__anterior__L__000690": {
+        "objname": "Músculo papilar anterior izquierdo",
+        "description": "Músculo situado en el ventrículo izquierdo que se conecta con las cuerdas tendinosas y ayuda al cierre de la válvula mitral."
+      },
+      "Papillary_muscle__anterior__R__000695": {
+        "objname": "Músculo papilar anterior derecho",
+        "description": "Músculo del ventrículo derecho que se conecta con las cuerdas tendinosas y ayuda al cierre de la válvula tricúspide."
+      },
+      "Papillary_muscle__medial__000694": {
+        "objname": "Músculo papilar medial",
+        "description": "Músculo ventricular unido a las cuerdas tendinosas que contribuye a mantener cerrada la válvula cardíaca durante la contracción."
+      },
+      "Papillary_muscle__posterior__L__000689": {
+        "objname": "Músculo papilar posterior izquierdo",
+        "description": "Músculo del ventrículo izquierdo conectado con las cuerdas tendinosas que ayuda a impedir el reflujo a través de la válvula mitral."
+      },
+      "Papillary_muscle__posterior__R__000693": {
+        "objname": "Músculo papilar posterior derecho",
+        "description": "Músculo del ventrículo derecho conectado con las cuerdas tendinosas que ayuda a impedir el reflujo a través de la válvula tricúspide."
+      },
+      "Posterior_fascicle__301354": {
+        "objname": "Fascículo posterior",
+        "description": "Rama del sistema de conducción eléctrica que participa en la distribución del impulso por el ventrículo izquierdo."
+      },
+      "Posterior_internodal_bundle__000656": {
+        "objname": "Haz internodal posterior",
+        "description": "Vía de conducción eléctrica que transmite el impulso del nodo sinoauricular hacia el nodo auriculoventricular."
+      },
+      "Posterior_interventricular_branch__posterior_descending_eeb5dda": {
+        "objname": "Rama interventricular posterior",
+        "description": "Rama coronaria que recorre la región posterior del surco interventricular y suministra sangre al tabique y a los ventrículos."
+      },
+      "Posterior_vein_of_left_ventricle__000718": {
+        "objname": "Vena posterior del ventrículo izquierdo",
+        "description": "Vena que drena la sangre de la región posterior del ventrículo izquierdo hacia el sistema venoso cardíaco."
+      },
+      "Pulmonary_arteries__base_of___L__000019": {
+        "objname": "Base de la arteria pulmonar izquierda",
+        "description": "Porción inicial de la arteria pulmonar izquierda, encargada de conducir sangre del corazón hacia el pulmón izquierdo."
+      },
+      "Pulmonary_arteries__base_of___R__000015": {
+        "objname": "Base de la arteria pulmonar derecha",
+        "description": "Porción inicial de la arteria pulmonar derecha, encargada de conducir sangre del corazón hacia el pulmón derecho."
+      },
+      "Pulmonary_trunk__000003": {
+        "objname": "Tronco pulmonar",
+        "description": "Gran vaso que sale del ventrículo derecho y conduce sangre pobre en oxígeno hacia las arterias pulmonares."
+      },
+      "Pulmonary_trunk__base_of___000669": {
+        "objname": "Base del tronco pulmonar",
+        "description": "Porción inicial del tronco pulmonar situada a la salida del ventrículo derecho."
+      },
+      "Pulmonary_valve__annulus__020245": {
+        "objname": "Anillo de la válvula pulmonar",
+        "description": "Estructura fibrosa que rodea la abertura del tronco pulmonar y sostiene las valvas de la válvula pulmonar."
+      },
+      "Pulmonary_valve__anterior_cusp__000679": {
+        "objname": "Valva anterior de la válvula pulmonar",
+        "description": "Una de las tres valvas de la válvula pulmonar que ayuda a impedir el retorno de sangre al ventrículo derecho."
+      },
+      "Pulmonary_valve__left_cusp__000681": {
+        "objname": "Valva izquierda de la válvula pulmonar",
+        "description": "Valva de la válvula pulmonar que participa en el cierre de la salida del ventrículo derecho durante la relajación cardíaca."
+      },
+      "Pulmonary_valve__right_cusp__000680": {
+        "objname": "Valva derecha de la válvula pulmonar",
+        "description": "Valva de la válvula pulmonar que ayuda a impedir el reflujo de sangre hacia el ventrículo derecho."
+      },
+      "Pulmonary_veins__base_of___L__000011": {
+        "objname": "Base de las venas pulmonares izquierdas",
+        "description": "Porción inicial de las venas pulmonares izquierdas, que conducen sangre oxigenada del pulmón izquierdo a la aurícula izquierda."
+      },
+      "Pulmonary_veins__base_of___R__000006": {
+        "objname": "Base de las venas pulmonares derechas",
+        "description": "Porción inicial de las venas pulmonares derechas, que conducen sangre oxigenada del pulmón derecho a la aurícula izquierda."
+      },
+      "Purkinje_fibers__L__000657": {
+        "objname": "Fibras de Purkinje izquierdas",
+        "description": "Fibras especializadas que distribuyen rápidamente el impulso eléctrico por el músculo del ventrículo izquierdo."
+      },
+      "Purkinje_fibers__R__000655": {
+        "objname": "Fibras de Purkinje derechas",
+        "description": "Fibras especializadas que distribuyen rápidamente el impulso eléctrico por el músculo del ventrículo derecho."
+      },
+      "Right_atrium__000705": {
+        "objname": "Aurícula derecha",
+        "description": "Cavidad superior derecha que recibe sangre pobre en oxígeno procedente de las venas cavas y del propio corazón."
+      },
+      "Right_coronary_artery__000709": {
+        "objname": "Arteria coronaria derecha",
+        "description": "Arteria que suministra sangre al músculo cardíaco, principalmente a las regiones del lado derecho del corazón."
+      },
+      "Right_marginal_artery__000710": {
+        "objname": "Arteria marginal derecha",
+        "description": "Rama de la arteria coronaria derecha que recorre el borde del corazón e irriga principalmente el ventrículo derecho."
+      },
+      "Right_ventricle_back_portion_000692": {
+        "objname": "Porción posterior del ventrículo derecho",
+        "description": "Región posterior del ventrículo derecho que participa en el bombeo de sangre hacia los pulmones."
+      },
+      "Right_ventricle_front_surface_000701": {
+        "objname": "Superficie anterior del ventrículo derecho",
+        "description": "Región anterior del ventrículo derecho, que recibe sangre de la aurícula derecha y la impulsa hacia el tronco pulmonar."
+      },
+      "Sinoatrial_node__000653": {
+        "objname": "Nodo sinoauricular",
+        "description": "Estructura situada en la aurícula derecha que genera los impulsos eléctricos responsables de iniciar y regular el ritmo cardíaco."
+      },
+      "Small_cardiac_vein__000719": {
+        "objname": "Vena cardíaca menor",
+        "description": "Vena que drena sangre de regiones del corazón, especialmente del ventrículo derecho, y la dirige hacia el seno coronario."
+      },
+      "Superior_vena_cava__000650": {
+        "objname": "Vena cava superior",
+        "description": "Gran vena que conduce sangre pobre en oxígeno de la cabeza, el cuello, los miembros superiores y el tórax hacia la aurícula derecha."
+      },
+      "Superior_vena_cava__base_of___000665": {
+        "objname": "Base de la vena cava superior",
+        "description": "Porción de la vena cava superior próxima a su entrada en la aurícula derecha, por donde llega sangre venosa al corazón."
+      },
+      "Tricuspid_valve__annulus__020239": {
+        "objname": "Anillo de la válvula tricúspide",
+        "description": "Estructura fibrosa que rodea la abertura entre la aurícula derecha y el ventrículo derecho y sostiene la válvula tricúspide."
+      },
+      "Tricuspid_valve__anterior_leaflet__020240": {
+        "objname": "Valva anterior de la válvula tricúspide",
+        "description": "Una de las valvas de la válvula tricúspide, que se cierra durante la contracción para impedir el retorno de sangre a la aurícula derecha."
+      },
+      "Tricuspid_valve__chordae_tendineae__020242": {
+        "objname": "Cuerdas tendinosas de la válvula tricúspide",
+        "description": "Estructuras fibrosas que conectan las valvas de la válvula tricúspide con los músculos papilares y ayudan a evitar su inversión."
+      },
+      "Tricuspid_valve__commissure__002615": {
+        "objname": "Comisura de la válvula tricúspide",
+        "description": "Punto de unión entre dos valvas de la válvula tricúspide que contribuye a su cierre adecuado."
+      },
+      "Tricuspid_valve__commissure__020243": {
+        "objname": "Comisura de la válvula tricúspide",
+        "description": "Región de unión entre valvas adyacentes de la válvula tricúspide que participa en el cierre del orificio auriculoventricular."
+      },
+      "Tricuspid_valve__commissure__020244": {
+        "objname": "Comisura de la válvula tricúspide",
+        "description": "Punto situado entre las valvas de la válvula tricúspide que permite que se aproximen durante el cierre."
+      },
+      "Tricuspid_valve__posterior_leaflet__020238": {
+        "objname": "Valva posterior de la válvula tricúspide",
+        "description": "Valva posterior de la válvula tricúspide que contribuye a impedir el reflujo de sangre hacia la aurícula derecha."
+      },
+      "Tricuspid_valve__septal_leaflet__020241": {
+        "objname": "Valva septal de la válvula tricúspide",
+        "description": "Valva de la válvula tricúspide situada cerca del tabique interventricular e implicada en el cierre del orificio auriculoventricular derecho."
+      }
+    }
   }
 }

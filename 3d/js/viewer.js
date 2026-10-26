@@ -57,6 +57,7 @@ let saoPass, smaaPass, outlinePass;
 let qualidadeAtual = 'media';
 let models = [];
 let objectData = {};
+let originalObjectData = null;
 let selectedObjects = [];
 let originalEmissive = new THREE.Color();
 let isIsolatedMode = false;
@@ -69,6 +70,7 @@ let isProgressBarDragging = false;
 let previousModelId = null;
 let progressBarEl = null;
 let labelRenderer, labelLine, labelDot, label2DObject;
+let ultimaEstruturaSelecionada = null;
 
 const raycaster = new THREE.Raycaster();
 const mouse = new THREE.Vector2();
@@ -82,6 +84,81 @@ let isDark = false;
 
 modelId = params.get('id');
 
+
+function getModelLanguage() {
+    const lang = localStorage.getItem('bioexplora_language') || 'pt-BR';
+    return ['pt-BR', 'en', 'es'].includes(lang) ? lang : 'pt-BR';
+}
+
+function aplicarTraducoesModelo(data, lang = getModelLanguage()) {
+    // O português permanece como idioma-base
+    const resultado = structuredClone(data);
+
+    // Remove traduções da versão usada pelo visualizador
+    delete resultado.translations;
+
+    const traducao = data.translations?.[lang];
+
+    if (!traducao) return resultado;
+
+    // Textos gerais do modelo
+    for (const campo of ['objname', 'objsystem', 'objdescription']) {
+        if (traducao[campo] !== undefined) {
+            resultado[campo] = structuredClone(traducao[campo]);
+        }
+    }
+
+    // Traduções das estruturas anatômicas
+    for (const [chave, valor] of Object.entries(traducao)) {
+        if (['objname', 'objsystem', 'objdescription',
+             'linkedModels', 'resources'].includes(chave)) {
+            continue;
+        }
+
+        if (!resultado[chave] || typeof resultado[chave] !== 'object') {
+            continue;
+        }
+
+        if (valor?.objname !== undefined) {
+            resultado[chave].objname = valor.objname;
+        }
+
+        if (valor?.description !== undefined) {
+            resultado[chave].description = valor.description;
+        }
+    }
+
+    // Modelos relacionados: mantém IDs originais
+    if (Array.isArray(traducao.linkedModels)) {
+        resultado.linkedModels = (resultado.linkedModels || []).map(
+            (modelo, index) => ({
+                ...modelo,
+                label: traducao.linkedModels[index]?.label ?? modelo.label
+            })
+        );
+    }
+
+    // Recursos: mantém tipo, URL e demais metadados originais
+    if (Array.isArray(traducao.resources)) {
+        resultado.resources = (resultado.resources || []).map(
+            (recurso, index) => ({
+                ...recurso,
+                name: traducao.resources[index]?.name ?? recurso.name,
+                info: traducao.resources[index]?.info ?? recurso.info
+            })
+        );
+    }
+
+    return resultado;
+}
+
+function atualizarDadosTraduzidos() {
+    if (!originalObjectData) return;
+
+    objectData = aplicarTraducoesModelo(originalObjectData);
+}
+
+
 // Inicializa o visualizador, processa parâmetros da URL (ID, tema, modal) e carrega os metadados JSON do modelo.
 async function initViewer() {
     const btn = document.getElementById('theme-icon');
@@ -92,12 +169,24 @@ async function initViewer() {
     window.renderBioIcons(btn.parentElement);
 
     if (params.get('modal') === 'true') document.body.classList.add('is-modal');
+    const languageBtn = document.getElementById('language-btn');
+
+    if (languageBtn) {
+        const isModal = params.get('modal') === 'true';
+
+        languageBtn.style.display = isModal ? 'none' : '';
+
+        if (!isModal) {
+            window.updateLanguageButton?.();
+        }
+    }
     if (!modelId) return;
 
     clock = new THREE.Clock();
 
     try {
-        objectData = await loadObjectData(modelId);
+        originalObjectData = await loadObjectData(modelId);
+        atualizarDadosTraduzidos();
 
         document.getElementById('det-title').textContent = objectData.objname;
         document.getElementById('det-bc').textContent = objectData.objname;
@@ -194,8 +283,35 @@ function initThree() {
         RIGHT: THREE.MOUSE.PAN
     };
 
+    const dispositivoTouch = window.matchMedia(
+        '(pointer: coarse)'
+    ).matches;
+
+    if (dispositivoTouch) {
+        controls.rotateSpeed = 0.65;
+        controls.zoomSpeed = 0.8;
+
+        controls.enableDamping = true;
+        controls.dampingFactor = 0.06;
+
+        controls.enablePan = false;
+
+        controls.touches.ONE = THREE.TOUCH.ROTATE;
+        controls.touches.TWO = THREE.TOUCH.DOLLY_PAN;
+    }
+
     composer = new EffectComposer(renderer);
-    composer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+    const isMobile = window.matchMedia(
+        '(max-width: 768px), (pointer: coarse)'
+    ).matches;
+
+    const pixelRatioInicial = isMobile
+        ? 1
+        : Math.min(window.devicePixelRatio, 1.5);
+
+    renderer.setPixelRatio(pixelRatioInicial);
+    composer.setPixelRatio(pixelRatioInicial);
 
     composer.addPass(new RenderPass(scene, camera));
 
@@ -237,41 +353,110 @@ function initThree() {
 
     //renderer.domElement.addEventListener('pointerdown', onPointerDown);
 
+    const ponteirosAtivos = new Map();
+
     let inicioPonteiro = null;
+    let houveMultitoque = false;
+
+    const LIMITE_TOQUE = 10;
+    const TEMPO_MAXIMO_TOQUE = 500;
 
     renderer.domElement.addEventListener('pointerdown', (event) => {
-        if (event.button !== 0) return;
-
-        inicioPonteiro = {
+        ponteirosAtivos.set(event.pointerId, {
             x: event.clientX,
             y: event.clientY
+        });
+
+        // Dois ou mais dedos: nunca selecionar estruturas.
+        if (ponteirosAtivos.size > 1) {
+            houveMultitoque = true;
+            inicioPonteiro = null;
+            return;
+        }
+
+        if (event.pointerType === 'mouse' && event.button !== 0) {
+            return;
+        }
+
+        houveMultitoque = false;
+
+        inicioPonteiro = {
+            id: event.pointerId,
+            x: event.clientX,
+            y: event.clientY,
+            tempo: performance.now(),
+            moveu: false
         };
     });
 
-    renderer.domElement.addEventListener('pointerup', (event) => {
-        if (!inicioPonteiro || event.button !== 0) return;
+    renderer.domElement.addEventListener('pointermove', (event) => {
+        if (!inicioPonteiro) return;
+        if (event.pointerId !== inicioPonteiro.id) return;
 
         const distancia = Math.hypot(
             event.clientX - inicioPonteiro.x,
             event.clientY - inicioPonteiro.y
         );
 
-        inicioPonteiro = null;
-
-        // Arrastou o modelo: não seleciona a estrutura
-        if (distancia > 5) return;
-
-        // Clique simples: seleciona a estrutura
-        onPointerDown(event);
+        if (distancia > LIMITE_TOQUE) {
+            inicioPonteiro.moveu = true;
+        }
     });
 
-    renderer.domElement.addEventListener('pointercancel', () => {
+    renderer.domElement.addEventListener('pointerup', (event) => {
+        ponteirosAtivos.delete(event.pointerId);
+
+        if (!inicioPonteiro) {
+            if (ponteirosAtivos.size === 0) {
+                houveMultitoque = false;
+            }
+            return;
+        }
+
+        if (event.pointerId !== inicioPonteiro.id) return;
+
+        const distancia = Math.hypot(
+            event.clientX - inicioPonteiro.x,
+            event.clientY - inicioPonteiro.y
+        );
+
+        const duracao = performance.now() - inicioPonteiro.tempo;
+
+        const selecionar =
+            !houveMultitoque &&
+            !inicioPonteiro.moveu &&
+            distancia <= LIMITE_TOQUE &&
+            (
+                event.pointerType === 'mouse' ||
+                duracao <= TEMPO_MAXIMO_TOQUE
+            );
+
         inicioPonteiro = null;
+
+        if (selecionar) {
+            onPointerDown(event);
+        }
+
+        if (ponteirosAtivos.size === 0) {
+            houveMultitoque = false;
+        }
     });
 
-    window.addEventListener('pointerup', (event) => {
-        if (event.target !== renderer.domElement) {
-            inicioPonteiro = null;
+    renderer.domElement.addEventListener('pointercancel', (event) => {
+        ponteirosAtivos.delete(event.pointerId);
+        inicioPonteiro = null;
+
+        if (ponteirosAtivos.size === 0) {
+            houveMultitoque = false;
+        }
+    });
+
+    renderer.domElement.addEventListener('lostpointercapture', (event) => {
+        ponteirosAtivos.delete(event.pointerId);
+        inicioPonteiro = null;
+
+        if (ponteirosAtivos.size === 0) {
+            houveMultitoque = false;
         }
     });
 
@@ -360,11 +545,11 @@ function injectAnimationControls() {
 
     const animControlsHTML = `
         <div id="anim-group" style="display: flex; align-items: center; gap: 10px; flex-grow: 1; margin: 0 15px;">
-            <button class="bt-btn" id="btn-play" title="Play/Pause" onclick="window.togglePlayPause()">
+            <button class="bt-btn" id="btn-play" title="${t('viewer.pause')}" onclick="window.togglePlayPause()">
                 <span data-icon="pause"></span>
             </button>
             <input type="range" id="anim-progress" min="0" max="100" value="0" step="0.1" style="flex-grow: 1;">
-            <button class="bt-btn" id="btn-loop" title="Alternar Loop" onclick="window.toggleLoop()" style="color: #00ffff;">
+            <button class="bt-btn" id="btn-loop" title="${t('viewer.toggleLoop')}" onclick="window.toggleLoop()" style="color: #00ffff;">
                 <span data-icon="loop"></span>
             </button>
             <select class="sort-sel" onchange="window.changeSpeed(this.value)" style="width: 60px; padding: 2px;">
@@ -385,6 +570,7 @@ function injectAnimationControls() {
 
     const progressBar = document.getElementById('anim-progress');
     window.renderBioIcons(document.getElementById('anim-group'));
+    updatePlayPauseUI();
     if (!progressBar) return;
 
     progressBar.addEventListener('input', (e) => {
@@ -418,7 +604,10 @@ function renderizarCapitulos(data) {
         'objsystem',
         'objdescription',
         'id',
-        'resources'
+        'resources',
+        'translations',
+        'linkedModels',
+        'linkedModel'
     ];
 
     // Seleciona apenas as estruturas válidas
@@ -440,7 +629,7 @@ function renderizarCapitulos(data) {
         }))
         // Ordena pelo nome exibido, respeitando o português
         .sort((a, b) =>
-            a.nome.localeCompare(b.nome, 'pt-BR', {
+            a.nome.localeCompare(b.nome, getModelLanguage(), {
                 sensitivity: 'base',
                 numeric: true
             })
@@ -452,16 +641,16 @@ function renderizarCapitulos(data) {
             <input
                 type="search"
                 id="explore-search-input"
-                placeholder="Pesquisar estrutura..."
+                placeholder="${t('viewer.searchStructure')}"
                 autocomplete="off"
-                aria-label="Pesquisar estrutura anatômica"
+                aria-label="${t('viewer.searchStructureAria')}"
             >
         </div>
 
         <div id="explore-list"></div>
 
         <p id="explore-empty" style="display:none;">
-            Nenhuma estrutura encontrada.
+            ${t('viewer.noStructureFound')}
         </p>
     `;
 
@@ -517,7 +706,7 @@ function renderizarCapitulos(data) {
 
     if (objetos.length === 0) {
         mensagemVazia.style.display = 'block';
-        mensagemVazia.textContent = 'Nenhuma estrutura disponível.';
+        mensagemVazia.textContent = t('viewer.noStructureAvailable');
     }
 }
 
@@ -742,16 +931,16 @@ window.alterarQualidade = function (qualidade) {
 
     const btn = document.getElementById('quality-btn');
 
-    if (btn) {
-        const nomes = {
-            baixa: 'Baixa',
-            media: 'Média',
-            equilibrada: 'Equilibrada',
-            alta: 'Alta'
-        };
+    const nomes = {
+        baixa: t('viewer.qualityLow'),
+        media: t('viewer.qualityMedium'),
+        equilibrada: t('viewer.qualityBalanced'),
+        alta: t('viewer.qualityHigh')
+    };
 
-        btn.title = `Qualidade: ${nomes[qualidade]}`;
-    }
+    btn.title = tf('viewer.qualitySelected', {
+        quality: nomes[qualidade] || nomes.media
+    });
 
     toggleQualityMenu();
 };
@@ -810,8 +999,8 @@ function atualizarIconeFullscreen() {
     }
 
     btn.title = fullscreenAtivo
-        ? 'Sair da tela cheia'
-        : 'Entrar em tela cheia';
+        ? t('viewer.exitFullscreen')
+        : t('viewer.enterFullscreen');
 }
 
 // Funciona também quando o usuário sai usando ESC ou F11*
@@ -820,19 +1009,23 @@ document.addEventListener('fullscreenchange', atualizarIconeFullscreen);
 // Remove parâmetros estéticos da URL e copia o link limpo do modelo atual para a área de transferência do usuário.
 window.shareModel = (btnEl) => {
     const url = new URL(window.location.href);
-    
+
     url.searchParams.delete('title');
     url.searchParams.delete('sys');
     url.searchParams.delete('modal');
 
+    // Inclui o idioma selecionado
+    const lang = localStorage.getItem('bioexplora_language') || 'pt-BR';
+    url.searchParams.set('lang', lang);
+
     navigator.clipboard.writeText(url.toString()).then(() => {
         const original = btnEl.innerHTML;
-        btnEl.innerHTML = `${window.bioIcon('check')}`;
+        btnEl.innerHTML = window.bioIcon('check');
         btnEl.classList.add('copied');
-        
-        setTimeout(() => { 
-            btnEl.innerHTML = original; 
-            btnEl.classList.remove('copied'); 
+
+        setTimeout(() => {
+            btnEl.innerHTML = original;
+            btnEl.classList.remove('copied');
         }, 2000);
     });
 };
@@ -1060,7 +1253,9 @@ function renderizarRecursosGlobais(data) {
 
     relacionados.forEach((modelo, index) => {
     const targetId = modelo.id;
-    const nameobj = modelo.label || `Modelo relacionado ${index + 1}`;
+    const nameobj = modelo.label || tf('viewer.relatedModel', {
+        number: index + 1
+    });
 
     if (typeof preloadModel === 'function') {
         preloadModel(targetId);
@@ -1077,7 +1272,7 @@ function renderizarRecursosGlobais(data) {
             </div>
             <div>
                 <div class="res-name">${nameobj}</div>
-                <div class="res-type">Modelo anatômico relacionado</div>
+                <div class="res-type">${t('viewer.relatedAnatomicalModel')}</div>
             </div>
         </div>
     `;
@@ -1178,7 +1373,7 @@ window.abrirMedia = (res) => {
                 const captionBox = document.getElementById('audio-caption-box');
                 
                 captionBox.style.display = 'block';
-                captionBox.innerText = 'Legendas carregadas.';
+                captionBox.innerText = t('viewer.captionsLoaded');
 
                 audio.addEventListener('timeupdate', () => {
                     const currentTime = audio.currentTime;
@@ -1242,24 +1437,77 @@ window.addEventListener('keydown', (e) => {
 });
 
 // Ajusta dinamicamente a proporção da câmera (aspect) e o tamanho dos renderizadores 3D e 2D sempre que a janela for redimensionada.
-window.addEventListener('resize', () => {
+// ==========================================
+// BIOEXPLORA — REDIMENSIONAMENTO RESPONSIVO
+// ==========================================
+
+let resizeFrame = null;
+let resizeTimer = null;
+
+function atualizarTamanhoViewer() {
     if (!camera || !renderer || !composer) return;
+
     const container = document.getElementById('three-container');
     if (!container) return;
 
-    const width = container.offsetWidth;
-    const height = container.offsetHeight;
+    const width = container.clientWidth;
+    const height = container.clientHeight;
 
+    // Evita atualizar a câmera com dimensões inválidas.
+    if (width <= 0 || height <= 0) return;
+
+    // Atualiza a câmera.
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
 
+    // Atualiza os renderizadores.
     renderer.setSize(width, height);
     composer.setSize(width, height);
-    
-    composer.setPixelRatio(Math.min(window.devicePixelRatio, 2)); 
 
-    if (labelRenderer) labelRenderer.setSize(width, height);
+    if (labelRenderer) {
+        labelRenderer.setSize(width, height);
+    }
+
+    // Atualiza o controle da câmera.
+    if (controls) {
+        controls.update();
+    }
+}
+
+function agendarResizeViewer() {
+    if (resizeFrame !== null) {
+        cancelAnimationFrame(resizeFrame);
+    }
+
+    resizeFrame = requestAnimationFrame(() => {
+        resizeFrame = null;
+        atualizarTamanhoViewer();
+    });
+
+    // Segunda atualização após a estabilização do layout.
+    clearTimeout(resizeTimer);
+
+    resizeTimer = setTimeout(() => {
+        atualizarTamanhoViewer();
+    }, 350);
+}
+
+// Redimensionamento da janela.
+window.addEventListener('resize', agendarResizeViewer);
+
+// Mudança de orientação do dispositivo.
+window.addEventListener('orientationchange', agendarResizeViewer);
+
+// Mudanças reais nas dimensões do contêiner.
+const viewerResizeObserver = new ResizeObserver(() => {
+    agendarResizeViewer();
 });
+
+const viewerContainer = document.getElementById('three-container');
+
+if (viewerContainer) {
+    viewerResizeObserver.observe(viewerContainer);
+}
 
 // Alterna a visibilidade (visible = true/false) de uma sub-mesh específica na cena tridimensional.
 window.toggleVisibility = (id, action) => {
@@ -1287,6 +1535,7 @@ window.toggleVisibility = (id, action) => {
 
 // Constrói e injeta o bloco de texto descritivo do objeto focado junto com seus botões de ação contextual (Isolar/Esconder/Mostrar).
 function renderButtons(id, data) {
+    ultimaEstruturaSelecionada = id;
     const malhasDoGrupo = id.replace('+nisolar', '').split('+');
     
     let isVisible = true;
@@ -1302,7 +1551,7 @@ function renderButtons(id, data) {
     if (isIsolatedMode) {
         botoesHtml = `
             <button
-                        title="Voltar"
+                        title="${t('viewer.back')}"
                         class="ic-btn"
                         onclick="voltarDoIsolamento('${id}')"
                         type="button"
@@ -1316,7 +1565,7 @@ function renderButtons(id, data) {
         if (naoPodeIsolar) {
             botoesHtml = `
                 <button
-                    title="Geral"
+                    title="${t('viewer.general')}"
                     class="ic-btn"
                     onclick="botaoGeral()"
                     type="button"
@@ -1330,7 +1579,7 @@ function renderButtons(id, data) {
             const hideShowBtn = isVisible
                 ? `
                     <button
-                        title="Esconder"
+                        title="${t('viewer.hide')}"
                         class="ic-btn"
                         onclick="toggleVisibility('${id}', 'hide')"
                         type="button"
@@ -1340,7 +1589,7 @@ function renderButtons(id, data) {
                 `
                 : `
                     <button
-                        title="Mostrar"
+                        title="${t('viewer.show')}"
                         class="ic-btn"
                         onclick="toggleVisibility('${id}', 'show')"
                         type="button"
@@ -1351,7 +1600,7 @@ function renderButtons(id, data) {
 
             botoesHtml = `
                 <button
-                    title="Geral"
+                    title="${t('viewer.general')}"
                     class="ic-btn"
                     onclick="botaoGeral()"
                     type="button"
@@ -1360,7 +1609,7 @@ function renderButtons(id, data) {
                 </button>
 
                 <button
-                    title="Isolar"
+                    title="${t('viewer.isolate')}"
                     class="ic-btn"
                     onclick="isolarObjeto('${id}')"
                     type="button"
@@ -1379,7 +1628,7 @@ function renderButtons(id, data) {
 
     descTx.innerHTML = `
         <h3>${data.objname || id}</h3>
-        ${parseDescriptionMedia(data.description || 'Sem descrição.')}
+        ${parseDescriptionMedia(data.description || t('viewer.noDescription'))}
         <div style="display: grid; grid-template-columns: ${colunasGrid}; gap: 10px; margin-top: 15px;">
             ${botoesHtml}
         </div>
@@ -1411,9 +1660,8 @@ function updatePlayPauseUI() {
     const btn = document.getElementById('btn-play');
     if (!btn) return;
 
-    btn.innerHTML = window.bioIcon(
-        isPaused ? 'play' : 'pause'
-    );
+    btn.innerHTML = window.bioIcon(isPaused ? 'play' : 'pause');
+    btn.title = t(isPaused ? 'viewer.play' : 'viewer.pause');
 }
 
 // Ativa ou desativa a reprodução contínua (looping) da animação do modelo e atualiza o estilo visual do botão.
@@ -1497,7 +1745,8 @@ window.carregarNovoModelo = async function(id, voltar = false) {
     isLooping = true;
 
     try {
-        objectData = await loadObjectData(modelId);
+        originalObjectData = await loadObjectData(modelId);
+        atualizarDadosTraduzidos();
 
         document.getElementById('det-title').textContent = objectData.objname;
         document.getElementById('det-bc').textContent = objectData.objname;
@@ -1544,6 +1793,7 @@ function preloadModel(id) {
 
 // Constrói o layout interno da seção de descrição, injetando os botões de alternância de modelos relacionados/principais.
 function renderizarDescricaoComAlternador() {
+    ultimaEstruturaSelecionada = null;
     const descContainer = document.querySelector('.desc-tx');
     if (!descContainer) return;
 
@@ -1637,13 +1887,13 @@ function criarCallout(object, texto, clickPoint = null, chaveJson = null) {
                     <button
                         class="callout-btn callout-isolate"
                         onclick="event.stopPropagation(); window.isolarObjeto('${chaveJson}')">
-                        Isolar
+                        ${t('viewer.isolate')}
                     </button>
 
                     <button
                         class="callout-btn callout-hide"
                         onclick="event.stopPropagation(); window.toggleVisibility('${chaveJson}', 'hide')">
-                        Esconder
+                        ${t('viewer.hide')}
                     </button>
 
                 </div>
@@ -1994,10 +2244,10 @@ window.toggleDetailPanel = function () {
 
     if (modal.classList.contains('panel-hidden')) {
         button.innerHTML = window.bioIcon('panel-open');
-        button.title = 'Mostrar painel';
+        button.title = t('viewer.showPanel');
     } else {
         button.innerHTML = window.bioIcon('panel-close');
-        button.title = 'Esconder painel';
+        button.title = t('viewer.hidePanel');
     }
 
     setTimeout(() => {
@@ -2023,17 +2273,234 @@ function baixarArquivo(url, nomeArquivo) {
         .catch(err => console.error('Erro ao baixar o recurso:', err));
 }
 
-document.addEventListener('fullscreenchange', () => {
-    const btn = document.getElementById('fullscreen-btn');
-    if (!btn) return;
+document.addEventListener('bioexplora:languagechange', () => {
 
-    const ativo = !!document.fullscreenElement;
+    // Atualiza elementos estáticos
+    window.translateInterface();
 
-    btn.innerHTML = window.bioIcon(
-        ativo ? 'fullscreen-exit' : 'fullscreen'
-    );
+    // Aplica o novo idioma ao JSON do modelo
+    atualizarDadosTraduzidos();
 
-    btn.title = ativo ? 'Sair da tela cheia' : 'Tela cheia';
+    // Atualiza título, breadcrumb e sistema
+    if (originalObjectData) {
+        document.getElementById('det-title').textContent = objectData.objname;
+        document.getElementById('det-bc').textContent = objectData.objname;
+        document.getElementById('det-sys').textContent = objectData.objsystem;
+
+        const tagsCont = document.getElementById('det-tags');
+
+        if (tagsCont) {
+            tagsCont.innerHTML = `
+                <span class="tag">ID: #${modelId}</span>
+                <span class="tag">${objectData.objsystem}</span>
+            `;
+        }
+
+        // Atualiza recursos e modelos relacionados
+        renderizarRecursosGlobais(objectData);
+
+        // Atualiza a descrição geral se nenhuma estrutura estiver selecionada
+        if (!ultimaEstruturaSelecionada) {
+            renderizarDescricaoComAlternador();
+        }
+    }
+
+    // Atualiza títulos dos controles
+    atualizarIconeFullscreen();
+
+    const painelBtn = document.getElementById('toggle-dp-btn');
+    if (painelBtn) {
+        const oculto = document
+            .querySelector('.det-modal')
+            ?.classList.contains('panel-hidden');
+
+        painelBtn.title = t(
+            oculto ? 'viewer.showPanel' : 'viewer.hidePanel'
+        );
+    }
+
+    // Atualiza controles de animação
+    updatePlayPauseUI();
+
+    const loopBtn = document.getElementById('btn-loop');
+    if (loopBtn) {
+        loopBtn.title = t('viewer.toggleLoop');
+    }
+
+    // Atualiza lista Explore, preservando o termo pesquisado
+    if (objectData && Object.keys(objectData).length) {
+        const pesquisaAnterior =
+            document.getElementById('explore-search-input')?.value || '';
+
+        renderizarCapitulos(objectData);
+
+        const pesquisa = document.getElementById('explore-search-input');
+        if (pesquisa) {
+            pesquisa.value = pesquisaAnterior;
+            pesquisa.dispatchEvent(new Event('input'));
+        }
+    }
+
+    // Atualiza botões contextuais da descrição
+    if (ultimaEstruturaSelecionada &&
+        objectData[ultimaEstruturaSelecionada]) {
+
+        renderButtons(
+            ultimaEstruturaSelecionada,
+            objectData[ultimaEstruturaSelecionada]
+        );
+    }
+
+    // Atualiza ações do callout sem recriar o objeto 3D
+    if (label2DObject) {
+
+        const calloutTitle = label2DObject.element
+            .querySelector('.callout-title');
+
+        if (calloutTitle && objetoAlvoCallout) {
+            const meshName = objetoAlvoCallout.name;
+
+            const chave = Object.keys(objectData).find(key => {
+                const nomes = key
+                    .replace('+nisolar', '')
+                    .replace('+ninteract', '')
+                    .split('+');
+
+                return nomes.includes(meshName);
+            });
+
+            if (chave && objectData[chave]?.objname) {
+                calloutTitle.textContent = objectData[chave].objname;
+            }
+        }
+
+        const isolateBtn = label2DObject.element
+            .querySelector('.callout-isolate');
+
+        const hideBtn = label2DObject.element
+            .querySelector('.callout-hide');
+
+        if (isolateBtn) {
+            isolateBtn.textContent = t('viewer.isolate');
+        }
+
+        if (hideBtn) {
+            hideBtn.textContent = t('viewer.hide');
+        }
+    }
+
 });
+
+// ==========================================
+// BIOEXPLORA — BOTTOM SHEET MOBILE
+// ==========================================
+
+function inicializarBottomSheet() {
+    const panel = document.getElementById('detail-panel');
+    const handle = document.getElementById('mobile-sheet-handle');
+
+    if (!panel || !handle) return;
+
+    const mobileQuery = window.matchMedia('(max-width: 768px)');
+
+    const estados = ['collapsed', 'partial', 'expanded'];
+    let estadoAtual = 'partial';
+
+    function definirEstado(estado) {
+        if (!estados.includes(estado)) return;
+
+        estadoAtual = estado;
+
+        panel.classList.remove(
+            'sheet-collapsed',
+            'sheet-expanded'
+        );
+
+        if (estado === 'collapsed') {
+            panel.classList.add('sheet-collapsed');
+        }
+
+        if (estado === 'expanded') {
+            panel.classList.add('sheet-expanded');
+        }
+
+        handle.setAttribute(
+            'aria-expanded',
+            String(estado === 'expanded')
+        );
+    }
+
+    function sincronizarLayout() {
+        if (mobileQuery.matches) {
+            definirEstado(estadoAtual);
+        } else {
+            panel.classList.remove(
+                'sheet-collapsed',
+                'sheet-expanded'
+            );
+        }
+    }
+
+    // Toque no indicador alterna entre parcial e expandido.
+    handle.addEventListener('click', () => {
+        if (!mobileQuery.matches) return;
+
+        definirEstado(
+            estadoAtual === 'expanded' ? 'partial' : 'expanded'
+        );
+    });
+
+    let inicioY = null;
+
+    handle.addEventListener('pointerdown', (event) => {
+        if (!mobileQuery.matches) return;
+
+        inicioY = event.clientY;
+
+        handle.setPointerCapture(event.pointerId);
+    });
+
+    handle.addEventListener('pointerup', (event) => {
+        if (inicioY === null) return;
+
+        const deslocamento = event.clientY - inicioY;
+        inicioY = null;
+
+        if (Math.abs(deslocamento) < 35) return;
+
+        if (deslocamento < 0) {
+            // Arrastou para cima.
+            if (estadoAtual === 'collapsed') {
+                definirEstado('partial');
+            } else {
+                definirEstado('expanded');
+            }
+        } else {
+            // Arrastou para baixo.
+            if (estadoAtual === 'expanded') {
+                definirEstado('partial');
+            } else {
+                definirEstado('collapsed');
+            }
+        }
+    });
+
+    handle.addEventListener('pointercancel', () => {
+        inicioY = null;
+    });
+
+    mobileQuery.addEventListener('change', sincronizarLayout);
+
+    sincronizarLayout();
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener(
+        'DOMContentLoaded',
+        inicializarBottomSheet
+    );
+} else {
+    inicializarBottomSheet();
+}
 
 initViewer();

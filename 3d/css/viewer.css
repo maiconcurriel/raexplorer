@@ -987,4 +987,203 @@ body.dark-mode .res-ic {
     height: 100%;
     object-fit: cover;
     border-radius: 6px;
+}/* ==========================================
+   BIOEXPLORA — MOBILE
+   ========================================== */
+
+.mobile-sheet-handle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    html,
+    body {
+        width: 100%;
+        height: 100dvh;
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .det-modal {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100dvh;
+        overflow: hidden;
+    }
+
+    /* Visualizador 3D */
+
+    .det-modal > .v-panel {
+        position: relative;
+        width: 100%;
+        height: auto;
+        min-width: 0;
+        min-height: 0;
+        flex: 1 1 auto;
+    }
+
+    #three-container {
+        position: relative;
+        width: 100%;
+        height: auto;
+        min-width: 0;
+        min-height: 0;
+        flex: 1 1 auto;
+        overflow: hidden;
+    }
+
+    #three-container canvas {
+        display: block;
+        touch-action: none;
+    }
+
+    /* Painel inferior */
+
+    .dp {
+        position: relative;
+        width: 100%;
+        height: 35dvh;
+        max-height: none;
+        min-height: 0;
+        flex: 0 0 35dvh;
+
+        box-sizing: border-box;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+
+        background: var(--surface, #ffffff);
+        border-radius: 18px 18px 0 0;
+        border-top: 1px solid var(--border);
+        border-left: none;
+
+        transition:
+            height 0.25s ease,
+            flex-basis 0.25s ease;
+    }
+
+    .dp.sheet-collapsed {
+        height: 64px;
+        flex-basis: 64px;
+        overflow: hidden;
+    }
+
+    .dp.sheet-expanded {
+        height: 85dvh;
+        flex-basis: 85dvh;
+    }
+
+    /* Alça do painel */
+
+    .mobile-sheet-handle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        height: 28px;
+        min-height: 28px;
+        padding: 0;
+
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        touch-action: none;
+    }
+
+    .mobile-sheet-handle span {
+        width: 42px;
+        height: 5px;
+        border-radius: 10px;
+        background: #94a3b8;
+    }
+
+    .dp.sheet-collapsed .dp-tags,
+.dp.sheet-collapsed .tabs,
+.dp.sheet-collapsed .tab-ct {
+    display: none !important;
+}
+
+    /* Controles */
+
+    .toggle-dp-btn {
+        display: none;
+    }
+
+    .v-bot-bar {
+        position: absolute;
+        bottom: 12px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 120;
+        max-width: calc(100% - 24px);
+    }
+
+    /* Pesquisa */
+
+    .search-floating-container {
+        top: 12px;
+        left: 12px;
+    }
+
+    .search-floating-panel {
+        width: min(280px, calc(100vw - 24px));
+        max-height: 45dvh;
+    }
+
+    .quality-menu {
+        max-width: calc(100vw - 24px);
+    }
+}
+
+/* ==========================================
+   TÍTULO + COMPARTILHAMENTO
+   ========================================== */
+
+.dp-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.dp-title-row .dp-title {
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+}
+
+.dp-title-row .ic-btn {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ajuste mobile */
+@media (max-width: 768px) {
+
+    .dp-title-row {
+        margin-bottom: 6px;
+    }
+
+    .dp-title-row .dp-title {
+        font-size: 17px;
+        line-height: 1.3;
+    }
+
+    .dp-title-row .ic-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Evita espaço vazio quando não há tags */
+    .dp-tags:empty {
+        display: none;
+    }
 }

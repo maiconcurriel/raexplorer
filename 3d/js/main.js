@@ -46,6 +46,23 @@ let activeFilters = new Set(['all']);
 let isDark = false;
 let currentOpenId = null;
 
+// Retorna o idioma selecionado
+function getCurrentLanguage() {
+    return localStorage.getItem('bioexplora_language') || 'pt-BR';
+}
+
+// Retorna os dados traduzidos de um modelo
+function getTranslatedModel(modelo) {
+    const lang = getCurrentLanguage();
+    const traducao = modelo.translations?.[lang];
+
+    return {
+        nome: traducao?.objname || modelo.objname || 'Sem Nome',
+        sistema: traducao?.objsystem || modelo.objsystem || [],
+        descricao: traducao?.objdescription || modelo.objdescription || ''
+    };
+}
+
 // Realiza o fetch assíncrono dos arquivos JSON de metadados de cada modelo, categoriza por sistema e dispara o setup inicial da UI.
 async function carregarModelos() {
     const grid = document.querySelector('.cards-grid');
@@ -99,9 +116,9 @@ async function carregarModelos() {
         ...data, 
         id, 
         nome: data.objname || "Sem Nome",
-        sistema: sistemasBrutos.join(' / '), // Exibe "Sensorial / Nervoso" no card
+        sistema: sistemasBrutos.join(' / '),
         img: `models/${id}.png`, 
-        cat: categoriasChave // Agora é uma array de categorias!
+        cat: categoriasChave
     };
 })
         );
@@ -253,8 +270,12 @@ async function carregarModelos() {
     grid.className = `cards-grid ${currentView === 'list' ? 'list-mode' : ''}`;
 
     let filtrados = modelosData.filter(m => {
-      const nome = m.objname ? m.objname.toLowerCase() : "";
-      const sistema = m.sistema ? m.sistema.toLowerCase() : "";
+    const traduzido = getTranslatedModel(m);
+
+    const nome = traduzido.nome.toLowerCase();
+    const sistema = Array.isArray(traduzido.sistema)
+        ? traduzido.sistema.join(' / ').toLowerCase()
+        : String(traduzido.sistema).toLowerCase();
       
       const matchesSearch = nome.includes(searchTerm) || sistema.includes(searchTerm);
       
@@ -267,10 +288,20 @@ async function carregarModelos() {
     const spanFiltrados = document.getElementById('count-filtrados');
     if (spanFiltrados) spanFiltrados.textContent = filtrados.length;
 
+    const lang = getCurrentLanguage();
+
     if (currentSort === 'az') {
-        filtrados.sort((a, b) => (a.objname || "").localeCompare(b.objname || ""));
+        filtrados.sort((a, b) =>
+            getTranslatedModel(a).nome.localeCompare(
+                getTranslatedModel(b).nome, lang
+            )
+        );
     } else if (currentSort === 'za') {
-        filtrados.sort((a, b) => (b.objname || "").localeCompare(a.objname || ""));
+        filtrados.sort((a, b) =>
+            getTranslatedModel(b).nome.localeCompare(
+                getTranslatedModel(a).nome, lang
+            )
+        );
     }
 
     grid.innerHTML = "";
@@ -282,12 +313,19 @@ async function carregarModelos() {
         }
 
         grid.innerHTML = filtrados.map((m, index) => {
-            return `
+        const traduzido = getTranslatedModel(m);
+
+        const nome = traduzido.nome;
+        const sistema = Array.isArray(traduzido.sistema)
+            ? traduzido.sistema.join(' / ')
+            : traduzido.sistema;
+
+        return `
                 <div class="m-card" 
                      style="animation-delay: ${index * 30}ms" 
-                     onclick="openDet('${m.objname}','${m.objsystem}', ${m.id})">
+                     onclick="openDetById(${m.id})">
                     <div class="c-thumb">
-                        <img class="thumb-img" src="models/${m.id}.png" alt="${m.objname}" onerror="this.src='placeholder.png'">
+                        <img class="thumb-img" src="models/${m.id}.png" alt="${nome}" onerror="this.src='placeholder.png'">
                         <div class="c-overlay">
                             <button class="v3d-btn">
                                 <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -299,14 +337,26 @@ async function carregarModelos() {
                         </div>
                     </div>
                     <div class="c-body">
-                        <div class="c-name">${m.objname}</div>
-                        <div class="c-sys">${m.objsystem}</div>
+                        <div class="c-name">${nome}</div>
+                        <div class="c-sys">${sistema}</div>
                     </div>
                 </div>
             `;
         }).join('');
     }, 10);
 }
+
+window.openDetById = function(id) {
+    const modelo = modelosData.find(m => m.id === id);
+    if (!modelo) return;
+
+    const traduzido = getTranslatedModel(modelo);
+    const sistema = Array.isArray(traduzido.sistema)
+        ? traduzido.sistema.join(' / ')
+        : traduzido.sistema;
+
+    openDet(traduzido.nome, sistema, id);
+};
 
 // Alterna a abertura e fechamento do painel dropdown de filtros por sistema anatômico.
   function toggleFdd() {
@@ -470,7 +520,8 @@ function applyTheme() {
     const frame = document.getElementById('viewer-frame');
     const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
     
-    const url = `viewer.html?title=${encodeURIComponent(nome)}&sys=${encodeURIComponent(sistema)}&id=${id}&theme=${isDark ? 'dark' : 'light'}&modal=true`;
+    const lang = getCurrentLanguage();
+    const url = `viewer.html?title=${encodeURIComponent(nome)}&sys=${encodeURIComponent(sistema)}&id=${id}&theme=${isDark ? 'dark' : 'light'}&modal=true&lang=${encodeURIComponent(lang)}`;
     
     frame.src = url;
     document.getElementById('det-ov').style.display = 'flex';
@@ -522,3 +573,29 @@ function fecharAjuda() {
     const helpModal = document.getElementById('help-modal');
     if (helpModal) helpModal.style.display = 'none';
 }
+
+document.addEventListener('bioexplora:languagechange', () => {
+    // Recria os cards com os nomes no idioma selecionado
+    render();
+
+    // Atualiza também o visualizador aberto, se houver
+    if (currentOpenId !== null) {
+        const modelo = modelosData.find(m => m.id === currentOpenId);
+
+        if (modelo) {
+            const traduzido = getTranslatedModel(modelo);
+
+            const titulo = document.getElementById('det-title');
+            const breadcrumb = document.getElementById('det-bc');
+            const sistema = document.getElementById('det-sys');
+
+            if (titulo) titulo.textContent = traduzido.nome;
+            if (breadcrumb) breadcrumb.textContent = traduzido.nome;
+            if (sistema) {
+                sistema.textContent = Array.isArray(traduzido.sistema)
+                    ? traduzido.sistema.join(' / ')
+                    : traduzido.sistema;
+            }
+        }
+    }
+});

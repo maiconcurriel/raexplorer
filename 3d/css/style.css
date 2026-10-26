@@ -222,9 +222,39 @@ body.dark-mode .ic-btn {
     color: var(--accent);
 }
 
-  .vtoggle { display: flex; background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
-  .vbtn { padding: 8px 10px; min-height: 36px; background: transparent; border: none; color: var(--text-4); cursor: pointer; transition: all .15s; }
-  .vbtn.active { background: #fff; color: var(--accent); box-shadow: var(--shadow-sm); }
+.vtoggle {
+    display: flex;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    height: 36px;
+    box-sizing: border-box;
+}
+
+.vbtn {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    flex: 0 0 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    color: var(--text-4);
+    cursor: pointer;
+    font-size: 12px;
+    transition: all .15s;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.vbtn.active {
+    background: #fff;
+    color: var(--accent);
+    box-shadow: var(--shadow-sm);
+}
 
 
   body.dark-mode .vbtn.active {

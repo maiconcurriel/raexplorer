@@ -32,7 +32,7 @@
         id="toggle-dp-btn"
         class="toggle-dp-btn"
         onclick="toggleDetailPanel()"
-        title="Esconder painel"
+        title="Esconder painel" data-i18n-title="viewer.hidePanel"
         type="button"
     >
         <span data-icon="panel-close"></span>
@@ -54,7 +54,7 @@
             <button
                 class="search-toggle-btn"
                 onclick="toggleFloatingSearch()"
-                title="Buscar componentes"
+                title="Buscar componentes" data-i18n-title="viewer.searchComponents"
                 type="button"
             >
                 <span data-icon="search"></span>
@@ -66,7 +66,7 @@
                     <input
                         type="text"
                         id="search-float-input"
-                        placeholder="Buscar componente..."
+                        placeholder="Buscar componente..." data-i18n-placeholder="viewer.searchPlaceholder"
                         oninput="filtrarItensFlutuantes(this.value)"
                     >
                 </div>
@@ -94,7 +94,7 @@
                         alt="BioExplora"
                     >
                 </div>
-                <strong>Carregando...</strong>
+                <strong><span data-i18n="viewer.loading">Carregando...</span></strong>
             </div>
 
         </div>
@@ -107,7 +107,7 @@
                 class="bt-btn"
                 id="fullscreen-btn"
                 onclick="toggleFullscreen()"
-                title="Entrar em tela cheia"
+                title="Entrar em tela cheia" data-i18n-title="viewer.enterFullscreen"
                 type="button"
             >
                 <span data-icon="fullscreen"></span>
@@ -119,7 +119,7 @@
             <button
                 class="bt-btn"
                 onclick="resetScene()"
-                title="Resetar visualização"
+                title="Resetar visualização" data-i18n-title="viewer.reset"
                 type="button"
             >
                 <span data-icon="reset"></span>
@@ -134,7 +134,7 @@
                     class="bt-btn"
                     id="quality-btn"
                     onclick="toggleQualityMenu()"
-                    title="Configurações"
+                    title="Configurações" data-i18n-title="viewer.settings"
                     type="button"
                     aria-controls="quality-menu"
                     aria-expanded="false"
@@ -145,60 +145,60 @@
                 <div id="quality-menu" class="quality-menu">
 
                     <div class="settings-section-title">
-                        Qualidade gráfica
+                        <span data-i18n="viewer.quality">Qualidade gráfica</span>
                     </div>
 
                     <button
                         onclick="alterarQualidade('baixa')"
                         type="button"
                     >
-                        <span>Baixa</span>
-                        <small>Mobile / baixo consumo</small>
+                        <span><span data-i18n="viewer.qualityLow">Baixa</span></span>
+                        <small><span data-i18n="viewer.qualityLowDesc">Mobile / baixo consumo</span></small>
                     </button>
 
                     <button
                         onclick="alterarQualidade('media')"
                         type="button"
                     >
-                        <span>Média</span>
-                        <small>Padrão recomendado</small>
+                        <span><span data-i18n="viewer.qualityMedium">Média</span></span>
+                        <small><span data-i18n="viewer.qualityMediumDesc">Padrão recomendado</span></small>
                     </button>
 
                     <button
                         onclick="alterarQualidade('alta')"
                         type="button"
                     >
-                        <span>Alta</span>
-                        <small>Máxima qualidade</small>
+                        <span><span data-i18n="viewer.qualityHigh">Alta</span></span>
+                        <small><span data-i18n="viewer.qualityHighDesc">Máxima qualidade</span></small>
                     </button>
 
                     <div class="settings-divider"></div>
 
                     <div class="settings-section-title">
-                        Acessibilidade visual
+                        <span data-i18n="viewer.accessibility">Acessibilidade visual</span>
                     </div>
 
                     <div class="settings-field">
 
                         <label for="colorblind-select">
-                            Simulação de visão de cores
+                            <span data-i18n="viewer.colorVision">Simulação de visão de cores</span>
                         </label>
 
                         <select
                             id="colorblind-select"
                             class="settings-select"
                             onchange="setColorBlindMode(this.value)"
-                            title="Acessibilidade visual"
+                            title="Acessibilidade visual" data-i18n-title="viewer.accessibilityTitle"
                         >
-                            <option value="normal">Visão Normal</option>
-                            <option value="protanopia">Protanopia</option>
-                            <option value="protanomalia">Protanomalia</option>
-                            <option value="deuteranopia">Deuteranopia</option>
-                            <option value="deuteranomalia">Deuteranomalia</option>
-                            <option value="tritanopia">Tritanopia</option>
-                            <option value="tritanomalia">Tritanomalia</option>
-                            <option value="acromatopsia">Acromatopsia</option>
-                            <option value="acromanomalia">Acromanomalia</option>
+                            <option value="normal"><span data-i18n="viewer.normalVision">Visão Normal</span></option>
+                            <option value="protanopia"><span data-i18n="viewer.protanopia">Protanopia</span></option>
+                            <option value="protanomalia"><span data-i18n="viewer.protanomaly">Protanomalia</span></option>
+                            <option value="deuteranopia"><span data-i18n="viewer.deuteranopia">Deuteranopia</span></option>
+                            <option value="deuteranomalia"><span data-i18n="viewer.deuteranomaly">Deuteranomalia</span></option>
+                            <option value="tritanopia"><span data-i18n="viewer.tritanopia">Tritanopia</span></option>
+                            <option value="tritanomalia"><span data-i18n="viewer.tritanomaly">Tritanomalia</span></option>
+                            <option value="acromatopsia"><span data-i18n="viewer.achromatopsia">Acromatopsia</span></option>
+                            <option value="acromanomalia"><span data-i18n="viewer.achromatomaly">Acromanomalia</span></option>
                         </select>
 
                     </div>
@@ -210,14 +210,25 @@
     </div>
 
     <!-- Painel lateral de detalhes -->
-    <div class="dp">
+    <div class="dp" id="detail-panel">
+
+        <button
+        id="mobile-sheet-handle"
+        class="mobile-sheet-handle"
+        type="button"
+        aria-label="Expandir ou recolher informações"
+        aria-expanded="false"
+        aria-controls="detail-panel"
+    >
+        <span></span>
+    </button>
 
         <div class="dp-head">
 
             <div class="dp-nav">
 
                 <button
-                    title="Alternar tema"
+                    title="Alternar tema" data-i18n-title="viewer.theme"
                     class="ic-btn"
                     onclick="toggleDarkMode()"
                     id="dark-mode-btn"
@@ -227,7 +238,18 @@
                 </button>
 
                 <button
-                    title="Ajuda"
+                    class="ic-btn"
+                    id="language-btn"
+                    title="Alterar idioma"
+                    onclick="window.nextLanguage()"
+                    style="display: none;"
+                >
+                    <span data-icon="languages"></span>
+                    <span id="language-label">PT</span>
+                </button>
+
+                <button
+                    title="Ajuda" data-i18n-title="viewer.help"
                     class="ic-btn"
                     onclick="abrirAjuda()"
                     type="button"
@@ -236,7 +258,7 @@
                 </button>
 
                 <button
-                    title="Fechar"
+                    title="Fechar" data-i18n-title="viewer.close"
                     class="nav-arr"
                     onclick="window.parent.closeDet()"
                     type="button"
@@ -246,26 +268,28 @@
 
             </div>
 
+            <div class="dp-title-row">
+
             <h2
                 class="dp-title"
                 id="det-title"
-                style="margin-bottom:20px;"
             >
-                Carregando...
+                <span data-i18n="viewer.loading">Carregando...</span>
             </h2>
 
-            <div class="dp-tags" id="det-tags"></div>
+            <button
+                title="Compartilhar"
+                data-i18n-title="viewer.share"
+                class="ic-btn"
+                onclick="shareModel(this)"
+                type="button"
+            >
+                <span data-icon="share"></span>
+            </button>
 
-            <div class="dp-acts">
-                <button
-                    title="Compartilhar"
-                    class="ic-btn"
-                    onclick="shareModel(this)"
-                    type="button"
-                >
-                    <span data-icon="share"></span>
-                </button>                
-            </div>
+        </div>
+
+        <div class="dp-tags" id="det-tags"></div>
 
             <div class="tabs">
 
@@ -274,7 +298,7 @@
                     onclick="swTab('desc', this)"
                     type="button"
                 >
-                    Descrição
+                    <span data-i18n="viewer.description">Descrição</span>
                 </button>
 
                 <button
@@ -282,7 +306,7 @@
                     onclick="swTab('ch', this)"
                     type="button"
                 >
-                    Explore
+                    <span data-i18n="viewer.explore">Explore</span>
                 </button>
 
                 <button
@@ -290,7 +314,7 @@
                     onclick="swTab('res', this)"
                     type="button"
                 >
-                    Recursos
+                    <span data-i18n="viewer.resources">Recursos</span>
                 </button>
 
             </div>
@@ -306,12 +330,12 @@
         <div class="tab-ct" id="tc-ch" style="display:none;">
             <div class="ch-item hl">
                 <div>
-                    <div class="ch-name">Anatomia Geral</div>
+                    <div class="ch-name"><span data-i18n="viewer.generalAnatomy">Anatomia Geral</span></div>
                     <div class="ch-desc">
-                        Visão geral da estrutura
+                        <span data-i18n="viewer.structureOverview">Visão geral da estrutura</span>
                     </div>
                 </div>
-                <span class="ch-badge">Destaque</span>
+                <span class="ch-badge"><span data-i18n="viewer.highlight">Destaque</span></span>
             </div>
         </div>
 
@@ -323,7 +347,7 @@
                 </div>
                 <div>
                     <div class="res-name">
-                        Manual de Anatomia
+                        <span data-i18n="viewer.anatomyManual">Manual de Anatomia</span>
                     </div>
                     <div class="res-type">
                         PDF · 2.4 MB
@@ -346,12 +370,12 @@
 
         <div class="modal-header">
 
-            <span id="modal-title">Recurso</span>
+            <span id="modal-title"><span data-i18n="viewer.resource">Recurso</span></span>
 
             <button
                 class="nav-arr2 close-btn"
                 id="modal-download-btn"
-                title="Baixar recurso"
+                title="Baixar recurso" data-i18n-title="viewer.download"
                 style="margin-left:auto; margin-right:12px;"
                 type="button"
             >
@@ -361,7 +385,7 @@
             <button
                 class="nav-arr2 close-btn"
                 onclick="closeMediaModal()"
-                title="Fechar"
+                title="Fechar" data-i18n-title="viewer.close"
                 type="button"
             >
                 <span data-icon="close"></span>
@@ -386,14 +410,14 @@
 
             <div style="display:flex; align-items:center; gap:8px;">
                 <h2 style="margin:0; font-size:18px; font-weight:600;">
-                    Central de Ajuda
+                    <span data-i18n="viewer.helpCenter">Central de Ajuda</span>
                 </h2>
             </div>
 
             <button
                 class="nav-arr2"
                 onclick="fecharAjuda()"
-                title="Fechar ajuda"
+                title="Fechar ajuda" data-i18n-title="viewer.closeHelp"
                 type="button"
             >
                 <span data-icon="close"></span>
@@ -403,7 +427,7 @@
 
         <div class="help-tabs">
             <button class="help-tab-btn" type="button">
-                Visualizador 3D
+                <span data-i18n="viewer.viewer3D">Visualizador 3D</span>
             </button>
         </div>
 
@@ -414,50 +438,45 @@
         >
 
             <h3>
-                <span data-icon="mouse"></span>Controles do Mouse no Cenário 3D</h3>
+                <span data-icon="mouse"></span><span data-i18n="viewer.mouseControls">Controles do Mouse no Cenário 3D</span></h3>
 
             <ul class="help-list">
                 <li>
-                    <strong>Botão Esquerdo (Arrastar):</strong>
-                    Rotaciona o modelo anatômico no espaço.
+                    <strong data-i18n="viewer.leftDrag">Botão Esquerdo (Arrastar):</strong>
+                    <span data-i18n="viewer.leftDragDesc">Rotaciona o modelo anatômico no espaço.</span>
                 </li>
                 <li>
-                    <strong>Botão Direito (Arrastar):</strong>
-                    Movimenta o modelo anatômico no espaço.
+                    <strong data-i18n="viewer.rightDrag">Botão Direito (Arrastar):</strong>
+                    <span data-i18n="viewer.rightDragDesc">Movimenta o modelo anatômico no espaço.</span>
                 </li>
                 <li>
-                    <strong>Scroll do Mouse (Roda):</strong>
-                    Aplica zoom para aproximar ou afastar os detalhes.
+                    <strong data-i18n="viewer.mouseScroll">Scroll do Mouse (Roda):</strong>
+                    <span data-i18n="viewer.mouseScrollDesc">Aplica zoom para aproximar ou afastar os detalhes.</span>
                 </li>
                 <li>
-                    <strong>Clique Esquerdo em uma peça:</strong>
-                    Destaca a sub-mesh e gera um balão de texto
-                    explicativo (Callout).
+                    <strong data-i18n="viewer.leftClick">Clique Esquerdo em uma peça:</strong>
+                    <span data-i18n="viewer.leftClickDesc">Destaca a sub-mesh e gera um balão de texto explicativo (Callout).</span>
                 </li>
             </ul>
 
             <h3>
                 <span data-icon="settings"></span>
-                Recursos de Operação
+                <span data-i18n="viewer.operationFeatures">Recursos de Operação</span>
             </h3>
 
             <p>
-                <strong>Modo Isolamento:</strong>
-                Esconde as demais estruturas para você focar
-                apenas no componente ativo.
+                <strong data-i18n="viewer.isolationMode">Modo Isolamento:</strong>
+                <span data-i18n="viewer.isolationDesc">Esconde as demais estruturas para você focar apenas no componente ativo.</span>
             </p>
 
             <p>
-                <strong>Linha do Tempo (Animações):</strong>
-                Use os botões inferiores para pausar, controlar
-                a velocidade ou arrastar o progresso de modelos animados.
+                <strong data-i18n="viewer.animationTimeline">Linha do Tempo (Animações):</strong>
+                <span data-i18n="viewer.animationTimelineDesc">Use os botões inferiores para pausar, controlar a velocidade ou arrastar o progresso de modelos animados.</span>
             </p>
 
             <p>
-                <strong>Acessibilidade:</strong>
-                Abra Configurações e utilize a simulação de visão
-                de cores para visualizar o modelo com diferentes
-                filtros.
+                <strong data-i18n="viewer.accessibilityHelp">Acessibilidade:</strong>
+                <span data-i18n="viewer.accessibilityDesc">Abra Configurações e utilize a simulação de visão de cores para visualizar o modelo com diferentes filtros.</span>
             </p>
 
         </div>
@@ -466,6 +485,8 @@
 </div>
 
 <script src="js/icons.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/viewer-i18n.js"></script>
 <script type="module" src="js/viewer.js"></script>
 
 </body>
