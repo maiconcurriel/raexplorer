@@ -1,0 +1,22 @@
+{
+  "objname": "Colite",
+  "objsystem": [
+    "Digestório"
+  ],
+  "objdescription": "A colite é uma condição caracterizada pela inflamação do cólon, também conhecido como intestino grosso. Pode apresentar diferentes causas, incluindo infecções, doenças inflamatórias intestinais, alterações na circulação sanguínea e reações a medicamentos. A inflamação compromete principalmente a mucosa intestinal, podendo provocar vermelhidão, edema, fragilidade dos tecidos e, em determinadas situações, erosões ou úlceras. Entre os sintomas mais comuns estão dor abdominal, diarreia, urgência para evacuar e, dependendo da causa e da gravidade, presença de sangue ou muco nas fezes. O modelo apresenta o sistema digestório com uma abertura longitudinal no intestino grosso, permitindo visualizar didaticamente sua superfície interna e as alterações inflamatórias associadas à colite. A extensão e a intensidade das lesões podem variar conforme a causa da doença.",
+  "linkedModels": [
+    {
+      "id": "24",
+      "label": "Sistema Digestório"
+    }
+  ],
+  "resources": [],
+  "Mesh+Mesh_1": {
+    "objname": "Intestino Grosso com Colite",
+    "description": "Representação do intestino grosso com uma abertura longitudinal que permite observar sua superfície interna. O cólon é responsável principalmente pela absorção de água e eletrólitos, além da formação e do transporte das fezes. Na colite, sua mucosa apresenta inflamação, que pode provocar vermelhidão, inchaço, fragilidade e, em casos mais intensos, erosões ou ulcerações. No modelo, a região aberta destaca didaticamente a superfície intestinal potencialmente afetada, permitindo compreender a localização das alterações inflamatórias."
+  },
+  "Skin+nisolar+ninteract": {
+    "objname": "Pele",
+    "description": ""
+  }
+}

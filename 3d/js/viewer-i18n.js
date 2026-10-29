@@ -11,6 +11,8 @@ const VIEWER_TRANSLATIONS = {
         "viewer.searchPlaceholder": "Buscar componente...",
         "viewer.loading": "Carregando...",
         "viewer.enterFullscreen": "Entrar em tela cheia",
+        "viewer.undo": "Reexibir última estrutura ocultada",
+        "viewer.redo": "Refazer última ocultação",
         "viewer.exitFullscreen": "Sair da tela cheia",
         "viewer.reset": "Resetar visualização",
         "viewer.settings": "Configurações",
@@ -37,6 +39,7 @@ const VIEWER_TRANSLATIONS = {
 
         "viewer.theme": "Alternar tema",
         "viewer.help": "Ajuda",
+        "viewer.lang": "Alterar idioma",
         "viewer.close": "Fechar",
         "viewer.share": "Compartilhar",
         "viewer.description": "Descrição",
@@ -72,7 +75,7 @@ const VIEWER_TRANSLATIONS = {
         "viewer.accessibilityHelp": "Acessibilidade:",
         "viewer.accessibilityDesc": "Abra Configurações e utilize a simulação de visão de cores para visualizar o modelo com diferentes filtros.",
 
-        "viewer.general": "Geral",
+        "viewer.general": "Descrição Geral",
         "viewer.isolate": "Isolar",
         "viewer.hide": "Esconder",
         "viewer.show": "Mostrar",
@@ -100,6 +103,8 @@ const VIEWER_TRANSLATIONS = {
         "viewer.searchPlaceholder": "Search component...",
         "viewer.loading": "Loading...",
         "viewer.enterFullscreen": "Enter fullscreen",
+        "viewer.undo": "Reshow last hidden structure",
+        "viewer.redo": "Redo last hiding action",
         "viewer.exitFullscreen": "Exit fullscreen",
         "viewer.reset": "Reset view",
         "viewer.settings": "Settings",
@@ -126,6 +131,7 @@ const VIEWER_TRANSLATIONS = {
 
         "viewer.theme": "Toggle theme",
         "viewer.help": "Help",
+        "viewer.lang": "Change language",
         "viewer.close": "Close",
         "viewer.share": "Share",
         "viewer.description": "Description",
@@ -161,7 +167,7 @@ const VIEWER_TRANSLATIONS = {
         "viewer.accessibilityHelp": "Accessibility:",
         "viewer.accessibilityDesc": "Open Settings and use color vision simulation to view the model with different filters.",
 
-        "viewer.general": "General",
+        "viewer.general": "General Description",
         "viewer.isolate": "Isolate",
         "viewer.hide": "Hide",
         "viewer.show": "Show",
@@ -189,6 +195,8 @@ const VIEWER_TRANSLATIONS = {
         "viewer.searchPlaceholder": "Buscar componente...",
         "viewer.loading": "Cargando...",
         "viewer.enterFullscreen": "Entrar en pantalla completa",
+        "viewer.undo": "Volver a mostrar la última estructura oculta",
+        "viewer.redo": "Rehacer última ocultación",
         "viewer.exitFullscreen": "Salir de pantalla completa",
         "viewer.reset": "Restablecer vista",
         "viewer.settings": "Configuración",
@@ -215,6 +223,7 @@ const VIEWER_TRANSLATIONS = {
 
         "viewer.theme": "Cambiar tema",
         "viewer.help": "Ayuda",
+        "viewer.lang": "Cambiar idioma",
         "viewer.close": "Cerrar",
         "viewer.share": "Compartir",
         "viewer.description": "Descripción",
@@ -250,7 +259,7 @@ const VIEWER_TRANSLATIONS = {
         "viewer.accessibilityHelp": "Accesibilidad:",
         "viewer.accessibilityDesc": "Abre Configuración y utiliza la simulación de visión cromática para visualizar el modelo con diferentes filtros.",
 
-        "viewer.general": "General",
+        "viewer.general": "Descripción general",
         "viewer.isolate": "Aislar",
         "viewer.hide": "Ocultar",
         "viewer.show": "Mostrar",

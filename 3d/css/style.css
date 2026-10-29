@@ -1009,3 +1009,12 @@ body.dark-mode {
     width: 24px;
     height: 24px;
 }
+
+#language-btn #language-label {
+    color: #475569;
+}
+
+/* Tema escuro */
+body.dark-mode #language-btn #language-label {
+    color: #38bdf8;
+}

@@ -1,0 +1,39 @@
+{
+  "objname": "Absorção de Glicose no Diabetes Tipo 1",
+  "objsystem": [
+    "Endócrino",
+    "Célula"
+  ],
+  "objdescription": "O diabetes mellitus tipo 1 é uma doença autoimune caracterizada pela destruição das células beta do pâncreas, responsáveis pela produção de insulina. A deficiência desse hormônio compromete a captação de glicose por tecidos dependentes da sinalização da insulina, especialmente músculos e tecido adiposo, contribuindo para o aumento da glicose no sangue. Em condições normais, a insulina se liga a receptores específicos na membrana plasmática, ativando mecanismos intracelulares que promovem a inserção de transportadores GLUT4 na superfície celular. Esses transportadores permitem a entrada de glicose por difusão facilitada. O modelo apresenta a membrana plasmática, representada pela bicamada de fosfolipídios em marrom, os receptores de insulina em amarelo, os transportadores de glicose em azul, as moléculas de insulina em rosa e as moléculas de glicose em verde. A animação demonstra didaticamente a relação entre a sinalização da insulina e a entrada de glicose na célula.",
+  "linkedModels": [
+    {
+      "id": "84",
+      "label": "Absorção diabetes tipo 2"
+    }
+  ],
+  "resources": [],
+  "TransportadorDeGlicoseA": {
+    "objname": "Transportador de Glicose (GLUT4)",
+    "description": "Proteína transportadora responsável por permitir a entrada de glicose em células musculares e adiposas por difusão facilitada. A insulina estimula o deslocamento de vesículas contendo GLUT4 até a membrana plasmática, aumentando a quantidade desses transportadores na superfície celular. No diabetes tipo 1, a deficiência de insulina reduz esse estímulo, prejudicando a captação de glicose por esses tecidos. No modelo, os transportadores estão representados em azul."
+  },
+  "Insulina": {
+    "objname": "Insulina",
+    "description": "Hormônio produzido pelas células beta das ilhotas pancreáticas, responsável por regular a glicemia e favorecer a utilização e o armazenamento de nutrientes. Ao se ligar ao receptor de insulina, desencadeia sinais intracelulares que estimulam a captação de glicose por músculos e tecido adiposo. No diabetes tipo 1, sua produção é muito reduzida ou ausente devido à destruição autoimune das células beta. No modelo, as moléculas de insulina estão representadas em rosa."
+  },
+  "Glicose001": {
+    "objname": "Glicose",
+    "description": "Molécula de açúcar que constitui uma importante fonte de energia para as células. A glicose circulante pode ser captada por diferentes tecidos através de proteínas transportadoras. Em músculos e tecido adiposo, a insulina estimula sua entrada ao aumentar a presença de transportadores GLUT4 na membrana plasmática. No diabetes tipo 1, a deficiência de insulina prejudica esse processo e contribui para a hiperglicemia. No modelo, a glicose está representada em verde."
+  },
+  "Glicose002": {
+    "objname": "Glicose",
+    "description": "Representação de moléculas de glicose envolvidas no processo de transporte através da membrana plasmática. A glicose atravessa a membrana com o auxílio de transportadores específicos, como o GLUT4, que permite sua entrada por difusão facilitada. A captação de glicose por músculos e tecido adiposo aumenta quando a insulina estimula a presença desses transportadores na superfície celular. No modelo, as moléculas estão representadas em verde."
+  },
+  "ReceptorDeInsulina": {
+    "objname": "Receptor de Insulina",
+    "description": "Proteína localizada na membrana plasmática que reconhece e se liga à insulina. Essa ligação ativa uma cascata de sinalização intracelular que regula diferentes processos metabólicos, incluindo o deslocamento de transportadores GLUT4 para a superfície de células musculares e adiposas. No diabetes tipo 1, os receptores geralmente permanecem funcionais, mas a deficiência de insulina reduz sua ativação. No modelo, os receptores estão representados em amarelo."
+  },
+  "OBJ": {
+  "objname": "Membrana Plasmática",
+  "description": "Estrutura que delimita a célula e controla a passagem de substâncias entre os meios intracelular e extracelular. É formada principalmente por uma bicamada de fosfolipídios, com regiões hidrofílicas voltadas para os meios aquosos e regiões hidrofóbicas direcionadas para o interior da membrana. Contém proteínas responsáveis por funções como reconhecimento de sinais e transporte de moléculas. No modelo, está representada em marrom e contém os receptores de insulina e os transportadores de glicose."
+}
+}

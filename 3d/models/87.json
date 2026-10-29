@@ -1,0 +1,59 @@
+{
+  "objname": "Produção e Liberação de Glicose",
+  "objsystem": [
+    "Digestório",
+    "Endócrino"
+  ],
+  "objdescription": "A produção e liberação de glicose são processos metabólicos fundamentais para manter os níveis de açúcar no sangue e garantir o fornecimento de energia às células. O fígado desempenha um papel central nesse controle, armazenando glicose na forma de glicogênio após as refeições e liberando-a na circulação sanguínea quando necessário. Essa liberação ocorre principalmente pela glicogenólise, que consiste na degradação do glicogênio, e pela gliconeogênese, processo de formação de glicose a partir de substâncias como lactato, glicerol e determinados aminoácidos. O pâncreas regula esses processos por meio da produção de insulina e glucagon. A insulina favorece o armazenamento da glicose, enquanto o glucagon estimula sua produção e liberação pelo fígado. O modelo apresenta o fígado, o pâncreas e órgãos digestórios, utilizando partículas azuis para representar didaticamente a glicose e sua distribuição pelo organismo.",
+  "linkedModels": [
+    {
+      "id": "83",
+      "label": "Absorção de Glicose no Diabetes Tipo 1"
+    },
+    {
+      "id": "84",
+      "label": "Absorção de Glicose no Diabetes Tipo 2"
+    },
+    {
+      "id": "86",
+      "label": "Absorção de Glicose"
+    }
+  ],
+  "resources": [],
+  "Glico+nisolar": {
+    "objname": "Glicose Produzida e Liberada pelo Fígado",
+    "description": "Representação das moléculas de glicose produzidas ou disponibilizadas pelo fígado, destacadas em azul na animação. Durante períodos de jejum ou maior necessidade energética, o fígado pode liberar glicose na circulação sanguínea por meio da glicogenólise e da gliconeogênese. Esses processos ajudam a manter a glicemia e o fornecimento de energia aos tecidos, especialmente ao sistema nervoso. A liberação hepática de glicose é estimulada principalmente pelo glucagon e reduzida pela ação da insulina."
+  },
+  "Glico014+nisolar": {
+    "objname": "Glicose na Circulação Sanguínea",
+    "description": "Partículas azuis que representam didaticamente a glicose disponível na circulação sanguínea e sua distribuição pelo organismo. Embora apareçam próximas ao intestino na animação, não indicam necessariamente glicose presente no interior intestinal. Após sua liberação pelo fígado, a glicose circula pelo sangue e pode ser captada por diferentes tecidos para produção de energia ou armazenamento. A concentração sanguínea de glicose é regulada principalmente pela ação da insulina e do glucagon."
+  },
+  "GallBladder": {
+    "objname": "Vesícula Biliar",
+    "description": "Pequeno órgão localizado na face inferior do fígado, responsável pelo armazenamento e concentração da bile produzida pelo fígado. Durante a digestão, a bile é liberada no duodeno e auxilia na emulsificação das gorduras, facilitando sua digestão e absorção. A vesícula biliar não participa diretamente da produção ou liberação de glicose, mas integra o sistema digestório apresentado no modelo."
+  },
+  "Figado": {
+    "objname": "Fígado",
+    "description": "Órgão responsável por diversas funções metabólicas, incluindo a regulação da glicose sanguínea. Após as refeições, pode armazenar parte da glicose absorvida na forma de glicogênio, processo denominado glicogênese. Durante o jejum, disponibiliza glicose por meio da glicogenólise e da gliconeogênese, liberando-a na circulação sanguínea. Essas atividades são reguladas por hormônios como a insulina e o glucagon, contribuindo para a manutenção da glicemia e do equilíbrio energético do organismo."
+  },
+  "Pancreas": {
+    "objname": "Pâncreas",
+    "description": "Órgão glandular com funções digestivas e endócrinas, fundamental para a regulação da glicemia. As células beta das ilhotas pancreáticas produzem insulina, hormônio que favorece a utilização e o armazenamento de glicose e reduz sua produção hepática. As células alfa produzem glucagon, que estimula principalmente a liberação de glicose pelo fígado durante períodos de baixa glicemia. O equilíbrio entre esses hormônios contribui para manter a concentração de glicose no sangue dentro de limites adequados."
+  },
+  "Stomach": {
+    "objname": "Estômago",
+    "description": "Órgão muscular do sistema digestório responsável pelo armazenamento temporário, mistura e processamento dos alimentos. Seus movimentos e secreções transformam o conteúdo alimentar em quimo, que é liberado gradualmente para o intestino delgado. Embora não seja o principal local de absorção da glicose, participa do processamento dos alimentos e influencia a velocidade com que os nutrientes chegam ao intestino."
+  },
+  "SmallIntestine": {
+    "objname": "Intestino Delgado",
+    "description": "Principal local de digestão e absorção dos carboidratos provenientes da alimentação. Durante a digestão, carboidratos são transformados em monossacarídeos, como a glicose, que atravessam as células da mucosa intestinal e alcançam os capilares sanguíneos. A glicose absorvida segue pela circulação porta hepática até o fígado, onde pode ser armazenada, utilizada ou disponibilizada para outros tecidos. O intestino delgado participa da absorção alimentar de glicose, enquanto sua produção e liberação durante o jejum ocorrem principalmente no fígado."
+  },
+  "LargeIntestine": {
+    "objname": "Intestino Grosso",
+    "description": "Porção final do sistema digestório, responsável principalmente pela absorção de água e eletrólitos, formação e armazenamento das fezes. Abriga uma microbiota que fermenta carboidratos não digeridos, produzindo substâncias como ácidos graxos de cadeia curta, que podem ser absorvidos e utilizados pelo organismo. O intestino grosso não é o principal local de absorção da glicose alimentar, mas participa do aproveitamento energético de componentes da dieta por meio da atividade da microbiota."
+  },
+  "Skin+nisolar+ninteract": {
+    "objname": "Pele",
+    "description": ""
+  }
+}

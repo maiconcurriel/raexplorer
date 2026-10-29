@@ -1187,3 +1187,20 @@ body.dark-mode .res-ic {
         display: none;
     }
 }
+
+#undo-hide-btn:disabled,
+#redo-hide-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Botão de idioma */
+#language-btn #language-label {
+    color: #475569;
+}
+
+/* Tema escuro */
+body.dark-mode #language-btn #language-label {
+    color: #38bdf8;
+}

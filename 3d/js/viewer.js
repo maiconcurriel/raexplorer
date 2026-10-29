@@ -789,6 +789,10 @@ window.focarParte = (id, intersectionPoint = null) => {
 
 // Restaura toda a cena 3D para o estado inicial, limpando isolamentos, destaques, callouts e reposicionando a câmera.
 window.resetScene = () => {
+    historicoOcultacoes.length = 0;
+historicoRefazer.length = 0;
+
+atualizarBotoesHistorico();
     isIsolatedMode = false;
     clearHighlight();
 
@@ -800,8 +804,10 @@ window.resetScene = () => {
     }
 
     scene.traverse(obj => {
-        if (obj.isMesh) obj.visible = true;
-    });
+    if (obj.isMesh || obj.isSkinnedMesh) {
+        obj.visible = true;
+    }
+});
 
     renderizarDescricaoComAlternador();
     setDefaultCamera();
@@ -1065,10 +1071,21 @@ function onPointerDown(event) {
     });
 
     if (intersecaoValida) {
-        const clicked = intersecaoValida.object;
-        const intersectionPoint = intersecaoValida.point;
+    const clicked = intersecaoValida.object;
+    const intersectionPoint = intersecaoValida.point;
 
-        window.focarParte(clicked.name, intersectionPoint);
+    window.focarParte(clicked.name, intersectionPoint);
+
+    } else {
+        // Clicou fora de qualquer estrutura 3D.
+
+        if (!isIsolatedMode) {
+            // Remove o destaque da estrutura selecionada.
+            clearHighlight();
+
+            // Remove o balão, a linha e o marcador.
+            removerCallout();
+        }
     }
 }
 
@@ -1509,6 +1526,60 @@ if (viewerContainer) {
     viewerResizeObserver.observe(viewerContainer);
 }
 
+const historicoOcultacoes = [];
+const historicoRefazer = [];
+
+function atualizarBotoesHistorico() {
+    const btnUndo = document.getElementById('undo-hide-btn');
+    const btnRedo = document.getElementById('redo-hide-btn');
+
+    if (btnUndo) {
+        btnUndo.disabled = historicoOcultacoes.length === 0;
+    }
+
+    if (btnRedo) {
+        btnRedo.disabled = historicoRefazer.length === 0;
+    }
+    console.log('Histórico:', {
+    desfazer: historicoOcultacoes.length,
+    refazer: historicoRefazer.length
+});
+}
+
+window.desfazerOcultacao = () => {
+    if (historicoOcultacoes.length === 0) return;
+
+    const ultimaOcultacao = historicoOcultacoes.pop();
+
+    ultimaOcultacao.forEach(obj => {
+        obj.visible = true;
+    });
+
+    historicoRefazer.push(ultimaOcultacao);
+
+    clearHighlight();
+    removerCallout();
+
+    atualizarBotoesHistorico();
+};
+
+window.refazerOcultacao = () => {
+    if (historicoRefazer.length === 0) return;
+
+    const ultimaOcultacao = historicoRefazer.pop();
+
+    ultimaOcultacao.forEach(obj => {
+        obj.visible = false;
+    });
+
+    historicoOcultacoes.push(ultimaOcultacao);
+
+    clearHighlight();
+    removerCallout();
+
+    atualizarBotoesHistorico();
+};
+
 // Alterna a visibilidade (visible = true/false) de uma sub-mesh específica na cena tridimensional.
 window.toggleVisibility = (id, action) => {
     const chaveJson = Object.keys(objectData).find(key => {
@@ -1519,15 +1590,54 @@ window.toggleVisibility = (id, action) => {
 
     const malhasDoGrupo = chaveJson.replace('+nisolar', '').split('+');
 
-    scene.traverse(obj => {
-        if ((obj.isMesh || obj.isSkinnedMesh) && malhasDoGrupo.includes(obj.name)) {
-            obj.visible = (action === 'show');
-        }
-    });
+    const malhasAlteradas = [];
 
-    if (action === 'hide') {
-        removerCallout();
+scene.traverse(obj => {
+    if (
+        (obj.isMesh || obj.isSkinnedMesh) &&
+        malhasDoGrupo.includes(obj.name)
+    ) {
+        if (action === 'hide') {
+
+            // Registra apenas malhas que estavam visíveis.
+            if (obj.visible) {
+                malhasAlteradas.push(obj);
+                obj.visible = false;
+            }
+
+        } else if (action === 'show') {
+
+            obj.visible = true;
+        }
     }
+});
+
+if (action === 'hide') {
+    if (malhasAlteradas.length > 0) {
+        historicoOcultacoes.push(malhasAlteradas);
+        historicoRefazer.length = 0;
+    }
+
+    removerCallout();
+}
+
+if (action === 'show') {
+    const restauradas = new Set(
+        malhasDoGrupo
+    );
+
+    for (let i = historicoOcultacoes.length - 1; i >= 0; i--) {
+        historicoOcultacoes[i] = historicoOcultacoes[i].filter(
+            obj => !restauradas.has(obj.name)
+        );
+
+        if (historicoOcultacoes[i].length === 0) {
+            historicoOcultacoes.splice(i, 1);
+        }
+    }
+}
+
+atualizarBotoesHistorico();
 
     const data = objectData[chaveJson];
     renderButtons(chaveJson, data);

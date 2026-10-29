@@ -115,6 +115,30 @@
 
             <div class="bt-sep"></div>
 
+            <!-- Desfazer última ocultação -->
+            <button
+                class="bt-btn"
+                id="undo-hide-btn"
+                onclick="desfazerOcultacao()"
+                title="Reexibir última estrutura ocultada" data-i18n-title="viewer.undo"
+                type="button"
+                disabled
+            >
+                <span data-icon="undo"></span>
+            </button>
+            <button
+                class="bt-btn"
+                id="redo-hide-btn"
+                onclick="refazerOcultacao()"
+                title="Refazer última ocultação" data-i18n-title="viewer.redo"
+                type="button"
+                disabled
+            >
+                <span data-icon="redo"></span>
+            </button>
+
+            <div class="bt-sep"></div>
+
             <!-- Reset -->
             <button
                 class="bt-btn"
@@ -240,7 +264,7 @@
                 <button
                     class="ic-btn"
                     id="language-btn"
-                    title="Alterar idioma"
+                    title="Alterar idioma" data-i18n-title="viewer.lang"
                     onclick="window.nextLanguage()"
                     style="display: none;"
                 >

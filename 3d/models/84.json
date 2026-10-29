@@ -1,0 +1,47 @@
+{
+  "objname": "Absorção de Glicose no Diabetes Tipo 2",
+  "objsystem": [
+    "Endócrino",
+    "Célula"
+  ],
+  "objdescription": "O diabetes mellitus tipo 2 é uma doença metabólica caracterizada principalmente pela resistência à ação da insulina, frequentemente acompanhada de redução progressiva da capacidade das células beta pancreáticas de produzir esse hormônio em quantidade suficiente. A insulina normalmente se liga a receptores presentes na membrana plasmática, ativando mecanismos intracelulares que estimulam a captação de glicose, especialmente nas células musculares e adiposas. No diabetes tipo 2, a resposta celular à insulina encontra-se reduzida, prejudicando o recrutamento dos transportadores GLUT4 para a membrana e contribuindo para o aumento da glicose no sangue. O modelo apresenta a membrana plasmática em marrom, os receptores de insulina em amarelo, os transportadores de glicose em azul, a insulina em rosa e a glicose em verde. A animação utiliza a ausência de ligação de algumas moléculas de insulina aos receptores como uma representação simplificada da resistência à insulina, demonstrando a redução da resposta celular e da captação de glicose.",
+  "linkedModels": [
+    {
+      "id": "83",
+      "label": "Absorção diabetes tipo 1"
+    }
+  ],
+  "resources": [],
+  "TransportadorDeGlicoseA": {
+    "objname": "Transportador de Glicose (GLUT4)",
+    "description": "Proteína responsável pelo transporte de glicose através da membrana plasmática por difusão facilitada, especialmente em células musculares e adiposas. Em condições normais, a insulina estimula o deslocamento de vesículas contendo GLUT4 para a superfície celular, aumentando a captação de glicose. No diabetes tipo 2, a resistência à insulina pode reduzir esse recrutamento, prejudicando a entrada de glicose. No modelo, os transportadores estão representados em azul."
+  },
+  "Insulina": {
+    "objname": "Insulina",
+    "description": "Hormônio produzido pelas células beta do pâncreas, responsável por regular a glicemia e estimular a utilização e o armazenamento de nutrientes. Ao se ligar ao receptor de insulina, ativa mecanismos intracelulares que favorecem a captação de glicose. No diabetes tipo 2, a insulina pode estar presente em concentrações normais ou elevadas, especialmente nas fases iniciais, mas sua ação sobre determinados tecidos encontra-se reduzida. No modelo, está representada em rosa."
+  },
+  "Glicose001": {
+    "objname": "Glicose",
+    "description": "Molécula de açúcar utilizada como importante fonte de energia pelas células. A glicose circulante pode ser transportada para o interior celular por proteínas específicas. Em músculos e tecido adiposo, a insulina estimula sua captação por meio dos transportadores GLUT4. No diabetes tipo 2, a resistência à insulina reduz a eficiência desse processo, contribuindo para a hiperglicemia. No modelo, as moléculas de glicose estão representadas em verde."
+  },
+  "Glicose002": {
+    "objname": "Glicose",
+    "description": "Representação de moléculas de glicose envolvidas no processo de entrada na célula. Em condições normais, a sinalização da insulina favorece a presença de transportadores GLUT4 na membrana plasmática, permitindo maior captação de glicose. No diabetes tipo 2, essa resposta pode estar prejudicada, reduzindo a quantidade de glicose transportada para o interior de células musculares e adiposas. No modelo, a glicose está representada em verde."
+  },
+  "ReceptorDeInsulina": {
+    "objname": "Receptor de Insulina",
+    "description": "Proteína localizada na membrana plasmática que reconhece e se liga à insulina, desencadeando uma cascata de sinalização intracelular. Essa sinalização participa da regulação do metabolismo e estimula o recrutamento dos transportadores GLUT4 em células musculares e adiposas. No diabetes tipo 2, a resistência à insulina geralmente envolve alterações na resposta celular, mesmo quando o hormônio consegue se ligar ao receptor. No modelo, está representado em amarelo."
+  },
+  "Insulina002": {
+    "objname": "Insulina (Resistência à Ação Hormonal)",
+    "description": "Molécula de insulina utilizada na animação para representar didaticamente a resistência à ação desse hormônio. No modelo, a molécula rosa aproxima-se do receptor, mas não permanece ligada a ele, simbolizando uma resposta celular prejudicada. Na realidade, a resistência à insulina no diabetes tipo 2 geralmente não impede sua ligação ao receptor, mas compromete mecanismos de sinalização intracelular responsáveis por estimular a captação de glicose."
+  },
+  "ReceptorDeInsulina001": {
+    "objname": "Receptor de Insulina (Resposta Celular Reduzida)",
+    "description": "Representação didática de um receptor associado à resistência à insulina. Na animação, a molécula de insulina não permanece ligada a esse receptor, simbolizando uma resposta hormonal insuficiente. Entretanto, no diabetes tipo 2, os receptores geralmente ainda conseguem reconhecer e se ligar à insulina. A resistência ocorre principalmente por alterações nos mecanismos de sinalização intracelular, reduzindo a resposta metabólica e o recrutamento dos transportadores GLUT4."
+  },
+  "OBJ": {
+    "objname": "Membrana Plasmática",
+    "description": "Estrutura que delimita a célula e regula a comunicação e a troca de substâncias com o meio extracelular. É formada principalmente por uma bicamada de fosfolipídios, com regiões hidrofílicas voltadas para os meios aquosos e regiões hidrofóbicas direcionadas para o interior da membrana. Contém proteínas como os receptores de insulina e os transportadores de glicose. No modelo, está representada em marrom e serve como referência para demonstrar a sinalização hormonal e o transporte de glicose."
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "objname": "Absorção de Glicose",
+  "objsystem": [
+    "Digestório",
+    "Endócrino"
+  ],
+  "objdescription": "A absorção de glicose é um processo essencial para o fornecimento de energia ao organismo e ocorre principalmente no intestino delgado após a digestão dos carboidratos presentes nos alimentos. Durante a digestão, carboidratos complexos são transformados em açúcares menores, que podem ser absorvidos pelas células da mucosa intestinal. A glicose atravessa o epitélio intestinal e alcança a circulação sanguínea, sendo transportada inicialmente ao fígado pela veia porta hepática. O pâncreas participa da regulação da glicemia por meio da produção de hormônios, especialmente a insulina e o glucagon. A insulina favorece a captação e o armazenamento de glicose em diferentes tecidos, enquanto o glucagon contribui para a manutenção da glicemia durante períodos de jejum. O modelo apresenta o estômago, o pâncreas e o intestino delgado, demonstrando didaticamente a digestão dos alimentos e a absorção intestinal da glicose.",
+  "linkedModels": [
+    {
+      "id": "83",
+      "label": "Absorção de Glicose no Diabetes Tipo 1"
+    },
+    {
+      "id": "84",
+      "label": "Absorção de Glicose no Diabetes Tipo 2"
+    },
+    {
+      "id": "24",
+      "label": "Sistema Digestório"
+    }
+  ],
+  "resources": [],
+  "Food": {
+    "objname": "Alimento no Estômago",
+    "description": "Representação do conteúdo alimentar presente no estômago durante o processo digestivo. Nesse órgão, os alimentos são misturados às secreções gástricas e submetidos a movimentos musculares que favorecem sua fragmentação e transformação em quimo. A digestão dos carboidratos começa na boca, pela ação da amilase salivar, e prossegue principalmente no intestino delgado. O estômago participa do processamento e da liberação gradual do conteúdo alimentar para o duodeno."
+  },
+  "Skin+nisolar+ninteract": {
+    "objname": "Pele",
+    "description": ""
+  },
+  "Pancreas": {
+    "objname": "Pâncreas",
+    "description": "Órgão glandular localizado posteriormente ao estômago, com funções digestivas e endócrinas. Sua porção exócrina produz enzimas, como a amilase pancreática, que participa da digestão dos carboidratos no intestino delgado. Sua porção endócrina produz hormônios como a insulina e o glucagon, responsáveis pela regulação da glicemia. Após a absorção intestinal de glicose, o aumento da glicemia estimula a secreção de insulina, favorecendo a utilização e o armazenamento desse nutriente."
+  },
+  "Glico": {
+    "objname": "Glicose no Intestino Delgado",
+    "description": "Representação de moléculas de glicose presentes no interior do intestino delgado após a digestão dos carboidratos. A glicose é absorvida principalmente pelos enterócitos, células que revestem a mucosa intestinal, por meio do cotransportador SGLT1, associado ao transporte de sódio. Posteriormente, atravessa a membrana basolateral dessas células principalmente pelo transportador GLUT2, alcançando os capilares sanguíneos das vilosidades intestinais. A glicose absorvida segue pela circulação porta em direção ao fígado."
+  },
+  "Stomach": {
+    "objname": "Estômago",
+    "description": "Órgão muscular do sistema digestório responsável pelo armazenamento temporário, mistura e processamento dos alimentos. Seus movimentos promovem a fragmentação do conteúdo alimentar, enquanto as secreções gástricas participam principalmente da digestão das proteínas. O alimento parcialmente digerido transforma-se em quimo e é liberado gradualmente para o duodeno. Embora participe do processamento dos alimentos, o estômago não é o principal local de absorção da glicose."
+  },
+  "StomachAcid": {
+    "objname": "Suco Gástrico",
+    "description": "Secreção produzida pelas glândulas do estômago, composta principalmente por água, ácido clorídrico, enzimas e outras substâncias. O ácido clorídrico contribui para a desnaturação das proteínas, a ativação do pepsinogênio e a defesa contra microrganismos ingeridos. O ambiente ácido também reduz a atividade da amilase salivar. A digestão dos carboidratos prossegue principalmente no intestino delgado, onde atuam enzimas pancreáticas e intestinais."
+  },
+  "Food012": {
+    "objname": "Conteúdo Alimentar no Intestino Delgado",
+    "description": "Representação do quimo proveniente do estômago que alcança o intestino delgado. Nessa região, o conteúdo alimentar mistura-se às secreções pancreáticas, à bile e às enzimas intestinais, permitindo a continuidade da digestão dos nutrientes. Os carboidratos são transformados em monossacarídeos, como glicose, galactose e frutose, que podem ser absorvidos pelas células da mucosa intestinal. O processo disponibiliza nutrientes para a circulação sanguínea e para o metabolismo celular."
+  },
+  "SmallIntestine": {
+    "objname": "Intestino Delgado",
+    "description": "Órgão do sistema digestório formado pelo duodeno, jejuno e íleo, responsável pela maior parte da digestão química e da absorção dos nutrientes. Sua superfície interna apresenta pregas, vilosidades e microvilosidades que ampliam a área disponível para absorção. A glicose proveniente da digestão dos carboidratos atravessa o epitélio intestinal por meio de transportadores específicos e alcança os capilares sanguíneos. Posteriormente, é conduzida pela circulação porta hepática até o fígado, onde pode ser utilizada, armazenada ou distribuída para outros tecidos."
+  }
+}
