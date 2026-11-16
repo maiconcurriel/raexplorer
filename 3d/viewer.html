@@ -102,19 +102,6 @@
         <!-- Barra inferior -->
         <div class="v-bot-bar">
 
-            <!-- Tela cheia -->
-            <button
-                class="bt-btn"
-                id="fullscreen-btn"
-                onclick="toggleFullscreen()"
-                title="Entrar em tela cheia" data-i18n-title="viewer.enterFullscreen"
-                type="button"
-            >
-                <span data-icon="fullscreen"></span>
-            </button>
-
-            <div class="bt-sep"></div>
-
             <!-- Desfazer última ocultação -->
             <button
                 class="bt-btn"
@@ -149,6 +136,19 @@
                 <span data-icon="reset"></span>
             </button>
 
+            <div class="bt-sep"></div>
+
+            <!-- Tela cheia -->
+            <button
+                class="bt-btn"
+                id="fullscreen-btn"
+                onclick="toggleFullscreen()"
+                title="Entrar em tela cheia" data-i18n-title="viewer.enterFullscreen"
+                type="button"
+            >
+                <span data-icon="fullscreen"></span>
+            </button>
+            
             <div class="bt-sep"></div>
 
             <!-- Configurações e menu no mesmo contêiner -->
@@ -266,7 +266,6 @@
                     id="language-btn"
                     title="Alterar idioma" data-i18n-title="viewer.lang"
                     onclick="window.nextLanguage()"
-                    style="display: none;"
                 >
                     <span data-icon="languages"></span>
                     <span id="language-label">PT</span>

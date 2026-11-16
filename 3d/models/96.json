@@ -1,0 +1,45 @@
+{
+  "objname": "Mapa de Auriculoterapia (Atrás)",
+  "objsystem": [
+    "Sensorial"
+  ],
+  "objdescription": "A auriculoterapia é uma prática integrativa que utiliza a estimulação de pontos específicos do pavilhão auricular com a finalidade de auxiliar no cuidado de diferentes condições físicas e emocionais. Segundo os mapas tradicionais da auriculoterapia, determinadas regiões da orelha são associadas a órgãos, funções corporais e estados emocionais. O modelo apresenta a face posterior da orelha e destaca pontos tradicionalmente relacionados ao coração, pulmão, fígado, baço, rim, sono e alegria. Essas associações pertencem aos sistemas teóricos da auriculoterapia e não representam conexões anatômicas diretas entre os pontos auriculares e os órgãos. As evidências científicas sobre a eficácia dessas aplicações variam conforme a condição estudada.",
+  "linkedModels": [],
+  "resources": [],
+  "Orelha": {
+    "objname": "Face Posterior da Orelha",
+    "description": "Região posterior do pavilhão auricular, formada principalmente por cartilagem elástica revestida por pele. Na auriculoterapia, essa superfície apresenta pontos utilizados em protocolos tradicionais de estimulação auricular."
+  },
+  "Alegria+nisolar": {
+    "objname": "Ponto da Alegria",
+    "description": "Ponto auricular tradicionalmente associado ao equilíbrio emocional, à sensação de bem-estar e à promoção de estados emocionais positivos. Sua estimulação é utilizada em algumas abordagens de auriculoterapia, embora seus efeitos específicos não estejam cientificamente estabelecidos."
+  },
+  "Baco+nisolar": {
+    "objname": "Ponto do Baço",
+    "description": "Ponto associado ao baço nos mapas tradicionais de auriculoterapia. Na medicina tradicional chinesa, é relacionado a funções digestivas, transformação de nutrientes e equilíbrio energético. Essa correspondência não representa uma ligação anatômica direta com o órgão."
+  },
+  "Coracao+nisolar": {
+    "objname": "Ponto do Coração",
+    "description": "Ponto auricular tradicionalmente relacionado ao coração e ao equilíbrio emocional. É utilizado em protocolos de auriculoterapia voltados ao relaxamento, à ansiedade e ao bem-estar, sem representar uma conexão anatômica direta com o coração."
+  },
+  "Figado+nisolar": {
+    "objname": "Ponto do Fígado",
+    "description": "Ponto associado ao fígado nos sistemas tradicionais de auriculoterapia. Na medicina tradicional chinesa, é relacionado à regulação emocional e ao equilíbrio energético. Sua localização representa uma correspondência terapêutica tradicional, não uma projeção anatômica do fígado."
+  },
+  "Pulmao+nisolar": {
+    "objname": "Ponto do Pulmão",
+    "description": "Ponto auricular tradicionalmente associado aos pulmões e às funções respiratórias. É utilizado em algumas práticas de auriculoterapia relacionadas ao conforto respiratório e ao relaxamento. Sua associação com os pulmões é baseada em mapas terapêuticos tradicionais."
+  },
+  "Rim+nisolar": {
+    "objname": "Ponto do Rim",
+    "description": "Ponto associado aos rins nos mapas de auriculoterapia. Na medicina tradicional chinesa, relaciona-se à vitalidade, ao equilíbrio energético e à função renal em seu conceito tradicional, que difere da função fisiológica dos rins descrita pela medicina moderna."
+  },
+  "Sono+nisolar": {
+    "objname": "Ponto do Sono",
+    "description": "Ponto auricular utilizado tradicionalmente em protocolos voltados ao relaxamento e à qualidade do sono. Sua estimulação é proposta como recurso complementar para dificuldades relacionadas ao sono, embora as evidências sobre sua eficácia específica sejam limitadas."
+  },
+  "Pontos+nisolar+ninteract": {
+    "objname": "Marcações dos Pontos Auriculares",
+    "description": ""
+  }
+}

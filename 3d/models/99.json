@@ -1,0 +1,13 @@
+{
+  "objname": "Pé com Onicólise",
+  "objsystem": [
+    "Tegumentar"
+  ],
+  "objdescription": "A onicólise é uma condição caracterizada pelo descolamento parcial da lâmina ungueal em relação ao leito da unha, geralmente iniciado pela extremidade livre ou pelas bordas laterais. Esse descolamento forma um espaço sob a unha, que pode apresentar coloração esbranquiçada ou amarelada devido à presença de ar e ao acúmulo de queratina e resíduos. Entre suas possíveis causas estão traumatismos, infecções fúngicas, psoríase, exposição a substâncias irritantes e alterações da tireoide. O modelo apresenta unhas dos pés com áreas esbranquiçadas e irregulares, representando o afastamento da lâmina ungueal do leito. A onicólise não é necessariamente causada por fungos e pode ocorrer sem dor.",
+  "linkedModels": [],
+  "resources": [],
+  "Unhas1+nisolar": {
+    "objname": "Unhas com Onicólise",
+    "description": "Unhas que apresentam separação parcial entre a lâmina ungueal e o leito ungueal. As regiões esbranquiçadas observadas no modelo representam áreas onde a unha perdeu a aderência ao tecido subjacente. O descolamento geralmente começa na ponta ou nas laterais e pode avançar em direção à base da unha. O espaço formado pode acumular queratina, umidade e resíduos, favorecendo infecções secundárias. A recuperação depende da causa e do crescimento de uma nova porção da unha aderida ao leito."
+  }
+}

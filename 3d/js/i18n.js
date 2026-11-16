@@ -1,6 +1,6 @@
 
 const TRANSLATIONS = {
-    "pt-BR": {
+    "pt": {
         "welcome.models3d": "Modelos interativos em 3D",
         "welcome.title": "Bem-vindo!",
         "welcome.subtitle": "Explore estruturas anatômicas em três dimensões e aprofunde sua compreensão a cada modelo.",
@@ -161,18 +161,18 @@ const savedLanguage = localStorage.getItem('bioexplora_language');
 let currentLanguage =
     (urlLanguage && TRANSLATIONS[urlLanguage] ? urlLanguage : null) ||
     (savedLanguage && TRANSLATIONS[savedLanguage] ? savedLanguage : null) ||
-    'pt-BR';
+    'pt';
 
 // Salva o idioma resolvido para as próximas páginas
 localStorage.setItem('bioexplora_language', currentLanguage);
 
 if (!TRANSLATIONS[currentLanguage]) {
-    currentLanguage = "pt-BR";
+    currentLanguage = "pt";
 }
 
 window.t = function(key) {
     return TRANSLATIONS[currentLanguage]?.[key]
-        ?? TRANSLATIONS["pt-BR"]?.[key]
+        ?? TRANSLATIONS["pt"]?.[key]
         ?? key;
 };
 
@@ -212,10 +212,10 @@ window.setLanguage = function(lang) {
     }
 };
 
-const LANGUAGE_ORDER = ['pt-BR', 'en', 'es'];
+const LANGUAGE_ORDER = ['pt', 'en', 'es'];
 
 const LANGUAGE_LABELS = {
-    'pt-BR': 'PT',
+    'pt': 'PT',
     'en': 'EN',
     'es': 'ES'
 };

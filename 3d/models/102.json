@@ -1,0 +1,13 @@
+{
+  "objname": "Onicocriptose",
+  "objsystem": [
+    "Tegumentar"
+  ],
+  "objdescription": "A onicocriptose, popularmente conhecida como unha encravada, é uma condição caracterizada pela penetração ou pressão da borda lateral da lâmina ungueal sobre os tecidos moles ao redor da unha, provocando inflamação, dor, vermelhidão e inchaço. Ocorre principalmente no hálux (dedão do pé) e pode estar associada ao corte inadequado das unhas, uso de calçados apertados, traumatismos e alterações na curvatura ungueal. Em casos mais avançados, podem surgir feridas, tecido de granulação e infecções secundárias, com possível presença de secreção purulenta. O modelo apresenta uma unha encravada no dedão do pé, destacando a região avermelhada e inflamada ao redor da borda ungueal.",
+  "linkedModels": [],
+  "resources": [],
+  "Onicocriptose+nisolar": {
+    "objname": "Dedo com Onicocriptose",
+    "description": "Representação do hálux (dedão do pé) com onicocriptose, caracterizada pelo contato excessivo ou penetração da borda da unha na prega ungueal lateral. A região avermelhada observada no modelo representa a inflamação dos tecidos ao redor da unha, que pode causar dor, sensibilidade ao toque e inchaço. A pressão contínua da lâmina ungueal pode provocar lesões na pele e favorecer infecções secundárias."
+  }
+}

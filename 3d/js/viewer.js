@@ -85,76 +85,84 @@ let isDark = false;
 modelId = params.get('id');
 
 
+// Idioma dos metadados anatômicos. O i18n da interface pode usar "pt",
+// enquanto os arquivos JSON utilizam a chave "pt-BR".
 function getModelLanguage() {
-    const lang = localStorage.getItem('bioexplora_language') || 'pt-BR';
-    return ['pt-BR', 'en', 'es'].includes(lang) ? lang : 'pt-BR';
+    const idioma = typeof window.getCurrentLanguage === 'function'
+        ? window.getCurrentLanguage()
+        : localStorage.getItem('bioexplora_language');
+
+    const codigo = String(idioma || 'pt-BR').toLowerCase();
+    if (codigo === 'pt' || codigo.startsWith('pt-')) return 'pt-BR';
+    if (codigo === 'es' || codigo.startsWith('es-')) return 'es';
+    if (codigo === 'en' || codigo.startsWith('en-')) return 'en';
+    return 'pt-BR';
 }
 
-function aplicarTraducoesModelo(data, lang = getModelLanguage()) {
-    // O português permanece como idioma-base
-    const resultado = structuredClone(data);
+// Retorna a string no idioma selecionado, aceitando também JSONs antigos
+// cujos campos eram strings simples. Caso falte tradução, usa português.
+function textoModelo(valor, idioma) {
+    if (valor == null || typeof valor !== 'object' || Array.isArray(valor)) {
+        return valor;
+    }
 
-    // Remove traduções da versão usada pelo visualizador
+    const idiomas = ['pt-BR', 'pt', 'en', 'es'];
+    if (!idiomas.some(chave => Object.prototype.hasOwnProperty.call(valor, chave))) {
+        return valor;
+    }
+
+    return valor[idioma] ?? valor['pt-BR'] ?? valor.pt ??
+        valor.en ?? valor.es ?? '';
+}
+
+// Transforma o novo JSON multilíngue no formato que o restante do viewer
+// já utiliza: textos resolvidos e peças acessíveis diretamente pela chave
+// original da mesh (sem alterar os nomes dos objetos no GLB).
+function aplicarTraducoesModelo(data, idioma = getModelLanguage()) {
+    const resultado = {
+        ...data,
+        objname: textoModelo(data.objname, idioma),
+        objdescription: textoModelo(data.objdescription, idioma),
+        objsystem: Array.isArray(data.objsystem)
+            ? [...data.objsystem]
+            : textoModelo(data.objsystem, idioma),
+        linkedModels: (data.linkedModels || []).map(modelo => ({
+            ...modelo,
+            label: textoModelo(modelo.label, idioma)
+        })),
+        resources: (data.resources || []).map(recurso => ({
+            ...recurso,
+            name: textoModelo(recurso.name, idioma),
+            info: textoModelo(recurso.info, idioma)
+        }))
+    };
+
+    // No novo padrão, as estruturas ficam agrupadas em "parts".
+    // O restante do visualizador espera objectData[nomeDaMesh].
+    const partes = data.parts && typeof data.parts === 'object'
+        ? data.parts
+        : Object.fromEntries(Object.entries(data).filter(([chave]) =>
+            !['objname', 'objsystem', 'objdescription', 'id',
+              'linkedModels', 'linkedModel', 'resources', 'translations'].includes(chave)
+        ));
+
+    for (const [chave, parte] of Object.entries(partes)) {
+        if (!parte || typeof parte !== 'object') continue;
+        resultado[chave] = {
+            ...parte,
+            objname: textoModelo(parte.objname, idioma),
+            description: textoModelo(parte.description, idioma)
+        };
+    }
+
+    // Evita que "parts" apareça como uma estrutura na lista de exploração.
+    delete resultado.parts;
     delete resultado.translations;
-
-    const traducao = data.translations?.[lang];
-
-    if (!traducao) return resultado;
-
-    // Textos gerais do modelo
-    for (const campo of ['objname', 'objsystem', 'objdescription']) {
-        if (traducao[campo] !== undefined) {
-            resultado[campo] = structuredClone(traducao[campo]);
-        }
-    }
-
-    // Traduções das estruturas anatômicas
-    for (const [chave, valor] of Object.entries(traducao)) {
-        if (['objname', 'objsystem', 'objdescription',
-             'linkedModels', 'resources'].includes(chave)) {
-            continue;
-        }
-
-        if (!resultado[chave] || typeof resultado[chave] !== 'object') {
-            continue;
-        }
-
-        if (valor?.objname !== undefined) {
-            resultado[chave].objname = valor.objname;
-        }
-
-        if (valor?.description !== undefined) {
-            resultado[chave].description = valor.description;
-        }
-    }
-
-    // Modelos relacionados: mantém IDs originais
-    if (Array.isArray(traducao.linkedModels)) {
-        resultado.linkedModels = (resultado.linkedModels || []).map(
-            (modelo, index) => ({
-                ...modelo,
-                label: traducao.linkedModels[index]?.label ?? modelo.label
-            })
-        );
-    }
-
-    // Recursos: mantém tipo, URL e demais metadados originais
-    if (Array.isArray(traducao.resources)) {
-        resultado.resources = (resultado.resources || []).map(
-            (recurso, index) => ({
-                ...recurso,
-                name: traducao.resources[index]?.name ?? recurso.name,
-                info: traducao.resources[index]?.info ?? recurso.info
-            })
-        );
-    }
-
     return resultado;
 }
 
 function atualizarDadosTraduzidos() {
     if (!originalObjectData) return;
-
     objectData = aplicarTraducoesModelo(originalObjectData);
 }
 
@@ -273,7 +281,7 @@ function initThree() {
     scene.add(rimLight);
 
     controls = new OrbitControls(camera, renderer.domElement);
-    controls.enableDamping = true;
+    controls.enableDamping = false;
     controls.dampingFactor = 0.03;
     controls.screenSpacePanning = true;
     controls.enablePan = true;
@@ -291,7 +299,7 @@ function initThree() {
         controls.rotateSpeed = 0.65;
         controls.zoomSpeed = 0.8;
 
-        controls.enableDamping = true;
+        controls.enableDamping = false;
         controls.dampingFactor = 0.06;
 
         controls.enablePan = false;
@@ -1021,7 +1029,7 @@ window.shareModel = (btnEl) => {
     url.searchParams.delete('modal');
 
     // Inclui o idioma selecionado
-    const lang = localStorage.getItem('bioexplora_language') || 'pt-BR';
+    const lang = localStorage.getItem('bioexplora_language') || 'pt';
     url.searchParams.set('lang', lang);
 
     navigator.clipboard.writeText(url.toString()).then(() => {
@@ -2612,5 +2620,28 @@ if (document.readyState === 'loading') {
 } else {
     inicializarBottomSheet();
 }
+
+// Atalho de teclado: Espaço alterna Play/Pause da animação.
+window.addEventListener('keydown', (e) => {
+    if (e.code !== 'Space' || e.repeat || e.altKey || e.ctrlKey || e.metaKey) return;
+
+    // Só executa se existir uma animação carregada.
+    if (!currentAction || !mixer) return;
+
+    // Não interfere em campos de texto ou botões.
+    const alvo = e.target;
+    if (
+        alvo?.isContentEditable ||
+        alvo?.closest?.(
+            'input, textarea, select, button, [contenteditable="true"], [role="button"]'
+        )
+    ) return;
+
+    // Evita que o Espaço role a página.
+    e.preventDefault();
+
+    // Reutiliza a função existente de Play/Pause.
+    window.togglePlayPause();
+});
 
 initViewer();

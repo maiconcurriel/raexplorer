@@ -1,0 +1,22 @@
+{
+  "objname": "Anafilaxia: Inchaço na Garganta",
+  "objsystem": [
+    "Respiratório",
+    "Imunológico"
+  ],
+  "objdescription": "A anafilaxia é uma reação alérgica sistêmica grave, de início geralmente rápido, que pode comprometer a respiração e a circulação sanguínea. Durante a reação, substâncias como a histamina são liberadas por células do sistema imunológico, aumentando a permeabilidade dos vasos sanguíneos e favorecendo o acúmulo de líquido nos tecidos, conhecido como edema. Esse processo pode provocar inchaço da língua, faringe e laringe, dificultando a passagem do ar e causando sensação de aperto na garganta, alterações na voz e dificuldade respiratória. A animação destaca o edema das estruturas da cavidade oral e da garganta, demonstrando como a anafilaxia pode comprometer as vias aéreas superiores. Trata-se de uma emergência médica que exige tratamento imediato, principalmente com adrenalina intramuscular.",
+  "linkedModels": [],
+  "resources": [],
+  "Tongue+nisolar": {
+    "objname": "Inchaço na Língua",
+    "description": "A língua pode apresentar edema durante uma reação anafilática devido ao aumento da permeabilidade vascular e ao acúmulo de líquido nos tecidos. Esse inchaço pode dificultar a fala, a deglutição e, em situações graves, contribuir para a obstrução das vias aéreas superiores. Na animação, a alteração de volume representa o comprometimento da língua durante a reação alérgica."
+  },
+  "OralCavity+nisolar": {
+    "objname": "Inchaço na Garganta",
+    "description": "O edema das estruturas da garganta, especialmente da faringe e da laringe, pode ocorrer durante a anafilaxia. O acúmulo de líquido nos tecidos provoca estreitamento das vias aéreas superiores, dificultando a passagem do ar. Os sintomas podem incluir sensação de fechamento da garganta, dificuldade para engolir, rouquidão e ruídos respiratórios. A região avermelhada do modelo destaca didaticamente a área afetada pelo processo inflamatório e pelo edema."
+  },
+  "Skin+nisolar+ninteract": {
+    "objname": "Pele",
+    "description": ""
+  }
+}

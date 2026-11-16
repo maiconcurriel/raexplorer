@@ -1,0 +1,21 @@
+{
+  "objname": "Característica Anatômica do Pé com Hálux Valgo",
+  "objsystem": [
+    "Esquelético"
+  ],
+  "objdescription": "O hálux valgo, popularmente conhecido como joanete, é uma deformidade caracterizada pelo desvio lateral do hálux (dedão do pé) em direção aos demais dedos, geralmente acompanhado pelo desvio medial do primeiro osso metatarsal. Essa alteração modifica o alinhamento da articulação metatarsofalângica, formando uma proeminência óssea na região interna do antepé. Pode provocar dor, inflamação, vermelhidão, dificuldade para utilizar calçados e alterações na distribuição do peso durante a caminhada. Fatores genéticos, características anatômicas, alterações biomecânicas e uso de calçados inadequados podem contribuir para seu desenvolvimento. O modelo apresenta os ossos do pé e sua relação com os tecidos externos, permitindo observar o desalinhamento do primeiro metatarso e do hálux, característico dessa deformidade.",
+  "linkedModels": [],
+  "resources": [],
+  "Ossos": {
+    "objname": "Ossos do Pé",
+    "description": "Estruturas ósseas que formam o esqueleto do pé, incluindo tarso, metatarso e falanges. No hálux valgo, ocorre um desalinhamento entre o primeiro metatarso e a falange proximal do hálux, aumentando o ângulo entre essas estruturas. Essa alteração contribui para a formação da proeminência óssea conhecida como joanete e pode comprometer a distribuição das cargas durante a marcha."
+  },
+  "Scene002": {
+    "objname": "Pé com Hálux Valgo",
+    "description": "Representação externa do pé com hálux valgo, destacando o desvio do dedão em direção aos demais dedos e a proeminência na região medial da articulação metatarsofalângica. A deformidade pode causar atrito com calçados, dor, vermelhidão e inflamação dos tecidos adjacentes, além de alterações na biomecânica do pé."
+  },
+  "Casca+nisolar+ninteract": {
+    "objname": "Revestimento Externo do Pé",
+    "description": ""
+  }
+}

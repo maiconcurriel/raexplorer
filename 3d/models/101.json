@@ -1,0 +1,41 @@
+{
+  "objname": "Ciclo Biológico do Pelo/Cabelo",
+  "objsystem": [
+    "Tegumentar"
+  ],
+  "objdescription": "O ciclo biológico do pelo é um processo contínuo de crescimento, regressão, repouso e renovação dos folículos pilosos. Cada folículo apresenta um ciclo próprio, permitindo que diferentes pelos estejam em fases distintas ao mesmo tempo. O modelo representa didaticamente quatro momentos desse processo: anágena, catágena, telógena e anágena precoce. Na fase anágena, ocorre o crescimento ativo do fio, produzido pela intensa divisão das células da matriz capilar, próximas à papila dérmica. Essa fase pode durar vários anos nos cabelos do couro cabeludo, mas é mais curta em outras regiões do corpo. Na fase catágena, o crescimento é interrompido e a porção inferior do folículo sofre regressão, enquanto o fio permanece temporariamente retido. Essa transição geralmente dura algumas semanas. Na fase telógena, o folículo permanece em repouso relativo, com o fio antigo retido até sua eliminação. A fase anágena precoce representa o início de um novo ciclo de crescimento: as células da matriz voltam a proliferar e formam um novo fio, inicialmente localizado no interior do folículo. Durante esse processo, o fio antigo pode permanecer presente e ser posteriormente eliminado, em um fenômeno denominado exógena. Assim, o surgimento do novo fio não depende necessariamente da queda prévia do anterior. A animação demonstra essas transformações e a relação do folículo piloso com as camadas da pele, os vasos sanguíneos e as estruturas responsáveis pela produção e renovação dos pelos.",
+  "linkedModels": [],
+  "resources": [],
+  "DermePapilar": {
+    "objname": "Derme Papilar",
+    "description": "Camada superficial da derme, localizada imediatamente abaixo da epiderme. É formada por tecido conjuntivo frouxo, com fibras de colágeno, terminações nervosas e pequenos vasos sanguíneos. Contribui para a nutrição da epiderme e para a sustentação das estruturas cutâneas. Não deve ser confundida com a papila dérmica do folículo piloso, estrutura especializada que participa da regulação do crescimento do pelo."
+  },
+  "DermeReticular": {
+    "objname": "Derme Reticular",
+    "description": "Camada mais profunda e espessa da derme, formada principalmente por tecido conjuntivo denso, rico em fibras de colágeno e elastina. Proporciona resistência e elasticidade à pele e abriga estruturas como folículos pilosos, glândulas, vasos sanguíneos e terminações nervosas. Participa da sustentação dos folículos durante as diferentes fases do ciclo capilar."
+  },
+  "Epiderme": {
+    "objname": "Epiderme",
+    "description": "Camada mais externa da pele, formada por epitélio estratificado pavimentoso queratinizado. Atua como barreira protetora contra agentes externos e perda excessiva de água. O pelo atravessa a epiderme ao emergir na superfície cutânea, enquanto o folículo piloso apresenta uma continuidade epitelial com essa camada."
+  },
+  "EstratoCorneo": {
+    "objname": "Estrato Córneo",
+    "description": "Camada mais superficial da epiderme, formada por células mortas, achatadas e ricas em queratina. Constitui uma importante barreira contra atrito, micro-organismos e perda de água. O fio de pelo atravessa essa camada ao alcançar a superfície da pele."
+  },
+  "Hipoderme": {
+    "objname": "Hipoderme (Tecido Subcutâneo)",
+    "description": "Camada localizada abaixo da derme, composta principalmente por tecido adiposo e conjuntivo. Atua no armazenamento de energia, isolamento térmico e proteção mecânica. Folículos pilosos em fase anágena podem apresentar suas porções inferiores estendidas até a hipoderme, dependendo da região corporal e do tipo de pelo."
+  },
+  "Pelo2": {
+    "objname": "Novo Pelo em Formação (Anágena Precoce)",
+    "description": "Representa o novo fio de pelo em desenvolvimento durante o início da fase anágena. Após a regressão e o repouso do folículo, as células da matriz capilar retomam sua atividade proliferativa e começam a produzir uma nova haste pilosa. Inicialmente, o novo fio permanece dentro do folículo, podendo crescer enquanto o fio antigo ainda está presente. Na animação, essa estrutura representa o início da renovação capilar, antes da substituição completa do pelo anterior."
+  },
+  "Vasos": {
+    "objname": "Vasos Sanguíneos da Pele",
+    "description": "Rede de artérias, arteríolas, capilares e veias responsável pelo fornecimento de oxigênio e nutrientes aos tecidos cutâneos. Os vasos próximos à papila dérmica do folículo piloso contribuem para sustentar a atividade metabólica necessária ao crescimento do pelo, especialmente durante a fase anágena. A vascularização também participa da manutenção e regeneração das estruturas foliculares."
+  },
+  "Pelo": {
+    "objname": "Pelo e Folículo Piloso",
+    "description": "O pelo é uma estrutura filamentosa formada principalmente por queratina, produzida pelas células da matriz capilar no interior do folículo piloso. Sua porção visível é denominada haste, enquanto a raiz permanece inserida na pele. Durante a fase anágena, ocorre crescimento ativo; na catágena, o folículo sofre regressão e interrompe a produção do fio; na telógena, o pelo antigo permanece temporariamente retido. Posteriormente, pode ser eliminado durante a exógena, enquanto um novo fio inicia seu crescimento na fase anágena precoce."
+  }
+}

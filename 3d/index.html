@@ -108,10 +108,9 @@
           <button
               class="ic-btn"
               id="language-btn"
-              title="Alterar idioma"
-              onclick="window.nextLanguage()"
+              title="Alterar idioma" data-i18n-title="viewer.lang"
+              onclick="window.nextLanguage()"              
           >
-              <span data-icon="languages"></span>
               <span id="language-label">PT</span>
           </button>
 
@@ -193,7 +192,7 @@
       <div class="filter-chips-row" id="active-chips-row">
       </div>
 
-      <button class="clear-all" id="clear-all-btn" style="display:none" onclick="clearAllFilters()">Limpar tudo</button>
+      <button class="clear-all" id="clear-all-btn" style="display:none" onclick="clearAllFilters()"><span data-i18n="filter.clear">Limpar tudo</span></button>
     </div>
   </div>
 

@@ -1,0 +1,27 @@
+{
+  "objname": "Desenvolvimento de Necrose no Pé Diabético",
+  "objsystem": [
+    "Tegumentar",
+    "Cardiovascular",
+    "Nervoso"
+  ],
+  "objdescription": "O pé diabético é uma complicação do diabetes mellitus caracterizada por alterações nos nervos periféricos e na circulação sanguínea, que aumentam o risco de feridas, infecções e destruição dos tecidos. A neuropatia diabética pode reduzir a sensibilidade protetora dos pés, enquanto a doença arterial periférica compromete o fornecimento de oxigênio e nutrientes, dificultando a cicatrização. Em situações graves, a combinação de lesões, infecções e isquemia pode provocar necrose tecidual e gangrena. O modelo apresenta uma sequência didática de quatro condições: pé saudável, pé com edema, pé com lesão e pé com necrose avançada. Essa sequência representa uma possível evolução de complicações, mas não corresponde a estágios obrigatórios ou universais do pé diabético.",
+  "linkedModels": [],
+  "resources": [],
+  "FootHealthy": {
+    "objname": "Pé Saudável",
+    "description": "Representação de um pé sem alterações aparentes, com pele íntegra, ausência de feridas, edema ou necrose. Em condições saudáveis, a circulação sanguínea fornece oxigênio e nutrientes aos tecidos, enquanto a sensibilidade nervosa contribui para a percepção de dor, pressão e possíveis lesões."
+  },
+  "FootSwollen": {
+    "objname": "Pé com Edema",
+    "description": "Representação de um pé com aumento de volume devido ao acúmulo de líquido nos tecidos, caracterizando edema. Em pessoas com diabetes, o inchaço pode estar associado a diferentes condições, como alterações circulatórias, infecções ou complicações renais. O edema não é necessariamente uma etapa inicial da necrose, mas pode acompanhar situações que exigem avaliação clínica."
+  },
+  "FootFerida": {
+    "objname": "Pé com Lesão Ulcerativa",
+    "description": "Representação de um pé com lesão cutânea, indicando uma possível complicação do diabetes. A neuropatia periférica pode reduzir a percepção de pressão e traumatismos, favorecendo o surgimento de úlceras. A circulação comprometida e a presença de infecção podem dificultar a cicatrização e aumentar o risco de destruição dos tecidos. A aparência externa isolada não permite determinar se a úlcera é neuropática, isquêmica ou mista."
+  },
+  "NecroseTecidual": {
+    "objname": "Necrose Tecidual Avançada (Gangrena)",
+    "description": "Representação de um pé com extensa alteração de coloração, incluindo regiões escuras que simbolizam tecido necrosado. A necrose ocorre quando as células morrem devido a fatores como interrupção do suprimento sanguíneo ou infecção grave. No pé diabético, pode evoluir para gangrena e comprometer estruturas profundas. Casos avançados exigem avaliação médica urgente, podendo necessitar de procedimentos para remover tecidos inviáveis e, em determinadas situações, amputação. A amputação não é inevitável em todos os casos."
+  }
+}

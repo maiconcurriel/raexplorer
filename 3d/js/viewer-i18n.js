@@ -4,7 +4,7 @@
    ============================================ */
 
 const VIEWER_TRANSLATIONS = {
-    "pt-BR": {
+    "pt": {
         "viewer.hidePanel": "Esconder painel",
         "viewer.showPanel": "Mostrar painel",
         "viewer.searchComponents": "Buscar componentes",

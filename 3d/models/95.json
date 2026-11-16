@@ -1,0 +1,29 @@
+{
+  "objname": "Camadas da Epiderme",
+  "objsystem": [
+    "Tegumentar"
+  ],
+  "objdescription": "A epiderme é a camada mais externa da pele, formada por tecido epitelial estratificado pavimentoso queratinizado. Sua principal função é proteger o organismo contra agentes externos, reduzir a perda de água e contribuir para a defesa imunológica. É organizada em cinco estratos na pele espessa: córneo, lúcido, granuloso, espinhoso e basal. Na pele fina, o estrato lúcido geralmente não está presente. As células produzidas na camada basal passam por um processo de diferenciação e queratinização à medida que migram em direção à superfície, onde são eliminadas naturalmente. O modelo apresenta a organização dessas camadas e suas características estruturais.",
+  "linkedModels": [],
+  "resources": [],
+  "TopLayer+nisolar": {
+    "objname": "Estrato Córneo",
+    "description": "Camada mais superficial da epiderme, formada por células mortas, achatadas e ricas em queratina, chamadas corneócitos. Atua como barreira protetora contra agentes externos, atrito, micro-organismos e perda excessiva de água. Suas células são continuamente eliminadas e substituídas."
+  },
+  "SecondLayerFront+nisolar": {
+    "objname": "Estrato Lúcido",
+    "description": "Camada fina e translúcida localizada entre os estratos córneo e granuloso, presente principalmente na pele espessa das palmas das mãos e plantas dos pés. É formada por queratinócitos achatados, sem núcleo, que contribuem para a resistência e proteção da pele contra o atrito."
+  },
+  "ThirdLayerBack+nisolar": {
+    "objname": "Estrato Granuloso",
+    "description": "Camada formada por queratinócitos achatados que apresentam grânulos de querato-hialina. Nessa região ocorre uma etapa importante da queratinização e da liberação de lipídios que ajudam a formar a barreira impermeabilizante da epiderme, reduzindo a perda de água."
+  },
+  "FourthLayerBack+nisolar": {
+    "objname": "Estrato Espinhoso",
+    "description": "Camada composta por várias fileiras de queratinócitos unidos por desmossomos, estruturas que conferem resistência mecânica à epiderme. Contém células de Langerhans, envolvidas na defesa imunológica, e participa do processo de diferenciação e produção de queratina."
+  },
+  "FifthLayerBack+nisolar": {
+    "objname": "Estrato Basal",
+    "description": "Camada mais profunda da epiderme, localizada sobre a membrana basal que a separa da derme. Contém queratinócitos com capacidade de divisão celular, responsáveis pela renovação contínua da epiderme. Também abriga melanócitos, produtores de melanina, e células de Merkel, relacionadas à percepção tátil."
+  }
+}

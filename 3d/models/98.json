@@ -1,0 +1,13 @@
+{
+  "objname": "Pé com Onicomicose",
+  "objsystem": [
+    "Tegumentar"
+  ],
+  "objdescription": "A onicomicose é uma infecção fúngica que afeta as unhas, principalmente dos pés, causada por dermatófitos, leveduras ou fungos não dermatófitos. A infecção pode comprometer a lâmina ungueal, o leito ungueal ou ambos, provocando alterações na coloração, espessamento, fragilidade, deformação e possível descolamento da unha. O modelo apresenta um pé com alterações ungueais características, destacando a coloração amarelada e a aparência irregular das unhas afetadas. A onicomicose pode evoluir gradualmente e atingir diferentes unhas, sendo necessário exame clínico e, quando indicado, laboratorial para confirmar o diagnóstico.",
+  "linkedModels": [],
+  "resources": [],
+  "Unhas+nisolar": {
+    "objname": "Unhas com Onicomicose",
+    "description": "Unhas afetadas por infecção fúngica, apresentando alterações como coloração amarelada, espessamento, irregularidades na superfície e deformação da lâmina ungueal. Essas manifestações ocorrem devido ao comprometimento da estrutura da unha pelos fungos, podendo causar fragilidade, acúmulo de material sob a unha e descolamento parcial do leito ungueal. No modelo, as alterações visíveis representam características comuns da onicomicose."
+  }
+}

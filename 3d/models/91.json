@@ -1,0 +1,25 @@
+{
+  "objname": "Osteossarcoma",
+  "objsystem": [
+    "Esquelético"
+  ],
+  "objdescription": "O osteossarcoma é um tumor ósseo maligno caracterizado pela produção de tecido osteoide por células cancerígenas. É um dos principais tipos de câncer ósseo primário e ocorre com maior frequência em adolescentes e adultos jovens, especialmente nas regiões próximas ao joelho, como a extremidade distal do fêmur e a porção proximal da tíbia. O tumor provoca crescimento desordenado de células malignas, podendo destruir o tecido ósseo normal, comprometer a resistência do osso e se estender aos tecidos adjacentes. Entre os sintomas estão dor persistente, inchaço local e limitação dos movimentos. Em alguns casos, podem ocorrer fraturas patológicas. O modelo apresenta um osteossarcoma na região distal do fêmur, próximo à articulação do joelho, destacando a formação tumoral e sua relação com as estruturas ósseas e articulares.",
+  "linkedModels": [],
+  "resources": [],
+  "Tumor+nisolar": {
+    "objname": "Osteossarcoma (Tumor Ósseo Maligno)",
+    "description": "Formação tumoral maligna localizada na região distal do fêmur. O osteossarcoma é caracterizado pela proliferação descontrolada de células cancerígenas produtoras de osteoide, uma matriz óssea imatura. Seu crescimento pode provocar destruição do osso normal, formação irregular de tecido ósseo e extensão para os tecidos moles ao redor. No modelo, a massa de aspecto irregular representa didaticamente o crescimento do tumor próximo à articulação do joelho."
+  },
+  "Femur+nisolar": {
+    "objname": "Fêmur",
+    "description": "Maior e mais resistente osso do corpo humano, localizado na coxa e responsável pela sustentação do peso corporal e participação nos movimentos dos membros inferiores. Sua extremidade distal forma parte da articulação do joelho. Essa região, especialmente a metáfise distal, é um dos locais mais frequentemente acometidos pelo osteossarcoma. O crescimento tumoral pode comprometer a estrutura óssea, provocar dor e aumentar o risco de fraturas."
+  },
+  "Patella+nisolar": {
+    "objname": "Patela",
+    "description": "Osso sesamoide localizado na região anterior do joelho, integrado ao mecanismo extensor da articulação. Protege parcialmente a região anterior do joelho e aumenta a eficiência mecânica do músculo quadríceps durante a extensão da perna. No modelo, a patela é apresentada como referência anatômica próxima à região do fêmur acometida pelo osteossarcoma, não representando necessariamente uma estrutura afetada pelo tumor."
+  },
+  "cartilagem+nisolar": {
+    "objname": "Cartilagem Articular do Joelho",
+    "description": "Tecido cartilaginoso que reveste as superfícies articulares dos ossos do joelho, proporcionando movimentos suaves, reduzindo o atrito e auxiliando na distribuição das cargas mecânicas. No modelo, a cartilagem representa a superfície articular próxima ao osteossarcoma localizado no fêmur distal. Embora o tumor possa comprometer estruturas adjacentes conforme sua extensão, a cartilagem não é necessariamente afetada diretamente pela doença."
+  }
+}

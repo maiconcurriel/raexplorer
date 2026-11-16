@@ -1,0 +1,25 @@
+{
+  "objname": "Esôfago de Barrett",
+  "objsystem": [
+    "Digestório"
+  ],
+  "objdescription": "O esôfago de Barrett é uma alteração do revestimento interno da porção inferior do esôfago, geralmente associada à exposição prolongada ao ácido gástrico devido à doença do refluxo gastroesofágico. Nessa condição, parte do epitélio escamoso normal é substituída por epitélio colunar com metaplasia intestinal. Essa transformação representa uma adaptação do tecido à agressão crônica, mas também aumenta o risco de desenvolvimento de adenocarcinoma esofágico. A maioria das pessoas com esôfago de Barrett não desenvolve câncer. O modelo apresenta a junção entre o esôfago e o estômago, destacando em vermelho a região do revestimento esofágico alterado. O diagnóstico é realizado por endoscopia digestiva alta, com avaliação histológica por biópsia.",
+  "linkedModels": [],
+  "resources": [],
+  "Esof": {
+    "objname": "Esôfago e Estômago",
+    "description": "O esôfago é um órgão muscular responsável por transportar os alimentos da faringe até o estômago. Na sua extremidade inferior, encontra-se a junção gastroesofágica, região que pode ser afetada pelo refluxo do conteúdo gástrico. No esôfago de Barrett, a exposição crônica ao refluxo pode provocar a substituição do revestimento escamoso normal por epitélio colunar com metaplasia intestinal. No modelo, a área avermelhada próxima à entrada do estômago representa didaticamente essa alteração da mucosa esofágica."
+  },
+  "LargeIntestine": {
+    "objname": "Intestino Grosso",
+    "description": "Porção final do sistema digestório, responsável principalmente pela absorção de água e eletrólitos, formação e armazenamento das fezes. É composto pelo ceco, cólon, reto e canal anal. No modelo, aparece como referência anatômica do sistema digestório, não sendo diretamente afetado pelo esôfago de Barrett."
+  },
+  "SmallIntestine": {
+    "objname": "Intestino Delgado",
+    "description": "Órgão do sistema digestório formado pelo duodeno, jejuno e íleo, responsável pela maior parte da digestão química e absorção de nutrientes. Recebe o conteúdo parcialmente digerido do estômago e realiza sua absorção por meio da mucosa intestinal. No modelo, serve como referência anatômica e não representa uma região diretamente afetada pelo esôfago de Barrett."
+  },
+  "Skin+nisolar+ninteract": {
+    "objname": "Pele",
+    "description": ""
+  }
+}

@@ -16,28 +16,55 @@ const modelosIDs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
                     51, 52, 53, 54, 55, 56, 57, 58, 59, 60,
                     61, 62, 63, 64, 65, 66, 67, 68, 69, 70,
                     71, 72, 73, 74, 75, 76, 77, 78, 79, 80,
-                    81, 82, 83, 84, 85, 86, 87, 88];
+                    81, 82, 83, 84, 85, 86, 87, 88, 89, 90,
+                    91, 92, 93, 94, 95, 96, 97, 98, 99, 100,
+                    101, 102, 103, 104];
 
 const FILTER_LABELS = {
-    all: 'Todos', 
-    nervoso: 'Nervoso', 
-    cardio: 'Cardiovascular', 
-    tegum: 'Tegumentar', 
-    celul: 'Célula', 
-    esqueletico: 'Esquelético', 
-    muscular: 'Muscular', 
-    resp: 'Respiratório', 
-    digest: 'Digestivo', 
-    urin: 'Urinário', 
-    senso: 'Sensorial', 
-    repro: 'Reprodutor', 
-    infec: 'Infeccioso',
-    linf: 'Linfático',
-    circ: 'Circulatório',
-    audi: 'Auditivo',
-    endoc: 'Endócrino',
-    estom: 'Estomatognático'
+    all: '<span data-i18n="category.all">Todos</span>', 
+    nervoso: '<span data-i18n="category.nervoso">Nervoso</span>', 
+    cardio: '<span data-i18n="category.cardio">Cardiovascular</span>', 
+    tegum: '<span data-i18n="category.tegum">Tegumentar</span>', 
+    celul: '<span data-i18n="category.celul">Célula</span>', 
+    esqueletico: '<span data-i18n="category.esqueletico">Esquelético</span>', 
+    muscular: '<span data-i18n="category.muscular">Muscular</span>', 
+    resp: '<span data-i18n="category.resp">Respiratório</span>', 
+    digest: '<span data-i18n="category.digest">Digestivo</span>', 
+    urin: '<span data-i18n="category.urin">Urinário</span>', 
+    senso: '<span data-i18n="category.senso">Sensorial</span>', 
+    repro: '<span data-i18n="category.repro">Reprodutor</span>', 
+    infec: '<span data-i18n="category.infec">Infeccioso</span>',
+    linf: '<span data-i18n="category.linf">Linfático</span>',
+    circ: '<span data-i18n="category.circ">Circulatório</span>',
+    audi: '<span data-i18n="category.audi">Auditivo</span>',
+    endoc: '<span data-i18n="category.endoc">Endócrino</span>',
+    estom: '<span data-i18n="category.estom">Estomatognático</span>'
 };
+
+function traduzirSistema(chave) {
+    const lang = getCurrentLanguage();
+    const key = String(chave ?? '').trim();
+    const mapaLegado = {
+        cardiovascular: 'cardio', nervoso: 'nervoso', tegumentar: 'tegum',
+        célula: 'celul', celula: 'celul', esquelético: 'esqueletico',
+        esqueletico: 'esqueletico', muscular: 'muscular', respiratório: 'resp',
+        respiratorio: 'resp', digestivo: 'digest', digestório: 'digest',
+        digestorio: 'digest', urinário: 'urin', urinario: 'urin',
+        sensorial: 'senso', reprodutor: 'repro', infeccioso: 'infec',
+        linfático: 'linf', linfatico: 'linf', circulatório: 'circ',
+        circulatorio: 'circ', auditivo: 'audi', endócrino: 'endoc',
+        endocrino: 'endoc', estomatognático: 'estom', estomatognatico: 'estom'
+    };
+    const categoria = Object.hasOwn(FILTER_LABELS, key) ? key : (mapaLegado[key.toLowerCase()] ?? key);
+    const chaveTraducao = `category.${categoria}`;
+    const idiomas = [lang, lang === 'pt-BR' ? 'pt' : null, 'pt-BR', 'pt'].filter(Boolean);
+    for (const idioma of idiomas) {
+        const texto = typeof TRANSLATIONS !== 'undefined' ? TRANSLATIONS?.[idioma]?.[chaveTraducao] : null;
+        if (typeof texto === 'string') return texto;
+    }
+    const rotulo = FILTER_LABELS[categoria];
+    return typeof rotulo === 'string' ? rotulo.replace(/<[^>]*>/g, '') : key;
+}
 
 let modelosData = [];
 let currentView = 'grid'; 
@@ -46,20 +73,39 @@ let activeFilters = new Set(['all']);
 let isDark = false;
 let currentOpenId = null;
 
-// Retorna o idioma selecionado
+// Retorna o idioma selecionado, normalizado para as chaves dos JSONs.
 function getCurrentLanguage() {
-    return localStorage.getItem('bioexplora_language') || 'pt-BR';
+    const lang = localStorage.getItem('bioexplora_language') || 'pt-BR';
+    return lang === 'pt' ? 'pt-BR' : lang;
 }
 
-// Retorna os dados traduzidos de um modelo
+// Aceita textos simples (JSON antigo) e objetos multilíngues (JSON novo).
+function traduzirCampo(valor, lang = getCurrentLanguage(), fallback = '') {
+    if (typeof valor === 'string') return valor;
+    if (valor == null) return fallback;
+    if (Array.isArray(valor)) return valor.map(item => traduzirCampo(item, lang)).filter(Boolean);
+    if (typeof valor === 'object') {
+        const texto = valor[lang] ?? valor['pt-BR'] ?? valor.pt ?? valor.en ?? valor.es;
+        return typeof texto === 'string' ? texto : fallback;
+    }
+    return String(valor);
+}
+
+// Converte os metadados para strings sem modificar o JSON original.
 function getTranslatedModel(modelo) {
     const lang = getCurrentLanguage();
-    const traducao = modelo.translations?.[lang];
-
+    const antiga = modelo.translations?.[lang] ?? modelo.translations?.[lang === 'pt-BR' ? 'pt' : 'pt-BR'];
+    const nome = traduzirCampo(antiga?.objname ?? modelo.objname, lang, 'Sem Nome');
+    const sistemas = antiga?.objsystem ?? modelo.objsystem ?? [];
+    const lista = (Array.isArray(sistemas) ? sistemas : [sistemas])
+        .flatMap(item => typeof item === 'string' ? item.split(/[,/]/) : [item])
+        .map(item => traduzirCampo(item, lang))
+        .filter(Boolean)
+        .map(traduzirSistema);
     return {
-        nome: traducao?.objname || modelo.objname || 'Sem Nome',
-        sistema: traducao?.objsystem || modelo.objsystem || [],
-        descricao: traducao?.objdescription || modelo.objdescription || ''
+        nome,
+        sistema: lista,
+        descricao: traduzirCampo(antiga?.objdescription ?? modelo.objdescription, lang)
     };
 }
 
@@ -76,51 +122,34 @@ async function carregarModelos() {
                     return res.json();
                 })
                 .then(data => {
-    // Transforma em array mesmo se no JSON for string única ou lista
-    let sistemasBrutos = [];
-    if (Array.isArray(data.objsystem)) {
-        sistemasBrutos = data.objsystem;
-    } else if (typeof data.objsystem === 'string') {
-        sistemasBrutos = data.objsystem.split(/[,/]/).map(s => s.trim());
-    }
-
-    // Array de categorias correspondentes ao modelo
-    let categoriasChave = [];
-
-    sistemasBrutos.forEach(sis => {
-        const sisLimpo = sis.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-
-    if (sisLimpo.includes('nervoso') && !categoriasChave.includes('nervoso')) categoriasChave.push('nervoso');
-    if (sisLimpo.includes('cardio') && !categoriasChave.includes('cardio')) categoriasChave.push('cardio');
-    if (sisLimpo.includes('tegum') && !categoriasChave.includes('tegum')) categoriasChave.push('tegum');
-    if (sisLimpo.includes('celul') && !categoriasChave.includes('celul')) categoriasChave.push('celul');
-    if (sisLimpo.includes('esquel') && !categoriasChave.includes('esqueletico')) categoriasChave.push('esqueletico');
-    if (sisLimpo.includes('muscular') && !categoriasChave.includes('muscular')) categoriasChave.push('muscular');
-    if (sisLimpo.includes('respira') && !categoriasChave.includes('resp')) categoriasChave.push('resp');
-    if (sisLimpo.includes('digest') && !categoriasChave.includes('digest')) categoriasChave.push('digest');
-    if (sisLimpo.includes('urin') && !categoriasChave.includes('urin')) categoriasChave.push('urin');
-    if (sisLimpo.includes('senso') && !categoriasChave.includes('senso')) categoriasChave.push('senso');
-    if (sisLimpo.includes('repro') && !categoriasChave.includes('repro')) categoriasChave.push('repro');
-    if (sisLimpo.includes('infec') && !categoriasChave.includes('infec')) categoriasChave.push('infec');
-    if (sisLimpo.includes('linf') && !categoriasChave.includes('linf')) categoriasChave.push('linf');
-    if (sisLimpo.includes('circ') && !categoriasChave.includes('circ')) categoriasChave.push('circ');
-    if (sisLimpo.includes('audi') && !categoriasChave.includes('audi')) categoriasChave.push('audi');
-    if (sisLimpo.includes('endoc') && !categoriasChave.includes('endoc')) categoriasChave.push('endoc');
-    if (sisLimpo.includes('estom') && !categoriasChave.includes('estom')) categoriasChave.push('estom');
-
-    });
-
-    if (categoriasChave.length === 0) categoriasChave.push('all');
-
-    return { 
-        ...data, 
-        id, 
-        nome: data.objname || "Sem Nome",
-        sistema: sistemasBrutos.join(' / '),
-        img: `models/${id}.png`, 
-        cat: categoriasChave
-    };
-})
+                    const sistema = Array.isArray(data.objsystem) ? data.objsystem : [data.objsystem];
+                    const sistemasBrutos = sistema
+                        .flatMap(item => typeof item === 'string' ? item.split(/[,/]/) : [item])
+                        .map(item => traduzirCampo(item))
+                        .filter(Boolean);
+                    const categoriasChave = [...new Set(sistemasBrutos.map(sis => {
+                        const key = sis.trim().toLowerCase();
+                        if (Object.hasOwn(FILTER_LABELS, key) && key !== 'all') return key;
+                        const normal = key.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+                        const aliases = {
+                            cardiovascular: 'cardio', nervoso: 'nervoso', tegumentar: 'tegum',
+                            celula: 'celul', esqueletico: 'esqueletico', muscular: 'muscular',
+                            respiratorio: 'resp', digestivo: 'digest', digestorio: 'digest',
+                            urinario: 'urin', sensorial: 'senso', reprodutor: 'repro',
+                            infeccioso: 'infec', linfatico: 'linf', circulatorio: 'circ',
+                            auditivo: 'audi', endocrino: 'endoc', estomatognatico: 'estom'
+                        };
+                        return aliases[normal] ?? null;
+                    }).filter(Boolean))];
+                    return {
+                        ...data,
+                        id,
+                        nome: traduzirCampo(data.objname, getCurrentLanguage(), 'Sem Nome'),
+                        sistema: sistemasBrutos.join(' / '),
+                        img: `models/${id}.png`,
+                        cat: categoriasChave
+                    };
+                })
         );
 
         modelosData = await Promise.all(promessas);
@@ -142,28 +171,7 @@ async function carregarModelos() {
 
 // Evento disparado quando o DOM é totalmente carregado; inicializa filtros, estados de visualização e escuta cliques/atalhos de teclado.
   window.onload = () => {
-    carregarModelos();
-    loadState(); 
-    renderActiveChips(); 
-    render();
-
-    const urlParams = new URLSearchParams(window.location.search);
-    const idParaAbrir = urlParams.get('id');
-
-    if (idParaAbrir) {
-        const welcomeModal = document.getElementById('welcome-overlay');
-        if (welcomeModal) {
-            welcomeModal.style.display = 'none';
-        }
-        document.getElementById('app').classList.add('visible');
-
-        const modelo = modelosData.find(m => m.id == idParaAbrir);
-        if (modelo) {
-            setTimeout(() => openDet(modelo.nome, modelo.sistema, modelo.id), 100);
-        }
-    } else {
-        
-    }
+    // carregarModelos() é executado em DOMContentLoaded.
 
     const searchInput = document.querySelector('.hd-search input');
     if (searchInput) {
@@ -208,7 +216,7 @@ async function carregarModelos() {
 
         const modelo = modelosData.find(m => m.id == idParaAbrir);
         if (modelo) {
-            setTimeout(() => openDet(modelo.nome, modelo.sistema, modelo.id), 100);
+            setTimeout(() => openDetById(modelo.id), 100);
         }
     }
 }
@@ -435,11 +443,17 @@ window.openDetById = function(id) {
 
     row.innerHTML = visualFilters.map(key => `
       <div class="fchip active">
-        ${FILTER_LABELS[key]}
+
+        <span data-i18n="category.${key}">
+            ${traduzirSistema(key)}
+        </span>
+        
         <span class="fx" onclick="removeFilter('${key}')">×</span>
       </div>
     `).join('');
   }
+
+  //${FILTER_LABELS[key]}
 
   // Remove um filtro específico do conjunto de buscas ativas e atualiza a exibição da tela.
   function removeFilter(key) {
@@ -574,11 +588,13 @@ function fecharAjuda() {
     if (helpModal) helpModal.style.display = 'none';
 }
 
-document.addEventListener('bioexplora:languagechange', () => {
-    // Recria os cards com os nomes no idioma selecionado
+document.addEventListener('bioexplora:languagechange', (event) => {
+    const lang = event.detail.language;
+    
     render();
 
-    // Atualiza também o visualizador aberto, se houver
+    renderActiveChips();
+
     if (currentOpenId !== null) {
         const modelo = modelosData.find(m => m.id === currentOpenId);
 

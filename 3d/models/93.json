@@ -1,0 +1,17 @@
+{
+  "objname": "Papilomavírus Humano (HPV)",
+  "objsystem": [
+    "Tegumentar"
+  ],
+  "objdescription": "O papilomavírus humano (HPV) é um grupo de vírus que infecta células epiteliais da pele e das mucosas. Alguns tipos de HPV provocam verrugas cutâneas, lesões benignas caracterizadas pelo crescimento excessivo das células da epiderme. A transmissão pode ocorrer pelo contato direto com a pele infectada ou por superfícies contaminadas, especialmente quando existem pequenas lesões na barreira cutânea. Nas mãos e nos dedos, o HPV pode causar verrugas comuns, que geralmente apresentam superfície áspera, formato irregular e coloração semelhante à da pele. A infecção pode permanecer localizada e, em muitos casos, desaparecer espontaneamente pela ação do sistema imunológico. O modelo apresenta uma verruga cutânea na mão, demonstrando uma manifestação dermatológica da infecção pelo HPV. Os tipos de HPV associados às verrugas comuns geralmente diferem daqueles de alto risco relacionados a determinados tipos de câncer.",
+  "linkedModels": [],
+  "resources": [],
+  "Skin+nisolar": {
+    "objname": "Pele da Mão",
+    "description": "A pele da mão é formada pela epiderme, derme e estruturas associadas, atuando como barreira protetora contra agentes externos. O HPV pode penetrar no epitélio por pequenas lesões ou fissuras, infectando principalmente células da camada basal da epiderme. A multiplicação viral pode estimular a proliferação das células epiteliais, resultando na formação de verrugas cutâneas. No modelo, a mão representa a região anatômica acometida pela infecção."
+  },
+  "Plane+nisolar": {
+    "objname": "Verruga Cutânea por HPV",
+    "description": "Lesão benigna da epiderme causada pela infecção por determinados tipos de papilomavírus humano. A multiplicação viral estimula a proliferação dos queratinócitos, provocando espessamento da epiderme e formação de uma superfície elevada, frequentemente áspera e irregular. As verrugas comuns aparecem principalmente nas mãos e nos dedos, podendo ocorrer isoladamente ou em grupos. A lesão representada no modelo demonstra didaticamente o crescimento localizado do tecido epitelial provocado pela infecção viral."
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "objname": "Biomateriais - Prótese de Quadril",
+  "objsystem": [
+    "Esquelético"
+  ],
+  "objdescription": "A prótese de quadril é um dispositivo médico implantável utilizado para substituir componentes danificados da articulação coxofemoral, restaurando sua mobilidade e reduzindo a dor. É frequentemente empregada em procedimentos de artroplastia para tratar condições como artrose avançada, fraturas do colo do fêmur e necrose da cabeça femoral. Na artroplastia total, a prótese é composta por um componente acetabular, um revestimento interno, uma cabeça protética e uma haste femoral. Esses componentes podem ser fabricados com biomateriais como ligas metálicas, cerâmicas e polímeros, selecionados conforme suas propriedades de resistência mecânica, biocompatibilidade e desgaste. O modelo apresenta a disposição dos componentes da prótese em relação à pelve e ao fêmur, demonstrando como substituem as superfícies articulares naturais e permitem a realização dos movimentos do quadril.",
+  "linkedModels": [],
+  "resources": [],
+  "ParteAcetabular": {
+    "objname": "Componente Acetabular",
+    "description": "Estrutura externa da prótese implantada no acetábulo da pelve, substituindo a superfície articular natural. Geralmente fabricada em liga metálica, como titânio, proporciona sustentação e fixação ao revestimento interno. Sua função é garantir estabilidade e distribuir as forças transmitidas pela articulação durante os movimentos."
+  },
+  "ParteAcetabularInterno": {
+    "objname": "Revestimento Acetabular",
+    "description": "Componente interno da prótese que reveste a cavidade acetabular e entra em contato com a cabeça femoral protética. Pode ser fabricado em polietileno de alta resistência ou cerâmica, oferecendo uma superfície de baixo atrito que facilita os movimentos articulares e reduz o desgaste dos componentes."
+  },
+  "Cabeca": {
+    "objname": "Cabeça Femoral Protética",
+    "description": "Componente esférico que substitui a cabeça natural do fêmur e se articula com o revestimento acetabular. Geralmente fabricado em cerâmica ou liga metálica, permite movimentos de flexão, extensão, abdução, adução e rotação do quadril. Sua superfície lisa contribui para reduzir o atrito e o desgaste articular."
+  },
+  "HasteFemoral": {
+    "objname": "Haste Femoral",
+    "description": "Componente alongado da prótese introduzido no canal medular do fêmur, responsável pela sustentação e fixação da cabeça femoral protética. Geralmente fabricado em ligas metálicas, como titânio ou cobalto-cromo, transmite as cargas mecânicas entre a articulação artificial e o osso. Sua fixação pode ocorrer por cimento ósseo ou integração direta ao tecido ósseo."
+  },
+  "FemurDireito": {
+    "objname": "Fêmur Direito",
+    "description": "Maior osso do corpo humano, localizado na coxa e responsável por transmitir o peso corporal entre a pelve e os membros inferiores. Na artroplastia de quadril, a cabeça e parte do colo femoral são removidas para permitir a implantação da haste e da cabeça protética, preservando a estrutura óssea necessária à sustentação do implante."
+  },
+  "Pelvis_1": {
+    "objname": "Pelve",
+    "description": "Estrutura óssea formada pelos ossos do quadril, sacro e cóccix, responsável pela sustentação do tronco e transmissão do peso corporal aos membros inferiores. O acetábulo, localizado no osso do quadril, constitui a cavidade articular que recebe a cabeça do fêmur. Na artroplastia total, essa região é preparada para receber o componente acetabular da prótese."
+  }
+}

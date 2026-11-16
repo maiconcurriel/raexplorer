@@ -1,0 +1,30 @@
+{
+  "objname": "Anafilaxia: Inchaço na Face",
+  "objsystem": [
+    "Imunológico",
+    "Tegumentar"
+  ],
+  "objdescription": "A anafilaxia é uma reação alérgica sistêmica grave, geralmente de início rápido, que pode provocar alterações na pele, nas mucosas, no sistema respiratório e na circulação sanguínea. Durante a reação, a liberação de mediadores químicos, como a histamina, aumenta a permeabilidade dos vasos sanguíneos, favorecendo o extravasamento de líquido para os tecidos. Esse processo pode causar angioedema, caracterizado por inchaço das camadas mais profundas da pele e das mucosas, especialmente nas pálpebras, nos lábios e em outras regiões da face. A animação demonstra o aumento de volume dessas estruturas, destacando manifestações faciais que podem ocorrer durante a anafilaxia. O inchaço facial isolado não confirma anafilaxia, mas, quando associado a comprometimento respiratório ou circulatório, pode indicar uma emergência médica que exige tratamento imediato.",
+  "linkedModels": [],
+  "resources": [],
+  "Eye+nisolar": {
+    "objname": "Inchaço nas Pálpebras",
+    "description": "O edema palpebral é caracterizado pelo acúmulo de líquido nos tecidos ao redor dos olhos, provocando aumento de volume e dificuldade para abrir as pálpebras. Durante uma reação alérgica, a liberação de mediadores inflamatórios aumenta a permeabilidade vascular, favorecendo o desenvolvimento de angioedema nessa região. Na animação, o inchaço representa o comprometimento dos tecidos palpebrais, sem indicar necessariamente alterações no globo ocular."
+  },
+  "Mouth+nisolar": {
+    "objname": "Inchaço nos Lábios",
+    "description": "O angioedema labial ocorre devido ao acúmulo de líquido nos tecidos profundos dos lábios, provocando aumento de volume, sensação de tensão e desconforto. Durante a anafilaxia, esse processo pode resultar da ação de mediadores químicos liberados pelo sistema imunológico. O inchaço dos lábios pode ocorrer juntamente com edema da língua e da garganta, aumentando o risco de comprometimento das vias aéreas."
+  },
+  "Skin+nisolar+ninteract": {
+    "objname": "Pele",
+    "description": ""
+  },
+  "Hair+nisolar+ninteract": {
+    "objname": "Cabelo",
+    "description": ""
+  },
+  "ScalpHead+nisolar+ninteract": {
+    "objname": "Cabeça",
+    "description": ""
+  }
+}
