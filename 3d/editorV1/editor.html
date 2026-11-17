@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Editor Viewer 3D</title>
+    <link rel="shortcut icon" href="css/icone.png">
+    <link rel="stylesheet" href="css/editor.css">    
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>📁 Arquivo</h2>
+        <input type="file" id="fileInput" accept=".json">
+        <button class="btn-load" onclick="lerArquivo()">Carregar Arquivo</button>
+        
+        <h2 style="margin-top: 30px;">📄 Código JSON</h2>
+        <textarea id="jsonOutput" readonly></textarea>
+        <button class="btn-save" onclick="baixarJSON()">BAIXAR JSON</button>
+    </div>
+
+    <div class="main-content">
+        <div class="card">
+            <h2>Configurações Gerais</h2>
+            <div class="field-group">
+                <label>Nome do Objeto</label>
+                <input type="text" id="objname" oninput="sincronizar()">
+            </div>
+            <div class="field-group">
+                <label>Sistema (Separados por vírgula)</label>
+                <input type="text" id="objsystem" oninput="sincronizar()">
+            </div>
+            <div class="field-group">
+                <label>Descrição Geral</label>
+                <textarea class="small" id="objdescription" style="height: 80px;" oninput="sincronizar()"></textarea>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="header-section">
+                <h2>Modelos Relacionados (Alternadores)</h2>
+            </div>
+            <div id="containerRelacionados"></div>
+            <button class="btn-add" style="background: var(--warning, #f39c12); color: white;" onclick="addModeloRelacionado()">+ Adicionar Modelo Relacionado</button>
+        </div>
+
+        <div class="card">
+            <div class="header-section">
+                <h2>Peças (Meshes)</h2>
+            </div>
+            <div id="containerPecas"></div>
+            <button class="btn-add" onclick="addPeca()">+ Adicionar Nova Peça</button>
+        </div>
+
+        <div class="card">
+            <div class="header-section">
+                <h2>Recursos Globais</h2>
+            </div>
+            <div id="containerRecursos"></div>
+            <button class="btn-add" style="background: var(--success, #2ecc71); color: white;" onclick="addRecurso()">+ Adicionar Novo Recurso</button>
+        </div>
+    </div>
+
+    <script type="module" src="js/editor.js"></script>
+</body>
+</html>
