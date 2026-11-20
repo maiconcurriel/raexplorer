@@ -1,354 +1,972 @@
 {
-  "objname": "Infarto do Miocárdio",
+  "objname": {
+    "pt-BR": "Infarto do Miocárdio",
+    "en": "Myocardial Infarction",
+    "es": "Infarto de Miocardio"
+  },
   "objsystem": [
     "Cardiovascular"
   ],
-  "objdescription": "O infarto do miocárdio ocorre quando o fluxo sanguíneo para uma região do músculo cardíaco é reduzido ou interrompido por tempo suficiente para causar lesão e morte das células. Uma causa frequente é a ruptura de uma placa aterosclerótica em uma artéria coronária, desencadeando a formação de um trombo que pode obstruir parcial ou totalmente o vaso. A redução do fornecimento de sangue e oxigênio provoca isquemia e, quando prolongada, necrose do miocárdio. Após o infarto, o tecido lesionado passa por processos de inflamação, remoção das células danificadas e cicatrização, podendo posteriormente ser substituído por tecido fibroso. No modelo, diferenças de coloração no miocárdio destacam didaticamente a região afetada pelo infarto em relação ao tecido cardíaco preservado.",
+  "objdescription": {
+    "pt-BR": "O infarto do miocárdio ocorre quando o fluxo sanguíneo para uma região do músculo cardíaco é reduzido ou interrompido por tempo suficiente para causar lesão e morte das células. Uma causa frequente é a ruptura de uma placa aterosclerótica em uma artéria coronária, desencadeando a formação de um trombo que pode obstruir parcial ou totalmente o vaso. A redução do fornecimento de sangue e oxigênio provoca isquemia e, quando prolongada, necrose do miocárdio. Após o infarto, o tecido lesionado passa por processos de inflamação, remoção das células danificadas e cicatrização, podendo posteriormente ser substituído por tecido fibroso. No modelo, diferenças de coloração no miocárdio destacam didaticamente a região afetada pelo infarto em relação ao tecido cardíaco preservado.",
+    "en": "Myocardial infarction occurs when blood flow to a region of the heart muscle is reduced or interrupted for a sufficient period to cause cellular injury and death. A common cause is the rupture of an atherosclerotic plaque in a coronary artery, triggering the formation of a thrombus that may partially or completely obstruct the vessel. Reduced blood and oxygen supply causes ischemia and, when prolonged, myocardial necrosis. Following infarction, the injured tissue undergoes inflammation, removal of damaged cells, and healing, and may subsequently be replaced by fibrous tissue. In the model, differences in myocardial coloration highlight the region affected by infarction in contrast to the preserved cardiac tissue for educational purposes.",
+    "es": "El infarto de miocardio ocurre cuando el flujo sanguíneo hacia una región del músculo cardíaco se reduce o interrumpe durante un tiempo suficiente para causar lesión y muerte celular. Una causa frecuente es la ruptura de una placa aterosclerótica en una arteria coronaria, desencadenando la formación de un trombo que puede obstruir parcial o totalmente el vaso. La reducción del suministro de sangre y oxígeno provoca isquemia y, cuando es prolongada, necrosis del miocardio. Después del infarto, el tejido lesionado experimenta procesos de inflamación, eliminación de las células dañadas y cicatrización, pudiendo ser sustituido posteriormente por tejido fibroso. En el modelo, las diferencias de coloración del miocardio destacan de forma didáctica la región afectada por el infarto en relación con el tejido cardíaco conservado."
+  },
   "linkedModels": [
     {
+      "id": "4",
+      "label": {
+        "pt-BR": "Coração",
+        "en": "Heart",
+        "es": "Corazón"
+      }
+    },
+    {
       "id": "5",
-      "label": "Coração (Animado)"
+      "label": {
+        "pt-BR": "Coração (Animado)",
+        "en": "Heart (Animated)",
+        "es": "Corazón (Animado)"
+      }
+    },
+    {
+      "id": "19",
+      "label": {
+        "pt-BR": "Sistema Arterial",
+        "en": "Arterial System",
+        "es": "Sistema Arterial"
+      }
+    },
+    {
+      "id": "32",
+      "label": {
+        "pt-BR": "Sistema Cardiovascular",
+        "en": "Cardiovascular System",
+        "es": "Sistema Cardiovascular"
+      }
+    },
+    {
+      "id": "46",
+      "label": {
+        "pt-BR": "Artéria",
+        "en": "Artery",
+        "es": "Arteria"
+      }
+    },
+    {
+      "id": "57",
+      "label": {
+        "pt-BR": "Aterosclerose",
+        "en": "Atherosclerosis",
+        "es": "Aterosclerosis"
+      }
+    },
+    {
+      "id": "58",
+      "label": {
+        "pt-BR": "Anticoagulantes",
+        "en": "Anticoagulants",
+        "es": "Anticoagulantes"
+      }
+    },
+    {
+      "id": "71",
+      "label": {
+        "pt-BR": "Pressão Arterial",
+        "en": "Blood Pressure",
+        "es": "Presión Arterial"
+      }
     }
   ],
   "resources": [],
-  "Anterior_artery_of_right_ventricle__020246": {
-    "objname": "Artéria Anterior do Ventrículo Direito",
-    "description": "Ramo arterial responsável pela irrigação de parte da superfície anterior do ventrículo direito, fornecendo sangue oxigenado ao tecido cardíaco dessa região."
-  },
-  "Anterior_cardiac_veins_of_right_ventricle_Coronary_vein_000720": {
-    "objname": "Veias Cardíacas Anteriores do Ventrículo Direito",
-    "description": "Veias que drenam sangue do miocárdio da região anterior do ventrículo direito e o conduzem em direção ao átrio direito."
-  },
-  "Anterior_fascicle__301352": {
-    "objname": "Fascículo Anterior",
-    "description": "Componente do sistema de condução cardíaca que participa da distribuição do impulso elétrico pelo miocárdio ventricular, contribuindo para a contração coordenada do coração."
-  },
-  "Anterior_internodal_bundle__000663": {
-    "objname": "Feixe Internodal Anterior",
-    "description": "Via de condução atrial representada entre as regiões dos nós sinoatrial e atrioventricular, participando da propagação dos impulsos elétricos pelos átrios."
-  },
-  "Anterior_interventricular_branch__left_anterior_descend_547c4e3": {
-    "objname": "Ramo Interventricular Anterior da Artéria Coronária Esquerda",
-    "description": "Também conhecido como artéria descendente anterior esquerda, percorre o sulco interventricular anterior e irriga grande parte da parede anterior do ventrículo esquerdo e do septo interventricular. Sua obstrução pode causar extensa área de isquemia e infarto."
-  },
-  "Aorta__base_of___000667": {
-    "objname": "Base da Aorta",
-    "description": "Porção inicial da aorta, que recebe o sangue ejetado pelo ventrículo esquerdo. Próximo a essa região originam-se as artérias coronárias responsáveis pela irrigação do coração."
-  },
-  "Aortic_arch__000668": {
-    "objname": "Arco da Aorta",
-    "description": "Porção curva da aorta que distribui sangue para seus grandes ramos e dá continuidade à circulação sistêmica."
-  },
-  "Aortic_valve__left_semilunar_cusp__000673": {
-    "objname": "Cúspide Semilunar Esquerda da Valva Aórtica",
-    "description": "Uma das três cúspides da valva aórtica. Participa da abertura para a ejeção do sangue do ventrículo esquerdo e do fechamento que impede seu retorno."
-  },
-  "Aortic_valve__posterior_semilunar_cusp__000674": {
-    "objname": "Cúspide Semilunar Posterior da Valva Aórtica",
-    "description": "Uma das três cúspides da valva aórtica, contribuindo para impedir o refluxo do sangue da aorta para o ventrículo esquerdo."
-  },
-  "Aortic_valve__right_semilunar_cusp__000672": {
-    "objname": "Cúspide Semilunar Direita da Valva Aórtica",
-    "description": "Uma das três cúspides da valva aórtica, responsável juntamente com as demais pela abertura e fechamento da passagem entre o ventrículo esquerdo e a aorta."
-  },
-  "Aortic_valve_annulus__020231": {
-    "objname": "Anel da Valva Aórtica",
-    "description": "Estrutura fibrosa que sustenta a valva aórtica e fornece suporte para suas cúspides."
-  },
-  "Atrial_branch__300421": {
-    "objname": "Ramo Atrial",
-    "description": "Ramo da circulação coronariana responsável pela irrigação de parte do tecido atrial."
-  },
-  "Atrioventricular_bundle__bundle_of_His___000662": {
-    "objname": "Feixe Atrioventricular (Feixe de His)",
-    "description": "Estrutura do sistema de condução que transmite o impulso elétrico do nó atrioventricular aos ramos direito e esquerdo, permitindo a ativação coordenada dos ventrículos."
-  },
-  "Atrioventricular_node__000661": {
-    "objname": "Nó Atrioventricular",
-    "description": "Estrutura do sistema de condução cardíaca que recebe o impulso proveniente dos átrios, produz um pequeno atraso e o transmite ao Feixe de His em direção aos ventrículos."
-  },
-  "Branch_to_sinoatrial_node__300420": {
-    "objname": "Ramo para o Nó Sinoatrial",
-    "description": "Ramo arterial responsável pelo fornecimento de sangue ao nó sinoatrial, estrutura que normalmente inicia os impulsos elétricos responsáveis pelo ritmo cardíaco."
-  },
-  "Bundle_branch__L__000658": {
-    "objname": "Ramo Esquerdo do Feixe Atrioventricular",
-    "description": "Via do sistema de condução que transmite o impulso elétrico pelo lado esquerdo do septo interventricular em direção ao ventrículo esquerdo."
-  },
-  "Bundle_branch__R__000654": {
-    "objname": "Ramo Direito do Feixe Atrioventricular",
-    "description": "Via do sistema de condução que transmite o impulso elétrico pelo lado direito do septo interventricular em direção ao ventrículo direito."
-  },
-  "Circumflex_branch_of_left_coronary_artery__000714": {
-    "objname": "Ramo Circunflexo da Artéria Coronária Esquerda",
-    "description": "Ramo da artéria coronária esquerda que percorre o sulco coronário e irriga principalmente regiões lateral e posterior do coração, com variações conforme a anatomia coronariana."
-  },
-  "Conus_arteriosus__000684": {
-    "objname": "Cone Arterial",
-    "description": "Porção de saída do ventrículo direito que direciona o sangue em direção ao tronco pulmonar."
-  },
-  "Conus_branch__300419": {
-    "objname": "Ramo do Cone Arterial",
-    "description": "Pequeno ramo coronariano que participa da irrigação da região do cone arterial do ventrículo direito."
-  },
-  "Coronary_sinus__000716": {
-    "objname": "Seio Coronário",
-    "description": "Grande estrutura venosa que recebe o sangue proveniente de diversas veias cardíacas e o conduz para o átrio direito."
-  },
-  "Great_cardiac__anterior_interventricular__vein_Coronary_d6300b9": {
-    "objname": "Veia Cardíaca Magna",
-    "description": "Importante veia do coração que acompanha inicialmente o ramo interventricular anterior e participa da drenagem venosa de grande parte do miocárdio."
-  },
-  "Heart__diaphragmatic_surface__000683": {
-    "objname": "Superfície Diafragmática do Coração",
-    "description": "Face inferior do coração, apoiada principalmente sobre o diafragma e formada predominantemente pelos ventrículos."
-  },
-  "Heart__sternocostal_surface_front_000698": {
-    "objname": "Região do Coração Afetada pelo Infarto",
-    "description": "Região da superfície anterior do coração destacada no modelo para representar o tecido cardíaco afetado pelo infarto. A obstrução de uma artéria coronária reduz ou interrompe o fornecimento de sangue e oxigênio ao miocárdio irrigado por esse vaso, provocando isquemia e, quando prolongada, morte das células musculares cardíacas. A coloração mais escura apresentada no modelo é uma representação didática da área lesionada e não corresponde necessariamente à aparência real do tecido em todas as fases do infarto."
-  },
-  "Inferior_vena_cava__base_of___000666": {
-    "objname": "Base da Veia Cava Inferior",
-    "description": "Região de chegada da veia cava inferior ao átrio direito, conduzindo sangue venoso proveniente principalmente das regiões inferiores do corpo."
-  },
-  "Interatrial__Bachmann_s__bundle__000660": {
-    "objname": "Feixe Interatrial (Feixe de Bachmann)",
-    "description": "Via especializada de condução que auxilia na propagação do impulso elétrico do átrio direito para o átrio esquerdo."
-  },
-  "Interventricular_septum_back_surface_002614": {
-    "objname": "Superfície Posterior do Septo Interventricular",
-    "description": "Porção posterior do septo que separa os ventrículos direito e esquerdo e contém importantes componentes do sistema de condução cardíaca."
-  },
-  "Interventricular_septum_front_surface_000704": {
-    "objname": "Superfície Anterior do Septo Interventricular",
-    "description": "Porção anterior do septo que separa os ventrículos. Parte significativa dessa região recebe irrigação do ramo interventricular anterior da artéria coronária esquerda."
-  },
-  "Left_atrium__000706": {
-    "objname": "Átrio Esquerdo",
-    "description": "Câmara cardíaca que recebe sangue oxigenado proveniente das veias pulmonares e o direciona ao ventrículo esquerdo através da valva mitral."
-  },
-  "Left_coronary_artery__000713": {
-    "objname": "Artéria Coronária Esquerda",
-    "description": "Importante artéria responsável pela irrigação de grande parte do coração. Origina, entre outros ramos, o ramo interventricular anterior e o ramo circunflexo."
-  },
-  "Left_ventricle_back_portion_000688": {
-    "objname": "Porção Posterior do Ventrículo Esquerdo",
-    "description": "Região posterior do ventrículo esquerdo, câmara responsável por bombear sangue oxigenado para a aorta e para a circulação sistêmica."
-  },
-  "Left_ventricle_front_surface_000703": {
-    "objname": "Superfície Anterior do Ventrículo Esquerdo",
-    "description": "Região anterior do ventrículo esquerdo. Sua irrigação está fortemente relacionada ao ramo interventricular anterior, podendo ser afetada quando ocorre obstrução desse vaso."
-  },
-  "Middle_cardiac__posterior_interventricular__vein_Corona_dffc038": {
-    "objname": "Veia Cardíaca Média",
-    "description": "Veia que percorre o sulco interventricular posterior e participa da drenagem do sangue proveniente das regiões posteriores dos ventrículos."
-  },
-  "Middle_fascicle__301353": {
-    "objname": "Fascículo Médio",
-    "description": "Componente representado do sistema de condução ventricular, relacionado à distribuição dos impulsos elétricos pelo miocárdio."
-  },
-  "Middle_internodal_bundle__000659": {
-    "objname": "Feixe Internodal Médio",
-    "description": "Via atrial representada entre as regiões dos nós sinoatrial e atrioventricular, auxiliando na propagação dos impulsos elétricos."
-  },
-  "Mitral__bicuspid__valve__annulus__020236": {
-    "objname": "Anel da Valva Mitral",
-    "description": "Estrutura fibrosa que circunda e sustenta a valva mitral entre o átrio esquerdo e o ventrículo esquerdo."
-  },
-  "Mitral__bicuspid__valve__anterior_commissure__020232": {
-    "objname": "Comissura Anterior da Valva Mitral",
-    "description": "Região de encontro entre as cúspides da valva mitral, contribuindo para seu fechamento adequado."
-  },
-  "Mitral__bicuspid__valve__antermedial__septal__leaflet__020234": {
-    "objname": "Cúspide Anterior da Valva Mitral",
-    "description": "Uma das duas principais cúspides da valva mitral, participando do controle da passagem do sangue do átrio esquerdo para o ventrículo esquerdo."
-  },
-  "Mitral__bicuspid__valve__chordae_tendineae__020235": {
-    "objname": "Cordas Tendíneas da Valva Mitral",
-    "description": "Cordões fibrosos que conectam as cúspides da valva mitral aos músculos papilares e ajudam a impedir sua inversão durante a contração ventricular."
-  },
-  "Mitral__bicuspid__valve__posterior_commissure__020233": {
-    "objname": "Comissura Posterior da Valva Mitral",
-    "description": "Região posterior de encontro das cúspides da valva mitral, contribuindo para o fechamento da valva."
-  },
+  "parts": {
+    "Anterior_artery_of_right_ventricle__020246": {
+      "objname": {
+        "pt-BR": "Artéria Anterior do Ventrículo Direito",
+        "en": "Anterior Artery of the Right Ventricle",
+        "es": "Arteria Anterior del Ventrículo Derecho"
+      },
+      "description": {
+        "pt-BR": "Ramo arterial responsável pela irrigação de parte da superfície anterior do ventrículo direito, fornecendo sangue oxigenado ao tecido cardíaco dessa região.",
+        "en": "Arterial branch responsible for supplying part of the anterior surface of the right ventricle, delivering oxygenated blood to the cardiac tissue in this region.",
+        "es": "Rama arterial responsable de la irrigación de parte de la superficie anterior del ventrículo derecho, proporcionando sangre oxigenada al tejido cardíaco de esta región."
+      }
+    },
+    "Anterior_cardiac_veins_of_right_ventricle_Coronary_vein_000720": {
+      "objname": {
+        "pt-BR": "Veias Cardíacas Anteriores do Ventrículo Direito",
+        "en": "Anterior Cardiac Veins of the Right Ventricle",
+        "es": "Venas Cardíacas Anteriores del Ventrículo Derecho"
+      },
+      "description": {
+        "pt-BR": "Veias que drenam sangue do miocárdio da região anterior do ventrículo direito e o conduzem em direção ao átrio direito.",
+        "en": "Veins that drain blood from the myocardium of the anterior region of the right ventricle and carry it toward the right atrium.",
+        "es": "Venas que drenan la sangre del miocardio de la región anterior del ventrículo derecho y la conducen hacia la aurícula derecha."
+      }
+    },
+    "Anterior_fascicle__301352": {
+      "objname": {
+        "pt-BR": "Fascículo Anterior",
+        "en": "Anterior Fascicle",
+        "es": "Fascículo Anterior"
+      },
+      "description": {
+        "pt-BR": "Componente do sistema de condução cardíaca que participa da distribuição do impulso elétrico pelo miocárdio ventricular, contribuindo para a contração coordenada do coração.",
+        "en": "Component of the cardiac conduction system involved in distributing the electrical impulse throughout the ventricular myocardium, contributing to the coordinated contraction of the heart.",
+        "es": "Componente del sistema de conducción cardíaca que participa en la distribución del impulso eléctrico por el miocardio ventricular, contribuyendo a la contracción coordinada del corazón."
+      }
+    },
+    "Anterior_internodal_bundle__000663": {
+      "objname": {
+        "pt-BR": "Feixe Internodal Anterior",
+        "en": "Anterior Internodal Bundle",
+        "es": "Haz Internodal Anterior"
+      },
+      "description": {
+        "pt-BR": "Via de condução atrial representada entre as regiões dos nós sinoatrial e atrioventricular, participando da propagação dos impulsos elétricos pelos átrios.",
+        "en": "Atrial conduction pathway represented between the regions of the sinoatrial and atrioventricular nodes, involved in the propagation of electrical impulses throughout the atria.",
+        "es": "Vía de conducción auricular representada entre las regiones de los nodos sinoauricular y auriculoventricular, que participa en la propagación de los impulsos eléctricos por las aurículas."
+      }
+    },
+    "Anterior_interventricular_branch__left_anterior_descend_547c4e3": {
+      "objname": {
+        "pt-BR": "Ramo Interventricular Anterior da Artéria Coronária Esquerda",
+        "en": "Anterior Interventricular Branch of the Left Coronary Artery",
+        "es": "Rama Interventricular Anterior de la Arteria Coronaria Izquierda"
+      },
+      "description": {
+        "pt-BR": "Também conhecido como artéria descendente anterior esquerda, percorre o sulco interventricular anterior e irriga grande parte da parede anterior do ventrículo esquerdo e do septo interventricular. Sua obstrução pode causar extensa área de isquemia e infarto.",
+        "en": "Also known as the left anterior descending artery, it runs along the anterior interventricular sulcus and supplies a large portion of the anterior wall of the left ventricle and the interventricular septum. Its obstruction may cause an extensive area of ischemia and infarction.",
+        "es": "También conocida como arteria descendente anterior izquierda, recorre el surco interventricular anterior e irriga gran parte de la pared anterior del ventrículo izquierdo y del tabique interventricular. Su obstrucción puede causar una extensa área de isquemia e infarto."
+      }
+    },
+    "Aorta__base_of___000667": {
+      "objname": {
+        "pt-BR": "Base da Aorta",
+        "en": "Base of the Aorta",
+        "es": "Base de la Aorta"
+      },
+      "description": {
+        "pt-BR": "Porção inicial da aorta, que recebe o sangue ejetado pelo ventrículo esquerdo. Próximo a essa região originam-se as artérias coronárias responsáveis pela irrigação do coração.",
+        "en": "Initial portion of the aorta, which receives blood ejected by the left ventricle. The coronary arteries responsible for supplying blood to the heart originate near this region.",
+        "es": "Porción inicial de la aorta, que recibe la sangre eyectada por el ventrículo izquierdo. Cerca de esta región se originan las arterias coronarias responsables de la irrigación del corazón."
+      }
+    },
+    "Aortic_arch__000668": {
+      "objname": {
+        "pt-BR": "Arco da Aorta",
+        "en": "Aortic Arch",
+        "es": "Arco Aórtico"
+      },
+      "description": {
+        "pt-BR": "Porção curva da aorta que distribui sangue para seus grandes ramos e dá continuidade à circulação sistêmica.",
+        "en": "Curved portion of the aorta that distributes blood to its major branches and continues the systemic circulation.",
+        "es": "Porción curva de la aorta que distribuye sangre hacia sus grandes ramas y da continuidad a la circulación sistémica."
+      }
+    },
+    "Aortic_valve__left_semilunar_cusp__000673": {
+      "objname": {
+        "pt-BR": "Cúspide Semilunar Esquerda da Valva Aórtica",
+        "en": "Left Semilunar Cusp of the Aortic Valve",
+        "es": "Cúspide Semilunar Izquierda de la Válvula Aórtica"
+      },
+      "description": {
+        "pt-BR": "Uma das três cúspides da valva aórtica. Participa da abertura para a ejeção do sangue do ventrículo esquerdo e do fechamento que impede seu retorno.",
+        "en": "One of the three cusps of the aortic valve. It contributes to valve opening during blood ejection from the left ventricle and to valve closure, which prevents backflow.",
+        "es": "Una de las tres cúspides de la válvula aórtica. Participa en la apertura para la eyección de la sangre del ventrículo izquierdo y en el cierre que impide su retorno."
+      }
+    },
+    "Aortic_valve__posterior_semilunar_cusp__000674": {
+      "objname": {
+        "pt-BR": "Cúspide Semilunar Posterior da Valva Aórtica",
+        "en": "Posterior Semilunar Cusp of the Aortic Valve",
+        "es": "Cúspide Semilunar Posterior de la Válvula Aórtica"
+      },
+      "description": {
+        "pt-BR": "Uma das três cúspides da valva aórtica, contribuindo para impedir o refluxo do sangue da aorta para o ventrículo esquerdo.",
+        "en": "One of the three cusps of the aortic valve, contributing to the prevention of blood backflow from the aorta into the left ventricle.",
+        "es": "Una de las tres cúspides de la válvula aórtica, que contribuye a impedir el reflujo de sangre desde la aorta hacia el ventrículo izquierdo."
+      }
+    },
+    "Aortic_valve__right_semilunar_cusp__000672": {
+      "objname": {
+        "pt-BR": "Cúspide Semilunar Direita da Valva Aórtica",
+        "en": "Right Semilunar Cusp of the Aortic Valve",
+        "es": "Cúspide Semilunar Derecha de la Válvula Aórtica"
+      },
+      "description": {
+        "pt-BR": "Uma das três cúspides da valva aórtica, responsável juntamente com as demais pela abertura e fechamento da passagem entre o ventrículo esquerdo e a aorta.",
+        "en": "One of the three cusps of the aortic valve, responsible, together with the other cusps, for opening and closing the passage between the left ventricle and the aorta.",
+        "es": "Una de las tres cúspides de la válvula aórtica, responsable, junto con las demás, de la apertura y el cierre del paso entre el ventrículo izquierdo y la aorta."
+      }
+    },
+    "Aortic_valve_annulus__020231": {
+      "objname": {
+        "pt-BR": "Anel da Valva Aórtica",
+        "en": "Aortic Valve Annulus",
+        "es": "Anillo de la Válvula Aórtica"
+      },
+      "description": {
+        "pt-BR": "Estrutura fibrosa que sustenta a valva aórtica e fornece suporte para suas cúspides.",
+        "en": "Fibrous structure that supports the aortic valve and provides structural support for its cusps.",
+        "es": "Estructura fibrosa que sostiene la válvula aórtica y proporciona soporte a sus cúspides."
+      }
+    },
+    "Atrial_branch__300421": {
+      "objname": {
+        "pt-BR": "Ramo Atrial",
+        "en": "Atrial Branch",
+        "es": "Rama Auricular"
+      },
+      "description": {
+        "pt-BR": "Ramo da circulação coronariana responsável pela irrigação de parte do tecido atrial.",
+        "en": "Branch of the coronary circulation responsible for supplying blood to part of the atrial tissue.",
+        "es": "Rama de la circulación coronaria responsable de la irrigación de parte del tejido auricular."
+      }
+    },
+    "Atrioventricular_bundle__bundle_of_His___000662": {
+      "objname": {
+        "pt-BR": "Feixe Atrioventricular (Feixe de His)",
+        "en": "Atrioventricular Bundle (Bundle of His)",
+        "es": "Haz Auriculoventricular (Haz de His)"
+      },
+      "description": {
+        "pt-BR": "Estrutura do sistema de condução que transmite o impulso elétrico do nó atrioventricular aos ramos direito e esquerdo, permitindo a ativação coordenada dos ventrículos.",
+        "en": "Structure of the conduction system that transmits the electrical impulse from the atrioventricular node to the right and left bundle branches, enabling coordinated activation of the ventricles.",
+        "es": "Estructura del sistema de conducción que transmite el impulso eléctrico desde el nodo auriculoventricular hacia las ramas derecha e izquierda, permitiendo la activación coordinada de los ventrículos."
+      }
+    },
+    "Atrioventricular_node__000661": {
+      "objname": {
+        "pt-BR": "Nó Atrioventricular",
+        "en": "Atrioventricular Node",
+        "es": "Nodo Auriculoventricular"
+      },
+      "description": {
+        "pt-BR": "Estrutura do sistema de condução cardíaca que recebe o impulso proveniente dos átrios, produz um pequeno atraso e o transmite ao Feixe de His em direção aos ventrículos.",
+        "en": "Structure of the cardiac conduction system that receives the impulse originating in the atria, introduces a brief delay, and transmits it to the Bundle of His toward the ventricles.",
+        "es": "Estructura del sistema de conducción cardíaca que recibe el impulso procedente de las aurículas, produce un breve retraso y lo transmite al Haz de His en dirección a los ventrículos."
+      }
+    },
+    "Branch_to_sinoatrial_node__300420": {
+      "objname": {
+        "pt-BR": "Ramo para o Nó Sinoatrial",
+        "en": "Branch to the Sinoatrial Node",
+        "es": "Rama para el Nodo Sinoauricular"
+      },
+      "description": {
+        "pt-BR": "Ramo arterial responsável pelo fornecimento de sangue ao nó sinoatrial, estrutura que normalmente inicia os impulsos elétricos responsáveis pelo ritmo cardíaco.",
+        "en": "Arterial branch responsible for supplying blood to the sinoatrial node, the structure that normally initiates the electrical impulses responsible for the heart rhythm.",
+        "es": "Rama arterial responsable del suministro de sangre al nodo sinoauricular, estructura que normalmente inicia los impulsos eléctricos responsables del ritmo cardíaco."
+      }
+    },
+    "Bundle_branch__L__000658": {
+      "objname": {
+        "pt-BR": "Ramo Esquerdo do Feixe Atrioventricular",
+        "en": "Left Bundle Branch",
+        "es": "Rama Izquierda del Haz Auriculoventricular"
+      },
+      "description": {
+        "pt-BR": "Via do sistema de condução que transmite o impulso elétrico pelo lado esquerdo do septo interventricular em direção ao ventrículo esquerdo.",
+        "en": "Pathway of the conduction system that transmits the electrical impulse along the left side of the interventricular septum toward the left ventricle.",
+        "es": "Vía del sistema de conducción que transmite el impulso eléctrico por el lado izquierdo del tabique interventricular hacia el ventrículo izquierdo."
+      }
+    },
+    "Bundle_branch__R__000654": {
+      "objname": {
+        "pt-BR": "Ramo Direito do Feixe Atrioventricular",
+        "en": "Right Bundle Branch",
+        "es": "Rama Derecha del Haz Auriculoventricular"
+      },
+      "description": {
+        "pt-BR": "Via do sistema de condução que transmite o impulso elétrico pelo lado direito do septo interventricular em direção ao ventrículo direito.",
+        "en": "Pathway of the conduction system that transmits the electrical impulse along the right side of the interventricular septum toward the right ventricle.",
+        "es": "Vía del sistema de conducción que transmite el impulso eléctrico por el lado derecho del tabique interventricular hacia el ventrículo derecho."
+      }
+    },
+    "Circumflex_branch_of_left_coronary_artery__000714": {
+      "objname": {
+        "pt-BR": "Ramo Circunflexo da Artéria Coronária Esquerda",
+        "en": "Circumflex Branch of the Left Coronary Artery",
+        "es": "Rama Circunfleja de la Arteria Coronaria Izquierda"
+      },
+      "description": {
+        "pt-BR": "Ramo da artéria coronária esquerda que percorre o sulco coronário e irriga principalmente regiões lateral e posterior do coração, com variações conforme a anatomia coronariana.",
+        "en": "Branch of the left coronary artery that runs along the coronary sulcus and supplies mainly the lateral and posterior regions of the heart, with variations depending on coronary anatomy.",
+        "es": "Rama de la arteria coronaria izquierda que recorre el surco coronario e irriga principalmente las regiones lateral y posterior del corazón, con variaciones según la anatomía coronaria."
+      }
+    },
+    "Conus_arteriosus__000684": {
+      "objname": {
+        "pt-BR": "Cone Arterial",
+        "en": "Conus Arteriosus",
+        "es": "Cono Arterial"
+      },
+      "description": {
+        "pt-BR": "Porção de saída do ventrículo direito que direciona o sangue em direção ao tronco pulmonar.",
+        "en": "Outflow portion of the right ventricle that directs blood toward the pulmonary trunk.",
+        "es": "Porción de salida del ventrículo derecho que dirige la sangre hacia el tronco pulmonar."
+      }
+    },
+    "Conus_branch__300419": {
+      "objname": {
+        "pt-BR": "Ramo do Cone Arterial",
+        "en": "Conus Branch",
+        "es": "Rama del Cono Arterial"
+      },
+      "description": {
+        "pt-BR": "Pequeno ramo coronariano que participa da irrigação da região do cone arterial do ventrículo direito.",
+        "en": "Small coronary branch that contributes to the blood supply of the conus arteriosus region of the right ventricle.",
+        "es": "Pequeña rama coronaria que participa en la irrigación de la región del cono arterial del ventrículo derecho."
+      }
+    },
+    "Coronary_sinus__000716": {
+      "objname": {
+        "pt-BR": "Seio Coronário",
+        "en": "Coronary Sinus",
+        "es": "Seno Coronario"
+      },
+      "description": {
+        "pt-BR": "Grande estrutura venosa que recebe o sangue proveniente de diversas veias cardíacas e o conduz para o átrio direito.",
+        "en": "Large venous structure that receives blood from several cardiac veins and carries it into the right atrium.",
+        "es": "Gran estructura venosa que recibe la sangre procedente de diversas venas cardíacas y la conduce hacia la aurícula derecha."
+      }
+    },
+    "Great_cardiac__anterior_interventricular__vein_Coronary_d6300b9": {
+      "objname": {
+        "pt-BR": "Veia Cardíaca Magna",
+        "en": "Great Cardiac Vein",
+        "es": "Vena Cardíaca Magna"
+      },
+      "description": {
+        "pt-BR": "Importante veia do coração que acompanha inicialmente o ramo interventricular anterior e participa da drenagem venosa de grande parte do miocárdio.",
+        "en": "Major vein of the heart that initially accompanies the anterior interventricular branch and contributes to the venous drainage of a large portion of the myocardium.",
+        "es": "Importante vena del corazón que acompaña inicialmente a la rama interventricular anterior y participa en el drenaje venoso de gran parte del miocardio."
+      }
+    },
+    "Heart__diaphragmatic_surface__000683": {
+      "objname": {
+        "pt-BR": "Superfície Diafragmática do Coração",
+        "en": "Diaphragmatic Surface of the Heart",
+        "es": "Superficie Diafragmática del Corazón"
+      },
+      "description": {
+        "pt-BR": "Face inferior do coração, apoiada principalmente sobre o diafragma e formada predominantemente pelos ventrículos.",
+        "en": "Inferior surface of the heart, resting primarily on the diaphragm and formed predominantly by the ventricles.",
+        "es": "Cara inferior del corazón, apoyada principalmente sobre el diafragma y formada predominantemente por los ventrículos."
+      }
+    },
+    "Heart__sternocostal_surface_front_000698": {
+      "objname": {
+        "pt-BR": "Região do Coração Afetada pelo Infarto",
+        "en": "Region of the Heart Affected by Infarction",
+        "es": "Región del Corazón Afectada por el Infarto"
+      },
+      "description": {
+        "pt-BR": "Região da superfície anterior do coração destacada no modelo para representar o tecido cardíaco afetado pelo infarto. A obstrução de uma artéria coronária reduz ou interrompe o fornecimento de sangue e oxigênio ao miocárdio irrigado por esse vaso, provocando isquemia e, quando prolongada, morte das células musculares cardíacas. A coloração mais escura apresentada no modelo é uma representação didática da área lesionada e não corresponde necessariamente à aparência real do tecido em todas as fases do infarto.",
+        "en": "Region of the anterior surface of the heart highlighted in the model to represent cardiac tissue affected by infarction. Obstruction of a coronary artery reduces or interrupts the supply of blood and oxygen to the myocardium supplied by that vessel, causing ischemia and, when prolonged, the death of cardiac muscle cells. The darker coloration shown in the model is an educational representation of the injured area and does not necessarily correspond to the actual appearance of the tissue during all stages of infarction.",
+        "es": "Región de la superficie anterior del corazón destacada en el modelo para representar el tejido cardíaco afectado por el infarto. La obstrucción de una arteria coronaria reduce o interrumpe el suministro de sangre y oxígeno al miocardio irrigado por ese vaso, provocando isquemia y, cuando es prolongada, la muerte de las células musculares cardíacas. La coloración más oscura presentada en el modelo es una representación didáctica del área lesionada y no corresponde necesariamente al aspecto real del tejido en todas las fases del infarto."
+      }
+    },
+    "Inferior_vena_cava__base_of___000666": {
+      "objname": {
+        "pt-BR": "Base da Veia Cava Inferior",
+        "en": "Base of the Inferior Vena Cava",
+        "es": "Base de la Vena Cava Inferior"
+      },
+      "description": {
+        "pt-BR": "Região de chegada da veia cava inferior ao átrio direito, conduzindo sangue venoso proveniente principalmente das regiões inferiores do corpo.",
+        "en": "Region where the inferior vena cava enters the right atrium, carrying venous blood primarily from the lower regions of the body.",
+        "es": "Región de desembocadura de la vena cava inferior en la aurícula derecha, que conduce sangre venosa procedente principalmente de las regiones inferiores del cuerpo."
+      }
+    },
+    "Interatrial__Bachmann_s__bundle__000660": {
+      "objname": {
+        "pt-BR": "Feixe Interatrial (Feixe de Bachmann)",
+        "en": "Interatrial Bundle (Bachmann's Bundle)",
+        "es": "Haz Interauricular (Haz de Bachmann)"
+      },
+      "description": {
+        "pt-BR": "Via especializada de condução que auxilia na propagação do impulso elétrico do átrio direito para o átrio esquerdo.",
+        "en": "Specialized conduction pathway that facilitates the propagation of the electrical impulse from the right atrium to the left atrium.",
+        "es": "Vía especializada de conducción que facilita la propagación del impulso eléctrico desde la aurícula derecha hacia la aurícula izquierda."
+      }
+    },
+    "Interventricular_septum_back_surface_002614": {
+      "objname": {
+        "pt-BR": "Superfície Posterior do Septo Interventricular",
+        "en": "Posterior Surface of the Interventricular Septum",
+        "es": "Superficie Posterior del Tabique Interventricular"
+      },
+      "description": {
+        "pt-BR": "Porção posterior do septo que separa os ventrículos direito e esquerdo e contém importantes componentes do sistema de condução cardíaca.",
+        "en": "Posterior portion of the septum that separates the right and left ventricles and contains important components of the cardiac conduction system.",
+        "es": "Porción posterior del tabique que separa los ventrículos derecho e izquierdo y contiene importantes componentes del sistema de conducción cardíaca."
+      }
+    },
+    "Interventricular_septum_front_surface_000704": {
+      "objname": {
+        "pt-BR": "Superfície Anterior do Septo Interventricular",
+        "en": "Anterior Surface of the Interventricular Septum",
+        "es": "Superficie Anterior del Tabique Interventricular"
+      },
+      "description": {
+        "pt-BR": "Porção anterior do septo que separa os ventrículos. Parte significativa dessa região recebe irrigação do ramo interventricular anterior da artéria coronária esquerda.",
+        "en": "Anterior portion of the septum that separates the ventricles. A significant part of this region receives its blood supply from the anterior interventricular branch of the left coronary artery.",
+        "es": "Porción anterior del tabique que separa los ventrículos. Una parte significativa de esta región recibe irrigación de la rama interventricular anterior de la arteria coronaria izquierda."
+      }
+    },
+    "Left_atrium__000706": {
+      "objname": {
+        "pt-BR": "Átrio Esquerdo",
+        "en": "Left Atrium",
+        "es": "Aurícula Izquierda"
+      },
+      "description": {
+        "pt-BR": "Câmara cardíaca que recebe sangue oxigenado proveniente das veias pulmonares e o direciona ao ventrículo esquerdo através da valva mitral.",
+        "en": "Cardiac chamber that receives oxygenated blood from the pulmonary veins and directs it into the left ventricle through the mitral valve.",
+        "es": "Cámara cardíaca que recibe sangre oxigenada procedente de las venas pulmonares y la dirige hacia el ventrículo izquierdo a través de la válvula mitral."
+      }
+    },
   "Mitral__bicuspid__valve__posterolateral__mural__leaflet__020237": {
-    "objname": "Cúspide Posterior da Valva Mitral",
-    "description": "Uma das duas principais cúspides da valva mitral, responsável juntamente com a cúspide anterior pelo controle do fluxo entre o átrio e o ventrículo esquerdos."
-  },
-  "Moderator_band__septomarginal_trabecula___000696": {
-    "objname": "Trabécula Septomarginal (Banda Moderadora)",
-    "description": "Faixa muscular localizada no ventrículo direito que participa de sua estrutura interna e conduz parte das fibras do sistema de condução ventricular."
-  },
-  "Myocardium_back_portion_000686": {
-    "objname": "Porção Posterior do Miocárdio",
-    "description": "Tecido muscular da região posterior do coração. O miocárdio depende continuamente da circulação coronariana para receber oxigênio e nutrientes."
-  },
-  "Myocardium_front_surface_000699": {
-    "objname": "Superfície Anterior do Miocárdio",
-    "description": "Tecido muscular da região anterior do coração. A interrupção prolongada de seu suprimento sanguíneo pode provocar isquemia, lesão celular e necrose característica do infarto do miocárdio."
-  },
-  "Papillary_muscle__anterior__L__000690": {
-    "objname": "Músculo Papilar Anterior Esquerdo",
-    "description": "Músculo localizado no ventrículo esquerdo conectado às cordas tendíneas da valva mitral, auxiliando na estabilidade da valva durante a contração ventricular."
-  },
-  "Papillary_muscle__anterior__R__000695": {
-    "objname": "Músculo Papilar Anterior Direito",
-    "description": "Músculo do ventrículo direito conectado às cordas tendíneas da valva tricúspide, contribuindo para impedir o prolapso de suas cúspides durante a contração."
-  },
-  "Papillary_muscle__medial__000694": {
-    "objname": "Músculo Papilar Medial",
-    "description": "Músculo papilar do ventrículo direito associado às cordas tendíneas da valva tricúspide e à estabilização de suas cúspides."
-  },
-  "Papillary_muscle__posterior__L__000689": {
-    "objname": "Músculo Papilar Posterior Esquerdo",
-    "description": "Músculo papilar do ventrículo esquerdo que se conecta à valva mitral pelas cordas tendíneas e auxilia em seu funcionamento durante a contração cardíaca."
-  },
-  "Papillary_muscle__posterior__R__000693": {
-    "objname": "Músculo Papilar Posterior Direito",
-    "description": "Músculo papilar do ventrículo direito conectado à valva tricúspide pelas cordas tendíneas."
-  },
-  "Posterior_fascicle__301354": {
-    "objname": "Fascículo Posterior",
-    "description": "Componente representado do sistema de condução ventricular, envolvido na distribuição dos impulsos elétricos pelo miocárdio."
-  },
-  "Posterior_internodal_bundle__000656": {
-    "objname": "Feixe Internodal Posterior",
-    "description": "Via atrial representada entre as regiões dos nós sinoatrial e atrioventricular, participando da propagação da atividade elétrica atrial."
-  },
-  "Posterior_interventricular_branch__posterior_descending_eeb5dda": {
-    "objname": "Ramo Interventricular Posterior",
-    "description": "Artéria que percorre o sulco interventricular posterior e participa da irrigação das regiões inferiores e posteriores dos ventrículos e do septo interventricular."
-  },
-  "Posterior_vein_of_left_ventricle__000718": {
-    "objname": "Veia Posterior do Ventrículo Esquerdo",
-    "description": "Veia responsável pela drenagem de parte da parede posterior do ventrículo esquerdo."
-  },
-  "Pulmonary_arteries__base_of___L__000019": {
-    "objname": "Base da Artéria Pulmonar Esquerda",
-    "description": "Porção inicial da artéria pulmonar esquerda, responsável por conduzir sangue do tronco pulmonar em direção ao pulmão esquerdo."
-  },
-  "Pulmonary_arteries__base_of___R__000015": {
-    "objname": "Base da Artéria Pulmonar Direita",
-    "description": "Porção inicial da artéria pulmonar direita, responsável por conduzir sangue do tronco pulmonar em direção ao pulmão direito."
-  },
-  "Pulmonary_trunk__000003": {
-    "objname": "Tronco Pulmonar",
-    "description": "Grande vaso que recebe sangue do ventrículo direito e o conduz em direção às artérias pulmonares."
-  },
-  "Pulmonary_trunk__base_of___000669": {
-    "objname": "Base do Tronco Pulmonar",
-    "description": "Porção inicial do tronco pulmonar localizada junto à saída do ventrículo direito."
-  },
-  "Pulmonary_valve__annulus__020245": {
-    "objname": "Anel da Valva Pulmonar",
-    "description": "Estrutura de sustentação da valva pulmonar localizada entre o ventrículo direito e o tronco pulmonar."
-  },
-  "Pulmonary_valve__anterior_cusp__000679": {
-    "objname": "Cúspide Anterior da Valva Pulmonar",
-    "description": "Uma das três cúspides da valva pulmonar, contribuindo para impedir o retorno do sangue do tronco pulmonar ao ventrículo direito."
-  },
-  "Pulmonary_valve__left_cusp__000681": {
-    "objname": "Cúspide Esquerda da Valva Pulmonar",
-    "description": "Uma das três cúspides semilunares da valva pulmonar, participando de sua abertura e fechamento."
-  },
-  "Pulmonary_valve__right_cusp__000680": {
-    "objname": "Cúspide Direita da Valva Pulmonar",
-    "description": "Uma das três cúspides semilunares da valva pulmonar, auxiliando no controle do fluxo entre o ventrículo direito e o tronco pulmonar."
-  },
-  "Pulmonary_veins__base_of___L__000011": {
-    "objname": "Base das Veias Pulmonares Esquerdas",
-    "description": "Região de entrada das veias pulmonares esquerdas no átrio esquerdo, conduzindo sangue oxigenado proveniente do pulmão esquerdo."
-  },
-  "Pulmonary_veins__base_of___R__000006": {
-    "objname": "Base das Veias Pulmonares Direitas",
-    "description": "Região de entrada das veias pulmonares direitas no átrio esquerdo, conduzindo sangue oxigenado proveniente do pulmão direito."
-  },
-  "Purkinje_fibers__L__000657": {
-    "objname": "Fibras de Purkinje Esquerdas",
-    "description": "Fibras especializadas que distribuem rapidamente os impulsos elétricos pelo miocárdio do ventrículo esquerdo, contribuindo para sua contração coordenada."
-  },
-  "Purkinje_fibers__R__000655": {
-    "objname": "Fibras de Purkinje Direitas",
-    "description": "Fibras especializadas que distribuem rapidamente os impulsos elétricos pelo miocárdio do ventrículo direito."
-  },
-  "Right_atrium__000705": {
-    "objname": "Átrio Direito",
-    "description": "Câmara cardíaca que recebe grande parte do sangue venoso proveniente do organismo e o direciona ao ventrículo direito."
-  },
-  "Right_coronary_artery__000709": {
-    "objname": "Artéria Coronária Direita",
-    "description": "Artéria responsável pela irrigação de diferentes regiões do lado direito e inferior do coração, com sua distribuição variando conforme a dominância coronariana."
-  },
-  "Right_marginal_artery__000710": {
-    "objname": "Artéria Marginal Direita",
-    "description": "Ramo da artéria coronária direita que percorre a margem do coração e participa principalmente da irrigação do ventrículo direito."
-  },
-  "Right_ventricle_back_portion_000692": {
-    "objname": "Porção Posterior do Ventrículo Direito",
-    "description": "Região posterior do ventrículo direito, câmara responsável por impulsionar o sangue em direção à circulação pulmonar."
-  },
-  "Right_ventricle_front_surface_000701": {
-    "objname": "Superfície Anterior do Ventrículo Direito",
-    "description": "Região anterior do ventrículo direito, que constitui grande parte da superfície anterior do coração."
-  },
-  "Sinoatrial_node__000653": {
-    "objname": "Nó Sinoatrial",
-    "description": "Principal marca-passo fisiológico do coração. Gera espontaneamente impulsos elétricos que iniciam cada ciclo cardíaco e se propagam pelos átrios."
-  },
-  "Small_cardiac_vein__000719": {
-    "objname": "Veia Cardíaca Menor",
-    "description": "Veia que participa da drenagem de regiões do lado direito do coração e geralmente conduz o sangue em direção ao seio coronário."
-  },
-  "Superior_vena_cava__000650": {
-    "objname": "Veia Cava Superior",
-    "description": "Grande veia que conduz ao átrio direito sangue proveniente principalmente da cabeça, pescoço, membros superiores e parte do tórax."
-  },
-  "Superior_vena_cava__base_of___000665": {
-    "objname": "Base da Veia Cava Superior",
-    "description": "Região de conexão da veia cava superior com o átrio direito."
-  },
-  "Tricuspid_valve__annulus__020239": {
-    "objname": "Anel da Valva Tricúspide",
-    "description": "Estrutura fibrosa que sustenta a valva tricúspide entre o átrio direito e o ventrículo direito."
-  },
-  "Tricuspid_valve__anterior_leaflet__020240": {
-    "objname": "Cúspide Anterior da Valva Tricúspide",
-    "description": "Uma das cúspides da valva tricúspide, participando do controle do fluxo sanguíneo entre o átrio e o ventrículo direitos."
-  },
-  "Tricuspid_valve__chordae_tendineae__020242": {
-    "objname": "Cordas Tendíneas da Valva Tricúspide",
-    "description": "Cordões fibrosos que conectam as cúspides da valva tricúspide aos músculos papilares e auxiliam na estabilidade da valva durante a contração ventricular."
-  },
-  "Tricuspid_valve__commissure__002615": {
-    "objname": "Comissura da Valva Tricúspide",
-    "description": "Região de encontro entre duas cúspides da valva tricúspide, contribuindo para seu fechamento adequado."
-  },
-  "Tricuspid_valve__commissure__020243": {
-    "objname": "Comissura da Valva Tricúspide",
-    "description": "Região de encontro entre cúspides da valva tricúspide, importante para a organização e o fechamento da valva."
-  },
-  "Tricuspid_valve__commissure__020244": {
-    "objname": "Comissura da Valva Tricúspide",
-    "description": "Região de união entre cúspides adjacentes da valva tricúspide."
-  },
-  "Tricuspid_valve__posterior_leaflet__020238": {
-    "objname": "Cúspide Posterior da Valva Tricúspide",
-    "description": "Uma das cúspides da valva tricúspide, auxiliando no controle do fluxo entre o átrio direito e o ventrículo direito."
-  },
-  "Tricuspid_valve__septal_leaflet__020241": {
-    "objname": "Cúspide Septal da Valva Tricúspide",
-    "description": "Cúspide da valva tricúspide localizada junto ao septo interventricular e participante do fechamento da valva."
-  },
-  "GlobVerm": {
-    "objname": "Glóbulos Vermelhos",
-    "description": "Também chamados de hemácias, são células sanguíneas responsáveis principalmente pelo transporte de oxigênio. No modelo, representam o fluxo sanguíneo pela artéria coronária, que pode ser reduzido ou interrompido quando um trombo obstrui o vaso."
-  },
-  "RamoCoronaria": {
-    "objname": "Placa Aterosclerótica Rompida",
-    "description": "Representação de uma placa aterosclerótica na parede da artéria coronária que sofreu ruptura. A ruptura expõe componentes da placa ao sangue e favorece a ativação das plaquetas e da coagulação, desencadeando a formação de um trombo no local."
-  },
-  "RamoTrombo": {
-    "objname": "Trombo Coronário",
-    "description": "Coágulo formado sobre a região de ruptura da placa aterosclerótica. O trombo pode reduzir ou bloquear o fluxo de sangue pela artéria coronária, causando isquemia do miocárdio e, quando a interrupção é suficientemente intensa e prolongada, infarto."
+      "objname": {
+        "pt-BR": "Cúspide Posterior da Valva Mitral",
+        "en": "Posterior Leaflet of the Mitral Valve",
+        "es": "Valva Posterior de la Válvula Mitral"
+      },
+      "description": {
+        "pt-BR": "Uma das duas principais cúspides da valva mitral, responsável juntamente com a cúspide anterior pelo controle do fluxo entre o átrio e o ventrículo esquerdos.",
+        "en": "One of the two principal leaflets of the mitral valve, responsible, together with the anterior leaflet, for regulating blood flow between the left atrium and the left ventricle.",
+        "es": "Una de las dos principales valvas de la válvula mitral, responsable, junto con la valva anterior, del control del flujo sanguíneo entre la aurícula y el ventrículo izquierdos."
+      }
+    },
+    "Moderator_band__septomarginal_trabecula___000696": {
+      "objname": {
+        "pt-BR": "Trabécula Septomarginal (Banda Moderadora)",
+        "en": "Septomarginal Trabecula (Moderator Band)",
+        "es": "Trabécula Septomarginal (Banda Moderadora)"
+      },
+      "description": {
+        "pt-BR": "Faixa muscular localizada no ventrículo direito que participa de sua estrutura interna e conduz parte das fibras do sistema de condução ventricular.",
+        "en": "Muscular band located in the right ventricle that forms part of its internal structure and carries some of the fibers of the ventricular conduction system.",
+        "es": "Banda muscular localizada en el ventrículo derecho que forma parte de su estructura interna y conduce parte de las fibras del sistema de conducción ventricular."
+      }
+    },
+    "Myocardium_back_portion_000686": {
+      "objname": {
+        "pt-BR": "Porção Posterior do Miocárdio",
+        "en": "Posterior Portion of the Myocardium",
+        "es": "Porción Posterior del Miocardio"
+      },
+      "description": {
+        "pt-BR": "Tecido muscular da região posterior do coração. O miocárdio depende continuamente da circulação coronariana para receber oxigênio e nutrientes.",
+        "en": "Muscle tissue of the posterior region of the heart. The myocardium continuously depends on coronary circulation to receive oxygen and nutrients.",
+        "es": "Tejido muscular de la región posterior del corazón. El miocardio depende continuamente de la circulación coronaria para recibir oxígeno y nutrientes."
+      }
+    },
+    "Myocardium_front_surface_000699": {
+      "objname": {
+        "pt-BR": "Superfície Anterior do Miocárdio",
+        "en": "Anterior Surface of the Myocardium",
+        "es": "Superficie Anterior del Miocardio"
+      },
+      "description": {
+        "pt-BR": "Tecido muscular da região anterior do coração. A interrupção prolongada de seu suprimento sanguíneo pode provocar isquemia, lesão celular e necrose característica do infarto do miocárdio.",
+        "en": "Muscle tissue of the anterior region of the heart. Prolonged interruption of its blood supply may cause ischemia, cellular injury, and necrosis characteristic of myocardial infarction.",
+        "es": "Tejido muscular de la región anterior del corazón. La interrupción prolongada de su suministro sanguíneo puede provocar isquemia, lesión celular y necrosis característica del infarto de miocardio."
+      }
+    },
+    "Papillary_muscle__anterior__L__000690": {
+      "objname": {
+        "pt-BR": "Músculo Papilar Anterior Esquerdo",
+        "en": "Left Anterior Papillary Muscle",
+        "es": "Músculo Papilar Anterior Izquierdo"
+      },
+      "description": {
+        "pt-BR": "Músculo localizado no ventrículo esquerdo conectado às cordas tendíneas da valva mitral, auxiliando na estabilidade da valva durante a contração ventricular.",
+        "en": "Muscle located in the left ventricle and connected to the chordae tendineae of the mitral valve, contributing to valve stability during ventricular contraction.",
+        "es": "Músculo localizado en el ventrículo izquierdo y conectado a las cuerdas tendinosas de la válvula mitral, que contribuye a la estabilidad de la válvula durante la contracción ventricular."
+      }
+    },
+    "Papillary_muscle__anterior__R__000695": {
+      "objname": {
+        "pt-BR": "Músculo Papilar Anterior Direito",
+        "en": "Right Anterior Papillary Muscle",
+        "es": "Músculo Papilar Anterior Derecho"
+      },
+      "description": {
+        "pt-BR": "Músculo do ventrículo direito conectado às cordas tendíneas da valva tricúspide, contribuindo para impedir o prolapso de suas cúspides durante a contração.",
+        "en": "Muscle of the right ventricle connected to the chordae tendineae of the tricuspid valve, helping prevent prolapse of its leaflets during contraction.",
+        "es": "Músculo del ventrículo derecho conectado a las cuerdas tendinosas de la válvula tricúspide, que contribuye a impedir el prolapso de sus valvas durante la contracción."
+      }
+    },
+    "Papillary_muscle__medial__000694": {
+      "objname": {
+        "pt-BR": "Músculo Papilar Medial",
+        "en": "Medial Papillary Muscle",
+        "es": "Músculo Papilar Medial"
+      },
+      "description": {
+        "pt-BR": "Músculo papilar do ventrículo direito associado às cordas tendíneas da valva tricúspide e à estabilização de suas cúspides.",
+        "en": "Papillary muscle of the right ventricle associated with the chordae tendineae of the tricuspid valve and the stabilization of its leaflets.",
+        "es": "Músculo papilar del ventrículo derecho asociado a las cuerdas tendinosas de la válvula tricúspide y a la estabilización de sus valvas."
+      }
+    },
+    "Papillary_muscle__posterior__L__000689": {
+      "objname": {
+        "pt-BR": "Músculo Papilar Posterior Esquerdo",
+        "en": "Left Posterior Papillary Muscle",
+        "es": "Músculo Papilar Posterior Izquierdo"
+      },
+      "description": {
+        "pt-BR": "Músculo papilar do ventrículo esquerdo que se conecta à valva mitral pelas cordas tendíneas e auxilia em seu funcionamento durante a contração cardíaca.",
+        "en": "Papillary muscle of the left ventricle that connects to the mitral valve through the chordae tendineae and assists in its function during cardiac contraction.",
+        "es": "Músculo papilar del ventrículo izquierdo que se conecta a la válvula mitral mediante las cuerdas tendinosas y contribuye a su funcionamiento durante la contracción cardíaca."
+      }
+    },
+    "Papillary_muscle__posterior__R__000693": {
+      "objname": {
+        "pt-BR": "Músculo Papilar Posterior Direito",
+        "en": "Right Posterior Papillary Muscle",
+        "es": "Músculo Papilar Posterior Derecho"
+      },
+      "description": {
+        "pt-BR": "Músculo papilar do ventrículo direito conectado à valva tricúspide pelas cordas tendíneas.",
+        "en": "Papillary muscle of the right ventricle connected to the tricuspid valve through the chordae tendineae.",
+        "es": "Músculo papilar del ventrículo derecho conectado a la válvula tricúspide mediante las cuerdas tendinosas."
+      }
+    },
+    "Posterior_fascicle__301354": {
+      "objname": {
+        "pt-BR": "Fascículo Posterior",
+        "en": "Posterior Fascicle",
+        "es": "Fascículo Posterior"
+      },
+      "description": {
+        "pt-BR": "Componente representado do sistema de condução ventricular, envolvido na distribuição dos impulsos elétricos pelo miocárdio.",
+        "en": "Component of the ventricular conduction system represented in the model, involved in distributing electrical impulses throughout the myocardium.",
+        "es": "Componente representado del sistema de conducción ventricular, involucrado en la distribución de los impulsos eléctricos por el miocardio."
+      }
+    },
+    "Posterior_internodal_bundle__000656": {
+      "objname": {
+        "pt-BR": "Feixe Internodal Posterior",
+        "en": "Posterior Internodal Bundle",
+        "es": "Haz Internodal Posterior"
+      },
+      "description": {
+        "pt-BR": "Via atrial representada entre as regiões dos nós sinoatrial e atrioventricular, participando da propagação da atividade elétrica atrial.",
+        "en": "Atrial pathway represented between the regions of the sinoatrial and atrioventricular nodes, involved in the propagation of atrial electrical activity.",
+        "es": "Vía auricular representada entre las regiones de los nodos sinoauricular y auriculoventricular, que participa en la propagación de la actividad eléctrica auricular."
+      }
+    },
+    "Posterior_interventricular_branch__posterior_descending_eeb5dda": {
+      "objname": {
+        "pt-BR": "Ramo Interventricular Posterior",
+        "en": "Posterior Interventricular Branch",
+        "es": "Rama Interventricular Posterior"
+      },
+      "description": {
+        "pt-BR": "Artéria que percorre o sulco interventricular posterior e participa da irrigação das regiões inferiores e posteriores dos ventrículos e do septo interventricular.",
+        "en": "Artery that runs along the posterior interventricular sulcus and contributes to the blood supply of the inferior and posterior regions of the ventricles and the interventricular septum.",
+        "es": "Arteria que recorre el surco interventricular posterior y participa en la irrigación de las regiones inferiores y posteriores de los ventrículos y del tabique interventricular."
+      }
+    },
+    "Posterior_vein_of_left_ventricle__000718": {
+      "objname": {
+        "pt-BR": "Veia Posterior do Ventrículo Esquerdo",
+        "en": "Posterior Vein of the Left Ventricle",
+        "es": "Vena Posterior del Ventrículo Izquierdo"
+      },
+      "description": {
+        "pt-BR": "Veia responsável pela drenagem de parte da parede posterior do ventrículo esquerdo.",
+        "en": "Vein responsible for draining blood from part of the posterior wall of the left ventricle.",
+        "es": "Vena responsable del drenaje sanguíneo de parte de la pared posterior del ventrículo izquierdo."
+      }
+    },
+    "Pulmonary_arteries__base_of___L__000019": {
+      "objname": {
+        "pt-BR": "Base da Artéria Pulmonar Esquerda",
+        "en": "Base of the Left Pulmonary Artery",
+        "es": "Base de la Arteria Pulmonar Izquierda"
+      },
+      "description": {
+        "pt-BR": "Porção inicial da artéria pulmonar esquerda, responsável por conduzir sangue do tronco pulmonar em direção ao pulmão esquerdo.",
+        "en": "Initial portion of the left pulmonary artery, responsible for carrying blood from the pulmonary trunk toward the left lung.",
+        "es": "Porción inicial de la arteria pulmonar izquierda, responsable de conducir la sangre desde el tronco pulmonar hacia el pulmón izquierdo."
+      }
+    },
+    "Pulmonary_arteries__base_of___R__000015": {
+      "objname": {
+        "pt-BR": "Base da Artéria Pulmonar Direita",
+        "en": "Base of the Right Pulmonary Artery",
+        "es": "Base de la Arteria Pulmonar Derecha"
+      },
+      "description": {
+        "pt-BR": "Porção inicial da artéria pulmonar direita, responsável por conduzir sangue do tronco pulmonar em direção ao pulmão direito.",
+        "en": "Initial portion of the right pulmonary artery, responsible for carrying blood from the pulmonary trunk toward the right lung.",
+        "es": "Porción inicial de la arteria pulmonar derecha, responsable de conducir la sangre desde el tronco pulmonar hacia el pulmón derecho."
+      }
+    },
+    "Pulmonary_trunk__000003": {
+      "objname": {
+        "pt-BR": "Tronco Pulmonar",
+        "en": "Pulmonary Trunk",
+        "es": "Tronco Pulmonar"
+      },
+      "description": {
+        "pt-BR": "Grande vaso que recebe sangue do ventrículo direito e o conduz em direção às artérias pulmonares.",
+        "en": "Large blood vessel that receives blood from the right ventricle and carries it toward the pulmonary arteries.",
+        "es": "Gran vaso sanguíneo que recibe sangre del ventrículo derecho y la conduce hacia las arterias pulmonares."
+      }
+    },
+    "Pulmonary_trunk__base_of___000669": {
+      "objname": {
+        "pt-BR": "Base do Tronco Pulmonar",
+        "en": "Base of the Pulmonary Trunk",
+        "es": "Base del Tronco Pulmonar"
+      },
+      "description": {
+        "pt-BR": "Porção inicial do tronco pulmonar localizada junto à saída do ventrículo direito.",
+        "en": "Initial portion of the pulmonary trunk located near the outflow of the right ventricle.",
+        "es": "Porción inicial del tronco pulmonar localizada junto a la salida del ventrículo derecho."
+      }
+    },
+    "Pulmonary_valve__annulus__020245": {
+      "objname": {
+        "pt-BR": "Anel da Valva Pulmonar",
+        "en": "Pulmonary Valve Annulus",
+        "es": "Anillo de la Válvula Pulmonar"
+      },
+      "description": {
+        "pt-BR": "Estrutura de sustentação da valva pulmonar localizada entre o ventrículo direito e o tronco pulmonar.",
+        "en": "Supporting structure of the pulmonary valve located between the right ventricle and the pulmonary trunk.",
+        "es": "Estructura de soporte de la válvula pulmonar localizada entre el ventrículo derecho y el tronco pulmonar."
+      }
+    },
+    "Pulmonary_valve__anterior_cusp__000679": {
+      "objname": {
+        "pt-BR": "Cúspide Anterior da Valva Pulmonar",
+        "en": "Anterior Cusp of the Pulmonary Valve",
+        "es": "Cúspide Anterior de la Válvula Pulmonar"
+      },
+      "description": {
+        "pt-BR": "Uma das três cúspides da valva pulmonar, contribuindo para impedir o retorno do sangue do tronco pulmonar ao ventrículo direito.",
+        "en": "One of the three cusps of the pulmonary valve, helping prevent the backflow of blood from the pulmonary trunk into the right ventricle.",
+        "es": "Una de las tres cúspides de la válvula pulmonar, que contribuye a impedir el retorno de la sangre desde el tronco pulmonar hacia el ventrículo derecho."
+      }
+    },
+    "Pulmonary_valve__left_cusp__000681": {
+      "objname": {
+        "pt-BR": "Cúspide Esquerda da Valva Pulmonar",
+        "en": "Left Cusp of the Pulmonary Valve",
+        "es": "Cúspide Izquierda de la Válvula Pulmonar"
+      },
+      "description": {
+        "pt-BR": "Uma das três cúspides semilunares da valva pulmonar, participando de sua abertura e fechamento.",
+        "en": "One of the three semilunar cusps of the pulmonary valve, involved in its opening and closing.",
+        "es": "Una de las tres cúspides semilunares de la válvula pulmonar, que participa en su apertura y cierre."
+      }
+    },
+    "Pulmonary_valve__right_cusp__000680": {
+      "objname": {
+        "pt-BR": "Cúspide Direita da Valva Pulmonar",
+        "en": "Right Cusp of the Pulmonary Valve",
+        "es": "Cúspide Derecha de la Válvula Pulmonar"
+      },
+      "description": {
+        "pt-BR": "Uma das três cúspides semilunares da valva pulmonar, auxiliando no controle do fluxo entre o ventrículo direito e o tronco pulmonar.",
+        "en": "One of the three semilunar cusps of the pulmonary valve, assisting in the regulation of blood flow between the right ventricle and the pulmonary trunk.",
+        "es": "Una de las tres cúspides semilunares de la válvula pulmonar, que contribuye al control del flujo sanguíneo entre el ventrículo derecho y el tronco pulmonar."
+      }
+    },
+    "Pulmonary_veins__base_of___L__000011": {
+      "objname": {
+        "pt-BR": "Base das Veias Pulmonares Esquerdas",
+        "en": "Base of the Left Pulmonary Veins",
+        "es": "Base de las Venas Pulmonares Izquierdas"
+      },
+      "description": {
+        "pt-BR": "Região de entrada das veias pulmonares esquerdas no átrio esquerdo, conduzindo sangue oxigenado proveniente do pulmão esquerdo.",
+        "en": "Region where the left pulmonary veins enter the left atrium, carrying oxygenated blood from the left lung.",
+        "es": "Región de entrada de las venas pulmonares izquierdas en la aurícula izquierda, que conducen sangre oxigenada procedente del pulmón izquierdo."
+      }
+    },
+    "Pulmonary_veins__base_of___R__000006": {
+      "objname": {
+        "pt-BR": "Base das Veias Pulmonares Direitas",
+        "en": "Base of the Right Pulmonary Veins",
+        "es": "Base de las Venas Pulmonares Derechas"
+      },
+      "description": {
+        "pt-BR": "Região de entrada das veias pulmonares direitas no átrio esquerdo, conduzindo sangue oxigenado proveniente do pulmão direito.",
+        "en": "Region where the right pulmonary veins enter the left atrium, carrying oxygenated blood from the right lung.",
+        "es": "Región de entrada de las venas pulmonares derechas en la aurícula izquierda, que conducen sangre oxigenada procedente del pulmón derecho."
+      }
+    },
+    "Purkinje_fibers__L__000657": {
+      "objname": {
+        "pt-BR": "Fibras de Purkinje Esquerdas",
+        "en": "Left Purkinje Fibers",
+        "es": "Fibras de Purkinje Izquierdas"
+      },
+      "description": {
+        "pt-BR": "Fibras especializadas que distribuem rapidamente os impulsos elétricos pelo miocárdio do ventrículo esquerdo, contribuindo para sua contração coordenada.",
+        "en": "Specialized fibers that rapidly distribute electrical impulses throughout the myocardium of the left ventricle, contributing to its coordinated contraction.",
+        "es": "Fibras especializadas que distribuyen rápidamente los impulsos eléctricos por el miocardio del ventrículo izquierdo, contribuyendo a su contracción coordinada."
+      }
+    },
+    "Purkinje_fibers__R__000655": {
+      "objname": {
+        "pt-BR": "Fibras de Purkinje Direitas",
+        "en": "Right Purkinje Fibers",
+        "es": "Fibras de Purkinje Derechas"
+      },
+      "description": {
+        "pt-BR": "Fibras especializadas que distribuem rapidamente os impulsos elétricos pelo miocárdio do ventrículo direito.",
+        "en": "Specialized fibers that rapidly distribute electrical impulses throughout the myocardium of the right ventricle.",
+        "es": "Fibras especializadas que distribuyen rápidamente los impulsos eléctricos por el miocardio del ventrículo derecho."
+      }
+    },
+    "Right_atrium__000705": {
+      "objname": {
+        "pt-BR": "Átrio Direito",
+        "en": "Right Atrium",
+        "es": "Aurícula Derecha"
+      },
+      "description": {
+        "pt-BR": "Câmara cardíaca que recebe grande parte do sangue venoso proveniente do organismo e o direciona ao ventrículo direito.",
+        "en": "Cardiac chamber that receives a large portion of the venous blood returning from the body and directs it into the right ventricle.",
+        "es": "Cámara cardíaca que recibe gran parte de la sangre venosa procedente del organismo y la dirige hacia el ventrículo derecho."
+      }
+    },
+    "Right_coronary_artery__000709": {
+      "objname": {
+        "pt-BR": "Artéria Coronária Direita",
+        "en": "Right Coronary Artery",
+        "es": "Arteria Coronaria Derecha"
+      },
+      "description": {
+        "pt-BR": "Artéria responsável pela irrigação de diferentes regiões do lado direito e inferior do coração, com sua distribuição variando conforme a dominância coronariana.",
+        "en": "Artery responsible for supplying blood to different regions of the right and inferior aspects of the heart, with its distribution varying according to coronary dominance.",
+        "es": "Arteria responsable de la irrigación de diferentes regiones del lado derecho e inferior del corazón, cuya distribución varía según la dominancia coronaria."
+      }
+    },
+    "Right_marginal_artery__000710": {
+      "objname": {
+        "pt-BR": "Artéria Marginal Direita",
+        "en": "Right Marginal Artery",
+        "es": "Arteria Marginal Derecha"
+      },
+      "description": {
+        "pt-BR": "Ramo da artéria coronária direita que percorre a margem do coração e participa principalmente da irrigação do ventrículo direito.",
+        "en": "Branch of the right coronary artery that runs along the margin of the heart and contributes primarily to the blood supply of the right ventricle.",
+        "es": "Rama de la arteria coronaria derecha que recorre el margen del corazón y participa principalmente en la irrigación del ventrículo derecho."
+      }
+    },
+    "Right_ventricle_back_portion_000692": {
+      "objname": {
+        "pt-BR": "Porção Posterior do Ventrículo Direito",
+        "en": "Posterior Portion of the Right Ventricle",
+        "es": "Porción Posterior del Ventrículo Derecho"
+      },
+      "description": {
+        "pt-BR": "Região posterior do ventrículo direito, câmara responsável por impulsionar o sangue em direção à circulação pulmonar.",
+        "en": "Posterior region of the right ventricle, the chamber responsible for pumping blood toward the pulmonary circulation.",
+        "es": "Región posterior del ventrículo derecho, cámara responsable de impulsar la sangre hacia la circulación pulmonar."
+      }
+    },
+    "Right_ventricle_front_surface_000701": {
+      "objname": {
+        "pt-BR": "Superfície Anterior do Ventrículo Direito",
+        "en": "Anterior Surface of the Right Ventricle",
+        "es": "Superficie Anterior del Ventrículo Derecho"
+      },
+      "description": {
+        "pt-BR": "Região anterior do ventrículo direito, que constitui grande parte da superfície anterior do coração.",
+        "en": "Anterior region of the right ventricle, which constitutes a large portion of the anterior surface of the heart.",
+        "es": "Región anterior del ventrículo derecho, que constituye gran parte de la superficie anterior del corazón."
+      }
+    },
+    "Sinoatrial_node__000653": {
+      "objname": {
+        "pt-BR": "Nó Sinoatrial",
+        "en": "Sinoatrial Node",
+        "es": "Nodo Sinoauricular"
+      },
+      "description": {
+        "pt-BR": "Principal marca-passo fisiológico do coração. Gera espontaneamente impulsos elétricos que iniciam cada ciclo cardíaco e se propagam pelos átrios.",
+        "en": "Primary physiological pacemaker of the heart. It spontaneously generates electrical impulses that initiate each cardiac cycle and propagate throughout the atria.",
+        "es": "Principal marcapasos fisiológico del corazón. Genera espontáneamente impulsos eléctricos que inician cada ciclo cardíaco y se propagan por las aurículas."
+      }
+    },
+    "Small_cardiac_vein__000719": {
+      "objname": {
+        "pt-BR": "Veia Cardíaca Menor",
+        "en": "Small Cardiac Vein",
+        "es": "Vena Cardíaca Menor"
+      },
+      "description": {
+        "pt-BR": "Veia que participa da drenagem de regiões do lado direito do coração e geralmente conduz o sangue em direção ao seio coronário.",
+        "en": "Vein that contributes to the drainage of regions on the right side of the heart and generally carries blood toward the coronary sinus.",
+        "es": "Vena que participa en el drenaje de regiones del lado derecho del corazón y generalmente conduce la sangre hacia el seno coronario."
+      }
+    },
+    "Superior_vena_cava__000650": {
+      "objname": {
+        "pt-BR": "Veia Cava Superior",
+        "en": "Superior Vena Cava",
+        "es": "Vena Cava Superior"
+      },
+      "description": {
+        "pt-BR": "Grande veia que conduz ao átrio direito sangue proveniente principalmente da cabeça, pescoço, membros superiores e parte do tórax.",
+        "en": "Large vein that carries blood to the right atrium, primarily from the head, neck, upper limbs, and part of the thorax.",
+        "es": "Gran vena que conduce hacia la aurícula derecha sangre procedente principalmente de la cabeza, el cuello, los miembros superiores y parte del tórax."
+      }
+    },
+    "Superior_vena_cava__base_of___000665": {
+      "objname": {
+        "pt-BR": "Base da Veia Cava Superior",
+        "en": "Base of the Superior Vena Cava",
+        "es": "Base de la Vena Cava Superior"
+      },
+      "description": {
+        "pt-BR": "Região de conexão da veia cava superior com o átrio direito.",
+        "en": "Region where the superior vena cava connects to the right atrium.",
+        "es": "Región de conexión de la vena cava superior con la aurícula derecha."
+      }
+    },
+    "Tricuspid_valve__annulus__020239": {
+      "objname": {
+        "pt-BR": "Anel da Valva Tricúspide",
+        "en": "Tricuspid Valve Annulus",
+        "es": "Anillo de la Válvula Tricúspide"
+      },
+      "description": {
+        "pt-BR": "Estrutura fibrosa que sustenta a valva tricúspide entre o átrio direito e o ventrículo direito.",
+        "en": "Fibrous structure that supports the tricuspid valve between the right atrium and the right ventricle.",
+        "es": "Estructura fibrosa que sostiene la válvula tricúspide entre la aurícula derecha y el ventrículo derecho."
+      }
+    },
+    "Tricuspid_valve__anterior_leaflet__020240": {
+      "objname": {
+        "pt-BR": "Cúspide Anterior da Valva Tricúspide",
+        "en": "Anterior Leaflet of the Tricuspid Valve",
+        "es": "Valva Anterior de la Válvula Tricúspide"
+      },
+      "description": {
+        "pt-BR": "Uma das cúspides da valva tricúspide, participando do controle do fluxo sanguíneo entre o átrio e o ventrículo direitos.",
+        "en": "One of the leaflets of the tricuspid valve, involved in regulating blood flow between the right atrium and the right ventricle.",
+        "es": "Una de las valvas de la válvula tricúspide, que participa en el control del flujo sanguíneo entre la aurícula y el ventrículo derechos."
+      }
+    },
+    "Tricuspid_valve__chordae_tendineae__020242": {
+      "objname": {
+        "pt-BR": "Cordas Tendíneas da Valva Tricúspide",
+        "en": "Chordae Tendineae of the Tricuspid Valve",
+        "es": "Cuerdas Tendinosas de la Válvula Tricúspide"
+      },
+      "description": {
+        "pt-BR": "Cordões fibrosos que conectam as cúspides da valva tricúspide aos músculos papilares e auxiliam na estabilidade da valva durante a contração ventricular.",
+        "en": "Fibrous cords that connect the leaflets of the tricuspid valve to the papillary muscles and contribute to valve stability during ventricular contraction.",
+        "es": "Cordones fibrosos que conectan las valvas de la válvula tricúspide con los músculos papilares y contribuyen a la estabilidad de la válvula durante la contracción ventricular."
+      }
+    },
+    "Tricuspid_valve__commissure__002615": {
+      "objname": {
+        "pt-BR": "Comissura da Valva Tricúspide",
+        "en": "Commissure of the Tricuspid Valve",
+        "es": "Comisura de la Válvula Tricúspide"
+      },
+      "description": {
+        "pt-BR": "Região de encontro entre duas cúspides da valva tricúspide, contribuindo para seu fechamento adequado.",
+        "en": "Region where two leaflets of the tricuspid valve meet, contributing to proper valve closure.",
+        "es": "Región de unión entre dos valvas de la válvula tricúspide, que contribuye a su cierre adecuado."
+      }
+    },
+    "Tricuspid_valve__commissure__020243": {
+      "objname": {
+        "pt-BR": "Comissura da Valva Tricúspide",
+        "en": "Commissure of the Tricuspid Valve",
+        "es": "Comisura de la Válvula Tricúspide"
+      },
+      "description": {
+        "pt-BR": "Região de encontro entre cúspides da valva tricúspide, importante para a organização e o fechamento da valva.",
+        "en": "Region where the leaflets of the tricuspid valve meet, important for the structural organization and closure of the valve.",
+        "es": "Región de unión entre las valvas de la válvula tricúspide, importante para la organización estructural y el cierre de la válvula."
+      }
+    },
+    "Tricuspid_valve__commissure__020244": {
+      "objname": {
+        "pt-BR": "Comissura da Valva Tricúspide",
+        "en": "Commissure of the Tricuspid Valve",
+        "es": "Comisura de la Válvula Tricúspide"
+      },
+      "description": {
+        "pt-BR": "Região de união entre cúspides adjacentes da valva tricúspide.",
+        "en": "Region where adjacent leaflets of the tricuspid valve join.",
+        "es": "Región de unión entre las valvas adyacentes de la válvula tricúspide."
+      }
+    },
+    "Tricuspid_valve__posterior_leaflet__020238": {
+      "objname": {
+        "pt-BR": "Cúspide Posterior da Valva Tricúspide",
+        "en": "Posterior Leaflet of the Tricuspid Valve",
+        "es": "Valva Posterior de la Válvula Tricúspide"
+      },
+      "description": {
+        "pt-BR": "Uma das cúspides da valva tricúspide, auxiliando no controle do fluxo entre o átrio direito e o ventrículo direito.",
+        "en": "One of the leaflets of the tricuspid valve, assisting in the regulation of blood flow between the right atrium and the right ventricle.",
+        "es": "Una de las valvas de la válvula tricúspide, que contribuye al control del flujo sanguíneo entre la aurícula derecha y el ventrículo derecho."
+      }
+    },
+    "Tricuspid_valve__septal_leaflet__020241": {
+      "objname": {
+        "pt-BR": "Cúspide Septal da Valva Tricúspide",
+        "en": "Septal Leaflet of the Tricuspid Valve",
+        "es": "Valva Septal de la Válvula Tricúspide"
+      },
+      "description": {
+        "pt-BR": "Cúspide da valva tricúspide localizada junto ao septo interventricular e participante do fechamento da valva.",
+        "en": "Leaflet of the tricuspid valve located adjacent to the interventricular septum and involved in valve closure.",
+        "es": "Valva de la válvula tricúspide localizada junto al tabique interventricular y que participa en el cierre de la válvula."
+      }
+    },
+    "GlobVerm": {
+      "objname": {
+        "pt-BR": "Glóbulos Vermelhos",
+        "en": "Red Blood Cells",
+        "es": "Glóbulos Rojos"
+      },
+      "description": {
+        "pt-BR": "Também chamados de hemácias, são células sanguíneas responsáveis principalmente pelo transporte de oxigênio. No modelo, representam o fluxo sanguíneo pela artéria coronária, que pode ser reduzido ou interrompido quando um trombo obstrui o vaso.",
+        "en": "Also known as erythrocytes, these are blood cells primarily responsible for oxygen transport. In the model, they represent blood flow through the coronary artery, which may be reduced or interrupted when a thrombus obstructs the vessel.",
+        "es": "También llamados eritrocitos, son células sanguíneas responsables principalmente del transporte de oxígeno. En el modelo, representan el flujo sanguíneo a través de la arteria coronaria, que puede reducirse o interrumpirse cuando un trombo obstruye el vaso."
+      }
+    },
+    "RamoCoronaria": {
+      "objname": {
+        "pt-BR": "Placa Aterosclerótica Rompida",
+        "en": "Ruptured Atherosclerotic Plaque",
+        "es": "Placa Aterosclerótica Rota"
+      },
+      "description": {
+        "pt-BR": "Representação de uma placa aterosclerótica na parede da artéria coronária que sofreu ruptura. A ruptura expõe componentes da placa ao sangue e favorece a ativação das plaquetas e da coagulação, desencadeando a formação de um trombo no local.",
+        "en": "Representation of an atherosclerotic plaque in the wall of a coronary artery that has ruptured. The rupture exposes plaque components to the blood and promotes platelet activation and coagulation, triggering the formation of a thrombus at the site.",
+        "es": "Representación de una placa aterosclerótica en la pared de la arteria coronaria que ha sufrido una ruptura. La ruptura expone los componentes de la placa a la sangre y favorece la activación de las plaquetas y de la coagulación, desencadenando la formación de un trombo en el lugar."
+      }
+    },
+    "RamoTrombo": {
+      "objname": {
+        "pt-BR": "Trombo Coronário",
+        "en": "Coronary Thrombus",
+        "es": "Trombo Coronario"
+      },
+      "description": {
+        "pt-BR": "Coágulo formado sobre a região de ruptura da placa aterosclerótica. O trombo pode reduzir ou bloquear o fluxo de sangue pela artéria coronária, causando isquemia do miocárdio e, quando a interrupção é suficientemente intensa e prolongada, infarto.",
+        "en": "Blood clot formed over the rupture site of an atherosclerotic plaque. The thrombus may reduce or block blood flow through the coronary artery, causing myocardial ischemia and, when the interruption is sufficiently severe and prolonged, infarction.",
+        "es": "Coágulo formado sobre la región de ruptura de la placa aterosclerótica. El trombo puede reducir o bloquear el flujo sanguíneo a través de la arteria coronaria, causando isquemia del miocardio y, cuando la interrupción es suficientemente intensa y prolongada, infarto."
+  }
+}
   }
 }

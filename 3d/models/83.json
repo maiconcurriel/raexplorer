@@ -1,39 +1,141 @@
 {
-  "objname": "Absorção de Glicose no Diabetes Tipo 1",
+  "objname": {
+    "pt-BR": "Absorção de Glicose no Diabetes Tipo 1",
+    "en": "Glucose Absorption in Type 1 Diabetes",
+    "es": "Absorción de Glucosa en la Diabetes Tipo 1"
+  },
   "objsystem": [
     "Endócrino",
     "Célula"
   ],
-  "objdescription": "O diabetes mellitus tipo 1 é uma doença autoimune caracterizada pela destruição das células beta do pâncreas, responsáveis pela produção de insulina. A deficiência desse hormônio compromete a captação de glicose por tecidos dependentes da sinalização da insulina, especialmente músculos e tecido adiposo, contribuindo para o aumento da glicose no sangue. Em condições normais, a insulina se liga a receptores específicos na membrana plasmática, ativando mecanismos intracelulares que promovem a inserção de transportadores GLUT4 na superfície celular. Esses transportadores permitem a entrada de glicose por difusão facilitada. O modelo apresenta a membrana plasmática, representada pela bicamada de fosfolipídios em marrom, os receptores de insulina em amarelo, os transportadores de glicose em azul, as moléculas de insulina em rosa e as moléculas de glicose em verde. A animação demonstra didaticamente a relação entre a sinalização da insulina e a entrada de glicose na célula.",
+  "objdescription": {
+    "pt-BR": "O diabetes mellitus tipo 1 é uma doença autoimune caracterizada pela destruição das células beta do pâncreas, responsáveis pela produção de insulina. A deficiência desse hormônio compromete a captação de glicose por tecidos dependentes da sinalização da insulina, especialmente músculos e tecido adiposo, contribuindo para o aumento da glicose no sangue. Em condições normais, a insulina se liga a receptores específicos na membrana plasmática, ativando mecanismos intracelulares que promovem a inserção de transportadores GLUT4 na superfície celular. Esses transportadores permitem a entrada de glicose por difusão facilitada. O modelo apresenta a membrana plasmática, representada pela bicamada de fosfolipídios em marrom, os receptores de insulina em amarelo, os transportadores de glicose em azul, as moléculas de insulina em rosa e as moléculas de glicose em verde. A animação demonstra didaticamente a relação entre a sinalização da insulina e a entrada de glicose na célula.",
+    "en": "Type 1 diabetes mellitus is an autoimmune disease characterized by the destruction of pancreatic beta cells, which are responsible for insulin production. Deficiency of this hormone impairs glucose uptake by tissues that depend on insulin signaling, particularly muscle and adipose tissue, contributing to increased blood glucose levels. Under normal conditions, insulin binds to specific receptors on the plasma membrane, activating intracellular mechanisms that promote the insertion of GLUT4 transporters into the cell surface membrane. These transporters allow glucose to enter the cell through facilitated diffusion. The model presents the plasma membrane, represented by a brown phospholipid bilayer, insulin receptors in yellow, glucose transporters in blue, insulin molecules in pink, and glucose molecules in green. The animation demonstrates the relationship between insulin signaling and glucose entry into the cell for educational purposes.",
+    "es": "La diabetes mellitus tipo 1 es una enfermedad autoinmune caracterizada por la destrucción de las células beta del páncreas, responsables de la producción de insulina. La deficiencia de esta hormona compromete la captación de glucosa por los tejidos dependientes de la señalización de la insulina, especialmente los músculos y el tejido adiposo, contribuyendo al aumento de la glucosa en sangre. En condiciones normales, la insulina se une a receptores específicos de la membrana plasmática, activando mecanismos intracelulares que promueven la inserción de transportadores GLUT4 en la superficie celular. Estos transportadores permiten la entrada de glucosa mediante difusión facilitada. El modelo presenta la membrana plasmática, representada por una bicapa de fosfolípidos de color marrón, los receptores de insulina en amarillo, los transportadores de glucosa en azul, las moléculas de insulina en rosa y las moléculas de glucosa en verde. La animación demuestra de forma didáctica la relación entre la señalización de la insulina y la entrada de glucosa en la célula."
+  },
   "linkedModels": [
     {
+      "id": "25",
+      "label": {
+        "pt-BR": "Sistema Endócrino",
+        "en": "Endocrine System",
+        "es": "Sistema Endocrino"
+      }
+    },
+    {
+      "id": "65",
+      "label": {
+        "pt-BR": "Insuficiência Renal",
+        "en": "Renal Insufficiency",
+        "es": "Insuficiencia Renal"
+      }
+    },
+    {
       "id": "84",
-      "label": "Absorção diabetes tipo 2"
+      "label": {
+        "pt-BR": "Absorção de Glicose no Diabetes Tipo 2",
+        "en": "Glucose Absorption in Type 2 Diabetes",
+        "es": "Absorción de Glucosa en la Diabetes Tipo 2"
+      }
+    },
+    {
+      "id": "86",
+      "label": {
+        "pt-BR": "Absorção de Glicose",
+        "en": "Glucose Absorption",
+        "es": "Absorción de Glucosa"
+      }
+    },
+    {
+      "id": "87",
+      "label": {
+        "pt-BR": "Produção e Liberação de Glicose",
+        "en": "Glucose Production and Release",
+        "es": "Producción y Liberación de Glucosa"
+      }
+    },
+    {
+      "id": "100",
+      "label": {
+        "pt-BR": "Desenvolvimento de Necrose no Pé Diabético",
+        "en": "Development of Necrosis in the Diabetic Foot",
+        "es": "Desarrollo de Necrosis en el Pie Diabético"
+      }
     }
   ],
   "resources": [],
-  "TransportadorDeGlicoseA": {
-    "objname": "Transportador de Glicose (GLUT4)",
-    "description": "Proteína transportadora responsável por permitir a entrada de glicose em células musculares e adiposas por difusão facilitada. A insulina estimula o deslocamento de vesículas contendo GLUT4 até a membrana plasmática, aumentando a quantidade desses transportadores na superfície celular. No diabetes tipo 1, a deficiência de insulina reduz esse estímulo, prejudicando a captação de glicose por esses tecidos. No modelo, os transportadores estão representados em azul."
-  },
-  "Insulina": {
-    "objname": "Insulina",
-    "description": "Hormônio produzido pelas células beta das ilhotas pancreáticas, responsável por regular a glicemia e favorecer a utilização e o armazenamento de nutrientes. Ao se ligar ao receptor de insulina, desencadeia sinais intracelulares que estimulam a captação de glicose por músculos e tecido adiposo. No diabetes tipo 1, sua produção é muito reduzida ou ausente devido à destruição autoimune das células beta. No modelo, as moléculas de insulina estão representadas em rosa."
-  },
-  "Glicose001": {
-    "objname": "Glicose",
-    "description": "Molécula de açúcar que constitui uma importante fonte de energia para as células. A glicose circulante pode ser captada por diferentes tecidos através de proteínas transportadoras. Em músculos e tecido adiposo, a insulina estimula sua entrada ao aumentar a presença de transportadores GLUT4 na membrana plasmática. No diabetes tipo 1, a deficiência de insulina prejudica esse processo e contribui para a hiperglicemia. No modelo, a glicose está representada em verde."
-  },
-  "Glicose002": {
-    "objname": "Glicose",
-    "description": "Representação de moléculas de glicose envolvidas no processo de transporte através da membrana plasmática. A glicose atravessa a membrana com o auxílio de transportadores específicos, como o GLUT4, que permite sua entrada por difusão facilitada. A captação de glicose por músculos e tecido adiposo aumenta quando a insulina estimula a presença desses transportadores na superfície celular. No modelo, as moléculas estão representadas em verde."
-  },
-  "ReceptorDeInsulina": {
-    "objname": "Receptor de Insulina",
-    "description": "Proteína localizada na membrana plasmática que reconhece e se liga à insulina. Essa ligação ativa uma cascata de sinalização intracelular que regula diferentes processos metabólicos, incluindo o deslocamento de transportadores GLUT4 para a superfície de células musculares e adiposas. No diabetes tipo 1, os receptores geralmente permanecem funcionais, mas a deficiência de insulina reduz sua ativação. No modelo, os receptores estão representados em amarelo."
-  },
-  "OBJ": {
-  "objname": "Membrana Plasmática",
-  "description": "Estrutura que delimita a célula e controla a passagem de substâncias entre os meios intracelular e extracelular. É formada principalmente por uma bicamada de fosfolipídios, com regiões hidrofílicas voltadas para os meios aquosos e regiões hidrofóbicas direcionadas para o interior da membrana. Contém proteínas responsáveis por funções como reconhecimento de sinais e transporte de moléculas. No modelo, está representada em marrom e contém os receptores de insulina e os transportadores de glicose."
-}
+  "parts": {
+    "TransportadorDeGlicoseA": {
+      "objname": {
+        "pt-BR": "Transportador de Glicose (GLUT4)",
+        "en": "Glucose Transporter (GLUT4)",
+        "es": "Transportador de Glucosa (GLUT4)"
+      },
+      "description": {
+        "pt-BR": "Proteína transportadora responsável por permitir a entrada de glicose em células musculares e adiposas por difusão facilitada. A insulina estimula o deslocamento de vesículas contendo GLUT4 até a membrana plasmática, aumentando a quantidade desses transportadores na superfície celular. No diabetes tipo 1, a deficiência de insulina reduz esse estímulo, prejudicando a captação de glicose por esses tecidos. No modelo, os transportadores estão representados em azul.",
+        "en": "Transport protein responsible for allowing glucose to enter muscle and adipose cells through facilitated diffusion. Insulin stimulates the movement of vesicles containing GLUT4 to the plasma membrane, increasing the number of these transporters on the cell surface. In type 1 diabetes, insulin deficiency reduces this stimulus, impairing glucose uptake by these tissues. In the model, the transporters are represented in blue.",
+        "es": "Proteína transportadora responsable de permitir la entrada de glucosa en las células musculares y adiposas mediante difusión facilitada. La insulina estimula el desplazamiento de vesículas que contienen GLUT4 hacia la membrana plasmática, aumentando la cantidad de estos transportadores en la superficie celular. En la diabetes tipo 1, la deficiencia de insulina reduce este estímulo, perjudicando la captación de glucosa por estos tejidos. En el modelo, los transportadores están representados en azul."
+      }
+    },
+    "Insulina": {
+      "objname": {
+        "pt-BR": "Insulina",
+        "en": "Insulin",
+        "es": "Insulina"
+      },
+      "description": {
+        "pt-BR": "Hormônio produzido pelas células beta das ilhotas pancreáticas, responsável por regular a glicemia e favorecer a utilização e o armazenamento de nutrientes. Ao se ligar ao receptor de insulina, desencadeia sinais intracelulares que estimulam a captação de glicose por músculos e tecido adiposo. No diabetes tipo 1, sua produção é muito reduzida ou ausente devido à destruição autoimune das células beta. No modelo, as moléculas de insulina estão representadas em rosa.",
+        "en": "Hormone produced by the beta cells of the pancreatic islets, responsible for regulating blood glucose levels and promoting nutrient utilization and storage. By binding to the insulin receptor, it triggers intracellular signals that stimulate glucose uptake by muscle and adipose tissue. In type 1 diabetes, insulin production is greatly reduced or absent due to the autoimmune destruction of beta cells. In the model, insulin molecules are represented in pink.",
+        "es": "Hormona producida por las células beta de los islotes pancreáticos, responsable de regular la glucemia y favorecer la utilización y el almacenamiento de nutrientes. Al unirse al receptor de insulina, desencadena señales intracelulares que estimulan la captación de glucosa por los músculos y el tejido adiposo. En la diabetes tipo 1, su producción es muy reducida o inexistente debido a la destrucción autoinmune de las células beta. En el modelo, las moléculas de insulina están representadas en rosa."
+      }
+    },
+    "Glicose001": {
+      "objname": {
+        "pt-BR": "Glicose",
+        "en": "Glucose",
+        "es": "Glucosa"
+      },
+      "description": {
+        "pt-BR": "Molécula de açúcar que constitui uma importante fonte de energia para as células. A glicose circulante pode ser captada por diferentes tecidos através de proteínas transportadoras. Em músculos e tecido adiposo, a insulina estimula sua entrada ao aumentar a presença de transportadores GLUT4 na membrana plasmática. No diabetes tipo 1, a deficiência de insulina prejudica esse processo e contribui para a hiperglicemia. No modelo, a glicose está representada em verde.",
+        "en": "Sugar molecule that constitutes an important source of energy for cells. Circulating glucose can be taken up by different tissues through transport proteins. In muscle and adipose tissue, insulin stimulates glucose entry by increasing the presence of GLUT4 transporters in the plasma membrane. In type 1 diabetes, insulin deficiency impairs this process and contributes to hyperglycemia. In the model, glucose is represented in green.",
+        "es": "Molécula de azúcar que constituye una importante fuente de energía para las células. La glucosa circulante puede ser captada por diferentes tejidos mediante proteínas transportadoras. En los músculos y el tejido adiposo, la insulina estimula su entrada al aumentar la presencia de transportadores GLUT4 en la membrana plasmática. En la diabetes tipo 1, la deficiencia de insulina perjudica este proceso y contribuye a la hiperglucemia. En el modelo, la glucosa está representada en verde."
+      }
+    },
+    "Glicose002": {
+      "objname": {
+        "pt-BR": "Glicose",
+        "en": "Glucose",
+        "es": "Glucosa"
+      },
+      "description": {
+        "pt-BR": "Representação de moléculas de glicose envolvidas no processo de transporte através da membrana plasmática. A glicose atravessa a membrana com o auxílio de transportadores específicos, como o GLUT4, que permite sua entrada por difusão facilitada. A captação de glicose por músculos e tecido adiposo aumenta quando a insulina estimula a presença desses transportadores na superfície celular. No modelo, as moléculas estão representadas em verde.",
+        "en": "Representation of glucose molecules involved in the transport process across the plasma membrane. Glucose crosses the membrane with the assistance of specific transporters, such as GLUT4, which allows it to enter the cell through facilitated diffusion. Glucose uptake by muscle and adipose tissue increases when insulin promotes the presence of these transporters on the cell surface. In the model, the molecules are represented in green.",
+        "es": "Representación de moléculas de glucosa involucradas en el proceso de transporte a través de la membrana plasmática. La glucosa atraviesa la membrana con la ayuda de transportadores específicos, como el GLUT4, que permite su entrada mediante difusión facilitada. La captación de glucosa por los músculos y el tejido adiposo aumenta cuando la insulina estimula la presencia de estos transportadores en la superficie celular. En el modelo, las moléculas están representadas en verde."
+      }
+    },
+    "ReceptorDeInsulina": {
+      "objname": {
+        "pt-BR": "Receptor de Insulina",
+        "en": "Insulin Receptor",
+        "es": "Receptor de Insulina"
+      },
+      "description": {
+        "pt-BR": "Proteína localizada na membrana plasmática que reconhece e se liga à insulina. Essa ligação ativa uma cascata de sinalização intracelular que regula diferentes processos metabólicos, incluindo o deslocamento de transportadores GLUT4 para a superfície de células musculares e adiposas. No diabetes tipo 1, os receptores geralmente permanecem funcionais, mas a deficiência de insulina reduz sua ativação. No modelo, os receptores estão representados em amarelo.",
+        "en": "Protein located in the plasma membrane that recognizes and binds to insulin. This binding activates an intracellular signaling cascade that regulates different metabolic processes, including the translocation of GLUT4 transporters to the surface of muscle and adipose cells. In type 1 diabetes, the receptors generally remain functional, but insulin deficiency reduces their activation. In the model, the receptors are represented in yellow.",
+        "es": "Proteína localizada en la membrana plasmática que reconoce y se une a la insulina. Esta unión activa una cascada de señalización intracelular que regula diferentes procesos metabólicos, incluido el desplazamiento de transportadores GLUT4 hacia la superficie de las células musculares y adiposas. En la diabetes tipo 1, los receptores generalmente permanecen funcionales, pero la deficiencia de insulina reduce su activación. En el modelo, los receptores están representados en amarillo."
+      }
+    },
+    "OBJ": {
+      "objname": {
+        "pt-BR": "Membrana Plasmática",
+        "en": "Plasma Membrane",
+        "es": "Membrana Plasmática"
+      },
+      "description": {
+        "pt-BR": "Estrutura que delimita a célula e controla a passagem de substâncias entre os meios intracelular e extracelular. É formada principalmente por uma bicamada de fosfolipídios, com regiões hidrofílicas voltadas para os meios aquosos e regiões hidrofóbicas direcionadas para o interior da membrana. Contém proteínas responsáveis por funções como reconhecimento de sinais e transporte de moléculas. No modelo, está representada em marrom e contém os receptores de insulina e os transportadores de glicose.",
+        "en": "Structure that defines the boundaries of the cell and controls the passage of substances between the intracellular and extracellular environments. It consists primarily of a phospholipid bilayer, with hydrophilic regions facing the aqueous environments and hydrophobic regions directed toward the interior of the membrane. It contains proteins responsible for functions such as signal recognition and molecular transport. In the model, it is represented in brown and contains the insulin receptors and glucose transporters.",
+        "es": "Estructura que delimita la célula y controla el paso de sustancias entre los medios intracelular y extracelular. Está formada principalmente por una bicapa de fosfolípidos, con regiones hidrofílicas orientadas hacia los medios acuosos y regiones hidrofóbicas dirigidas hacia el interior de la membrana. Contiene proteínas responsables de funciones como el reconocimiento de señales y el transporte de moléculas. En el modelo, está representada en marrón y contiene los receptores de insulina y los transportadores de glucosa."
+      }
+    }
+  }
 }

@@ -1,67 +1,193 @@
 {
-  "objname": "Via Visual",
+  "objname": {
+    "pt-BR": "Via Visual",
+    "en": "Visual Pathway",
+    "es": "Vía Visual"
+  },
   "objsystem": [
     "Sensorial",
     "Nervoso"
   ],
-  "objdescription": "A via visual é responsável por conduzir e processar as informações captadas pelos olhos até o cérebro. A luz que alcança a retina é detectada por células fotorreceptoras e convertida em sinais nervosos, que seguem pelos nervos ópticos e por outras estruturas da via visual. Parte dessas informações é retransmitida pelo tálamo antes de alcançar o córtex visual, localizado principalmente no lobo occipital, onde ocorre o processamento de características da imagem. Na animação, a mudança de coloração dos nervos ópticos representa de forma didática a transmissão dos sinais provenientes dos olhos em direção ao cérebro.",
+  "objdescription": {
+    "pt-BR": "A via visual é responsável por conduzir e processar as informações captadas pelos olhos até o cérebro. A luz que alcança a retina é detectada por células fotorreceptoras e convertida em sinais nervosos, que seguem pelos nervos ópticos e por outras estruturas da via visual. Parte dessas informações é retransmitida pelo tálamo antes de alcançar o córtex visual, localizado principalmente no lobo occipital, onde ocorre o processamento de características da imagem. Na animação, a mudança de coloração dos nervos ópticos representa de forma didática a transmissão dos sinais provenientes dos olhos em direção ao cérebro.",
+    "en": "The visual pathway is responsible for transmitting and processing information captured by the eyes as it travels to the brain. Light reaching the retina is detected by photoreceptor cells and converted into nerve signals, which travel along the optic nerves and other structures of the visual pathway. Some of this information is relayed through the thalamus before reaching the visual cortex, located primarily in the occipital lobe, where image characteristics are processed. In the animation, changes in the coloration of the optic nerves provide an educational representation of the transmission of signals from the eyes toward the brain.",
+    "es": "La vía visual es responsable de conducir y procesar la información captada por los ojos hasta el cerebro. La luz que llega a la retina es detectada por células fotorreceptoras y convertida en señales nerviosas, que se transmiten a través de los nervios ópticos y otras estructuras de la vía visual. Parte de esta información es retransmitida por el tálamo antes de alcanzar la corteza visual, situada principalmente en el lóbulo occipital, donde se procesan las características de la imagen. En la animación, el cambio de coloración de los nervios ópticos representa de forma didáctica la transmisión de las señales procedentes de los ojos hacia el cerebro."
+  },
   "linkedModels": [
     {
-      "id": "9",
-      "label": "Olho Humano"
+      "id": "1",
+      "label": {
+        "pt-BR": "Impulso Nervoso",
+        "en": "Nerve Impulse",
+        "es": "Impulso Nervioso"
+      }
     },
     {
       "id": "2",
-      "label": "Cérebro"
+      "label": {
+        "pt-BR": "Cérebro",
+        "en": "Brain",
+        "es": "Cerebro"
+      }
+    },
+    {
+      "id": "9",
+      "label": {
+        "pt-BR": "Olho Humano",
+        "en": "Human Eye",
+        "es": "Ojo Humano"
+      }
     },
     {
       "id": "21",
-      "label": "Sistema Nervoso"
+      "label": {
+        "pt-BR": "Sistema Nervoso",
+        "en": "Nervous System",
+        "es": "Sistema Nervioso"
+      }
+    },
+    {
+      "id": "38",
+      "label": {
+        "pt-BR": "Neurotransmissores",
+        "en": "Neurotransmitters",
+        "es": "Neurotransmisores"
+      }
     }
   ],
   "resources": [],
-  "EyeL": {
-    "objname": "Olho Esquerdo",
-    "description": "Órgão responsável pela captação da luz e formação inicial da informação visual. A retina transforma os estímulos luminosos em sinais nervosos que são conduzidos pelo nervo óptico em direção ao cérebro."
-  },
-  "EyeR": {
-    "objname": "Olho Direito",
-    "description": "Órgão responsável pela captação da luz e formação inicial da informação visual. A retina transforma os estímulos luminosos em sinais nervosos que são conduzidos pelo nervo óptico em direção ao cérebro."
-  },
-  "SuperiorRectus": {
-    "objname": "Músculo Reto Superior",
-    "description": "Músculo extrínseco do olho que participa dos movimentos do globo ocular, contribuindo principalmente para sua elevação e auxiliando no direcionamento do olhar."
-  },
-  "OpticNervRY": {
-    "objname": "Nervo Óptico Direito (Ativo)",
-    "description": "Nervo responsável por conduzir informações visuais da retina do olho direito em direção ao cérebro. Na animação, a coloração amarela representa de forma didática a transmissão do sinal nervoso."
-  },
-  "OpticNervLY": {
-    "objname": "Nervo Óptico Esquerdo (Ativo)",
-    "description": "Nervo responsável por conduzir informações visuais da retina do olho esquerdo em direção ao cérebro. Na animação, a coloração amarela representa de forma didática a transmissão do sinal nervoso."
-  },
-  "OpticNervLW": {
-    "objname": "Nervo Óptico Esquerdo",
-    "description": "Nervo que conduz as informações visuais da retina do olho esquerdo em direção ao cérebro. A coloração clara representa visualmente o nervo antes ou após a passagem do sinal destacado na animação."
-  },
-  "OpticNervRW": {
-    "objname": "Nervo Óptico Direito",
-    "description": "Nervo que conduz as informações visuais da retina do olho direito em direção ao cérebro. A coloração clara representa visualmente o nervo antes ou após a passagem do sinal destacado na animação."
-  },
-  "Thalamus": {
-    "objname": "Tálamo",
-    "description": "Estrutura cerebral que atua como importante centro de retransmissão de informações sensoriais. Na via visual, uma região especializada do tálamo recebe sinais provenientes dos olhos e os encaminha para áreas do córtex cerebral responsáveis pelo processamento da visão."
-  },
-  "VisualCortex": {
-    "objname": "Córtex Visual",
-    "description": "Região localizada principalmente no lobo occipital, na parte posterior do cérebro, responsável pelo processamento das informações visuais recebidas pelas vias nervosas. Participa da análise de características como formas, cores, movimento e localização dos estímulos visuais."
-  },
-  "Head+ninteract": {
-    "objname": "Representação do Corpo Humano",
-    "description": "Representação parcialmente transparente do corpo humano utilizada para contextualizar a posição dos olhos, nervos ópticos e cérebro."
-  },
-  "Brain+ninteract": {
-    "objname": "Cérebro",
-    "description": "Órgão responsável por receber e processar as informações conduzidas pelas vias visuais, permitindo que os estímulos captados pelos olhos sejam interpretados."
+  "parts": {
+    "EyeL": {
+      "objname": {
+        "pt-BR": "Olho Esquerdo",
+        "en": "Left Eye",
+        "es": "Ojo Izquierdo"
+      },
+      "description": {
+        "pt-BR": "Órgão responsável pela captação da luz e formação inicial da informação visual. A retina transforma os estímulos luminosos em sinais nervosos que são conduzidos pelo nervo óptico em direção ao cérebro.",
+        "en": "Organ responsible for capturing light and the initial formation of visual information. The retina converts light stimuli into nerve signals that are transmitted through the optic nerve toward the brain.",
+        "es": "Órgano responsable de la captación de la luz y de la formación inicial de la información visual. La retina transforma los estímulos luminosos en señales nerviosas que son conducidas por el nervio óptico hacia el cerebro."
+      }
+    },
+    "EyeR": {
+      "objname": {
+        "pt-BR": "Olho Direito",
+        "en": "Right Eye",
+        "es": "Ojo Derecho"
+      },
+      "description": {
+        "pt-BR": "Órgão responsável pela captação da luz e formação inicial da informação visual. A retina transforma os estímulos luminosos em sinais nervosos que são conduzidos pelo nervo óptico em direção ao cérebro.",
+        "en": "Organ responsible for capturing light and the initial formation of visual information. The retina converts light stimuli into nerve signals that are transmitted through the optic nerve toward the brain.",
+        "es": "Órgano responsable de la captación de la luz y de la formación inicial de la información visual. La retina transforma los estímulos luminosos en señales nerviosas que son conducidas por el nervio óptico hacia el cerebro."
+      }
+    },
+    "SuperiorRectus": {
+      "objname": {
+        "pt-BR": "Músculo Reto Superior",
+        "en": "Superior Rectus Muscle",
+        "es": "Músculo Recto Superior"
+      },
+      "description": {
+        "pt-BR": "Músculo extrínseco do olho que participa dos movimentos do globo ocular, contribuindo principalmente para sua elevação e auxiliando no direcionamento do olhar.",
+        "en": "Extraocular muscle that participates in movements of the eyeball, contributing primarily to its elevation and assisting in directing the gaze.",
+        "es": "Músculo extrínseco del ojo que participa en los movimientos del globo ocular, contribuyendo principalmente a su elevación y ayudando a dirigir la mirada."
+      }
+    },
+    "OpticNervRY": {
+      "objname": {
+        "pt-BR": "Nervo Óptico Direito (Ativo)",
+        "en": "Right Optic Nerve (Active)",
+        "es": "Nervio Óptico Derecho (Activo)"
+      },
+      "description": {
+        "pt-BR": "Nervo responsável por conduzir informações visuais da retina do olho direito em direção ao cérebro. Na animação, a coloração amarela representa de forma didática a transmissão do sinal nervoso.",
+        "en": "Nerve responsible for transmitting visual information from the retina of the right eye toward the brain. In the animation, the yellow coloration provides an educational representation of nerve signal transmission.",
+        "es": "Nervio responsable de conducir la información visual desde la retina del ojo derecho hacia el cerebro. En la animación, la coloración amarilla representa de forma didáctica la transmisión de la señal nerviosa."
+      }
+    },
+    "OpticNervLY": {
+      "objname": {
+        "pt-BR": "Nervo Óptico Esquerdo (Ativo)",
+        "en": "Left Optic Nerve (Active)",
+        "es": "Nervio Óptico Izquierdo (Activo)"
+      },
+      "description": {
+        "pt-BR": "Nervo responsável por conduzir informações visuais da retina do olho esquerdo em direção ao cérebro. Na animação, a coloração amarela representa de forma didática a transmissão do sinal nervoso.",
+        "en": "Nerve responsible for transmitting visual information from the retina of the left eye toward the brain. In the animation, the yellow coloration provides an educational representation of nerve signal transmission.",
+        "es": "Nervio responsable de conducir la información visual desde la retina del ojo izquierdo hacia el cerebro. En la animación, la coloración amarilla representa de forma didáctica la transmisión de la señal nerviosa."
+      }
+    },
+    "OpticNervLW": {
+      "objname": {
+        "pt-BR": "Nervo Óptico Esquerdo",
+        "en": "Left Optic Nerve",
+        "es": "Nervio Óptico Izquierdo"
+      },
+      "description": {
+        "pt-BR": "Nervo que conduz as informações visuais da retina do olho esquerdo em direção ao cérebro. A coloração clara representa visualmente o nervo antes ou após a passagem do sinal destacado na animação.",
+        "en": "Nerve that transmits visual information from the retina of the left eye toward the brain. The light coloration visually represents the nerve before or after the passage of the signal highlighted in the animation.",
+        "es": "Nervio que conduce la información visual desde la retina del ojo izquierdo hacia el cerebro. La coloración clara representa visualmente el nervio antes o después del paso de la señal resaltada en la animación."
+      }
+    },
+    "OpticNervRW": {
+      "objname": {
+        "pt-BR": "Nervo Óptico Direito",
+        "en": "Right Optic Nerve",
+        "es": "Nervio Óptico Derecho"
+      },
+      "description": {
+        "pt-BR": "Nervo que conduz as informações visuais da retina do olho direito em direção ao cérebro. A coloração clara representa visualmente o nervo antes ou após a passagem do sinal destacado na animação.",
+        "en": "Nerve that transmits visual information from the retina of the right eye toward the brain. The light coloration visually represents the nerve before or after the passage of the signal highlighted in the animation.",
+        "es": "Nervio que conduce la información visual desde la retina del ojo derecho hacia el cerebro. La coloración clara representa visualmente el nervio antes o después del paso de la señal resaltada en la animación."
+      }
+    },
+    "Thalamus": {
+      "objname": {
+        "pt-BR": "Tálamo",
+        "en": "Thalamus",
+        "es": "Tálamo"
+      },
+      "description": {
+        "pt-BR": "Estrutura cerebral que atua como importante centro de retransmissão de informações sensoriais. Na via visual, uma região especializada do tálamo recebe sinais provenientes dos olhos e os encaminha para áreas do córtex cerebral responsáveis pelo processamento da visão.",
+        "en": "Brain structure that acts as an important relay center for sensory information. In the visual pathway, a specialized region of the thalamus receives signals from the eyes and relays them to areas of the cerebral cortex responsible for visual processing.",
+        "es": "Estructura cerebral que actúa como un importante centro de retransmisión de información sensorial. En la vía visual, una región especializada del tálamo recibe señales procedentes de los ojos y las dirige hacia áreas de la corteza cerebral responsables del procesamiento de la visión."
+      }
+    },
+    "VisualCortex": {
+      "objname": {
+        "pt-BR": "Córtex Visual",
+        "en": "Visual Cortex",
+        "es": "Corteza Visual"
+      },
+      "description": {
+        "pt-BR": "Região localizada principalmente no lobo occipital, na parte posterior do cérebro, responsável pelo processamento das informações visuais recebidas pelas vias nervosas. Participa da análise de características como formas, cores, movimento e localização dos estímulos visuais.",
+        "en": "Region located primarily in the occipital lobe, at the back of the brain, responsible for processing visual information received through neural pathways. It participates in the analysis of characteristics such as shapes, colors, movement, and the location of visual stimuli.",
+        "es": "Región situada principalmente en el lóbulo occipital, en la parte posterior del cerebro, responsable del procesamiento de la información visual recibida a través de las vías nerviosas. Participa en el análisis de características como las formas, los colores, el movimiento y la localización de los estímulos visuales."
+      }
+    },
+    "Head+ninteract": {
+      "objname": {
+        "pt-BR": "Representação do Corpo Humano",
+        "en": "Human Body Representation",
+        "es": "Representación del Cuerpo Humano"
+      },
+      "description": {
+        "pt-BR": "Representação parcialmente transparente do corpo humano utilizada para contextualizar a posição dos olhos, nervos ópticos e cérebro.",
+        "en": "Partially transparent representation of the human body used to provide anatomical context for the position of the eyes, optic nerves, and brain.",
+        "es": "Representación parcialmente transparente del cuerpo humano utilizada para contextualizar la posición de los ojos, los nervios ópticos y el cerebro."
+      }
+    },
+    "Brain+ninteract": {
+      "objname": {
+        "pt-BR": "Cérebro",
+        "en": "Brain",
+        "es": "Cerebro"
+      },
+      "description": {
+        "pt-BR": "Órgão responsável por receber e processar as informações conduzidas pelas vias visuais, permitindo que os estímulos captados pelos olhos sejam interpretados.",
+        "en": "Organ responsible for receiving and processing information transmitted through the visual pathways, allowing the stimuli captured by the eyes to be interpreted.",
+        "es": "Órgano responsable de recibir y procesar la información conducida por las vías visuales, permitiendo que los estímulos captados por los ojos sean interpretados."
+      }
+    }
   }
 }

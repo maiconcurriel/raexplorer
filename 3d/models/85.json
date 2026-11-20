@@ -1,22 +1,60 @@
 {
-  "objname": "Colite",
+  "objname": {
+    "pt-BR": "Colite",
+    "en": "Colitis",
+    "es": "Colitis"
+  },
   "objsystem": [
     "Digestório"
   ],
-  "objdescription": "A colite é uma condição caracterizada pela inflamação do cólon, também conhecido como intestino grosso. Pode apresentar diferentes causas, incluindo infecções, doenças inflamatórias intestinais, alterações na circulação sanguínea e reações a medicamentos. A inflamação compromete principalmente a mucosa intestinal, podendo provocar vermelhidão, edema, fragilidade dos tecidos e, em determinadas situações, erosões ou úlceras. Entre os sintomas mais comuns estão dor abdominal, diarreia, urgência para evacuar e, dependendo da causa e da gravidade, presença de sangue ou muco nas fezes. O modelo apresenta o sistema digestório com uma abertura longitudinal no intestino grosso, permitindo visualizar didaticamente sua superfície interna e as alterações inflamatórias associadas à colite. A extensão e a intensidade das lesões podem variar conforme a causa da doença.",
+  "objdescription": {
+    "pt-BR": "A colite é uma condição caracterizada pela inflamação do cólon, também conhecido como intestino grosso. Pode apresentar diferentes causas, incluindo infecções, doenças inflamatórias intestinais, alterações na circulação sanguínea e reações a medicamentos. A inflamação compromete principalmente a mucosa intestinal, podendo provocar vermelhidão, edema, fragilidade dos tecidos e, em determinadas situações, erosões ou úlceras. Entre os sintomas mais comuns estão dor abdominal, diarreia, urgência para evacuar e, dependendo da causa e da gravidade, presença de sangue ou muco nas fezes. O modelo apresenta o sistema digestório com uma abertura longitudinal no intestino grosso, permitindo visualizar didaticamente sua superfície interna e as alterações inflamatórias associadas à colite. A extensão e a intensidade das lesões podem variar conforme a causa da doença.",
+    "en": "Colitis is a condition characterized by inflammation of the colon, also known as the large intestine. It may have different causes, including infections, inflammatory bowel diseases, impaired blood circulation, and reactions to medications. Inflammation primarily affects the intestinal mucosa and may cause redness, edema, tissue fragility, and, in certain situations, erosions or ulcers. The most common symptoms include abdominal pain, diarrhea, an urgent need to defecate, and, depending on the cause and severity, the presence of blood or mucus in the stool. The model presents the digestive system with a longitudinal opening in the large intestine, allowing visualization of its inner surface and the inflammatory changes associated with colitis for educational purposes. The extent and severity of the lesions may vary depending on the cause of the disease.",
+    "es": "La colitis es una afección caracterizada por la inflamación del colon, también conocido como intestino grueso. Puede presentar diferentes causas, incluidas infecciones, enfermedades inflamatorias intestinales, alteraciones de la circulación sanguínea y reacciones a medicamentos. La inflamación afecta principalmente a la mucosa intestinal y puede provocar enrojecimiento, edema, fragilidad de los tejidos y, en determinadas situaciones, erosiones o úlceras. Entre los síntomas más comunes se encuentran el dolor abdominal, la diarrea, la urgencia para defecar y, dependiendo de la causa y la gravedad, la presencia de sangre o moco en las heces. El modelo presenta el sistema digestivo con una abertura longitudinal en el intestino grueso, permitiendo visualizar de forma didáctica su superficie interna y las alteraciones inflamatorias asociadas a la colitis. La extensión y la intensidad de las lesiones pueden variar según la causa de la enfermedad."
+  },
   "linkedModels": [
     {
       "id": "24",
-      "label": "Sistema Digestório"
+      "label": {
+        "pt-BR": "Sistema Digestório",
+        "en": "Digestive System",
+        "es": "Sistema Digestivo"
+      }
+    },
+    {
+      "id": "34",
+      "label": {
+        "pt-BR": "Dores Abdominais",
+        "en": "Abdominal Pain",
+        "es": "Dolor Abdominal"
+      }
     }
   ],
   "resources": [],
-  "Mesh+Mesh_1": {
-    "objname": "Intestino Grosso com Colite",
-    "description": "Representação do intestino grosso com uma abertura longitudinal que permite observar sua superfície interna. O cólon é responsável principalmente pela absorção de água e eletrólitos, além da formação e do transporte das fezes. Na colite, sua mucosa apresenta inflamação, que pode provocar vermelhidão, inchaço, fragilidade e, em casos mais intensos, erosões ou ulcerações. No modelo, a região aberta destaca didaticamente a superfície intestinal potencialmente afetada, permitindo compreender a localização das alterações inflamatórias."
-  },
-  "Skin+nisolar+ninteract": {
-    "objname": "Pele",
-    "description": ""
+  "parts": {
+    "Mesh+Mesh_1": {
+      "objname": {
+        "pt-BR": "Intestino Grosso com Colite",
+        "en": "Large Intestine with Colitis",
+        "es": "Intestino Grueso con Colitis"
+      },
+      "description": {
+        "pt-BR": "Representação do intestino grosso com uma abertura longitudinal que permite observar sua superfície interna. O cólon é responsável principalmente pela absorção de água e eletrólitos, além da formação e do transporte das fezes. Na colite, sua mucosa apresenta inflamação, que pode provocar vermelhidão, inchaço, fragilidade e, em casos mais intensos, erosões ou ulcerações. No modelo, a região aberta destaca didaticamente a superfície intestinal potencialmente afetada, permitindo compreender a localização das alterações inflamatórias.",
+        "en": "Representation of the large intestine with a longitudinal opening that allows observation of its inner surface. The colon is primarily responsible for the absorption of water and electrolytes, as well as the formation and transport of feces. In colitis, its mucosa becomes inflamed, which may cause redness, swelling, tissue fragility, and, in more severe cases, erosions or ulcerations. In the model, the open region highlights the potentially affected intestinal surface for educational purposes, helping to understand the location of the inflammatory changes.",
+        "es": "Representación del intestino grueso con una abertura longitudinal que permite observar su superficie interna. El colon es responsable principalmente de la absorción de agua y electrolitos, además de la formación y el transporte de las heces. En la colitis, su mucosa presenta inflamación, que puede provocar enrojecimiento, hinchazón, fragilidad y, en casos más graves, erosiones o ulceraciones. En el modelo, la región abierta destaca de forma didáctica la superficie intestinal potencialmente afectada, permitiendo comprender la localización de las alteraciones inflamatorias."
+      }
+    },
+    "Skin+nisolar+ninteract": {
+      "objname": {
+        "pt-BR": "Pele",
+        "en": "Skin",
+        "es": "Piel"
+      },
+      "description": {
+        "pt-BR": "",
+        "en": "",
+        "es": ""
+      }
+    }
   }
 }

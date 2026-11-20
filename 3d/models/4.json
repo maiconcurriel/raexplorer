@@ -36,24 +36,57 @@
         "en": "Venous System",
         "es": "Sistema venoso"
       }
-    }
-  ],
-  "resources": [
+    },
     {
-      "type": "image",
-      "url": "coracao.png",
-      "name": {
-        "pt-BR": "Coração",
-        "en": "Heart",
-        "es": "Corazón"
-      },
-      "info": {
-        "pt-BR": "Imagem",
-        "en": "Image",
-        "es": "Imagen"
+      "id": "32",
+      "label": {
+        "pt-BR": "Sistema Cardiovascular",
+        "en": "Cardiovascular System",
+        "es": "Sistema Cardiovascular"
+      }
+    },
+    {
+      "id": "42",
+      "label": {
+        "pt-BR": "Estenose Aórtica",
+        "en": "Aortic Stenosis",
+        "es": "Estenosis Aórtica"
+      }
+    },
+    {
+      "id": "55",
+      "label": {
+        "pt-BR": "Ablação Septal com Álcool",
+        "en": "Alcohol Septal Ablation",
+        "es": "Ablación Septal con Alcohol"
+      }
+    },
+    {
+      "id": "56",
+      "label": {
+        "pt-BR": "Infarto do Miocárdio",
+        "en": "Myocardial Infarction",
+        "es": "Infarto de Miocardio"
+      }
+    },
+    {
+      "id": "67",
+      "label": {
+        "pt-BR": "Dinâmica Respiratória com o Coração",
+        "en": "Respiratory Dynamics with the Heart",
+        "es": "Dinámica Respiratoria con el Corazón"
+      }
+    },
+    {
+      "id": "71",
+      "label": {
+        "pt-BR": "Pressão Arterial",
+        "en": "Blood Pressure",
+        "es": "Presión Arterial"
       }
     }
   ],
+  "resources": [],
   "parts": {
     "Anterior_artery_of_right_ventricle__020246": {
       "objname": {

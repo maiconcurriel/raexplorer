@@ -1,154 +1,508 @@
 {
-  "objname": "Sistema Cardiovascular",
+  "objname": {
+    "pt-BR": "Sistema Cardiovascular",
+    "en": "Cardiovascular System",
+    "es": "Sistema Cardiovascular"
+  },
   "objsystem": [
     "Cardiovascular"
   ],
-  "objdescription": "O sistema cardiovascular é responsável pela circulação do sangue por todo o organismo, garantindo o transporte de oxigênio, nutrientes, hormônios e outras substâncias aos tecidos, além da remoção de dióxido de carbono e resíduos metabólicos. É formado pelo coração e pelos vasos sanguíneos, incluindo artérias, veias e capilares. O coração atua como uma bomba que mantém o sangue em circulação por meio dos circuitos pulmonar e sistêmico. O modelo permite explorar a distribuição dos principais vasos sanguíneos pelo corpo e visualizar estruturas cardíacas relacionadas à entrada, saída e direcionamento do sangue, facilitando a compreensão da organização e do funcionamento desse sistema.",
+  "objdescription": {
+    "pt-BR": "O sistema cardiovascular é responsável pela circulação do sangue por todo o organismo, garantindo o transporte de oxigênio, nutrientes, hormônios e outras substâncias aos tecidos, além da remoção de dióxido de carbono e resíduos metabólicos. É formado pelo coração e pelos vasos sanguíneos, incluindo artérias, veias e capilares. O coração atua como uma bomba que mantém o sangue em circulação por meio dos circuitos pulmonar e sistêmico. O modelo permite explorar a distribuição dos principais vasos sanguíneos pelo corpo e visualizar estruturas cardíacas relacionadas à entrada, saída e direcionamento do sangue, facilitando a compreensão da organização e do funcionamento desse sistema.",
+    "en": "The cardiovascular system is responsible for circulating blood throughout the body, ensuring the transport of oxygen, nutrients, hormones, and other substances to tissues, as well as the removal of carbon dioxide and metabolic waste. It consists of the heart and blood vessels, including arteries, veins, and capillaries. The heart acts as a pump that maintains blood circulation through the pulmonary and systemic circuits. The model allows exploration of the distribution of the main blood vessels throughout the body and visualization of cardiac structures associated with the entry, exit, and direction of blood flow, facilitating an understanding of the organization and functioning of this system.",
+    "es": "El sistema cardiovascular es responsable de la circulación de la sangre por todo el organismo, garantizando el transporte de oxígeno, nutrientes, hormonas y otras sustancias a los tejidos, además de la eliminación de dióxido de carbono y residuos metabólicos. Está formado por el corazón y los vasos sanguíneos, incluidas las arterias, las venas y los capilares. El corazón actúa como una bomba que mantiene la sangre en circulación a través de los circuitos pulmonar y sistémico. El modelo permite explorar la distribución de los principales vasos sanguíneos por el cuerpo y visualizar las estructuras cardíacas relacionadas con la entrada, salida y dirección del flujo sanguíneo, facilitando la comprensión de la organización y el funcionamiento de este sistema."
+  },
   "linkedModels": [
     {
       "id": "4",
-      "label": "Coração"
+      "label": {
+        "pt-BR": "Coração",
+        "en": "Heart",
+        "es": "Corazón"
+      }
     },
     {
       "id": "5",
-      "label": "Coração (Animado)"
+      "label": {
+        "pt-BR": "Coração (Animado)",
+        "en": "Heart (Animated)",
+        "es": "Corazón (Animado)"
+      }
+    },
+    {
+      "id": "18",
+      "label": {
+        "pt-BR": "Sistema Linfático",
+        "en": "Lymphatic System",
+        "es": "Sistema Linfático"
+      }
     },
     {
       "id": "19",
-      "label": "Sistema Arterial"
+      "label": {
+        "pt-BR": "Sistema Arterial",
+        "en": "Arterial System",
+        "es": "Sistema Arterial"
+      }
     },
     {
       "id": "20",
-      "label": "Sistema Venoso"
+      "label": {
+        "pt-BR": "Sistema Venoso",
+        "en": "Venous System",
+        "es": "Sistema Venoso"
+      }
+    },
+    {
+      "id": "46",
+      "label": {
+        "pt-BR": "Artéria",
+        "en": "Artery",
+        "es": "Arteria"
+      }
+    },
+    {
+      "id": "55",
+      "label": {
+        "pt-BR": "Ablação Septal com Álcool",
+        "en": "Alcohol Septal Ablation",
+        "es": "Ablación Septal con Alcohol"
+      }
+    },
+    {
+      "id": "56",
+      "label": {
+        "pt-BR": "Infarto do Miocárdio",
+        "en": "Myocardial Infarction",
+        "es": "Infarto de Miocardio"
+      }
+    },
+    {
+      "id": "57",
+      "label": {
+        "pt-BR": "Aterosclerose",
+        "en": "Atherosclerosis",
+        "es": "Aterosclerosis"
+      }
+    },
+    {
+      "id": "58",
+      "label": {
+        "pt-BR": "Anticoagulantes",
+        "en": "Anticoagulants",
+        "es": "Anticoagulantes"
+      }
+    },
+    {
+      "id": "67",
+      "label": {
+        "pt-BR": "Dinâmica Respiratória com o Coração",
+        "en": "Respiratory Dynamics with the Heart",
+        "es": "Dinámica Respiratoria con el Corazón"
+      }
+    },
+    {
+      "id": "71",
+      "label": {
+        "pt-BR": "Pressão Arterial",
+        "en": "Blood Pressure",
+        "es": "Presión Arterial"
+      }
+    },
+    {
+      "id": "92",
+      "label": {
+        "pt-BR": "Linfedema",
+        "en": "Lymphedema",
+        "es": "Linfedema"
+      }
     }
   ],
   "resources": [],
-  "Abdomenaortaabdominalisarteries": {
-    "objname": "Artérias do Abdômen",
-    "description": "Conjunto de artérias que percorrem a região abdominal e distribuem sangue para órgãos, tecidos e estruturas da parede abdominal."
-  },
-  "Aorticarteries": {
-    "objname": "Artérias da Aorta",
-    "description": "Principais ramos arteriais originados da aorta, responsáveis por distribuir sangue rico em oxigênio para diferentes regiões do organismo."
-  },
-  "Gutarteries": {
-    "objname": "Artérias do Intestino",
-    "description": "Artérias que fornecem sangue ao intestino, levando oxigênio e nutrientes necessários para o funcionamento dos tecidos intestinais."
-  },
-  "Headneckarteries": {
-    "objname": "Artérias da Cabeça e Pescoço",
-    "description": "Conjunto de artérias que transportam sangue para o cérebro, face, pescoço e outras estruturas da região."
-  },
-  "Kidneyarteries": {
-    "objname": "Artérias Renais",
-    "description": "Artérias responsáveis por levar sangue aos rins, onde ele é filtrado para a formação da urina e manutenção do equilíbrio do organismo."
-  },
-  "Liverarteries": {
-    "objname": "Artérias do Fígado",
-    "description": "Vasos arteriais que fornecem sangue oxigenado ao fígado, contribuindo para a manutenção e funcionamento de seus tecidos."
-  },
-  "Lowerlimbarteries": {
-    "objname": "Artérias dos Membros Inferiores",
-    "description": "Conjunto de artérias que distribuem sangue para as regiões da coxa, perna e pé."
-  },
-  "Pelvisarteries": {
-    "objname": "Artérias da Pelve",
-    "description": "Artérias que distribuem sangue para os órgãos pélvicos, paredes da pelve e estruturas próximas."
-  },
-  "Pulmonaryinferiorarteries": {
-    "objname": "Artérias Pulmonares Inferiores",
-    "description": "Ramos arteriais que conduzem sangue do coração em direção às regiões inferiores dos pulmões para a realização das trocas gasosas."
-  },
-  "Pulmonarysuperiorarteries": {
-    "objname": "Artérias Pulmonares Superiores",
-    "description": "Ramos arteriais que conduzem sangue do coração em direção às regiões superiores dos pulmões para a realização das trocas gasosas."
-  },
-  "thoraxarteries": {
-    "objname": "Artérias do Tórax",
-    "description": "Conjunto de artérias que fornecem sangue às estruturas do tórax, incluindo a parede torácica e órgãos da região."
-  },
-  "Upperlimbarteries": {
-    "objname": "Artérias dos Membros Superiores",
-    "description": "Conjunto de artérias que distribuem sangue para os braços, antebraços, mãos e estruturas associadas."
-  },
-  "abdomeninferiorvenacavavVeins": {
-    "objname": "Veias do Abdômen e Veia Cava Inferior",
-    "description": "Conjunto de veias que drenam o sangue da região abdominal e de outras áreas inferiores do corpo, conduzindo-o em direção ao coração."
-  },
-  "GutVeins": {
-    "objname": "Veias do Intestino",
-    "description": "Veias responsáveis pela drenagem do sangue proveniente do intestino, conduzindo-o principalmente em direção ao sistema venoso do fígado."
-  },
-  "Headneck001Veins": {
-    "objname": "Veias da Cabeça e Pescoço",
-    "description": "Conjunto de veias que drenam o sangue da cabeça, face e pescoço, conduzindo-o em direção às grandes veias que chegam ao coração."
-  },
-  "KidneyVeins": {
-    "objname": "Veias Renais",
-    "description": "Veias que drenam o sangue dos rins e o conduzem em direção à veia cava inferior."
-  },
-  "LiverVeins": {
-    "objname": "Veias do Fígado",
-    "description": "Veias responsáveis por drenar o sangue do fígado e conduzi-lo à veia cava inferior."
-  },
-  "LowerlimbVeins": {
-    "objname": "Veias dos Membros Inferiores",
-    "description": "Conjunto de veias que drenam o sangue das pernas e pés, conduzindo-o de volta em direção ao coração."
-  },
-  "PelvisVeins": {
-    "objname": "Veias da Pelve",
-    "description": "Veias responsáveis pela drenagem dos órgãos, tecidos e estruturas da região pélvica."
-  },
-  "PulmonaryVeins": {
-    "objname": "Veias Pulmonares",
-    "description": "Veias que transportam o sangue oxigenado dos pulmões até o átrio esquerdo do coração."
-  },
-  "SuperiorvenacavaVeins": {
-    "objname": "Veia Cava Superior",
-    "description": "Grande veia que recebe o sangue proveniente da cabeça, pescoço, membros superiores e parte do tórax, levando-o ao átrio direito."
-  },
-  "thoraxVeins": {
-    "objname": "Veias do Tórax",
-    "description": "Conjunto de veias que drenam o sangue das estruturas do tórax e o conduzem em direção às grandes veias que chegam ao coração."
-  },
-  "UpperlimbVeins": {
-    "objname": "Veias dos Membros Superiores",
-    "description": "Conjunto de veias que drenam o sangue dos braços, antebraços e mãos, conduzindo-o de volta em direção ao coração."
-  },
-  "Aortaa": {
-    "objname": "Aorta",
-    "description": "Maior artéria do corpo, responsável por receber o sangue bombeado pelo ventrículo esquerdo e distribuí-lo por meio de seus ramos para o organismo."
-  },
-  "Aortic_valve": {
-    "objname": "Valva Aórtica",
-    "description": "Valva localizada entre o ventrículo esquerdo e a aorta. Abre durante a contração do coração para permitir a saída do sangue e fecha para impedir seu retorno ao ventrículo."
-  },
-  "Back_Heart": {
-    "objname": "Parte Posterior do Coração",
-    "description": "Representação da região posterior do coração, permitindo visualizar estruturas cardíacas e vasos que se encontram na parte de trás do órgão."
-  },
-  "Capslice_Type2": {
-    "objname": "Corte do Coração",
-    "description": "Seção do coração que permite visualizar estruturas internas do órgão, incluindo suas cavidades e componentes relacionados à passagem do sangue."
-  },
-  "Mitral_valve": {
-    "objname": "Valva Mitral",
-    "description": "Valva localizada entre o átrio esquerdo e o ventrículo esquerdo. Permite a passagem do sangue para o ventrículo e impede seu retorno durante a contração cardíaca."
-  },
-  "Pulmonary_valve": {
-    "objname": "Valva Pulmonar",
-    "description": "Valva localizada entre o ventrículo direito e a artéria pulmonar. Permite a saída do sangue em direção aos pulmões e impede seu retorno ao ventrículo."
-  },
-  "Pulmonary_vein": {
-    "objname": "Veia Pulmonar",
-    "description": "Vaso que transporta o sangue oxigenado dos pulmões até o átrio esquerdo do coração."
-  },
-  "Pulmoneryartery": {
-    "objname": "Artéria Pulmonar",
-    "description": "Vaso que conduz o sangue do ventrículo direito em direção aos pulmões, onde ocorre a troca de gases e a oxigenação do sangue."
-  },
-  "Tricuspic_valve": {
-    "objname": "Valva Tricúspide",
-    "description": "Valva localizada entre o átrio direito e o ventrículo direito. Permite a passagem do sangue para o ventrículo e impede seu retorno durante a contração cardíaca."
+  "parts": {
+    "Abdomenaortaabdominalisarteries": {
+      "objname": {
+        "pt-BR": "Artérias do Abdômen",
+        "en": "Abdominal Arteries",
+        "es": "Arterias del Abdomen"
+      },
+      "description": {
+        "pt-BR": "Conjunto de artérias que percorrem a região abdominal e distribuem sangue para órgãos, tecidos e estruturas da parede abdominal.",
+        "en": "Group of arteries that run through the abdominal region and distribute blood to organs, tissues, and structures of the abdominal wall.",
+        "es": "Conjunto de arterias que recorren la región abdominal y distribuyen sangre a los órganos, tejidos y estructuras de la pared abdominal."
+      }
+    },
+    "Aorticarteries": {
+      "objname": {
+        "pt-BR": "Artérias da Aorta",
+        "en": "Aortic Arteries",
+        "es": "Arterias de la Aorta"
+      },
+      "description": {
+        "pt-BR": "Principais ramos arteriais originados da aorta, responsáveis por distribuir sangue rico em oxigênio para diferentes regiões do organismo.",
+        "en": "Main arterial branches originating from the aorta, responsible for distributing oxygen-rich blood to different regions of the body.",
+        "es": "Principales ramas arteriales que se originan en la aorta, responsables de distribuir sangre rica en oxígeno a diferentes regiones del organismo."
+      }
+    },
+    "Gutarteries": {
+      "objname": {
+        "pt-BR": "Artérias do Intestino",
+        "en": "Intestinal Arteries",
+        "es": "Arterias del Intestino"
+      },
+      "description": {
+        "pt-BR": "Artérias que fornecem sangue ao intestino, levando oxigênio e nutrientes necessários para o funcionamento dos tecidos intestinais.",
+        "en": "Arteries that supply blood to the intestine, delivering oxygen and nutrients necessary for the functioning of intestinal tissues.",
+        "es": "Arterias que suministran sangre al intestino, transportando el oxígeno y los nutrientes necesarios para el funcionamiento de los tejidos intestinales."
+      }
+    },
+    "Headneckarteries": {
+      "objname": {
+        "pt-BR": "Artérias da Cabeça e Pescoço",
+        "en": "Arteries of the Head and Neck",
+        "es": "Arterias de la Cabeza y del Cuello"
+      },
+      "description": {
+        "pt-BR": "Conjunto de artérias que transportam sangue para o cérebro, face, pescoço e outras estruturas da região.",
+        "en": "Group of arteries that carry blood to the brain, face, neck, and other structures of the region.",
+        "es": "Conjunto de arterias que transportan sangre al cerebro, la cara, el cuello y otras estructuras de la región."
+      }
+    },
+    "Kidneyarteries": {
+      "objname": {
+        "pt-BR": "Artérias Renais",
+        "en": "Renal Arteries",
+        "es": "Arterias Renales"
+      },
+      "description": {
+        "pt-BR": "Artérias responsáveis por levar sangue aos rins, onde ele é filtrado para a formação da urina e manutenção do equilíbrio do organismo.",
+        "en": "Arteries responsible for carrying blood to the kidneys, where it is filtered for urine formation and the maintenance of physiological balance.",
+        "es": "Arterias responsables de transportar sangre a los riñones, donde se filtra para la formación de la orina y el mantenimiento del equilibrio del organismo."
+      }
+    },
+    "Liverarteries": {
+      "objname": {
+        "pt-BR": "Artérias do Fígado",
+        "en": "Hepatic Arteries",
+        "es": "Arterias Hepáticas"
+      },
+      "description": {
+        "pt-BR": "Vasos arteriais que fornecem sangue oxigenado ao fígado, contribuindo para a manutenção e funcionamento de seus tecidos.",
+        "en": "Arterial vessels that supply oxygenated blood to the liver, contributing to the maintenance and functioning of its tissues.",
+        "es": "Vasos arteriales que suministran sangre oxigenada al hígado, contribuyendo al mantenimiento y funcionamiento de sus tejidos."
+      }
+    },
+    "Lowerlimbarteries": {
+      "objname": {
+        "pt-BR": "Artérias dos Membros Inferiores",
+        "en": "Arteries of the Lower Limbs",
+        "es": "Arterias de los Miembros Inferiores"
+      },
+      "description": {
+        "pt-BR": "Conjunto de artérias que distribuem sangue para as regiões da coxa, perna e pé.",
+        "en": "Group of arteries that distribute blood to the thigh, lower leg, and foot regions.",
+        "es": "Conjunto de arterias que distribuyen sangre a las regiones del muslo, la pierna y el pie."
+      }
+    },
+    "Pelvisarteries": {
+      "objname": {
+        "pt-BR": "Artérias da Pelve",
+        "en": "Pelvic Arteries",
+        "es": "Arterias de la Pelvis"
+      },
+      "description": {
+        "pt-BR": "Artérias que distribuem sangue para os órgãos pélvicos, paredes da pelve e estruturas próximas.",
+        "en": "Arteries that distribute blood to the pelvic organs, pelvic walls, and nearby structures.",
+        "es": "Arterias que distribuyen sangre a los órganos pélvicos, las paredes de la pelvis y las estructuras cercanas."
+      }
+    },
+    "Pulmonaryinferiorarteries": {
+      "objname": {
+        "pt-BR": "Artérias Pulmonares Inferiores",
+        "en": "Inferior Pulmonary Arteries",
+        "es": "Arterias Pulmonares Inferiores"
+      },
+      "description": {
+        "pt-BR": "Ramos arteriais que conduzem sangue do coração em direção às regiões inferiores dos pulmões para a realização das trocas gasosas.",
+        "en": "Arterial branches that carry blood from the heart to the lower regions of the lungs for gas exchange.",
+        "es": "Ramas arteriales que conducen sangre desde el corazón hacia las regiones inferiores de los pulmones para realizar el intercambio gaseoso."
+      }
+    },
+    "Pulmonarysuperiorarteries": {
+      "objname": {
+        "pt-BR": "Artérias Pulmonares Superiores",
+        "en": "Superior Pulmonary Arteries",
+        "es": "Arterias Pulmonares Superiores"
+      },
+      "description": {
+        "pt-BR": "Ramos arteriais que conduzem sangue do coração em direção às regiões superiores dos pulmões para a realização das trocas gasosas.",
+        "en": "Arterial branches that carry blood from the heart to the upper regions of the lungs for gas exchange.",
+        "es": "Ramas arteriales que conducen sangre desde el corazón hacia las regiones superiores de los pulmones para realizar el intercambio gaseoso."
+      }
+    },
+    "thoraxarteries": {
+      "objname": {
+        "pt-BR": "Artérias do Tórax",
+        "en": "Thoracic Arteries",
+        "es": "Arterias del Tórax"
+      },
+      "description": {
+        "pt-BR": "Conjunto de artérias que fornecem sangue às estruturas do tórax, incluindo a parede torácica e órgãos da região.",
+        "en": "Group of arteries that supply blood to thoracic structures, including the chest wall and organs of the region.",
+        "es": "Conjunto de arterias que suministran sangre a las estructuras del tórax, incluida la pared torácica y los órganos de la región."
+      }
+    },
+    "Upperlimbarteries": {
+      "objname": {
+        "pt-BR": "Artérias dos Membros Superiores",
+        "en": "Arteries of the Upper Limbs",
+        "es": "Arterias de los Miembros Superiores"
+      },
+      "description": {
+        "pt-BR": "Conjunto de artérias que distribuem sangue para os braços, antebraços, mãos e estruturas associadas.",
+        "en": "Group of arteries that distribute blood to the arms, forearms, hands, and associated structures.",
+        "es": "Conjunto de arterias que distribuyen sangre a los brazos, antebrazos, manos y estructuras asociadas."
+      }
+    },
+    "abdomeninferiorvenacavavVeins": {
+      "objname": {
+        "pt-BR": "Veias do Abdômen e Veia Cava Inferior",
+        "en": "Abdominal Veins and Inferior Vena Cava",
+        "es": "Venas del Abdomen y Vena Cava Inferior"
+      },
+      "description": {
+        "pt-BR": "Conjunto de veias que drenam o sangue da região abdominal e de outras áreas inferiores do corpo, conduzindo-o em direção ao coração.",
+        "en": "Group of veins that drain blood from the abdominal region and other lower areas of the body, carrying it toward the heart.",
+        "es": "Conjunto de venas que drenan la sangre de la región abdominal y de otras áreas inferiores del cuerpo, conduciéndola hacia el corazón."
+      }
+    },
+    "GutVeins": {
+      "objname": {
+        "pt-BR": "Veias do Intestino",
+        "en": "Intestinal Veins",
+        "es": "Venas del Intestino"
+      },
+      "description": {
+        "pt-BR": "Veias responsáveis pela drenagem do sangue proveniente do intestino, conduzindo-o principalmente em direção ao sistema venoso do fígado.",
+        "en": "Veins responsible for draining blood from the intestine, carrying it primarily toward the venous system of the liver.",
+        "es": "Venas responsables del drenaje de la sangre procedente del intestino, conduciéndola principalmente hacia el sistema venoso del hígado."
+      }
+    },
+    "Headneck001Veins": {
+      "objname": {
+        "pt-BR": "Veias da Cabeça e Pescoço",
+        "en": "Veins of the Head and Neck",
+        "es": "Venas de la Cabeza y del Cuello"
+      },
+      "description": {
+        "pt-BR": "Conjunto de veias que drenam o sangue da cabeça, face e pescoço, conduzindo-o em direção às grandes veias que chegam ao coração.",
+        "en": "Group of veins that drain blood from the head, face, and neck, carrying it toward the large veins that enter the heart.",
+        "es": "Conjunto de venas que drenan la sangre de la cabeza, la cara y el cuello, conduciéndola hacia las grandes venas que llegan al corazón."
+      }
+    },
+    "KidneyVeins": {
+      "objname": {
+        "pt-BR": "Veias Renais",
+        "en": "Renal Veins",
+        "es": "Venas Renales"
+      },
+      "description": {
+        "pt-BR": "Veias que drenam o sangue dos rins e o conduzem em direção à veia cava inferior.",
+        "en": "Veins that drain blood from the kidneys and carry it toward the inferior vena cava.",
+        "es": "Venas que drenan la sangre de los riñones y la conducen hacia la vena cava inferior."
+      }
+    },
+    "LiverVeins": {
+      "objname": {
+        "pt-BR": "Veias do Fígado",
+        "en": "Hepatic Veins",
+        "es": "Venas Hepáticas"
+      },
+      "description": {
+        "pt-BR": "Veias responsáveis por drenar o sangue do fígado e conduzi-lo à veia cava inferior.",
+        "en": "Veins responsible for draining blood from the liver and carrying it to the inferior vena cava.",
+        "es": "Venas responsables de drenar la sangre del hígado y conducirla hacia la vena cava inferior."
+      }
+    },
+    "LowerlimbVeins": {
+      "objname": {
+        "pt-BR": "Veias dos Membros Inferiores",
+        "en": "Veins of the Lower Limbs",
+        "es": "Venas de los Miembros Inferiores"
+      },
+      "description": {
+        "pt-BR": "Conjunto de veias que drenam o sangue das pernas e pés, conduzindo-o de volta em direção ao coração.",
+        "en": "Group of veins that drain blood from the legs and feet, carrying it back toward the heart.",
+        "es": "Conjunto de venas que drenan la sangre de las piernas y los pies, conduciéndola de regreso hacia el corazón."
+      }
+    },
+    "PelvisVeins": {
+      "objname": {
+        "pt-BR": "Veias da Pelve",
+        "en": "Pelvic Veins",
+        "es": "Venas de la Pelvis"
+      },
+      "description": {
+        "pt-BR": "Veias responsáveis pela drenagem dos órgãos, tecidos e estruturas da região pélvica.",
+        "en": "Veins responsible for draining blood from the organs, tissues, and structures of the pelvic region.",
+        "es": "Venas responsables del drenaje sanguíneo de los órganos, tejidos y estructuras de la región pélvica."
+      }
+    },
+    "PulmonaryVeins": {
+      "objname": {
+        "pt-BR": "Veias Pulmonares",
+        "en": "Pulmonary Veins",
+        "es": "Venas Pulmonares"
+      },
+      "description": {
+        "pt-BR": "Veias que transportam o sangue oxigenado dos pulmões até o átrio esquerdo do coração.",
+        "en": "Veins that transport oxygenated blood from the lungs to the left atrium of the heart.",
+        "es": "Venas que transportan la sangre oxigenada desde los pulmones hasta la aurícula izquierda del corazón."
+      }
+    },
+    "SuperiorvenacavaVeins": {
+      "objname": {
+        "pt-BR": "Veia Cava Superior",
+        "en": "Superior Vena Cava",
+        "es": "Vena Cava Superior"
+      },
+      "description": {
+        "pt-BR": "Grande veia que recebe o sangue proveniente da cabeça, pescoço, membros superiores e parte do tórax, levando-o ao átrio direito.",
+        "en": "Large vein that receives blood from the head, neck, upper limbs, and part of the thorax, carrying it to the right atrium.",
+        "es": "Gran vena que recibe la sangre procedente de la cabeza, el cuello, los miembros superiores y parte del tórax, conduciéndola hasta la aurícula derecha."
+      }
+    },
+    "thoraxVeins": {
+      "objname": {
+        "pt-BR": "Veias do Tórax",
+        "en": "Thoracic Veins",
+        "es": "Venas del Tórax"
+      },
+      "description": {
+        "pt-BR": "Conjunto de veias que drenam o sangue das estruturas do tórax e o conduzem em direção às grandes veias que chegam ao coração.",
+        "en": "Group of veins that drain blood from thoracic structures and carry it toward the large veins that enter the heart.",
+        "es": "Conjunto de venas que drenan la sangre de las estructuras del tórax y la conducen hacia las grandes venas que llegan al corazón."
+      }
+    },
+    "UpperlimbVeins": {
+      "objname": {
+        "pt-BR": "Veias dos Membros Superiores",
+        "en": "Veins of the Upper Limbs",
+        "es": "Venas de los Miembros Superiores"
+      },
+      "description": {
+        "pt-BR": "Conjunto de veias que drenam o sangue dos braços, antebraços e mãos, conduzindo-o de volta em direção ao coração.",
+        "en": "Group of veins that drain blood from the arms, forearms, and hands, carrying it back toward the heart.",
+        "es": "Conjunto de venas que drenan la sangre de los brazos, antebrazos y manos, conduciéndola de regreso hacia el corazón."
+      }
+    },
+    "Aortaa": {
+      "objname": {
+        "pt-BR": "Aorta",
+        "en": "Aorta",
+        "es": "Aorta"
+      },
+      "description": {
+        "pt-BR": "Maior artéria do corpo, responsável por receber o sangue bombeado pelo ventrículo esquerdo e distribuí-lo por meio de seus ramos para o organismo.",
+        "en": "Largest artery in the body, responsible for receiving blood pumped by the left ventricle and distributing it throughout the body through its branches.",
+        "es": "Mayor arteria del cuerpo, responsable de recibir la sangre bombeada por el ventrículo izquierdo y distribuirla por todo el organismo mediante sus ramas."
+      }
+    },
+    "Aortic_valve": {
+      "objname": {
+        "pt-BR": "Valva Aórtica",
+        "en": "Aortic Valve",
+        "es": "Válvula Aórtica"
+      },
+      "description": {
+        "pt-BR": "Valva localizada entre o ventrículo esquerdo e a aorta. Abre durante a contração do coração para permitir a saída do sangue e fecha para impedir seu retorno ao ventrículo.",
+        "en": "Valve located between the left ventricle and the aorta. It opens during cardiac contraction to allow blood to flow out and closes to prevent its return to the ventricle.",
+        "es": "Válvula situada entre el ventrículo izquierdo y la aorta. Se abre durante la contracción cardíaca para permitir la salida de la sangre y se cierra para impedir su retorno al ventrículo."
+      }
+    },
+    "Back_Heart": {
+      "objname": {
+        "pt-BR": "Parte Posterior do Coração",
+        "en": "Posterior Part of the Heart",
+        "es": "Parte Posterior del Corazón"
+      },
+      "description": {
+        "pt-BR": "Representação da região posterior do coração, permitindo visualizar estruturas cardíacas e vasos que se encontram na parte de trás do órgão.",
+        "en": "Representation of the posterior region of the heart, allowing visualization of cardiac structures and vessels located at the back of the organ.",
+        "es": "Representación de la región posterior del corazón, que permite visualizar las estructuras cardíacas y los vasos situados en la parte posterior del órgano."
+      }
+    },
+    "Capslice_Type2": {
+      "objname": {
+        "pt-BR": "Corte do Coração",
+        "en": "Section of the Heart",
+        "es": "Corte del Corazón"
+      },
+      "description": {
+        "pt-BR": "Seção do coração que permite visualizar estruturas internas do órgão, incluindo suas cavidades e componentes relacionados à passagem do sangue.",
+        "en": "Section of the heart that allows visualization of the internal structures of the organ, including its chambers and components associated with blood flow.",
+        "es": "Sección del corazón que permite visualizar las estructuras internas del órgano, incluidas sus cavidades y los componentes relacionados con el paso de la sangre."
+      }
+    },
+    "Mitral_valve": {
+      "objname": {
+        "pt-BR": "Valva Mitral",
+        "en": "Mitral Valve",
+        "es": "Válvula Mitral"
+      },
+      "description": {
+        "pt-BR": "Valva localizada entre o átrio esquerdo e o ventrículo esquerdo. Permite a passagem do sangue para o ventrículo e impede seu retorno durante a contração cardíaca.",
+        "en": "Valve located between the left atrium and the left ventricle. It allows blood to flow into the ventricle and prevents backflow during cardiac contraction.",
+        "es": "Válvula situada entre la aurícula izquierda y el ventrículo izquierdo. Permite el paso de la sangre hacia el ventrículo e impide su retorno durante la contracción cardíaca."
+      }
+    },
+    "Pulmonary_valve": {
+      "objname": {
+        "pt-BR": "Valva Pulmonar",
+        "en": "Pulmonary Valve",
+        "es": "Válvula Pulmonar"
+      },
+      "description": {
+        "pt-BR": "Valva localizada entre o ventrículo direito e a artéria pulmonar. Permite a saída do sangue em direção aos pulmões e impede seu retorno ao ventrículo.",
+        "en": "Valve located between the right ventricle and the pulmonary artery. It allows blood to flow toward the lungs and prevents its return to the ventricle.",
+        "es": "Válvula situada entre el ventrículo derecho y la arteria pulmonar. Permite la salida de la sangre hacia los pulmones e impide su retorno al ventrículo."
+      }
+    },
+    "Pulmonary_vein": {
+      "objname": {
+        "pt-BR": "Veia Pulmonar",
+        "en": "Pulmonary Vein",
+        "es": "Vena Pulmonar"
+      },
+      "description": {
+        "pt-BR": "Vaso que transporta o sangue oxigenado dos pulmões até o átrio esquerdo do coração.",
+        "en": "Blood vessel that transports oxygenated blood from the lungs to the left atrium of the heart.",
+        "es": "Vaso sanguíneo que transporta la sangre oxigenada desde los pulmones hasta la aurícula izquierda del corazón."
+      }
+    },
+    "Pulmoneryartery": {
+      "objname": {
+        "pt-BR": "Artéria Pulmonar",
+        "en": "Pulmonary Artery",
+        "es": "Arteria Pulmonar"
+      },
+      "description": {
+        "pt-BR": "Vaso que conduz o sangue do ventrículo direito em direção aos pulmões, onde ocorre a troca de gases e a oxigenação do sangue.",
+        "en": "Blood vessel that carries blood from the right ventricle toward the lungs, where gas exchange and blood oxygenation occur.",
+        "es": "Vaso sanguíneo que conduce la sangre desde el ventrículo derecho hacia los pulmones, donde se producen el intercambio gaseoso y la oxigenación de la sangre."
+      }
+    },
+    "Tricuspic_valve": {
+      "objname": {
+        "pt-BR": "Valva Tricúspide",
+        "en": "Tricuspid Valve",
+        "es": "Válvula Tricúspide"
+      },
+      "description": {
+        "pt-BR": "Valva localizada entre o átrio direito e o ventrículo direito. Permite a passagem do sangue para o ventrículo e impede seu retorno durante a contração cardíaca.",
+        "en": "Valve located between the right atrium and the right ventricle. It allows blood to flow into the ventricle and prevents backflow during cardiac contraction.",
+        "es": "Válvula situada entre la aurícula derecha y el ventrículo derecho. Permite el paso de la sangre hacia el ventrículo e impide su retorno durante la contracción cardíaca."
+      }
+    }
   }
 }

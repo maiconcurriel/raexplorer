@@ -1,17 +1,68 @@
 {
-  "objname": "Sarcoma de Kaposi",
+  "objname": {
+    "pt-BR": "Sarcoma de Kaposi",
+    "en": "Kaposi Sarcoma",
+    "es": "Sarcoma de Kaposi"
+  },
   "objsystem": [
     "Tegumentar"
   ],
-  "objdescription": "O Sarcoma de Kaposi é uma neoplasia vascular associada à infecção pelo herpesvírus humano tipo 8 (HHV-8), caracterizada pela proliferação anormal de células relacionadas ao revestimento dos vasos sanguíneos e linfáticos. Pode provocar o surgimento de manchas, placas ou nódulos na pele, geralmente com coloração avermelhada, violácea ou acastanhada. As lesões podem aparecer em diferentes regiões do corpo e, em alguns casos, comprometer mucosas, linfonodos e órgãos internos. A doença pode ocorrer em diferentes contextos, sendo especialmente importante em pessoas com imunossupressão, incluindo aquelas com HIV/AIDS. O modelo representa didaticamente múltiplas lesões cutâneas associadas ao Sarcoma de Kaposi, distribuídas principalmente pelo tronco e membros superiores.",
-  "linkedModels": [],
-  "resources": [],
-  "Skin+ninteract": {
-    "objname": "Pele",
-    "description": ""
+  "objdescription": {
+    "pt-BR": "O Sarcoma de Kaposi é uma neoplasia vascular associada à infecção pelo herpesvírus humano tipo 8 (HHV-8), caracterizada pela proliferação anormal de células relacionadas ao revestimento dos vasos sanguíneos e linfáticos. Pode provocar o surgimento de manchas, placas ou nódulos na pele, geralmente com coloração avermelhada, violácea ou acastanhada. As lesões podem aparecer em diferentes regiões do corpo e, em alguns casos, comprometer mucosas, linfonodos e órgãos internos. A doença pode ocorrer em diferentes contextos, sendo especialmente importante em pessoas com imunossupressão, incluindo aquelas com HIV/AIDS. O modelo representa didaticamente múltiplas lesões cutâneas associadas ao Sarcoma de Kaposi, distribuídas principalmente pelo tronco e membros superiores.",
+    "en": "Kaposi sarcoma is a vascular neoplasm associated with infection by human herpesvirus type 8 (HHV-8), characterized by the abnormal proliferation of cells associated with the lining of blood and lymphatic vessels. It may cause the appearance of spots, plaques, or nodules on the skin, usually reddish, purplish, or brownish in color. Lesions may appear in different regions of the body and, in some cases, affect mucous membranes, lymph nodes, and internal organs. The disease may occur in different clinical settings and is particularly significant in people with immunosuppression, including those with HIV/AIDS. The model provides an educational representation of multiple cutaneous lesions associated with Kaposi sarcoma, distributed primarily across the trunk and upper limbs.",
+    "es": "El sarcoma de Kaposi es una neoplasia vascular asociada a la infección por el herpesvirus humano tipo 8 (HHV-8), caracterizada por la proliferación anormal de células relacionadas con el revestimiento de los vasos sanguíneos y linfáticos. Puede provocar la aparición de manchas, placas o nódulos en la piel, generalmente de coloración rojiza, violácea o parduzca. Las lesiones pueden aparecer en diferentes regiones del cuerpo y, en algunos casos, afectar a las mucosas, los ganglios linfáticos y los órganos internos. La enfermedad puede presentarse en diferentes contextos clínicos y es especialmente relevante en personas con inmunosupresión, incluidas aquellas con VIH/SIDA. El modelo representa de forma didáctica múltiples lesiones cutáneas asociadas al sarcoma de Kaposi, distribuidas principalmente por el tronco y los miembros superiores."
   },
-  "Sarcoma+nisolar": {
-    "objname": "Lesões Cutâneas do Sarcoma de Kaposi",
-    "description": "Representação de lesões cutâneas provocadas pelo Sarcoma de Kaposi, uma neoplasia caracterizada pela proliferação anormal de células associadas aos vasos sanguíneos e linfáticos. Essas lesões podem apresentar-se como manchas, placas ou nódulos de coloração avermelhada, violácea ou acastanhada, variando em tamanho, quantidade e distribuição. No modelo, as regiões destacadas representam didaticamente manifestações da doença na superfície da pele."
+  "linkedModels": [
+    {
+      "id": "15",
+      "label": {
+        "pt-BR": "Anatomia das Camadas da Pele Humana",
+        "en": "Anatomy of Human Skin Layers",
+        "es": "Anatomía de las Capas de la Piel Humana"
+      }
+    },
+    {
+      "id": "18",
+      "label": {
+        "pt-BR": "Sistema Linfático",
+        "en": "Lymphatic System",
+        "es": "Sistema Linfático"
+      }
+    },
+    {
+      "id": "81",
+      "label": {
+        "pt-BR": "Sarcoma de Kaposi: Comprometimento de Órgãos Internos",
+        "en": "Kaposi Sarcoma: Internal Organ Involvement",
+        "es": "Sarcoma de Kaposi: Afectación de Órganos Internos"
+      }
+    }
+  ],
+  "resources": [],
+  "parts": {
+    "Skin+ninteract": {
+      "objname": {
+        "pt-BR": "Pele",
+        "en": "Skin",
+        "es": "Piel"
+      },
+      "description": {
+        "pt-BR": "",
+        "en": "",
+        "es": ""
+      }
+    },
+    "Sarcoma+nisolar": {
+      "objname": {
+        "pt-BR": "Lesões Cutâneas do Sarcoma de Kaposi",
+        "en": "Cutaneous Lesions of Kaposi Sarcoma",
+        "es": "Lesiones Cutáneas del Sarcoma de Kaposi"
+      },
+      "description": {
+        "pt-BR": "Representação de lesões cutâneas provocadas pelo Sarcoma de Kaposi, uma neoplasia caracterizada pela proliferação anormal de células associadas aos vasos sanguíneos e linfáticos. Essas lesões podem apresentar-se como manchas, placas ou nódulos de coloração avermelhada, violácea ou acastanhada, variando em tamanho, quantidade e distribuição. No modelo, as regiões destacadas representam didaticamente manifestações da doença na superfície da pele.",
+        "en": "Representation of cutaneous lesions caused by Kaposi sarcoma, a neoplasm characterized by the abnormal proliferation of cells associated with blood and lymphatic vessels. These lesions may appear as reddish, purplish, or brownish spots, plaques, or nodules, varying in size, number, and distribution. In the model, the highlighted regions provide an educational representation of manifestations of the disease on the skin surface.",
+        "es": "Representación de lesiones cutáneas provocadas por el sarcoma de Kaposi, una neoplasia caracterizada por la proliferación anormal de células asociadas a los vasos sanguíneos y linfáticos. Estas lesiones pueden presentarse como manchas, placas o nódulos de coloración rojiza, violácea o parduzca, variando en tamaño, cantidad y distribución. En el modelo, las regiones destacadas representan de forma didáctica las manifestaciones de la enfermedad en la superficie de la piel."
+      }
+    }
   }
 }

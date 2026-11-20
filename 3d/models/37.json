@@ -1,42 +1,116 @@
 {
-  "objname": "AVC Hemorrágico",
+  "objname": {
+    "pt-BR": "AVC Hemorrágico",
+    "en": "Hemorrhagic Stroke",
+    "es": "Accidente Cerebrovascular Hemorrágico"
+  },
   "objsystem": [
     "Nervoso"
   ],
-  "objdescription": "O AVC hemorrágico ocorre quando um vaso sanguíneo no cérebro se rompe, provocando o extravasamento de sangue para o tecido cerebral ou para regiões próximas. O acúmulo de sangue pode aumentar a pressão sobre as estruturas cerebrais e causar danos às células nervosas, comprometendo as funções da região afetada. O modelo representa a hemorragia e a área do cérebro atingida, permitindo visualizar a relação entre o rompimento do vaso sanguíneo, o extravasamento de sangue e os danos provocados ao tecido cerebral.",
+  "objdescription": {
+    "pt-BR": "O AVC hemorrágico ocorre quando um vaso sanguíneo no cérebro se rompe, provocando o extravasamento de sangue para o tecido cerebral ou para regiões próximas. O acúmulo de sangue pode aumentar a pressão sobre as estruturas cerebrais e causar danos às células nervosas, comprometendo as funções da região afetada. O modelo representa a hemorragia e a área do cérebro atingida, permitindo visualizar a relação entre o rompimento do vaso sanguíneo, o extravasamento de sangue e os danos provocados ao tecido cerebral.",
+    "en": "Hemorrhagic stroke occurs when a blood vessel in the brain ruptures, causing blood to leak into the brain tissue or surrounding regions. The accumulation of blood may increase pressure on brain structures and damage nerve cells, impairing the functions of the affected region. The model represents the hemorrhage and the affected area of the brain, allowing visualization of the relationship between blood vessel rupture, blood leakage, and the resulting damage to brain tissue.",
+    "es": "El accidente cerebrovascular hemorrágico ocurre cuando se rompe un vaso sanguíneo en el cerebro, provocando la extravasación de sangre hacia el tejido cerebral o las regiones cercanas. La acumulación de sangre puede aumentar la presión sobre las estructuras cerebrales y causar daños en las células nerviosas, comprometiendo las funciones de la región afectada. El modelo representa la hemorragia y el área del cerebro afectada, permitiendo visualizar la relación entre la rotura del vaso sanguíneo, la extravasación de sangre y los daños provocados en el tejido cerebral."
+  },
   "linkedModels": [
     {
       "id": "2",
-      "label": "Cérebro"
-    },
-    {
-      "id": "21",
-      "label": "Sistema Nervoso"
+      "label": {
+        "pt-BR": "Cérebro",
+        "en": "Brain",
+        "es": "Cerebro"
+      }
     },
     {
       "id": "19",
-      "label": "Sistema Arterial"
+      "label": {
+        "pt-BR": "Sistema Arterial",
+        "en": "Arterial System",
+        "es": "Sistema Arterial"
+      }
+    },
+    {
+      "id": "21",
+      "label": {
+        "pt-BR": "Sistema Nervoso",
+        "en": "Nervous System",
+        "es": "Sistema Nervioso"
+      }
     },
     {
       "id": "36",
-      "label": "AVC Isquêmico"
+      "label": {
+        "pt-BR": "AVC Isquêmico",
+        "en": "Ischemic Stroke",
+        "es": "Accidente Cerebrovascular Isquémico"
+      }
+    },
+    {
+      "id": "58",
+      "label": {
+        "pt-BR": "Anticoagulantes",
+        "en": "Anticoagulants",
+        "es": "Anticoagulantes"
+      }
+    },
+    {
+      "id": "71",
+      "label": {
+        "pt-BR": "Pressão Arterial",
+        "en": "Blood Pressure",
+        "es": "Presión Arterial"
+      }
     }
   ],
   "resources": [],
-  "hemorr_1+hemorr_2": {
-    "objname": "Hemorragia",
-    "description": "Extravasamento de sangue causado pelo rompimento de um vaso sanguíneo. No AVC hemorrágico, o sangue se acumula no interior ou ao redor do tecido cerebral, podendo exercer pressão sobre as estruturas próximas e provocar danos às células nervosas."
-  },
-  "arteries": {
-    "objname": "Artérias",
-    "description": "Vasos sanguíneos responsáveis por transportar o sangue do coração para os tecidos do organismo. No modelo, representam os vasos que irrigam o cérebro e estão relacionados à ocorrência da hemorragia."
-  },
-  "brain+ninteract": {
-    "objname": "Cérebro",
-    "description": "Órgão do sistema nervoso central responsável por funções como movimento, sensibilidade, linguagem, memória e controle de diversas atividades do organismo. No modelo, permite visualizar a região cerebral afetada pela hemorragia."
-  },
-  "braindan": {
-    "objname": "Área do Tecido Cerebral Afetada pela Hemorragia",
-    "description": "Região do tecido cerebral atingida pelo extravasamento de sangue. O acúmulo de sangue pode comprimir estruturas próximas e causar danos às células nervosas, comprometendo o funcionamento da área afetada."
+  "parts": {
+    "hemorr_1+hemorr_2": {
+      "objname": {
+        "pt-BR": "Hemorragia",
+        "en": "Hemorrhage",
+        "es": "Hemorragia"
+      },
+      "description": {
+        "pt-BR": "Extravasamento de sangue causado pelo rompimento de um vaso sanguíneo. No AVC hemorrágico, o sangue se acumula no interior ou ao redor do tecido cerebral, podendo exercer pressão sobre as estruturas próximas e provocar danos às células nervosas.",
+        "en": "Leakage of blood caused by the rupture of a blood vessel. In hemorrhagic stroke, blood accumulates within or around brain tissue, potentially exerting pressure on nearby structures and causing damage to nerve cells.",
+        "es": "Extravasación de sangre causada por la rotura de un vaso sanguíneo. En el accidente cerebrovascular hemorrágico, la sangre se acumula en el interior o alrededor del tejido cerebral, pudiendo ejercer presión sobre las estructuras cercanas y provocar daños en las células nerviosas."
+      }
+    },
+    "arteries": {
+      "objname": {
+        "pt-BR": "Artérias",
+        "en": "Arteries",
+        "es": "Arterias"
+      },
+      "description": {
+        "pt-BR": "Vasos sanguíneos responsáveis por transportar o sangue do coração para os tecidos do organismo. No modelo, representam os vasos que irrigam o cérebro e estão relacionados à ocorrência da hemorragia.",
+        "en": "Blood vessels responsible for transporting blood from the heart to the tissues of the body. In the model, they represent the vessels that supply blood to the brain and are associated with the occurrence of the hemorrhage.",
+        "es": "Vasos sanguíneos responsables de transportar la sangre desde el corazón hacia los tejidos del organismo. En el modelo, representan los vasos que irrigan el cerebro y están relacionados con la aparición de la hemorragia."
+      }
+    },
+    "brain+ninteract": {
+      "objname": {
+        "pt-BR": "Cérebro",
+        "en": "Brain",
+        "es": "Cerebro"
+      },
+      "description": {
+        "pt-BR": "Órgão do sistema nervoso central responsável por funções como movimento, sensibilidade, linguagem, memória e controle de diversas atividades do organismo. No modelo, permite visualizar a região cerebral afetada pela hemorragia.",
+        "en": "Organ of the central nervous system responsible for functions such as movement, sensation, language, memory, and the control of various bodily activities. In the model, it allows visualization of the region of the brain affected by the hemorrhage.",
+        "es": "Órgano del sistema nervioso central responsable de funciones como el movimiento, la sensibilidad, el lenguaje, la memoria y el control de diversas actividades del organismo. En el modelo, permite visualizar la región cerebral afectada por la hemorragia."
+      }
+    },
+    "braindan": {
+      "objname": {
+        "pt-BR": "Área do Tecido Cerebral Afetada pela Hemorragia",
+        "en": "Area of Brain Tissue Affected by Hemorrhage",
+        "es": "Área del Tejido Cerebral Afectada por la Hemorragia"
+      },
+      "description": {
+        "pt-BR": "Região do tecido cerebral atingida pelo extravasamento de sangue. O acúmulo de sangue pode comprimir estruturas próximas e causar danos às células nervosas, comprometendo o funcionamento da área afetada.",
+        "en": "Region of brain tissue affected by blood leakage. The accumulation of blood may compress nearby structures and damage nerve cells, impairing the functioning of the affected area.",
+        "es": "Región del tejido cerebral afectada por la extravasación de sangre. La acumulación de sangre puede comprimir las estructuras cercanas y causar daños en las células nerviosas, comprometiendo el funcionamiento del área afectada."
+      }
+    }
   }
 }

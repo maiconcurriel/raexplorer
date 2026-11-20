@@ -1,50 +1,152 @@
 {
-  "objname": "Paralisia Cerebral",
+  "objname": {
+    "pt-BR": "Paralisia Cerebral",
+    "en": "Cerebral Palsy",
+    "es": "Parálisis Cerebral"
+  },
   "objsystem": [
     "Nervoso"
   ],
-  "objdescription": "A paralisia cerebral é um grupo de alterações permanentes que afetam principalmente o movimento, a postura e a coordenação, resultantes de lesões ou alterações ocorridas no cérebro em desenvolvimento. Dependendo da região cerebral afetada e da extensão da lesão, podem ocorrer diferentes manifestações motoras, como fraqueza, alterações do tônus muscular, dificuldades de equilíbrio e movimentos involuntários. Algumas formas de paralisia cerebral estão associadas a lesões da substância branca, tecido formado principalmente por fibras nervosas responsáveis pela comunicação entre diferentes regiões do sistema nervoso. Alterações próximas aos ventrículos cerebrais também podem comprometer fibras relacionadas ao controle motor. Neste modelo, a região afetada é representada no hemisfério cerebral esquerdo, com destaque para a substância branca danificada e para o ventrículo lateral esquerdo. Outras estruturas relacionadas ao processamento, coordenação e regulação dos movimentos são apresentadas para contextualizar os circuitos motores envolvidos.",
+  "objdescription": {
+    "pt-BR": "A paralisia cerebral é um grupo de alterações permanentes que afetam principalmente o movimento, a postura e a coordenação, resultantes de lesões ou alterações ocorridas no cérebro em desenvolvimento. Dependendo da região cerebral afetada e da extensão da lesão, podem ocorrer diferentes manifestações motoras, como fraqueza, alterações do tônus muscular, dificuldades de equilíbrio e movimentos involuntários. Algumas formas de paralisia cerebral estão associadas a lesões da substância branca, tecido formado principalmente por fibras nervosas responsáveis pela comunicação entre diferentes regiões do sistema nervoso. Alterações próximas aos ventrículos cerebrais também podem comprometer fibras relacionadas ao controle motor. Neste modelo, a região afetada é representada no hemisfério cerebral esquerdo, com destaque para a substância branca danificada e para o ventrículo lateral esquerdo. Outras estruturas relacionadas ao processamento, coordenação e regulação dos movimentos são apresentadas para contextualizar os circuitos motores envolvidos.",
+    "en": "Cerebral palsy is a group of permanent disorders that primarily affect movement, posture, and coordination, resulting from injuries or abnormalities occurring in the developing brain. Depending on the affected brain region and the extent of the injury, different motor manifestations may occur, such as weakness, changes in muscle tone, balance difficulties, and involuntary movements. Some forms of cerebral palsy are associated with white matter injuries. White matter is tissue composed primarily of nerve fibers responsible for communication between different regions of the nervous system. Abnormalities near the cerebral ventricles may also impair fibers associated with motor control. In this model, the affected region is represented in the left cerebral hemisphere, highlighting the damaged white matter and the left lateral ventricle. Other structures associated with the processing, coordination, and regulation of movements are presented to provide anatomical context for the motor circuits involved.",
+    "es": "La parálisis cerebral es un grupo de alteraciones permanentes que afectan principalmente al movimiento, la postura y la coordinación, resultantes de lesiones o alteraciones ocurridas en el cerebro en desarrollo. Dependiendo de la región cerebral afectada y de la extensión de la lesión, pueden presentarse diferentes manifestaciones motoras, como debilidad, alteraciones del tono muscular, dificultades de equilibrio y movimientos involuntarios. Algunas formas de parálisis cerebral están asociadas a lesiones de la sustancia blanca, tejido formado principalmente por fibras nerviosas responsables de la comunicación entre diferentes regiones del sistema nervioso. Las alteraciones cercanas a los ventrículos cerebrales también pueden comprometer las fibras relacionadas con el control motor. En este modelo, la región afectada se representa en el hemisferio cerebral izquierdo, destacando la sustancia blanca dañada y el ventrículo lateral izquierdo. Se presentan otras estructuras relacionadas con el procesamiento, la coordinación y la regulación de los movimientos para contextualizar los circuitos motores involucrados."
+  },
   "linkedModels": [
     {
       "id": "2",
-      "label": "Cérebro"
+      "label": {
+        "pt-BR": "Cérebro",
+        "en": "Brain",
+        "es": "Cerebro"
+      }
+    },
+    {
+      "id": "21",
+      "label": {
+        "pt-BR": "Sistema Nervoso",
+        "en": "Nervous System",
+        "es": "Sistema Nervioso"
+      }
+    },
+    {
+      "id": "72",
+      "label": {
+        "pt-BR": "Ciclo da Marcha",
+        "en": "Gait Cycle",
+        "es": "Ciclo de la Marcha"
+      }
     }
   ],
   "resources": [],
-  "MatBranca": {
-    "objname": "Substância Branca Danificada",
-    "description": "Representação de uma área de substância branca cerebral afetada no hemisfério esquerdo. A substância branca contém fibras nervosas que conectam diferentes regiões do cérebro. Lesões nessas fibras podem prejudicar a transmissão dos sinais relacionados ao controle dos movimentos, contribuindo para alterações motoras."
-  },
-  "CerebroL": {
-    "objname": "Hemisfério Cerebral Esquerdo",
-    "description": "Hemisfério cerebral no qual o modelo representa a região de substância branca afetada. Lesões em áreas responsáveis pelas vias motoras podem comprometer o controle dos movimentos, frequentemente produzindo manifestações mais evidentes no lado oposto do corpo."
-  },
-  "Cérebro+ninteract": {
-    "objname": "Cérebro",
-    "description": "Representação do cérebro utilizada como referência anatômica para demonstrar a localização da área afetada e sua relação com outras estruturas cerebrais. Esta estrutura não possui interação no modelo."
-  },
-  "Head+ninteract": {
-    "objname": "Cérebro",
-    "description": "Representação do cérebro utilizada como referência anatômica para demonstrar a localização da área afetada e sua relação com outras estruturas cerebrais. Esta estrutura não possui interação no modelo."
-  },
-  "VentriculoLatEsq": {
-    "objname": "Ventrículo Lateral Esquerdo",
-    "description": "Cavidade localizada no interior do hemisfério cerebral esquerdo e preenchida por líquido cefalorraquidiano. No modelo, serve como referência para a localização da lesão na substância branca próxima ao ventrículo, região que pode ser afetada em determinados padrões de lesão cerebral relacionados à paralisia cerebral."
-  },
-  "Talamo": {
-    "objname": "Tálamo",
-    "description": "Estrutura cerebral que participa da integração e retransmissão de informações sensoriais e motoras entre diferentes regiões do sistema nervoso. Suas conexões com o córtex, cerebelo e núcleos da base contribuem para os circuitos envolvidos no planejamento e controle dos movimentos."
-  },
-  "Putamen": {
-    "objname": "Putâmen",
-    "description": "Estrutura pertencente aos núcleos da base e envolvida na regulação dos movimentos. Participa de circuitos responsáveis pela seleção, iniciação e ajuste da atividade motora. Alterações nos circuitos dos núcleos da base podem estar relacionadas a dificuldades no controle dos movimentos e do tônus muscular."
-  },
-  "GloboPalido": {
-    "objname": "Globo Pálido",
-    "description": "Componente dos núcleos da base que participa da regulação da atividade motora. Atua em circuitos que modulam os sinais enviados às áreas responsáveis pelo movimento, contribuindo para controlar a intensidade e a execução adequada das ações motoras."
-  },
-  "Cerebelo": {
-    "objname": "Cerebelo",
-    "description": "Estrutura fundamental para a coordenação dos movimentos, equilíbrio, postura e aprendizagem motora. Compara informações relacionadas ao movimento planejado e executado, contribuindo para ajustes de precisão. Alterações que envolvem seus circuitos podem produzir dificuldades de equilíbrio, coordenação e controle motor."
+  "parts": {
+    "MatBranca": {
+      "objname": {
+        "pt-BR": "Substância Branca Danificada",
+        "en": "Damaged White Matter",
+        "es": "Sustancia Blanca Dañada"
+      },
+      "description": {
+        "pt-BR": "Representação de uma área de substância branca cerebral afetada no hemisfério esquerdo. A substância branca contém fibras nervosas que conectam diferentes regiões do cérebro. Lesões nessas fibras podem prejudicar a transmissão dos sinais relacionados ao controle dos movimentos, contribuindo para alterações motoras.",
+        "en": "Representation of an affected area of cerebral white matter in the left hemisphere. White matter contains nerve fibers that connect different regions of the brain. Injuries to these fibers may impair the transmission of signals associated with movement control, contributing to motor impairments.",
+        "es": "Representación de un área de sustancia blanca cerebral afectada en el hemisferio izquierdo. La sustancia blanca contiene fibras nerviosas que conectan diferentes regiones del cerebro. Las lesiones en estas fibras pueden perjudicar la transmisión de las señales relacionadas con el control de los movimientos, contribuyendo a las alteraciones motoras."
+      }
+    },
+    "CerebroL": {
+      "objname": {
+        "pt-BR": "Hemisfério Cerebral Esquerdo",
+        "en": "Left Cerebral Hemisphere",
+        "es": "Hemisferio Cerebral Izquierdo"
+      },
+      "description": {
+        "pt-BR": "Hemisfério cerebral no qual o modelo representa a região de substância branca afetada. Lesões em áreas responsáveis pelas vias motoras podem comprometer o controle dos movimentos, frequentemente produzindo manifestações mais evidentes no lado oposto do corpo.",
+        "en": "Cerebral hemisphere in which the model represents the affected white matter region. Injuries to areas associated with motor pathways may impair movement control, frequently producing more noticeable manifestations on the opposite side of the body.",
+        "es": "Hemisferio cerebral en el que el modelo representa la región de sustancia blanca afectada. Las lesiones en áreas responsables de las vías motoras pueden comprometer el control de los movimientos, produciendo frecuentemente manifestaciones más evidentes en el lado opuesto del cuerpo."
+      }
+    },
+    "Cérebro+ninteract": {
+      "objname": {
+        "pt-BR": "Cérebro",
+        "en": "Brain",
+        "es": "Cerebro"
+      },
+      "description": {
+        "pt-BR": "Representação do cérebro utilizada como referência anatômica para demonstrar a localização da área afetada e sua relação com outras estruturas cerebrais. Esta estrutura não possui interação no modelo.",
+        "en": "Representation of the brain used as an anatomical reference to demonstrate the location of the affected area and its relationship with other brain structures. This structure is non-interactive in the model.",
+        "es": "Representación del cerebro utilizada como referencia anatómica para demostrar la localización del área afectada y su relación con otras estructuras cerebrales. Esta estructura no es interactiva en el modelo."
+      }
+    },
+    "Head+ninteract": {
+      "objname": {
+        "pt-BR": "Cérebro",
+        "en": "Brain",
+        "es": "Cerebro"
+      },
+      "description": {
+        "pt-BR": "Representação do cérebro utilizada como referência anatômica para demonstrar a localização da área afetada e sua relação com outras estruturas cerebrais. Esta estrutura não possui interação no modelo.",
+        "en": "Representation of the brain used as an anatomical reference to demonstrate the location of the affected area and its relationship with other brain structures. This structure is non-interactive in the model.",
+        "es": "Representación del cerebro utilizada como referencia anatómica para demostrar la localización del área afectada y su relación con otras estructuras cerebrales. Esta estructura no es interactiva en el modelo."
+      }
+    },
+    "VentriculoLatEsq": {
+      "objname": {
+        "pt-BR": "Ventrículo Lateral Esquerdo",
+        "en": "Left Lateral Ventricle",
+        "es": "Ventrículo Lateral Izquierdo"
+      },
+      "description": {
+        "pt-BR": "Cavidade localizada no interior do hemisfério cerebral esquerdo e preenchida por líquido cefalorraquidiano. No modelo, serve como referência para a localização da lesão na substância branca próxima ao ventrículo, região que pode ser afetada em determinados padrões de lesão cerebral relacionados à paralisia cerebral.",
+        "en": "Cavity located within the left cerebral hemisphere and filled with cerebrospinal fluid. In the model, it serves as an anatomical reference for locating the white matter injury near the ventricle, a region that may be affected in certain patterns of brain injury associated with cerebral palsy.",
+        "es": "Cavidad situada en el interior del hemisferio cerebral izquierdo y llena de líquido cefalorraquídeo. En el modelo, sirve como referencia para localizar la lesión en la sustancia blanca cercana al ventrículo, región que puede verse afectada en determinados patrones de lesión cerebral relacionados con la parálisis cerebral."
+      }
+    },
+    "Talamo": {
+      "objname": {
+        "pt-BR": "Tálamo",
+        "en": "Thalamus",
+        "es": "Tálamo"
+      },
+      "description": {
+        "pt-BR": "Estrutura cerebral que participa da integração e retransmissão de informações sensoriais e motoras entre diferentes regiões do sistema nervoso. Suas conexões com o córtex, cerebelo e núcleos da base contribuem para os circuitos envolvidos no planejamento e controle dos movimentos.",
+        "en": "Brain structure involved in integrating and relaying sensory and motor information between different regions of the nervous system. Its connections with the cerebral cortex, cerebellum, and basal ganglia contribute to circuits involved in movement planning and control.",
+        "es": "Estructura cerebral que participa en la integración y retransmisión de información sensorial y motora entre diferentes regiones del sistema nervioso. Sus conexiones con la corteza cerebral, el cerebelo y los ganglios basales contribuyen a los circuitos involucrados en la planificación y el control de los movimientos."
+      }
+    },
+    "Putamen": {
+      "objname": {
+        "pt-BR": "Putâmen",
+        "en": "Putamen",
+        "es": "Putamen"
+      },
+      "description": {
+        "pt-BR": "Estrutura pertencente aos núcleos da base e envolvida na regulação dos movimentos. Participa de circuitos responsáveis pela seleção, iniciação e ajuste da atividade motora. Alterações nos circuitos dos núcleos da base podem estar relacionadas a dificuldades no controle dos movimentos e do tônus muscular.",
+        "en": "Structure belonging to the basal ganglia and involved in movement regulation. It participates in circuits responsible for the selection, initiation, and adjustment of motor activity. Abnormalities in basal ganglia circuits may be associated with difficulties in controlling movements and muscle tone.",
+        "es": "Estructura perteneciente a los ganglios basales e involucrada en la regulación de los movimientos. Participa en circuitos responsables de la selección, iniciación y ajuste de la actividad motora. Las alteraciones en los circuitos de los ganglios basales pueden estar relacionadas con dificultades en el control de los movimientos y del tono muscular."
+      }
+    },
+    "GloboPalido": {
+      "objname": {
+        "pt-BR": "Globo Pálido",
+        "en": "Globus Pallidus",
+        "es": "Globo Pálido"
+      },
+      "description": {
+        "pt-BR": "Componente dos núcleos da base que participa da regulação da atividade motora. Atua em circuitos que modulam os sinais enviados às áreas responsáveis pelo movimento, contribuindo para controlar a intensidade e a execução adequada das ações motoras.",
+        "en": "Component of the basal ganglia involved in the regulation of motor activity. It functions within circuits that modulate signals sent to areas responsible for movement, contributing to the control of the intensity and proper execution of motor actions.",
+        "es": "Componente de los ganglios basales que participa en la regulación de la actividad motora. Actúa en circuitos que modulan las señales enviadas a las áreas responsables del movimiento, contribuyendo a controlar la intensidad y la ejecución adecuada de las acciones motoras."
+      }
+    },
+    "Cerebelo": {
+      "objname": {
+        "pt-BR": "Cerebelo",
+        "en": "Cerebellum",
+        "es": "Cerebelo"
+      },
+      "description": {
+        "pt-BR": "Estrutura fundamental para a coordenação dos movimentos, equilíbrio, postura e aprendizagem motora. Compara informações relacionadas ao movimento planejado e executado, contribuindo para ajustes de precisão. Alterações que envolvem seus circuitos podem produzir dificuldades de equilíbrio, coordenação e controle motor.",
+        "en": "Structure essential for movement coordination, balance, posture, and motor learning. It compares information related to planned and executed movements, contributing to adjustments that improve precision. Abnormalities involving its circuits may cause difficulties with balance, coordination, and motor control.",
+        "es": "Estructura fundamental para la coordinación de los movimientos, el equilibrio, la postura y el aprendizaje motor. Compara información relacionada con el movimiento planificado y ejecutado, contribuyendo a los ajustes de precisión. Las alteraciones que afectan a sus circuitos pueden producir dificultades de equilibrio, coordinación y control motor."
+      }
+    }
   }
 }

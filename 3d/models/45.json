@@ -1,43 +1,144 @@
 {
-  "objname": "Depressão Bipolar",
+  "objname": {
+    "pt-BR": "Depressão Bipolar",
+    "en": "Bipolar Depression",
+    "es": "Depresión Bipolar"
+  },
   "objsystem": [
     "Nervoso"
   ],
-  "objdescription": "A depressão bipolar corresponde aos episódios depressivos que podem ocorrer no transtorno bipolar, condição caracterizada por alterações do humor e da atividade cerebral. Estudos de neuroimagem identificam, em grupos de pessoas com transtorno bipolar, diferenças estruturais e funcionais em regiões envolvidas na regulação das emoções, incluindo áreas do córtex frontal e estruturas do sistema límbico. O modelo apresenta uma representação didática dessas alterações, comparando um cérebro de referência com outro em que o volume da região frontal está reduzido. Essa representação não significa que todas as pessoas com transtorno bipolar apresentem a mesma alteração anatômica, pois existem diferenças individuais e os achados podem variar entre estudos.",
+  "objdescription": {
+    "pt-BR": "A depressão bipolar corresponde aos episódios depressivos que podem ocorrer no transtorno bipolar, condição caracterizada por alterações do humor e da atividade cerebral. Estudos de neuroimagem identificam, em grupos de pessoas com transtorno bipolar, diferenças estruturais e funcionais em regiões envolvidas na regulação das emoções, incluindo áreas do córtex frontal e estruturas do sistema límbico. O modelo apresenta uma representação didática dessas alterações, comparando um cérebro de referência com outro em que o volume da região frontal está reduzido. Essa representação não significa que todas as pessoas com transtorno bipolar apresentem a mesma alteração anatômica, pois existem diferenças individuais e os achados podem variar entre estudos.",
+    "en": "Bipolar depression refers to depressive episodes that may occur in bipolar disorder, a condition characterized by changes in mood and brain activity. Neuroimaging studies have identified structural and functional differences in groups of people with bipolar disorder in regions involved in emotional regulation, including areas of the frontal cortex and structures of the limbic system. The model provides an educational representation of these changes, comparing a reference brain with another in which the volume of the frontal region is reduced. This representation does not imply that all people with bipolar disorder exhibit the same anatomical change, as individual differences exist and findings may vary across studies.",
+    "es": "La depresión bipolar corresponde a los episodios depresivos que pueden ocurrir en el trastorno bipolar, una condición caracterizada por alteraciones del estado de ánimo y de la actividad cerebral. Los estudios de neuroimagen identifican, en grupos de personas con trastorno bipolar, diferencias estructurales y funcionales en regiones involucradas en la regulación de las emociones, incluidas áreas de la corteza frontal y estructuras del sistema límbico. El modelo presenta una representación didáctica de estas alteraciones, comparando un cerebro de referencia con otro en el que el volumen de la región frontal está reducido. Esta representación no significa que todas las personas con trastorno bipolar presenten la misma alteración anatómica, ya que existen diferencias individuales y los hallazgos pueden variar entre estudios."
+  },
   "linkedModels": [
     {
       "id": "2",
-      "label": "Cérebro"
+      "label": {
+        "pt-BR": "Cérebro",
+        "en": "Brain",
+        "es": "Cerebro"
+      }
+    },
+    {
+      "id": "21",
+      "label": {
+        "pt-BR": "Sistema Nervoso",
+        "en": "Nervous System",
+        "es": "Sistema Nervioso"
+      }
+    },
+    {
+      "id": "38",
+      "label": {
+        "pt-BR": "Neurotransmissores",
+        "en": "Neurotransmitters",
+        "es": "Neurotransmisores"
+      }
+    },
+    {
+      "id": "44",
+      "label": {
+        "pt-BR": "Ansiedade",
+        "en": "Anxiety",
+        "es": "Ansiedad"
+      }
+    },
+    {
+      "id": "47",
+      "label": {
+        "pt-BR": "Via de Recompensa",
+        "en": "Reward Pathway",
+        "es": "Vía de Recompensa"
+      }
     }
   ],
   "resources": [],
-  "CerebrumL": {
-    "objname": "Cérebro com Alteração na Região Frontal",
-    "description": "Representação didática de um cérebro com redução de volume na região frontal. Alterações estruturais e de espessura cortical em regiões frontais foram observadas em estudos com grupos de pessoas com transtorno bipolar. Essas regiões participam de funções como planejamento, tomada de decisões e regulação das emoções."
-  },
-  "CerebrumR": {
-    "objname": "Cérebro de Referência",
-    "description": "Representação utilizada como referência para comparação com o cérebro que apresenta redução de volume na região frontal, permitindo visualizar a diferença anatômica demonstrada pelo modelo."
-  },
-  "Amygdala": {
-    "objname": "Amígdala",
-    "description": "Estrutura envolvida no processamento das emoções e na resposta a estímulos emocionalmente relevantes. Integra circuitos cerebrais relacionados à regulação do humor e apresenta alterações estruturais ou funcionais em alguns estudos sobre transtorno bipolar."
-  },
-  "Hippocampus": {
-    "objname": "Hipocampo",
-    "description": "Estrutura envolvida principalmente na formação de memórias e no processamento de informações relacionadas ao contexto. Estudos de neuroimagem identificam diferenças no volume do hipocampo em grupos de pessoas com transtorno bipolar, embora os achados apresentem variação entre indivíduos."
-  },
-  "Thalamus_R": {
-    "objname": "Tálamo",
-    "description": "Estrutura que participa da integração e retransmissão de informações para diferentes regiões do cérebro. Faz parte de circuitos que conectam regiões corticais e estruturas relacionadas ao processamento emocional, sendo investigado em estudos sobre o transtorno bipolar."
-  },
-  "CingulategyrusR": {
-    "objname": "Giro do Cíngulo",
-    "description": "Região envolvida no processamento das emoções, atenção, motivação e regulação do comportamento. Suas conexões com áreas frontais e estruturas do sistema límbico fazem parte dos circuitos cerebrais estudados no transtorno bipolar."
-  }
-  ,
-  "Head+ninteract": {
-    "objname": "",
-    "description": ""
+  "parts": {
+    "CerebrumL": {
+      "objname": {
+        "pt-BR": "Cérebro com Alteração na Região Frontal",
+        "en": "Brain with Frontal Region Alteration",
+        "es": "Cerebro con Alteración en la Región Frontal"
+      },
+      "description": {
+        "pt-BR": "Representação didática de um cérebro com redução de volume na região frontal. Alterações estruturais e de espessura cortical em regiões frontais foram observadas em estudos com grupos de pessoas com transtorno bipolar. Essas regiões participam de funções como planejamento, tomada de decisões e regulação das emoções.",
+        "en": "Educational representation of a brain with reduced volume in the frontal region. Structural changes and changes in cortical thickness in frontal regions have been observed in studies involving groups of people with bipolar disorder. These regions participate in functions such as planning, decision-making, and emotional regulation.",
+        "es": "Representación didáctica de un cerebro con reducción de volumen en la región frontal. Se han observado alteraciones estructurales y del grosor cortical en regiones frontales en estudios con grupos de personas con trastorno bipolar. Estas regiones participan en funciones como la planificación, la toma de decisiones y la regulación de las emociones."
+      }
+    },
+    "CerebrumR": {
+      "objname": {
+        "pt-BR": "Cérebro de Referência",
+        "en": "Reference Brain",
+        "es": "Cerebro de Referencia"
+      },
+      "description": {
+        "pt-BR": "Representação utilizada como referência para comparação com o cérebro que apresenta redução de volume na região frontal, permitindo visualizar a diferença anatômica demonstrada pelo modelo.",
+        "en": "Representation used as a reference for comparison with the brain exhibiting reduced volume in the frontal region, allowing visualization of the anatomical difference demonstrated by the model.",
+        "es": "Representación utilizada como referencia para la comparación con el cerebro que presenta una reducción de volumen en la región frontal, permitiendo visualizar la diferencia anatómica demostrada por el modelo."
+      }
+    },
+    "Amygdala": {
+      "objname": {
+        "pt-BR": "Amígdala",
+        "en": "Amygdala",
+        "es": "Amígdala"
+      },
+      "description": {
+        "pt-BR": "Estrutura envolvida no processamento das emoções e na resposta a estímulos emocionalmente relevantes. Integra circuitos cerebrais relacionados à regulação do humor e apresenta alterações estruturais ou funcionais em alguns estudos sobre transtorno bipolar.",
+        "en": "Structure involved in emotional processing and responses to emotionally relevant stimuli. It forms part of brain circuits associated with mood regulation and exhibits structural or functional changes in some studies on bipolar disorder.",
+        "es": "Estructura involucrada en el procesamiento de las emociones y en la respuesta a estímulos emocionalmente relevantes. Forma parte de circuitos cerebrales relacionados con la regulación del estado de ánimo y presenta alteraciones estructurales o funcionales en algunos estudios sobre el trastorno bipolar."
+      }
+    },
+    "Hippocampus": {
+      "objname": {
+        "pt-BR": "Hipocampo",
+        "en": "Hippocampus",
+        "es": "Hipocampo"
+      },
+      "description": {
+        "pt-BR": "Estrutura envolvida principalmente na formação de memórias e no processamento de informações relacionadas ao contexto. Estudos de neuroimagem identificam diferenças no volume do hipocampo em grupos de pessoas com transtorno bipolar, embora os achados apresentem variação entre indivíduos.",
+        "en": "Structure primarily involved in memory formation and the processing of contextual information. Neuroimaging studies identify differences in hippocampal volume in groups of people with bipolar disorder, although findings vary among individuals.",
+        "es": "Estructura involucrada principalmente en la formación de recuerdos y en el procesamiento de información relacionada con el contexto. Los estudios de neuroimagen identifican diferencias en el volumen del hipocampo en grupos de personas con trastorno bipolar, aunque los hallazgos presentan variaciones entre individuos."
+      }
+    },
+    "Thalamus_R": {
+      "objname": {
+        "pt-BR": "Tálamo",
+        "en": "Thalamus",
+        "es": "Tálamo"
+      },
+      "description": {
+        "pt-BR": "Estrutura que participa da integração e retransmissão de informações para diferentes regiões do cérebro. Faz parte de circuitos que conectam regiões corticais e estruturas relacionadas ao processamento emocional, sendo investigado em estudos sobre o transtorno bipolar.",
+        "en": "Structure involved in integrating and relaying information to different regions of the brain. It forms part of circuits that connect cortical regions and structures associated with emotional processing and is investigated in studies on bipolar disorder.",
+        "es": "Estructura que participa en la integración y retransmisión de información hacia diferentes regiones del cerebro. Forma parte de circuitos que conectan regiones corticales y estructuras relacionadas con el procesamiento emocional, y es objeto de investigación en estudios sobre el trastorno bipolar."
+      }
+    },
+    "CingulategyrusR": {
+      "objname": {
+        "pt-BR": "Giro do Cíngulo",
+        "en": "Cingulate Gyrus",
+        "es": "Giro del Cíngulo"
+      },
+      "description": {
+        "pt-BR": "Região envolvida no processamento das emoções, atenção, motivação e regulação do comportamento. Suas conexões com áreas frontais e estruturas do sistema límbico fazem parte dos circuitos cerebrais estudados no transtorno bipolar.",
+        "en": "Region involved in emotional processing, attention, motivation, and behavioral regulation. Its connections with frontal areas and structures of the limbic system form part of the brain circuits studied in bipolar disorder.",
+        "es": "Región involucrada en el procesamiento de las emociones, la atención, la motivación y la regulación del comportamiento. Sus conexiones con áreas frontales y estructuras del sistema límbico forman parte de los circuitos cerebrales estudiados en el trastorno bipolar."
+      }
+    },
+    "Head+ninteract": {
+      "objname": {
+        "pt-BR": "",
+        "en": "",
+        "es": ""
+      },
+      "description": {
+        "pt-BR": "",
+        "en": "",
+        "es": ""
+      }
+    }
   }
 }

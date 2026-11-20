@@ -1,27 +1,168 @@
 {
-  "objname": "Sistema Linfático",
-  "objsystem": "Linfático",
-  "objdescription": "Sistema responsável pela drenagem do excesso de líquido dos tecidos, transporte de células e substâncias relacionadas à resposta imunológica e defesa do organismo. É formado por uma extensa rede de vasos linfáticos, linfonodos e órgãos linfoides, como o timo e o baço. Atua na manutenção do equilíbrio dos líquidos corporais, na filtragem da linfa e na participação das respostas imunológicas.",
-  "linkedModels": [],
+  "objname": {
+    "pt-BR": "Sistema Linfático",
+    "en": "Lymphatic System",
+    "es": "Sistema Linfático"
+  },
+  "objsystem": [
+    "Linfático"
+  ],
+  "objdescription": {
+    "pt-BR": "Sistema responsável pela drenagem do excesso de líquido dos tecidos, transporte de células e substâncias relacionadas à resposta imunológica e defesa do organismo. É formado por uma extensa rede de vasos linfáticos, linfonodos e órgãos linfoides, como o timo e o baço. Atua na manutenção do equilíbrio dos líquidos corporais, na filtragem da linfa e na participação das respostas imunológicas.",
+    "en": "System responsible for draining excess fluid from tissues, transporting cells and substances associated with the immune response, and defending the body. It consists of an extensive network of lymphatic vessels, lymph nodes, and lymphoid organs, such as the thymus and spleen. It helps maintain body fluid balance, filters lymph, and participates in immune responses.",
+    "es": "Sistema responsable del drenaje del exceso de líquido de los tejidos, del transporte de células y sustancias relacionadas con la respuesta inmunitaria y de la defensa del organismo. Está formado por una extensa red de vasos linfáticos, ganglios linfáticos y órganos linfoides, como el timo y el bazo. Participa en el mantenimiento del equilibrio de los líquidos corporales, la filtración de la linfa y las respuestas inmunitarias."
+  },
+  "linkedModels": [
+    {
+      "id": "29",
+      "label": {
+        "pt-BR": "Anatomia Corpo Feminino",
+        "en": "Female Body Anatomy",
+        "es": "Anatomía del Cuerpo Femenino"
+      }
+    },
+    {
+      "id": "30",
+      "label": {
+        "pt-BR": "Anatomia Corpo Masculino",
+        "en": "Male Body Anatomy",
+        "es": "Anatomía del Cuerpo Masculino"
+      }
+    },
+    {
+      "id": "32",
+      "label": {
+        "pt-BR": "Sistema Cardiovascular",
+        "en": "Cardiovascular System",
+        "es": "Sistema Cardiovascular"
+      }
+    },
+    {
+      "id": "66",
+      "label": {
+        "pt-BR": "Sarcoma de Kaposi",
+        "en": "Kaposi Sarcoma",
+        "es": "Sarcoma de Kaposi"
+      }
+    },
+    {
+      "id": "75",
+      "label": {
+        "pt-BR": "Câncer de Mama: Estágio 1",
+        "en": "Breast Cancer: Stage 1",
+        "es": "Cáncer de Mama: Estadio 1"
+      }
+    },
+    {
+      "id": "76",
+      "label": {
+        "pt-BR": "Câncer de Mama: Estágio 2",
+        "en": "Breast Cancer: Stage 2",
+        "es": "Cáncer de Mama: Estadio 2"
+      }
+    },
+    {
+      "id": "77",
+      "label": {
+        "pt-BR": "Câncer de Mama: Estágio 3",
+        "en": "Breast Cancer: Stage 3",
+        "es": "Cáncer de Mama: Estadio 3"
+      }
+    },
+    {
+      "id": "78",
+      "label": {
+        "pt-BR": "Câncer de Mama: Estágio 4",
+        "en": "Breast Cancer: Stage 4",
+        "es": "Cáncer de Mama: Estadio 4"
+      }
+    },
+    {
+      "id": "81",
+      "label": {
+        "pt-BR": "Sarcoma de Kaposi: Comprometimento de Órgãos Internos",
+        "en": "Kaposi Sarcoma: Internal Organ Involvement",
+        "es": "Sarcoma de Kaposi: Afectación de Órganos Internos"
+      }
+    },
+    {
+      "id": "82",
+      "label": {
+        "pt-BR": "Reações Alérgicas Sistêmicas",
+        "en": "Systemic Allergic Reactions",
+        "es": "Reacciones Alérgicas Sistémicas"
+      }
+    },
+    {
+      "id": "92",
+      "label": {
+        "pt-BR": "Linfedema",
+        "en": "Lymphedema",
+        "es": "Linfedema"
+      }
+    }
+  ],
   "resources": [],
-  "Thyroid": {
-    "objname": "Tireoide",
-    "description": "Glândula endócrina localizada na região anterior do pescoço, responsável principalmente pela produção dos hormônios tireoidianos, que regulam o metabolismo, o crescimento e o desenvolvimento. Embora esteja presente no modelo do sistema linfático, a tireoide pertence principalmente ao sistema endócrino."
-  },
-  "Timo": {
-    "objname": "Timo",
-    "description": "Órgão linfoide localizado no mediastino, atrás do esterno. É responsável pela maturação e seleção dos linfócitos T, células fundamentais para a resposta imunológica. Apresenta maior atividade durante a infância e sofre involução progressiva após a puberdade."
-  },
-  "Spleen": {
-    "objname": "Baço",
-    "description": "Maior órgão linfoide do organismo, localizado no lado esquerdo do abdome, próximo ao estômago. Atua na filtragem do sangue, na remoção de células sanguíneas envelhecidas e na participação das respostas imunológicas contra agentes presentes na circulação sanguínea."
-  },
-  "LymphVessel": {
-    "objname": "Vaso Linfático",
-    "description": "Estrutura tubular que transporta a linfa pelos tecidos e pelo organismo. Os vasos linfáticos coletam o excesso de líquido presente no espaço intersticial e o conduzem progressivamente em direção à circulação venosa, contribuindo para o equilíbrio dos líquidos corporais e para o transporte de células e substâncias do sistema imunológico."
-  },
-  "LymphNodes": {
-    "objname": "Linfonodos",
-    "description": "Pequenas estruturas linfoides distribuídas ao longo dos vasos linfáticos. Funcionam como filtros da linfa e constituem importantes locais de ativação e proliferação de células do sistema imunológico, auxiliando na identificação e resposta contra microrganismos e outras substâncias estranhas."
+  "parts": {
+    "Thyroid": {
+      "objname": {
+        "pt-BR": "Tireoide",
+        "en": "Thyroid Gland",
+        "es": "Glándula Tiroides"
+      },
+      "description": {
+        "pt-BR": "Glândula endócrina localizada na região anterior do pescoço, responsável principalmente pela produção dos hormônios tireoidianos, que regulam o metabolismo, o crescimento e o desenvolvimento. Embora esteja presente no modelo do sistema linfático, a tireoide pertence principalmente ao sistema endócrino.",
+        "en": "Endocrine gland located in the anterior region of the neck, primarily responsible for producing thyroid hormones, which regulate metabolism, growth, and development. Although it is present in the lymphatic system model, the thyroid gland belongs primarily to the endocrine system.",
+        "es": "Glándula endocrina situada en la región anterior del cuello, responsable principalmente de la producción de hormonas tiroideas, que regulan el metabolismo, el crecimiento y el desarrollo. Aunque está presente en el modelo del sistema linfático, la glándula tiroides pertenece principalmente al sistema endocrino."
+      }
+    },
+    "Timo": {
+      "objname": {
+        "pt-BR": "Timo",
+        "en": "Thymus",
+        "es": "Timo"
+      },
+      "description": {
+        "pt-BR": "Órgão linfoide localizado no mediastino, atrás do esterno. É responsável pela maturação e seleção dos linfócitos T, células fundamentais para a resposta imunológica. Apresenta maior atividade durante a infância e sofre involução progressiva após a puberdade.",
+        "en": "Lymphoid organ located in the mediastinum, behind the sternum. It is responsible for the maturation and selection of T lymphocytes, cells that are essential to the immune response. It is most active during childhood and undergoes progressive involution after puberty.",
+        "es": "Órgano linfoide situado en el mediastino, detrás del esternón. Es responsable de la maduración y selección de los linfocitos T, células fundamentales para la respuesta inmunitaria. Presenta una mayor actividad durante la infancia y experimenta una involución progresiva después de la pubertad."
+      }
+    },
+    "Spleen": {
+      "objname": {
+        "pt-BR": "Baço",
+        "en": "Spleen",
+        "es": "Bazo"
+      },
+      "description": {
+        "pt-BR": "Maior órgão linfoide do organismo, localizado no lado esquerdo do abdome, próximo ao estômago. Atua na filtragem do sangue, na remoção de células sanguíneas envelhecidas e na participação das respostas imunológicas contra agentes presentes na circulação sanguínea.",
+        "en": "Largest lymphoid organ in the body, located on the left side of the abdomen, near the stomach. It filters the blood, removes aged blood cells, and participates in immune responses against agents present in the bloodstream.",
+        "es": "Órgano linfoide de mayor tamaño del organismo, situado en el lado izquierdo del abdomen, cerca del estómago. Participa en la filtración de la sangre, la eliminación de células sanguíneas envejecidas y las respuestas inmunitarias contra agentes presentes en la circulación sanguínea."
+      }
+    },
+    "LymphVessel": {
+      "objname": {
+        "pt-BR": "Vaso Linfático",
+        "en": "Lymphatic Vessel",
+        "es": "Vaso Linfático"
+      },
+      "description": {
+        "pt-BR": "Estrutura tubular que transporta a linfa pelos tecidos e pelo organismo. Os vasos linfáticos coletam o excesso de líquido presente no espaço intersticial e o conduzem progressivamente em direção à circulação venosa, contribuindo para o equilíbrio dos líquidos corporais e para o transporte de células e substâncias do sistema imunológico.",
+        "en": "Tubular structure that transports lymph through tissues and throughout the body. Lymphatic vessels collect excess fluid from the interstitial space and gradually carry it toward the venous circulation, contributing to body fluid balance and the transport of immune system cells and substances.",
+        "es": "Estructura tubular que transporta la linfa a través de los tejidos y del organismo. Los vasos linfáticos recogen el exceso de líquido presente en el espacio intersticial y lo conducen progresivamente hacia la circulación venosa, contribuyendo al equilibrio de los líquidos corporales y al transporte de células y sustancias del sistema inmunitario."
+      }
+    },
+    "LymphNodes": {
+      "objname": {
+        "pt-BR": "Linfonodos",
+        "en": "Lymph Nodes",
+        "es": "Ganglios Linfáticos"
+      },
+      "description": {
+        "pt-BR": "Pequenas estruturas linfoides distribuídas ao longo dos vasos linfáticos. Funcionam como filtros da linfa e constituem importantes locais de ativação e proliferação de células do sistema imunológico, auxiliando na identificação e resposta contra microrganismos e outras substâncias estranhas.",
+        "en": "Small lymphoid structures distributed along the lymphatic vessels. They act as lymph filters and serve as important sites for the activation and proliferation of immune system cells, helping identify and respond to microorganisms and other foreign substances.",
+        "es": "Pequeñas estructuras linfoides distribuidas a lo largo de los vasos linfáticos. Funcionan como filtros de la linfa y constituyen importantes lugares de activación y proliferación de células del sistema inmunitario, contribuyendo a la identificación y respuesta frente a microorganismos y otras sustancias extrañas."
+      }
+    }
   }
 }

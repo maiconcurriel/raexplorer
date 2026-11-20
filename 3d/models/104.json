@@ -1,33 +1,124 @@
 {
-  "objname": "Biomateriais - Prótese de Quadril",
+  "objname": {
+    "pt-BR": "Biomateriais - Prótese de Quadril",
+    "en": "Biomaterials - Hip Prosthesis",
+    "es": "Biomateriales - Prótesis de Cadera"
+  },
   "objsystem": [
     "Esquelético"
   ],
-  "objdescription": "A prótese de quadril é um dispositivo médico implantável utilizado para substituir componentes danificados da articulação coxofemoral, restaurando sua mobilidade e reduzindo a dor. É frequentemente empregada em procedimentos de artroplastia para tratar condições como artrose avançada, fraturas do colo do fêmur e necrose da cabeça femoral. Na artroplastia total, a prótese é composta por um componente acetabular, um revestimento interno, uma cabeça protética e uma haste femoral. Esses componentes podem ser fabricados com biomateriais como ligas metálicas, cerâmicas e polímeros, selecionados conforme suas propriedades de resistência mecânica, biocompatibilidade e desgaste. O modelo apresenta a disposição dos componentes da prótese em relação à pelve e ao fêmur, demonstrando como substituem as superfícies articulares naturais e permitem a realização dos movimentos do quadril.",
-  "linkedModels": [],
+  "objdescription": {
+    "pt-BR": "A prótese de quadril é um dispositivo médico implantável utilizado para substituir componentes danificados da articulação coxofemoral, restaurando sua mobilidade e reduzindo a dor. É frequentemente empregada em procedimentos de artroplastia para tratar condições como artrose avançada, fraturas do colo do fêmur e necrose da cabeça femoral. Na artroplastia total, a prótese é composta por um componente acetabular, um revestimento interno, uma cabeça protética e uma haste femoral. Esses componentes podem ser fabricados com biomateriais como ligas metálicas, cerâmicas e polímeros, selecionados conforme suas propriedades de resistência mecânica, biocompatibilidade e desgaste. O modelo apresenta a disposição dos componentes da prótese em relação à pelve e ao fêmur, demonstrando como substituem as superfícies articulares naturais e permitem a realização dos movimentos do quadril.",
+    "en": "A hip prosthesis is an implantable medical device used to replace damaged components of the hip joint, restoring mobility and reducing pain. It is frequently used in arthroplasty procedures to treat conditions such as advanced osteoarthritis, femoral neck fractures, and femoral head necrosis. In total hip arthroplasty, the prosthesis consists of an acetabular component, an inner liner, a prosthetic head, and a femoral stem. These components may be manufactured from biomaterials such as metal alloys, ceramics, and polymers, selected according to their mechanical strength, biocompatibility, and wear characteristics. The model presents the arrangement of the prosthetic components in relation to the pelvis and femur, demonstrating how they replace the natural articular surfaces and enable hip movements.",
+    "es": "La prótesis de cadera es un dispositivo médico implantable utilizado para sustituir los componentes dañados de la articulación coxofemoral, restaurando su movilidad y reduciendo el dolor. Se emplea frecuentemente en procedimientos de artroplastia para tratar afecciones como la artrosis avanzada, las fracturas del cuello del fémur y la necrosis de la cabeza femoral. En la artroplastia total de cadera, la prótesis está compuesta por un componente acetabular, un revestimiento interno, una cabeza protésica y un vástago femoral. Estos componentes pueden fabricarse con biomateriales como aleaciones metálicas, cerámicas y polímeros, seleccionados según sus propiedades de resistencia mecánica, biocompatibilidad y comportamiento frente al desgaste. El modelo presenta la disposición de los componentes de la prótesis en relación con la pelvis y el fémur, demostrando cómo sustituyen las superficies articulares naturales y permiten realizar los movimientos de la cadera."
+  },
+  "linkedModels": [
+    {
+      "id": "3",
+      "label": {
+        "pt-BR": "Sistema Esquelético Masculino",
+        "en": "Male Skeletal System",
+        "es": "Sistema Esquelético Masculino"
+      }
+    },
+    {
+      "id": "28",
+      "label": {
+        "pt-BR": "Sistema Esquelético Feminino",
+        "en": "Female Skeletal System",
+        "es": "Sistema Esquelético Femenino"
+      }
+    },
+    {
+      "id": "31",
+      "label": {
+        "pt-BR": "Artrose",
+        "en": "Osteoarthritis",
+        "es": "Artrosis"
+      }
+    },
+    {
+      "id": "72",
+      "label": {
+        "pt-BR": "Ciclo da Marcha",
+        "en": "Gait Cycle",
+        "es": "Ciclo de la Marcha"
+      }
+    }
+  ],
   "resources": [],
-  "ParteAcetabular": {
-    "objname": "Componente Acetabular",
-    "description": "Estrutura externa da prótese implantada no acetábulo da pelve, substituindo a superfície articular natural. Geralmente fabricada em liga metálica, como titânio, proporciona sustentação e fixação ao revestimento interno. Sua função é garantir estabilidade e distribuir as forças transmitidas pela articulação durante os movimentos."
-  },
-  "ParteAcetabularInterno": {
-    "objname": "Revestimento Acetabular",
-    "description": "Componente interno da prótese que reveste a cavidade acetabular e entra em contato com a cabeça femoral protética. Pode ser fabricado em polietileno de alta resistência ou cerâmica, oferecendo uma superfície de baixo atrito que facilita os movimentos articulares e reduz o desgaste dos componentes."
-  },
-  "Cabeca": {
-    "objname": "Cabeça Femoral Protética",
-    "description": "Componente esférico que substitui a cabeça natural do fêmur e se articula com o revestimento acetabular. Geralmente fabricado em cerâmica ou liga metálica, permite movimentos de flexão, extensão, abdução, adução e rotação do quadril. Sua superfície lisa contribui para reduzir o atrito e o desgaste articular."
-  },
-  "HasteFemoral": {
-    "objname": "Haste Femoral",
-    "description": "Componente alongado da prótese introduzido no canal medular do fêmur, responsável pela sustentação e fixação da cabeça femoral protética. Geralmente fabricado em ligas metálicas, como titânio ou cobalto-cromo, transmite as cargas mecânicas entre a articulação artificial e o osso. Sua fixação pode ocorrer por cimento ósseo ou integração direta ao tecido ósseo."
-  },
-  "FemurDireito": {
-    "objname": "Fêmur Direito",
-    "description": "Maior osso do corpo humano, localizado na coxa e responsável por transmitir o peso corporal entre a pelve e os membros inferiores. Na artroplastia de quadril, a cabeça e parte do colo femoral são removidas para permitir a implantação da haste e da cabeça protética, preservando a estrutura óssea necessária à sustentação do implante."
-  },
-  "Pelvis_1": {
-    "objname": "Pelve",
-    "description": "Estrutura óssea formada pelos ossos do quadril, sacro e cóccix, responsável pela sustentação do tronco e transmissão do peso corporal aos membros inferiores. O acetábulo, localizado no osso do quadril, constitui a cavidade articular que recebe a cabeça do fêmur. Na artroplastia total, essa região é preparada para receber o componente acetabular da prótese."
+  "parts": {
+    "ParteAcetabular": {
+      "objname": {
+        "pt-BR": "Componente Acetabular",
+        "en": "Acetabular Component",
+        "es": "Componente Acetabular"
+      },
+      "description": {
+        "pt-BR": "Estrutura externa da prótese implantada no acetábulo da pelve, substituindo a superfície articular natural. Geralmente fabricada em liga metálica, como titânio, proporciona sustentação e fixação ao revestimento interno. Sua função é garantir estabilidade e distribuir as forças transmitidas pela articulação durante os movimentos.",
+        "en": "Outer structure of the prosthesis implanted in the acetabulum of the pelvis, replacing the natural articular surface. Generally manufactured from a metal alloy, such as a titanium alloy, it provides support and fixation for the inner liner. Its function is to ensure stability and distribute the forces transmitted through the joint during movement.",
+        "es": "Estructura externa de la prótesis implantada en el acetábulo de la pelvis, que sustituye la superficie articular natural. Generalmente fabricada con una aleación metálica, como una aleación de titanio, proporciona soporte y fijación al revestimiento interno. Su función es garantizar la estabilidad y distribuir las fuerzas transmitidas por la articulación durante los movimientos."
+      }
+    },
+    "ParteAcetabularInterno": {
+      "objname": {
+        "pt-BR": "Revestimento Acetabular",
+        "en": "Acetabular Liner",
+        "es": "Revestimiento Acetabular"
+      },
+      "description": {
+        "pt-BR": "Componente interno da prótese que reveste a cavidade acetabular e entra em contato com a cabeça femoral protética. Pode ser fabricado em polietileno de alta resistência ou cerâmica, oferecendo uma superfície de baixo atrito que facilita os movimentos articulares e reduz o desgaste dos componentes.",
+        "en": "Inner component of the prosthesis that lines the acetabular cavity and comes into contact with the prosthetic femoral head. It may be manufactured from high-strength polyethylene or ceramic, providing a low-friction surface that facilitates joint movements and reduces component wear.",
+        "es": "Componente interno de la prótesis que recubre la cavidad acetabular y entra en contacto con la cabeza femoral protésica. Puede fabricarse con polietileno de alta resistencia o cerámica, ofreciendo una superficie de baja fricción que facilita los movimientos articulares y reduce el desgaste de los componentes."
+      }
+    },
+    "Cabeca": {
+      "objname": {
+        "pt-BR": "Cabeça Femoral Protética",
+        "en": "Prosthetic Femoral Head",
+        "es": "Cabeza Femoral Protésica"
+      },
+      "description": {
+        "pt-BR": "Componente esférico que substitui a cabeça natural do fêmur e se articula com o revestimento acetabular. Geralmente fabricado em cerâmica ou liga metálica, permite movimentos de flexão, extensão, abdução, adução e rotação do quadril. Sua superfície lisa contribui para reduzir o atrito e o desgaste articular.",
+        "en": "Spherical component that replaces the natural head of the femur and articulates with the acetabular liner. Generally manufactured from ceramic or a metal alloy, it enables hip flexion, extension, abduction, adduction, and rotation. Its smooth surface helps reduce friction and joint wear.",
+        "es": "Componente esférico que sustituye la cabeza natural del fémur y se articula con el revestimiento acetabular. Generalmente fabricado con cerámica o una aleación metálica, permite los movimientos de flexión, extensión, abducción, aducción y rotación de la cadera. Su superficie lisa contribuye a reducir la fricción y el desgaste articular."
+      }
+    },
+    "HasteFemoral": {
+      "objname": {
+        "pt-BR": "Haste Femoral",
+        "en": "Femoral Stem",
+        "es": "Vástago Femoral"
+      },
+      "description": {
+        "pt-BR": "Componente alongado da prótese introduzido no canal medular do fêmur, responsável pela sustentação e fixação da cabeça femoral protética. Geralmente fabricado em ligas metálicas, como titânio ou cobalto-cromo, transmite as cargas mecânicas entre a articulação artificial e o osso. Sua fixação pode ocorrer por cimento ósseo ou integração direta ao tecido ósseo.",
+        "en": "Elongated component of the prosthesis inserted into the medullary canal of the femur, responsible for supporting and securing the prosthetic femoral head. Generally manufactured from metal alloys, such as titanium or cobalt-chromium alloys, it transfers mechanical loads between the artificial joint and the bone. Fixation may be achieved using bone cement or through direct integration with bone tissue.",
+        "es": "Componente alargado de la prótesis que se introduce en el canal medular del fémur, responsable del soporte y la fijación de la cabeza femoral protésica. Generalmente fabricado con aleaciones metálicas, como las de titanio o cobalto-cromo, transmite las cargas mecánicas entre la articulación artificial y el hueso. Su fijación puede realizarse mediante cemento óseo o integración directa con el tejido óseo."
+      }
+    },
+    "FemurDireito": {
+      "objname": {
+        "pt-BR": "Fêmur Direito",
+        "en": "Right Femur",
+        "es": "Fémur Derecho"
+      },
+      "description": {
+        "pt-BR": "Maior osso do corpo humano, localizado na coxa e responsável por transmitir o peso corporal entre a pelve e os membros inferiores. Na artroplastia de quadril, a cabeça e parte do colo femoral são removidas para permitir a implantação da haste e da cabeça protética, preservando a estrutura óssea necessária à sustentação do implante.",
+        "en": "Largest bone in the human body, located in the thigh and responsible for transmitting body weight between the pelvis and the lower limbs. In hip arthroplasty, the femoral head and part of the femoral neck are removed to allow implantation of the stem and prosthetic head, preserving the bone structure required to support the implant.",
+        "es": "Hueso más grande del cuerpo humano, localizado en el muslo y responsable de transmitir el peso corporal entre la pelvis y los miembros inferiores. En la artroplastia de cadera, se extirpan la cabeza y parte del cuello femoral para permitir la implantación del vástago y de la cabeza protésica, conservando la estructura ósea necesaria para el soporte del implante."
+      }
+    },
+    "Pelvis_1": {
+      "objname": {
+        "pt-BR": "Pelve",
+        "en": "Pelvis",
+        "es": "Pelvis"
+      },
+      "description": {
+        "pt-BR": "Estrutura óssea formada pelos ossos do quadril, sacro e cóccix, responsável pela sustentação do tronco e transmissão do peso corporal aos membros inferiores. O acetábulo, localizado no osso do quadril, constitui a cavidade articular que recebe a cabeça do fêmur. Na artroplastia total, essa região é preparada para receber o componente acetabular da prótese.",
+        "en": "Bony structure composed of the hip bones, sacrum, and coccyx, responsible for supporting the trunk and transmitting body weight to the lower limbs. The acetabulum, located in the hip bone, forms the articular socket that receives the femoral head. In total hip arthroplasty, this region is prepared to accommodate the acetabular component of the prosthesis.",
+        "es": "Estructura ósea formada por los huesos coxales, el sacro y el cóccix, responsable del soporte del tronco y de la transmisión del peso corporal a los miembros inferiores. El acetábulo, localizado en el hueso coxal, constituye la cavidad articular que recibe la cabeza del fémur. En la artroplastia total de cadera, esta región se prepara para recibir el componente acetabular de la prótesis."
+      }
+    }
   }
 }

@@ -6,8 +6,36 @@
   "objdescription": "Anticoagulantes são medicamentos que reduzem a capacidade de formação e expansão de coágulos sanguíneos ao interferirem em diferentes etapas da coagulação. São utilizados na prevenção e no tratamento de condições relacionadas à trombose, como trombose venosa profunda, embolia pulmonar e prevenção de eventos tromboembólicos em determinadas situações clínicas. Esses medicamentos não dissolvem diretamente um trombo já formado e não impedem completamente a coagulação, mas reduzem sua progressão e a formação de novos coágulos enquanto os mecanismos naturais do organismo atuam sobre o trombo existente. O modelo representa didaticamente a ação de anticoagulantes sobre o processo de formação e crescimento de um coágulo no interior de um vaso sanguíneo.",
   "linkedModels": [
     {
+      "id": "19",
+      "label": "Sistema Arterial"
+    },
+    {
+      "id": "20",
+      "label": "Sistema Venoso"
+    },
+    {
+      "id": "32",
+      "label": "Sistema Cardiovascular"
+    },
+    {
+      "id": "36",
+      "label": "AVC Isquêmico"
+    },
+    {
+      "id": "37",
+      "label": "AVC Hemorrágico"
+    },
+    {
       "id": "46",
       "label": "Artéria"
+    },
+    {
+      "id": "56",
+      "label": "Infarto do Miocárdio"
+    },
+    {
+      "id": "57",
+      "label": "Aterosclerose"
     }
   ],
   "resources": [],

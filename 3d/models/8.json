@@ -1,18 +1,88 @@
 {
-  "objname": "Microestrutura do Osso Humano – Ósteon e Sistema de Havers",
-  "objsystem": "Esquelético",
-  "objdescription": "A microestrutura do osso humano é organizada em unidades chamadas ósteons, que compõem o osso compacto. Cada ósteon é formado por lamelas ósseas concêntricas dispostas ao redor do canal de Havers, por onde passam vasos sanguíneos e nervos responsáveis pela nutrição e manutenção do tecido ósseo. Os canais de Havers comunicam-se entre si por meio dos canais de Volkmann, formando uma rede que distribui nutrientes e oxigênio. Essa organização confere ao osso elevada resistência mecânica, capacidade de remodelação e suporte às funções de sustentação, proteção e locomoção do organismo."
-,
-  "vsangue+nisolar": {
-    "objname": "Vasos Sanguíneos",
-    "description": "Percorrem os canais de Havers e de Volkmann, fornecendo oxigênio e nutrientes às células ósseas e removendo resíduos metabólicos, essenciais para a manutenção e remodelação do osso."
+  "objname": {
+    "pt-BR": "Microestrutura do Osso Humano – Ósteon e Sistema de Havers",
+    "en": "Human Bone Microstructure – Osteon and Haversian System",
+    "es": "Microestructura del Hueso Humano – Osteona y Sistema de Havers"
   },
-  "ossocompacto+nisolar": {
-    "objname": "Osso Compacto",
-    "description": "Camada externa, densa e resistente, formada por ósteons organizados em lamelas concêntricas. Confere sustentação, proteção e resistência às cargas mecânicas."
+  "objsystem": [
+    "Esquelético"
+  ],
+  "objdescription": {
+    "pt-BR": "A microestrutura do osso humano é organizada em unidades chamadas ósteons, que compõem o osso compacto. Cada ósteon é formado por lamelas ósseas concêntricas dispostas ao redor do canal de Havers, por onde passam vasos sanguíneos e nervos responsáveis pela nutrição e manutenção do tecido ósseo. Os canais de Havers comunicam-se entre si por meio dos canais de Volkmann, formando uma rede que distribui nutrientes e oxigênio. Essa organização confere ao osso elevada resistência mecânica, capacidade de remodelação e suporte às funções de sustentação, proteção e locomoção do organismo.",
+    "en": "The microstructure of human bone is organized into units called osteons, which make up compact bone. Each osteon consists of concentric bone lamellae arranged around the Haversian canal, through which blood vessels and nerves pass, providing nourishment and maintaining bone tissue. The Haversian canals communicate with one another through Volkmann's canals, forming a network that distributes nutrients and oxygen. This organization provides bone with high mechanical strength and the capacity for remodeling, supporting the body's functions of structural support, protection, and locomotion.",
+    "es": "La microestructura del hueso humano está organizada en unidades llamadas osteonas, que componen el hueso compacto. Cada osteona está formada por laminillas óseas concéntricas dispuestas alrededor del conducto de Havers, por el que pasan vasos sanguíneos y nervios responsables de la nutrición y el mantenimiento del tejido óseo. Los conductos de Havers se comunican entre sí mediante los conductos de Volkmann, formando una red que distribuye nutrientes y oxígeno. Esta organización proporciona al hueso una elevada resistencia mecánica y capacidad de remodelación, contribuyendo a las funciones de sostén, protección y locomoción del organismo."
   },
-  "ossoesponjoso+nisolar": {
-    "objname": "Osso Esponjoso",
-    "description": "Tecido interno constituído por trabéculas interligadas que reduzem o peso do osso, distribuem as forças mecânicas e abrigam a medula óssea."
+  "linkedModels": [
+    {
+      "id": "3",
+      "label": {
+        "pt-BR": "Sistema Esquelético Masculino",
+        "en": "Male Skeletal System",
+        "es": "Sistema Esquelético Masculino"
+      }
+    },
+    {
+      "id": "7",
+      "label": {
+        "pt-BR": "Osso Osteoporótico",
+        "en": "Osteoporotic Bone",
+        "es": "Hueso Osteoporótico"
+      }
+    },
+    {
+      "id": "28",
+      "label": {
+        "pt-BR": "Sistema Esquelético Feminino",
+        "en": "Female Skeletal System",
+        "es": "Sistema Esquelético Femenino"
+      }
+    },
+    {
+      "id": "91",
+      "label": {
+        "pt-BR": "Osteossarcoma",
+        "en": "Osteosarcoma",
+        "es": "Osteosarcoma"
+      }
+    }
+  ],
+  "resources": [],
+  "parts": {
+    "vsangue+nisolar": {
+      "objname": {
+        "pt-BR": "Vasos Sanguíneos",
+        "en": "Blood Vessels",
+        "es": "Vasos Sanguíneos"
+      },
+      "description": {
+        "pt-BR": "Percorrem os canais de Havers e de Volkmann, fornecendo oxigênio e nutrientes às células ósseas e removendo resíduos metabólicos, essenciais para a manutenção e remodelação do osso.",
+        "en": "They run through the Haversian and Volkmann's canals, supplying oxygen and nutrients to bone cells and removing metabolic waste. These functions are essential for bone maintenance and remodeling.",
+        "es": "Recorren los conductos de Havers y de Volkmann, proporcionando oxígeno y nutrientes a las células óseas y eliminando los residuos metabólicos. Estas funciones son esenciales para el mantenimiento y la remodelación del hueso."
+      }
+    },
+    "ossocompacto+nisolar": {
+      "objname": {
+        "pt-BR": "Osso Compacto",
+        "en": "Compact Bone",
+        "es": "Hueso Compacto"
+      },
+      "description": {
+        "pt-BR": "Camada externa, densa e resistente, formada por ósteons organizados em lamelas concêntricas. Confere sustentação, proteção e resistência às cargas mecânicas.",
+        "en": "Dense and resistant outer layer composed of osteons organized into concentric lamellae. It provides structural support, protection, and resistance to mechanical loads.",
+        "es": "Capa externa, densa y resistente, formada por osteonas organizadas en laminillas concéntricas. Proporciona sostén, protección y resistencia a las cargas mecánicas."
+      }
+    },
+    "ossoesponjoso+nisolar": {
+      "objname": {
+        "pt-BR": "Osso Esponjoso",
+        "en": "Spongy Bone",
+        "es": "Hueso Esponjoso"
+      },
+      "description": {
+        "pt-BR": "Tecido interno constituído por trabéculas interligadas que reduzem o peso do osso, distribuem as forças mecânicas e abrigam a medula óssea.",
+        "en": "Internal tissue composed of interconnected trabeculae that reduce bone weight, distribute mechanical forces, and house the bone marrow.",
+        "es": "Tejido interno constituido por trabéculas interconectadas que reducen el peso del hueso, distribuyen las fuerzas mecánicas y albergan la médula ósea."
+      }
+    }
   }
 }

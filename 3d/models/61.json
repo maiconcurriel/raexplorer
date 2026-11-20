@@ -1,18 +1,64 @@
 {
-  "objname": "Gastrite",
+  "objname": {
+    "pt-BR": "Gastrite",
+    "en": "Gastritis",
+    "es": "Gastritis"
+  },
   "objsystem": [
     "Digestório"
   ],
-  "objdescription": "A gastrite é uma inflamação da mucosa gástrica, camada que reveste internamente o estômago e o protege da ação do ácido e das enzimas digestivas. Pode ser aguda ou crônica e apresentar diferentes causas, incluindo infecção pela bactéria Helicobacter pylori, uso de anti-inflamatórios e processos autoimunes. Dependendo da causa e da intensidade, pode provocar dor ou desconforto na região superior do abdômen, náuseas e sensação de estômago cheio, embora também possa ocorrer sem sintomas. Em alguns casos, a inflamação persistente pode causar alterações na mucosa e comprometer seus mecanismos de proteção. O modelo apresenta um corte anatômico do estômago, destacando sua estrutura interna e a mucosa gástrica, principal região acometida pela gastrite.",
+  "objdescription": {
+    "pt-BR": "A gastrite é uma inflamação da mucosa gástrica, camada que reveste internamente o estômago e o protege da ação do ácido e das enzimas digestivas. Pode ser aguda ou crônica e apresentar diferentes causas, incluindo infecção pela bactéria Helicobacter pylori, uso de anti-inflamatórios e processos autoimunes. Dependendo da causa e da intensidade, pode provocar dor ou desconforto na região superior do abdômen, náuseas e sensação de estômago cheio, embora também possa ocorrer sem sintomas. Em alguns casos, a inflamação persistente pode causar alterações na mucosa e comprometer seus mecanismos de proteção. O modelo apresenta um corte anatômico do estômago, destacando sua estrutura interna e a mucosa gástrica, principal região acometida pela gastrite.",
+    "en": "Gastritis is an inflammation of the gastric mucosa, the layer that lines the interior of the stomach and protects it from the effects of acid and digestive enzymes. It may be acute or chronic and have various causes, including infection with the bacterium Helicobacter pylori, the use of anti-inflammatory medications, and autoimmune processes. Depending on its cause and severity, it may result in pain or discomfort in the upper abdomen, nausea, and a feeling of fullness, although it may also occur without symptoms. In some cases, persistent inflammation may cause changes in the mucosa and impair its protective mechanisms. The model presents an anatomical cross-section of the stomach, highlighting its internal structure and the gastric mucosa, the primary region affected by gastritis.",
+    "es": "La gastritis es una inflamación de la mucosa gástrica, capa que recubre el interior del estómago y lo protege de la acción del ácido y de las enzimas digestivas. Puede ser aguda o crónica y presentar diferentes causas, entre ellas la infección por la bacteria Helicobacter pylori, el uso de medicamentos antiinflamatorios y los procesos autoinmunes. Dependiendo de la causa y de la intensidad, puede provocar dolor o molestias en la región superior del abdomen, náuseas y sensación de plenitud gástrica, aunque también puede presentarse sin síntomas. En algunos casos, la inflamación persistente puede causar alteraciones en la mucosa y comprometer sus mecanismos de protección. El modelo presenta un corte anatómico del estómago, destacando su estructura interna y la mucosa gástrica, principal región afectada por la gastritis."
+  },
   "linkedModels": [
     {
       "id": "24",
-      "label": "Sistema Digestório"
+      "label": {
+        "pt-BR": "Sistema Digestório",
+        "en": "Digestive System",
+        "es": "Sistema Digestivo"
+      }
+    },
+    {
+      "id": "34",
+      "label": {
+        "pt-BR": "Dores Abdominais",
+        "en": "Abdominal Pain",
+        "es": "Dolor Abdominal"
+      }
+    },
+    {
+      "id": "62",
+      "label": {
+        "pt-BR": "Úlcera Gástrica",
+        "en": "Gastric Ulcer",
+        "es": "Úlcera Gástrica"
+      }
+    },
+    {
+      "id": "94",
+      "label": {
+        "pt-BR": "Esôfago de Barrett",
+        "en": "Barrett's Esophagus",
+        "es": "Esófago de Barrett"
+      }
     }
   ],
   "resources": [],
-  "Stomach_1+Stomach_2+nisolar": {
-    "objname": "Estômago com Gastrite",
-    "description": "Órgão do sistema digestório responsável por armazenar e misturar os alimentos com o suco gástrico, iniciando parte de sua digestão. Sua superfície interna é revestida pela mucosa gástrica, que produz muco e bicarbonato para proteger a parede do estômago. Na gastrite, essa mucosa apresenta inflamação, que pode comprometer sua integridade e seus mecanismos de proteção. O corte anatômico permite observar as pregas da mucosa e as camadas musculares do estômago."
+  "parts": {
+    "Stomach_1+Stomach_2+nisolar": {
+      "objname": {
+        "pt-BR": "Estômago com Gastrite",
+        "en": "Stomach with Gastritis",
+        "es": "Estómago con Gastritis"
+      },
+      "description": {
+        "pt-BR": "Órgão do sistema digestório responsável por armazenar e misturar os alimentos com o suco gástrico, iniciando parte de sua digestão. Sua superfície interna é revestida pela mucosa gástrica, que produz muco e bicarbonato para proteger a parede do estômago. Na gastrite, essa mucosa apresenta inflamação, que pode comprometer sua integridade e seus mecanismos de proteção. O corte anatômico permite observar as pregas da mucosa e as camadas musculares do estômago.",
+        "en": "Organ of the digestive system responsible for storing food and mixing it with gastric juice, initiating part of the digestive process. Its inner surface is lined by the gastric mucosa, which produces mucus and bicarbonate to protect the stomach wall. In gastritis, this mucosa becomes inflamed, which may compromise its integrity and protective mechanisms. The anatomical cross-section allows visualization of the mucosal folds and muscular layers of the stomach.",
+        "es": "Órgano del sistema digestivo responsable de almacenar y mezclar los alimentos con el jugo gástrico, iniciando parte de su digestión. Su superficie interna está revestida por la mucosa gástrica, que produce moco y bicarbonato para proteger la pared del estómago. En la gastritis, esta mucosa presenta inflamación, que puede comprometer su integridad y sus mecanismos de protección. El corte anatómico permite observar los pliegues de la mucosa y las capas musculares del estómago."
+      }
+    }
   }
 }

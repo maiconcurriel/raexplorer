@@ -1,31 +1,81 @@
 {
-  "objname": "Mecânica da Corrida",
+  "objname": {
+    "pt-BR": "Mecânica da Corrida",
+    "en": "Running Mechanics",
+    "es": "Mecánica de la Carrera"
+  },
   "objsystem": [
     "Muscular",
     "Esquelético"
   ],
-  "objdescription": "A mecânica da corrida envolve movimentos coordenados dos membros superiores e inferiores, realizados pela ação integrada dos músculos, ossos e articulações. Diferentemente da caminhada, a corrida apresenta uma fase de voo, durante a qual nenhum dos pés permanece em contato com o solo. O ciclo da corrida alterna fases de apoio, impulsão, voo e recuperação dos membros inferiores. Músculos como o quadríceps femoral, os isquiotibiais, os glúteos e os músculos da panturrilha participam da absorção de impactos, estabilização das articulações e geração de força para o deslocamento. Os braços realizam movimentos alternados que auxiliam no equilíbrio e na coordenação corporal. A animação demonstra a movimentação do esqueleto e da musculatura durante a corrida, destacando a flexão e extensão das articulações e a alternância dos membros ao longo do movimento.",
+  "objdescription": {
+    "pt-BR": "A mecânica da corrida envolve movimentos coordenados dos membros superiores e inferiores, realizados pela ação integrada dos músculos, ossos e articulações. Diferentemente da caminhada, a corrida apresenta uma fase de voo, durante a qual nenhum dos pés permanece em contato com o solo. O ciclo da corrida alterna fases de apoio, impulsão, voo e recuperação dos membros inferiores. Músculos como o quadríceps femoral, os isquiotibiais, os glúteos e os músculos da panturrilha participam da absorção de impactos, estabilização das articulações e geração de força para o deslocamento. Os braços realizam movimentos alternados que auxiliam no equilíbrio e na coordenação corporal. A animação demonstra a movimentação do esqueleto e da musculatura durante a corrida, destacando a flexão e extensão das articulações e a alternância dos membros ao longo do movimento.",
+    "en": "Running mechanics involve coordinated movements of the upper and lower limbs, performed through the integrated action of muscles, bones, and joints. Unlike walking, running includes a flight phase during which neither foot remains in contact with the ground. The running cycle alternates between phases of support, propulsion, flight, and recovery of the lower limbs. Muscles such as the quadriceps femoris, hamstrings, gluteal muscles, and calf muscles participate in impact absorption, joint stabilization, and the generation of force for locomotion. The arms perform alternating movements that assist with balance and body coordination. The animation demonstrates the movement of the skeleton and musculature during running, highlighting joint flexion and extension and the alternating movements of the limbs throughout the activity.",
+    "es": "La mecánica de la carrera comprende movimientos coordinados de los miembros superiores e inferiores, realizados mediante la acción integrada de los músculos, huesos y articulaciones. A diferencia de la caminata, la carrera presenta una fase de vuelo durante la cual ninguno de los pies permanece en contacto con el suelo. El ciclo de la carrera alterna fases de apoyo, impulso, vuelo y recuperación de los miembros inferiores. Músculos como el cuádriceps femoral, los isquiotibiales, los glúteos y los músculos de la pantorrilla participan en la absorción de impactos, la estabilización de las articulaciones y la generación de fuerza para el desplazamiento. Los brazos realizan movimientos alternados que contribuyen al equilibrio y a la coordinación corporal. La animación demuestra el movimiento del esqueleto y de la musculatura durante la carrera, destacando la flexión y extensión de las articulaciones y la alternancia de los miembros a lo largo del movimiento."
+  },
   "linkedModels": [
     {
       "id": "3",
-      "label": "Sistema Esquelético Masculino"
-    },
-    {
-      "id": "28",
-      "label": "Sistema Esquelético Feminino"
+      "label": {
+        "pt-BR": "Sistema Esquelético Masculino",
+        "en": "Male Skeletal System",
+        "es": "Sistema Esquelético Masculino"
+      }
     },
     {
       "id": "17",
-      "label": "Sistema Muscular Masculino"
+      "label": {
+        "pt-BR": "Sistema Muscular Masculino",
+        "en": "Male Muscular System",
+        "es": "Sistema Muscular Masculino"
+      }
     },
     {
       "id": "27",
-      "label": "Sistema Muscular Feminino"
+      "label": {
+        "pt-BR": "Sistema Muscular Feminino",
+        "en": "Female Muscular System",
+        "es": "Sistema Muscular Femenino"
+      }
+    },
+    {
+      "id": "28",
+      "label": {
+        "pt-BR": "Sistema Esquelético Feminino",
+        "en": "Female Skeletal System",
+        "es": "Sistema Esquelético Femenino"
+      }
+    },
+    {
+      "id": "68",
+      "label": {
+        "pt-BR": "Flexão e Extensão do Joelho",
+        "en": "Knee Flexion and Extension",
+        "es": "Flexión y Extensión de la Rodilla"
+      }
+    },
+    {
+      "id": "72",
+      "label": {
+        "pt-BR": "Ciclo da Marcha",
+        "en": "Gait Cycle",
+        "es": "Ciclo de la Marcha"
+      }
     }
   ],
   "resources": [],
-  "a65_L_001_2+a65_L_001_7+a65_L_001_3+a65_L_001_4+a65_L_001_1+a65_L_001+nisolar": {
-    "objname": "Movimentação da Corrida",
-    "description": "Representação animada da movimentação corporal durante a corrida. Os membros inferiores alternam movimentos de flexão e extensão do quadril, joelho e tornozelo, permitindo o apoio, a impulsão e a recuperação das pernas. Os músculos glúteos, quadríceps, isquiotibiais e da panturrilha atuam na produção e no controle dos movimentos. Simultaneamente, os braços se movimentam de maneira coordenada, contribuindo para o equilíbrio e a estabilidade do corpo. A animação permite observar a interação entre o sistema muscular e o esqueleto durante o ciclo da corrida."
+  "parts": {
+    "a65_L_001_2+a65_L_001_7+a65_L_001_3+a65_L_001_4+a65_L_001_1+a65_L_001+nisolar": {
+      "objname": {
+        "pt-BR": "Movimentação da Corrida",
+        "en": "Running Movement",
+        "es": "Movimiento de la Carrera"
+      },
+      "description": {
+        "pt-BR": "Representação animada da movimentação corporal durante a corrida. Os membros inferiores alternam movimentos de flexão e extensão do quadril, joelho e tornozelo, permitindo o apoio, a impulsão e a recuperação das pernas. Os músculos glúteos, quadríceps, isquiotibiais e da panturrilha atuam na produção e no controle dos movimentos. Simultaneamente, os braços se movimentam de maneira coordenada, contribuindo para o equilíbrio e a estabilidade do corpo. A animação permite observar a interação entre o sistema muscular e o esqueleto durante o ciclo da corrida.",
+        "en": "Animated representation of body movement during running. The lower limbs alternate between flexion and extension movements of the hip, knee, and ankle, enabling support, propulsion, and recovery of the legs. The gluteal muscles, quadriceps, hamstrings, and calf muscles participate in generating and controlling these movements. Simultaneously, the arms move in a coordinated manner, contributing to body balance and stability. The animation allows observation of the interaction between the muscular system and the skeleton throughout the running cycle.",
+        "es": "Representación animada del movimiento corporal durante la carrera. Los miembros inferiores alternan movimientos de flexión y extensión de la cadera, la rodilla y el tobillo, permitiendo el apoyo, el impulso y la recuperación de las piernas. Los músculos glúteos, el cuádriceps, los isquiotibiales y los músculos de la pantorrilla participan en la producción y el control de los movimientos. Simultáneamente, los brazos se mueven de manera coordinada, contribuyendo al equilibrio y a la estabilidad del cuerpo. La animación permite observar la interacción entre el sistema muscular y el esqueleto durante el ciclo de la carrera."
+      }
+    }
   }
 }

@@ -1,34 +1,125 @@
 {
-  "objname": "Reações Alérgicas Sistêmicas",
+  "objname": {
+    "pt-BR": "Reações Alérgicas Sistêmicas",
+    "en": "Systemic Allergic Reactions",
+    "es": "Reacciones Alérgicas Sistémicas"
+  },
   "objsystem": [
     "Imunológico",
     "Tegumentar"
   ],
-  "objdescription": "As reações alérgicas sistêmicas ocorrem quando o sistema imunológico apresenta uma resposta de hipersensibilidade a determinadas substâncias, como alimentos, medicamentos ou venenos de insetos. Nas reações alérgicas imediatas, a ativação de mastócitos e a liberação de mediadores químicos, como a histamina, podem provocar dilatação dos vasos sanguíneos, aumento da permeabilidade vascular, vermelhidão, coceira e inchaço. Entre as manifestações estão a urticária, caracterizada por lesões elevadas e pruriginosas na pele, e o angioedema, que pode afetar lábios e pálpebras. Em situações graves, a reação pode evoluir para anafilaxia, comprometendo a respiração e a circulação. O modelo apresenta diferentes manifestações cutâneas e faciais de uma reação alérgica, incluindo urticária, angioedema e inflamação localizada após picada de inseto.",
-  "linkedModels": [],
+  "objdescription": {
+    "pt-BR": "As reações alérgicas sistêmicas ocorrem quando o sistema imunológico apresenta uma resposta de hipersensibilidade a determinadas substâncias, como alimentos, medicamentos ou venenos de insetos. Nas reações alérgicas imediatas, a ativação de mastócitos e a liberação de mediadores químicos, como a histamina, podem provocar dilatação dos vasos sanguíneos, aumento da permeabilidade vascular, vermelhidão, coceira e inchaço. Entre as manifestações estão a urticária, caracterizada por lesões elevadas e pruriginosas na pele, e o angioedema, que pode afetar lábios e pálpebras. Em situações graves, a reação pode evoluir para anafilaxia, comprometendo a respiração e a circulação. O modelo apresenta diferentes manifestações cutâneas e faciais de uma reação alérgica, incluindo urticária, angioedema e inflamação localizada após picada de inseto.",
+    "en": "Systemic allergic reactions occur when the immune system exhibits a hypersensitivity response to certain substances, such as foods, medications, or insect venoms. In immediate allergic reactions, mast cell activation and the release of chemical mediators, such as histamine, may cause dilation of blood vessels, increased vascular permeability, redness, itching, and swelling. Manifestations include urticaria, characterized by raised, itchy skin lesions, and angioedema, which may affect the lips and eyelids. In severe cases, the reaction may progress to anaphylaxis, compromising breathing and circulation. The model presents different cutaneous and facial manifestations of an allergic reaction, including urticaria, angioedema, and localized inflammation following an insect bite or sting.",
+    "es": "Las reacciones alérgicas sistémicas ocurren cuando el sistema inmunitario presenta una respuesta de hipersensibilidad a determinadas sustancias, como alimentos, medicamentos o venenos de insectos. En las reacciones alérgicas inmediatas, la activación de los mastocitos y la liberación de mediadores químicos, como la histamina, pueden provocar dilatación de los vasos sanguíneos, aumento de la permeabilidad vascular, enrojecimiento, picor e hinchazón. Entre las manifestaciones se encuentran la urticaria, caracterizada por lesiones elevadas y pruriginosas en la piel, y el angioedema, que puede afectar a los labios y los párpados. En situaciones graves, la reacción puede evolucionar hacia una anafilaxia, comprometiendo la respiración y la circulación. El modelo presenta diferentes manifestaciones cutáneas y faciales de una reacción alérgica, incluyendo urticaria, angioedema e inflamación localizada tras la picadura de un insecto."
+  },
+  "linkedModels": [
+    {
+      "id": "15",
+      "label": {
+        "pt-BR": "Anatomia das Camadas da Pele Humana",
+        "en": "Anatomy of Human Skin Layers",
+        "es": "Anatomía de las Capas de la Piel Humana"
+      }
+    },
+    {
+      "id": "18",
+      "label": {
+        "pt-BR": "Sistema Linfático",
+        "en": "Lymphatic System",
+        "es": "Sistema Linfático"
+      }
+    },
+    {
+      "id": "89",
+      "label": {
+        "pt-BR": "Anafilaxia: Inchaço na Garganta",
+        "en": "Anaphylaxis: Throat Swelling",
+        "es": "Anafilaxia: Hinchazón de la Garganta"
+      }
+    },
+    {
+      "id": "90",
+      "label": {
+        "pt-BR": "Anafilaxia: Inchaço na Face",
+        "en": "Anaphylaxis: Facial Swelling",
+        "es": "Anafilaxia: Hinchazón Facial"
+      }
+    }
+  ],
   "resources": [],
-  "Lab+nisolar": {
-    "objname": "Angioedema dos Lábios",
-    "description": "Inchaço dos lábios provocado pelo acúmulo de líquido nas camadas mais profundas da pele e nos tecidos submucosos. Em reações alérgicas, pode ocorrer devido à liberação de mediadores inflamatórios, como a histamina, que aumentam a permeabilidade dos vasos sanguíneos. O angioedema pode surgir isoladamente ou acompanhado de urticária. Quando envolve a língua ou a garganta, pode comprometer as vias respiratórias."
-  },
-  "Palp+nisolar": {
-    "objname": "Angioedema das Pálpebras",
-    "description": "Inchaço das pálpebras decorrente do acúmulo de líquido nos tecidos ao redor dos olhos. Pode ocorrer durante reações alérgicas devido ao aumento da permeabilidade vascular provocado por mediadores inflamatórios. A região palpebral é especialmente suscetível ao edema por apresentar tecidos relativamente frouxos. O inchaço pode afetar uma ou ambas as pálpebras e causar desconforto ou dificuldade temporária para abrir os olhos."
-  },
-  "Pic+nisolar": {
-    "objname": "Reação Inflamatória Local à Picada de Inseto",
-    "description": "Representação de uma reação inflamatória localizada após a picada ou ferroada de um inseto. A introdução de saliva, veneno ou outras substâncias pode desencadear uma resposta imunológica e inflamatória, provocando vermelhidão, coceira, dor e inchaço na região afetada. Em pessoas sensibilizadas, determinados venenos de insetos também podem desencadear reações alérgicas sistêmicas, incluindo anafilaxia. Entretanto, uma reação local não significa necessariamente que exista alergia sistêmica."
-  },
-  "Urt+nisolar": {
-    "objname": "Urticária",
-    "description": "Manifestação cutânea caracterizada pelo aparecimento de lesões elevadas, avermelhadas ou da cor da pele, geralmente acompanhadas de coceira intensa. Ocorre pela liberação de mediadores químicos, especialmente a histamina, que aumentam a permeabilidade dos pequenos vasos sanguíneos e provocam edema superficial da pele. As lesões podem surgir em diferentes regiões do corpo, variar de tamanho e desaparecer ou mudar de localização ao longo do tempo. A urticária pode ter causas alérgicas ou não alérgicas."
-  },
-  "Body+nisolar+ninteract": {
-    "objname": "Corpo Humano",
-    "description": ""
-  },
-  "Head+nisolar+ninteract": {
-    "objname": "Cabeça",
-    "description": ""
+  "parts": {
+    "Lab+nisolar": {
+      "objname": {
+        "pt-BR": "Angioedema dos Lábios",
+        "en": "Lip Angioedema",
+        "es": "Angioedema de los Labios"
+      },
+      "description": {
+        "pt-BR": "Inchaço dos lábios provocado pelo acúmulo de líquido nas camadas mais profundas da pele e nos tecidos submucosos. Em reações alérgicas, pode ocorrer devido à liberação de mediadores inflamatórios, como a histamina, que aumentam a permeabilidade dos vasos sanguíneos. O angioedema pode surgir isoladamente ou acompanhado de urticária. Quando envolve a língua ou a garganta, pode comprometer as vias respiratórias.",
+        "en": "Swelling of the lips caused by fluid accumulation in the deeper layers of the skin and submucosal tissues. In allergic reactions, it may occur due to the release of inflammatory mediators, such as histamine, which increase blood vessel permeability. Angioedema may occur independently or in association with urticaria. When it involves the tongue or throat, it may compromise the airway.",
+        "es": "Hinchazón de los labios provocada por la acumulación de líquido en las capas más profundas de la piel y en los tejidos submucosos. En las reacciones alérgicas, puede producirse debido a la liberación de mediadores inflamatorios, como la histamina, que aumentan la permeabilidad de los vasos sanguíneos. El angioedema puede aparecer de forma aislada o acompañado de urticaria. Cuando afecta a la lengua o la garganta, puede comprometer las vías respiratorias."
+      }
+    },
+    "Palp+nisolar": {
+      "objname": {
+        "pt-BR": "Angioedema das Pálpebras",
+        "en": "Eyelid Angioedema",
+        "es": "Angioedema de los Párpados"
+      },
+      "description": {
+        "pt-BR": "Inchaço das pálpebras decorrente do acúmulo de líquido nos tecidos ao redor dos olhos. Pode ocorrer durante reações alérgicas devido ao aumento da permeabilidade vascular provocado por mediadores inflamatórios. A região palpebral é especialmente suscetível ao edema por apresentar tecidos relativamente frouxos. O inchaço pode afetar uma ou ambas as pálpebras e causar desconforto ou dificuldade temporária para abrir os olhos.",
+        "en": "Swelling of the eyelids resulting from fluid accumulation in the tissues surrounding the eyes. It may occur during allergic reactions due to increased vascular permeability caused by inflammatory mediators. The eyelid region is particularly susceptible to edema because its tissues are relatively loose. Swelling may affect one or both eyelids and cause discomfort or temporary difficulty opening the eyes.",
+        "es": "Hinchazón de los párpados provocada por la acumulación de líquido en los tejidos que rodean los ojos. Puede producirse durante las reacciones alérgicas debido al aumento de la permeabilidad vascular causado por mediadores inflamatorios. La región palpebral es especialmente susceptible al edema debido a que presenta tejidos relativamente laxos. La hinchazón puede afectar a uno o ambos párpados y causar molestias o dificultad temporal para abrir los ojos."
+      }
+    },
+    "Pic+nisolar": {
+      "objname": {
+        "pt-BR": "Reação Inflamatória Local à Picada de Inseto",
+        "en": "Local Inflammatory Reaction to an Insect Bite or Sting",
+        "es": "Reacción Inflamatoria Local a la Picadura de un Insecto"
+      },
+      "description": {
+        "pt-BR": "Representação de uma reação inflamatória localizada após a picada ou ferroada de um inseto. A introdução de saliva, veneno ou outras substâncias pode desencadear uma resposta imunológica e inflamatória, provocando vermelhidão, coceira, dor e inchaço na região afetada. Em pessoas sensibilizadas, determinados venenos de insetos também podem desencadear reações alérgicas sistêmicas, incluindo anafilaxia. Entretanto, uma reação local não significa necessariamente que exista alergia sistêmica.",
+        "en": "Representation of a localized inflammatory reaction following an insect bite or sting. The introduction of saliva, venom, or other substances may trigger an immune and inflammatory response, causing redness, itching, pain, and swelling in the affected region. In sensitized individuals, certain insect venoms may also trigger systemic allergic reactions, including anaphylaxis. However, a local reaction does not necessarily indicate the presence of a systemic allergy.",
+        "es": "Representación de una reacción inflamatoria localizada tras la picadura o la inoculación de veneno mediante el aguijón de un insecto. La introducción de saliva, veneno u otras sustancias puede desencadenar una respuesta inmunitaria e inflamatoria, provocando enrojecimiento, picor, dolor e hinchazón en la región afectada. En personas sensibilizadas, determinados venenos de insectos también pueden desencadenar reacciones alérgicas sistémicas, incluida la anafilaxia. Sin embargo, una reacción local no implica necesariamente la existencia de una alergia sistémica."
+      }
+    },
+    "Urt+nisolar": {
+      "objname": {
+        "pt-BR": "Urticária",
+        "en": "Urticaria",
+        "es": "Urticaria"
+      },
+      "description": {
+        "pt-BR": "Manifestação cutânea caracterizada pelo aparecimento de lesões elevadas, avermelhadas ou da cor da pele, geralmente acompanhadas de coceira intensa. Ocorre pela liberação de mediadores químicos, especialmente a histamina, que aumentam a permeabilidade dos pequenos vasos sanguíneos e provocam edema superficial da pele. As lesões podem surgir em diferentes regiões do corpo, variar de tamanho e desaparecer ou mudar de localização ao longo do tempo. A urticária pode ter causas alérgicas ou não alérgicas.",
+        "en": "Cutaneous manifestation characterized by the appearance of raised, reddish or skin-colored lesions, usually accompanied by intense itching. It occurs due to the release of chemical mediators, particularly histamine, which increase the permeability of small blood vessels and cause superficial skin edema. The lesions may appear in different regions of the body, vary in size, and disappear or change location over time. Urticaria may have allergic or non-allergic causes.",
+        "es": "Manifestación cutánea caracterizada por la aparición de lesiones elevadas, rojizas o del color de la piel, generalmente acompañadas de picor intenso. Se produce por la liberación de mediadores químicos, especialmente la histamina, que aumentan la permeabilidad de los pequeños vasos sanguíneos y provocan edema superficial de la piel. Las lesiones pueden aparecer en diferentes regiones del cuerpo, variar de tamaño y desaparecer o cambiar de localización con el tiempo. La urticaria puede tener causas alérgicas o no alérgicas."
+      }
+    },
+    "Body+nisolar+ninteract": {
+      "objname": {
+        "pt-BR": "Corpo Humano",
+        "en": "Human Body",
+        "es": "Cuerpo Humano"
+      },
+      "description": {
+        "pt-BR": "",
+        "en": "",
+        "es": ""
+      }
+    },
+    "Head+nisolar+ninteract": {
+      "objname": {
+        "pt-BR": "Cabeça",
+        "en": "Head",
+        "es": "Cabeza"
+      },
+      "description": {
+        "pt-BR": "",
+        "en": "",
+        "es": ""
+      }
+    }
   }
 }

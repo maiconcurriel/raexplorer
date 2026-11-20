@@ -1,59 +1,172 @@
 {
-  "objname": "AVC Isquêmico",
+  "objname": {
+    "pt-BR": "AVC Isquêmico",
+    "en": "Ischemic Stroke",
+    "es": "Accidente Cerebrovascular Isquémico"
+  },
   "objsystem": [
     "Nervoso"
   ],
-  "objdescription": "O AVC isquêmico ocorre quando o fluxo sanguíneo para uma região do cérebro é interrompido, reduzindo o fornecimento de oxigênio e nutrientes às células nervosas. Essa interrupção pode ser causada pela formação de um trombo em uma artéria ou pela obstrução provocada por um êmbolo. A falta de irrigação adequada pode causar danos ao tecido cerebral e comprometer funções controladas pela região afetada. O modelo representa uma obstrução na artéria carótida interna esquerda, a formação de um trombo e o dano provocado ao tecido cerebral, permitindo compreender visualmente a relação entre a interrupção do fluxo sanguíneo e o AVC isquêmico.",
+  "objdescription": {
+    "pt-BR": "O AVC isquêmico ocorre quando o fluxo sanguíneo para uma região do cérebro é interrompido, reduzindo o fornecimento de oxigênio e nutrientes às células nervosas. Essa interrupção pode ser causada pela formação de um trombo em uma artéria ou pela obstrução provocada por um êmbolo. A falta de irrigação adequada pode causar danos ao tecido cerebral e comprometer funções controladas pela região afetada. O modelo representa uma obstrução na artéria carótida interna esquerda, a formação de um trombo e o dano provocado ao tecido cerebral, permitindo compreender visualmente a relação entre a interrupção do fluxo sanguíneo e o AVC isquêmico.",
+    "en": "Ischemic stroke occurs when blood flow to a region of the brain is interrupted, reducing the supply of oxygen and nutrients to nerve cells. This interruption may be caused by the formation of a thrombus in an artery or by an obstruction caused by an embolus. Inadequate blood supply can damage brain tissue and impair functions controlled by the affected region. The model represents an obstruction in the left internal carotid artery, the formation of a thrombus, and the resulting damage to brain tissue, allowing a visual understanding of the relationship between the interruption of blood flow and ischemic stroke.",
+    "es": "El accidente cerebrovascular isquémico ocurre cuando se interrumpe el flujo sanguíneo hacia una región del cerebro, reduciendo el suministro de oxígeno y nutrientes a las células nerviosas. Esta interrupción puede deberse a la formación de un trombo en una arteria o a la obstrucción provocada por un émbolo. La falta de irrigación sanguínea adecuada puede causar daños en el tejido cerebral y comprometer las funciones controladas por la región afectada. El modelo representa una obstrucción en la arteria carótida interna izquierda, la formación de un trombo y el daño provocado en el tejido cerebral, permitiendo comprender visualmente la relación entre la interrupción del flujo sanguíneo y el accidente cerebrovascular isquémico."
+  },
   "linkedModels": [
     {
       "id": "2",
-      "label": "Cérebro"
-    },
-    {
-      "id": "21",
-      "label": "Sistema Nervoso"
+      "label": {
+        "pt-BR": "Cérebro",
+        "en": "Brain",
+        "es": "Cerebro"
+      }
     },
     {
       "id": "19",
-      "label": "Sistema Arterial"
-    }
-    ,
+      "label": {
+        "pt-BR": "Sistema Arterial",
+        "en": "Arterial System",
+        "es": "Sistema Arterial"
+      }
+    },
+    {
+      "id": "21",
+      "label": {
+        "pt-BR": "Sistema Nervoso",
+        "en": "Nervous System",
+        "es": "Sistema Nervioso"
+      }
+    },
     {
       "id": "37",
-      "label": "AVC Hemorrágico"
+      "label": {
+        "pt-BR": "AVC Hemorrágico",
+        "en": "Hemorrhagic Stroke",
+        "es": "Accidente Cerebrovascular Hemorrágico"
+      }
+    },
+    {
+      "id": "57",
+      "label": {
+        "pt-BR": "Aterosclerose",
+        "en": "Atherosclerosis",
+        "es": "Aterosclerosis"
+      }
+    },
+    {
+      "id": "58",
+      "label": {
+        "pt-BR": "Anticoagulantes",
+        "en": "Anticoagulants",
+        "es": "Anticoagulantes"
+      }
+    },
+    {
+      "id": "71",
+      "label": {
+        "pt-BR": "Pressão Arterial",
+        "en": "Blood Pressure",
+        "es": "Presión Arterial"
+      }
     }
   ],
   "resources": [],
-  "artieries": {
-    "objname": "Artérias",
-    "description": "Conjunto de vasos sanguíneos responsáveis por transportar o sangue do coração para os diferentes tecidos do organismo. No modelo, permite visualizar a rede arterial relacionada à circulação que fornece sangue ao cérebro."
-  },
-  "arterie": {
-    "objname": "Artéria Carótida Interna Esquerda",
-    "description": "Artéria que conduz sangue para o cérebro, contribuindo para seu suprimento de oxigênio e nutrientes. No modelo, apresenta a região relacionada à formação do trombo responsável pela interrupção do fluxo sanguíneo."
-  },
-  "brain": {
-    "objname": "Cérebro",
-    "description": "Órgão do sistema nervoso central responsável por funções como movimento, sensibilidade, linguagem, memória e controle de diversas atividades do organismo. No modelo, representa o cérebro utilizado para evidenciar a região afetada pelo AVC isquêmico."
-  },
-  "braindan": {
-    "objname": "Cérebro (Tecido Cerebral Danificado)",
-    "description": "Região do tecido cerebral que sofreu danos devido à interrupção do fornecimento de sangue. A redução do fluxo sanguíneo limita a chegada de oxigênio e nutrientes às células nervosas, podendo causar lesão e perda de função na área afetada."
-  },
-  "coagemb": {
-    "objname": "Coágulo Êmbolo",
-    "description": "Coágulo que se desloca pela circulação sanguínea e pode atingir uma artéria de menor calibre, provocando sua obstrução. Essa interrupção impede a passagem adequada do sangue e pode causar isquemia em uma região do cérebro."
-  },
-  "coagtrom": {
-    "objname": "Coágulo Trombo",
-    "description": "Coágulo formado no interior de um vaso sanguíneo, podendo crescer e reduzir ou interromper o fluxo de sangue. No modelo, o trombo está associado à artéria carótida interna esquerda e representa a obstrução que contribui para o desenvolvimento do AVC isquêmico."
-  },
-  "pl1": {
-    "objname": "Placa Aterosclerótica",
-    "description": "Acúmulo de materiais na parede da artéria que pode provocar seu estreitamento e alterar o fluxo sanguíneo. A superfície da placa pode favorecer a formação de um trombo, que pode aumentar a obstrução e comprometer o fornecimento de sangue ao cérebro."
-  },
-  "pl2": {
-    "objname": "Placa Aterosclerótica",
-    "description": "Acúmulo de materiais na parede da artéria que pode provocar seu estreitamento e alterar o fluxo sanguíneo. A superfície da placa pode favorecer a formação de um trombo, que pode aumentar a obstrução e comprometer o fornecimento de sangue ao cérebro."
+  "parts": {
+    "artieries": {
+      "objname": {
+        "pt-BR": "Artérias",
+        "en": "Arteries",
+        "es": "Arterias"
+      },
+      "description": {
+        "pt-BR": "Conjunto de vasos sanguíneos responsáveis por transportar o sangue do coração para os diferentes tecidos do organismo. No modelo, permite visualizar a rede arterial relacionada à circulação que fornece sangue ao cérebro.",
+        "en": "Group of blood vessels responsible for transporting blood from the heart to the different tissues of the body. In the model, it allows visualization of the arterial network associated with the circulation that supplies blood to the brain.",
+        "es": "Conjunto de vasos sanguíneos responsables de transportar la sangre desde el corazón hacia los diferentes tejidos del organismo. En el modelo, permite visualizar la red arterial relacionada con la circulación que suministra sangre al cerebro."
+      }
+    },
+    "arterie": {
+      "objname": {
+        "pt-BR": "Artéria Carótida Interna Esquerda",
+        "en": "Left Internal Carotid Artery",
+        "es": "Arteria Carótida Interna Izquierda"
+      },
+      "description": {
+        "pt-BR": "Artéria que conduz sangue para o cérebro, contribuindo para seu suprimento de oxigênio e nutrientes. No modelo, apresenta a região relacionada à formação do trombo responsável pela interrupção do fluxo sanguíneo.",
+        "en": "Artery that carries blood to the brain, contributing to its supply of oxygen and nutrients. In the model, it displays the region associated with the formation of the thrombus responsible for interrupting blood flow.",
+        "es": "Arteria que conduce sangre hacia el cerebro, contribuyendo a su suministro de oxígeno y nutrientes. En el modelo, presenta la región relacionada con la formación del trombo responsable de la interrupción del flujo sanguíneo."
+      }
+    },
+    "brain": {
+      "objname": {
+        "pt-BR": "Cérebro",
+        "en": "Brain",
+        "es": "Cerebro"
+      },
+      "description": {
+        "pt-BR": "Órgão do sistema nervoso central responsável por funções como movimento, sensibilidade, linguagem, memória e controle de diversas atividades do organismo. No modelo, representa o cérebro utilizado para evidenciar a região afetada pelo AVC isquêmico.",
+        "en": "Organ of the central nervous system responsible for functions such as movement, sensation, language, memory, and the control of various bodily activities. In the model, it represents the brain used to highlight the region affected by ischemic stroke.",
+        "es": "Órgano del sistema nervioso central responsable de funciones como el movimiento, la sensibilidad, el lenguaje, la memoria y el control de diversas actividades del organismo. En el modelo, representa el cerebro utilizado para evidenciar la región afectada por el accidente cerebrovascular isquémico."
+      }
+    },
+    "braindan": {
+      "objname": {
+        "pt-BR": "Cérebro (Tecido Cerebral Danificado)",
+        "en": "Brain (Damaged Brain Tissue)",
+        "es": "Cerebro (Tejido Cerebral Dañado)"
+      },
+      "description": {
+        "pt-BR": "Região do tecido cerebral que sofreu danos devido à interrupção do fornecimento de sangue. A redução do fluxo sanguíneo limita a chegada de oxigênio e nutrientes às células nervosas, podendo causar lesão e perda de função na área afetada.",
+        "en": "Region of brain tissue that has sustained damage due to an interruption in blood supply. Reduced blood flow limits the delivery of oxygen and nutrients to nerve cells, potentially causing injury and loss of function in the affected area.",
+        "es": "Región del tejido cerebral que ha sufrido daños debido a la interrupción del suministro de sangre. La reducción del flujo sanguíneo limita la llegada de oxígeno y nutrientes a las células nerviosas, pudiendo causar lesiones y pérdida de función en el área afectada."
+      }
+    },
+    "coagemb": {
+      "objname": {
+        "pt-BR": "Coágulo Êmbolo",
+        "en": "Embolus (Blood Clot)",
+        "es": "Émbolo (Coágulo Sanguíneo)"
+      },
+      "description": {
+        "pt-BR": "Coágulo que se desloca pela circulação sanguínea e pode atingir uma artéria de menor calibre, provocando sua obstrução. Essa interrupção impede a passagem adequada do sangue e pode causar isquemia em uma região do cérebro.",
+        "en": "Blood clot that travels through the bloodstream and may reach a smaller-caliber artery, causing its obstruction. This interruption prevents adequate blood flow and may cause ischemia in a region of the brain.",
+        "es": "Coágulo que se desplaza por la circulación sanguínea y puede alcanzar una arteria de menor calibre, provocando su obstrucción. Esta interrupción impide el paso adecuado de la sangre y puede causar isquemia en una región del cerebro."
+      }
+    },
+    "coagtrom": {
+      "objname": {
+        "pt-BR": "Coágulo Trombo",
+        "en": "Thrombus (Blood Clot)",
+        "es": "Trombo (Coágulo Sanguíneo)"
+      },
+      "description": {
+        "pt-BR": "Coágulo formado no interior de um vaso sanguíneo, podendo crescer e reduzir ou interromper o fluxo de sangue. No modelo, o trombo está associado à artéria carótida interna esquerda e representa a obstrução que contribui para o desenvolvimento do AVC isquêmico.",
+        "en": "Blood clot formed within a blood vessel that may grow and reduce or interrupt blood flow. In the model, the thrombus is associated with the left internal carotid artery and represents the obstruction that contributes to the development of ischemic stroke.",
+        "es": "Coágulo formado en el interior de un vaso sanguíneo que puede crecer y reducir o interrumpir el flujo de sangre. En el modelo, el trombo está asociado con la arteria carótida interna izquierda y representa la obstrucción que contribuye al desarrollo del accidente cerebrovascular isquémico."
+      }
+    },
+    "pl1": {
+      "objname": {
+        "pt-BR": "Placa Aterosclerótica",
+        "en": "Atherosclerotic Plaque",
+        "es": "Placa Aterosclerótica"
+      },
+      "description": {
+        "pt-BR": "Acúmulo de materiais na parede da artéria que pode provocar seu estreitamento e alterar o fluxo sanguíneo. A superfície da placa pode favorecer a formação de um trombo, que pode aumentar a obstrução e comprometer o fornecimento de sangue ao cérebro.",
+        "en": "Accumulation of materials in the arterial wall that may cause narrowing of the artery and alter blood flow. The surface of the plaque may promote the formation of a thrombus, which can increase the obstruction and compromise blood supply to the brain.",
+        "es": "Acumulación de materiales en la pared de la arteria que puede provocar su estrechamiento y alterar el flujo sanguíneo. La superficie de la placa puede favorecer la formación de un trombo, que puede aumentar la obstrucción y comprometer el suministro de sangre al cerebro."
+      }
+    },
+    "pl2": {
+      "objname": {
+        "pt-BR": "Placa Aterosclerótica",
+        "en": "Atherosclerotic Plaque",
+        "es": "Placa Aterosclerótica"
+      },
+      "description": {
+        "pt-BR": "Acúmulo de materiais na parede da artéria que pode provocar seu estreitamento e alterar o fluxo sanguíneo. A superfície da placa pode favorecer a formação de um trombo, que pode aumentar a obstrução e comprometer o fornecimento de sangue ao cérebro.",
+        "en": "Accumulation of materials in the arterial wall that may cause narrowing of the artery and alter blood flow. The surface of the plaque may promote the formation of a thrombus, which can increase the obstruction and compromise blood supply to the brain.",
+        "es": "Acumulación de materiales en la pared de la arteria que puede provocar su estrechamiento y alterar el flujo sanguíneo. La superficie de la placa puede favorecer la formación de un trombo, que puede aumentar la obstrucción y comprometer el suministro de sangre al cerebro."
+      }
+    }
   }
 }

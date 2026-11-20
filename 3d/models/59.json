@@ -1,21 +1,96 @@
 {
-  "objname": "Psoríase",
+  "objname": {
+    "pt-BR": "Psoríase",
+    "en": "Psoriasis",
+    "es": "Psoriasis"
+  },
   "objsystem": [
     "Tegumentar"
   ],
-  "objdescription": "A psoríase é uma doença inflamatória crônica, imunomediada e não contagiosa que afeta principalmente a pele. Ocorre uma aceleração do processo de renovação das células da epiderme associada à inflamação, favorecendo o acúmulo de células na superfície cutânea e a formação de lesões características. A forma em placas, uma das apresentações mais comuns, geralmente apresenta áreas avermelhadas e bem delimitadas recobertas por escamas esbranquiçadas ou prateadas, podendo causar coceira, ardor ou desconforto. As lesões podem surgir em diferentes regiões do corpo, sendo frequentes nos cotovelos, joelhos e couro cabeludo. O modelo representa didaticamente uma lesão de psoríase em placa sobre a pele.",
-  "linkedModels": [],
+  "objdescription": {
+    "pt-BR": "A psoríase é uma doença inflamatória crônica, imunomediada e não contagiosa que afeta principalmente a pele. Ocorre uma aceleração do processo de renovação das células da epiderme associada à inflamação, favorecendo o acúmulo de células na superfície cutânea e a formação de lesões características. A forma em placas, uma das apresentações mais comuns, geralmente apresenta áreas avermelhadas e bem delimitadas recobertas por escamas esbranquiçadas ou prateadas, podendo causar coceira, ardor ou desconforto. As lesões podem surgir em diferentes regiões do corpo, sendo frequentes nos cotovelos, joelhos e couro cabeludo. O modelo representa didaticamente uma lesão de psoríase em placa sobre a pele.",
+    "en": "Psoriasis is a chronic, immune-mediated, non-contagious inflammatory disease that primarily affects the skin. The epidermal cell renewal process is accelerated in association with inflammation, promoting the accumulation of cells on the skin surface and the formation of characteristic lesions. Plaque psoriasis, one of the most common forms, typically presents as reddish, well-defined areas covered with whitish or silvery scales, which may cause itching, burning, or discomfort. Lesions may appear in different regions of the body and are common on the elbows, knees, and scalp. The model provides an educational representation of a plaque psoriasis lesion on the skin.",
+    "es": "La psoriasis es una enfermedad inflamatoria crónica, inmunomediada y no contagiosa que afecta principalmente a la piel. Se produce una aceleración del proceso de renovación de las células de la epidermis asociada a la inflamación, favoreciendo la acumulación de células en la superficie cutánea y la formación de lesiones características. La psoriasis en placas, una de las formas más comunes, generalmente presenta áreas enrojecidas y bien delimitadas, cubiertas por escamas blanquecinas o plateadas, que pueden causar picazón, ardor o molestias. Las lesiones pueden aparecer en diferentes regiones del cuerpo y son frecuentes en los codos, las rodillas y el cuero cabelludo. El modelo representa de forma didáctica una lesión de psoriasis en placas sobre la piel."
+  },
+  "linkedModels": [
+    {
+      "id": "15",
+      "label": {
+        "pt-BR": "Anatomia das Camadas da Pele Humana",
+        "en": "Anatomy of Human Skin Layers",
+        "es": "Anatomía de las Capas de la Piel Humana"
+      }
+    },
+    {
+      "id": "73",
+      "label": {
+        "pt-BR": "Psoríase Cutânea Associada à Artrite Psoriática",
+        "en": "Cutaneous Psoriasis Associated with Psoriatic Arthritis",
+        "es": "Psoriasis Cutánea Asociada a la Artritis Psoriásica"
+      }
+    },
+    {
+      "id": "79",
+      "label": {
+        "pt-BR": "Artrite Psoriática: Inflamações nas Articulações",
+        "en": "Psoriatic Arthritis: Joint Inflammation",
+        "es": "Artritis Psoriásica: Inflamación de las Articulaciones"
+      }
+    },
+    {
+      "id": "80",
+      "label": {
+        "pt-BR": "Artrite Psoriática: Articulações das Mãos",
+        "en": "Psoriatic Arthritis: Hand Joints",
+        "es": "Artritis Psoriásica: Articulaciones de las Manos"
+      }
+    },
+    {
+      "id": "95",
+      "label": {
+        "pt-BR": "Camadas da Epiderme",
+        "en": "Layers of the Epidermis",
+        "es": "Capas de la Epidermis"
+      }
+    }
+  ],
   "resources": [],
-  "Psoriase+nisolar": {
-    "objname": "Lesão de Psoríase",
-    "description": "Representação de uma placa de psoríase, caracterizada pela inflamação da pele e pela renovação acelerada das células da epiderme. Esse processo favorece o espessamento e o acúmulo de células na superfície, formando uma área avermelhada que pode apresentar escamas esbranquiçadas ou prateadas. A aparência, extensão e intensidade das lesões podem variar entre indivíduos."
-  },
-  "Arm+nisolar": {
-    "objname": "Braço com Psoríase",
-    "description": "Região do membro superior utilizada para demonstrar uma manifestação cutânea da psoríase. No modelo, a lesão está localizada próxima ao cotovelo, uma região frequentemente acometida pela psoríase em placas."
-  },
-  "Body+ninteract": {
-    "objname": "Corpo Humano",
-    "description": ""
+  "parts": {
+    "Psoriase+nisolar": {
+      "objname": {
+        "pt-BR": "Lesão de Psoríase",
+        "en": "Psoriasis Lesion",
+        "es": "Lesión de Psoriasis"
+      },
+      "description": {
+        "pt-BR": "Representação de uma placa de psoríase, caracterizada pela inflamação da pele e pela renovação acelerada das células da epiderme. Esse processo favorece o espessamento e o acúmulo de células na superfície, formando uma área avermelhada que pode apresentar escamas esbranquiçadas ou prateadas. A aparência, extensão e intensidade das lesões podem variar entre indivíduos.",
+        "en": "Representation of a psoriatic plaque, characterized by skin inflammation and accelerated renewal of epidermal cells. This process promotes thickening and the accumulation of cells on the surface, forming a reddish area that may present whitish or silvery scales. The appearance, extent, and severity of the lesions may vary among individuals.",
+        "es": "Representación de una placa de psoriasis, caracterizada por la inflamación de la piel y la renovación acelerada de las células de la epidermis. Este proceso favorece el engrosamiento y la acumulación de células en la superficie, formando un área enrojecida que puede presentar escamas blanquecinas o plateadas. La apariencia, extensión e intensidad de las lesiones pueden variar entre individuos."
+      }
+    },
+    "Arm+nisolar": {
+      "objname": {
+        "pt-BR": "Braço com Psoríase",
+        "en": "Arm with Psoriasis",
+        "es": "Brazo con Psoriasis"
+      },
+      "description": {
+        "pt-BR": "Região do membro superior utilizada para demonstrar uma manifestação cutânea da psoríase. No modelo, a lesão está localizada próxima ao cotovelo, uma região frequentemente acometida pela psoríase em placas.",
+        "en": "Region of the upper limb used to demonstrate a cutaneous manifestation of psoriasis. In the model, the lesion is located near the elbow, a region frequently affected by plaque psoriasis.",
+        "es": "Región del miembro superior utilizada para demostrar una manifestación cutánea de la psoriasis. En el modelo, la lesión se encuentra cerca del codo, una región frecuentemente afectada por la psoriasis en placas."
+      }
+    },
+    "Body+ninteract": {
+      "objname": {
+        "pt-BR": "Corpo Humano",
+        "en": "Human Body",
+        "es": "Cuerpo Humano"
+      },
+      "description": {
+        "pt-BR": "",
+        "en": "",
+        "es": ""
+      }
+    }
   }
 }

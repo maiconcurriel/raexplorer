@@ -1,33 +1,116 @@
 {
-  "objname": "Artrose",
+  "objname": {
+    "pt-BR": "Artrose",
+    "en": "Osteoarthritis",
+    "es": "Artrosis"
+  },
   "objsystem": [
     "Esquelético"
   ],
-  "objdescription": "Modelo que representa alterações características da artrose em uma articulação do membro inferior, permitindo comparar uma articulação com estruturas preservadas a outra com alterações degenerativas. O modelo evidencia o desgaste da cartilagem articular e alterações nas superfícies do fêmur e da tíbia associadas ao processo degenerativo. A cápsula articular e a pele são representadas de forma parcialmente transparente e podem ser ocultadas para facilitar a visualização das estruturas internas. É um recurso didático para auxiliar na compreensão das alterações anatômicas relacionadas à artrose.",
+  "objdescription": {
+    "pt-BR": "Modelo que representa alterações características da artrose em uma articulação do membro inferior, permitindo comparar uma articulação com estruturas preservadas a outra com alterações degenerativas. O modelo evidencia o desgaste da cartilagem articular e alterações nas superfícies do fêmur e da tíbia associadas ao processo degenerativo. A cápsula articular e a pele são representadas de forma parcialmente transparente e podem ser ocultadas para facilitar a visualização das estruturas internas. É um recurso didático para auxiliar na compreensão das alterações anatômicas relacionadas à artrose.",
+    "en": "Model representing changes characteristic of osteoarthritis in a lower limb joint, allowing comparison between a joint with preserved structures and another with degenerative changes. The model highlights the wear of articular cartilage and changes in the surfaces of the femur and tibia associated with the degenerative process. The joint capsule and skin are represented as partially transparent structures and can be hidden to facilitate visualization of the internal structures. It is an educational resource designed to help understand the anatomical changes associated with osteoarthritis.",
+    "es": "Modelo que representa las alteraciones características de la artrosis en una articulación del miembro inferior, permitiendo comparar una articulación con estructuras conservadas con otra que presenta alteraciones degenerativas. El modelo evidencia el desgaste del cartílago articular y las alteraciones en las superficies del fémur y la tibia asociadas al proceso degenerativo. La cápsula articular y la piel se representan de forma parcialmente transparente y pueden ocultarse para facilitar la visualización de las estructuras internas. Es un recurso didáctico que ayuda a comprender las alteraciones anatómicas relacionadas con la artrosis."
+  },
   "linkedModels": [
     {
       "id": "3",
-      "label": "Sistema Esquelético"
+      "label": {
+        "pt-BR": "Sistema Esquelético Masculino",
+        "en": "Male Skeletal System",
+        "es": "Sistema Esquelético Masculino"
+      }
+    },
+    {
+      "id": "28",
+      "label": {
+        "pt-BR": "Sistema Esquelético Feminino",
+        "en": "Female Skeletal System",
+        "es": "Sistema Esquelético Femenino"
+      }
+    },
+    {
+      "id": "68",
+      "label": {
+        "pt-BR": "Flexão e Extensão do Joelho",
+        "en": "Knee Flexion and Extension",
+        "es": "Flexión y Extensión de la Rodilla"
+      }
+    },
+    {
+      "id": "72",
+      "label": {
+        "pt-BR": "Ciclo da Marcha",
+        "en": "Gait Cycle",
+        "es": "Ciclo de la Marcha"
+      }
+    },
+    {
+      "id": "79",
+      "label": {
+        "pt-BR": "Artrite Psoriática: Inflamações nas Articulações",
+        "en": "Psoriatic Arthritis: Joint Inflammation",
+        "es": "Artritis Psoriásica: Inflamación de las Articulaciones"
+      }
+    },
+    {
+      "id": "104",
+      "label": {
+        "pt-BR": "Biomateriais - Prótese de Quadril",
+        "en": "Biomaterials - Hip Prosthesis",
+        "es": "Biomateriales - Prótesis de Cadera"
+      }
     }
   ],
   "resources": [],
-  "Femur_gasto": {
-  "objname": "Fêmur com Artrose",
-  "description": "Osso da coxa que participa da articulação do joelho. Nesta representação, a superfície articular apresenta alterações associadas à artrose, com desgaste e irregularidade da cartilagem que recobre o osso. As áreas avermelhadas indicam regiões afetadas pelo processo degenerativo, evidenciando a perda da proteção da superfície articular."
-},
-
-"Tibia_gasto": {
-  "objname": "Tíbia com Artrose",
-  "description": "Osso da perna que participa da articulação do joelho. Nesta representação, a superfície articular apresenta desgaste e irregularidades da cartilagem associadas à artrose. As áreas avermelhadas indicam regiões afetadas pelo processo degenerativo, evidenciando a deterioração da cobertura cartilaginosa e a exposição de áreas da superfície óssea."
-},
-
-"Femur_saudavel": {
-  "objname": "Fêmur Normal",
-  "description": "Osso da coxa que participa da articulação do joelho. Nesta representação, a superfície articular apresenta aspecto preservado, com cobertura cartilaginosa uniforme e sem as alterações degenerativas observadas no fêmur afetado pela artrose."
-},
-
-"Tibia_saudavel": {
-  "objname": "Tíbia Normal",
-  "description": "Osso da perna que participa da articulação do joelho. Nesta representação, a superfície articular apresenta aspecto preservado, com cobertura cartilaginosa uniforme e sem as alterações degenerativas observadas na tíbia afetada pela artrose."
-}
+  "parts": {
+    "Femur_gasto": {
+      "objname": {
+        "pt-BR": "Fêmur com Artrose",
+        "en": "Femur with Osteoarthritis",
+        "es": "Fémur con Artrosis"
+      },
+      "description": {
+        "pt-BR": "Osso da coxa que participa da articulação do joelho. Nesta representação, a superfície articular apresenta alterações associadas à artrose, com desgaste e irregularidade da cartilagem que recobre o osso. As áreas avermelhadas indicam regiões afetadas pelo processo degenerativo, evidenciando a perda da proteção da superfície articular.",
+        "en": "Thigh bone that forms part of the knee joint. In this representation, the articular surface exhibits changes associated with osteoarthritis, including wear and irregularities of the cartilage covering the bone. The reddish areas indicate regions affected by the degenerative process, highlighting the loss of protection of the articular surface.",
+        "es": "Hueso del muslo que forma parte de la articulación de la rodilla. En esta representación, la superficie articular presenta alteraciones asociadas a la artrosis, con desgaste e irregularidades del cartílago que recubre el hueso. Las áreas rojizas indican regiones afectadas por el proceso degenerativo, evidenciando la pérdida de protección de la superficie articular."
+      }
+    },
+    "Tibia_gasto": {
+      "objname": {
+        "pt-BR": "Tíbia com Artrose",
+        "en": "Tibia with Osteoarthritis",
+        "es": "Tibia con Artrosis"
+      },
+      "description": {
+        "pt-BR": "Osso da perna que participa da articulação do joelho. Nesta representação, a superfície articular apresenta desgaste e irregularidades da cartilagem associadas à artrose. As áreas avermelhadas indicam regiões afetadas pelo processo degenerativo, evidenciando a deterioração da cobertura cartilaginosa e a exposição de áreas da superfície óssea.",
+        "en": "Lower leg bone that forms part of the knee joint. In this representation, the articular surface exhibits cartilage wear and irregularities associated with osteoarthritis. The reddish areas indicate regions affected by the degenerative process, highlighting the deterioration of the cartilage covering and the exposure of areas of the bone surface.",
+        "es": "Hueso de la pierna que forma parte de la articulación de la rodilla. En esta representación, la superficie articular presenta desgaste e irregularidades del cartílago asociados a la artrosis. Las áreas rojizas indican regiones afectadas por el proceso degenerativo, evidenciando el deterioro de la cobertura cartilaginosa y la exposición de áreas de la superficie ósea."
+      }
+    },
+    "Femur_saudavel": {
+      "objname": {
+        "pt-BR": "Fêmur Normal",
+        "en": "Normal Femur",
+        "es": "Fémur Normal"
+      },
+      "description": {
+        "pt-BR": "Osso da coxa que participa da articulação do joelho. Nesta representação, a superfície articular apresenta aspecto preservado, com cobertura cartilaginosa uniforme e sem as alterações degenerativas observadas no fêmur afetado pela artrose.",
+        "en": "Thigh bone that forms part of the knee joint. In this representation, the articular surface is well preserved, with a uniform cartilage covering and without the degenerative changes observed in the femur affected by osteoarthritis.",
+        "es": "Hueso del muslo que forma parte de la articulación de la rodilla. En esta representación, la superficie articular presenta un aspecto conservado, con una cobertura cartilaginosa uniforme y sin las alteraciones degenerativas observadas en el fémur afectado por la artrosis."
+      }
+    },
+    "Tibia_saudavel": {
+      "objname": {
+        "pt-BR": "Tíbia Normal",
+        "en": "Normal Tibia",
+        "es": "Tibia Normal"
+      },
+      "description": {
+        "pt-BR": "Osso da perna que participa da articulação do joelho. Nesta representação, a superfície articular apresenta aspecto preservado, com cobertura cartilaginosa uniforme e sem as alterações degenerativas observadas na tíbia afetada pela artrose.",
+        "en": "Lower leg bone that forms part of the knee joint. In this representation, the articular surface is well preserved, with a uniform cartilage covering and without the degenerative changes observed in the tibia affected by osteoarthritis.",
+        "es": "Hueso de la pierna que forma parte de la articulación de la rodilla. En esta representación, la superficie articular presenta un aspecto conservado, con una cobertura cartilaginosa uniforme y sin las alteraciones degenerativas observadas en la tibia afectada por la artrosis."
+      }
+    }
+  }
 }

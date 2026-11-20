@@ -1,25 +1,100 @@
 {
-  "objname": "Esôfago de Barrett",
+  "objname": {
+    "pt-BR": "Esôfago de Barrett",
+    "en": "Barrett's Esophagus",
+    "es": "Esófago de Barrett"
+  },
   "objsystem": [
     "Digestório"
   ],
-  "objdescription": "O esôfago de Barrett é uma alteração do revestimento interno da porção inferior do esôfago, geralmente associada à exposição prolongada ao ácido gástrico devido à doença do refluxo gastroesofágico. Nessa condição, parte do epitélio escamoso normal é substituída por epitélio colunar com metaplasia intestinal. Essa transformação representa uma adaptação do tecido à agressão crônica, mas também aumenta o risco de desenvolvimento de adenocarcinoma esofágico. A maioria das pessoas com esôfago de Barrett não desenvolve câncer. O modelo apresenta a junção entre o esôfago e o estômago, destacando em vermelho a região do revestimento esofágico alterado. O diagnóstico é realizado por endoscopia digestiva alta, com avaliação histológica por biópsia.",
-  "linkedModels": [],
+  "objdescription": {
+    "pt-BR": "O esôfago de Barrett é uma alteração do revestimento interno da porção inferior do esôfago, geralmente associada à exposição prolongada ao ácido gástrico devido à doença do refluxo gastroesofágico. Nessa condição, parte do epitélio escamoso normal é substituída por epitélio colunar com metaplasia intestinal. Essa transformação representa uma adaptação do tecido à agressão crônica, mas também aumenta o risco de desenvolvimento de adenocarcinoma esofágico. A maioria das pessoas com esôfago de Barrett não desenvolve câncer. O modelo apresenta a junção entre o esôfago e o estômago, destacando em vermelho a região do revestimento esofágico alterado. O diagnóstico é realizado por endoscopia digestiva alta, com avaliação histológica por biópsia.",
+    "en": "Barrett's esophagus is an alteration of the inner lining of the lower portion of the esophagus, generally associated with prolonged exposure to gastric acid due to gastroesophageal reflux disease. In this condition, part of the normal squamous epithelium is replaced by columnar epithelium with intestinal metaplasia. This transformation represents an adaptation of the tissue to chronic injury but also increases the risk of developing esophageal adenocarcinoma. Most people with Barrett's esophagus do not develop cancer. The model presents the junction between the esophagus and the stomach, highlighting the region of altered esophageal lining in red. Diagnosis is established through upper gastrointestinal endoscopy, with histological evaluation of biopsy samples.",
+    "es": "El esófago de Barrett es una alteración del revestimiento interno de la porción inferior del esófago, generalmente asociada a la exposición prolongada al ácido gástrico debido a la enfermedad por reflujo gastroesofágico. En esta afección, parte del epitelio escamoso normal es sustituida por epitelio cilíndrico con metaplasia intestinal. Esta transformación representa una adaptación del tejido a la agresión crónica, pero también aumenta el riesgo de desarrollar adenocarcinoma esofágico. La mayoría de las personas con esófago de Barrett no desarrollan cáncer. El modelo presenta la unión entre el esófago y el estómago, destacando en rojo la región del revestimiento esofágico alterado. El diagnóstico se realiza mediante endoscopia digestiva alta, con evaluación histológica mediante biopsia."
+  },
+  "linkedModels": [
+    {
+      "id": "24",
+      "label": {
+        "pt-BR": "Sistema Digestório",
+        "en": "Digestive System",
+        "es": "Sistema Digestivo"
+      }
+    },
+    {
+      "id": "26",
+      "label": {
+        "pt-BR": "Sistema Estomatognático",
+        "en": "Stomatognathic System",
+        "es": "Sistema Estomatognático"
+      }
+    },
+    {
+      "id": "61",
+      "label": {
+        "pt-BR": "Gastrite",
+        "en": "Gastritis",
+        "es": "Gastritis"
+      }
+    },
+    {
+      "id": "62",
+      "label": {
+        "pt-BR": "Úlcera Gástrica",
+        "en": "Gastric Ulcer",
+        "es": "Úlcera Gástrica"
+      }
+    }
+  ],
   "resources": [],
-  "Esof": {
-    "objname": "Esôfago e Estômago",
-    "description": "O esôfago é um órgão muscular responsável por transportar os alimentos da faringe até o estômago. Na sua extremidade inferior, encontra-se a junção gastroesofágica, região que pode ser afetada pelo refluxo do conteúdo gástrico. No esôfago de Barrett, a exposição crônica ao refluxo pode provocar a substituição do revestimento escamoso normal por epitélio colunar com metaplasia intestinal. No modelo, a área avermelhada próxima à entrada do estômago representa didaticamente essa alteração da mucosa esofágica."
-  },
-  "LargeIntestine": {
-    "objname": "Intestino Grosso",
-    "description": "Porção final do sistema digestório, responsável principalmente pela absorção de água e eletrólitos, formação e armazenamento das fezes. É composto pelo ceco, cólon, reto e canal anal. No modelo, aparece como referência anatômica do sistema digestório, não sendo diretamente afetado pelo esôfago de Barrett."
-  },
-  "SmallIntestine": {
-    "objname": "Intestino Delgado",
-    "description": "Órgão do sistema digestório formado pelo duodeno, jejuno e íleo, responsável pela maior parte da digestão química e absorção de nutrientes. Recebe o conteúdo parcialmente digerido do estômago e realiza sua absorção por meio da mucosa intestinal. No modelo, serve como referência anatômica e não representa uma região diretamente afetada pelo esôfago de Barrett."
-  },
-  "Skin+nisolar+ninteract": {
-    "objname": "Pele",
-    "description": ""
+  "parts": {
+    "Esof": {
+      "objname": {
+        "pt-BR": "Esôfago e Estômago",
+        "en": "Esophagus and Stomach",
+        "es": "Esófago y Estómago"
+      },
+      "description": {
+        "pt-BR": "O esôfago é um órgão muscular responsável por transportar os alimentos da faringe até o estômago. Na sua extremidade inferior, encontra-se a junção gastroesofágica, região que pode ser afetada pelo refluxo do conteúdo gástrico. No esôfago de Barrett, a exposição crônica ao refluxo pode provocar a substituição do revestimento escamoso normal por epitélio colunar com metaplasia intestinal. No modelo, a área avermelhada próxima à entrada do estômago representa didaticamente essa alteração da mucosa esofágica.",
+        "en": "The esophagus is a muscular organ responsible for transporting food from the pharynx to the stomach. At its lower end is the gastroesophageal junction, a region that may be affected by the reflux of gastric contents. In Barrett's esophagus, chronic exposure to reflux may cause the replacement of the normal squamous lining with columnar epithelium with intestinal metaplasia. In the model, the reddish area near the entrance to the stomach illustrates this alteration of the esophageal mucosa for educational purposes.",
+        "es": "El esófago es un órgano muscular responsable de transportar los alimentos desde la faringe hasta el estómago. En su extremo inferior se encuentra la unión gastroesofágica, región que puede verse afectada por el reflujo del contenido gástrico. En el esófago de Barrett, la exposición crónica al reflujo puede provocar la sustitución del revestimiento escamoso normal por epitelio cilíndrico con metaplasia intestinal. En el modelo, el área enrojecida próxima a la entrada del estómago representa de forma didáctica esta alteración de la mucosa esofágica."
+      }
+    },
+    "LargeIntestine": {
+      "objname": {
+        "pt-BR": "Intestino Grosso",
+        "en": "Large Intestine",
+        "es": "Intestino Grueso"
+      },
+      "description": {
+        "pt-BR": "Porção final do sistema digestório, responsável principalmente pela absorção de água e eletrólitos, formação e armazenamento das fezes. É composto pelo ceco, cólon, reto e canal anal. No modelo, aparece como referência anatômica do sistema digestório, não sendo diretamente afetado pelo esôfago de Barrett.",
+        "en": "Final portion of the digestive system, primarily responsible for the absorption of water and electrolytes, as well as the formation and storage of feces. It consists of the cecum, colon, rectum, and anal canal. In the model, it appears as an anatomical reference for the digestive system and is not directly affected by Barrett's esophagus.",
+        "es": "Porción final del sistema digestivo, responsable principalmente de la absorción de agua y electrolitos, así como de la formación y el almacenamiento de las heces. Está compuesto por el ciego, el colon, el recto y el canal anal. En el modelo, aparece como referencia anatómica del sistema digestivo y no está directamente afectado por el esófago de Barrett."
+      }
+    },
+    "SmallIntestine": {
+      "objname": {
+        "pt-BR": "Intestino Delgado",
+        "en": "Small Intestine",
+        "es": "Intestino Delgado"
+      },
+      "description": {
+        "pt-BR": "Órgão do sistema digestório formado pelo duodeno, jejuno e íleo, responsável pela maior parte da digestão química e absorção de nutrientes. Recebe o conteúdo parcialmente digerido do estômago e realiza sua absorção por meio da mucosa intestinal. No modelo, serve como referência anatômica e não representa uma região diretamente afetada pelo esôfago de Barrett.",
+        "en": "Organ of the digestive system composed of the duodenum, jejunum, and ileum, responsible for most chemical digestion and nutrient absorption. It receives partially digested contents from the stomach and absorbs nutrients through the intestinal mucosa. In the model, it serves as an anatomical reference and does not represent a region directly affected by Barrett's esophagus.",
+        "es": "Órgano del sistema digestivo formado por el duodeno, el yeyuno y el íleon, responsable de la mayor parte de la digestión química y de la absorción de nutrientes. Recibe el contenido parcialmente digerido procedente del estómago y realiza la absorción de nutrientes a través de la mucosa intestinal. En el modelo, sirve como referencia anatómica y no representa una región directamente afectada por el esófago de Barrett."
+      }
+    },
+    "Skin+nisolar+ninteract": {
+      "objname": {
+        "pt-BR": "Pele",
+        "en": "Skin",
+        "es": "Piel"
+      },
+      "description": {
+        "pt-BR": "",
+        "en": "",
+        "es": ""
+      }
+    }
   }
 }

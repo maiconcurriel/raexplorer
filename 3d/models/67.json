@@ -1,51 +1,149 @@
 {
-  "objname": "Dinâmica Respiratória com o Coração",
+  "objname": {
+    "pt-BR": "Dinâmica Respiratória com o Coração",
+    "en": "Respiratory Dynamics with the Heart",
+    "es": "Dinámica Respiratoria con el Corazón"
+  },
   "objsystem": [
     "Respiratório",
     "Cardiovascular"
   ],
-  "objdescription": "A dinâmica respiratória envolve os movimentos de inspiração e expiração, responsáveis pela entrada e saída de ar dos pulmões. Durante a inspiração, o diafragma se contrai e desce, enquanto a caixa torácica se expande, aumentando o volume da cavidade torácica e permitindo a entrada de ar. Na expiração tranquila, o diafragma relaxa e retorna à sua posição elevada, enquanto os pulmões retraem elasticamente, favorecendo a saída do ar. Nos alvéolos pulmonares ocorrem as trocas gasosas, pelas quais o oxigênio passa para o sangue e o dióxido de carbono é eliminado. O coração participa desse processo ao bombear sangue para os pulmões, onde ocorre sua oxigenação, e posteriormente para o restante do organismo. O modelo apresenta uma animação didática dos movimentos respiratórios e da relação anatômica entre pulmões, diafragma, caixa torácica, coração e vasos sanguíneos.",
+  "objdescription": {
+    "pt-BR": "A dinâmica respiratória envolve os movimentos de inspiração e expiração, responsáveis pela entrada e saída de ar dos pulmões. Durante a inspiração, o diafragma se contrai e desce, enquanto a caixa torácica se expande, aumentando o volume da cavidade torácica e permitindo a entrada de ar. Na expiração tranquila, o diafragma relaxa e retorna à sua posição elevada, enquanto os pulmões retraem elasticamente, favorecendo a saída do ar. Nos alvéolos pulmonares ocorrem as trocas gasosas, pelas quais o oxigênio passa para o sangue e o dióxido de carbono é eliminado. O coração participa desse processo ao bombear sangue para os pulmões, onde ocorre sua oxigenação, e posteriormente para o restante do organismo. O modelo apresenta uma animação didática dos movimentos respiratórios e da relação anatômica entre pulmões, diafragma, caixa torácica, coração e vasos sanguíneos.",
+    "en": "Respiratory dynamics involve the movements of inspiration and expiration, which are responsible for the entry and exit of air from the lungs. During inspiration, the diaphragm contracts and descends while the rib cage expands, increasing the volume of the thoracic cavity and allowing air to enter. During quiet expiration, the diaphragm relaxes and returns to its elevated position, while the lungs undergo elastic recoil, facilitating the exit of air. Gas exchange occurs in the pulmonary alveoli, where oxygen passes into the blood and carbon dioxide is eliminated. The heart participates in this process by pumping blood to the lungs, where it becomes oxygenated, and subsequently to the rest of the body. The model presents an educational animation of respiratory movements and the anatomical relationship between the lungs, diaphragm, rib cage, heart, and blood vessels.",
+    "es": "La dinámica respiratoria comprende los movimientos de inspiración y espiración, responsables de la entrada y salida de aire de los pulmones. Durante la inspiración, el diafragma se contrae y desciende, mientras que la caja torácica se expande, aumentando el volumen de la cavidad torácica y permitiendo la entrada de aire. Durante la espiración tranquila, el diafragma se relaja y retorna a su posición elevada, mientras que los pulmones se retraen elásticamente, favoreciendo la salida del aire. En los alvéolos pulmonares se produce el intercambio gaseoso, mediante el cual el oxígeno pasa a la sangre y se elimina el dióxido de carbono. El corazón participa en este proceso al bombear sangre hacia los pulmones, donde se oxigena, y posteriormente hacia el resto del organismo. El modelo presenta una animación didáctica de los movimientos respiratorios y de la relación anatómica entre los pulmones, el diafragma, la caja torácica, el corazón y los vasos sanguíneos."
+  },
   "linkedModels": [
-  {
-    "id": "4",
-    "label": "Coração"
-  },
-  {
-    "id": "5",
-    "label": "Coração (Animado)"
-  },
-  {
-    "id": "23",
-    "label": "Sistema Respiratório"
-  },
-  {
-    "id": "32",
-    "label": "Sistema Cardiovascular"
-  }
-],
+    {
+      "id": "4",
+      "label": {
+        "pt-BR": "Coração",
+        "en": "Heart",
+        "es": "Corazón"
+      }
+    },
+    {
+      "id": "5",
+      "label": {
+        "pt-BR": "Coração (Animado)",
+        "en": "Heart (Animated)",
+        "es": "Corazón (Animado)"
+      }
+    },
+    {
+      "id": "20",
+      "label": {
+        "pt-BR": "Sistema Venoso",
+        "en": "Venous System",
+        "es": "Sistema Venoso"
+      }
+    },
+    {
+      "id": "23",
+      "label": {
+        "pt-BR": "Sistema Respiratório",
+        "en": "Respiratory System",
+        "es": "Sistema Respiratorio"
+      }
+    },
+    {
+      "id": "32",
+      "label": {
+        "pt-BR": "Sistema Cardiovascular",
+        "en": "Cardiovascular System",
+        "es": "Sistema Cardiovascular"
+      }
+    },
+    {
+      "id": "35",
+      "label": {
+        "pt-BR": "Atelectasia",
+        "en": "Atelectasis",
+        "es": "Atelectasia"
+      }
+    },
+    {
+      "id": "70",
+      "label": {
+        "pt-BR": "Dinâmica Respiratória",
+        "en": "Respiratory Dynamics",
+        "es": "Dinámica Respiratoria"
+      }
+    }
+  ],
   "resources": [],
-  "Aorta+AorticValve+Capslice_1+Capslice_2+MitralValve+PulmonaryValve+PulmonaryVein+PulmonaryArtery+TricuspicValve": {
-    "objname": "Coração",
-    "description": "Órgão muscular responsável por impulsionar o sangue pelas circulações pulmonar e sistêmica. O lado direito bombeia sangue para os pulmões, onde ocorre a troca de dióxido de carbono por oxigênio, enquanto o lado esquerdo recebe o sangue oxigenado e o distribui pelo organismo. Durante os movimentos respiratórios, o coração permanece localizado no mediastino, entre os pulmões, acompanhando as alterações de posição e pressão da cavidade torácica."
-  },
-  "Arteries": {
-    "objname": "Artérias",
-    "description": "Vasos sanguíneos responsáveis por transportar o sangue para fora do coração. Na circulação pulmonar, as artérias pulmonares conduzem sangue pobre em oxigênio do ventrículo direito até os pulmões. Na circulação sistêmica, as artérias distribuem o sangue oxigenado aos tecidos do organismo, permitindo o fornecimento de oxigênio necessário às atividades celulares."
-  },
-  "Veins": {
-    "objname": "Veias",
-    "description": "Vasos sanguíneos responsáveis pelo retorno do sangue ao coração. As veias sistêmicas transportam sangue geralmente pobre em oxigênio dos tecidos até o átrio direito, enquanto as veias pulmonares conduzem sangue oxigenado dos pulmões até o átrio esquerdo. Participam da circulação que integra o transporte de gases respiratórios pelo organismo."
-  },
-  "Diaphragm": {
-    "objname": "Diafragma",
-    "description": "Principal músculo da inspiração, localizado abaixo dos pulmões e responsável por separar as cavidades torácica e abdominal. Durante a inspiração, contrai-se e desce, aumentando o volume da cavidade torácica e favorecendo a entrada de ar nos pulmões. Durante a expiração tranquila, relaxa e retorna à sua posição elevada, contribuindo para a redução do volume torácico."
-  },
-  "LeftLung+RightLung": {
-    "objname": "Pulmões",
-    "description": "Órgãos do sistema respiratório responsáveis pelas trocas gasosas entre o ar e o sangue. Durante a inspiração, expandem-se conforme o volume da cavidade torácica aumenta e o ar entra pelas vias respiratórias. Durante a expiração, retraem-se elasticamente, favorecendo a saída do ar. Nos alvéolos pulmonares, o oxigênio passa para o sangue e o dióxido de carbono é transferido do sangue para o ar alveolar."
-  },
-  "Caixa_1": {
-    "objname": "Caixa Torácica",
-    "description": "Estrutura formada pelas costelas, esterno, vértebras torácicas e suas articulações, responsável por proteger órgãos como o coração e os pulmões. Durante a inspiração, a ação dos músculos respiratórios eleva e expande a caixa torácica, aumentando o volume disponível para a expansão pulmonar. Durante a expiração tranquila, ocorre o retorno progressivo à posição de repouso, acompanhando a redução do volume torácico."
+  "parts": {
+    "Aorta+AorticValve+Capslice_1+Capslice_2+MitralValve+PulmonaryValve+PulmonaryVein+PulmonaryArtery+TricuspicValve": {
+      "objname": {
+        "pt-BR": "Coração",
+        "en": "Heart",
+        "es": "Corazón"
+      },
+      "description": {
+        "pt-BR": "Órgão muscular responsável por impulsionar o sangue pelas circulações pulmonar e sistêmica. O lado direito bombeia sangue para os pulmões, onde ocorre a troca de dióxido de carbono por oxigênio, enquanto o lado esquerdo recebe o sangue oxigenado e o distribui pelo organismo. Durante os movimentos respiratórios, o coração permanece localizado no mediastino, entre os pulmões, acompanhando as alterações de posição e pressão da cavidade torácica.",
+        "en": "Muscular organ responsible for pumping blood through the pulmonary and systemic circulations. The right side pumps blood to the lungs, where carbon dioxide is exchanged for oxygen, while the left side receives oxygenated blood and distributes it throughout the body. During respiratory movements, the heart remains located in the mediastinum, between the lungs, responding to changes in the position and pressure of the thoracic cavity.",
+        "es": "Órgano muscular responsable de impulsar la sangre a través de las circulaciones pulmonar y sistémica. El lado derecho bombea sangre hacia los pulmones, donde se produce el intercambio de dióxido de carbono por oxígeno, mientras que el lado izquierdo recibe la sangre oxigenada y la distribuye por el organismo. Durante los movimientos respiratorios, el corazón permanece localizado en el mediastino, entre los pulmones, acompañando los cambios de posición y presión de la cavidad torácica."
+      }
+    },
+    "Arteries": {
+      "objname": {
+        "pt-BR": "Artérias",
+        "en": "Arteries",
+        "es": "Arterias"
+      },
+      "description": {
+        "pt-BR": "Vasos sanguíneos responsáveis por transportar o sangue para fora do coração. Na circulação pulmonar, as artérias pulmonares conduzem sangue pobre em oxigênio do ventrículo direito até os pulmões. Na circulação sistêmica, as artérias distribuem o sangue oxigenado aos tecidos do organismo, permitindo o fornecimento de oxigênio necessário às atividades celulares.",
+        "en": "Blood vessels responsible for carrying blood away from the heart. In the pulmonary circulation, the pulmonary arteries carry oxygen-poor blood from the right ventricle to the lungs. In the systemic circulation, the arteries distribute oxygenated blood to the tissues of the body, providing the oxygen necessary for cellular activities.",
+        "es": "Vasos sanguíneos responsables de transportar la sangre desde el corazón hacia otras regiones del organismo. En la circulación pulmonar, las arterias pulmonares conducen sangre pobre en oxígeno desde el ventrículo derecho hasta los pulmones. En la circulación sistémica, las arterias distribuyen la sangre oxigenada a los tejidos del organismo, permitiendo el suministro de oxígeno necesario para las actividades celulares."
+      }
+    },
+    "Veins": {
+      "objname": {
+        "pt-BR": "Veias",
+        "en": "Veins",
+        "es": "Venas"
+      },
+      "description": {
+        "pt-BR": "Vasos sanguíneos responsáveis pelo retorno do sangue ao coração. As veias sistêmicas transportam sangue geralmente pobre em oxigênio dos tecidos até o átrio direito, enquanto as veias pulmonares conduzem sangue oxigenado dos pulmões até o átrio esquerdo. Participam da circulação que integra o transporte de gases respiratórios pelo organismo.",
+        "en": "Blood vessels responsible for returning blood to the heart. The systemic veins carry generally oxygen-poor blood from the tissues to the right atrium, while the pulmonary veins carry oxygenated blood from the lungs to the left atrium. They participate in the circulation that enables the transport of respiratory gases throughout the body.",
+        "es": "Vasos sanguíneos responsables del retorno de la sangre al corazón. Las venas sistémicas transportan sangre generalmente pobre en oxígeno desde los tejidos hasta la aurícula derecha, mientras que las venas pulmonares conducen sangre oxigenada desde los pulmones hasta la aurícula izquierda. Participan en la circulación que integra el transporte de gases respiratorios por el organismo."
+      }
+    },
+    "Diaphragm": {
+      "objname": {
+        "pt-BR": "Diafragma",
+        "en": "Diaphragm",
+        "es": "Diafragma"
+      },
+      "description": {
+        "pt-BR": "Principal músculo da inspiração, localizado abaixo dos pulmões e responsável por separar as cavidades torácica e abdominal. Durante a inspiração, contrai-se e desce, aumentando o volume da cavidade torácica e favorecendo a entrada de ar nos pulmões. Durante a expiração tranquila, relaxa e retorna à sua posição elevada, contribuindo para a redução do volume torácico.",
+        "en": "Primary muscle of inspiration, located beneath the lungs and responsible for separating the thoracic and abdominal cavities. During inspiration, it contracts and descends, increasing the volume of the thoracic cavity and facilitating the entry of air into the lungs. During quiet expiration, it relaxes and returns to its elevated position, contributing to the reduction in thoracic volume.",
+        "es": "Principal músculo de la inspiración, situado debajo de los pulmones y responsable de separar las cavidades torácica y abdominal. Durante la inspiración, se contrae y desciende, aumentando el volumen de la cavidad torácica y favoreciendo la entrada de aire en los pulmones. Durante la espiración tranquila, se relaja y retorna a su posición elevada, contribuyendo a la reducción del volumen torácico."
+      }
+    },
+    "LeftLung+RightLung": {
+      "objname": {
+        "pt-BR": "Pulmões",
+        "en": "Lungs",
+        "es": "Pulmones"
+      },
+      "description": {
+        "pt-BR": "Órgãos do sistema respiratório responsáveis pelas trocas gasosas entre o ar e o sangue. Durante a inspiração, expandem-se conforme o volume da cavidade torácica aumenta e o ar entra pelas vias respiratórias. Durante a expiração, retraem-se elasticamente, favorecendo a saída do ar. Nos alvéolos pulmonares, o oxigênio passa para o sangue e o dióxido de carbono é transferido do sangue para o ar alveolar.",
+        "en": "Organs of the respiratory system responsible for gas exchange between the air and the blood. During inspiration, they expand as the volume of the thoracic cavity increases and air enters through the respiratory tract. During expiration, they undergo elastic recoil, facilitating the exit of air. In the pulmonary alveoli, oxygen passes into the blood and carbon dioxide is transferred from the blood to the alveolar air.",
+        "es": "Órganos del sistema respiratorio responsables del intercambio gaseoso entre el aire y la sangre. Durante la inspiración, se expanden a medida que aumenta el volumen de la cavidad torácica y el aire entra por las vías respiratorias. Durante la espiración, se retraen elásticamente, favoreciendo la salida del aire. En los alvéolos pulmonares, el oxígeno pasa a la sangre y el dióxido de carbono se transfiere desde la sangre hacia el aire alveolar."
+      }
+    },
+    "Caixa_1": {
+      "objname": {
+        "pt-BR": "Caixa Torácica",
+        "en": "Rib Cage",
+        "es": "Caja Torácica"
+      },
+      "description": {
+        "pt-BR": "Estrutura formada pelas costelas, esterno, vértebras torácicas e suas articulações, responsável por proteger órgãos como o coração e os pulmões. Durante a inspiração, a ação dos músculos respiratórios eleva e expande a caixa torácica, aumentando o volume disponível para a expansão pulmonar. Durante a expiração tranquila, ocorre o retorno progressivo à posição de repouso, acompanhando a redução do volume torácico.",
+        "en": "Structure formed by the ribs, sternum, thoracic vertebrae, and their joints, responsible for protecting organs such as the heart and lungs. During inspiration, the action of the respiratory muscles elevates and expands the rib cage, increasing the volume available for lung expansion. During quiet expiration, the rib cage gradually returns to its resting position, accompanying the reduction in thoracic volume.",
+        "es": "Estructura formada por las costillas, el esternón, las vértebras torácicas y sus articulaciones, responsable de proteger órganos como el corazón y los pulmones. Durante la inspiración, la acción de los músculos respiratorios eleva y expande la caja torácica, aumentando el volumen disponible para la expansión pulmonar. Durante la espiración tranquila, se produce un retorno progresivo a la posición de reposo, acompañando la reducción del volumen torácico."
+      }
+    }
   }
 }

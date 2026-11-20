@@ -1,21 +1,88 @@
 {
-  "objname": "Dores Abdominais",
+  "objname": {
+    "pt-BR": "Dores Abdominais",
+    "en": "Abdominal Pain",
+    "es": "Dolor Abdominal"
+  },
   "objsystem": [
     "Digestório"
   ],
-  "objdescription": "As dores abdominais podem estar relacionadas a diferentes estruturas e condições que afetam a região do abdômen. No sistema digestório, alterações no intestino podem estar associadas a sintomas como dor, cólicas, distensão e desconforto abdominal. Este modelo apresenta uma representação visual das estruturas intestinais, destacando o intestino delgado e o intestino grosso em vermelho durante a ocorrência da dor e retornando posteriormente ao aspecto normal. A alteração visual tem finalidade didática e busca chamar a atenção para a região abdominal relacionada ao desconforto, facilitando a compreensão de que diferentes estruturas do sistema digestório podem estar envolvidas na manifestação de dores abdominais.",
-  "linkedModels": [],
+  "objdescription": {
+    "pt-BR": "As dores abdominais podem estar relacionadas a diferentes estruturas e condições que afetam a região do abdômen. No sistema digestório, alterações no intestino podem estar associadas a sintomas como dor, cólicas, distensão e desconforto abdominal. Este modelo apresenta uma representação visual das estruturas intestinais, destacando o intestino delgado e o intestino grosso em vermelho durante a ocorrência da dor e retornando posteriormente ao aspecto normal. A alteração visual tem finalidade didática e busca chamar a atenção para a região abdominal relacionada ao desconforto, facilitando a compreensão de que diferentes estruturas do sistema digestório podem estar envolvidas na manifestação de dores abdominais.",
+    "en": "Abdominal pain may be associated with different structures and conditions affecting the abdominal region. In the digestive system, intestinal changes may be associated with symptoms such as pain, cramps, abdominal distension, and discomfort. This model presents a visual representation of the intestinal structures, highlighting the small and large intestines in red during episodes of pain and subsequently returning them to their normal appearance. This visual change serves an educational purpose and aims to draw attention to the abdominal region associated with discomfort, facilitating an understanding of how different structures of the digestive system may be involved in the manifestation of abdominal pain.",
+    "es": "El dolor abdominal puede estar relacionado con diferentes estructuras y afecciones que afectan a la región del abdomen. En el sistema digestivo, las alteraciones intestinales pueden estar asociadas a síntomas como dolor, cólicos, distensión y malestar abdominal. Este modelo presenta una representación visual de las estructuras intestinales, resaltando el intestino delgado y el intestino grueso en rojo durante los episodios de dolor y devolviéndolos posteriormente a su aspecto normal. La alteración visual tiene una finalidad didáctica y busca llamar la atención sobre la región abdominal relacionada con el malestar, facilitando la comprensión de que diferentes estructuras del sistema digestivo pueden estar involucradas en la manifestación del dolor abdominal."
+  },
+  "linkedModels": [
+    {
+      "id": "24",
+      "label": {
+        "pt-BR": "Sistema Digestório",
+        "en": "Digestive System",
+        "es": "Sistema Digestivo"
+      }
+    },
+    {
+      "id": "61",
+      "label": {
+        "pt-BR": "Gastrite",
+        "en": "Gastritis",
+        "es": "Gastritis"
+      }
+    },
+    {
+      "id": "62",
+      "label": {
+        "pt-BR": "Úlcera Gástrica",
+        "en": "Gastric Ulcer",
+        "es": "Úlcera Gástrica"
+      }
+    },
+    {
+      "id": "85",
+      "label": {
+        "pt-BR": "Colite",
+        "en": "Colitis",
+        "es": "Colitis"
+      }
+    }
+  ],
   "resources": [],
-  "SmallIntestine001+SmallIntestine002+nisolar": {
-    "objname": "Intestino Delgado",
-    "description": "Órgão responsável por grande parte da digestão e absorção de nutrientes. No modelo, sua coloração em vermelho destaca visualmente a região relacionada à representação das dores abdominais, retornando posteriormente ao aspecto normal."
-  },
-  "LargeIntestine001+LargeIntestine002+nisolar": {
-    "objname": "Intestino Grosso",
-    "description": "Órgão responsável principalmente pela absorção de água e eletrólitos e pela formação e condução das fezes. No modelo, sua coloração em vermelho destaca visualmente a região relacionada à representação das dores abdominais, retornando posteriormente ao aspecto normal."
-  },
-  "Body_Skin002+ninteract": {
-    "objname": "Silhueta do Corpo Humano",
-    "description": "Representação simplificada da silhueta do corpo humano utilizada para contextualizar a localização das estruturas do sistema digestório dentro da região abdominal."
+  "parts": {
+    "SmallIntestine001+SmallIntestine002+nisolar": {
+      "objname": {
+        "pt-BR": "Intestino Delgado",
+        "en": "Small Intestine",
+        "es": "Intestino Delgado"
+      },
+      "description": {
+        "pt-BR": "Órgão responsável por grande parte da digestão e absorção de nutrientes. No modelo, sua coloração em vermelho destaca visualmente a região relacionada à representação das dores abdominais, retornando posteriormente ao aspecto normal.",
+        "en": "Organ responsible for much of the digestion and absorption of nutrients. In the model, its red coloration visually highlights the region associated with the representation of abdominal pain before returning to its normal appearance.",
+        "es": "Órgano responsable de gran parte de la digestión y absorción de nutrientes. En el modelo, su coloración roja resalta visualmente la región relacionada con la representación del dolor abdominal, recuperando posteriormente su aspecto normal."
+      }
+    },
+    "LargeIntestine001+LargeIntestine002+nisolar": {
+      "objname": {
+        "pt-BR": "Intestino Grosso",
+        "en": "Large Intestine",
+        "es": "Intestino Grueso"
+      },
+      "description": {
+        "pt-BR": "Órgão responsável principalmente pela absorção de água e eletrólitos e pela formação e condução das fezes. No modelo, sua coloração em vermelho destaca visualmente a região relacionada à representação das dores abdominais, retornando posteriormente ao aspecto normal.",
+        "en": "Organ primarily responsible for the absorption of water and electrolytes and for the formation and movement of feces. In the model, its red coloration visually highlights the region associated with the representation of abdominal pain before returning to its normal appearance.",
+        "es": "Órgano responsable principalmente de la absorción de agua y electrolitos y de la formación y el tránsito de las heces. En el modelo, su coloración roja resalta visualmente la región relacionada con la representación del dolor abdominal, recuperando posteriormente su aspecto normal."
+      }
+    },
+    "Body_Skin002+ninteract": {
+      "objname": {
+        "pt-BR": "Silhueta do Corpo Humano",
+        "en": "Human Body Silhouette",
+        "es": "Silueta del Cuerpo Humano"
+      },
+      "description": {
+        "pt-BR": "Representação simplificada da silhueta do corpo humano utilizada para contextualizar a localização das estruturas do sistema digestório dentro da região abdominal.",
+        "en": "Simplified representation of the human body silhouette used to contextualize the location of digestive system structures within the abdominal region.",
+        "es": "Representación simplificada de la silueta del cuerpo humano utilizada para contextualizar la localización de las estructuras del sistema digestivo dentro de la región abdominal."
+      }
+    }
   }
 }

@@ -1,48 +1,150 @@
 {
-  "objname": "Sarcoma de Kaposi: Comprometimento de Órgãos Internos",
+  "objname": {
+    "pt-BR": "Sarcoma de Kaposi: Comprometimento de Órgãos Internos",
+    "en": "Kaposi Sarcoma: Internal Organ Involvement",
+    "es": "Sarcoma de Kaposi: Afectación de Órganos Internos"
+  },
   "objsystem": [
     "Linfático",
     "Digestório",
     "Respiratório"
   ],
-  "objdescription": "O Sarcoma de Kaposi é uma neoplasia vascular associada à infecção pelo herpesvírus humano tipo 8 (HHV-8), caracterizada pela proliferação anormal de células de origem endotelial, relacionadas principalmente aos vasos sanguíneos e linfáticos. Embora frequentemente apresente lesões na pele e nas mucosas, também pode comprometer órgãos internos, especialmente o trato gastrointestinal, os pulmões e os linfonodos. O envolvimento visceral é particularmente importante em pessoas com imunossupressão e pode provocar sintomas como sangramentos digestivos, dor abdominal, tosse e dificuldade respiratória, dependendo da localização das lesões. O modelo apresenta uma representação didática do sistema linfático e de possíveis manifestações internas do Sarcoma de Kaposi, destacando alterações nos linfonodos, pulmões, intestinos e baço, além de estruturas anatômicas utilizadas como referência.",
+  "objdescription": {
+    "pt-BR": "O Sarcoma de Kaposi é uma neoplasia vascular associada à infecção pelo herpesvírus humano tipo 8 (HHV-8), caracterizada pela proliferação anormal de células de origem endotelial, relacionadas principalmente aos vasos sanguíneos e linfáticos. Embora frequentemente apresente lesões na pele e nas mucosas, também pode comprometer órgãos internos, especialmente o trato gastrointestinal, os pulmões e os linfonodos. O envolvimento visceral é particularmente importante em pessoas com imunossupressão e pode provocar sintomas como sangramentos digestivos, dor abdominal, tosse e dificuldade respiratória, dependendo da localização das lesões. O modelo apresenta uma representação didática do sistema linfático e de possíveis manifestações internas do Sarcoma de Kaposi, destacando alterações nos linfonodos, pulmões, intestinos e baço, além de estruturas anatômicas utilizadas como referência.",
+    "en": "Kaposi sarcoma is a vascular neoplasm associated with infection by human herpesvirus type 8 (HHV-8), characterized by the abnormal proliferation of cells of endothelial origin, primarily associated with blood and lymphatic vessels. Although it frequently presents with lesions on the skin and mucous membranes, it may also affect internal organs, particularly the gastrointestinal tract, lungs, and lymph nodes. Visceral involvement is particularly significant in immunosuppressed individuals and may cause symptoms such as gastrointestinal bleeding, abdominal pain, coughing, and difficulty breathing, depending on the location of the lesions. The model provides an educational representation of the lymphatic system and possible internal manifestations of Kaposi sarcoma, highlighting abnormalities in the lymph nodes, lungs, intestines, and spleen, as well as anatomical structures used as references.",
+    "es": "El sarcoma de Kaposi es una neoplasia vascular asociada a la infección por el herpesvirus humano de tipo 8 (HHV-8), caracterizada por la proliferación anormal de células de origen endotelial, relacionadas principalmente con los vasos sanguíneos y linfáticos. Aunque frecuentemente presenta lesiones en la piel y las mucosas, también puede afectar a los órganos internos, especialmente al tracto gastrointestinal, los pulmones y los ganglios linfáticos. La afectación visceral es particularmente importante en personas con inmunosupresión y puede provocar síntomas como sangrado digestivo, dolor abdominal, tos y dificultad respiratoria, dependiendo de la localización de las lesiones. El modelo presenta una representación didáctica del sistema linfático y de las posibles manifestaciones internas del sarcoma de Kaposi, destacando alteraciones en los ganglios linfáticos, los pulmones, los intestinos y el bazo, además de estructuras anatómicas utilizadas como referencia."
+  },
   "linkedModels": [
     {
+      "id": "18",
+      "label": {
+        "pt-BR": "Sistema Linfático",
+        "en": "Lymphatic System",
+        "es": "Sistema Linfático"
+      }
+    },
+    {
+      "id": "23",
+      "label": {
+        "pt-BR": "Sistema Respiratório",
+        "en": "Respiratory System",
+        "es": "Sistema Respiratorio"
+      }
+    },
+    {
+      "id": "24",
+      "label": {
+        "pt-BR": "Sistema Digestório",
+        "en": "Digestive System",
+        "es": "Sistema Digestivo"
+      }
+    },
+    {
       "id": "66",
-      "label": "Sarcoma de Kaposi"
+      "label": {
+        "pt-BR": "Sarcoma de Kaposi",
+        "en": "Kaposi Sarcoma",
+        "es": "Sarcoma de Kaposi"
+      }
     }
   ],
   "resources": [],
-  "LymphVessel": {
-    "objname": "Vasos Linfáticos",
-    "description": "Rede de vasos responsáveis por transportar a linfa dos tecidos em direção aos linfonodos e à circulação sanguínea. O Sarcoma de Kaposi apresenta características de diferenciação endotelial linfática e pode comprometer estruturas relacionadas ao sistema linfático. No modelo, os vasos destacados permitem visualizar a distribuição dessa rede pelo organismo e sua relação anatômica com as regiões potencialmente afetadas."
-  },
-  "Spleen": {
-    "objname": "Sarcoma de Kaposi no Baço",
-    "description": "Representação didática de possível comprometimento do baço pelo Sarcoma de Kaposi. O baço é um órgão linfático responsável pela filtragem do sangue, remoção de células sanguíneas envelhecidas e participação nas respostas imunológicas. Embora menos frequente que o acometimento gastrointestinal ou pulmonar, a doença pode apresentar lesões esplênicas, especialmente em contextos de imunossupressão. O envolvimento pode ser assintomático ou estar associado a alterações do órgão."
-  },
-  "Thymus": {
-    "objname": "Timo",
-    "description": "Órgão linfático localizado principalmente no mediastino anterior, responsável pela maturação e seleção dos linfócitos T, células fundamentais para a resposta imunológica. Apresenta maior atividade durante a infância e sofre involução progressiva com a idade. No modelo, é utilizado como referência anatômica do sistema linfático e não representa necessariamente uma região acometida pelo Sarcoma de Kaposi."
-  },
-  "TumLim": {
-    "objname": "Sarcoma de Kaposi nos Linfonodos",
-    "description": "Representação de lesões do Sarcoma de Kaposi que podem comprometer os linfonodos, estruturas responsáveis pela filtragem da linfa e participação nas respostas imunológicas. O acometimento linfonodal pode provocar aumento dos linfonodos, conhecido como linfadenopatia, e ocorrer com ou sem manifestações cutâneas evidentes. No modelo, a região destacada representa didaticamente o envolvimento do sistema linfático pela doença."
-  },
-  "Lung": {
-    "objname": "Sarcoma de Kaposi Pulmonar",
-    "description": "Representação do comprometimento dos pulmões pelo Sarcoma de Kaposi, que pode desenvolver lesões nas estruturas brônquicas e no tecido pulmonar. O acometimento pode provocar tosse, falta de ar, dor torácica e, em alguns casos, sangramento respiratório. É uma manifestação visceral potencialmente grave, especialmente em pessoas imunossuprimidas. O modelo destaca didaticamente a presença de lesões associadas à doença na região pulmonar."
-  },
-  "TumInt": {
-    "objname": "Sarcoma de Kaposi Intestinal",
-    "description": "Representação de lesões do Sarcoma de Kaposi no trato intestinal. A doença pode comprometer diferentes segmentos do sistema gastrointestinal, formando lesões vasculares na parede dos órgãos. O acometimento intestinal pode permanecer assintomático ou provocar dor abdominal, sangramento digestivo, anemia e, em casos mais graves, obstrução intestinal. No modelo, a região destacada demonstra didaticamente uma possível manifestação gastrointestinal da doença."
-  },
-  "gordurinha": {
-    "objname": "Apêndices Epiploicos",
-    "description": "Pequenas projeções de tecido adiposo revestidas por peritônio, distribuídas principalmente ao longo da superfície externa do cólon. Contêm gordura e pequenos vasos sanguíneos, contribuindo para a organização anatômica da região intestinal. No modelo, são apresentados como referência anatômica e não constituem uma manifestação específica do Sarcoma de Kaposi."
-  },
-  "Skin+nisolar+ninteract": {
-    "objname": "Pele",
-    "description": ""
+  "parts": {
+    "LymphVessel": {
+      "objname": {
+        "pt-BR": "Vasos Linfáticos",
+        "en": "Lymphatic Vessels",
+        "es": "Vasos Linfáticos"
+      },
+      "description": {
+        "pt-BR": "Rede de vasos responsáveis por transportar a linfa dos tecidos em direção aos linfonodos e à circulação sanguínea. O Sarcoma de Kaposi apresenta características de diferenciação endotelial linfática e pode comprometer estruturas relacionadas ao sistema linfático. No modelo, os vasos destacados permitem visualizar a distribuição dessa rede pelo organismo e sua relação anatômica com as regiões potencialmente afetadas.",
+        "en": "Network of vessels responsible for transporting lymph from the tissues toward the lymph nodes and into the bloodstream. Kaposi sarcoma exhibits features of lymphatic endothelial differentiation and may affect structures associated with the lymphatic system. In the model, the highlighted vessels allow visualization of the distribution of this network throughout the body and its anatomical relationship with potentially affected regions.",
+        "es": "Red de vasos responsables de transportar la linfa desde los tejidos hacia los ganglios linfáticos y la circulación sanguínea. El sarcoma de Kaposi presenta características de diferenciación endotelial linfática y puede afectar a estructuras relacionadas con el sistema linfático. En el modelo, los vasos destacados permiten visualizar la distribución de esta red por el organismo y su relación anatómica con las regiones potencialmente afectadas."
+      }
+    },
+    "Spleen": {
+      "objname": {
+        "pt-BR": "Sarcoma de Kaposi no Baço",
+        "en": "Kaposi Sarcoma of the Spleen",
+        "es": "Sarcoma de Kaposi en el Bazo"
+      },
+      "description": {
+        "pt-BR": "Representação didática de possível comprometimento do baço pelo Sarcoma de Kaposi. O baço é um órgão linfático responsável pela filtragem do sangue, remoção de células sanguíneas envelhecidas e participação nas respostas imunológicas. Embora menos frequente que o acometimento gastrointestinal ou pulmonar, a doença pode apresentar lesões esplênicas, especialmente em contextos de imunossupressão. O envolvimento pode ser assintomático ou estar associado a alterações do órgão.",
+        "en": "Educational representation of possible splenic involvement in Kaposi sarcoma. The spleen is a lymphatic organ responsible for filtering blood, removing aging blood cells, and participating in immune responses. Although less common than gastrointestinal or pulmonary involvement, the disease may produce splenic lesions, particularly in the context of immunosuppression. Splenic involvement may be asymptomatic or associated with changes in the organ.",
+        "es": "Representación didáctica de la posible afectación del bazo por el sarcoma de Kaposi. El bazo es un órgano linfático responsable de la filtración de la sangre, la eliminación de células sanguíneas envejecidas y la participación en las respuestas inmunitarias. Aunque menos frecuente que la afectación gastrointestinal o pulmonar, la enfermedad puede presentar lesiones esplénicas, especialmente en contextos de inmunosupresión. La afectación puede ser asintomática o estar asociada a alteraciones del órgano."
+      }
+    },
+    "Thymus": {
+      "objname": {
+        "pt-BR": "Timo",
+        "en": "Thymus",
+        "es": "Timo"
+      },
+      "description": {
+        "pt-BR": "Órgão linfático localizado principalmente no mediastino anterior, responsável pela maturação e seleção dos linfócitos T, células fundamentais para a resposta imunológica. Apresenta maior atividade durante a infância e sofre involução progressiva com a idade. No modelo, é utilizado como referência anatômica do sistema linfático e não representa necessariamente uma região acometida pelo Sarcoma de Kaposi.",
+        "en": "Lymphatic organ located primarily in the anterior mediastinum, responsible for the maturation and selection of T lymphocytes, cells that are essential to the immune response. It exhibits greater activity during childhood and undergoes progressive involution with age. In the model, it is used as an anatomical reference for the lymphatic system and does not necessarily represent a region affected by Kaposi sarcoma.",
+        "es": "Órgano linfático localizado principalmente en el mediastino anterior, responsable de la maduración y selección de los linfocitos T, células fundamentales para la respuesta inmunitaria. Presenta mayor actividad durante la infancia y experimenta una involución progresiva con la edad. En el modelo, se utiliza como referencia anatómica del sistema linfático y no representa necesariamente una región afectada por el sarcoma de Kaposi."
+      }
+    },
+    "TumLim": {
+      "objname": {
+        "pt-BR": "Sarcoma de Kaposi nos Linfonodos",
+        "en": "Kaposi Sarcoma of the Lymph Nodes",
+        "es": "Sarcoma de Kaposi en los Ganglios Linfáticos"
+      },
+      "description": {
+        "pt-BR": "Representação de lesões do Sarcoma de Kaposi que podem comprometer os linfonodos, estruturas responsáveis pela filtragem da linfa e participação nas respostas imunológicas. O acometimento linfonodal pode provocar aumento dos linfonodos, conhecido como linfadenopatia, e ocorrer com ou sem manifestações cutâneas evidentes. No modelo, a região destacada representa didaticamente o envolvimento do sistema linfático pela doença.",
+        "en": "Representation of Kaposi sarcoma lesions that may affect the lymph nodes, structures responsible for filtering lymph and participating in immune responses. Lymph node involvement may cause enlargement of the lymph nodes, known as lymphadenopathy, and may occur with or without evident cutaneous manifestations. In the model, the highlighted region provides an educational representation of lymphatic system involvement by the disease.",
+        "es": "Representación de lesiones del sarcoma de Kaposi que pueden afectar a los ganglios linfáticos, estructuras responsables de la filtración de la linfa y de la participación en las respuestas inmunitarias. La afectación ganglionar puede provocar un aumento del tamaño de los ganglios linfáticos, conocido como linfadenopatía, y producirse con o sin manifestaciones cutáneas evidentes. En el modelo, la región destacada representa de forma didáctica la afectación del sistema linfático por la enfermedad."
+      }
+    },
+    "Lung": {
+      "objname": {
+        "pt-BR": "Sarcoma de Kaposi Pulmonar",
+        "en": "Pulmonary Kaposi Sarcoma",
+        "es": "Sarcoma de Kaposi Pulmonar"
+      },
+      "description": {
+        "pt-BR": "Representação do comprometimento dos pulmões pelo Sarcoma de Kaposi, que pode desenvolver lesões nas estruturas brônquicas e no tecido pulmonar. O acometimento pode provocar tosse, falta de ar, dor torácica e, em alguns casos, sangramento respiratório. É uma manifestação visceral potencialmente grave, especialmente em pessoas imunossuprimidas. O modelo destaca didaticamente a presença de lesões associadas à doença na região pulmonar.",
+        "en": "Representation of pulmonary involvement in Kaposi sarcoma, which may produce lesions in the bronchial structures and lung tissue. This involvement may cause coughing, shortness of breath, chest pain, and, in some cases, bleeding from the respiratory tract. It is a potentially serious visceral manifestation, particularly in immunosuppressed individuals. The model highlights the presence of disease-related lesions in the pulmonary region for educational purposes.",
+        "es": "Representación de la afectación de los pulmones por el sarcoma de Kaposi, que puede desarrollar lesiones en las estructuras bronquiales y el tejido pulmonar. La afectación puede provocar tos, dificultad para respirar, dolor torácico y, en algunos casos, sangrado de las vías respiratorias. Es una manifestación visceral potencialmente grave, especialmente en personas inmunosuprimidas. El modelo destaca de forma didáctica la presencia de lesiones asociadas a la enfermedad en la región pulmonar."
+      }
+    },
+    "TumInt": {
+      "objname": {
+        "pt-BR": "Sarcoma de Kaposi Intestinal",
+        "en": "Intestinal Kaposi Sarcoma",
+        "es": "Sarcoma de Kaposi Intestinal"
+      },
+      "description": {
+        "pt-BR": "Representação de lesões do Sarcoma de Kaposi no trato intestinal. A doença pode comprometer diferentes segmentos do sistema gastrointestinal, formando lesões vasculares na parede dos órgãos. O acometimento intestinal pode permanecer assintomático ou provocar dor abdominal, sangramento digestivo, anemia e, em casos mais graves, obstrução intestinal. No modelo, a região destacada demonstra didaticamente uma possível manifestação gastrointestinal da doença.",
+        "en": "Representation of Kaposi sarcoma lesions in the intestinal tract. The disease may affect different segments of the gastrointestinal system, forming vascular lesions in the walls of the organs. Intestinal involvement may remain asymptomatic or cause abdominal pain, gastrointestinal bleeding, anemia, and, in more severe cases, intestinal obstruction. In the model, the highlighted region provides an educational demonstration of a possible gastrointestinal manifestation of the disease.",
+        "es": "Representación de lesiones del sarcoma de Kaposi en el tracto intestinal. La enfermedad puede afectar a diferentes segmentos del sistema gastrointestinal, formando lesiones vasculares en la pared de los órganos. La afectación intestinal puede permanecer asintomática o provocar dolor abdominal, sangrado digestivo, anemia y, en casos más graves, obstrucción intestinal. En el modelo, la región destacada demuestra de forma didáctica una posible manifestación gastrointestinal de la enfermedad."
+      }
+    },
+    "gordurinha": {
+      "objname": {
+        "pt-BR": "Apêndices Epiploicos",
+        "en": "Epiploic Appendages",
+        "es": "Apéndices Epiploicos"
+      },
+      "description": {
+        "pt-BR": "Pequenas projeções de tecido adiposo revestidas por peritônio, distribuídas principalmente ao longo da superfície externa do cólon. Contêm gordura e pequenos vasos sanguíneos, contribuindo para a organização anatômica da região intestinal. No modelo, são apresentados como referência anatômica e não constituem uma manifestação específica do Sarcoma de Kaposi.",
+        "en": "Small projections of adipose tissue covered by peritoneum, distributed primarily along the outer surface of the colon. They contain fat and small blood vessels, contributing to the anatomical organization of the intestinal region. In the model, they are presented as an anatomical reference and do not constitute a specific manifestation of Kaposi sarcoma.",
+        "es": "Pequeñas proyecciones de tejido adiposo revestidas por peritoneo, distribuidas principalmente a lo largo de la superficie externa del colon. Contienen grasa y pequeños vasos sanguíneos, contribuyendo a la organización anatómica de la región intestinal. En el modelo, se presentan como referencia anatómica y no constituyen una manifestación específica del sarcoma de Kaposi."
+      }
+    },
+    "Skin+nisolar+ninteract": {
+      "objname": {
+        "pt-BR": "Pele",
+        "en": "Skin",
+        "es": "Piel"
+      },
+      "description": {
+        "pt-BR": "",
+        "en": "",
+        "es": ""
+      }
+    }
   }
 }

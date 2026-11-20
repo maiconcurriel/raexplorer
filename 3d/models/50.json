@@ -1,50 +1,132 @@
 {
-  "objname": "Meningite",
+  "objname": {
+    "pt-BR": "Meningite",
+    "en": "Meningitis",
+    "es": "Meningitis"
+  },
   "objsystem": [
     "Nervoso"
   ],
-  "objdescription": "A meningite é uma inflamação das meninges, membranas que envolvem e protegem o cérebro e a medula espinal. Pode ser causada por diferentes agentes, incluindo vírus, bactérias e, menos frequentemente, fungos e outros microrganismos. As meninges são formadas pela dura-máter, aracnoide e pia-máter, e a inflamação dessas estruturas pode provocar sintomas como dor de cabeça intensa, febre, náuseas, sensibilidade à luz e rigidez do pescoço. A inflamação também pode envolver o espaço subaracnoideo, onde circula o líquido cefalorraquidiano. O modelo permite observar as membranas que revestem o cérebro e sua relação com o tecido cerebral, além de representar a rigidez do pescoço como um dos sinais que podem ocorrer na meningite.",
+  "objdescription": {
+    "pt-BR": "A meningite é uma inflamação das meninges, membranas que envolvem e protegem o cérebro e a medula espinal. Pode ser causada por diferentes agentes, incluindo vírus, bactérias e, menos frequentemente, fungos e outros microrganismos. As meninges são formadas pela dura-máter, aracnoide e pia-máter, e a inflamação dessas estruturas pode provocar sintomas como dor de cabeça intensa, febre, náuseas, sensibilidade à luz e rigidez do pescoço. A inflamação também pode envolver o espaço subaracnoideo, onde circula o líquido cefalorraquidiano. O modelo permite observar as membranas que revestem o cérebro e sua relação com o tecido cerebral, além de representar a rigidez do pescoço como um dos sinais que podem ocorrer na meningite.",
+    "en": "Meningitis is an inflammation of the meninges, the membranes that surround and protect the brain and spinal cord. It can be caused by various agents, including viruses, bacteria, and, less frequently, fungi and other microorganisms. The meninges consist of the dura mater, arachnoid mater, and pia mater, and inflammation of these structures may cause symptoms such as severe headache, fever, nausea, sensitivity to light, and neck stiffness. The inflammation may also involve the subarachnoid space, where cerebrospinal fluid circulates. The model allows observation of the membranes surrounding the brain and their relationship with brain tissue, while also representing neck stiffness as one of the signs that may occur in meningitis.",
+    "es": "La meningitis es una inflamación de las meninges, membranas que rodean y protegen el cerebro y la médula espinal. Puede ser causada por diferentes agentes, incluidos virus, bacterias y, con menor frecuencia, hongos y otros microorganismos. Las meninges están formadas por la duramadre, la aracnoides y la piamadre, y la inflamación de estas estructuras puede provocar síntomas como dolor de cabeza intenso, fiebre, náuseas, sensibilidad a la luz y rigidez del cuello. La inflamación también puede afectar al espacio subaracnoideo, donde circula el líquido cefalorraquídeo. El modelo permite observar las membranas que recubren el cerebro y su relación con el tejido cerebral, además de representar la rigidez del cuello como uno de los signos que pueden presentarse en la meningitis."
+  },
   "linkedModels": [
     {
       "id": "2",
-      "label": "Cérebro"
+      "label": {
+        "pt-BR": "Cérebro",
+        "en": "Brain",
+        "es": "Cerebro"
+      }
     },
     {
       "id": "21",
-      "label": "Sistema Nervoso"
+      "label": {
+        "pt-BR": "Sistema Nervoso",
+        "en": "Nervous System",
+        "es": "Sistema Nervioso"
+      }
     }
   ],
   "resources": [],
-  "Neck": {
-    "objname": "Rigidez do Pescoço",
-    "description": "A rigidez do pescoço é um sinal que pode ocorrer na meningite devido à irritação e inflamação das meninges. Pode provocar dificuldade e dor ao movimentar ou flexionar o pescoço, sendo um dos sinais clínicos associados à irritação meníngea."
-  },
-  "PiaMater": {
-    "objname": "Pia-Máter",
-    "description": "Camada mais interna das meninges, fina e vascularizada, que permanece intimamente aderida à superfície do cérebro e acompanha seus sulcos e giros. Na meningite, participa da região envolvida pelo processo inflamatório das meninges."
-  },
-  "Cerebro": {
-    "objname": "Cérebro",
-    "description": "Principal órgão do sistema nervoso central, envolvido externamente pelas meninges. Na meningite, a inflamação ocorre principalmente nas membranas que o revestem e no espaço subaracnoideo, embora casos graves possam apresentar complicações que também comprometem o funcionamento cerebral."
-  },
-  "BrainMembrane": {
-    "objname": "Aracnoide",
-    "description": "Camada intermediária das meninges, localizada entre a dura-máter e a pia-máter. Abaixo dela encontra-se o espaço subaracnoideo, que contém líquido cefalorraquidiano e vasos sanguíneos. Essa região tem grande importância na meningite, pois o processo inflamatório pode atingir as meninges e o líquido presente nesse espaço."
-  },
-  "DuraMater": {
-    "objname": "Dura-Máter",
-    "description": "Camada mais externa e resistente das meninges, responsável por contribuir para a proteção e sustentação do sistema nervoso central. Na meningite, integra o conjunto de membranas que revestem o cérebro, embora o processo inflamatório frequentemente tenha maior relação com as leptomeninges e o espaço subaracnoideo."
-  },
-  "SpinalCords+ninteract": {
-    "objname": "Medula Espinal",
-    "description": ""
-  },
-  "Head+ninteract": {
-    "objname": "Cabeça",
-    "description": ""
-  },
-  "Skin+ninteract": {
-    "objname": "Pele",
-    "description": ""
+  "parts": {
+    "Neck": {
+      "objname": {
+        "pt-BR": "Rigidez do Pescoço",
+        "en": "Neck Stiffness",
+        "es": "Rigidez del Cuello"
+      },
+      "description": {
+        "pt-BR": "A rigidez do pescoço é um sinal que pode ocorrer na meningite devido à irritação e inflamação das meninges. Pode provocar dificuldade e dor ao movimentar ou flexionar o pescoço, sendo um dos sinais clínicos associados à irritação meníngea.",
+        "en": "Neck stiffness is a sign that may occur in meningitis due to irritation and inflammation of the meninges. It may cause difficulty and pain when moving or flexing the neck and is one of the clinical signs associated with meningeal irritation.",
+        "es": "La rigidez del cuello es un signo que puede presentarse en la meningitis debido a la irritación e inflamación de las meninges. Puede provocar dificultad y dolor al mover o flexionar el cuello, y constituye uno de los signos clínicos asociados a la irritación meníngea."
+      }
+    },
+    "PiaMater": {
+      "objname": {
+        "pt-BR": "Pia-Máter",
+        "en": "Pia Mater",
+        "es": "Piamadre"
+      },
+      "description": {
+        "pt-BR": "Camada mais interna das meninges, fina e vascularizada, que permanece intimamente aderida à superfície do cérebro e acompanha seus sulcos e giros. Na meningite, participa da região envolvida pelo processo inflamatório das meninges.",
+        "en": "Innermost layer of the meninges, thin and vascularized, which remains closely attached to the surface of the brain and follows its sulci and gyri. In meningitis, it forms part of the region affected by the inflammatory process involving the meninges.",
+        "es": "Capa más interna de las meninges, fina y vascularizada, que permanece estrechamente adherida a la superficie del cerebro y sigue sus surcos y giros. En la meningitis, forma parte de la región afectada por el proceso inflamatorio de las meninges."
+      }
+    },
+    "Cerebro": {
+      "objname": {
+        "pt-BR": "Cérebro",
+        "en": "Brain",
+        "es": "Cerebro"
+      },
+      "description": {
+        "pt-BR": "Principal órgão do sistema nervoso central, envolvido externamente pelas meninges. Na meningite, a inflamação ocorre principalmente nas membranas que o revestem e no espaço subaracnoideo, embora casos graves possam apresentar complicações que também comprometem o funcionamento cerebral.",
+        "en": "Main organ of the central nervous system, externally surrounded by the meninges. In meningitis, inflammation occurs primarily in the membranes surrounding the brain and in the subarachnoid space, although severe cases may involve complications that also impair brain function.",
+        "es": "Principal órgano del sistema nervioso central, rodeado externamente por las meninges. En la meningitis, la inflamación ocurre principalmente en las membranas que lo recubren y en el espacio subaracnoideo, aunque los casos graves pueden presentar complicaciones que también comprometen el funcionamiento cerebral."
+      }
+    },
+    "BrainMembrane": {
+      "objname": {
+        "pt-BR": "Aracnoide",
+        "en": "Arachnoid Mater",
+        "es": "Aracnoides"
+      },
+      "description": {
+        "pt-BR": "Camada intermediária das meninges, localizada entre a dura-máter e a pia-máter. Abaixo dela encontra-se o espaço subaracnoideo, que contém líquido cefalorraquidiano e vasos sanguíneos. Essa região tem grande importância na meningite, pois o processo inflamatório pode atingir as meninges e o líquido presente nesse espaço.",
+        "en": "Middle layer of the meninges, located between the dura mater and the pia mater. Beneath it lies the subarachnoid space, which contains cerebrospinal fluid and blood vessels. This region is particularly important in meningitis because the inflammatory process may affect the meninges and the fluid present within this space.",
+        "es": "Capa intermedia de las meninges, situada entre la duramadre y la piamadre. Debajo de ella se encuentra el espacio subaracnoideo, que contiene líquido cefalorraquídeo y vasos sanguíneos. Esta región tiene gran importancia en la meningitis, ya que el proceso inflamatorio puede afectar a las meninges y al líquido presente en dicho espacio."
+      }
+    },
+    "DuraMater": {
+      "objname": {
+        "pt-BR": "Dura-Máter",
+        "en": "Dura Mater",
+        "es": "Duramadre"
+      },
+      "description": {
+        "pt-BR": "Camada mais externa e resistente das meninges, responsável por contribuir para a proteção e sustentação do sistema nervoso central. Na meningite, integra o conjunto de membranas que revestem o cérebro, embora o processo inflamatório frequentemente tenha maior relação com as leptomeninges e o espaço subaracnoideo.",
+        "en": "Outermost and toughest layer of the meninges, contributing to the protection and support of the central nervous system. In meningitis, it forms part of the membranes surrounding the brain, although the inflammatory process is often more closely associated with the leptomeninges and the subarachnoid space.",
+        "es": "Capa más externa y resistente de las meninges, que contribuye a la protección y el soporte del sistema nervioso central. En la meningitis, forma parte del conjunto de membranas que recubren el cerebro, aunque el proceso inflamatorio suele estar más relacionado con las leptomeninges y el espacio subaracnoideo."
+      }
+    },
+    "SpinalCords+ninteract": {
+      "objname": {
+        "pt-BR": "Medula Espinal",
+        "en": "Spinal Cord",
+        "es": "Médula Espinal"
+      },
+      "description": {
+        "pt-BR": "",
+        "en": "",
+        "es": ""
+      }
+    },
+    "Head+ninteract": {
+      "objname": {
+        "pt-BR": "Cabeça",
+        "en": "Head",
+        "es": "Cabeza"
+      },
+      "description": {
+        "pt-BR": "",
+        "en": "",
+        "es": ""
+      }
+    },
+    "Skin+ninteract": {
+      "objname": {
+        "pt-BR": "Pele",
+        "en": "Skin",
+        "es": "Piel"
+      },
+      "description": {
+        "pt-BR": "",
+        "en": "",
+        "es": ""
+      }
+    }
   }
 }

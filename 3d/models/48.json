@@ -1,45 +1,144 @@
 {
-  "objname": "Hipertireoidismo",
+  "objname": {
+    "pt-BR": "Hipertireoidismo",
+    "en": "Hyperthyroidism",
+    "es": "Hipertiroidismo"
+  },
   "objsystem": [
     "Endócrino"
   ],
-  "objdescription": "O hipertireoidismo é uma condição caracterizada pela produção ou liberação excessiva dos hormônios tireoidianos T3 e T4, aumentando a atividade metabólica do organismo. A função da tireoide é regulada pelo eixo hipotálamo–hipófise–tireoide: o hipotálamo produz TRH, que estimula a hipófise a liberar TSH; o TSH, por sua vez, estimula a tireoide a produzir T3 e T4. Quando os níveis de hormônios tireoidianos estão elevados, T3 e T4 exercem retroalimentação negativa sobre o hipotálamo e a hipófise, reduzindo a liberação de TRH e TSH. Na animação, esse mecanismo é representado pela pequena quantidade de TRH e TSH e pela grande quantidade de T3 e T4 direcionada ao organismo. As cores utilizadas permitem diferenciar os hormônios durante esse processo.",
-  "linkedModels": [],
+  "objdescription": {
+    "pt-BR": "O hipertireoidismo é uma condição caracterizada pela produção ou liberação excessiva dos hormônios tireoidianos T3 e T4, aumentando a atividade metabólica do organismo. A função da tireoide é regulada pelo eixo hipotálamo–hipófise–tireoide: o hipotálamo produz TRH, que estimula a hipófise a liberar TSH; o TSH, por sua vez, estimula a tireoide a produzir T3 e T4. Quando os níveis de hormônios tireoidianos estão elevados, T3 e T4 exercem retroalimentação negativa sobre o hipotálamo e a hipófise, reduzindo a liberação de TRH e TSH. Na animação, esse mecanismo é representado pela pequena quantidade de TRH e TSH e pela grande quantidade de T3 e T4 direcionada ao organismo. As cores utilizadas permitem diferenciar os hormônios durante esse processo.",
+    "en": "Hyperthyroidism is a condition characterized by excessive production or release of the thyroid hormones T3 and T4, increasing the body's metabolic activity. Thyroid function is regulated by the hypothalamic–pituitary–thyroid axis: the hypothalamus produces TRH, which stimulates the pituitary gland to release TSH; TSH, in turn, stimulates the thyroid gland to produce T3 and T4. When thyroid hormone levels are elevated, T3 and T4 exert negative feedback on the hypothalamus and pituitary gland, reducing the release of TRH and TSH. In the animation, this mechanism is represented by small amounts of TRH and TSH and large amounts of T3 and T4 directed toward the body's tissues. The colors used allow the hormones to be distinguished throughout this process.",
+    "es": "El hipertiroidismo es una condición caracterizada por la producción o liberación excesiva de las hormonas tiroideas T3 y T4, lo que aumenta la actividad metabólica del organismo. La función de la tiroides está regulada por el eje hipotálamo–hipófisis–tiroides: el hipotálamo produce TRH, que estimula a la hipófisis para liberar TSH; la TSH, a su vez, estimula a la tiroides para producir T3 y T4. Cuando los niveles de hormonas tiroideas están elevados, la T3 y la T4 ejercen una retroalimentación negativa sobre el hipotálamo y la hipófisis, reduciendo la liberación de TRH y TSH. En la animación, este mecanismo se representa mediante pequeñas cantidades de TRH y TSH y grandes cantidades de T3 y T4 dirigidas hacia el organismo. Los colores utilizados permiten diferenciar las hormonas durante este proceso."
+  },
+  "linkedModels": [
+    {
+      "id": "25",
+      "label": {
+        "pt-BR": "Sistema Endócrino",
+        "en": "Endocrine System",
+        "es": "Sistema Endocrino"
+      }
+    },
+    {
+      "id": "49",
+      "label": {
+        "pt-BR": "Hipotireoidismo",
+        "en": "Hypothyroidism",
+        "es": "Hipotiroidismo"
+      }
+    }
+  ],
   "resources": [],
-  "T3": {
-    "objname": "Triiodotironina (T3)",
-    "description": "Hormônio tireoidiano biologicamente ativo que participa da regulação do metabolismo, consumo de energia, produção de calor e funcionamento de diversos órgãos. Na animação, é representado em verde e aparece em grande quantidade, indicando níveis elevados associados ao hipertireoidismo."
-  },
-  "T4": {
-    "objname": "Tiroxina (T4)",
-    "description": "Principal hormônio produzido e liberado pela tireoide. Grande parte do T4 pode ser convertida em T3 nos tecidos, contribuindo para a regulação do metabolismo. Na animação, é representado em roxo e aparece em grande quantidade, indicando a elevação dos hormônios tireoidianos."
-  },
-  "TH": {
-    "objname": "TRH (Hormônio Liberador de Tireotropina)",
-    "description": "Hormônio produzido pelo hipotálamo que estimula a hipófise a secretar TSH. Na animação, é representado em azul e aparece em pequena quantidade devido à retroalimentação negativa exercida pelos níveis elevados de T3 e T4."
-  },
-  "TSH": {
-    "objname": "TSH (Hormônio Estimulante da Tireoide)",
-    "description": "Hormônio produzido pela hipófise que estimula a tireoide a produzir e liberar hormônios tireoidianos. Na animação, é representado em rosa e aparece em pequena quantidade, demonstrando a redução de sua liberação em resposta aos níveis elevados de T3 e T4."
-  },
-  "Hipofise": {
-    "objname": "Hipófise",
-    "description": "Glândula localizada na base do cérebro que participa do controle da tireoide. Em resposta ao TRH produzido pelo hipotálamo, libera TSH. Quando os níveis de T3 e T4 estão elevados, a retroalimentação negativa reduz a secreção de TSH pela hipófise."
-  },
-  "Hipotalamo": {
-    "objname": "Hipotálamo",
-    "description": "Região cerebral que participa do controle do sistema endócrino. Produz TRH, hormônio responsável por estimular a hipófise. Níveis elevados de T3 e T4 exercem retroalimentação negativa sobre esse eixo, contribuindo para a redução da liberação de TRH."
-  },
-  "Thyroid": {
-    "objname": "Glândula Tireoide",
-    "description": "Glândula endócrina localizada na região anterior do pescoço e responsável pela produção dos hormônios T3 e T4. No hipertireoidismo, ocorre produção ou liberação excessiva de hormônios tireoidianos, aumentando seus efeitos sobre diversos tecidos do organismo."
-  },
-  "Head+ninteract": {
-    "objname": "Cabeça",
-    "description": ""
-  },
-  "Skin+ninteract": {
-    "objname": "Pele",
-    "description": ""
+  "parts": {
+    "T3": {
+      "objname": {
+        "pt-BR": "Triiodotironina (T3)",
+        "en": "Triiodothyronine (T3)",
+        "es": "Triyodotironina (T3)"
+      },
+      "description": {
+        "pt-BR": "Hormônio tireoidiano biologicamente ativo que participa da regulação do metabolismo, consumo de energia, produção de calor e funcionamento de diversos órgãos. Na animação, é representado em verde e aparece em grande quantidade, indicando níveis elevados associados ao hipertireoidismo.",
+        "en": "Biologically active thyroid hormone involved in regulating metabolism, energy consumption, heat production, and the functioning of various organs. In the animation, it is represented in green and appears in large quantities, indicating elevated levels associated with hyperthyroidism.",
+        "es": "Hormona tiroidea biológicamente activa que participa en la regulación del metabolismo, el consumo de energía, la producción de calor y el funcionamiento de diversos órganos. En la animación, se representa en color verde y aparece en grandes cantidades, indicando niveles elevados asociados al hipertiroidismo."
+      }
+    },
+    "T4": {
+      "objname": {
+        "pt-BR": "Tiroxina (T4)",
+        "en": "Thyroxine (T4)",
+        "es": "Tiroxina (T4)"
+      },
+      "description": {
+        "pt-BR": "Principal hormônio produzido e liberado pela tireoide. Grande parte do T4 pode ser convertida em T3 nos tecidos, contribuindo para a regulação do metabolismo. Na animação, é representado em roxo e aparece em grande quantidade, indicando a elevação dos hormônios tireoidianos.",
+        "en": "Main hormone produced and released by the thyroid gland. A large proportion of T4 can be converted into T3 in the tissues, contributing to the regulation of metabolism. In the animation, it is represented in purple and appears in large quantities, indicating elevated thyroid hormone levels.",
+        "es": "Principal hormona producida y liberada por la tiroides. Gran parte de la T4 puede convertirse en T3 en los tejidos, contribuyendo a la regulación del metabolismo. En la animación, se representa en color morado y aparece en grandes cantidades, indicando la elevación de los niveles de hormonas tiroideas."
+      }
+    },
+    "TH": {
+      "objname": {
+        "pt-BR": "TRH (Hormônio Liberador de Tireotropina)",
+        "en": "TRH (Thyrotropin-Releasing Hormone)",
+        "es": "TRH (Hormona Liberadora de Tirotropina)"
+      },
+      "description": {
+        "pt-BR": "Hormônio produzido pelo hipotálamo que estimula a hipófise a secretar TSH. Na animação, é representado em azul e aparece em pequena quantidade devido à retroalimentação negativa exercida pelos níveis elevados de T3 e T4.",
+        "en": "Hormone produced by the hypothalamus that stimulates the pituitary gland to secrete TSH. In the animation, it is represented in blue and appears in small quantities due to the negative feedback exerted by elevated levels of T3 and T4.",
+        "es": "Hormona producida por el hipotálamo que estimula a la hipófisis para secretar TSH. En la animación, se representa en color azul y aparece en pequeñas cantidades debido a la retroalimentación negativa ejercida por los niveles elevados de T3 y T4."
+      }
+    },
+    "TSH": {
+      "objname": {
+        "pt-BR": "TSH (Hormônio Estimulante da Tireoide)",
+        "en": "TSH (Thyroid-Stimulating Hormone)",
+        "es": "TSH (Hormona Estimulante de la Tiroides)"
+      },
+      "description": {
+        "pt-BR": "Hormônio produzido pela hipófise que estimula a tireoide a produzir e liberar hormônios tireoidianos. Na animação, é representado em rosa e aparece em pequena quantidade, demonstrando a redução de sua liberação em resposta aos níveis elevados de T3 e T4.",
+        "en": "Hormone produced by the pituitary gland that stimulates the thyroid gland to produce and release thyroid hormones. In the animation, it is represented in pink and appears in small quantities, demonstrating the reduction in its release in response to elevated levels of T3 and T4.",
+        "es": "Hormona producida por la hipófisis que estimula a la tiroides para producir y liberar hormonas tiroideas. En la animación, se representa en color rosa y aparece en pequeñas cantidades, demostrando la reducción de su liberación en respuesta a los niveles elevados de T3 y T4."
+      }
+    },
+    "Hipofise": {
+      "objname": {
+        "pt-BR": "Hipófise",
+        "en": "Pituitary Gland",
+        "es": "Hipófisis"
+      },
+      "description": {
+        "pt-BR": "Glândula localizada na base do cérebro que participa do controle da tireoide. Em resposta ao TRH produzido pelo hipotálamo, libera TSH. Quando os níveis de T3 e T4 estão elevados, a retroalimentação negativa reduz a secreção de TSH pela hipófise.",
+        "en": "Gland located at the base of the brain that participates in the regulation of thyroid function. In response to TRH produced by the hypothalamus, it releases TSH. When T3 and T4 levels are elevated, negative feedback reduces TSH secretion by the pituitary gland.",
+        "es": "Glándula situada en la base del cerebro que participa en el control de la función tiroidea. En respuesta a la TRH producida por el hipotálamo, libera TSH. Cuando los niveles de T3 y T4 están elevados, la retroalimentación negativa reduce la secreción de TSH por parte de la hipófisis."
+      }
+    },
+    "Hipotalamo": {
+      "objname": {
+        "pt-BR": "Hipotálamo",
+        "en": "Hypothalamus",
+        "es": "Hipotálamo"
+      },
+      "description": {
+        "pt-BR": "Região cerebral que participa do controle do sistema endócrino. Produz TRH, hormônio responsável por estimular a hipófise. Níveis elevados de T3 e T4 exercem retroalimentação negativa sobre esse eixo, contribuindo para a redução da liberação de TRH.",
+        "en": "Brain region involved in the regulation of the endocrine system. It produces TRH, a hormone responsible for stimulating the pituitary gland. Elevated levels of T3 and T4 exert negative feedback on this axis, contributing to a reduction in TRH release.",
+        "es": "Región cerebral que participa en el control del sistema endocrino. Produce TRH, hormona responsable de estimular a la hipófisis. Los niveles elevados de T3 y T4 ejercen una retroalimentación negativa sobre este eje, contribuyendo a la reducción de la liberación de TRH."
+      }
+    },
+    "Thyroid": {
+      "objname": {
+        "pt-BR": "Glândula Tireoide",
+        "en": "Thyroid Gland",
+        "es": "Glándula Tiroides"
+      },
+      "description": {
+        "pt-BR": "Glândula endócrina localizada na região anterior do pescoço e responsável pela produção dos hormônios T3 e T4. No hipertireoidismo, ocorre produção ou liberação excessiva de hormônios tireoidianos, aumentando seus efeitos sobre diversos tecidos do organismo.",
+        "en": "Endocrine gland located in the anterior region of the neck and responsible for producing the hormones T3 and T4. In hyperthyroidism, excessive production or release of thyroid hormones occurs, increasing their effects on various tissues of the body.",
+        "es": "Glándula endocrina situada en la región anterior del cuello y responsable de la producción de las hormonas T3 y T4. En el hipertiroidismo, se produce una producción o liberación excesiva de hormonas tiroideas, aumentando sus efectos sobre diversos tejidos del organismo."
+      }
+    },
+    "Head+ninteract": {
+      "objname": {
+        "pt-BR": "Cabeça",
+        "en": "Head",
+        "es": "Cabeza"
+      },
+      "description": {
+        "pt-BR": "",
+        "en": "",
+        "es": ""
+      }
+    },
+    "Skin+ninteract": {
+      "objname": {
+        "pt-BR": "Pele",
+        "en": "Skin",
+        "es": "Piel"
+      },
+      "description": {
+        "pt-BR": "",
+        "en": "",
+        "es": ""
+      }
+    }
   }
 }

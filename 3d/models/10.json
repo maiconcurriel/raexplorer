@@ -1,100 +1,316 @@
 {
-  "objname": "Sistema Urinário Feminino",
-  "objsystem": "Urinário",
-  "objdescription": "O sistema urinário feminino é responsável pela produção, armazenamento e eliminação da urina, contribuindo para a manutenção do equilíbrio interno do organismo. Os rins filtram o sangue, removem resíduos metabólicos e regulam água, eletrólitos e outras substâncias. A urina formada nos rins passa pelos ureteres até a bexiga, onde é armazenada temporariamente. Durante a micção, a musculatura da bexiga se contrai e a urina é conduzida pela uretra até o exterior. Esfíncteres urinários controlam a passagem da urina e ajudam a manter a continência.",
+  "objname": {
+    "pt-BR": "Sistema Urinário Feminino",
+    "en": "Female Urinary System",
+    "es": "Sistema Urinario Femenino"
+  },
+  "objsystem": [
+    "Urinário"
+  ],
+  "objdescription": {
+    "pt-BR": "O sistema urinário feminino é responsável pela produção, armazenamento e eliminação da urina, contribuindo para a manutenção do equilíbrio interno do organismo. Os rins filtram o sangue, removem resíduos metabólicos e regulam água, eletrólitos e outras substâncias. A urina formada nos rins passa pelos ureteres até a bexiga, onde é armazenada temporariamente. Durante a micção, a musculatura da bexiga se contrai e a urina é conduzida pela uretra até o exterior. Esfíncteres urinários controlam a passagem da urina e ajudam a manter a continência.",
+    "en": "The female urinary system is responsible for the production, storage, and elimination of urine, contributing to the maintenance of the body's internal balance. The kidneys filter the blood, remove metabolic waste, and regulate water, electrolytes, and other substances. Urine formed in the kidneys passes through the ureters to the bladder, where it is temporarily stored. During urination, the bladder muscles contract, and urine passes through the urethra to the outside of the body. Urinary sphincters control the passage of urine and help maintain continence.",
+    "es": "El sistema urinario femenino es responsable de la producción, el almacenamiento y la eliminación de la orina, contribuyendo al mantenimiento del equilibrio interno del organismo. Los riñones filtran la sangre, eliminan los residuos metabólicos y regulan el agua, los electrolitos y otras sustancias. La orina formada en los riñones pasa por los uréteres hasta la vejiga, donde se almacena temporalmente. Durante la micción, la musculatura de la vejiga se contrae y la orina es conducida por la uretra hacia el exterior. Los esfínteres urinarios controlan el paso de la orina y ayudan a mantener la continencia."
+  },
   "linkedModels": [
     {
       "id": "11",
-      "label": "Sistema Reprodutor Feminino"
-    },{
-      "id": "13",
-      "label": "Sistema Reprodutor Masculino"
-    },{
+      "label": {
+        "pt-BR": "Sistema Reprodutor Feminino",
+        "en": "Female Reproductive System",
+        "es": "Sistema Reproductor Femenino"
+      }
+    },
+    {
       "id": "12",
-      "label": "Sistema Urinário Masculino"
+      "label": {
+        "pt-BR": "Sistema Urinário Masculino",
+        "en": "Male Urinary System",
+        "es": "Sistema Urinario Masculino"
+      }
+    },
+    {
+      "id": "13",
+      "label": {
+        "pt-BR": "Sistema Reprodutor Masculino",
+        "en": "Male Reproductive System",
+        "es": "Sistema Reproductor Masculino"
+      }
+    },
+    {
+      "id": "29",
+      "label": {
+        "pt-BR": "Anatomia Corpo Feminino",
+        "en": "Female Body Anatomy",
+        "es": "Anatomía del Cuerpo Femenino"
+      }
+    },
+    {
+      "id": "63",
+      "label": {
+        "pt-BR": "Infecção Urinária",
+        "en": "Urinary Tract Infection",
+        "es": "Infección del Tracto Urinario"
+      }
+    },
+    {
+      "id": "64",
+      "label": {
+        "pt-BR": "Incontinência Urinária",
+        "en": "Urinary Incontinence",
+        "es": "Incontinencia Urinaria"
+      }
+    },
+    {
+      "id": "65",
+      "label": {
+        "pt-BR": "Insuficiência Renal",
+        "en": "Renal Failure",
+        "es": "Insuficiencia Renal"
+      }
     }
   ],
   "resources": [],
-  "RenalCapsule": {
-    "objname": "Cápsula Renal",
-    "description": "Camada de tecido conjuntivo resistente que envolve externamente o rim, protegendo o órgão contra traumas e ajudando a manter seu formato."
-  },
-  "RenalCortex": {
-    "objname": "Córtex Renal",
-    "description": "Região mais externa do rim, localizada abaixo da cápsula renal. Contém os corpúsculos renais e partes dos túbulos renais, participando da filtração e do processamento do filtrado."
-  },
-  "RenalPyramids": {
-    "objname": "Pirâmides Renais",
-    "description": "Estruturas cônicas localizadas na medula renal, formadas principalmente por túbulos e ductos coletores. Conduzem a urina em direção às papilas renais e aos cálices."
-  },
-  "RenalColumns": {
-    "objname": "Colunas Renais",
-    "description": "Extensões do córtex renal que se projetam entre as pirâmides renais. Contêm vasos sanguíneos e tecido cortical, contribuindo para a sustentação e organização interna do rim."
-  },
-  "RenalSinus": {
-    "objname": "Seio Renal",
-    "description": "Espaço interno do rim que contém a pelve renal, cálices, vasos sanguíneos, nervos e tecido adiposo. Funciona como uma região de passagem e acomodação dessas estruturas."
-  },
-  "RenalPelvis": {
-    "objname": "Pelve Renal",
-    "description": "Estrutura em forma de funil que recebe a urina dos cálices renais e a direciona para o ureter. Representa a região inicial do sistema de condução da urina para fora do rim."
-  },
-  "Ureter": {
-    "objname": "Ureter",
-    "description": "Tubo muscular que conduz a urina de cada rim até a bexiga. Seus movimentos peristálticos impulsionam a urina ao longo do trajeto, independentemente da posição do corpo."
-  },
-  "BladderBody": {
-    "objname": "Corpo da Bexiga",
-    "description": "Principal região da bexiga urinária, responsável por armazenar temporariamente a urina até o momento da micção. Sua parede se distende conforme o volume de urina aumenta."
-  },
-  "DetrusorMuscle": {
-    "objname": "Músculo Detrusor",
-    "description": "Camada de músculo liso presente na parede da bexiga. Durante a micção, sua contração aumenta a pressão interna e promove a expulsão da urina através da uretra."
-  },
-  "BladderInner": {
-    "objname": "Revestimento Interno da Bexiga",
-    "description": "Camada interna formada principalmente por urotélio, um epitélio especializado capaz de se distender. Atua como barreira protetora contra a urina e permite mudanças no volume da bexiga."
-  },
-  "UreteralOrifice": {
-    "objname": "Óstio Ureteral",
-    "description": "Abertura onde o ureter se conecta à bexiga. Existem dois óstios ureterais, um para cada ureter, pelos quais a urina entra na bexiga."
-  },
-  "BladderTrigone": {
-    "objname": "Trígono Vesical",
-    "description": "Área triangular localizada no interior da bexiga, delimitada pelos dois óstios ureterais e pelo óstio interno da uretra. Possui mucosa relativamente lisa e permanece pouco enrugada."
-  },
-  "InternalUrethralSphincter": {
-    "objname": "Esfíncter Interno da Uretra",
-    "description": "Anel de músculo liso localizado na região do colo da bexiga. Participa do controle involuntário da saída da urina e ajuda a evitar seu fluxo involuntário para a uretra."
-  },
-  "BladderNeck": {
-    "objname": "Colo da Bexiga",
-    "description": "Região inferior e estreita da bexiga que se continua com a uretra. Atua como uma passagem entre a bexiga e o canal responsável pela eliminação da urina."
-  },
-  "Urethra": {
-    "objname": "Uretra",
-    "description": "Tubo que conduz a urina da bexiga para o exterior do corpo. Na mulher, é relativamente curta e termina anteriormente à abertura vaginal, desempenhando função exclusivamente urinária."
-  },
-  "ExternalUrethralSphincter": {
-    "objname": "Esfíncter Externo da Uretra",
-    "description": "Músculo estriado que envolve a uretra e permite o controle voluntário da micção. Sua contração ajuda a manter a continência urinária, enquanto seu relaxamento facilita a passagem da urina."
-  },
-  "UrethralOrifice": {
-    "objname": "Óstio Uretral",
-    "description": "Abertura externa da uretra por onde a urina é eliminada do organismo. Está localizada no vestíbulo da vulva, anteriormente à abertura vaginal."
-  },
-  "Major_calyces_of_the_renal_pelvis__L__302910.001": {
-  "objname": "Cálices Renais Maiores",
-  "description": "Estruturas que recebem a urina dos cálices menores e a conduzem em direção à pelve renal. Formam parte do sistema coletor do rim e geralmente se unem para formar a pelve renal."
-},
-
-"Minor_calyces_of_the_renal_pelvis__L__302911.001": {
-  "objname": "Cálices Renais Menores",
-  "description": "Pequenas estruturas em forma de taça que recebem a urina diretamente das papilas renais. A urina passa dos cálices menores para os cálices maiores e, posteriormente, para a pelve renal."
-},
-
-"Renal_papillae__front_half__L__302919.001": {
-  "objname": "Papilas Renais",
-  "description": "Extremidades das pirâmides renais que se projetam para os cálices menores. Os ductos coletores desembocam nas papilas, permitindo que a urina formada no rim seja conduzida ao sistema coletor."
-}
+  "parts": {
+    "RenalCapsule": {
+      "objname": {
+        "pt-BR": "Cápsula Renal",
+        "en": "Renal Capsule",
+        "es": "Cápsula Renal"
+      },
+      "description": {
+        "pt-BR": "Camada de tecido conjuntivo resistente que envolve externamente o rim, protegendo o órgão contra traumas e ajudando a manter seu formato.",
+        "en": "Layer of tough connective tissue that surrounds the outer surface of the kidney, protecting the organ from injury and helping maintain its shape.",
+        "es": "Capa de tejido conjuntivo resistente que recubre externamente el riñón, protegiendo el órgano contra traumatismos y ayudando a mantener su forma."
+      }
+    },
+    "RenalCortex": {
+      "objname": {
+        "pt-BR": "Córtex Renal",
+        "en": "Renal Cortex",
+        "es": "Corteza Renal"
+      },
+      "description": {
+        "pt-BR": "Região mais externa do rim, localizada abaixo da cápsula renal. Contém os corpúsculos renais e partes dos túbulos renais, participando da filtração e do processamento do filtrado.",
+        "en": "Outermost region of the kidney, located beneath the renal capsule. It contains the renal corpuscles and portions of the renal tubules, participating in filtration and the processing of the filtrate.",
+        "es": "Región más externa del riñón, situada debajo de la cápsula renal. Contiene los corpúsculos renales y partes de los túbulos renales, participando en la filtración y el procesamiento del filtrado."
+      }
+    },
+    "RenalPyramids": {
+      "objname": {
+        "pt-BR": "Pirâmides Renais",
+        "en": "Renal Pyramids",
+        "es": "Pirámides Renales"
+      },
+      "description": {
+        "pt-BR": "Estruturas cônicas localizadas na medula renal, formadas principalmente por túbulos e ductos coletores. Conduzem a urina em direção às papilas renais e aos cálices.",
+        "en": "Cone-shaped structures located in the renal medulla, composed mainly of tubules and collecting ducts. They carry urine toward the renal papillae and calyces.",
+        "es": "Estructuras cónicas situadas en la médula renal, formadas principalmente por túbulos y conductos colectores. Conducen la orina hacia las papilas renales y los cálices."
+      }
+    },
+    "RenalColumns": {
+      "objname": {
+        "pt-BR": "Colunas Renais",
+        "en": "Renal Columns",
+        "es": "Columnas Renales"
+      },
+      "description": {
+        "pt-BR": "Extensões do córtex renal que se projetam entre as pirâmides renais. Contêm vasos sanguíneos e tecido cortical, contribuindo para a sustentação e organização interna do rim.",
+        "en": "Extensions of the renal cortex that project between the renal pyramids. They contain blood vessels and cortical tissue, contributing to the structural support and internal organization of the kidney.",
+        "es": "Extensiones de la corteza renal que se proyectan entre las pirámides renales. Contienen vasos sanguíneos y tejido cortical, contribuyendo al sostén y la organización interna del riñón."
+      }
+    },
+    "RenalSinus": {
+      "objname": {
+        "pt-BR": "Seio Renal",
+        "en": "Renal Sinus",
+        "es": "Seno Renal"
+      },
+      "description": {
+        "pt-BR": "Espaço interno do rim que contém a pelve renal, cálices, vasos sanguíneos, nervos e tecido adiposo. Funciona como uma região de passagem e acomodação dessas estruturas.",
+        "en": "Internal space of the kidney containing the renal pelvis, calyces, blood vessels, nerves, and adipose tissue. It serves as a region that accommodates these structures and allows them to pass through.",
+        "es": "Espacio interno del riñón que contiene la pelvis renal, los cálices, los vasos sanguíneos, los nervios y el tejido adiposo. Funciona como una región de paso y alojamiento de estas estructuras."
+      }
+    },
+    "RenalPelvis": {
+      "objname": {
+        "pt-BR": "Pelve Renal",
+        "en": "Renal Pelvis",
+        "es": "Pelvis Renal"
+      },
+      "description": {
+        "pt-BR": "Estrutura em forma de funil que recebe a urina dos cálices renais e a direciona para o ureter. Representa a região inicial do sistema de condução da urina para fora do rim.",
+        "en": "Funnel-shaped structure that receives urine from the renal calyces and directs it into the ureter. It represents the initial region of the system that carries urine out of the kidney.",
+        "es": "Estructura en forma de embudo que recibe la orina de los cálices renales y la dirige hacia el uréter. Representa la región inicial del sistema de conducción de la orina hacia el exterior del riñón."
+      }
+    },
+    "Ureter": {
+      "objname": {
+        "pt-BR": "Ureter",
+        "en": "Ureter",
+        "es": "Uréter"
+      },
+      "description": {
+        "pt-BR": "Tubo muscular que conduz a urina de cada rim até a bexiga. Seus movimentos peristálticos impulsionam a urina ao longo do trajeto, independentemente da posição do corpo.",
+        "en": "Muscular tube that carries urine from each kidney to the bladder. Its peristaltic movements propel urine along this pathway, regardless of body position.",
+        "es": "Tubo muscular que conduce la orina desde cada riñón hasta la vejiga. Sus movimientos peristálticos impulsan la orina a lo largo del trayecto, independientemente de la posición del cuerpo."
+      }
+    },
+    "BladderBody": {
+      "objname": {
+        "pt-BR": "Corpo da Bexiga",
+        "en": "Body of the Urinary Bladder",
+        "es": "Cuerpo de la Vejiga"
+      },
+      "description": {
+        "pt-BR": "Principal região da bexiga urinária, responsável por armazenar temporariamente a urina até o momento da micção. Sua parede se distende conforme o volume de urina aumenta.",
+        "en": "Main region of the urinary bladder, responsible for temporarily storing urine until urination occurs. Its wall stretches as the volume of urine increases.",
+        "es": "Región principal de la vejiga urinaria, responsable de almacenar temporalmente la orina hasta el momento de la micción. Su pared se distiende a medida que aumenta el volumen de orina."
+      }
+    },
+    "DetrusorMuscle": {
+      "objname": {
+        "pt-BR": "Músculo Detrusor",
+        "en": "Detrusor Muscle",
+        "es": "Músculo Detrusor"
+      },
+      "description": {
+        "pt-BR": "Camada de músculo liso presente na parede da bexiga. Durante a micção, sua contração aumenta a pressão interna e promove a expulsão da urina através da uretra.",
+        "en": "Layer of smooth muscle found in the bladder wall. During urination, its contraction increases internal pressure and promotes the expulsion of urine through the urethra.",
+        "es": "Capa de músculo liso presente en la pared de la vejiga. Durante la micción, su contracción aumenta la presión interna y favorece la expulsión de la orina a través de la uretra."
+      }
+    },
+    "BladderInner": {
+      "objname": {
+        "pt-BR": "Revestimento Interno da Bexiga",
+        "en": "Inner Lining of the Bladder",
+        "es": "Revestimiento Interno de la Vejiga"
+      },
+      "description": {
+        "pt-BR": "Camada interna formada principalmente por urotélio, um epitélio especializado capaz de se distender. Atua como barreira protetora contra a urina e permite mudanças no volume da bexiga.",
+        "en": "Inner layer composed mainly of urothelium, a specialized epithelium capable of stretching. It acts as a protective barrier against urine and accommodates changes in bladder volume.",
+        "es": "Capa interna formada principalmente por urotelio, un epitelio especializado capaz de distenderse. Actúa como barrera protectora frente a la orina y permite cambios en el volumen de la vejiga."
+      }
+    },
+    "UreteralOrifice": {
+      "objname": {
+        "pt-BR": "Óstio Ureteral",
+        "en": "Ureteral Orifice",
+        "es": "Orificio Ureteral"
+      },
+      "description": {
+        "pt-BR": "Abertura onde o ureter se conecta à bexiga. Existem dois óstios ureterais, um para cada ureter, pelos quais a urina entra na bexiga.",
+        "en": "Opening where the ureter connects to the bladder. There are two ureteral orifices, one for each ureter, through which urine enters the bladder.",
+        "es": "Abertura donde el uréter se conecta con la vejiga. Existen dos orificios ureterales, uno para cada uréter, a través de los cuales la orina entra en la vejiga."
+      }
+    },
+    "BladderTrigone": {
+      "objname": {
+        "pt-BR": "Trígono Vesical",
+        "en": "Bladder Trigone",
+        "es": "Trígono Vesical"
+      },
+      "description": {
+        "pt-BR": "Área triangular localizada no interior da bexiga, delimitada pelos dois óstios ureterais e pelo óstio interno da uretra. Possui mucosa relativamente lisa e permanece pouco enrugada.",
+        "en": "Triangular area located inside the bladder, bounded by the two ureteral orifices and the internal urethral orifice. Its mucosa is relatively smooth and remains largely free of folds.",
+        "es": "Área triangular situada en el interior de la vejiga, delimitada por los dos orificios ureterales y el orificio interno de la uretra. Presenta una mucosa relativamente lisa que permanece con pocos pliegues."
+      }
+    },
+    "InternalUrethralSphincter": {
+      "objname": {
+        "pt-BR": "Esfíncter Interno da Uretra",
+        "en": "Internal Urethral Sphincter",
+        "es": "Esfínter Uretral Interno"
+      },
+      "description": {
+        "pt-BR": "Anel de músculo liso localizado na região do colo da bexiga. Participa do controle involuntário da saída da urina e ajuda a evitar seu fluxo involuntário para a uretra.",
+        "en": "Ring of smooth muscle located in the region of the bladder neck. It participates in the involuntary control of urine release and helps prevent the involuntary flow of urine into the urethra.",
+        "es": "Anillo de músculo liso situado en la región del cuello de la vejiga. Participa en el control involuntario de la salida de la orina y ayuda a evitar su flujo involuntario hacia la uretra."
+      }
+    },
+    "BladderNeck": {
+      "objname": {
+        "pt-BR": "Colo da Bexiga",
+        "en": "Bladder Neck",
+        "es": "Cuello de la Vejiga"
+      },
+      "description": {
+        "pt-BR": "Região inferior e estreita da bexiga que se continua com a uretra. Atua como uma passagem entre a bexiga e o canal responsável pela eliminação da urina.",
+        "en": "Lower, narrow region of the bladder that continues into the urethra. It serves as a passage between the bladder and the canal responsible for eliminating urine.",
+        "es": "Región inferior y estrecha de la vejiga que se continúa con la uretra. Actúa como un paso entre la vejiga y el conducto responsable de la eliminación de la orina."
+      }
+    },
+    "Urethra": {
+      "objname": {
+        "pt-BR": "Uretra",
+        "en": "Urethra",
+        "es": "Uretra"
+      },
+      "description": {
+        "pt-BR": "Tubo que conduz a urina da bexiga para o exterior do corpo. Na mulher, é relativamente curta e termina anteriormente à abertura vaginal, desempenhando função exclusivamente urinária.",
+        "en": "Tube that carries urine from the bladder to the outside of the body. In women, it is relatively short and ends anterior to the vaginal opening, performing an exclusively urinary function.",
+        "es": "Tubo que conduce la orina desde la vejiga hacia el exterior del cuerpo. En la mujer, es relativamente corta y termina por delante de la abertura vaginal, desempeñando una función exclusivamente urinaria."
+      }
+    },
+    "ExternalUrethralSphincter": {
+      "objname": {
+        "pt-BR": "Esfíncter Externo da Uretra",
+        "en": "External Urethral Sphincter",
+        "es": "Esfínter Uretral Externo"
+      },
+      "description": {
+        "pt-BR": "Músculo estriado que envolve a uretra e permite o controle voluntário da micção. Sua contração ajuda a manter a continência urinária, enquanto seu relaxamento facilita a passagem da urina.",
+        "en": "Striated muscle that surrounds the urethra and enables voluntary control of urination. Its contraction helps maintain urinary continence, while its relaxation facilitates the passage of urine.",
+        "es": "Músculo estriado que rodea la uretra y permite el control voluntario de la micción. Su contracción ayuda a mantener la continencia urinaria, mientras que su relajación facilita el paso de la orina."
+      }
+    },
+    "UrethralOrifice": {
+      "objname": {
+        "pt-BR": "Óstio Uretral",
+        "en": "Urethral Orifice",
+        "es": "Orificio Uretral"
+      },
+      "description": {
+        "pt-BR": "Abertura externa da uretra por onde a urina é eliminada do organismo. Está localizada no vestíbulo da vulva, anteriormente à abertura vaginal.",
+        "en": "External opening of the urethra through which urine is eliminated from the body. It is located in the vulvar vestibule, anterior to the vaginal opening.",
+        "es": "Abertura externa de la uretra por la que se elimina la orina del organismo. Está situada en el vestíbulo de la vulva, por delante de la abertura vaginal."
+      }
+    },
+    "Major_calyces_of_the_renal_pelvis__L__302910.001": {
+      "objname": {
+        "pt-BR": "Cálices Renais Maiores",
+        "en": "Major Renal Calyces",
+        "es": "Cálices Renales Mayores"
+      },
+      "description": {
+        "pt-BR": "Estruturas que recebem a urina dos cálices menores e a conduzem em direção à pelve renal. Formam parte do sistema coletor do rim e geralmente se unem para formar a pelve renal.",
+        "en": "Structures that receive urine from the minor calyces and carry it toward the renal pelvis. They form part of the kidney's collecting system and generally unite to form the renal pelvis.",
+        "es": "Estructuras que reciben la orina de los cálices menores y la conducen hacia la pelvis renal. Forman parte del sistema colector del riñón y generalmente se unen para formar la pelvis renal."
+      }
+    },
+    "Minor_calyces_of_the_renal_pelvis__L__302911.001": {
+      "objname": {
+        "pt-BR": "Cálices Renais Menores",
+        "en": "Minor Renal Calyces",
+        "es": "Cálices Renales Menores"
+      },
+      "description": {
+        "pt-BR": "Pequenas estruturas em forma de taça que recebem a urina diretamente das papilas renais. A urina passa dos cálices menores para os cálices maiores e, posteriormente, para a pelve renal.",
+        "en": "Small cup-shaped structures that receive urine directly from the renal papillae. Urine passes from the minor calyces to the major calyces and subsequently into the renal pelvis.",
+        "es": "Pequeñas estructuras en forma de copa que reciben la orina directamente de las papilas renales. La orina pasa de los cálices menores a los cálices mayores y, posteriormente, a la pelvis renal."
+      }
+    },
+    "Renal_papillae__front_half__L__302919.001": {
+      "objname": {
+        "pt-BR": "Papilas Renais",
+        "en": "Renal Papillae",
+        "es": "Papilas Renales"
+      },
+      "description": {
+        "pt-BR": "Extremidades das pirâmides renais que se projetam para os cálices menores. Os ductos coletores desembocam nas papilas, permitindo que a urina formada no rim seja conduzida ao sistema coletor.",
+        "en": "Tips of the renal pyramids that project into the minor calyces. The collecting ducts open at the papillae, allowing urine formed in the kidney to be conveyed into the collecting system.",
+        "es": "Extremos de las pirámides renales que se proyectan hacia los cálices menores. Los conductos colectores desembocan en las papilas, permitiendo que la orina formada en el riñón sea conducida al sistema colector."
+      }
+    }
+  }
 }

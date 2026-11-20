@@ -1,102 +1,340 @@
 {
-  "objname": "Câncer de Mama: Estágio 4",
+  "objname": {
+    "pt-BR": "Câncer de Mama: Estágio 4",
+    "en": "Breast Cancer: Stage 4",
+    "es": "Cáncer de Mama: Estadio 4"
+  },
   "objsystem": [
     "Reprodutor"
   ],
-  "objdescription": "O câncer de mama em estágio IV, também denominado câncer de mama metastático, ocorre quando células malignas do tumor primário se disseminam para órgãos ou tecidos distantes da mama, formando metástases. Essa disseminação pode acontecer principalmente pelas vias sanguínea e linfática, atingindo regiões como ossos, pulmões, fígado e cérebro. Diferentemente dos estágios anteriores, o estágio IV é caracterizado pela presença de metástases à distância, independentemente do tamanho do tumor mamário ou do comprometimento dos linfonodos regionais. As manifestações clínicas variam conforme os órgãos afetados, podendo incluir dor óssea, alterações respiratórias e comprometimento da função hepática. O modelo representa didaticamente um carcinoma mamário invasivo, focos associados ao sistema linfático e lesões metastáticas no úmero, fígado e pulmão, demonstrando a disseminação da doença para diferentes regiões do organismo.",
+  "objdescription": {
+    "pt-BR": "O câncer de mama em estágio IV, também denominado câncer de mama metastático, ocorre quando células malignas do tumor primário se disseminam para órgãos ou tecidos distantes da mama, formando metástases. Essa disseminação pode acontecer principalmente pelas vias sanguínea e linfática, atingindo regiões como ossos, pulmões, fígado e cérebro. Diferentemente dos estágios anteriores, o estágio IV é caracterizado pela presença de metástases à distância, independentemente do tamanho do tumor mamário ou do comprometimento dos linfonodos regionais. As manifestações clínicas variam conforme os órgãos afetados, podendo incluir dor óssea, alterações respiratórias e comprometimento da função hepática. O modelo representa didaticamente um carcinoma mamário invasivo, focos associados ao sistema linfático e lesões metastáticas no úmero, fígado e pulmão, demonstrando a disseminação da doença para diferentes regiões do organismo.",
+    "en": "Stage IV breast cancer, also known as metastatic breast cancer, occurs when malignant cells from the primary tumor spread to organs or tissues distant from the breast, forming metastases. This spread may occur primarily through the bloodstream and lymphatic pathways, reaching areas such as the bones, lungs, liver, and brain. Unlike previous stages, stage IV is characterized by the presence of distant metastases, regardless of the size of the breast tumor or the involvement of regional lymph nodes. Clinical manifestations vary according to the organs affected and may include bone pain, respiratory disturbances, and impaired liver function. The model provides an educational representation of invasive breast carcinoma, tumor foci associated with the lymphatic system, and metastatic lesions in the humerus, liver, and lung, demonstrating the spread of the disease to different regions of the body.",
+    "es": "El cáncer de mama en estadio IV, también denominado cáncer de mama metastásico, ocurre cuando las células malignas del tumor primario se diseminan hacia órganos o tejidos distantes de la mama, formando metástasis. Esta diseminación puede producirse principalmente por las vías sanguínea y linfática, alcanzando regiones como los huesos, los pulmones, el hígado y el cerebro. A diferencia de los estadios anteriores, el estadio IV se caracteriza por la presencia de metástasis a distancia, independientemente del tamaño del tumor mamario o de la afectación de los ganglios linfáticos regionales. Las manifestaciones clínicas varían según los órganos afectados y pueden incluir dolor óseo, alteraciones respiratorias y deterioro de la función hepática. El modelo representa de forma didáctica un carcinoma mamario invasivo, focos asociados al sistema linfático y lesiones metastásicas en el húmero, el hígado y el pulmón, demostrando la diseminación de la enfermedad hacia diferentes regiones del organismo."
+  },
   "linkedModels": [
     {
       "id": "11",
-      "label": "Sistema Reprodutor Feminino"
+      "label": {
+        "pt-BR": "Sistema Reprodutor Feminino",
+        "en": "Female Reproductive System",
+        "es": "Sistema Reproductor Femenino"
+      }
+    },
+    {
+      "id": "18",
+      "label": {
+        "pt-BR": "Sistema Linfático",
+        "en": "Lymphatic System",
+        "es": "Sistema Linfático"
+      }
+    },
+    {
+      "id": "74",
+      "label": {
+        "pt-BR": "Câncer de Mama: Estágio 0",
+        "en": "Breast Cancer: Stage 0",
+        "es": "Cáncer de Mama: Estadio 0"
+      }
+    },
+    {
+      "id": "75",
+      "label": {
+        "pt-BR": "Câncer de Mama: Estágio 1",
+        "en": "Breast Cancer: Stage 1",
+        "es": "Cáncer de Mama: Estadio 1"
+      }
+    },
+    {
+      "id": "76",
+      "label": {
+        "pt-BR": "Câncer de Mama: Estágio 2",
+        "en": "Breast Cancer: Stage 2",
+        "es": "Cáncer de Mama: Estadio 2"
+      }
+    },
+    {
+      "id": "77",
+      "label": {
+        "pt-BR": "Câncer de Mama: Estágio 3",
+        "en": "Breast Cancer: Stage 3",
+        "es": "Cáncer de Mama: Estadio 3"
+      }
+    },
+    {
+      "id": "92",
+      "label": {
+        "pt-BR": "Linfedema",
+        "en": "Lymphedema",
+        "es": "Linfedema"
+      }
     }
   ],
   "resources": [],
-  "Body_Skin+Body_Skin_2+nisolar+ninteract": {
-    "objname": "Pele",
-    "description": ""
-  },
-  "4": {
-    "objname": "Carcinoma Mamário Invasivo",
-    "description": "Representação do tumor maligno primário da mama, caracterizado pela proliferação de células cancerígenas que invadem os tecidos mamários adjacentes. No estágio IV, células provenientes desse carcinoma alcançaram órgãos ou tecidos distantes, formando metástases. O tamanho do tumor primário pode variar, pois a presença de disseminação à distância é o principal critério que caracteriza esse estágio."
-  },
-  "4a": {
-    "objname": "Foco de Disseminação Linfática",
-    "description": "Representação didática de células tumorais associadas às vias linfáticas da mama. O carcinoma invasivo pode alcançar os vasos linfáticos e disseminar-se para linfonodos regionais. A disseminação linfática é uma das possíveis vias de propagação do câncer, embora a presença de metástases em órgãos distantes também possa resultar da disseminação pela circulação sanguínea."
-  },
-  "4a7": {
-    "objname": "Foco de Disseminação Linfática Regional",
-    "description": "Representação de um foco tumoral associado ao sistema linfático regional da mama. Células cancerígenas podem alcançar os linfonodos próximos, especialmente os axilares, formando depósitos metastáticos. O comprometimento linfonodal regional pode acompanhar o câncer de mama metastático, mas não é obrigatório para a classificação em estágio IV."
-  },
-  "4a8": {
-    "objname": "Metástase Óssea no Úmero",
-    "description": "Representação de uma lesão metastática no úmero, formada por células cancerígenas provenientes do tumor primário da mama. As metástases ósseas podem comprometer a estrutura do osso, provocando dor, fragilidade e aumento do risco de fraturas. O esqueleto é um dos locais mais frequentes de disseminação do câncer de mama avançado. No modelo, a região destacada representa didaticamente o comprometimento ósseo à distância."
-  },
-  "4a9": {
-    "objname": "Metástase Hepática",
-    "description": "Representação de uma lesão metastática no fígado, formada pela disseminação de células malignas provenientes do carcinoma mamário. Essas células podem alcançar o órgão pela circulação sanguínea e desenvolver tumores secundários no tecido hepático. Dependendo da extensão do comprometimento, as metástases hepáticas podem provocar alterações da função do fígado, dor abdominal, fadiga e outros sintomas."
-  },
-  "4a15": {
-    "objname": "Metástases Pulmonares",
-    "description": "Representação de múltiplos focos metastáticos nos pulmões, originados pela disseminação de células cancerígenas provenientes do tumor primário da mama. Essas células podem alcançar o tecido pulmonar pela circulação sanguínea e formar lesões secundárias. As metástases pulmonares podem ser assintomáticas ou provocar tosse, falta de ar e desconforto respiratório, dependendo de sua localização e extensão."
-  },
-  "Liver": {
-    "objname": "Fígado",
-    "description": "Órgão localizado principalmente na região superior direita do abdômen, responsável por funções como metabolismo de nutrientes, produção de bile, síntese de proteínas e processamento de substâncias presentes no sangue. No câncer de mama em estágio IV, pode ser acometido por metástases, que correspondem à formação de tumores secundários a partir de células cancerígenas originadas na mama."
-  },
-  "AlveoliBreast": {
-    "objname": "Alvéolos Mamários",
-    "description": "Pequenas estruturas secretoras das glândulas mamárias, responsáveis pela produção de leite durante a lactação. Estão organizadas em unidades glandulares conectadas aos ductos mamários. São apresentadas como referência anatômica para compreender a organização do tecido glandular da mama."
-  },
-  "BreastFatTissue": {
-    "objname": "Tecido Adiposo Mamário",
-    "description": "Tecido formado principalmente por células adiposas, responsável por preencher espaços entre as estruturas glandulares e contribuir para o volume e formato das mamas. No carcinoma ductal in situ, as células neoplásicas permanecem confinadas aos ductos, sem invadir o tecido adiposo ao redor."
-  },
-  "LactiferousMilkDucts": {
-    "objname": "Ductos Lactíferos",
-    "description": "Canais responsáveis por conduzir o leite produzido pelas glândulas mamárias em direção ao mamilo. O carcinoma ductal in situ desenvolve-se no interior dos ductos mamários, onde células anormais proliferam sem ultrapassar a membrana basal. A ausência de invasão dos tecidos adjacentes caracteriza o estágio 0."
-  },
-  "MammaryGlandLobules": {
-    "objname": "Lóbulos da Glândula Mamária",
-    "description": "Conjuntos de estruturas glandulares responsáveis pela produção de leite durante a lactação. Estão conectados ao sistema de ductos mamários e integram as unidades ductolobulares terminais, regiões de origem de diversas alterações benignas e neoplásicas da mama."
-  },
-  "LymphVessel": {
-    "objname": "Vasos Linfáticos",
-    "description": "Vasos responsáveis por transportar a linfa dos tecidos em direção aos linfonodos. Participam da drenagem linfática da mama e são importantes na disseminação de determinados cânceres invasivos. No carcinoma ductal in situ puro, não há invasão dos tecidos adjacentes nem disseminação linfática da lesão."
-  },
-  "LymphNodes": {
-    "objname": "Linfonodos",
-    "description": "Estruturas do sistema linfático responsáveis pela filtragem da linfa e participação nas respostas imunológicas. Os linfonodos axilares são importantes na avaliação da disseminação de cânceres mamários invasivos. No carcinoma ductal in situ puro, não ocorre comprometimento linfonodal metastático."
-  },
-  "Thymus": {
-    "objname": "Timo",
-    "description": "Órgão linfático localizado principalmente no mediastino anterior, responsável pela maturação dos linfócitos T, especialmente durante a infância. É apresentado como referência anatômica e não constitui uma estrutura diretamente envolvida no carcinoma ductal in situ."
-  },
-  "PectoralisMajor": {
-    "objname": "Músculo Peitoral Maior",
-    "description": "Músculo localizado na parede anterior do tórax, posteriormente à mama, responsável por movimentos do membro superior, como adução e rotação medial do braço. No modelo, serve como referência anatômica para a posição da glândula mamária."
-  },
-  "Diaphragm": {
-    "objname": "Diafragma",
-    "description": "Principal músculo da inspiração, responsável por separar as cavidades torácica e abdominal. É apresentado como referência anatômica e não participa diretamente do desenvolvimento do carcinoma ductal in situ."
-  },
-  "Lungs": {
-    "objname": "Pulmões",
-    "description": "Órgãos do sistema respiratório responsáveis pelas trocas gasosas entre o ar e o sangue. Estão localizados na cavidade torácica e são apresentados como referência anatômica. O carcinoma ductal in situ puro não apresenta disseminação para os pulmões."
-  },
-  "Bronchus": {
-    "objname": "Brônquios",
-    "description": "Ramificações das vias respiratórias responsáveis por conduzir o ar da traqueia para o interior dos pulmões. São apresentados como referência anatômica, sem participação direta no carcinoma ductal in situ."
-  },
-  "Trachea+nisolar+ninteract": {
-    "objname": "Traqueia",
-    "description": ""
-  },
-  "Humerus": {
-    "objname": "Úmero",
-    "description": "Osso longo do braço que participa das articulações do ombro e do cotovelo. É apresentado como referência anatômica para a região torácica e axilar, próxima às estruturas mamárias e aos linfonodos axilares."
-  },
-  "Humerus_L+nisolar+ninteract": {
-    "objname": "Úmero Esquerdo",
-    "description": ""
+  "parts": {
+    "Body_Skin+Body_Skin_2+nisolar+ninteract": {
+      "objname": {
+        "pt-BR": "Pele",
+        "en": "Skin",
+        "es": "Piel"
+      },
+      "description": {
+        "pt-BR": "",
+        "en": "",
+        "es": ""
+      }
+    },
+    "4": {
+      "objname": {
+        "pt-BR": "Carcinoma Mamário Invasivo",
+        "en": "Invasive Breast Carcinoma",
+        "es": "Carcinoma Mamario Invasivo"
+      },
+      "description": {
+        "pt-BR": "Representação do tumor maligno primário da mama, caracterizado pela proliferação de células cancerígenas que invadem os tecidos mamários adjacentes. No estágio IV, células provenientes desse carcinoma alcançaram órgãos ou tecidos distantes, formando metástases. O tamanho do tumor primário pode variar, pois a presença de disseminação à distância é o principal critério que caracteriza esse estágio.",
+        "en": "Representation of the primary malignant tumor of the breast, characterized by the proliferation of cancer cells that invade adjacent breast tissues. In stage IV, cells originating from this carcinoma have reached distant organs or tissues, forming metastases. The size of the primary tumor may vary, since the presence of distant spread is the main criterion that characterizes this stage.",
+        "es": "Representación del tumor maligno primario de la mama, caracterizado por la proliferación de células cancerosas que invaden los tejidos mamarios adyacentes. En el estadio IV, las células procedentes de este carcinoma han alcanzado órganos o tejidos distantes, formando metástasis. El tamaño del tumor primario puede variar, ya que la presencia de diseminación a distancia es el principal criterio que caracteriza este estadio."
+      }
+    },
+    "4a": {
+      "objname": {
+        "pt-BR": "Foco de Disseminação Linfática",
+        "en": "Focus of Lymphatic Spread",
+        "es": "Foco de Diseminación Linfática"
+      },
+      "description": {
+        "pt-BR": "Representação didática de células tumorais associadas às vias linfáticas da mama. O carcinoma invasivo pode alcançar os vasos linfáticos e disseminar-se para linfonodos regionais. A disseminação linfática é uma das possíveis vias de propagação do câncer, embora a presença de metástases em órgãos distantes também possa resultar da disseminação pela circulação sanguínea.",
+        "en": "Educational representation of tumor cells associated with the lymphatic pathways of the breast. Invasive carcinoma may reach the lymphatic vessels and spread to regional lymph nodes. Lymphatic spread is one of the possible routes of cancer dissemination, although the presence of metastases in distant organs may also result from spread through the bloodstream.",
+        "es": "Representación didáctica de células tumorales asociadas a las vías linfáticas de la mama. El carcinoma invasivo puede alcanzar los vasos linfáticos y diseminarse hacia los ganglios linfáticos regionales. La diseminación linfática es una de las posibles vías de propagación del cáncer, aunque la presencia de metástasis en órganos distantes también puede resultar de la diseminación a través de la circulación sanguínea."
+      }
+    },
+    "4a7": {
+      "objname": {
+        "pt-BR": "Foco de Disseminação Linfática Regional",
+        "en": "Focus of Regional Lymphatic Spread",
+        "es": "Foco de Diseminación Linfática Regional"
+      },
+      "description": {
+        "pt-BR": "Representação de um foco tumoral associado ao sistema linfático regional da mama. Células cancerígenas podem alcançar os linfonodos próximos, especialmente os axilares, formando depósitos metastáticos. O comprometimento linfonodal regional pode acompanhar o câncer de mama metastático, mas não é obrigatório para a classificação em estágio IV.",
+        "en": "Representation of a tumor focus associated with the regional lymphatic system of the breast. Cancer cells may reach nearby lymph nodes, particularly axillary lymph nodes, forming metastatic deposits. Regional lymph node involvement may accompany metastatic breast cancer but is not required for classification as stage IV.",
+        "es": "Representación de un foco tumoral asociado al sistema linfático regional de la mama. Las células cancerosas pueden alcanzar los ganglios linfáticos cercanos, especialmente los axilares, formando depósitos metastásicos. La afectación de los ganglios linfáticos regionales puede acompañar al cáncer de mama metastásico, pero no es obligatoria para su clasificación en estadio IV."
+      }
+    },
+    "4a8": {
+      "objname": {
+        "pt-BR": "Metástase Óssea no Úmero",
+        "en": "Bone Metastasis in the Humerus",
+        "es": "Metástasis Ósea en el Húmero"
+      },
+      "description": {
+        "pt-BR": "Representação de uma lesão metastática no úmero, formada por células cancerígenas provenientes do tumor primário da mama. As metástases ósseas podem comprometer a estrutura do osso, provocando dor, fragilidade e aumento do risco de fraturas. O esqueleto é um dos locais mais frequentes de disseminação do câncer de mama avançado. No modelo, a região destacada representa didaticamente o comprometimento ósseo à distância.",
+        "en": "Representation of a metastatic lesion in the humerus, formed by cancer cells originating from the primary breast tumor. Bone metastases may compromise bone structure, causing pain, fragility, and an increased risk of fractures. The skeleton is one of the most common sites of spread of advanced breast cancer. In the model, the highlighted region provides an educational representation of distant bone involvement.",
+        "es": "Representación de una lesión metastásica en el húmero, formada por células cancerosas procedentes del tumor primario de la mama. Las metástasis óseas pueden comprometer la estructura del hueso, provocando dolor, fragilidad y un aumento del riesgo de fracturas. El esqueleto es uno de los lugares más frecuentes de diseminación del cáncer de mama avanzado. En el modelo, la región destacada representa de forma didáctica la afectación ósea a distancia."
+      }
+    },
+    "4a9": {
+      "objname": {
+        "pt-BR": "Metástase Hepática",
+        "en": "Liver Metastasis",
+        "es": "Metástasis Hepática"
+      },
+      "description": {
+        "pt-BR": "Representação de uma lesão metastática no fígado, formada pela disseminação de células malignas provenientes do carcinoma mamário. Essas células podem alcançar o órgão pela circulação sanguínea e desenvolver tumores secundários no tecido hepático. Dependendo da extensão do comprometimento, as metástases hepáticas podem provocar alterações da função do fígado, dor abdominal, fadiga e outros sintomas.",
+        "en": "Representation of a metastatic lesion in the liver, formed by the spread of malignant cells originating from breast carcinoma. These cells may reach the organ through the bloodstream and develop secondary tumors within the liver tissue. Depending on the extent of involvement, liver metastases may cause impaired liver function, abdominal pain, fatigue, and other symptoms.",
+        "es": "Representación de una lesión metastásica en el hígado, formada por la diseminación de células malignas procedentes del carcinoma mamario. Estas células pueden alcanzar el órgano a través de la circulación sanguínea y desarrollar tumores secundarios en el tejido hepático. Dependiendo de la extensión de la afectación, las metástasis hepáticas pueden provocar alteraciones de la función del hígado, dolor abdominal, fatiga y otros síntomas."
+      }
+    },
+    "4a15": {
+      "objname": {
+        "pt-BR": "Metástases Pulmonares",
+        "en": "Pulmonary Metastases",
+        "es": "Metástasis Pulmonares"
+      },
+      "description": {
+        "pt-BR": "Representação de múltiplos focos metastáticos nos pulmões, originados pela disseminação de células cancerígenas provenientes do tumor primário da mama. Essas células podem alcançar o tecido pulmonar pela circulação sanguínea e formar lesões secundárias. As metástases pulmonares podem ser assintomáticas ou provocar tosse, falta de ar e desconforto respiratório, dependendo de sua localização e extensão.",
+        "en": "Representation of multiple metastatic foci in the lungs, resulting from the spread of cancer cells originating from the primary breast tumor. These cells may reach the lung tissue through the bloodstream and form secondary lesions. Pulmonary metastases may be asymptomatic or cause coughing, shortness of breath, and respiratory discomfort, depending on their location and extent.",
+        "es": "Representación de múltiples focos metastásicos en los pulmones, originados por la diseminación de células cancerosas procedentes del tumor primario de la mama. Estas células pueden alcanzar el tejido pulmonar a través de la circulación sanguínea y formar lesiones secundarias. Las metástasis pulmonares pueden ser asintomáticas o provocar tos, dificultad para respirar y malestar respiratorio, dependiendo de su localización y extensión."
+      }
+    },
+    "Liver": {
+      "objname": {
+        "pt-BR": "Fígado",
+        "en": "Liver",
+        "es": "Hígado"
+      },
+      "description": {
+        "pt-BR": "Órgão localizado principalmente na região superior direita do abdômen, responsável por funções como metabolismo de nutrientes, produção de bile, síntese de proteínas e processamento de substâncias presentes no sangue. No câncer de mama em estágio IV, pode ser acometido por metástases, que correspondem à formação de tumores secundários a partir de células cancerígenas originadas na mama.",
+        "en": "Organ located primarily in the upper right region of the abdomen, responsible for functions such as nutrient metabolism, bile production, protein synthesis, and the processing of substances present in the blood. In stage IV breast cancer, it may be affected by metastases, which correspond to the formation of secondary tumors from cancer cells originating in the breast.",
+        "es": "Órgano localizado principalmente en la región superior derecha del abdomen, responsable de funciones como el metabolismo de nutrientes, la producción de bilis, la síntesis de proteínas y el procesamiento de sustancias presentes en la sangre. En el cáncer de mama en estadio IV, puede verse afectado por metástasis, que corresponden a la formación de tumores secundarios a partir de células cancerosas originadas en la mama."
+      }
+    },
+    "AlveoliBreast": {
+      "objname": {
+        "pt-BR": "Alvéolos Mamários",
+        "en": "Mammary Alveoli",
+        "es": "Alvéolos Mamarios"
+      },
+      "description": {
+        "pt-BR": "Pequenas estruturas secretoras das glândulas mamárias, responsáveis pela produção de leite durante a lactação. Estão organizadas em unidades glandulares conectadas aos ductos mamários. São apresentadas como referência anatômica para compreender a organização do tecido glandular da mama.",
+        "en": "Small secretory structures of the mammary glands responsible for milk production during lactation. They are organized into glandular units connected to the mammary ducts. They are presented as an anatomical reference to help understand the organization of the glandular tissue of the breast.",
+        "es": "Pequeñas estructuras secretoras de las glándulas mamarias, responsables de la producción de leche durante la lactancia. Están organizadas en unidades glandulares conectadas a los conductos mamarios. Se presentan como referencia anatómica para comprender la organización del tejido glandular de la mama."
+      }
+    },
+    "BreastFatTissue": {
+      "objname": {
+        "pt-BR": "Tecido Adiposo Mamário",
+        "en": "Breast Adipose Tissue",
+        "es": "Tejido Adiposo Mamario"
+      },
+      "description": {
+        "pt-BR": "Tecido formado principalmente por células adiposas, responsável por preencher espaços entre as estruturas glandulares e contribuir para o volume e formato das mamas. No carcinoma ductal in situ, as células neoplásicas permanecem confinadas aos ductos, sem invadir o tecido adiposo ao redor.",
+        "en": "Tissue composed primarily of adipocytes, responsible for filling the spaces between glandular structures and contributing to the volume and shape of the breasts. In ductal carcinoma in situ, neoplastic cells remain confined to the ducts without invading the surrounding adipose tissue.",
+        "es": "Tejido formado principalmente por células adiposas, responsable de rellenar los espacios entre las estructuras glandulares y contribuir al volumen y la forma de las mamas. En el carcinoma ductal in situ, las células neoplásicas permanecen confinadas a los conductos, sin invadir el tejido adiposo circundante."
+      }
+    },
+    "LactiferousMilkDucts": {
+      "objname": {
+        "pt-BR": "Ductos Lactíferos",
+        "en": "Lactiferous Ducts",
+        "es": "Conductos Lactíferos"
+      },
+      "description": {
+        "pt-BR": "Canais responsáveis por conduzir o leite produzido pelas glândulas mamárias em direção ao mamilo. O carcinoma ductal in situ desenvolve-se no interior dos ductos mamários, onde células anormais proliferam sem ultrapassar a membrana basal. A ausência de invasão dos tecidos adjacentes caracteriza o estágio 0.",
+        "en": "Ducts responsible for conveying milk produced by the mammary glands toward the nipple. Ductal carcinoma in situ develops within the mammary ducts, where abnormal cells proliferate without crossing the basement membrane. The absence of invasion into adjacent tissues characterizes stage 0.",
+        "es": "Conductos responsables de transportar la leche producida por las glándulas mamarias hacia el pezón. El carcinoma ductal in situ se desarrolla en el interior de los conductos mamarios, donde las células anormales proliferan sin atravesar la membrana basal. La ausencia de invasión de los tejidos adyacentes caracteriza el estadio 0."
+      }
+    },
+    "MammaryGlandLobules": {
+      "objname": {
+        "pt-BR": "Lóbulos da Glândula Mamária",
+        "en": "Mammary Gland Lobules",
+        "es": "Lobulillos de la Glándula Mamaria"
+      },
+      "description": {
+        "pt-BR": "Conjuntos de estruturas glandulares responsáveis pela produção de leite durante a lactação. Estão conectados ao sistema de ductos mamários e integram as unidades ductolobulares terminais, regiões de origem de diversas alterações benignas e neoplásicas da mama.",
+        "en": "Groups of glandular structures responsible for milk production during lactation. They are connected to the mammary duct system and form part of the terminal duct lobular units, regions where various benign and neoplastic breast abnormalities originate.",
+        "es": "Conjuntos de estructuras glandulares responsables de la producción de leche durante la lactancia. Están conectados al sistema de conductos mamarios y forman parte de las unidades ductolobulillares terminales, regiones de origen de diversas alteraciones benignas y neoplásicas de la mama."
+      }
+    },
+    "LymphVessel": {
+      "objname": {
+        "pt-BR": "Vasos Linfáticos",
+        "en": "Lymphatic Vessels",
+        "es": "Vasos Linfáticos"
+      },
+      "description": {
+        "pt-BR": "Vasos responsáveis por transportar a linfa dos tecidos em direção aos linfonodos. Participam da drenagem linfática da mama e são importantes na disseminação de determinados cânceres invasivos. No carcinoma ductal in situ puro, não há invasão dos tecidos adjacentes nem disseminação linfática da lesão.",
+        "en": "Vessels responsible for transporting lymph from the tissues toward the lymph nodes. They participate in the lymphatic drainage of the breast and play an important role in the spread of certain invasive cancers. In pure ductal carcinoma in situ, there is neither invasion of adjacent tissues nor lymphatic spread of the lesion.",
+        "es": "Vasos responsables de transportar la linfa desde los tejidos hacia los ganglios linfáticos. Participan en el drenaje linfático de la mama y desempeñan un papel importante en la diseminación de determinados cánceres invasivos. En el carcinoma ductal in situ puro, no existe invasión de los tejidos adyacentes ni diseminación linfática de la lesión."
+      }
+    },
+    "LymphNodes": {
+      "objname": {
+        "pt-BR": "Linfonodos",
+        "en": "Lymph Nodes",
+        "es": "Ganglios Linfáticos"
+      },
+      "description": {
+        "pt-BR": "Estruturas do sistema linfático responsáveis pela filtragem da linfa e participação nas respostas imunológicas. Os linfonodos axilares são importantes na avaliação da disseminação de cânceres mamários invasivos. No carcinoma ductal in situ puro, não ocorre comprometimento linfonodal metastático.",
+        "en": "Structures of the lymphatic system responsible for filtering lymph and participating in immune responses. The axillary lymph nodes are important in assessing the spread of invasive breast cancers. In pure ductal carcinoma in situ, metastatic lymph node involvement does not occur.",
+        "es": "Estructuras del sistema linfático responsables de la filtración de la linfa y de la participación en las respuestas inmunitarias. Los ganglios linfáticos axilares son importantes en la evaluación de la diseminación de los cánceres mamarios invasivos. En el carcinoma ductal in situ puro, no se produce afectación metastásica de los ganglios linfáticos."
+      }
+    },
+    "Thymus": {
+      "objname": {
+        "pt-BR": "Timo",
+        "en": "Thymus",
+        "es": "Timo"
+      },
+      "description": {
+        "pt-BR": "Órgão linfático localizado principalmente no mediastino anterior, responsável pela maturação dos linfócitos T, especialmente durante a infância. É apresentado como referência anatômica e não constitui uma estrutura diretamente envolvida no carcinoma ductal in situ.",
+        "en": "Lymphatic organ located primarily in the anterior mediastinum, responsible for the maturation of T lymphocytes, particularly during childhood. It is presented as an anatomical reference and is not a structure directly involved in ductal carcinoma in situ.",
+        "es": "Órgano linfático localizado principalmente en el mediastino anterior, responsable de la maduración de los linfocitos T, especialmente durante la infancia. Se presenta como referencia anatómica y no constituye una estructura directamente implicada en el carcinoma ductal in situ."
+      }
+    },
+    "PectoralisMajor": {
+      "objname": {
+        "pt-BR": "Músculo Peitoral Maior",
+        "en": "Pectoralis Major Muscle",
+        "es": "Músculo Pectoral Mayor"
+      },
+      "description": {
+        "pt-BR": "Músculo localizado na parede anterior do tórax, posteriormente à mama, responsável por movimentos do membro superior, como adução e rotação medial do braço. No modelo, serve como referência anatômica para a posição da glândula mamária.",
+        "en": "Muscle located in the anterior chest wall, posterior to the breast, responsible for upper limb movements such as adduction and medial rotation of the arm. In the model, it serves as an anatomical reference for the position of the mammary gland.",
+        "es": "Músculo localizado en la pared anterior del tórax, por detrás de la mama, responsable de movimientos del miembro superior, como la aducción y la rotación medial del brazo. En el modelo, sirve como referencia anatómica para la posición de la glándula mamaria."
+      }
+    },
+    "Diaphragm": {
+      "objname": {
+        "pt-BR": "Diafragma",
+        "en": "Diaphragm",
+        "es": "Diafragma"
+      },
+      "description": {
+        "pt-BR": "Principal músculo da inspiração, responsável por separar as cavidades torácica e abdominal. É apresentado como referência anatômica e não participa diretamente do desenvolvimento do carcinoma ductal in situ.",
+        "en": "Primary muscle of inspiration, responsible for separating the thoracic and abdominal cavities. It is presented as an anatomical reference and is not directly involved in the development of ductal carcinoma in situ.",
+        "es": "Principal músculo de la inspiración, responsable de separar las cavidades torácica y abdominal. Se presenta como referencia anatómica y no participa directamente en el desarrollo del carcinoma ductal in situ."
+      }
+    },
+    "Lungs": {
+      "objname": {
+        "pt-BR": "Pulmões",
+        "en": "Lungs",
+        "es": "Pulmones"
+      },
+      "description": {
+        "pt-BR": "Órgãos do sistema respiratório responsáveis pelas trocas gasosas entre o ar e o sangue. Estão localizados na cavidade torácica e são apresentados como referência anatômica. O carcinoma ductal in situ puro não apresenta disseminação para os pulmões.",
+        "en": "Organs of the respiratory system responsible for gas exchange between the air and the blood. They are located in the thoracic cavity and are presented as an anatomical reference. Pure ductal carcinoma in situ does not spread to the lungs.",
+        "es": "Órganos del sistema respiratorio responsables del intercambio gaseoso entre el aire y la sangre. Están localizados en la cavidad torácica y se presentan como referencia anatómica. El carcinoma ductal in situ puro no presenta diseminación hacia los pulmones."
+      }
+    },
+    "Bronchus": {
+      "objname": {
+        "pt-BR": "Brônquios",
+        "en": "Bronchi",
+        "es": "Bronquios"
+      },
+      "description": {
+        "pt-BR": "Ramificações das vias respiratórias responsáveis por conduzir o ar da traqueia para o interior dos pulmões. São apresentados como referência anatômica, sem participação direta no carcinoma ductal in situ.",
+        "en": "Branches of the respiratory tract responsible for conducting air from the trachea into the lungs. They are presented as an anatomical reference, with no direct involvement in ductal carcinoma in situ.",
+        "es": "Ramificaciones de las vías respiratorias responsables de conducir el aire desde la tráquea hacia el interior de los pulmones. Se presentan como referencia anatómica, sin participación directa en el carcinoma ductal in situ."
+      }
+    },
+    "Trachea+nisolar+ninteract": {
+      "objname": {
+        "pt-BR": "Traqueia",
+        "en": "Trachea",
+        "es": "Tráquea"
+      },
+      "description": {
+        "pt-BR": "",
+        "en": "",
+        "es": ""
+      }
+    },
+    "Humerus": {
+      "objname": {
+        "pt-BR": "Úmero",
+        "en": "Humerus",
+        "es": "Húmero"
+      },
+      "description": {
+        "pt-BR": "Osso longo do braço que participa das articulações do ombro e do cotovelo. É apresentado como referência anatômica para a região torácica e axilar, próxima às estruturas mamárias e aos linfonodos axilares.",
+        "en": "Long bone of the arm that forms part of the shoulder and elbow joints. It is presented as an anatomical reference for the thoracic and axillary region, close to the mammary structures and axillary lymph nodes.",
+        "es": "Hueso largo del brazo que forma parte de las articulaciones del hombro y del codo. Se presenta como referencia anatómica para la región torácica y axilar, próxima a las estructuras mamarias y a los ganglios linfáticos axilares."
+      }
+    },
+    "Humerus_L+nisolar+ninteract": {
+      "objname": {
+        "pt-BR": "Úmero Esquerdo",
+        "en": "Left Humerus",
+        "es": "Húmero Izquierdo"
+      },
+      "description": {
+        "pt-BR": "",
+        "en": "",
+        "es": ""
+      }
+    }
   }
 }

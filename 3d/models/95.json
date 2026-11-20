@@ -1,29 +1,144 @@
 {
-  "objname": "Camadas da Epiderme",
+  "objname": {
+    "pt-BR": "Camadas da Epiderme",
+    "en": "Layers of the Epidermis",
+    "es": "Capas de la Epidermis"
+  },
   "objsystem": [
     "Tegumentar"
   ],
-  "objdescription": "A epiderme é a camada mais externa da pele, formada por tecido epitelial estratificado pavimentoso queratinizado. Sua principal função é proteger o organismo contra agentes externos, reduzir a perda de água e contribuir para a defesa imunológica. É organizada em cinco estratos na pele espessa: córneo, lúcido, granuloso, espinhoso e basal. Na pele fina, o estrato lúcido geralmente não está presente. As células produzidas na camada basal passam por um processo de diferenciação e queratinização à medida que migram em direção à superfície, onde são eliminadas naturalmente. O modelo apresenta a organização dessas camadas e suas características estruturais.",
-  "linkedModels": [],
+  "objdescription": {
+    "pt-BR": "A epiderme é a camada mais externa da pele, formada por tecido epitelial estratificado pavimentoso queratinizado. Sua principal função é proteger o organismo contra agentes externos, reduzir a perda de água e contribuir para a defesa imunológica. É organizada em cinco estratos na pele espessa: córneo, lúcido, granuloso, espinhoso e basal. Na pele fina, o estrato lúcido geralmente não está presente. As células produzidas na camada basal passam por um processo de diferenciação e queratinização à medida que migram em direção à superfície, onde são eliminadas naturalmente. O modelo apresenta a organização dessas camadas e suas características estruturais.",
+    "en": "The epidermis is the outermost layer of the skin, composed of keratinized stratified squamous epithelium. Its primary function is to protect the body against external agents, reduce water loss, and contribute to immune defense. In thick skin, it is organized into five layers: the stratum corneum, stratum lucidum, stratum granulosum, stratum spinosum, and stratum basale. In thin skin, the stratum lucidum is generally absent. Cells produced in the basal layer undergo a process of differentiation and keratinization as they migrate toward the surface, where they are naturally shed. The model presents the organization of these layers and their structural characteristics.",
+    "es": "La epidermis es la capa más externa de la piel, formada por tejido epitelial plano estratificado queratinizado. Su función principal es proteger al organismo contra agentes externos, reducir la pérdida de agua y contribuir a la defensa inmunitaria. En la piel gruesa, se organiza en cinco estratos: córneo, lúcido, granuloso, espinoso y basal. En la piel fina, el estrato lúcido generalmente no está presente. Las células producidas en la capa basal experimentan un proceso de diferenciación y queratinización a medida que migran hacia la superficie, donde se eliminan de forma natural. El modelo presenta la organización de estas capas y sus características estructurales."
+  },
+  "linkedModels": [
+    {
+      "id": "15",
+      "label": {
+        "pt-BR": "Anatomia das Camadas da Pele Humana",
+        "en": "Anatomy of Human Skin Layers",
+        "es": "Anatomía de las Capas de la Piel Humana"
+      }
+    },
+    {
+      "id": "39",
+      "label": {
+        "pt-BR": "Envelhecimento do Tecido da Pele",
+        "en": "Skin Tissue Aging",
+        "es": "Envejecimiento del Tejido Cutáneo"
+      }
+    },
+    {
+      "id": "40",
+      "label": {
+        "pt-BR": "Queratose Pilar",
+        "en": "Keratosis Pilaris",
+        "es": "Queratosis Pilar"
+      }
+    },
+    {
+      "id": "41",
+      "label": {
+        "pt-BR": "Queimadura Solar",
+        "en": "Sunburn",
+        "es": "Quemadura Solar"
+      }
+    },
+    {
+      "id": "59",
+      "label": {
+        "pt-BR": "Psoríase",
+        "en": "Psoriasis",
+        "es": "Psoriasis"
+      }
+    },
+    {
+      "id": "60",
+      "label": {
+        "pt-BR": "Herpes Labial",
+        "en": "Herpes Labialis",
+        "es": "Herpes Labial"
+      }
+    },
+    {
+      "id": "93",
+      "label": {
+        "pt-BR": "Papilomavírus Humano (HPV)",
+        "en": "Human Papillomavirus (HPV)",
+        "es": "Virus del Papiloma Humano (VPH)"
+      }
+    },
+    {
+      "id": "101",
+      "label": {
+        "pt-BR": "Ciclo Biológico do Pelo/Cabelo",
+        "en": "Hair Growth Cycle",
+        "es": "Ciclo de Crecimiento del Pelo/Cabello"
+      }
+    }
+  ],
   "resources": [],
-  "TopLayer+nisolar": {
-    "objname": "Estrato Córneo",
-    "description": "Camada mais superficial da epiderme, formada por células mortas, achatadas e ricas em queratina, chamadas corneócitos. Atua como barreira protetora contra agentes externos, atrito, micro-organismos e perda excessiva de água. Suas células são continuamente eliminadas e substituídas."
-  },
-  "SecondLayerFront+nisolar": {
-    "objname": "Estrato Lúcido",
-    "description": "Camada fina e translúcida localizada entre os estratos córneo e granuloso, presente principalmente na pele espessa das palmas das mãos e plantas dos pés. É formada por queratinócitos achatados, sem núcleo, que contribuem para a resistência e proteção da pele contra o atrito."
-  },
-  "ThirdLayerBack+nisolar": {
-    "objname": "Estrato Granuloso",
-    "description": "Camada formada por queratinócitos achatados que apresentam grânulos de querato-hialina. Nessa região ocorre uma etapa importante da queratinização e da liberação de lipídios que ajudam a formar a barreira impermeabilizante da epiderme, reduzindo a perda de água."
-  },
-  "FourthLayerBack+nisolar": {
-    "objname": "Estrato Espinhoso",
-    "description": "Camada composta por várias fileiras de queratinócitos unidos por desmossomos, estruturas que conferem resistência mecânica à epiderme. Contém células de Langerhans, envolvidas na defesa imunológica, e participa do processo de diferenciação e produção de queratina."
-  },
-  "FifthLayerBack+nisolar": {
-    "objname": "Estrato Basal",
-    "description": "Camada mais profunda da epiderme, localizada sobre a membrana basal que a separa da derme. Contém queratinócitos com capacidade de divisão celular, responsáveis pela renovação contínua da epiderme. Também abriga melanócitos, produtores de melanina, e células de Merkel, relacionadas à percepção tátil."
+  "parts": {
+    "TopLayer+nisolar": {
+      "objname": {
+        "pt-BR": "Estrato Córneo",
+        "en": "Stratum Corneum",
+        "es": "Estrato Córneo"
+      },
+      "description": {
+        "pt-BR": "Camada mais superficial da epiderme, formada por células mortas, achatadas e ricas em queratina, chamadas corneócitos. Atua como barreira protetora contra agentes externos, atrito, micro-organismos e perda excessiva de água. Suas células são continuamente eliminadas e substituídas.",
+        "en": "Most superficial layer of the epidermis, composed of dead, flattened, keratin-rich cells called corneocytes. It acts as a protective barrier against external agents, friction, microorganisms, and excessive water loss. Its cells are continuously shed and replaced.",
+        "es": "Capa más superficial de la epidermis, formada por células muertas, aplanadas y ricas en queratina, denominadas corneocitos. Actúa como barrera protectora contra agentes externos, la fricción, los microorganismos y la pérdida excesiva de agua. Sus células se eliminan y reemplazan continuamente."
+      }
+    },
+    "SecondLayerFront+nisolar": {
+      "objname": {
+        "pt-BR": "Estrato Lúcido",
+        "en": "Stratum Lucidum",
+        "es": "Estrato Lúcido"
+      },
+      "description": {
+        "pt-BR": "Camada fina e translúcida localizada entre os estratos córneo e granuloso, presente principalmente na pele espessa das palmas das mãos e plantas dos pés. É formada por queratinócitos achatados, sem núcleo, que contribuem para a resistência e proteção da pele contra o atrito.",
+        "en": "Thin, translucent layer located between the stratum corneum and the stratum granulosum, found primarily in the thick skin of the palms of the hands and soles of the feet. It consists of flattened keratinocytes without nuclei, which contribute to skin strength and protection against friction.",
+        "es": "Capa fina y translúcida situada entre los estratos córneo y granuloso, presente principalmente en la piel gruesa de las palmas de las manos y las plantas de los pies. Está formada por queratinocitos aplanados, sin núcleo, que contribuyen a la resistencia y protección de la piel frente a la fricción."
+      }
+    },
+    "ThirdLayerBack+nisolar": {
+      "objname": {
+        "pt-BR": "Estrato Granuloso",
+        "en": "Stratum Granulosum",
+        "es": "Estrato Granuloso"
+      },
+      "description": {
+        "pt-BR": "Camada formada por queratinócitos achatados que apresentam grânulos de querato-hialina. Nessa região ocorre uma etapa importante da queratinização e da liberação de lipídios que ajudam a formar a barreira impermeabilizante da epiderme, reduzindo a perda de água.",
+        "en": "Layer composed of flattened keratinocytes containing keratohyalin granules. An important stage of keratinization and lipid release occurs in this region, helping to form the epidermal water-resistant barrier and reducing water loss.",
+        "es": "Capa formada por queratinocitos aplanados que presentan gránulos de queratohialina. En esta región tiene lugar una etapa importante de la queratinización y de la liberación de lípidos que ayudan a formar la barrera impermeabilizante de la epidermis, reduciendo la pérdida de agua."
+      }
+    },
+    "FourthLayerBack+nisolar": {
+      "objname": {
+        "pt-BR": "Estrato Espinhoso",
+        "en": "Stratum Spinosum",
+        "es": "Estrato Espinoso"
+      },
+      "description": {
+        "pt-BR": "Camada composta por várias fileiras de queratinócitos unidos por desmossomos, estruturas que conferem resistência mecânica à epiderme. Contém células de Langerhans, envolvidas na defesa imunológica, e participa do processo de diferenciação e produção de queratina.",
+        "en": "Layer composed of several rows of keratinocytes connected by desmosomes, structures that provide mechanical strength to the epidermis. It contains Langerhans cells, which are involved in immune defense, and participates in the processes of cell differentiation and keratin production.",
+        "es": "Capa compuesta por varias filas de queratinocitos unidos por desmosomas, estructuras que proporcionan resistencia mecánica a la epidermis. Contiene células de Langerhans, involucradas en la defensa inmunitaria, y participa en los procesos de diferenciación celular y producción de queratina."
+      }
+    },
+    "FifthLayerBack+nisolar": {
+      "objname": {
+        "pt-BR": "Estrato Basal",
+        "en": "Stratum Basale",
+        "es": "Estrato Basal"
+      },
+      "description": {
+        "pt-BR": "Camada mais profunda da epiderme, localizada sobre a membrana basal que a separa da derme. Contém queratinócitos com capacidade de divisão celular, responsáveis pela renovação contínua da epiderme. Também abriga melanócitos, produtores de melanina, e células de Merkel, relacionadas à percepção tátil.",
+        "en": "Deepest layer of the epidermis, located on the basement membrane that separates it from the dermis. It contains keratinocytes capable of cell division, responsible for the continuous renewal of the epidermis. It also contains melanocytes, which produce melanin, and Merkel cells, which are associated with tactile perception.",
+        "es": "Capa más profunda de la epidermis, situada sobre la membrana basal que la separa de la dermis. Contiene queratinocitos con capacidad de división celular, responsables de la renovación continua de la epidermis. También alberga melanocitos, productores de melanina, y células de Merkel, relacionadas con la percepción táctil."
+      }
+    }
   }
 }

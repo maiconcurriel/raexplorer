@@ -1,39 +1,141 @@
 {
-  "objname": "Artrite Psoriática: Inflamações nas Articulações",
+  "objname": {
+    "pt-BR": "Artrite Psoriática: Inflamações nas Articulações",
+    "en": "Psoriatic Arthritis: Joint Inflammation",
+    "es": "Artritis Psoriásica: Inflamación de las Articulaciones"
+  },
   "objsystem": [
     "Esquelético",
     "Muscular"
   ],
-  "objdescription": "A artrite psoriática é uma doença inflamatória crônica, imunomediada, que afeta principalmente as articulações e pode comprometer tendões, ligamentos e suas inserções nos ossos. Frequentemente associada à psoríase cutânea, pode provocar dor, inchaço, rigidez e limitação dos movimentos. A inflamação pode atingir articulações periféricas, como as dos dedos das mãos e dos pés, punhos, cotovelos, joelhos e tornozelos, além da coluna vertebral e das articulações sacroilíacas. Algumas pessoas também apresentam dactilite, caracterizada pelo inchaço difuso de um dedo, e entesite, que corresponde à inflamação das inserções de tendões e ligamentos. O modelo destaca didaticamente diferentes regiões do esqueleto que podem ser acometidas pela artrite psoriática, demonstrando sua distribuição e os possíveis efeitos sobre a mobilidade e a função articular.",
+  "objdescription": {
+    "pt-BR": "A artrite psoriática é uma doença inflamatória crônica, imunomediada, que afeta principalmente as articulações e pode comprometer tendões, ligamentos e suas inserções nos ossos. Frequentemente associada à psoríase cutânea, pode provocar dor, inchaço, rigidez e limitação dos movimentos. A inflamação pode atingir articulações periféricas, como as dos dedos das mãos e dos pés, punhos, cotovelos, joelhos e tornozelos, além da coluna vertebral e das articulações sacroilíacas. Algumas pessoas também apresentam dactilite, caracterizada pelo inchaço difuso de um dedo, e entesite, que corresponde à inflamação das inserções de tendões e ligamentos. O modelo destaca didaticamente diferentes regiões do esqueleto que podem ser acometidas pela artrite psoriática, demonstrando sua distribuição e os possíveis efeitos sobre a mobilidade e a função articular.",
+    "en": "Psoriatic arthritis is a chronic, immune-mediated inflammatory disease that primarily affects the joints and may involve tendons, ligaments, and their attachment sites to bones. Frequently associated with cutaneous psoriasis, it may cause pain, swelling, stiffness, and limited movement. Inflammation may affect peripheral joints, such as those of the fingers and toes, wrists, elbows, knees, and ankles, as well as the spine and sacroiliac joints. Some individuals also experience dactylitis, characterized by diffuse swelling of a digit, and enthesitis, which refers to inflammation of the attachment sites of tendons and ligaments. The model highlights different regions of the skeleton that may be affected by psoriatic arthritis for educational purposes, demonstrating its distribution and potential effects on mobility and joint function.",
+    "es": "La artritis psoriásica es una enfermedad inflamatoria crónica, inmunomediada, que afecta principalmente a las articulaciones y puede comprometer los tendones, los ligamentos y sus inserciones en los huesos. Frecuentemente asociada a la psoriasis cutánea, puede provocar dolor, hinchazón, rigidez y limitación de los movimientos. La inflamación puede afectar a las articulaciones periféricas, como las de los dedos de las manos y los pies, las muñecas, los codos, las rodillas y los tobillos, además de la columna vertebral y las articulaciones sacroilíacas. Algunas personas también presentan dactilitis, caracterizada por la hinchazón difusa de un dedo, y entesitis, que corresponde a la inflamación de las inserciones de los tendones y ligamentos. El modelo destaca de forma didáctica diferentes regiones del esqueleto que pueden verse afectadas por la artritis psoriásica, demostrando su distribución y los posibles efectos sobre la movilidad y la función articular."
+  },
   "linkedModels": [
     {
+      "id": "3",
+      "label": {
+        "pt-BR": "Sistema Esquelético Masculino",
+        "en": "Male Skeletal System",
+        "es": "Sistema Esquelético Masculino"
+      }
+    },
+    {
+      "id": "28",
+      "label": {
+        "pt-BR": "Sistema Esquelético Feminino",
+        "en": "Female Skeletal System",
+        "es": "Sistema Esquelético Femenino"
+      }
+    },
+    {
+      "id": "31",
+      "label": {
+        "pt-BR": "Artrose",
+        "en": "Osteoarthritis",
+        "es": "Artrosis"
+      }
+    },
+    {
+      "id": "59",
+      "label": {
+        "pt-BR": "Psoríase",
+        "en": "Psoriasis",
+        "es": "Psoriasis"
+      }
+    },
+    {
       "id": "73",
-      "label": "Psoríase Cutânea Associada à Artrite Psoriática"
+      "label": {
+        "pt-BR": "Psoríase Cutânea Associada à Artrite Psoriática",
+        "en": "Cutaneous Psoriasis Associated with Psoriatic Arthritis",
+        "es": "Psoriasis Cutánea Asociada a la Artritis Psoriásica"
+      }
+    },
+    {
+      "id": "80",
+      "label": {
+        "pt-BR": "Artrite Psoriática: Articulações das Mãos",
+        "en": "Psoriatic Arthritis: Hand Joints",
+        "es": "Artritis Psoriásica: Articulaciones de las Manos"
+      }
     }
   ],
   "resources": [],
-  "Cot1+Cot2+Pul1+Pul2+nisolar": {
-    "objname": "Dores nos Cotovelos e Punhos",
-    "description": "Representação das regiões dos cotovelos e punhos que podem ser acometidas pela artrite psoriática. A inflamação das articulações e dos tecidos ao redor pode provocar dor, inchaço, rigidez e dificuldade para realizar movimentos. Nos cotovelos, também pode ocorrer entesite, enquanto o comprometimento dos punhos pode prejudicar a mobilidade e a execução de atividades manuais."
-  },
-  "Spine+nisolar": {
-    "objname": "Dores na Coluna Vertebral",
-    "description": "Representação do possível comprometimento axial da artrite psoriática, que pode afetar a coluna vertebral e as articulações sacroilíacas. A inflamação pode provocar dor nas costas, rigidez e redução da mobilidade, especialmente após períodos de repouso. Nem todas as pessoas com artrite psoriática apresentam envolvimento da coluna."
-  },
-  "D1+D2+D3+D4+D5+D6+D7+D8+D9+D10+D11+D12+D13+D14+D15+D16+D17+D18+D19+D20+nisolar": {
-    "objname": "Dores nos Dedos das Mãos e dos Pés",
-    "description": "Representação do comprometimento das articulações dos dedos das mãos e dos pés pela artrite psoriática. A doença pode causar dor, inchaço, rigidez e inflamação, frequentemente envolvendo as articulações interfalângicas distais. Também pode ocorrer dactilite, caracterizada pelo inchaço difuso de um dedo, conhecido como dedo em salsicha, devido à inflamação de articulações e tecidos ao redor."
-  },
-  "Joe1+Joe2+Tor1+Tor2+nisolar": {
-    "objname": "Dores nos Joelhos e Tornozelos",
-    "description": "Representação das regiões dos joelhos e tornozelos que podem apresentar inflamação na artrite psoriática. O comprometimento articular pode provocar dor, inchaço, rigidez e dificuldade para caminhar ou sustentar o peso corporal. Também pode ocorrer entesite em estruturas próximas, como a inserção do tendão de Aquiles e do tendão patelar, contribuindo para desconforto e limitação dos movimentos."
-  },
-  "Ske+Ske_1+Ske_2+Ske_3+Ske_4+Ske_5+Ske_6": {
-    "objname": "Esqueleto Humano",
-    "description": "Conjunto de estruturas ósseas que sustentam o corpo, protegem órgãos internos e, juntamente com músculos e articulações, permitem a movimentação. Na artrite psoriática, a inflamação pode comprometer diferentes articulações do esqueleto, provocando alterações funcionais e, em casos persistentes, erosões ósseas e modificações na formação de tecido ósseo. O modelo apresenta o esqueleto como referência anatômica para localizar as regiões potencialmente afetadas."
-  },
-  "Skin+nisolar+ninteract": {
-    "objname": "Pele",
-    "description": ""
+  "parts": {
+    "Cot1+Cot2+Pul1+Pul2+nisolar": {
+      "objname": {
+        "pt-BR": "Dores nos Cotovelos e Punhos",
+        "en": "Elbow and Wrist Pain",
+        "es": "Dolor en los Codos y las Muñecas"
+      },
+      "description": {
+        "pt-BR": "Representação das regiões dos cotovelos e punhos que podem ser acometidas pela artrite psoriática. A inflamação das articulações e dos tecidos ao redor pode provocar dor, inchaço, rigidez e dificuldade para realizar movimentos. Nos cotovelos, também pode ocorrer entesite, enquanto o comprometimento dos punhos pode prejudicar a mobilidade e a execução de atividades manuais.",
+        "en": "Representation of the elbow and wrist regions that may be affected by psoriatic arthritis. Inflammation of the joints and surrounding tissues may cause pain, swelling, stiffness, and difficulty performing movements. Enthesitis may also occur in the elbows, while wrist involvement may impair mobility and the ability to perform manual activities.",
+        "es": "Representación de las regiones de los codos y las muñecas que pueden verse afectadas por la artritis psoriásica. La inflamación de las articulaciones y los tejidos circundantes puede provocar dolor, hinchazón, rigidez y dificultad para realizar movimientos. En los codos también puede producirse entesitis, mientras que la afectación de las muñecas puede perjudicar la movilidad y la realización de actividades manuales."
+      }
+    },
+    "Spine+nisolar": {
+      "objname": {
+        "pt-BR": "Dores na Coluna Vertebral",
+        "en": "Spinal Pain",
+        "es": "Dolor en la Columna Vertebral"
+      },
+      "description": {
+        "pt-BR": "Representação do possível comprometimento axial da artrite psoriática, que pode afetar a coluna vertebral e as articulações sacroilíacas. A inflamação pode provocar dor nas costas, rigidez e redução da mobilidade, especialmente após períodos de repouso. Nem todas as pessoas com artrite psoriática apresentam envolvimento da coluna.",
+        "en": "Representation of possible axial involvement in psoriatic arthritis, which may affect the spine and sacroiliac joints. Inflammation may cause back pain, stiffness, and reduced mobility, particularly after periods of rest. Not all individuals with psoriatic arthritis experience spinal involvement.",
+        "es": "Representación de la posible afectación axial de la artritis psoriásica, que puede afectar a la columna vertebral y las articulaciones sacroilíacas. La inflamación puede provocar dolor de espalda, rigidez y reducción de la movilidad, especialmente después de períodos de reposo. No todas las personas con artritis psoriásica presentan afectación de la columna vertebral."
+      }
+    },
+    "D1+D2+D3+D4+D5+D6+D7+D8+D9+D10+D11+D12+D13+D14+D15+D16+D17+D18+D19+D20+nisolar": {
+      "objname": {
+        "pt-BR": "Dores nos Dedos das Mãos e dos Pés",
+        "en": "Finger and Toe Pain",
+        "es": "Dolor en los Dedos de las Manos y los Pies"
+      },
+      "description": {
+        "pt-BR": "Representação do comprometimento das articulações dos dedos das mãos e dos pés pela artrite psoriática. A doença pode causar dor, inchaço, rigidez e inflamação, frequentemente envolvendo as articulações interfalângicas distais. Também pode ocorrer dactilite, caracterizada pelo inchaço difuso de um dedo, conhecido como dedo em salsicha, devido à inflamação de articulações e tecidos ao redor.",
+        "en": "Representation of the involvement of the finger and toe joints in psoriatic arthritis. The disease may cause pain, swelling, stiffness, and inflammation, frequently involving the distal interphalangeal joints. Dactylitis may also occur, characterized by diffuse swelling of a digit, commonly known as a sausage digit, due to inflammation of the joints and surrounding tissues.",
+        "es": "Representación de la afectación de las articulaciones de los dedos de las manos y los pies por la artritis psoriásica. La enfermedad puede causar dolor, hinchazón, rigidez e inflamación, afectando frecuentemente a las articulaciones interfalángicas distales. También puede producirse dactilitis, caracterizada por la hinchazón difusa de un dedo, conocida como dedo en salchicha, debido a la inflamación de las articulaciones y los tejidos circundantes."
+      }
+    },
+    "Joe1+Joe2+Tor1+Tor2+nisolar": {
+      "objname": {
+        "pt-BR": "Dores nos Joelhos e Tornozelos",
+        "en": "Knee and Ankle Pain",
+        "es": "Dolor en las Rodillas y los Tobillos"
+      },
+      "description": {
+        "pt-BR": "Representação das regiões dos joelhos e tornozelos que podem apresentar inflamação na artrite psoriática. O comprometimento articular pode provocar dor, inchaço, rigidez e dificuldade para caminhar ou sustentar o peso corporal. Também pode ocorrer entesite em estruturas próximas, como a inserção do tendão de Aquiles e do tendão patelar, contribuindo para desconforto e limitação dos movimentos.",
+        "en": "Representation of the knee and ankle regions that may exhibit inflammation in psoriatic arthritis. Joint involvement may cause pain, swelling, stiffness, and difficulty walking or bearing body weight. Enthesitis may also occur in nearby structures, such as the attachment sites of the Achilles tendon and patellar tendon, contributing to discomfort and limited movement.",
+        "es": "Representación de las regiones de las rodillas y los tobillos que pueden presentar inflamación en la artritis psoriásica. La afectación articular puede provocar dolor, hinchazón, rigidez y dificultad para caminar o soportar el peso corporal. También puede producirse entesitis en estructuras cercanas, como las inserciones del tendón de Aquiles y del tendón rotuliano, contribuyendo al malestar y a la limitación de los movimientos."
+      }
+    },
+    "Ske+Ske_1+Ske_2+Ske_3+Ske_4+Ske_5+Ske_6": {
+      "objname": {
+        "pt-BR": "Esqueleto Humano",
+        "en": "Human Skeleton",
+        "es": "Esqueleto Humano"
+      },
+      "description": {
+        "pt-BR": "Conjunto de estruturas ósseas que sustentam o corpo, protegem órgãos internos e, juntamente com músculos e articulações, permitem a movimentação. Na artrite psoriática, a inflamação pode comprometer diferentes articulações do esqueleto, provocando alterações funcionais e, em casos persistentes, erosões ósseas e modificações na formação de tecido ósseo. O modelo apresenta o esqueleto como referência anatômica para localizar as regiões potencialmente afetadas.",
+        "en": "Collection of bony structures that support the body, protect internal organs, and, together with muscles and joints, enable movement. In psoriatic arthritis, inflammation may affect different joints of the skeleton, causing functional changes and, in persistent cases, bone erosions and alterations in bone tissue formation. The model presents the skeleton as an anatomical reference for identifying potentially affected regions.",
+        "es": "Conjunto de estructuras óseas que sostienen el cuerpo, protegen los órganos internos y, junto con los músculos y las articulaciones, permiten el movimiento. En la artritis psoriásica, la inflamación puede afectar a diferentes articulaciones del esqueleto, provocando alteraciones funcionales y, en casos persistentes, erosiones óseas y modificaciones en la formación de tejido óseo. El modelo presenta el esqueleto como referencia anatómica para localizar las regiones potencialmente afectadas."
+      }
+    },
+    "Skin+nisolar+ninteract": {
+      "objname": {
+        "pt-BR": "Pele",
+        "en": "Skin",
+        "es": "Piel"
+      },
+      "description": {
+        "pt-BR": "",
+        "en": "",
+        "es": ""
+      }
+    }
   }
 }

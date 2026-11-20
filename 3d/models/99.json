@@ -1,13 +1,64 @@
 {
-  "objname": "Pé com Onicólise",
+  "objname": {
+    "pt-BR": "Pé com Onicólise",
+    "en": "Foot with Onycholysis",
+    "es": "Pie con Onicólisis"
+  },
   "objsystem": [
     "Tegumentar"
   ],
-  "objdescription": "A onicólise é uma condição caracterizada pelo descolamento parcial da lâmina ungueal em relação ao leito da unha, geralmente iniciado pela extremidade livre ou pelas bordas laterais. Esse descolamento forma um espaço sob a unha, que pode apresentar coloração esbranquiçada ou amarelada devido à presença de ar e ao acúmulo de queratina e resíduos. Entre suas possíveis causas estão traumatismos, infecções fúngicas, psoríase, exposição a substâncias irritantes e alterações da tireoide. O modelo apresenta unhas dos pés com áreas esbranquiçadas e irregulares, representando o afastamento da lâmina ungueal do leito. A onicólise não é necessariamente causada por fungos e pode ocorrer sem dor.",
-  "linkedModels": [],
+  "objdescription": {
+    "pt-BR": "A onicólise é uma condição caracterizada pelo descolamento parcial da lâmina ungueal em relação ao leito da unha, geralmente iniciado pela extremidade livre ou pelas bordas laterais. Esse descolamento forma um espaço sob a unha, que pode apresentar coloração esbranquiçada ou amarelada devido à presença de ar e ao acúmulo de queratina e resíduos. Entre suas possíveis causas estão traumatismos, infecções fúngicas, psoríase, exposição a substâncias irritantes e alterações da tireoide. O modelo apresenta unhas dos pés com áreas esbranquiçadas e irregulares, representando o afastamento da lâmina ungueal do leito. A onicólise não é necessariamente causada por fungos e pode ocorrer sem dor.",
+    "en": "Onycholysis is a condition characterized by the partial separation of the nail plate from the nail bed, usually beginning at the free edge or lateral margins. This separation creates a space beneath the nail, which may appear whitish or yellowish due to the presence of air and the accumulation of keratin and debris. Possible causes include trauma, fungal infections, psoriasis, exposure to irritating substances, and thyroid disorders. The model presents toenails with whitish and irregular areas, representing the separation of the nail plate from the nail bed. Onycholysis is not necessarily caused by fungi and may occur without pain.",
+    "es": "La onicólisis es una afección caracterizada por el desprendimiento parcial de la lámina ungueal respecto al lecho ungueal, que generalmente comienza en el borde libre o en los bordes laterales. Este desprendimiento forma un espacio debajo de la uña, que puede presentar una coloración blanquecina o amarillenta debido a la presencia de aire y a la acumulación de queratina y residuos. Entre sus posibles causas se encuentran los traumatismos, las infecciones fúngicas, la psoriasis, la exposición a sustancias irritantes y las alteraciones de la tiroides. El modelo presenta uñas de los pies con áreas blanquecinas e irregulares, que representan la separación de la lámina ungueal del lecho ungueal. La onicólisis no está necesariamente causada por hongos y puede producirse sin dolor."
+  },
+  "linkedModels": [
+    {
+      "id": "15",
+      "label": {
+        "pt-BR": "Anatomia das Camadas da Pele Humana",
+        "en": "Anatomy of Human Skin Layers",
+        "es": "Anatomía de las Capas de la Piel Humana"
+      }
+    },
+    {
+      "id": "54",
+      "label": {
+        "pt-BR": "Micose",
+        "en": "Mycosis",
+        "es": "Micosis"
+      }
+    },
+    {
+      "id": "98",
+      "label": {
+        "pt-BR": "Pé com Onicomicose",
+        "en": "Foot with Onychomycosis",
+        "es": "Pie con Onicomicosis"
+      }
+    },
+    {
+      "id": "102",
+      "label": {
+        "pt-BR": "Onicocriptose",
+        "en": "Onychocryptosis",
+        "es": "Onicocriptosis"
+      }
+    }
+  ],
   "resources": [],
-  "Unhas1+nisolar": {
-    "objname": "Unhas com Onicólise",
-    "description": "Unhas que apresentam separação parcial entre a lâmina ungueal e o leito ungueal. As regiões esbranquiçadas observadas no modelo representam áreas onde a unha perdeu a aderência ao tecido subjacente. O descolamento geralmente começa na ponta ou nas laterais e pode avançar em direção à base da unha. O espaço formado pode acumular queratina, umidade e resíduos, favorecendo infecções secundárias. A recuperação depende da causa e do crescimento de uma nova porção da unha aderida ao leito."
+  "parts": {
+    "Unhas1+nisolar": {
+      "objname": {
+        "pt-BR": "Unhas com Onicólise",
+        "en": "Nails with Onycholysis",
+        "es": "Uñas con Onicólisis"
+      },
+      "description": {
+        "pt-BR": "Unhas que apresentam separação parcial entre a lâmina ungueal e o leito ungueal. As regiões esbranquiçadas observadas no modelo representam áreas onde a unha perdeu a aderência ao tecido subjacente. O descolamento geralmente começa na ponta ou nas laterais e pode avançar em direção à base da unha. O espaço formado pode acumular queratina, umidade e resíduos, favorecendo infecções secundárias. A recuperação depende da causa e do crescimento de uma nova porção da unha aderida ao leito.",
+        "en": "Nails exhibiting partial separation between the nail plate and the nail bed. The whitish regions observed in the model represent areas where the nail has lost its attachment to the underlying tissue. Detachment usually begins at the tip or lateral edges and may progress toward the base of the nail. The resulting space may accumulate keratin, moisture, and debris, promoting secondary infections. Recovery depends on the underlying cause and the growth of a new portion of the nail that remains attached to the nail bed.",
+        "es": "Uñas que presentan una separación parcial entre la lámina ungueal y el lecho ungueal. Las regiones blanquecinas observadas en el modelo representan áreas donde la uña ha perdido su adherencia al tejido subyacente. El desprendimiento generalmente comienza en la punta o en los bordes laterales y puede avanzar hacia la base de la uña. El espacio formado puede acumular queratina, humedad y residuos, favoreciendo las infecciones secundarias. La recuperación depende de la causa y del crecimiento de una nueva porción de la uña adherida al lecho ungueal."
+      }
+    }
   }
 }

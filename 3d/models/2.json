@@ -1,100 +1,376 @@
 {
-  "objname": "Cérebro",
-  "objsystem": "Nervoso",
-  "objdescription": "O cérebro é o principal órgão do sistema nervoso central, responsável pelo processamento das informações sensoriais, controle dos movimentos, memória, linguagem, emoções e funções vitais.",
+  "objname": {
+    "pt-BR": "Cérebro",
+    "en": "Brain",
+    "es": "Cerebro"
+  },
+  "objsystem": [
+    "Nervoso"
+  ],
+  "objdescription": {
+    "pt-BR": "O cérebro é o principal órgão do sistema nervoso central, responsável pelo processamento das informações sensoriais, controle dos movimentos, memória, linguagem, emoções e funções vitais.",
+    "en": "The brain is the main organ of the central nervous system, responsible for processing sensory information, controlling movements, memory, language, emotions, and vital functions.",
+    "es": "El cerebro es el principal órgano del sistema nervioso central, responsable del procesamiento de la información sensorial, el control de los movimientos, la memoria, el lenguaje, las emociones y las funciones vitales."
+  },
   "linkedModels": [
     {
-      "id": "21",
-      "label": "Sistema Nervoso"
+      "id": "1",
+      "label": {
+        "pt-BR": "Impulso Nervoso",
+        "en": "Nerve Impulse",
+        "es": "Impulso Nervioso"
+      }
     },
     {
-      "id": "1",
-      "label": "Neurônio"
+      "id": "21",
+      "label": {
+        "pt-BR": "Sistema Nervoso",
+        "en": "Nervous System",
+        "es": "Sistema Nervioso"
+      }
+    },
+    {
+      "id": "36",
+      "label": {
+        "pt-BR": "AVC Isquêmico",
+        "en": "Ischemic Stroke",
+        "es": "Accidente Cerebrovascular Isquémico"
+      }
+    },
+    {
+      "id": "37",
+      "label": {
+        "pt-BR": "AVC Hemorrágico",
+        "en": "Hemorrhagic Stroke",
+        "es": "Accidente Cerebrovascular Hemorrágico"
+      }
+    },
+    {
+      "id": "38",
+      "label": {
+        "pt-BR": "Neurotransmissores",
+        "en": "Neurotransmitters",
+        "es": "Neurotransmisores"
+      }
+    },
+    {
+      "id": "43",
+      "label": {
+        "pt-BR": "Via Visual",
+        "en": "Visual Pathway",
+        "es": "Vía Visual"
+      }
+    },
+    {
+      "id": "44",
+      "label": {
+        "pt-BR": "Ansiedade",
+        "en": "Anxiety",
+        "es": "Ansiedad"
+      }
+    },
+    {
+      "id": "45",
+      "label": {
+        "pt-BR": "Depressão Bipolar",
+        "en": "Bipolar Depression",
+        "es": "Depresión Bipolar"
+      }
+    },
+    {
+      "id": "47",
+      "label": {
+        "pt-BR": "Via de Recompensa",
+        "en": "Reward Pathway",
+        "es": "Vía de Recompensa"
+      }
+    },
+    {
+      "id": "50",
+      "label": {
+        "pt-BR": "Meningite",
+        "en": "Meningitis",
+        "es": "Meningitis"
+      }
+    },
+    {
+      "id": "51",
+      "label": {
+        "pt-BR": "Paralisia Cerebral",
+        "en": "Cerebral Palsy",
+        "es": "Parálisis Cerebral"
+      }
+    },
+    {
+      "id": "52",
+      "label": {
+        "pt-BR": "Transtorno do Déficit de Atenção e Hiperatividade (TDAH)",
+        "en": "Attention-Deficit/Hyperactivity Disorder (ADHD)",
+        "es": "Trastorno por Déficit de Atención e Hiperactividad (TDAH)"
+      }
+    },
+    {
+      "id": "53",
+      "label": {
+        "pt-BR": "Síndrome de Guillain-Barré (SGB)",
+        "en": "Guillain-Barré Syndrome (GBS)",
+        "es": "Síndrome de Guillain-Barré (SGB)"
+      }
     }
   ],
   "resources": [],
-  "Amygdala": {
-    "objname": "Amígdala",
-    "description": "Estrutura responsável pelo processamento das emoções, especialmente medo, ansiedade e memória emocional."
-  },
-  "Anteriorcommissure": {
-    "objname": "Comissura anterior",
-    "description": "Feixe de fibras nervosas que conecta regiões dos dois hemisférios cerebrais, participando da comunicação entre eles."
-  },
-  "Caudatenucleus": {
-    "objname": "Núcleo caudado",
-    "description": "Componente dos núcleos da base envolvido no controle dos movimentos, aprendizagem e cognição."
-  },
-  "Cerebellum": {
-    "objname": "Cerebelo",
-    "description": "Coordena os movimentos, o equilíbrio, a postura e a precisão motora."
-  },
-  "Cerebrum": {
-    "objname": "Cérebro (Hemisfério Esquerdo)",
-    "description": "Responsável por funções superiores como raciocínio, memória, linguagem, percepção e controle motor voluntário."
-  },
-  "Cingulategyrus": {
-    "objname": "Giro do cíngulo",
-    "description": "Participa do processamento das emoções, atenção, memória e tomada de decisões."
-  },
-  "Corpuscallosum": {
-    "objname": "Corpo caloso",
-    "description": "Principal feixe de fibras que conecta os hemisférios cerebrais, permitindo a comunicação entre eles."
-  },
-  "Dentategyrus": {
-    "objname": "Giro denteado",
-    "description": "Região do hipocampo importante para a formação de novas memórias e aprendizagem."
-  },
-  "Fornix": {
-    "objname": "Fórnix",
-    "description": "Feixe de fibras nervosas que conecta o hipocampo a outras estruturas relacionadas à memória."
-  },
-  "Globuspalliduslateral": {
-    "objname": "Globo pálido lateral",
-    "description": "Parte dos núcleos da base envolvida na regulação e coordenação dos movimentos voluntários."
-  },
-  "Globuspallidusmedial": {
-    "objname": "Globo pálido medial",
-    "description": "Participa do controle motor enviando sinais para outras regiões do cérebro."
-  },
-  "Hippocampus": {
-    "objname": "Hipocampo",
-    "description": "Essencial para a formação de memórias, aprendizagem e orientação espacial."
-  },
-  "Hypothalamus": {
-    "objname": "Hipotálamo",
-    "description": "Controla funções vitais como temperatura corporal, fome, sede, sono e atividade hormonal."
-  },
-  "Indusiumgriseum": {
-    "objname": "Indúsio cinzento",
-    "description": "Fina camada de substância cinzenta localizada sobre o corpo caloso, relacionada ao sistema límbico."
-  },
-  "Lateralventricle": {
-    "objname": "Ventrículo lateral",
-    "description": "Cavidade cerebral preenchida por líquido cefalorraquidiano, responsável pela proteção e nutrição do sistema nervoso."
-  },
-  "Medullaoblongata": {
-    "objname": "Bulbo (Medula oblonga)",
-    "description": "Controla funções automáticas essenciais, como respiração, frequência cardíaca e pressão arterial."
-  },
-  "Midbrain": {
-    "objname": "Mesencéfalo",
-    "description": "Região do tronco encefálico envolvida no controle dos movimentos oculares, reflexos visuais e auditivos."
-  },
-  "Pons": {
-    "objname": "Ponte",
-    "description": "Parte do tronco encefálico que conecta diferentes regiões do cérebro e auxilia no controle da respiração e do sono."
-  },
-  "Putamen": {
-    "objname": "Putâmen",
-    "description": "Estrutura dos núcleos da base responsável pela coordenação dos movimentos voluntários e aprendizagem motora."
-  },
-  "Septalnucleus": {
-    "objname": "Núcleo septal",
-    "description": "Estrutura do sistema límbico relacionada às emoções, recompensa e memória."
-  },
-  "Thalamus": {
-    "objname": "Tálamo",
-    "description": "Principal centro de retransmissão das informações sensoriais e motoras para o córtex cerebral."
+  "parts": {
+    "Amygdala": {
+      "objname": {
+        "pt-BR": "Amígdala",
+        "en": "Amygdala",
+        "es": "Amígdala"
+      },
+      "description": {
+        "pt-BR": "Estrutura responsável pelo processamento das emoções, especialmente medo, ansiedade e memória emocional.",
+        "en": "Structure responsible for processing emotions, particularly fear, anxiety, and emotional memory.",
+        "es": "Estructura responsable del procesamiento de las emociones, especialmente el miedo, la ansiedad y la memoria emocional."
+      }
+    },
+    "Anteriorcommissure": {
+      "objname": {
+        "pt-BR": "Comissura anterior",
+        "en": "Anterior Commissure",
+        "es": "Comisura anterior"
+      },
+      "description": {
+        "pt-BR": "Feixe de fibras nervosas que conecta regiões dos dois hemisférios cerebrais, participando da comunicação entre eles.",
+        "en": "Bundle of nerve fibers that connects regions of the two cerebral hemispheres, contributing to communication between them.",
+        "es": "Haz de fibras nerviosas que conecta regiones de los dos hemisferios cerebrales, participando en la comunicación entre ellos."
+      }
+    },
+    "Caudatenucleus": {
+      "objname": {
+        "pt-BR": "Núcleo caudado",
+        "en": "Caudate Nucleus",
+        "es": "Núcleo caudado"
+      },
+      "description": {
+        "pt-BR": "Componente dos núcleos da base envolvido no controle dos movimentos, aprendizagem e cognição.",
+        "en": "Component of the basal ganglia involved in movement control, learning, and cognition.",
+        "es": "Componente de los ganglios basales involucrado en el control de los movimientos, el aprendizaje y la cognición."
+      }
+    },
+    "Cerebellum": {
+      "objname": {
+        "pt-BR": "Cerebelo",
+        "en": "Cerebellum",
+        "es": "Cerebelo"
+      },
+      "description": {
+        "pt-BR": "Coordena os movimentos, o equilíbrio, a postura e a precisão motora.",
+        "en": "Coordinates movements, balance, posture, and motor precision.",
+        "es": "Coordina los movimientos, el equilibrio, la postura y la precisión motora."
+      }
+    },
+    "Cerebrum": {
+      "objname": {
+        "pt-BR": "Cérebro (Hemisfério Esquerdo)",
+        "en": "Cerebrum (Left Hemisphere)",
+        "es": "Cerebro (Hemisferio Izquierdo)"
+      },
+      "description": {
+        "pt-BR": "Responsável por funções superiores como raciocínio, memória, linguagem, percepção e controle motor voluntário.",
+        "en": "Responsible for higher functions such as reasoning, memory, language, perception, and voluntary motor control.",
+        "es": "Responsable de funciones superiores como el razonamiento, la memoria, el lenguaje, la percepción y el control motor voluntario."
+      }
+    },
+    "Cingulategyrus": {
+      "objname": {
+        "pt-BR": "Giro do cíngulo",
+        "en": "Cingulate Gyrus",
+        "es": "Giro del cíngulo"
+      },
+      "description": {
+        "pt-BR": "Participa do processamento das emoções, atenção, memória e tomada de decisões.",
+        "en": "Participates in emotional processing, attention, memory, and decision-making.",
+        "es": "Participa en el procesamiento de las emociones, la atención, la memoria y la toma de decisiones."
+      }
+    },
+    "Corpuscallosum": {
+      "objname": {
+        "pt-BR": "Corpo caloso",
+        "en": "Corpus Callosum",
+        "es": "Cuerpo calloso"
+      },
+      "description": {
+        "pt-BR": "Principal feixe de fibras que conecta os hemisférios cerebrais, permitindo a comunicação entre eles.",
+        "en": "Main bundle of fibers connecting the cerebral hemispheres, enabling communication between them.",
+        "es": "Principal haz de fibras que conecta los hemisferios cerebrales, permitiendo la comunicación entre ellos."
+      }
+    },
+    "Dentategyrus": {
+      "objname": {
+        "pt-BR": "Giro denteado",
+        "en": "Dentate Gyrus",
+        "es": "Giro dentado"
+      },
+      "description": {
+        "pt-BR": "Região do hipocampo importante para a formação de novas memórias e aprendizagem.",
+        "en": "Region of the hippocampus important for the formation of new memories and learning.",
+        "es": "Región del hipocampo importante para la formación de nuevos recuerdos y el aprendizaje."
+      }
+    },
+    "Fornix": {
+      "objname": {
+        "pt-BR": "Fórnix",
+        "en": "Fornix",
+        "es": "Fórnix"
+      },
+      "description": {
+        "pt-BR": "Feixe de fibras nervosas que conecta o hipocampo a outras estruturas relacionadas à memória.",
+        "en": "Bundle of nerve fibers that connects the hippocampus to other structures involved in memory.",
+        "es": "Haz de fibras nerviosas que conecta el hipocampo con otras estructuras relacionadas con la memoria."
+      }
+    },
+    "Globuspalliduslateral": {
+      "objname": {
+        "pt-BR": "Globo pálido lateral",
+        "en": "Lateral Globus Pallidus",
+        "es": "Globo pálido lateral"
+      },
+      "description": {
+        "pt-BR": "Parte dos núcleos da base envolvida na regulação e coordenação dos movimentos voluntários.",
+        "en": "Part of the basal ganglia involved in the regulation and coordination of voluntary movements.",
+        "es": "Parte de los ganglios basales involucrada en la regulación y coordinación de los movimientos voluntarios."
+      }
+    },
+    "Globuspallidusmedial": {
+      "objname": {
+        "pt-BR": "Globo pálido medial",
+        "en": "Medial Globus Pallidus",
+        "es": "Globo pálido medial"
+      },
+      "description": {
+        "pt-BR": "Participa do controle motor enviando sinais para outras regiões do cérebro.",
+        "en": "Participates in motor control by sending signals to other regions of the brain.",
+        "es": "Participa en el control motor mediante el envío de señales a otras regiones del cerebro."
+      }
+    },
+    "Hippocampus": {
+      "objname": {
+        "pt-BR": "Hipocampo",
+        "en": "Hippocampus",
+        "es": "Hipocampo"
+      },
+      "description": {
+        "pt-BR": "Essencial para a formação de memórias, aprendizagem e orientação espacial.",
+        "en": "Essential for memory formation, learning, and spatial orientation.",
+        "es": "Esencial para la formación de recuerdos, el aprendizaje y la orientación espacial."
+      }
+    },
+    "Hypothalamus": {
+      "objname": {
+        "pt-BR": "Hipotálamo",
+        "en": "Hypothalamus",
+        "es": "Hipotálamo"
+      },
+      "description": {
+        "pt-BR": "Controla funções vitais como temperatura corporal, fome, sede, sono e atividade hormonal.",
+        "en": "Controls vital functions such as body temperature, hunger, thirst, sleep, and hormonal activity.",
+        "es": "Controla funciones vitales como la temperatura corporal, el hambre, la sed, el sueño y la actividad hormonal."
+      }
+    },
+    "Indusiumgriseum": {
+      "objname": {
+        "pt-BR": "Indúsio cinzento",
+        "en": "Indusium Griseum",
+        "es": "Indusio gris"
+      },
+      "description": {
+        "pt-BR": "Fina camada de substância cinzenta localizada sobre o corpo caloso, relacionada ao sistema límbico.",
+        "en": "Thin layer of gray matter located over the corpus callosum, associated with the limbic system.",
+        "es": "Fina capa de sustancia gris situada sobre el cuerpo calloso, relacionada con el sistema límbico."
+      }
+    },
+    "Lateralventricle": {
+      "objname": {
+        "pt-BR": "Ventrículo lateral",
+        "en": "Lateral Ventricle",
+        "es": "Ventrículo lateral"
+      },
+      "description": {
+        "pt-BR": "Cavidade cerebral preenchida por líquido cefalorraquidiano, responsável pela proteção e nutrição do sistema nervoso.",
+        "en": "Cerebral cavity filled with cerebrospinal fluid, which is responsible for protecting and nourishing the nervous system.",
+        "es": "Cavidad cerebral llena de líquido cefalorraquídeo, responsable de la protección y nutrición del sistema nervioso."
+      }
+    },
+    "Medullaoblongata": {
+      "objname": {
+        "pt-BR": "Bulbo (Medula oblonga)",
+        "en": "Medulla Oblongata",
+        "es": "Bulbo raquídeo (Médula oblongada)"
+      },
+      "description": {
+        "pt-BR": "Controla funções automáticas essenciais, como respiração, frequência cardíaca e pressão arterial.",
+        "en": "Controls essential automatic functions such as breathing, heart rate, and blood pressure.",
+        "es": "Controla funciones automáticas esenciales, como la respiración, la frecuencia cardíaca y la presión arterial."
+      }
+    },
+    "Midbrain": {
+      "objname": {
+        "pt-BR": "Mesencéfalo",
+        "en": "Midbrain",
+        "es": "Mesencéfalo"
+      },
+      "description": {
+        "pt-BR": "Região do tronco encefálico envolvida no controle dos movimentos oculares, reflexos visuais e auditivos.",
+        "en": "Region of the brainstem involved in controlling eye movements and visual and auditory reflexes.",
+        "es": "Región del tronco encefálico involucrada en el control de los movimientos oculares y los reflejos visuales y auditivos."
+      }
+    },
+    "Pons": {
+      "objname": {
+        "pt-BR": "Ponte",
+        "en": "Pons",
+        "es": "Puente"
+      },
+      "description": {
+        "pt-BR": "Parte do tronco encefálico que conecta diferentes regiões do cérebro e auxilia no controle da respiração e do sono.",
+        "en": "Part of the brainstem that connects different regions of the brain and assists in regulating breathing and sleep.",
+        "es": "Parte del tronco encefálico que conecta diferentes regiones del cerebro y contribuye al control de la respiración y el sueño."
+      }
+    },
+    "Putamen": {
+      "objname": {
+        "pt-BR": "Putâmen",
+        "en": "Putamen",
+        "es": "Putamen"
+      },
+      "description": {
+        "pt-BR": "Estrutura dos núcleos da base responsável pela coordenação dos movimentos voluntários e aprendizagem motora.",
+        "en": "Structure of the basal ganglia responsible for coordinating voluntary movements and motor learning.",
+        "es": "Estructura de los ganglios basales responsable de la coordinación de los movimientos voluntarios y del aprendizaje motor."
+      }
+    },
+    "Septalnucleus": {
+      "objname": {
+        "pt-BR": "Núcleo septal",
+        "en": "Septal Nucleus",
+        "es": "Núcleo septal"
+      },
+      "description": {
+        "pt-BR": "Estrutura do sistema límbico relacionada às emoções, recompensa e memória.",
+        "en": "Structure of the limbic system associated with emotions, reward, and memory.",
+        "es": "Estructura del sistema límbico relacionada con las emociones, la recompensa y la memoria."
+      }
+    },
+    "Thalamus": {
+      "objname": {
+        "pt-BR": "Tálamo",
+        "en": "Thalamus",
+        "es": "Tálamo"
+      },
+      "description": {
+        "pt-BR": "Principal centro de retransmissão das informações sensoriais e motoras para o córtex cerebral.",
+        "en": "Main relay center for transmitting sensory and motor information to the cerebral cortex.",
+        "es": "Principal centro de retransmisión de la información sensorial y motora hacia la corteza cerebral."
+      }
+    }
   }
 }

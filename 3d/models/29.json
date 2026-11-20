@@ -1,78 +1,188 @@
 {
-  "objname": "Anatomia Corpo Feminino",
-
+  "objname": {
+    "pt-BR": "Anatomia Corpo Feminino",
+    "en": "Female Body Anatomy",
+    "es": "Anatomía del Cuerpo Femenino"
+  },
   "objsystem": [
     "Anatomia"
   ],
-
-  "objdescription": "Modelo anatômico do corpo feminino que apresenta uma visão geral dos principais sistemas e estruturas do organismo, incluindo sistemas muscular, nervoso, linfático, arterial, venoso e esquelético, além dos órgãos internos. Permite explorar a organização e a relação entre diferentes estruturas anatômicas do corpo humano feminino.",
-
+  "objdescription": {
+    "pt-BR": "Modelo anatômico do corpo feminino que apresenta uma visão geral dos principais sistemas e estruturas do organismo, incluindo sistemas muscular, nervoso, linfático, arterial, venoso e esquelético, além dos órgãos internos. Permite explorar a organização e a relação entre diferentes estruturas anatômicas do corpo humano feminino.",
+    "en": "Anatomical model of the female body that provides an overview of the main systems and structures of the body, including the muscular, nervous, lymphatic, arterial, venous, and skeletal systems, as well as the internal organs. It allows exploration of the organization and relationships between different anatomical structures of the female human body.",
+    "es": "Modelo anatómico del cuerpo femenino que presenta una visión general de los principales sistemas y estructuras del organismo, incluidos los sistemas muscular, nervioso, linfático, arterial, venoso y esquelético, además de los órganos internos. Permite explorar la organización y la relación entre las diferentes estructuras anatómicas del cuerpo humano femenino."
+  },
   "linkedModels": [
     {
+      "id": "10",
+      "label": {
+        "pt-BR": "Sistema Urinário Feminino",
+        "en": "Female Urinary System",
+        "es": "Sistema Urinario Femenino"
+      }
+    },
+    {
+      "id": "11",
+      "label": {
+        "pt-BR": "Sistema Reprodutor Feminino",
+        "en": "Female Reproductive System",
+        "es": "Sistema Reproductor Femenino"
+      }
+    },
+    {
       "id": "18",
-      "label": "Sistema Linfático"
+      "label": {
+        "pt-BR": "Sistema Linfático",
+        "en": "Lymphatic System",
+        "es": "Sistema Linfático"
+      }
     },
     {
       "id": "19",
-      "label": "Sistema Arterial"
+      "label": {
+        "pt-BR": "Sistema Arterial",
+        "en": "Arterial System",
+        "es": "Sistema Arterial"
+      }
     },
     {
       "id": "20",
-      "label": "Sistema Venoso"
+      "label": {
+        "pt-BR": "Sistema Venoso",
+        "en": "Venous System",
+        "es": "Sistema Venoso"
+      }
     },
     {
       "id": "21",
-      "label": "Sistema Nervoso"
+      "label": {
+        "pt-BR": "Sistema Nervoso",
+        "en": "Nervous System",
+        "es": "Sistema Nervioso"
+      }
     },
     {
       "id": "27",
-      "label": "Sistema Muscular"
+      "label": {
+        "pt-BR": "Sistema Muscular Feminino",
+        "en": "Female Muscular System",
+        "es": "Sistema Muscular Femenino"
+      }
     },
     {
       "id": "28",
-      "label": "Sistema Esquelético"
+      "label": {
+        "pt-BR": "Sistema Esquelético Feminino",
+        "en": "Female Skeletal System",
+        "es": "Sistema Esquelético Femenino"
+      }
+    },
+    {
+      "id": "30",
+      "label": {
+        "pt-BR": "Anatomia Corpo Masculino",
+        "en": "Male Body Anatomy",
+        "es": "Anatomía del Cuerpo Masculino"
+      }
     }
   ],
-
   "resources": [],
-
-  "Skin_2+Skin_4+Skin_3+Skin_1": {
-    "objname": "Corpo Humano",
-    "description": "Visão geral do corpo humano feminino, apresentando a organização externa do corpo e sua relação com os principais sistemas e estruturas anatômicas. A pele reveste e protege o organismo, contribuindo para a percepção sensorial, controle da temperatura e proteção contra agentes externos."
-  },
-
-  "Muscle_1+Muscle_2+Muscle_3+Muscle_4+Muscle_5": {
-    "objname": "Sistema Muscular",
-    "description": "O sistema muscular feminino é formado pelos músculos responsáveis pelos movimentos do corpo, manutenção da postura, estabilidade das articulações e produção de força. Os músculos esqueléticos participam dos movimentos dos membros, tronco, cabeça e face, além da respiração, mastigação e deglutição. A musculatura do assoalho pélvico auxilia na sustentação dos órgãos pélvicos e no controle das funções urinária e intestinal."
-  },
-
-  "Organs_1+Organs_2+Organs_3+Organs_4+Organs_5+Organs_6+Organs_7+Organs_8+Organs_9+Organs_10+Organs_11+Organs_12+Organs_13+Organs_14+Organs_15+Organs_16+Organs_17+Organs_18+Organs_19+": {
-    "objname": "Órgãos",
-    "description": "Visão geral dos principais órgãos do corpo feminino, incluindo estruturas dos sistemas digestório, respiratório, cardiovascular, urinário, reprodutor e outros sistemas. Os órgãos desempenham funções especializadas e trabalham de forma integrada para manter o funcionamento e o equilíbrio do organismo."
-  },
-
-  "Nervous_1+Nervous_2+Nervous_3": {
-    "objname": "Sistema Nervoso",
-    "description": "Conjunto de estruturas responsáveis por receber, processar e transmitir informações pelo organismo, coordenando funções motoras, sensoriais, cognitivas e autonômicas. O sistema nervoso é formado pelo encéfalo, medula espinal e estruturas associadas, incluindo nervos, núcleos, vias de comunicação e membranas que protegem o sistema nervoso central."
-  },
-
-  "Lymph_1+Lymph_2": {
-    "objname": "Sistema Linfático",
-    "description": "Sistema responsável pela drenagem do excesso de líquido dos tecidos, transporte de células e substâncias relacionadas à resposta imunológica e defesa do organismo. É formado por vasos linfáticos, linfonodos e órgãos linfoides, como o timo e o baço. Atua na manutenção do equilíbrio dos líquidos corporais, filtragem da linfa e participação nas respostas imunológicas."
-  },
-
-  "Arteries": {
-    "objname": "Sistema Arterial",
-    "description": "Conjunto de artérias responsável por transportar o sangue do coração para os diferentes tecidos e órgãos do corpo. Distribui sangue rico em oxigênio pela circulação sistêmica e participa da circulação pulmonar. Suas ramificações formam uma extensa rede vascular que fornece oxigênio e nutrientes aos tecidos e auxilia na manutenção da pressão e do fluxo sanguíneo."
-  },
-
-  "Veins": {
-    "objname": "Sistema Venoso",
-    "description": "Conjunto de veias responsável por transportar o sangue dos tecidos e órgãos de volta ao coração. Recebe o sangue proveniente da circulação sistêmica e o conduz ao coração, enquanto as veias pulmonares transportam sangue oxigenado dos pulmões até o átrio esquerdo. Sua extensa rede auxilia no retorno venoso e na manutenção da circulação sanguínea."
-  },
-
-  "Skeleton_1+Skeleton_2+Skeleton_3+Skeleton_4+Skeleton_5+Skeleton_6+Skeleton_7": {
-    "objname": "Sistema Esquelético",
-    "description": "Conjunto de ossos, articulações, cartilagens, ligamentos e estruturas de suporte que sustentam e protegem o corpo, permitem movimentos e participam da produção de células sanguíneas e do armazenamento de minerais. O modelo apresenta estruturas do esqueleto axial e apendicular, incluindo crânio, coluna, caixa torácica, pelve e membros."
+  "parts": {
+    "Skin_2+Skin_4+Skin_3+Skin_1": {
+      "objname": {
+        "pt-BR": "Corpo Humano",
+        "en": "Human Body",
+        "es": "Cuerpo Humano"
+      },
+      "description": {
+        "pt-BR": "Visão geral do corpo humano feminino, apresentando a organização externa do corpo e sua relação com os principais sistemas e estruturas anatômicas. A pele reveste e protege o organismo, contribuindo para a percepção sensorial, controle da temperatura e proteção contra agentes externos.",
+        "en": "Overview of the female human body, presenting its external organization and its relationship with the main anatomical systems and structures. The skin covers and protects the body, contributing to sensory perception, temperature regulation, and protection against external agents.",
+        "es": "Visión general del cuerpo humano femenino, que presenta la organización externa del cuerpo y su relación con los principales sistemas y estructuras anatómicas. La piel recubre y protege el organismo, contribuyendo a la percepción sensorial, la regulación de la temperatura y la protección frente a agentes externos."
+      }
+    },
+    "Muscle_1+Muscle_2+Muscle_3+Muscle_4+Muscle_5": {
+      "objname": {
+        "pt-BR": "Sistema Muscular",
+        "en": "Muscular System",
+        "es": "Sistema Muscular"
+      },
+      "description": {
+        "pt-BR": "O sistema muscular feminino é formado pelos músculos responsáveis pelos movimentos do corpo, manutenção da postura, estabilidade das articulações e produção de força. Os músculos esqueléticos participam dos movimentos dos membros, tronco, cabeça e face, além da respiração, mastigação e deglutição. A musculatura do assoalho pélvico auxilia na sustentação dos órgãos pélvicos e no controle das funções urinária e intestinal.",
+        "en": "The female muscular system consists of the muscles responsible for body movement, maintenance of posture, joint stability, and force production. Skeletal muscles participate in movements of the limbs, trunk, head, and face, as well as in breathing, mastication, and swallowing. The pelvic floor muscles help support the pelvic organs and control urinary and intestinal functions.",
+        "es": "El sistema muscular femenino está formado por los músculos responsables de los movimientos del cuerpo, el mantenimiento de la postura, la estabilidad de las articulaciones y la producción de fuerza. Los músculos esqueléticos participan en los movimientos de las extremidades, el tronco, la cabeza y la cara, además de la respiración, la masticación y la deglución. La musculatura del suelo pélvico contribuye al soporte de los órganos pélvicos y al control de las funciones urinaria e intestinal."
+      }
+    },
+    "Organs_1+Organs_2+Organs_3+Organs_4+Organs_5+Organs_6+Organs_7+Organs_8+Organs_9+Organs_10+Organs_11+Organs_12+Organs_13+Organs_14+Organs_15+Organs_16+Organs_17+Organs_18+Organs_19+": {
+      "objname": {
+        "pt-BR": "Órgãos",
+        "en": "Organs",
+        "es": "Órganos"
+      },
+      "description": {
+        "pt-BR": "Visão geral dos principais órgãos do corpo feminino, incluindo estruturas dos sistemas digestório, respiratório, cardiovascular, urinário, reprodutor e outros sistemas. Os órgãos desempenham funções especializadas e trabalham de forma integrada para manter o funcionamento e o equilíbrio do organismo.",
+        "en": "Overview of the main organs of the female body, including structures of the digestive, respiratory, cardiovascular, urinary, reproductive, and other systems. The organs perform specialized functions and work together to maintain proper bodily function and balance.",
+        "es": "Visión general de los principales órganos del cuerpo femenino, incluidas las estructuras de los sistemas digestivo, respiratorio, cardiovascular, urinario, reproductor y otros sistemas. Los órganos desempeñan funciones especializadas y trabajan de forma integrada para mantener el funcionamiento y el equilibrio del organismo."
+      }
+    },
+    "Nervous_1+Nervous_2+Nervous_3": {
+      "objname": {
+        "pt-BR": "Sistema Nervoso",
+        "en": "Nervous System",
+        "es": "Sistema Nervioso"
+      },
+      "description": {
+        "pt-BR": "Conjunto de estruturas responsáveis por receber, processar e transmitir informações pelo organismo, coordenando funções motoras, sensoriais, cognitivas e autonômicas. O sistema nervoso é formado pelo encéfalo, medula espinal e estruturas associadas, incluindo nervos, núcleos, vias de comunicação e membranas que protegem o sistema nervoso central.",
+        "en": "Group of structures responsible for receiving, processing, and transmitting information throughout the body, coordinating motor, sensory, cognitive, and autonomic functions. The nervous system consists of the brain, spinal cord, and associated structures, including nerves, nuclei, communication pathways, and membranes that protect the central nervous system.",
+        "es": "Conjunto de estructuras responsables de recibir, procesar y transmitir información por todo el organismo, coordinando funciones motoras, sensoriales, cognitivas y autónomas. El sistema nervioso está formado por el encéfalo, la médula espinal y las estructuras asociadas, incluidos los nervios, los núcleos, las vías de comunicación y las membranas que protegen el sistema nervioso central."
+      }
+    },
+    "Lymph_1+Lymph_2": {
+      "objname": {
+        "pt-BR": "Sistema Linfático",
+        "en": "Lymphatic System",
+        "es": "Sistema Linfático"
+      },
+      "description": {
+        "pt-BR": "Sistema responsável pela drenagem do excesso de líquido dos tecidos, transporte de células e substâncias relacionadas à resposta imunológica e defesa do organismo. É formado por vasos linfáticos, linfonodos e órgãos linfoides, como o timo e o baço. Atua na manutenção do equilíbrio dos líquidos corporais, filtragem da linfa e participação nas respostas imunológicas.",
+        "en": "System responsible for draining excess fluid from tissues, transporting cells and substances associated with the immune response, and defending the body. It consists of lymphatic vessels, lymph nodes, and lymphoid organs, such as the thymus and spleen. It contributes to maintaining body fluid balance, filtering lymph, and participating in immune responses.",
+        "es": "Sistema responsable del drenaje del exceso de líquido de los tejidos, el transporte de células y sustancias relacionadas con la respuesta inmunitaria y la defensa del organismo. Está formado por vasos linfáticos, ganglios linfáticos y órganos linfoides, como el timo y el bazo. Actúa en el mantenimiento del equilibrio de los líquidos corporales, la filtración de la linfa y la participación en las respuestas inmunitarias."
+      }
+    },
+    "Arteries": {
+      "objname": {
+        "pt-BR": "Sistema Arterial",
+        "en": "Arterial System",
+        "es": "Sistema Arterial"
+      },
+      "description": {
+        "pt-BR": "Conjunto de artérias responsável por transportar o sangue do coração para os diferentes tecidos e órgãos do corpo. Distribui sangue rico em oxigênio pela circulação sistêmica e participa da circulação pulmonar. Suas ramificações formam uma extensa rede vascular que fornece oxigênio e nutrientes aos tecidos e auxilia na manutenção da pressão e do fluxo sanguíneo.",
+        "en": "Group of arteries responsible for transporting blood from the heart to the different tissues and organs of the body. It distributes oxygen-rich blood through the systemic circulation and participates in pulmonary circulation. Its branches form an extensive vascular network that supplies oxygen and nutrients to tissues and helps maintain blood pressure and blood flow.",
+        "es": "Conjunto de arterias responsable de transportar la sangre desde el corazón hacia los diferentes tejidos y órganos del cuerpo. Distribuye sangre rica en oxígeno a través de la circulación sistémica y participa en la circulación pulmonar. Sus ramificaciones forman una extensa red vascular que suministra oxígeno y nutrientes a los tejidos y contribuye al mantenimiento de la presión arterial y del flujo sanguíneo."
+      }
+    },
+    "Veins": {
+      "objname": {
+        "pt-BR": "Sistema Venoso",
+        "en": "Venous System",
+        "es": "Sistema Venoso"
+      },
+      "description": {
+        "pt-BR": "Conjunto de veias responsável por transportar o sangue dos tecidos e órgãos de volta ao coração. Recebe o sangue proveniente da circulação sistêmica e o conduz ao coração, enquanto as veias pulmonares transportam sangue oxigenado dos pulmões até o átrio esquerdo. Sua extensa rede auxilia no retorno venoso e na manutenção da circulação sanguínea.",
+        "en": "Group of veins responsible for transporting blood from tissues and organs back to the heart. It receives blood from the systemic circulation and carries it to the heart, while the pulmonary veins transport oxygenated blood from the lungs to the left atrium. Its extensive network assists in venous return and the maintenance of blood circulation.",
+        "es": "Conjunto de venas responsable de transportar la sangre desde los tejidos y órganos de regreso al corazón. Recibe la sangre procedente de la circulación sistémica y la conduce al corazón, mientras que las venas pulmonares transportan sangre oxigenada desde los pulmones hasta la aurícula izquierda. Su extensa red contribuye al retorno venoso y al mantenimiento de la circulación sanguínea."
+      }
+    },
+    "Skeleton_1+Skeleton_2+Skeleton_3+Skeleton_4+Skeleton_5+Skeleton_6+Skeleton_7": {
+      "objname": {
+        "pt-BR": "Sistema Esquelético",
+        "en": "Skeletal System",
+        "es": "Sistema Esquelético"
+      },
+      "description": {
+        "pt-BR": "Conjunto de ossos, articulações, cartilagens, ligamentos e estruturas de suporte que sustentam e protegem o corpo, permitem movimentos e participam da produção de células sanguíneas e do armazenamento de minerais. O modelo apresenta estruturas do esqueleto axial e apendicular, incluindo crânio, coluna, caixa torácica, pelve e membros.",
+        "en": "Group of bones, joints, cartilage, ligaments, and supporting structures that support and protect the body, allow movement, and participate in blood cell production and mineral storage. The model presents structures of the axial and appendicular skeleton, including the skull, vertebral column, rib cage, pelvis, and limbs.",
+        "es": "Conjunto de huesos, articulaciones, cartílagos, ligamentos y estructuras de soporte que sostienen y protegen el cuerpo, permiten los movimientos y participan en la producción de células sanguíneas y el almacenamiento de minerales. El modelo presenta estructuras del esqueleto axial y apendicular, incluidos el cráneo, la columna vertebral, la caja torácica, la pelvis y las extremidades."
+      }
+    }
   }
 }

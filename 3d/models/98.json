@@ -1,13 +1,80 @@
 {
-  "objname": "Pé com Onicomicose",
+  "objname": {
+    "pt-BR": "Pé com Onicomicose",
+    "en": "Foot with Onychomycosis",
+    "es": "Pie con Onicomicosis"
+  },
   "objsystem": [
     "Tegumentar"
   ],
-  "objdescription": "A onicomicose é uma infecção fúngica que afeta as unhas, principalmente dos pés, causada por dermatófitos, leveduras ou fungos não dermatófitos. A infecção pode comprometer a lâmina ungueal, o leito ungueal ou ambos, provocando alterações na coloração, espessamento, fragilidade, deformação e possível descolamento da unha. O modelo apresenta um pé com alterações ungueais características, destacando a coloração amarelada e a aparência irregular das unhas afetadas. A onicomicose pode evoluir gradualmente e atingir diferentes unhas, sendo necessário exame clínico e, quando indicado, laboratorial para confirmar o diagnóstico.",
-  "linkedModels": [],
+  "objdescription": {
+    "pt-BR": "A onicomicose é uma infecção fúngica que afeta as unhas, principalmente dos pés, causada por dermatófitos, leveduras ou fungos não dermatófitos. A infecção pode comprometer a lâmina ungueal, o leito ungueal ou ambos, provocando alterações na coloração, espessamento, fragilidade, deformação e possível descolamento da unha. O modelo apresenta um pé com alterações ungueais características, destacando a coloração amarelada e a aparência irregular das unhas afetadas. A onicomicose pode evoluir gradualmente e atingir diferentes unhas, sendo necessário exame clínico e, quando indicado, laboratorial para confirmar o diagnóstico.",
+    "en": "Onychomycosis is a fungal infection that affects the nails, particularly the toenails, caused by dermatophytes, yeasts, or non-dermatophyte fungi. The infection may affect the nail plate, the nail bed, or both, causing discoloration, thickening, brittleness, deformation, and possible nail detachment. The model presents a foot with characteristic nail abnormalities, highlighting the yellowish discoloration and irregular appearance of the affected nails. Onychomycosis may progress gradually and affect multiple nails, requiring clinical examination and, when indicated, laboratory testing to confirm the diagnosis.",
+    "es": "La onicomicosis es una infección fúngica que afecta las uñas, principalmente las de los pies, causada por dermatofitos, levaduras u hongos no dermatofitos. La infección puede comprometer la lámina ungueal, el lecho ungueal o ambos, provocando cambios en la coloración, engrosamiento, fragilidad, deformación y posible desprendimiento de la uña. El modelo presenta un pie con alteraciones ungueales características, destacando la coloración amarillenta y el aspecto irregular de las uñas afectadas. La onicomicosis puede evolucionar gradualmente y afectar diferentes uñas, por lo que es necesario un examen clínico y, cuando esté indicado, un examen de laboratorio para confirmar el diagnóstico."
+  },
+  "linkedModels": [
+    {
+      "id": "15",
+      "label": {
+        "pt-BR": "Anatomia das Camadas da Pele Humana",
+        "en": "Anatomy of Human Skin Layers",
+        "es": "Anatomía de las Capas de la Piel Humana"
+      }
+    },
+    {
+      "id": "54",
+      "label": {
+        "pt-BR": "Micose",
+        "en": "Mycosis",
+        "es": "Micosis"
+      }
+    },
+    {
+      "id": "88",
+      "label": {
+        "pt-BR": "Terapia Fotodinâmica para Tratamento de Infecções Fúngicas",
+        "en": "Photodynamic Therapy for the Treatment of Fungal Infections",
+        "es": "Terapia Fotodinámica para el Tratamiento de Infecciones Fúngicas"
+      }
+    },
+    {
+      "id": "99",
+      "label": {
+        "pt-BR": "Pé com Onicólise",
+        "en": "Foot with Onycholysis",
+        "es": "Pie con Onicólisis"
+      }
+    },
+    {
+      "id": "100",
+      "label": {
+        "pt-BR": "Desenvolvimento de Necrose no Pé Diabético",
+        "en": "Development of Necrosis in the Diabetic Foot",
+        "es": "Desarrollo de Necrosis en el Pie Diabético"
+      }
+    },
+    {
+      "id": "102",
+      "label": {
+        "pt-BR": "Onicocriptose",
+        "en": "Onychocryptosis",
+        "es": "Onicocriptosis"
+      }
+    }
+  ],
   "resources": [],
-  "Unhas+nisolar": {
-    "objname": "Unhas com Onicomicose",
-    "description": "Unhas afetadas por infecção fúngica, apresentando alterações como coloração amarelada, espessamento, irregularidades na superfície e deformação da lâmina ungueal. Essas manifestações ocorrem devido ao comprometimento da estrutura da unha pelos fungos, podendo causar fragilidade, acúmulo de material sob a unha e descolamento parcial do leito ungueal. No modelo, as alterações visíveis representam características comuns da onicomicose."
+  "parts": {
+    "Unhas+nisolar": {
+      "objname": {
+        "pt-BR": "Unhas com Onicomicose",
+        "en": "Nails with Onychomycosis",
+        "es": "Uñas con Onicomicosis"
+      },
+      "description": {
+        "pt-BR": "Unhas afetadas por infecção fúngica, apresentando alterações como coloração amarelada, espessamento, irregularidades na superfície e deformação da lâmina ungueal. Essas manifestações ocorrem devido ao comprometimento da estrutura da unha pelos fungos, podendo causar fragilidade, acúmulo de material sob a unha e descolamento parcial do leito ungueal. No modelo, as alterações visíveis representam características comuns da onicomicose.",
+        "en": "Nails affected by a fungal infection, exhibiting changes such as yellowish discoloration, thickening, surface irregularities, and deformation of the nail plate. These manifestations result from fungal damage to the nail structure, which may cause brittleness, accumulation of material beneath the nail, and partial detachment of the nail from the nail bed. In the model, the visible changes represent common characteristics of onychomycosis.",
+        "es": "Uñas afectadas por una infección fúngica, que presentan alteraciones como coloración amarillenta, engrosamiento, irregularidades en la superficie y deformación de la lámina ungueal. Estas manifestaciones se producen debido al daño causado por los hongos en la estructura de la uña, que puede provocar fragilidad, acumulación de material debajo de la uña y desprendimiento parcial de la uña del lecho ungueal. En el modelo, las alteraciones visibles representan características comunes de la onicomicosis."
+      }
+    }
   }
 }

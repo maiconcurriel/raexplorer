@@ -1,31 +1,104 @@
 {
-  "objname": "Coração (Animado)",
-  "objsystem": "Cardiovascular",
-  "objdescription": "Modelo anatômico 3D animado do coração humano, representando o órgão em movimento durante o ciclo cardíaco. A animação permite observar visualmente o batimento do coração e compreender sua dinâmica durante a contração e o relaxamento, responsáveis pelo bombeamento contínuo do sangue. O modelo possibilita explorar a anatomia cardíaca de forma interativa, relacionando sua estrutura externa ao funcionamento interno e ao fluxo sanguíneo. A estrutura externa pode ser ocultada para revelar o interior do coração enquanto ele continua batendo, permitindo observar as câmaras cardíacas e outras estruturas internas em movimento. O modelo é um recurso didático para auxiliar no estudo da anatomia e fisiologia do coração e sua função no sistema cardiovascular.",
+  "objname": {
+    "pt-BR": "Coração (Animado)",
+    "en": "Heart (Animated)",
+    "es": "Corazón (Animado)"
+  },
+  "objsystem": [
+    "Cardiovascular"
+  ],
+  "objdescription": {
+    "pt-BR": "Modelo anatômico 3D animado do coração humano, representando o órgão em movimento durante o ciclo cardíaco. A animação permite observar visualmente o batimento do coração e compreender sua dinâmica durante a contração e o relaxamento, responsáveis pelo bombeamento contínuo do sangue. O modelo possibilita explorar a anatomia cardíaca de forma interativa, relacionando sua estrutura externa ao funcionamento interno e ao fluxo sanguíneo. A estrutura externa pode ser ocultada para revelar o interior do coração enquanto ele continua batendo, permitindo observar as câmaras cardíacas e outras estruturas internas em movimento. O modelo é um recurso didático para auxiliar no estudo da anatomia e fisiologia do coração e sua função no sistema cardiovascular.",
+    "en": "Animated 3D anatomical model of the human heart, representing the organ in motion during the cardiac cycle. The animation allows users to observe the heartbeat and understand its dynamics during contraction and relaxation, which are responsible for the continuous pumping of blood. The model enables interactive exploration of cardiac anatomy, relating its external structure to its internal functioning and blood flow. The external structure can be hidden to reveal the interior of the heart while it continues beating, allowing the cardiac chambers and other internal structures to be observed in motion. The model serves as an educational resource to support the study of the anatomy and physiology of the heart and its function within the cardiovascular system.",
+    "es": "Modelo anatómico 3D animado del corazón humano, que representa el órgano en movimiento durante el ciclo cardíaco. La animación permite observar visualmente el latido del corazón y comprender su dinámica durante la contracción y la relajación, responsables del bombeo continuo de la sangre. El modelo permite explorar la anatomía cardíaca de forma interactiva, relacionando su estructura externa con su funcionamiento interno y el flujo sanguíneo. La estructura externa puede ocultarse para revelar el interior del corazón mientras continúa latiendo, lo que permite observar las cavidades cardíacas y otras estructuras internas en movimiento. El modelo es un recurso didáctico que facilita el estudio de la anatomía y la fisiología del corazón y su función en el sistema cardiovascular."
+  },
   "linkedModels": [
     {
-      "id": "4",
-      "label": "Coração"
+      "id": "5",
+      "label": {
+        "pt-BR": "Coração (Animado)",
+        "en": "Heart (Animated)",
+        "es": "Corazón (Animado)"
+      }
     },
     {
       "id": "19",
-      "label": "Sistema Arterial"
+      "label": {
+        "pt-BR": "Sistema Arterial",
+        "en": "Arterial System",
+        "es": "Sistema arterial"
+      }
     },
     {
       "id": "20",
-      "label": "Sistema Venoso"
-    }
-  ],
-  "resources": [
+      "label": {
+        "pt-BR": "Sistema Venoso",
+        "en": "Venous System",
+        "es": "Sistema venoso"
+      }
+    },
     {
-      "type": "image",
-      "name": "Coração",
-      "info": "Imagem · 262 KB",
-      "url": "coracao.png"
+      "id": "32",
+      "label": {
+        "pt-BR": "Sistema Cardiovascular",
+        "en": "Cardiovascular System",
+        "es": "Sistema Cardiovascular"
+      }
+    },
+    {
+      "id": "42",
+      "label": {
+        "pt-BR": "Estenose Aórtica",
+        "en": "Aortic Stenosis",
+        "es": "Estenosis Aórtica"
+      }
+    },
+    {
+      "id": "55",
+      "label": {
+        "pt-BR": "Ablação Septal com Álcool",
+        "en": "Alcohol Septal Ablation",
+        "es": "Ablación Septal con Alcohol"
+      }
+    },
+    {
+      "id": "56",
+      "label": {
+        "pt-BR": "Infarto do Miocárdio",
+        "en": "Myocardial Infarction",
+        "es": "Infarto de Miocardio"
+      }
+    },
+    {
+      "id": "67",
+      "label": {
+        "pt-BR": "Dinâmica Respiratória com o Coração",
+        "en": "Respiratory Dynamics with the Heart",
+        "es": "Dinámica Respiratoria con el Corazón"
+      }
+    },
+    {
+      "id": "71",
+      "label": {
+        "pt-BR": "Pressão Arterial",
+        "en": "Blood Pressure",
+        "es": "Presión Arterial"
+      }
     }
   ],
-  "heart_closed_animation": {
-    "objname": "Coração em Batimento",
-    "description": "Representa o coração durante o ciclo cardíaco, com movimentos de contração e relaxamento. Pode ser ocultado para permitir a visualização das estruturas internas do coração enquanto a animação de batimento continua."
+  "resources": [],
+  "parts": {
+    "heart_closed_animation": {
+      "objname": {
+        "pt-BR": "Coração em Batimento",
+        "en": "Beating Heart",
+        "es": "Corazón en Latido"
+      },
+      "description": {
+        "pt-BR": "Representa o coração durante o ciclo cardíaco, com movimentos de contração e relaxamento. Pode ser ocultado para permitir a visualização das estruturas internas do coração enquanto a animação de batimento continua.",
+        "en": "Represents the heart during the cardiac cycle, with contraction and relaxation movements. It can be hidden to allow visualization of the internal structures of the heart while the heartbeat animation continues.",
+        "es": "Representa el corazón durante el ciclo cardíaco, con movimientos de contracción y relajación. Puede ocultarse para permitir la visualización de las estructuras internas del corazón mientras continúa la animación del latido."
+      }
+    }
   }
 }

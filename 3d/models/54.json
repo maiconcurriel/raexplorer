@@ -1,17 +1,76 @@
 {
-  "objname": "Micose",
+  "objname": {
+    "pt-BR": "Micose",
+    "en": "Mycosis",
+    "es": "Micosis"
+  },
   "objsystem": [
     "Tegumentar"
   ],
-  "objdescription": "Micose é o nome dado a infecções causadas por fungos que podem atingir a pele, os pelos, as unhas e outras regiões do corpo. As micoses superficiais da pele podem provocar alterações como manchas, vermelhidão, descamação, coceira e lesões de diferentes formatos, dependendo do fungo e da região afetada. Algumas infecções, como as dermatofitoses, utilizam a queratina presente nas camadas superficiais da pele como fonte de nutrientes. A transmissão pode ocorrer pelo contato com pessoas ou animais infectados, objetos contaminados ou ambientes favoráveis ao desenvolvimento dos fungos. No modelo, as áreas alteradas da pele representam didaticamente lesões associadas a uma infecção fúngica cutânea.",
-  "linkedModels": [],
-  "resources": [],
-  "Skin+ninteract": {
-    "objname": "Pele",
-    "description": ""
+  "objdescription": {
+    "pt-BR": "Micose é o nome dado a infecções causadas por fungos que podem atingir a pele, os pelos, as unhas e outras regiões do corpo. As micoses superficiais da pele podem provocar alterações como manchas, vermelhidão, descamação, coceira e lesões de diferentes formatos, dependendo do fungo e da região afetada. Algumas infecções, como as dermatofitoses, utilizam a queratina presente nas camadas superficiais da pele como fonte de nutrientes. A transmissão pode ocorrer pelo contato com pessoas ou animais infectados, objetos contaminados ou ambientes favoráveis ao desenvolvimento dos fungos. No modelo, as áreas alteradas da pele representam didaticamente lesões associadas a uma infecção fúngica cutânea.",
+    "en": "Mycosis is the term used for infections caused by fungi that may affect the skin, hair, nails, and other regions of the body. Superficial fungal infections of the skin may cause changes such as spots, redness, scaling, itching, and lesions of various shapes, depending on the fungus and the affected region. In some infections, such as dermatophytosis, fungi use the keratin present in the superficial layers of the skin as a source of nutrients. Transmission may occur through contact with infected people or animals, contaminated objects, or environments favorable to fungal growth. In the model, the affected areas of the skin provide an educational representation of lesions associated with a cutaneous fungal infection.",
+    "es": "La micosis es el nombre que reciben las infecciones causadas por hongos que pueden afectar a la piel, el pelo, las uñas y otras regiones del cuerpo. Las micosis superficiales de la piel pueden provocar alteraciones como manchas, enrojecimiento, descamación, picazón y lesiones de diferentes formas, dependiendo del hongo y de la región afectada. En algunas infecciones, como las dermatofitosis, los hongos utilizan la queratina presente en las capas superficiales de la piel como fuente de nutrientes. La transmisión puede ocurrir mediante el contacto con personas o animales infectados, objetos contaminados o ambientes favorables para el desarrollo de los hongos. En el modelo, las áreas alteradas de la piel representan de forma didáctica las lesiones asociadas a una infección fúngica cutánea."
   },
-  "Micose+nisolar": {
-    "objname": "Lesões de Micose",
-    "description": "Representação de áreas da pele afetadas por uma infecção fúngica superficial. Dependendo do tipo de micose, as lesões podem apresentar vermelhidão, descamação, coceira, alterações de pigmentação e diferentes formatos e distribuições pelo corpo."
+  "linkedModels": [
+    {
+      "id": "15",
+      "label": {
+        "pt-BR": "Anatomia das Camadas da Pele Humana",
+        "en": "Anatomy of Human Skin Layers",
+        "es": "Anatomía de las Capas de la Piel Humana"
+      }
+    },
+    {
+      "id": "88",
+      "label": {
+        "pt-BR": "Terapia Fotodinâmica para Tratamento de Infecções Fúngicas",
+        "en": "Photodynamic Therapy for the Treatment of Fungal Infections",
+        "es": "Terapia Fotodinámica para el Tratamiento de Infecciones Fúngicas"
+      }
+    },
+    {
+      "id": "98",
+      "label": {
+        "pt-BR": "Pé com Onicomicose",
+        "en": "Foot with Onychomycosis",
+        "es": "Pie con Onicomicosis"
+      }
+    },
+    {
+      "id": "99",
+      "label": {
+        "pt-BR": "Pé com Onicólise",
+        "en": "Foot with Onycholysis",
+        "es": "Pie con Onicólisis"
+      }
+    }
+  ],
+  "resources": [],
+  "parts": {
+    "Skin+ninteract": {
+      "objname": {
+        "pt-BR": "Pele",
+        "en": "Skin",
+        "es": "Piel"
+      },
+      "description": {
+        "pt-BR": "",
+        "en": "",
+        "es": ""
+      }
+    },
+    "Micose+nisolar": {
+      "objname": {
+        "pt-BR": "Lesões de Micose",
+        "en": "Fungal Skin Lesions",
+        "es": "Lesiones por Micosis"
+      },
+      "description": {
+        "pt-BR": "Representação de áreas da pele afetadas por uma infecção fúngica superficial. Dependendo do tipo de micose, as lesões podem apresentar vermelhidão, descamação, coceira, alterações de pigmentação e diferentes formatos e distribuições pelo corpo.",
+        "en": "Representation of areas of the skin affected by a superficial fungal infection. Depending on the type of mycosis, the lesions may present redness, scaling, itching, pigmentation changes, and different shapes and patterns of distribution across the body.",
+        "es": "Representación de áreas de la piel afectadas por una infección fúngica superficial. Dependiendo del tipo de micosis, las lesiones pueden presentar enrojecimiento, descamación, picazón, alteraciones de la pigmentación y diferentes formas y patrones de distribución por el cuerpo."
+      }
+    }
   }
 }

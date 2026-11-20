@@ -1,35 +1,117 @@
 {
-  "objname": "Impulso Nervoso",
+  "objname": {
+    "pt-BR": "Impulso Nervoso",
+    "en": "Nerve Impulse",
+    "es": "Impulso Nervioso"
+  },
   "objsystem": [
     "Nervoso",
     "Célula"
   ],
-  "objdescription": "O impulso nervoso é um sinal responsável pela transmissão de informações entre as células do sistema nervoso. Na animação, dois neurônios estão posicionados em sequência e o impulso percorre o primeiro neurônio, passando pelos dendritos, corpo celular e prolongamento neuronal, até alcançar a região de comunicação com o segundo neurônio. Em seguida, o impulso é transmitido ao segundo neurônio, demonstrando a continuidade da informação entre as células nervosas. A bainha de mielina contribui para aumentar a velocidade de condução do impulso ao longo da fibra nervosa. A animação permite visualizar de forma didática como os sinais são propagados de um neurônio para outro.",
+  "objdescription": {
+    "pt-BR": "O impulso nervoso é um sinal responsável pela transmissão de informações entre as células do sistema nervoso. Na animação, dois neurônios estão posicionados em sequência e o impulso percorre o primeiro neurônio, passando pelos dendritos, corpo celular e prolongamento neuronal, até alcançar a região de comunicação com o segundo neurônio. Em seguida, o impulso é transmitido ao segundo neurônio, demonstrando a continuidade da informação entre as células nervosas. A bainha de mielina contribui para aumentar a velocidade de condução do impulso ao longo da fibra nervosa. A animação permite visualizar de forma didática como os sinais são propagados de um neurônio para outro.",
+    "en": "The nerve impulse is a signal responsible for transmitting information between cells of the nervous system. In the animation, two neurons are positioned in sequence, and the impulse travels through the first neuron, passing through the dendrites, cell body, and neuronal extension until it reaches the region of communication with the second neuron. The impulse is then transmitted to the second neuron, demonstrating the continuity of information transmission between nerve cells. The myelin sheath helps increase the speed of impulse conduction along the nerve fiber. The animation provides an educational visualization of how signals are propagated from one neuron to another.",
+    "es": "El impulso nervioso es una señal responsable de la transmisión de información entre las células del sistema nervioso. En la animación, dos neuronas están dispuestas en secuencia y el impulso recorre la primera neurona, pasando por las dendritas, el cuerpo celular y la prolongación neuronal, hasta alcanzar la región de comunicación con la segunda neurona. A continuación, el impulso se transmite a la segunda neurona, demostrando la continuidad de la transmisión de información entre las células nerviosas. La vaina de mielina contribuye a aumentar la velocidad de conducción del impulso a lo largo de la fibra nerviosa. La animación permite visualizar de forma didáctica cómo se propagan las señales de una neurona a otra."
+  },
   "linkedModels": [
     {
-      "id": "21",
-      "label": "Sistema Nervoso"
+      "id": "2",
+      "label": {
+        "pt-BR": "Cérebro",
+        "en": "Brain",
+        "es": "Cerebro"
+      }
     },
     {
-      "id": "2",
-      "label": "Cérebro"
+      "id": "21",
+      "label": {
+        "pt-BR": "Sistema Nervoso",
+        "en": "Nervous System",
+        "es": "Sistema Nervioso"
+      }
+    },
+    {
+      "id": "38",
+      "label": {
+        "pt-BR": "Neurotransmissores",
+        "en": "Neurotransmitters",
+        "es": "Neurotransmisores"
+      }
+    },
+    {
+      "id": "43",
+      "label": {
+        "pt-BR": "Via Visual",
+        "en": "Visual Pathway",
+        "es": "Vía Visual"
+      }
+    },
+    {
+      "id": "53",
+      "label": {
+        "pt-BR": "Síndrome de Guillain-Barré (SGB)",
+        "en": "Guillain-Barré Syndrome (GBS)",
+        "es": "Síndrome de Guillain-Barré (SGB)"
+      }
+    },
+    {
+      "id": "64",
+      "label": {
+        "pt-BR": "Incontinência Urinária",
+        "en": "Urinary Incontinence",
+        "es": "Incontinencia Urinaria"
+      }
     }
   ],
   "resources": [],
-  "Corpo": {
-    "objname": "Corpo Celular",
-    "description": "Região do neurônio que contém o núcleo e as estruturas responsáveis pela manutenção da célula. Participa da integração dos sinais recebidos e da condução da informação para o prolongamento neuronal."
-  },
-  "Dendrito": {
-    "objname": "Dendrito",
-    "description": "Prolongamento do neurônio especializado principalmente na recepção de sinais. Na animação, representa uma das regiões pelas quais o impulso nervoso é recebido antes de seguir pelo neurônio."
-  },
-  "Mielina": {
-    "objname": "Bainha de Mielina",
-    "description": "Camada que envolve determinados prolongamentos dos neurônios e atua como isolante elétrico. Contribui para aumentar a velocidade de propagação do impulso nervoso ao longo da fibra."
-  },
-  "Nucleous": {
-    "objname": "Núcleo",
-    "description": "Estrutura localizada no corpo celular que contém o material genético e participa do controle das atividades da célula. No modelo, integra a representação da estrutura interna do neurônio durante a propagação do impulso."
+  "parts": {
+    "Corpo": {
+      "objname": {
+        "pt-BR": "Corpo Celular",
+        "en": "Cell Body",
+        "es": "Cuerpo Celular"
+      },
+      "description": {
+        "pt-BR": "Região do neurônio que contém o núcleo e as estruturas responsáveis pela manutenção da célula. Participa da integração dos sinais recebidos e da condução da informação para o prolongamento neuronal.",
+        "en": "Region of the neuron that contains the nucleus and the structures responsible for maintaining the cell. It participates in the integration of incoming signals and the conduction of information toward the neuronal extension.",
+        "es": "Región de la neurona que contiene el núcleo y las estructuras responsables del mantenimiento de la célula. Participa en la integración de las señales recibidas y en la conducción de la información hacia la prolongación neuronal."
+      }
+    },
+    "Dendrito": {
+      "objname": {
+        "pt-BR": "Dendrito",
+        "en": "Dendrite",
+        "es": "Dendrita"
+      },
+      "description": {
+        "pt-BR": "Prolongamento do neurônio especializado principalmente na recepção de sinais. Na animação, representa uma das regiões pelas quais o impulso nervoso é recebido antes de seguir pelo neurônio.",
+        "en": "Extension of the neuron specialized primarily in receiving signals. In the animation, it represents one of the regions through which the nerve impulse is received before traveling through the neuron.",
+        "es": "Prolongación de la neurona especializada principalmente en la recepción de señales. En la animación, representa una de las regiones por las que se recibe el impulso nervioso antes de continuar su recorrido por la neurona."
+      }
+    },
+    "Mielina": {
+      "objname": {
+        "pt-BR": "Bainha de Mielina",
+        "en": "Myelin Sheath",
+        "es": "Vaina de Mielina"
+      },
+      "description": {
+        "pt-BR": "Camada que envolve determinados prolongamentos dos neurônios e atua como isolante elétrico. Contribui para aumentar a velocidade de propagação do impulso nervoso ao longo da fibra.",
+        "en": "Layer that surrounds certain neuronal extensions and acts as an electrical insulator. It helps increase the speed of nerve impulse propagation along the fiber.",
+        "es": "Capa que rodea determinadas prolongaciones de las neuronas y actúa como aislante eléctrico. Contribuye a aumentar la velocidad de propagación del impulso nervioso a lo largo de la fibra."
+      }
+    },
+    "Nucleous": {
+      "objname": {
+        "pt-BR": "Núcleo",
+        "en": "Nucleus",
+        "es": "Núcleo"
+      },
+      "description": {
+        "pt-BR": "Estrutura localizada no corpo celular que contém o material genético e participa do controle das atividades da célula. No modelo, integra a representação da estrutura interna do neurônio durante a propagação do impulso.",
+        "en": "Structure located within the cell body that contains genetic material and participates in controlling cellular activities. In the model, it forms part of the representation of the neuron's internal structure during impulse propagation.",
+        "es": "Estructura situada en el cuerpo celular que contiene el material genético y participa en el control de las actividades celulares. En el modelo, forma parte de la representación de la estructura interna de la neurona durante la propagación del impulso."
+      }
+    }
   }
 }

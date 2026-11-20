@@ -1,13 +1,64 @@
 {
-  "objname": "Onicocriptose",
+  "objname": {
+    "pt-BR": "Onicocriptose",
+    "en": "Onychocryptosis",
+    "es": "Onicocriptosis"
+  },
   "objsystem": [
     "Tegumentar"
   ],
-  "objdescription": "A onicocriptose, popularmente conhecida como unha encravada, é uma condição caracterizada pela penetração ou pressão da borda lateral da lâmina ungueal sobre os tecidos moles ao redor da unha, provocando inflamação, dor, vermelhidão e inchaço. Ocorre principalmente no hálux (dedão do pé) e pode estar associada ao corte inadequado das unhas, uso de calçados apertados, traumatismos e alterações na curvatura ungueal. Em casos mais avançados, podem surgir feridas, tecido de granulação e infecções secundárias, com possível presença de secreção purulenta. O modelo apresenta uma unha encravada no dedão do pé, destacando a região avermelhada e inflamada ao redor da borda ungueal.",
-  "linkedModels": [],
+  "objdescription": {
+    "pt-BR": "A onicocriptose, popularmente conhecida como unha encravada, é uma condição caracterizada pela penetração ou pressão da borda lateral da lâmina ungueal sobre os tecidos moles ao redor da unha, provocando inflamação, dor, vermelhidão e inchaço. Ocorre principalmente no hálux (dedão do pé) e pode estar associada ao corte inadequado das unhas, uso de calçados apertados, traumatismos e alterações na curvatura ungueal. Em casos mais avançados, podem surgir feridas, tecido de granulação e infecções secundárias, com possível presença de secreção purulenta. O modelo apresenta uma unha encravada no dedão do pé, destacando a região avermelhada e inflamada ao redor da borda ungueal.",
+    "en": "Onychocryptosis, commonly known as an ingrown nail, is a condition characterized by the penetration of the lateral edge of the nail plate into the surrounding soft tissues or the pressure it exerts on them, causing inflammation, pain, redness, and swelling. It occurs primarily in the hallux (big toe) and may be associated with improper nail trimming, wearing tight footwear, trauma, and changes in nail curvature. In more advanced cases, wounds, granulation tissue, and secondary infections may develop, with the possible presence of purulent discharge. The model presents an ingrown toenail on the big toe, highlighting the reddened and inflamed region surrounding the nail edge.",
+    "es": "La onicocriptosis, conocida popularmente como uña encarnada, es una afección caracterizada por la penetración del borde lateral de la lámina ungueal en los tejidos blandos que rodean la uña o por la presión que ejerce sobre ellos, provocando inflamación, dolor, enrojecimiento e hinchazón. Ocurre principalmente en el hálux (dedo gordo del pie) y puede estar asociada al corte inadecuado de las uñas, al uso de calzado ajustado, a traumatismos y a alteraciones en la curvatura ungueal. En casos más avanzados, pueden aparecer heridas, tejido de granulación e infecciones secundarias, con posible presencia de secreción purulenta. El modelo presenta una uña encarnada en el dedo gordo del pie, destacando la región enrojecida e inflamada alrededor del borde ungueal."
+  },
+  "linkedModels": [
+    {
+      "id": "15",
+      "label": {
+        "pt-BR": "Anatomia das Camadas da Pele Humana",
+        "en": "Anatomy of Human Skin Layers",
+        "es": "Anatomía de las Capas de la Piel Humana"
+      }
+    },
+    {
+      "id": "98",
+      "label": {
+        "pt-BR": "Pé com Onicomicose",
+        "en": "Foot with Onychomycosis",
+        "es": "Pie con Onicomicosis"
+      }
+    },
+    {
+      "id": "99",
+      "label": {
+        "pt-BR": "Pé com Onicólise",
+        "en": "Foot with Onycholysis",
+        "es": "Pie con Onicólisis"
+      }
+    },
+    {
+      "id": "103",
+      "label": {
+        "pt-BR": "Característica Anatômica do Pé com Hálux Valgo",
+        "en": "Anatomical Feature of the Foot with Hallux Valgus",
+        "es": "Característica Anatómica del Pie con Hallux Valgus"
+      }
+    }
+  ],
   "resources": [],
-  "Onicocriptose+nisolar": {
-    "objname": "Dedo com Onicocriptose",
-    "description": "Representação do hálux (dedão do pé) com onicocriptose, caracterizada pelo contato excessivo ou penetração da borda da unha na prega ungueal lateral. A região avermelhada observada no modelo representa a inflamação dos tecidos ao redor da unha, que pode causar dor, sensibilidade ao toque e inchaço. A pressão contínua da lâmina ungueal pode provocar lesões na pele e favorecer infecções secundárias."
+  "parts": {
+    "Onicocriptose+nisolar": {
+      "objname": {
+        "pt-BR": "Dedo com Onicocriptose",
+        "en": "Toe with Onychocryptosis",
+        "es": "Dedo del Pie con Onicocriptosis"
+      },
+      "description": {
+        "pt-BR": "Representação do hálux (dedão do pé) com onicocriptose, caracterizada pelo contato excessivo ou penetração da borda da unha na prega ungueal lateral. A região avermelhada observada no modelo representa a inflamação dos tecidos ao redor da unha, que pode causar dor, sensibilidade ao toque e inchaço. A pressão contínua da lâmina ungueal pode provocar lesões na pele e favorecer infecções secundárias.",
+        "en": "Representation of the hallux (big toe) with onychocryptosis, characterized by excessive contact between the nail edge and the lateral nail fold or penetration of the nail edge into the fold. The reddened region observed in the model represents inflammation of the tissues surrounding the nail, which may cause pain, tenderness to touch, and swelling. Continuous pressure from the nail plate may cause skin injuries and promote secondary infections.",
+        "es": "Representación del hálux (dedo gordo del pie) con onicocriptosis, caracterizada por el contacto excesivo del borde de la uña con el pliegue ungueal lateral o su penetración en este. La región enrojecida observada en el modelo representa la inflamación de los tejidos que rodean la uña, que puede causar dolor, sensibilidad al tacto e hinchazón. La presión continua de la lámina ungueal puede provocar lesiones en la piel y favorecer las infecciones secundarias."
+      }
+    }
   }
 }

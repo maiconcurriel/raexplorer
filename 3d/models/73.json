@@ -1,14 +1,65 @@
 {
-  "objname": "Psoríase Cutânea Associada à Artrite Psoriática",
+  "objname": {
+    "pt-BR": "Psoríase Cutânea Associada à Artrite Psoriática",
+    "en": "Cutaneous Psoriasis Associated with Psoriatic Arthritis",
+    "es": "Psoriasis Cutánea Asociada a la Artritis Psoriásica"
+  },
   "objsystem": [
     "Tegumentar",
     "Esquelético"
   ],
-  "objdescription": "A artrite psoriática é uma doença inflamatória crônica, imunomediada, que afeta principalmente as articulações e pode comprometer tendões e suas inserções nos ossos. Frequentemente está associada à psoríase, uma doença cutânea caracterizada pela inflamação e renovação acelerada das células da epiderme, provocando o surgimento de placas avermelhadas, espessadas e recobertas por escamas esbranquiçadas ou prateadas. As manifestações articulares podem causar dor, inchaço, rigidez e limitação dos movimentos, enquanto as lesões cutâneas podem provocar coceira e desconforto. O modelo apresenta uma representação didática das manifestações cutâneas da psoríase no dorso da mão e nos dedos, que podem ocorrer em pessoas com artrite psoriática, sem representar diretamente o comprometimento das articulações.",
-  "linkedModels": [],
+  "objdescription": {
+    "pt-BR": "A artrite psoriática é uma doença inflamatória crônica, imunomediada, que afeta principalmente as articulações e pode comprometer tendões e suas inserções nos ossos. Frequentemente está associada à psoríase, uma doença cutânea caracterizada pela inflamação e renovação acelerada das células da epiderme, provocando o surgimento de placas avermelhadas, espessadas e recobertas por escamas esbranquiçadas ou prateadas. As manifestações articulares podem causar dor, inchaço, rigidez e limitação dos movimentos, enquanto as lesões cutâneas podem provocar coceira e desconforto. O modelo apresenta uma representação didática das manifestações cutâneas da psoríase no dorso da mão e nos dedos, que podem ocorrer em pessoas com artrite psoriática, sem representar diretamente o comprometimento das articulações.",
+    "en": "Psoriatic arthritis is a chronic, immune-mediated inflammatory disease that primarily affects the joints and may involve tendons and their attachment sites on bones. It is frequently associated with psoriasis, a skin disease characterized by inflammation and accelerated turnover of epidermal cells, leading to the appearance of reddish, thickened plaques covered with whitish or silvery scales. Joint manifestations may cause pain, swelling, stiffness, and limited movement, while cutaneous lesions may cause itching and discomfort. The model provides an educational representation of the cutaneous manifestations of psoriasis on the back of the hand and fingers, which may occur in people with psoriatic arthritis, without directly depicting joint involvement.",
+    "es": "La artritis psoriásica es una enfermedad inflamatoria crónica, inmunomediada, que afecta principalmente a las articulaciones y puede comprometer los tendones y sus inserciones en los huesos. Está frecuentemente asociada a la psoriasis, una enfermedad cutánea caracterizada por la inflamación y la renovación acelerada de las células de la epidermis, que provoca la aparición de placas rojizas, engrosadas y recubiertas de escamas blanquecinas o plateadas. Las manifestaciones articulares pueden causar dolor, hinchazón, rigidez y limitación de los movimientos, mientras que las lesiones cutáneas pueden provocar picor y molestias. El modelo presenta una representación didáctica de las manifestaciones cutáneas de la psoriasis en el dorso de la mano y los dedos, que pueden producirse en personas con artritis psoriásica, sin representar directamente la afectación de las articulaciones."
+  },
+  "linkedModels": [
+    {
+      "id": "15",
+      "label": {
+        "pt-BR": "Anatomia das Camadas da Pele Humana",
+        "en": "Anatomy of Human Skin Layers",
+        "es": "Anatomía de las Capas de la Piel Humana"
+      }
+    },
+    {
+      "id": "59",
+      "label": {
+        "pt-BR": "Psoríase",
+        "en": "Psoriasis",
+        "es": "Psoriasis"
+      }
+    },
+    {
+      "id": "79",
+      "label": {
+        "pt-BR": "Artrite Psoriática: Inflamações nas Articulações",
+        "en": "Psoriatic Arthritis: Joint Inflammation",
+        "es": "Artritis Psoriásica: Inflamación de las Articulaciones"
+      }
+    },
+    {
+      "id": "80",
+      "label": {
+        "pt-BR": "Artrite Psoriática: Articulações das Mãos",
+        "en": "Psoriatic Arthritis: Hand Joints",
+        "es": "Artritis Psoriásica: Articulaciones de las Manos"
+      }
+    }
+  ],
   "resources": [],
-  "Psoriatica": {
-    "objname": "Lesões Cutâneas de Psoríase",
-    "description": "Representação de lesões cutâneas associadas à psoríase, caracterizadas por áreas avermelhadas, espessadas e com possível descamação. Essas alterações resultam de processos inflamatórios imunomediados e da renovação acelerada das células da epiderme. No modelo, as lesões aparecem no dorso da mão e nos dedos, demonstrando uma manifestação cutânea que pode estar presente em pessoas com artrite psoriática."
+  "parts": {
+    "Psoriatica": {
+      "objname": {
+        "pt-BR": "Lesões Cutâneas de Psoríase",
+        "en": "Cutaneous Psoriasis Lesions",
+        "es": "Lesiones Cutáneas de Psoriasis"
+      },
+      "description": {
+        "pt-BR": "Representação de lesões cutâneas associadas à psoríase, caracterizadas por áreas avermelhadas, espessadas e com possível descamação. Essas alterações resultam de processos inflamatórios imunomediados e da renovação acelerada das células da epiderme. No modelo, as lesões aparecem no dorso da mão e nos dedos, demonstrando uma manifestação cutânea que pode estar presente em pessoas com artrite psoriática.",
+        "en": "Representation of cutaneous lesions associated with psoriasis, characterized by reddish, thickened areas with possible scaling. These changes result from immune-mediated inflammatory processes and accelerated turnover of epidermal cells. In the model, the lesions appear on the back of the hand and fingers, demonstrating a cutaneous manifestation that may be present in people with psoriatic arthritis.",
+        "es": "Representación de lesiones cutáneas asociadas a la psoriasis, caracterizadas por áreas rojizas, engrosadas y con posible descamación. Estas alteraciones resultan de procesos inflamatorios inmunomediados y de la renovación acelerada de las células de la epidermis. En el modelo, las lesiones aparecen en el dorso de la mano y los dedos, demostrando una manifestación cutánea que puede estar presente en personas con artritis psoriásica."
+      }
+    }
   }
 }

@@ -1,27 +1,134 @@
 {
-  "objname": "Desenvolvimento de Necrose no Pé Diabético",
+  "objname": {
+    "pt-BR": "Desenvolvimento de Necrose no Pé Diabético",
+    "en": "Development of Necrosis in the Diabetic Foot",
+    "es": "Desarrollo de Necrosis en el Pie Diabético"
+  },
   "objsystem": [
     "Tegumentar",
     "Cardiovascular",
     "Nervoso"
   ],
-  "objdescription": "O pé diabético é uma complicação do diabetes mellitus caracterizada por alterações nos nervos periféricos e na circulação sanguínea, que aumentam o risco de feridas, infecções e destruição dos tecidos. A neuropatia diabética pode reduzir a sensibilidade protetora dos pés, enquanto a doença arterial periférica compromete o fornecimento de oxigênio e nutrientes, dificultando a cicatrização. Em situações graves, a combinação de lesões, infecções e isquemia pode provocar necrose tecidual e gangrena. O modelo apresenta uma sequência didática de quatro condições: pé saudável, pé com edema, pé com lesão e pé com necrose avançada. Essa sequência representa uma possível evolução de complicações, mas não corresponde a estágios obrigatórios ou universais do pé diabético.",
-  "linkedModels": [],
+  "objdescription": {
+    "pt-BR": "O pé diabético é uma complicação do diabetes mellitus caracterizada por alterações nos nervos periféricos e na circulação sanguínea, que aumentam o risco de feridas, infecções e destruição dos tecidos. A neuropatia diabética pode reduzir a sensibilidade protetora dos pés, enquanto a doença arterial periférica compromete o fornecimento de oxigênio e nutrientes, dificultando a cicatrização. Em situações graves, a combinação de lesões, infecções e isquemia pode provocar necrose tecidual e gangrena. O modelo apresenta uma sequência didática de quatro condições: pé saudável, pé com edema, pé com lesão e pé com necrose avançada. Essa sequência representa uma possível evolução de complicações, mas não corresponde a estágios obrigatórios ou universais do pé diabético.",
+    "en": "Diabetic foot is a complication of diabetes mellitus characterized by abnormalities in the peripheral nerves and blood circulation that increase the risk of wounds, infections, and tissue destruction. Diabetic neuropathy may reduce protective sensation in the feet, while peripheral arterial disease compromises the supply of oxygen and nutrients, impairing wound healing. In severe situations, the combination of injuries, infections, and ischemia may cause tissue necrosis and gangrene. The model presents an educational sequence of four conditions: a healthy foot, a foot with edema, a foot with a lesion, and a foot with advanced necrosis. This sequence represents a possible progression of complications but does not correspond to mandatory or universal stages of diabetic foot.",
+    "es": "El pie diabético es una complicación de la diabetes mellitus caracterizada por alteraciones en los nervios periféricos y en la circulación sanguínea, que aumentan el riesgo de heridas, infecciones y destrucción de los tejidos. La neuropatía diabética puede reducir la sensibilidad protectora de los pies, mientras que la enfermedad arterial periférica compromete el suministro de oxígeno y nutrientes, dificultando la cicatrización. En situaciones graves, la combinación de lesiones, infecciones e isquemia puede provocar necrosis tisular y gangrena. El modelo presenta una secuencia didáctica de cuatro condiciones: pie sano, pie con edema, pie con lesión y pie con necrosis avanzada. Esta secuencia representa una posible evolución de las complicaciones, pero no corresponde a etapas obligatorias o universales del pie diabético."
+  },
+  "linkedModels": [
+    {
+      "id": "15",
+      "label": {
+        "pt-BR": "Anatomia das Camadas da Pele Humana",
+        "en": "Anatomy of Human Skin Layers",
+        "es": "Anatomía de las Capas de la Piel Humana"
+      }
+    },
+    {
+      "id": "19",
+      "label": {
+        "pt-BR": "Sistema Arterial",
+        "en": "Arterial System",
+        "es": "Sistema Arterial"
+      }
+    },
+    {
+      "id": "21",
+      "label": {
+        "pt-BR": "Sistema Nervoso",
+        "en": "Nervous System",
+        "es": "Sistema Nervioso"
+      }
+    },
+    {
+      "id": "46",
+      "label": {
+        "pt-BR": "Artéria",
+        "en": "Artery",
+        "es": "Arteria"
+      }
+    },
+    {
+      "id": "57",
+      "label": {
+        "pt-BR": "Aterosclerose",
+        "en": "Atherosclerosis",
+        "es": "Aterosclerosis"
+      }
+    },
+    {
+      "id": "83",
+      "label": {
+        "pt-BR": "Absorção de Glicose no Diabetes Tipo 1",
+        "en": "Glucose Absorption in Type 1 Diabetes",
+        "es": "Absorción de Glucosa en la Diabetes Tipo 1"
+      }
+    },
+    {
+      "id": "84",
+      "label": {
+        "pt-BR": "Absorção de Glicose no Diabetes Tipo 2",
+        "en": "Glucose Absorption in Type 2 Diabetes",
+        "es": "Absorción de Glucosa en la Diabetes Tipo 2"
+      }
+    },
+    {
+      "id": "98",
+      "label": {
+        "pt-BR": "Pé com Onicomicose",
+        "en": "Foot with Onychomycosis",
+        "es": "Pie con Onicomicosis"
+      }
+    }
+  ],
   "resources": [],
-  "FootHealthy": {
-    "objname": "Pé Saudável",
-    "description": "Representação de um pé sem alterações aparentes, com pele íntegra, ausência de feridas, edema ou necrose. Em condições saudáveis, a circulação sanguínea fornece oxigênio e nutrientes aos tecidos, enquanto a sensibilidade nervosa contribui para a percepção de dor, pressão e possíveis lesões."
-  },
-  "FootSwollen": {
-    "objname": "Pé com Edema",
-    "description": "Representação de um pé com aumento de volume devido ao acúmulo de líquido nos tecidos, caracterizando edema. Em pessoas com diabetes, o inchaço pode estar associado a diferentes condições, como alterações circulatórias, infecções ou complicações renais. O edema não é necessariamente uma etapa inicial da necrose, mas pode acompanhar situações que exigem avaliação clínica."
-  },
-  "FootFerida": {
-    "objname": "Pé com Lesão Ulcerativa",
-    "description": "Representação de um pé com lesão cutânea, indicando uma possível complicação do diabetes. A neuropatia periférica pode reduzir a percepção de pressão e traumatismos, favorecendo o surgimento de úlceras. A circulação comprometida e a presença de infecção podem dificultar a cicatrização e aumentar o risco de destruição dos tecidos. A aparência externa isolada não permite determinar se a úlcera é neuropática, isquêmica ou mista."
-  },
-  "NecroseTecidual": {
-    "objname": "Necrose Tecidual Avançada (Gangrena)",
-    "description": "Representação de um pé com extensa alteração de coloração, incluindo regiões escuras que simbolizam tecido necrosado. A necrose ocorre quando as células morrem devido a fatores como interrupção do suprimento sanguíneo ou infecção grave. No pé diabético, pode evoluir para gangrena e comprometer estruturas profundas. Casos avançados exigem avaliação médica urgente, podendo necessitar de procedimentos para remover tecidos inviáveis e, em determinadas situações, amputação. A amputação não é inevitável em todos os casos."
+  "parts": {
+    "FootHealthy": {
+      "objname": {
+        "pt-BR": "Pé Saudável",
+        "en": "Healthy Foot",
+        "es": "Pie Sano"
+      },
+      "description": {
+        "pt-BR": "Representação de um pé sem alterações aparentes, com pele íntegra, ausência de feridas, edema ou necrose. Em condições saudáveis, a circulação sanguínea fornece oxigênio e nutrientes aos tecidos, enquanto a sensibilidade nervosa contribui para a percepção de dor, pressão e possíveis lesões.",
+        "en": "Representation of a foot without apparent abnormalities, with intact skin and no wounds, edema, or necrosis. Under healthy conditions, blood circulation supplies oxygen and nutrients to the tissues, while sensory nerve function contributes to the perception of pain, pressure, and potential injuries.",
+        "es": "Representación de un pie sin alteraciones aparentes, con piel íntegra y ausencia de heridas, edema o necrosis. En condiciones saludables, la circulación sanguínea proporciona oxígeno y nutrientes a los tejidos, mientras que la sensibilidad nerviosa contribuye a la percepción del dolor, la presión y las posibles lesiones."
+      }
+    },
+    "FootSwollen": {
+      "objname": {
+        "pt-BR": "Pé com Edema",
+        "en": "Foot with Edema",
+        "es": "Pie con Edema"
+      },
+      "description": {
+        "pt-BR": "Representação de um pé com aumento de volume devido ao acúmulo de líquido nos tecidos, caracterizando edema. Em pessoas com diabetes, o inchaço pode estar associado a diferentes condições, como alterações circulatórias, infecções ou complicações renais. O edema não é necessariamente uma etapa inicial da necrose, mas pode acompanhar situações que exigem avaliação clínica.",
+        "en": "Representation of a foot with increased volume due to fluid accumulation in the tissues, characterizing edema. In people with diabetes, swelling may be associated with various conditions, such as circulatory abnormalities, infections, or renal complications. Edema is not necessarily an initial stage of necrosis but may accompany conditions that require clinical evaluation.",
+        "es": "Representación de un pie con aumento de volumen debido a la acumulación de líquido en los tejidos, lo que caracteriza el edema. En personas con diabetes, la hinchazón puede estar asociada a diferentes afecciones, como alteraciones circulatorias, infecciones o complicaciones renales. El edema no es necesariamente una etapa inicial de la necrosis, pero puede acompañar situaciones que requieren evaluación clínica."
+      }
+    },
+    "FootFerida": {
+      "objname": {
+        "pt-BR": "Pé com Lesão Ulcerativa",
+        "en": "Foot with an Ulcerative Lesion",
+        "es": "Pie con Lesión Ulcerativa"
+      },
+      "description": {
+        "pt-BR": "Representação de um pé com lesão cutânea, indicando uma possível complicação do diabetes. A neuropatia periférica pode reduzir a percepção de pressão e traumatismos, favorecendo o surgimento de úlceras. A circulação comprometida e a presença de infecção podem dificultar a cicatrização e aumentar o risco de destruição dos tecidos. A aparência externa isolada não permite determinar se a úlcera é neuropática, isquêmica ou mista.",
+        "en": "Representation of a foot with a skin lesion, indicating a possible complication of diabetes. Peripheral neuropathy may reduce the perception of pressure and trauma, promoting the development of ulcers. Impaired circulation and the presence of infection may hinder wound healing and increase the risk of tissue destruction. External appearance alone does not make it possible to determine whether the ulcer is neuropathic, ischemic, or mixed.",
+        "es": "Representación de un pie con una lesión cutánea, que indica una posible complicación de la diabetes. La neuropatía periférica puede reducir la percepción de la presión y los traumatismos, favoreciendo la aparición de úlceras. La circulación comprometida y la presencia de infección pueden dificultar la cicatrización y aumentar el riesgo de destrucción de los tejidos. La apariencia externa por sí sola no permite determinar si la úlcera es neuropática, isquémica o mixta."
+      }
+    },
+    "NecroseTecidual": {
+      "objname": {
+        "pt-BR": "Necrose Tecidual Avançada (Gangrena)",
+        "en": "Advanced Tissue Necrosis (Gangrene)",
+        "es": "Necrosis Tisular Avanzada (Gangrena)"
+      },
+      "description": {
+        "pt-BR": "Representação de um pé com extensa alteração de coloração, incluindo regiões escuras que simbolizam tecido necrosado. A necrose ocorre quando as células morrem devido a fatores como interrupção do suprimento sanguíneo ou infecção grave. No pé diabético, pode evoluir para gangrena e comprometer estruturas profundas. Casos avançados exigem avaliação médica urgente, podendo necessitar de procedimentos para remover tecidos inviáveis e, em determinadas situações, amputação. A amputação não é inevitável em todos os casos.",
+        "en": "Representation of a foot with extensive discoloration, including dark regions that symbolize necrotic tissue. Necrosis occurs when cells die due to factors such as interruption of the blood supply or severe infection. In diabetic foot, it may progress to gangrene and affect deep structures. Advanced cases require urgent medical evaluation and may necessitate procedures to remove nonviable tissue and, in certain situations, amputation. Amputation is not inevitable in all cases.",
+        "es": "Representación de un pie con una extensa alteración de la coloración, que incluye regiones oscuras que simbolizan tejido necrosado. La necrosis ocurre cuando las células mueren debido a factores como la interrupción del suministro sanguíneo o una infección grave. En el pie diabético, puede evolucionar hacia la gangrena y comprometer estructuras profundas. Los casos avanzados requieren evaluación médica urgente y pueden necesitar procedimientos para eliminar tejidos no viables y, en determinadas situaciones, amputación. La amputación no es inevitable en todos los casos."
+      }
+    }
   }
 }

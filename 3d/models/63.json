@@ -1,54 +1,160 @@
 {
-  "objname": "Infecção Urinária",
+  "objname": {
+    "pt-BR": "Infecção Urinária",
+    "en": "Urinary Tract Infection",
+    "es": "Infección del Tracto Urinario"
+  },
   "objsystem": [
     "Urinário"
   ],
-  "objdescription": "A infecção do trato urinário (ITU) ocorre quando microrganismos, geralmente bactérias, colonizam e se multiplicam em estruturas do sistema urinário. A maioria das infecções começa nas vias urinárias inferiores, podendo envolver a uretra e a bexiga. Em alguns casos, a infecção pode ascender pelos ureteres e alcançar os rins, causando uma infecção mais grave. Entre os sintomas podem ocorrer ardor ou dor ao urinar, aumento da frequência e urgência urinária, desconforto na região inferior do abdômen e alterações na urina. Quando os rins são acometidos, podem surgir febre, calafrios e dor lombar. O modelo apresenta estruturas do sistema urinário feminino e permite visualizar o possível trajeto ascendente da infecção desde a uretra e a bexiga até os ureteres e rins.",
+  "objdescription": {
+    "pt-BR": "A infecção do trato urinário (ITU) ocorre quando microrganismos, geralmente bactérias, colonizam e se multiplicam em estruturas do sistema urinário. A maioria das infecções começa nas vias urinárias inferiores, podendo envolver a uretra e a bexiga. Em alguns casos, a infecção pode ascender pelos ureteres e alcançar os rins, causando uma infecção mais grave. Entre os sintomas podem ocorrer ardor ou dor ao urinar, aumento da frequência e urgência urinária, desconforto na região inferior do abdômen e alterações na urina. Quando os rins são acometidos, podem surgir febre, calafrios e dor lombar. O modelo apresenta estruturas do sistema urinário feminino e permite visualizar o possível trajeto ascendente da infecção desde a uretra e a bexiga até os ureteres e rins.",
+    "en": "A urinary tract infection (UTI) occurs when microorganisms, usually bacteria, colonize and multiply within structures of the urinary system. Most infections begin in the lower urinary tract and may involve the urethra and bladder. In some cases, the infection may ascend through the ureters and reach the kidneys, causing a more severe infection. Symptoms may include burning or pain during urination, increased urinary frequency and urgency, discomfort in the lower abdomen, and changes in the urine. When the kidneys are affected, fever, chills, and lower back pain may occur. The model presents structures of the female urinary system and allows visualization of the possible ascending pathway of infection from the urethra and bladder to the ureters and kidneys.",
+    "es": "La infección del tracto urinario (ITU) ocurre cuando microorganismos, generalmente bacterias, colonizan y se multiplican en estructuras del sistema urinario. La mayoría de las infecciones comienza en las vías urinarias inferiores y puede afectar a la uretra y la vejiga. En algunos casos, la infección puede ascender por los uréteres y alcanzar los riñones, causando una infección más grave. Entre los síntomas pueden presentarse ardor o dolor al orinar, aumento de la frecuencia y urgencia urinaria, molestias en la región inferior del abdomen y alteraciones en la orina. Cuando los riñones se ven afectados, pueden aparecer fiebre, escalofríos y dolor lumbar. El modelo presenta estructuras del sistema urinario femenino y permite visualizar el posible trayecto ascendente de la infección desde la uretra y la vejiga hasta los uréteres y los riñones."
+  },
   "linkedModels": [
     {
       "id": "10",
-      "label": "Sistema Urinário Feminino"
+      "label": {
+        "pt-BR": "Sistema Urinário Feminino",
+        "en": "Female Urinary System",
+        "es": "Sistema Urinario Femenino"
+      }
     },
     {
       "id": "11",
-      "label": "Sistema Reprodutor Feminino"
+      "label": {
+        "pt-BR": "Sistema Reprodutor Feminino",
+        "en": "Female Reproductive System",
+        "es": "Sistema Reproductor Femenino"
+      }
+    },
+    {
+      "id": "12",
+      "label": {
+        "pt-BR": "Sistema Urinário Masculino",
+        "en": "Male Urinary System",
+        "es": "Sistema Urinario Masculino"
+      }
+    },
+    {
+      "id": "65",
+      "label": {
+        "pt-BR": "Insuficiência Renal",
+        "en": "Renal Insufficiency",
+        "es": "Insuficiencia Renal"
+      }
     }
   ],
   "resources": [],
-  "Urine+nisolar": {
-    "objname": "Urina com Representação de Infecção",
-    "description": "Representação didática da urina em uma infecção do trato urinário. A presença de bactérias e da resposta inflamatória pode estar associada a alterações urinárias, como leucócitos e, em alguns casos, sangue ou mudanças na aparência e no odor da urina. A infecção ocorre nos tecidos do trato urinário, portanto esta peça não significa que a urina, isoladamente, seja o local da doença."
-  },
-  "Bladder": {
-    "objname": "Bexiga Urinária",
-    "description": "Órgão responsável pelo armazenamento temporário da urina. A infecção da bexiga é denominada cistite e constitui uma das formas mais comuns de infecção do trato urinário, podendo causar ardor ao urinar, urgência, aumento da frequência urinária e desconforto na região inferior do abdômen."
-  },
-  "Ureter_1+Ureter_2": {
-    "objname": "Ureter",
-    "description": "Canal que transporta a urina do rim até a bexiga. Em uma infecção urinária ascendente, microrganismos provenientes das vias urinárias inferiores podem percorrer o ureter e alcançar o rim."
-  },
-  "Pyramids": {
-    "objname": "Pirâmides Renais",
-    "description": "Estruturas da medula renal que conduzem a urina formada nos néfrons em direção aos cálices renais. São apresentadas para contextualizar a anatomia interna do rim em casos nos quais uma infecção urinária ascendente alcança o trato urinário superior."
-  },
-  "Kidneyfront": {
-    "objname": "Rim - Porção Anterior",
-    "description": "O rim filtra o sangue, regula a composição dos líquidos corporais e produz a urina. Uma infecção urinária que ascende da bexiga pelos ureteres pode alcançar o rim e provocar pielonefrite, condição que pode causar febre, calafrios e dor na região lombar."
-  },
-  "KidneyBack": {
-    "objname": "Rim - Porção Posterior",
-    "description": "Porção posterior do rim, órgão responsável pela filtração do sangue e formação da urina. O comprometimento renal por uma infecção ascendente caracteriza uma forma de infecção do trato urinário superior e requer maior atenção devido ao risco de complicações."
-  },
-  "Externalurethralsphincter": {
-    "objname": "Esfíncter Externo da Uretra",
-    "description": "Músculo responsável pelo controle voluntário da saída da urina através da uretra. É apresentado principalmente como referência anatômica e não constitui o principal local da infecção urinária."
-  },
-  "Urethra": {
-    "objname": "Uretra",
-    "description": "Canal que conduz a urina da bexiga para o exterior do corpo. A uretra pode funcionar como porta de entrada para microrganismos que ascendem pelo trato urinário. Quando ocorre inflamação infecciosa da uretra, o quadro é denominado uretrite."
-  },
-  "Urethra001+nisolar+ninteract": {
-    "objname": "Uretra Feminina",
-    "description": "Representação da uretra feminina utilizada para contextualizar a via de entrada e ascensão de microrganismos no trato urinário. A uretra feminina é relativamente curta e sua abertura está próxima às regiões genital e anal, características anatômicas que facilitam a ascensão de bactérias até a bexiga."
+  "parts": {
+    "Urine+nisolar": {
+      "objname": {
+        "pt-BR": "Urina com Representação de Infecção",
+        "en": "Urine with Representation of Infection",
+        "es": "Orina con Representación de Infección"
+      },
+      "description": {
+        "pt-BR": "Representação didática da urina em uma infecção do trato urinário. A presença de bactérias e da resposta inflamatória pode estar associada a alterações urinárias, como leucócitos e, em alguns casos, sangue ou mudanças na aparência e no odor da urina. A infecção ocorre nos tecidos do trato urinário, portanto esta peça não significa que a urina, isoladamente, seja o local da doença.",
+        "en": "Educational representation of urine during a urinary tract infection. The presence of bacteria and the inflammatory response may be associated with urinary changes, such as the presence of leukocytes and, in some cases, blood or changes in the appearance and odor of the urine. The infection occurs in the tissues of the urinary tract; therefore, this component does not imply that the urine itself is the site of the disease.",
+        "es": "Representación didáctica de la orina durante una infección del tracto urinario. La presencia de bacterias y la respuesta inflamatoria pueden estar asociadas a alteraciones urinarias, como la presencia de leucocitos y, en algunos casos, sangre o cambios en la apariencia y el olor de la orina. La infección ocurre en los tejidos del tracto urinario, por lo que esta pieza no significa que la orina, por sí sola, sea el lugar de la enfermedad."
+      }
+    },
+    "Bladder": {
+      "objname": {
+        "pt-BR": "Bexiga Urinária",
+        "en": "Urinary Bladder",
+        "es": "Vejiga Urinaria"
+      },
+      "description": {
+        "pt-BR": "Órgão responsável pelo armazenamento temporário da urina. A infecção da bexiga é denominada cistite e constitui uma das formas mais comuns de infecção do trato urinário, podendo causar ardor ao urinar, urgência, aumento da frequência urinária e desconforto na região inferior do abdômen.",
+        "en": "Organ responsible for the temporary storage of urine. Bladder infection is known as cystitis and is one of the most common forms of urinary tract infection. It may cause burning during urination, urinary urgency, increased urinary frequency, and discomfort in the lower abdomen.",
+        "es": "Órgano responsable del almacenamiento temporal de la orina. La infección de la vejiga se denomina cistitis y constituye una de las formas más comunes de infección del tracto urinario, pudiendo causar ardor al orinar, urgencia, aumento de la frecuencia urinaria y molestias en la región inferior del abdomen."
+      }
+    },
+    "Ureter_1+Ureter_2": {
+      "objname": {
+        "pt-BR": "Ureter",
+        "en": "Ureter",
+        "es": "Uréter"
+      },
+      "description": {
+        "pt-BR": "Canal que transporta a urina do rim até a bexiga. Em uma infecção urinária ascendente, microrganismos provenientes das vias urinárias inferiores podem percorrer o ureter e alcançar o rim.",
+        "en": "Duct that transports urine from the kidney to the bladder. In an ascending urinary tract infection, microorganisms from the lower urinary tract may travel through the ureter and reach the kidney.",
+        "es": "Conducto que transporta la orina desde el riñón hasta la vejiga. En una infección urinaria ascendente, los microorganismos procedentes de las vías urinarias inferiores pueden recorrer el uréter y alcanzar el riñón."
+      }
+    },
+    "Pyramids": {
+      "objname": {
+        "pt-BR": "Pirâmides Renais",
+        "en": "Renal Pyramids",
+        "es": "Pirámides Renales"
+      },
+      "description": {
+        "pt-BR": "Estruturas da medula renal que conduzem a urina formada nos néfrons em direção aos cálices renais. São apresentadas para contextualizar a anatomia interna do rim em casos nos quais uma infecção urinária ascendente alcança o trato urinário superior.",
+        "en": "Structures of the renal medulla that convey urine formed in the nephrons toward the renal calyces. They are presented to provide anatomical context for the internal structure of the kidney in cases where an ascending urinary tract infection reaches the upper urinary tract.",
+        "es": "Estructuras de la médula renal que conducen la orina formada en las nefronas hacia los cálices renales. Se presentan para contextualizar la anatomía interna del riñón en casos en los que una infección urinaria ascendente alcanza el tracto urinario superior."
+      }
+    },
+    "Kidneyfront": {
+      "objname": {
+        "pt-BR": "Rim - Porção Anterior",
+        "en": "Kidney - Anterior Portion",
+        "es": "Riñón - Porción Anterior"
+      },
+      "description": {
+        "pt-BR": "O rim filtra o sangue, regula a composição dos líquidos corporais e produz a urina. Uma infecção urinária que ascende da bexiga pelos ureteres pode alcançar o rim e provocar pielonefrite, condição que pode causar febre, calafrios e dor na região lombar.",
+        "en": "The kidney filters the blood, regulates the composition of body fluids, and produces urine. A urinary tract infection that ascends from the bladder through the ureters may reach the kidney and cause pyelonephritis, a condition that may result in fever, chills, and lower back pain.",
+        "es": "El riñón filtra la sangre, regula la composición de los líquidos corporales y produce la orina. Una infección urinaria que asciende desde la vejiga por los uréteres puede alcanzar el riñón y provocar pielonefritis, una condición que puede causar fiebre, escalofríos y dolor en la región lumbar."
+      }
+    },
+    "KidneyBack": {
+      "objname": {
+        "pt-BR": "Rim - Porção Posterior",
+        "en": "Kidney - Posterior Portion",
+        "es": "Riñón - Porción Posterior"
+      },
+      "description": {
+        "pt-BR": "Porção posterior do rim, órgão responsável pela filtração do sangue e formação da urina. O comprometimento renal por uma infecção ascendente caracteriza uma forma de infecção do trato urinário superior e requer maior atenção devido ao risco de complicações.",
+        "en": "Posterior portion of the kidney, an organ responsible for blood filtration and urine formation. Kidney involvement in an ascending infection constitutes a form of upper urinary tract infection and requires greater attention due to the risk of complications.",
+        "es": "Porción posterior del riñón, órgano responsable de la filtración de la sangre y la formación de la orina. La afectación renal por una infección ascendente constituye una forma de infección del tracto urinario superior y requiere mayor atención debido al riesgo de complicaciones."
+      }
+    },
+    "Externalurethralsphincter": {
+      "objname": {
+        "pt-BR": "Esfíncter Externo da Uretra",
+        "en": "External Urethral Sphincter",
+        "es": "Esfínter Externo de la Uretra"
+      },
+      "description": {
+        "pt-BR": "Músculo responsável pelo controle voluntário da saída da urina através da uretra. É apresentado principalmente como referência anatômica e não constitui o principal local da infecção urinária.",
+        "en": "Muscle responsible for the voluntary control of urine release through the urethra. It is presented primarily as an anatomical reference and is not the primary site of urinary tract infection.",
+        "es": "Músculo responsable del control voluntario de la salida de la orina a través de la uretra. Se presenta principalmente como referencia anatómica y no constituye el principal lugar de la infección urinaria."
+      }
+    },
+    "Urethra": {
+      "objname": {
+        "pt-BR": "Uretra",
+        "en": "Urethra",
+        "es": "Uretra"
+      },
+      "description": {
+        "pt-BR": "Canal que conduz a urina da bexiga para o exterior do corpo. A uretra pode funcionar como porta de entrada para microrganismos que ascendem pelo trato urinário. Quando ocorre inflamação infecciosa da uretra, o quadro é denominado uretrite.",
+        "en": "Duct that carries urine from the bladder to the outside of the body. The urethra may serve as an entry point for microorganisms that ascend through the urinary tract. When infectious inflammation of the urethra occurs, the condition is known as urethritis.",
+        "es": "Conducto que transporta la orina desde la vejiga hacia el exterior del cuerpo. La uretra puede actuar como puerta de entrada para microorganismos que ascienden por el tracto urinario. Cuando se produce una inflamación infecciosa de la uretra, el cuadro se denomina uretritis."
+      }
+    },
+    "Urethra001+nisolar+ninteract": {
+      "objname": {
+        "pt-BR": "Uretra Feminina",
+        "en": "Female Urethra",
+        "es": "Uretra Femenina"
+      },
+      "description": {
+        "pt-BR": "Representação da uretra feminina utilizada para contextualizar a via de entrada e ascensão de microrganismos no trato urinário. A uretra feminina é relativamente curta e sua abertura está próxima às regiões genital e anal, características anatômicas que facilitam a ascensão de bactérias até a bexiga.",
+        "en": "Representation of the female urethra used to illustrate the route of entry and ascent of microorganisms through the urinary tract. The female urethra is relatively short, and its opening is located near the genital and anal regions, anatomical characteristics that facilitate the ascent of bacteria into the bladder.",
+        "es": "Representación de la uretra femenina utilizada para contextualizar la vía de entrada y ascenso de microorganismos en el tracto urinario. La uretra femenina es relativamente corta y su abertura se encuentra próxima a las regiones genital y anal, características anatómicas que facilitan el ascenso de bacterias hasta la vejiga."
+      }
+    }
   }
 }

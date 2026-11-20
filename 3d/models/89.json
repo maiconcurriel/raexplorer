@@ -1,22 +1,89 @@
 {
-  "objname": "Anafilaxia: Inchaço na Garganta",
+  "objname": {
+    "pt-BR": "Anafilaxia: Inchaço na Garganta",
+    "en": "Anaphylaxis: Throat Swelling",
+    "es": "Anafilaxia: Hinchazón de la Garganta"
+  },
   "objsystem": [
     "Respiratório",
     "Imunológico"
   ],
-  "objdescription": "A anafilaxia é uma reação alérgica sistêmica grave, de início geralmente rápido, que pode comprometer a respiração e a circulação sanguínea. Durante a reação, substâncias como a histamina são liberadas por células do sistema imunológico, aumentando a permeabilidade dos vasos sanguíneos e favorecendo o acúmulo de líquido nos tecidos, conhecido como edema. Esse processo pode provocar inchaço da língua, faringe e laringe, dificultando a passagem do ar e causando sensação de aperto na garganta, alterações na voz e dificuldade respiratória. A animação destaca o edema das estruturas da cavidade oral e da garganta, demonstrando como a anafilaxia pode comprometer as vias aéreas superiores. Trata-se de uma emergência médica que exige tratamento imediato, principalmente com adrenalina intramuscular.",
-  "linkedModels": [],
+  "objdescription": {
+    "pt-BR": "A anafilaxia é uma reação alérgica sistêmica grave, de início geralmente rápido, que pode comprometer a respiração e a circulação sanguínea. Durante a reação, substâncias como a histamina são liberadas por células do sistema imunológico, aumentando a permeabilidade dos vasos sanguíneos e favorecendo o acúmulo de líquido nos tecidos, conhecido como edema. Esse processo pode provocar inchaço da língua, faringe e laringe, dificultando a passagem do ar e causando sensação de aperto na garganta, alterações na voz e dificuldade respiratória. A animação destaca o edema das estruturas da cavidade oral e da garganta, demonstrando como a anafilaxia pode comprometer as vias aéreas superiores. Trata-se de uma emergência médica que exige tratamento imediato, principalmente com adrenalina intramuscular.",
+    "en": "Anaphylaxis is a severe systemic allergic reaction, usually with a rapid onset, that can compromise breathing and blood circulation. During the reaction, substances such as histamine are released by cells of the immune system, increasing blood vessel permeability and promoting fluid accumulation in the tissues, known as edema. This process may cause swelling of the tongue, pharynx, and larynx, obstructing airflow and causing a sensation of tightness in the throat, voice changes, and difficulty breathing. The animation highlights edema of the structures of the oral cavity and throat, demonstrating how anaphylaxis can compromise the upper airways. This is a medical emergency that requires immediate treatment, primarily with intramuscular epinephrine (adrenaline).",
+    "es": "La anafilaxia es una reacción alérgica sistémica grave, generalmente de inicio rápido, que puede comprometer la respiración y la circulación sanguínea. Durante la reacción, sustancias como la histamina son liberadas por células del sistema inmunitario, aumentando la permeabilidad de los vasos sanguíneos y favoreciendo la acumulación de líquido en los tejidos, conocida como edema. Este proceso puede provocar hinchazón de la lengua, la faringe y la laringe, dificultando el paso del aire y causando sensación de opresión en la garganta, alteraciones de la voz y dificultad respiratoria. La animación destaca el edema de las estructuras de la cavidad oral y la garganta, demostrando cómo la anafilaxia puede comprometer las vías respiratorias superiores. Se trata de una emergencia médica que requiere tratamiento inmediato, principalmente con adrenalina intramuscular."
+  },
+  "linkedModels": [
+    {
+      "id": "23",
+      "label": {
+        "pt-BR": "Sistema Respiratório",
+        "en": "Respiratory System",
+        "es": "Sistema Respiratorio"
+      }
+    },
+    {
+      "id": "26",
+      "label": {
+        "pt-BR": "Sistema Estomatognático",
+        "en": "Stomatognathic System",
+        "es": "Sistema Estomatognático"
+      }
+    },
+    {
+      "id": "82",
+      "label": {
+        "pt-BR": "Reações Alérgicas Sistêmicas",
+        "en": "Systemic Allergic Reactions",
+        "es": "Reacciones Alérgicas Sistémicas"
+      }
+    },
+    {
+      "id": "90",
+      "label": {
+        "pt-BR": "Anafilaxia: Inchaço na Face",
+        "en": "Anaphylaxis: Facial Swelling",
+        "es": "Anafilaxia: Hinchazón Facial"
+      }
+    }
+  ],
   "resources": [],
-  "Tongue+nisolar": {
-    "objname": "Inchaço na Língua",
-    "description": "A língua pode apresentar edema durante uma reação anafilática devido ao aumento da permeabilidade vascular e ao acúmulo de líquido nos tecidos. Esse inchaço pode dificultar a fala, a deglutição e, em situações graves, contribuir para a obstrução das vias aéreas superiores. Na animação, a alteração de volume representa o comprometimento da língua durante a reação alérgica."
-  },
-  "OralCavity+nisolar": {
-    "objname": "Inchaço na Garganta",
-    "description": "O edema das estruturas da garganta, especialmente da faringe e da laringe, pode ocorrer durante a anafilaxia. O acúmulo de líquido nos tecidos provoca estreitamento das vias aéreas superiores, dificultando a passagem do ar. Os sintomas podem incluir sensação de fechamento da garganta, dificuldade para engolir, rouquidão e ruídos respiratórios. A região avermelhada do modelo destaca didaticamente a área afetada pelo processo inflamatório e pelo edema."
-  },
-  "Skin+nisolar+ninteract": {
-    "objname": "Pele",
-    "description": ""
+  "parts": {
+    "Tongue+nisolar": {
+      "objname": {
+        "pt-BR": "Inchaço na Língua",
+        "en": "Tongue Swelling",
+        "es": "Hinchazón de la Lengua"
+      },
+      "description": {
+        "pt-BR": "A língua pode apresentar edema durante uma reação anafilática devido ao aumento da permeabilidade vascular e ao acúmulo de líquido nos tecidos. Esse inchaço pode dificultar a fala, a deglutição e, em situações graves, contribuir para a obstrução das vias aéreas superiores. Na animação, a alteração de volume representa o comprometimento da língua durante a reação alérgica.",
+        "en": "The tongue may develop edema during an anaphylactic reaction due to increased vascular permeability and fluid accumulation in the tissues. This swelling may interfere with speech and swallowing and, in severe cases, contribute to upper airway obstruction. In the animation, the change in volume represents the involvement of the tongue during the allergic reaction.",
+        "es": "La lengua puede presentar edema durante una reacción anafiláctica debido al aumento de la permeabilidad vascular y a la acumulación de líquido en los tejidos. Esta hinchazón puede dificultar el habla, la deglución y, en situaciones graves, contribuir a la obstrucción de las vías respiratorias superiores. En la animación, el cambio de volumen representa la afectación de la lengua durante la reacción alérgica."
+      }
+    },
+    "OralCavity+nisolar": {
+      "objname": {
+        "pt-BR": "Inchaço na Garganta",
+        "en": "Throat Swelling",
+        "es": "Hinchazón de la Garganta"
+      },
+      "description": {
+        "pt-BR": "O edema das estruturas da garganta, especialmente da faringe e da laringe, pode ocorrer durante a anafilaxia. O acúmulo de líquido nos tecidos provoca estreitamento das vias aéreas superiores, dificultando a passagem do ar. Os sintomas podem incluir sensação de fechamento da garganta, dificuldade para engolir, rouquidão e ruídos respiratórios. A região avermelhada do modelo destaca didaticamente a área afetada pelo processo inflamatório e pelo edema.",
+        "en": "Edema of the throat structures, particularly the pharynx and larynx, may occur during anaphylaxis. Fluid accumulation in the tissues causes narrowing of the upper airways, making airflow more difficult. Symptoms may include a sensation of throat closure, difficulty swallowing, hoarseness, and abnormal breathing sounds. The reddish region of the model highlights the area affected by the inflammatory process and edema for educational purposes.",
+        "es": "El edema de las estructuras de la garganta, especialmente de la faringe y la laringe, puede producirse durante la anafilaxia. La acumulación de líquido en los tejidos provoca el estrechamiento de las vías respiratorias superiores, dificultando el paso del aire. Los síntomas pueden incluir sensación de cierre de la garganta, dificultad para tragar, ronquera y ruidos respiratorios. La región enrojecida del modelo destaca de forma didáctica el área afectada por el proceso inflamatorio y el edema."
+      }
+    },
+    "Skin+nisolar+ninteract": {
+      "objname": {
+        "pt-BR": "Pele",
+        "en": "Skin",
+        "es": "Piel"
+      },
+      "description": {
+        "pt-BR": "",
+        "en": "",
+        "es": ""
+      }
+    }
   }
 }

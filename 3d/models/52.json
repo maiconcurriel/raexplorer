@@ -1,62 +1,204 @@
 {
-  "objname": "Transtorno do Déficit de Atenção e Hiperatividade (TDAH)",
+  "objname": {
+    "pt-BR": "Transtorno do Déficit de Atenção e Hiperatividade (TDAH)",
+    "en": "Attention-Deficit/Hyperactivity Disorder (ADHD)",
+    "es": "Trastorno por Déficit de Atención e Hiperactividad (TDAH)"
+  },
   "objsystem": [
     "Nervoso"
   ],
-  "objdescription": "O Transtorno do Déficit de Atenção e Hiperatividade (TDAH) é uma condição do neurodesenvolvimento caracterizada por padrões persistentes de desatenção e/ou hiperatividade e impulsividade que podem interferir nas atividades cotidianas. O transtorno está relacionado ao funcionamento de redes cerebrais envolvidas na atenção, controle inibitório, planejamento, memória de trabalho, motivação e regulação do comportamento. Entre as regiões estudadas estão o córtex pré-frontal, áreas do cíngulo, núcleos da base, tálamo e cerebelo. Essas estruturas funcionam de maneira integrada, formando circuitos responsáveis pelo processamento e controle de diferentes aspectos do comportamento. No modelo, algumas dessas regiões são destacadas por efeitos luminosos para representar didaticamente sua participação nas redes cerebrais relacionadas ao TDAH, sem indicar que uma única área seja responsável pelo transtorno.",
+  "objdescription": {
+    "pt-BR": "O Transtorno do Déficit de Atenção e Hiperatividade (TDAH) é uma condição do neurodesenvolvimento caracterizada por padrões persistentes de desatenção e/ou hiperatividade e impulsividade que podem interferir nas atividades cotidianas. O transtorno está relacionado ao funcionamento de redes cerebrais envolvidas na atenção, controle inibitório, planejamento, memória de trabalho, motivação e regulação do comportamento. Entre as regiões estudadas estão o córtex pré-frontal, áreas do cíngulo, núcleos da base, tálamo e cerebelo. Essas estruturas funcionam de maneira integrada, formando circuitos responsáveis pelo processamento e controle de diferentes aspectos do comportamento. No modelo, algumas dessas regiões são destacadas por efeitos luminosos para representar didaticamente sua participação nas redes cerebrais relacionadas ao TDAH, sem indicar que uma única área seja responsável pelo transtorno.",
+    "en": "Attention-Deficit/Hyperactivity Disorder (ADHD) is a neurodevelopmental condition characterized by persistent patterns of inattention and/or hyperactivity and impulsivity that may interfere with daily activities. The disorder is associated with the functioning of brain networks involved in attention, inhibitory control, planning, working memory, motivation, and behavioral regulation. Regions studied include the prefrontal cortex, areas of the cingulate gyrus, basal ganglia, thalamus, and cerebellum. These structures function in an integrated manner, forming circuits responsible for processing and controlling different aspects of behavior. In the model, some of these regions are highlighted using lighting effects to provide an educational representation of their involvement in brain networks associated with ADHD, without suggesting that a single area is responsible for the disorder.",
+    "es": "El Trastorno por Déficit de Atención e Hiperactividad (TDAH) es una condición del neurodesarrollo caracterizada por patrones persistentes de inatención y/o hiperactividad e impulsividad que pueden interferir en las actividades cotidianas. El trastorno está relacionado con el funcionamiento de redes cerebrales involucradas en la atención, el control inhibitorio, la planificación, la memoria de trabajo, la motivación y la regulación del comportamiento. Entre las regiones estudiadas se encuentran la corteza prefrontal, áreas del cíngulo, los ganglios basales, el tálamo y el cerebelo. Estas estructuras funcionan de manera integrada, formando circuitos responsables del procesamiento y control de diferentes aspectos del comportamiento. En el modelo, algunas de estas regiones se destacan mediante efectos luminosos para representar de forma didáctica su participación en las redes cerebrales relacionadas con el TDAH, sin indicar que una sola área sea responsable del trastorno."
+  },
   "linkedModels": [
     {
       "id": "2",
-      "label": "Cérebro"
+      "label": {
+        "pt-BR": "Cérebro",
+        "en": "Brain",
+        "es": "Cerebro"
+      }
+    },
+    {
+      "id": "21",
+      "label": {
+        "pt-BR": "Sistema Nervoso",
+        "en": "Nervous System",
+        "es": "Sistema Nervioso"
+      }
+    },
+    {
+      "id": "38",
+      "label": {
+        "pt-BR": "Neurotransmissores",
+        "en": "Neurotransmitters",
+        "es": "Neurotransmisores"
+      }
+    },
+    {
+      "id": "44",
+      "label": {
+        "pt-BR": "Ansiedade",
+        "en": "Anxiety",
+        "es": "Ansiedad"
+      }
+    },
+    {
+      "id": "47",
+      "label": {
+        "pt-BR": "Via de Recompensa",
+        "en": "Reward Pathway",
+        "es": "Vía de Recompensa"
+      }
     }
   ],
   "resources": [],
-  "CerebrumL+ninteract": {
-    "objname": "Hemisfério Cerebral Esquerdo",
-    "description": ""
-  },
-  "CerebrumR+ninteract": {
-    "objname": "Hemisfério Cerebral Direito",
-    "description": ""
-  },
-  "Head+ninteract": {
-    "objname": "Hemisfério Cerebral Direito",
-    "description": ""
-  },
-  "Cingulategyrus": {
-    "objname": "Giro do Cíngulo",
-    "description": "Região cerebral envolvida na integração de informações cognitivas e emocionais, atenção, motivação e monitoramento do comportamento. Áreas do cíngulo, especialmente sua porção anterior, participam de redes de controle cognitivo e atenção investigadas no TDAH."
-  },
-  "Putamen": {
-    "objname": "Putâmen",
-    "description": "Estrutura pertencente aos núcleos da base que participa de circuitos relacionados ao controle dos movimentos, aprendizagem, formação de hábitos e seleção de ações. Suas conexões com regiões corticais integram redes cerebrais envolvidas no controle do comportamento e da atividade motora."
-  },
-  "Caudatenucleus": {
-    "objname": "Núcleo Caudado",
-    "description": "Componente dos núcleos da base conectado a regiões do córtex cerebral, incluindo áreas pré-frontais. Participa de processos relacionados à atenção, aprendizagem, seleção de ações e controle do comportamento, integrando circuitos frequentemente investigados no TDAH."
-  },
-  "Thalamus": {
-    "objname": "Tálamo",
-    "description": "Estrutura responsável pela integração e retransmissão de informações entre diferentes regiões do cérebro. Participa de circuitos relacionados à atenção, processamento de estímulos e controle cognitivo, mantendo conexões com o córtex e outras estruturas envolvidas nessas funções."
-  },
-  "Cerebellum": {
-    "objname": "Cerebelo",
-    "description": "Além de sua função conhecida na coordenação, equilíbrio e precisão dos movimentos, o cerebelo participa de redes relacionadas à atenção, percepção do tempo, aprendizagem e controle cognitivo. Diferenças em estruturas e circuitos cerebelares também são investigadas em estudos sobre o TDAH."
-  },
-  "CorPFD": {
-    "objname": "Córtex Pré-Frontal Direito",
-    "description": "Região anterior do cérebro envolvida em funções executivas, como atenção, planejamento, memória de trabalho, tomada de decisões e controle inibitório. No modelo, é destacada para representar sua participação nas redes cerebrais relacionadas à regulação da atenção e do comportamento no TDAH."
-  },
-  "CorPFE": {
-    "objname": "Córtex Pré-Frontal Esquerdo",
-    "description": "Região anterior do cérebro envolvida em funções executivas, como atenção, planejamento, memória de trabalho, tomada de decisões e controle inibitório. No modelo, é destacada para representar sua participação nas redes cerebrais relacionadas à regulação da atenção e do comportamento no TDAH."
-  },
-  "CerebrumRClone+ninteract": {
-    "objname": "Hemisfério Cerebral Direito",
-    "description": ""
-  },
-  "CerebrumLClone+ninteract": {
-    "objname": "Hemisfério Cerebral Direito",
-    "description": ""
+  "parts": {
+    "CerebrumL+ninteract": {
+      "objname": {
+        "pt-BR": "Hemisfério Cerebral Esquerdo",
+        "en": "Left Cerebral Hemisphere",
+        "es": "Hemisferio Cerebral Izquierdo"
+      },
+      "description": {
+        "pt-BR": "",
+        "en": "",
+        "es": ""
+      }
+    },
+    "CerebrumR+ninteract": {
+      "objname": {
+        "pt-BR": "Hemisfério Cerebral Direito",
+        "en": "Right Cerebral Hemisphere",
+        "es": "Hemisferio Cerebral Derecho"
+      },
+      "description": {
+        "pt-BR": "",
+        "en": "",
+        "es": ""
+      }
+    },
+    "Head+ninteract": {
+      "objname": {
+        "pt-BR": "Hemisfério Cerebral Direito",
+        "en": "Right Cerebral Hemisphere",
+        "es": "Hemisferio Cerebral Derecho"
+      },
+      "description": {
+        "pt-BR": "",
+        "en": "",
+        "es": ""
+      }
+    },
+    "Cingulategyrus": {
+      "objname": {
+        "pt-BR": "Giro do Cíngulo",
+        "en": "Cingulate Gyrus",
+        "es": "Giro del Cíngulo"
+      },
+      "description": {
+        "pt-BR": "Região cerebral envolvida na integração de informações cognitivas e emocionais, atenção, motivação e monitoramento do comportamento. Áreas do cíngulo, especialmente sua porção anterior, participam de redes de controle cognitivo e atenção investigadas no TDAH.",
+        "en": "Brain region involved in integrating cognitive and emotional information, attention, motivation, and behavioral monitoring. Areas of the cingulate gyrus, particularly its anterior portion, participate in cognitive control and attention networks investigated in ADHD.",
+        "es": "Región cerebral involucrada en la integración de información cognitiva y emocional, la atención, la motivación y la supervisión del comportamiento. Las áreas del cíngulo, especialmente su porción anterior, participan en redes de control cognitivo y atención investigadas en el TDAH."
+      }
+    },
+    "Putamen": {
+      "objname": {
+        "pt-BR": "Putâmen",
+        "en": "Putamen",
+        "es": "Putamen"
+      },
+      "description": {
+        "pt-BR": "Estrutura pertencente aos núcleos da base que participa de circuitos relacionados ao controle dos movimentos, aprendizagem, formação de hábitos e seleção de ações. Suas conexões com regiões corticais integram redes cerebrais envolvidas no controle do comportamento e da atividade motora.",
+        "en": "Structure belonging to the basal ganglia that participates in circuits associated with movement control, learning, habit formation, and action selection. Its connections with cortical regions form part of brain networks involved in controlling behavior and motor activity.",
+        "es": "Estructura perteneciente a los ganglios basales que participa en circuitos relacionados con el control de los movimientos, el aprendizaje, la formación de hábitos y la selección de acciones. Sus conexiones con regiones corticales forman parte de redes cerebrales involucradas en el control del comportamiento y de la actividad motora."
+      }
+    },
+    "Caudatenucleus": {
+      "objname": {
+        "pt-BR": "Núcleo Caudado",
+        "en": "Caudate Nucleus",
+        "es": "Núcleo Caudado"
+      },
+      "description": {
+        "pt-BR": "Componente dos núcleos da base conectado a regiões do córtex cerebral, incluindo áreas pré-frontais. Participa de processos relacionados à atenção, aprendizagem, seleção de ações e controle do comportamento, integrando circuitos frequentemente investigados no TDAH.",
+        "en": "Component of the basal ganglia connected to regions of the cerebral cortex, including prefrontal areas. It participates in processes associated with attention, learning, action selection, and behavioral control, forming part of circuits frequently investigated in ADHD.",
+        "es": "Componente de los ganglios basales conectado a regiones de la corteza cerebral, incluidas áreas prefrontales. Participa en procesos relacionados con la atención, el aprendizaje, la selección de acciones y el control del comportamiento, formando parte de circuitos frecuentemente investigados en el TDAH."
+      }
+    },
+    "Thalamus": {
+      "objname": {
+        "pt-BR": "Tálamo",
+        "en": "Thalamus",
+        "es": "Tálamo"
+      },
+      "description": {
+        "pt-BR": "Estrutura responsável pela integração e retransmissão de informações entre diferentes regiões do cérebro. Participa de circuitos relacionados à atenção, processamento de estímulos e controle cognitivo, mantendo conexões com o córtex e outras estruturas envolvidas nessas funções.",
+        "en": "Structure responsible for integrating and relaying information between different regions of the brain. It participates in circuits associated with attention, stimulus processing, and cognitive control, maintaining connections with the cerebral cortex and other structures involved in these functions.",
+        "es": "Estructura responsable de la integración y retransmisión de información entre diferentes regiones del cerebro. Participa en circuitos relacionados con la atención, el procesamiento de estímulos y el control cognitivo, manteniendo conexiones con la corteza cerebral y otras estructuras involucradas en estas funciones."
+      }
+    },
+    "Cerebellum": {
+      "objname": {
+        "pt-BR": "Cerebelo",
+        "en": "Cerebellum",
+        "es": "Cerebelo"
+      },
+      "description": {
+        "pt-BR": "Além de sua função conhecida na coordenação, equilíbrio e precisão dos movimentos, o cerebelo participa de redes relacionadas à atenção, percepção do tempo, aprendizagem e controle cognitivo. Diferenças em estruturas e circuitos cerebelares também são investigadas em estudos sobre o TDAH.",
+        "en": "In addition to its well-known role in movement coordination, balance, and precision, the cerebellum participates in networks associated with attention, time perception, learning, and cognitive control. Differences in cerebellar structures and circuits are also investigated in studies on ADHD.",
+        "es": "Además de su función conocida en la coordinación, el equilibrio y la precisión de los movimientos, el cerebelo participa en redes relacionadas con la atención, la percepción del tiempo, el aprendizaje y el control cognitivo. Las diferencias en las estructuras y los circuitos cerebelosos también se investigan en estudios sobre el TDAH."
+      }
+    },
+    "CorPFD": {
+      "objname": {
+        "pt-BR": "Córtex Pré-Frontal Direito",
+        "en": "Right Prefrontal Cortex",
+        "es": "Corteza Prefrontal Derecha"
+      },
+      "description": {
+        "pt-BR": "Região anterior do cérebro envolvida em funções executivas, como atenção, planejamento, memória de trabalho, tomada de decisões e controle inibitório. No modelo, é destacada para representar sua participação nas redes cerebrais relacionadas à regulação da atenção e do comportamento no TDAH.",
+        "en": "Anterior region of the brain involved in executive functions such as attention, planning, working memory, decision-making, and inhibitory control. In the model, it is highlighted to represent its involvement in brain networks associated with the regulation of attention and behavior in ADHD.",
+        "es": "Región anterior del cerebro involucrada en funciones ejecutivas, como la atención, la planificación, la memoria de trabajo, la toma de decisiones y el control inhibitorio. En el modelo, se destaca para representar su participación en las redes cerebrales relacionadas con la regulación de la atención y del comportamiento en el TDAH."
+      }
+    },
+    "CorPFE": {
+      "objname": {
+        "pt-BR": "Córtex Pré-Frontal Esquerdo",
+        "en": "Left Prefrontal Cortex",
+        "es": "Corteza Prefrontal Izquierda"
+      },
+      "description": {
+        "pt-BR": "Região anterior do cérebro envolvida em funções executivas, como atenção, planejamento, memória de trabalho, tomada de decisões e controle inibitório. No modelo, é destacada para representar sua participação nas redes cerebrais relacionadas à regulação da atenção e do comportamento no TDAH.",
+        "en": "Anterior region of the brain involved in executive functions such as attention, planning, working memory, decision-making, and inhibitory control. In the model, it is highlighted to represent its involvement in brain networks associated with the regulation of attention and behavior in ADHD.",
+        "es": "Región anterior del cerebro involucrada en funciones ejecutivas, como la atención, la planificación, la memoria de trabajo, la toma de decisiones y el control inhibitorio. En el modelo, se destaca para representar su participación en las redes cerebrales relacionadas con la regulación de la atención y del comportamiento en el TDAH."
+      }
+    },
+    "CerebrumRClone+ninteract": {
+      "objname": {
+        "pt-BR": "Hemisfério Cerebral Direito",
+        "en": "Right Cerebral Hemisphere",
+        "es": "Hemisferio Cerebral Derecho"
+      },
+      "description": {
+        "pt-BR": "",
+        "en": "",
+        "es": ""
+      }
+    },
+    "CerebrumLClone+ninteract": {
+      "objname": {
+        "pt-BR": "Hemisfério Cerebral Direito",
+        "en": "Right Cerebral Hemisphere",
+        "es": "Hemisferio Cerebral Derecho"
+      },
+      "description": {
+        "pt-BR": "",
+        "en": "",
+        "es": ""
+      }
+    }
   }
 }

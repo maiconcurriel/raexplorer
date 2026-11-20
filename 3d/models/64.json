@@ -1,58 +1,172 @@
 {
-  "objname": "Incontinência Urinária",
+  "objname": {
+    "pt-BR": "Incontinência Urinária",
+    "en": "Urinary Incontinence",
+    "es": "Incontinencia Urinaria"
+  },
   "objsystem": [
     "Urinário"
   ],
-  "objdescription": "A incontinência urinária é a perda involuntária de urina e pode ocorrer por diferentes alterações nos mecanismos responsáveis pelo armazenamento e pela eliminação urinária. O controle da micção depende da integração entre a bexiga, os esfíncteres urinários, a medula espinal, nervos periféricos e centros do encéfalo. Conforme a bexiga se enche, receptores de estiramento em sua parede enviam informações ao sistema nervoso sobre o volume urinário. Quando a micção é apropriada, circuitos nervosos coordenam a contração do músculo detrusor da bexiga e o relaxamento dos mecanismos esfincterianos, permitindo a saída da urina. Alterações nessa coordenação, hiperatividade da bexiga, comprometimento dos esfíncteres ou outras condições podem resultar em diferentes formas de incontinência. A animação representa didaticamente a comunicação nervosa envolvida no enchimento e esvaziamento da bexiga.",
+  "objdescription": {
+    "pt-BR": "A incontinência urinária é a perda involuntária de urina e pode ocorrer por diferentes alterações nos mecanismos responsáveis pelo armazenamento e pela eliminação urinária. O controle da micção depende da integração entre a bexiga, os esfíncteres urinários, a medula espinal, nervos periféricos e centros do encéfalo. Conforme a bexiga se enche, receptores de estiramento em sua parede enviam informações ao sistema nervoso sobre o volume urinário. Quando a micção é apropriada, circuitos nervosos coordenam a contração do músculo detrusor da bexiga e o relaxamento dos mecanismos esfincterianos, permitindo a saída da urina. Alterações nessa coordenação, hiperatividade da bexiga, comprometimento dos esfíncteres ou outras condições podem resultar em diferentes formas de incontinência. A animação representa didaticamente a comunicação nervosa envolvida no enchimento e esvaziamento da bexiga.",
+    "en": "Urinary incontinence is the involuntary loss of urine and may occur due to various abnormalities in the mechanisms responsible for urine storage and elimination. The control of urination depends on the integration of the bladder, urinary sphincters, spinal cord, peripheral nerves, and centers in the brain. As the bladder fills, stretch receptors in its wall send information to the nervous system about urine volume. When urination is appropriate, neural circuits coordinate the contraction of the bladder's detrusor muscle and the relaxation of sphincter mechanisms, allowing urine to be released. Disruptions in this coordination, bladder overactivity, impaired sphincter function, or other conditions may result in different forms of incontinence. The animation provides an educational representation of the neural communication involved in bladder filling and emptying.",
+    "es": "La incontinencia urinaria es la pérdida involuntaria de orina y puede ocurrir debido a diferentes alteraciones en los mecanismos responsables del almacenamiento y la eliminación de la orina. El control de la micción depende de la integración entre la vejiga, los esfínteres urinarios, la médula espinal, los nervios periféricos y los centros del encéfalo. A medida que la vejiga se llena, los receptores de estiramiento de su pared envían información al sistema nervioso sobre el volumen urinario. Cuando la micción es apropiada, los circuitos nerviosos coordinan la contracción del músculo detrusor de la vejiga y la relajación de los mecanismos esfinterianos, permitiendo la salida de la orina. Las alteraciones en esta coordinación, la hiperactividad de la vejiga, el deterioro de la función de los esfínteres u otras condiciones pueden dar lugar a diferentes formas de incontinencia. La animación representa de forma didáctica la comunicación nerviosa involucrada en el llenado y vaciado de la vejiga."
+  },
   "linkedModels": [
     {
+      "id": "1",
+      "label": {
+        "pt-BR": "Impulso Nervoso",
+        "en": "Nerve Impulse",
+        "es": "Impulso Nervioso"
+      }
+    },
+    {
       "id": "10",
-      "label": "Sistema Urinário Feminino"
+      "label": {
+        "pt-BR": "Sistema Urinário Feminino",
+        "en": "Female Urinary System",
+        "es": "Sistema Urinario Femenino"
+      }
+    },
+    {
+      "id": "12",
+      "label": {
+        "pt-BR": "Sistema Urinário Masculino",
+        "en": "Male Urinary System",
+        "es": "Sistema Urinario Masculino"
+      }
     },
     {
       "id": "21",
-      "label": "Sistema Nervoso"
+      "label": {
+        "pt-BR": "Sistema Nervoso",
+        "en": "Nervous System",
+        "es": "Sistema Nervioso"
+      }
     }
   ],
   "resources": [],
-  "Nervous001": {
-    "objname": "Sistema Nervoso",
-    "description": "Participa do controle do armazenamento e da eliminação da urina por meio de circuitos que envolvem nervos periféricos, medula espinal e centros do encéfalo. Essas estruturas recebem informações sobre o enchimento da bexiga e coordenam as respostas necessárias para manter a continência ou iniciar a micção."
-  },
-  "Signal+nisolar": {
-    "objname": "Sinal Nervoso da Micção",
-    "description": "Representação didática da comunicação entre a bexiga e o sistema nervoso. Durante o enchimento, receptores de estiramento da parede da bexiga enviam sinais sensitivos principalmente para a medula espinal sacral e para centros superiores. Durante a micção, comandos nervosos coordenam a contração da bexiga e o relaxamento dos mecanismos responsáveis pela retenção da urina."
-  },
-  "Urine+nisolar": {
-    "objname": "Urina",
-    "description": "Líquido produzido pelos rins e transportado pelos ureteres até a bexiga, onde permanece armazenado até a micção. Na animação, seu aumento de volume representa o enchimento progressivo da bexiga e seu escoamento pela uretra representa o esvaziamento vesical."
-  },
-  "Bladder": {
-    "objname": "Bexiga Urinária",
-    "description": "Órgão muscular responsável pelo armazenamento temporário da urina. Conforme seu volume aumenta, o estiramento da parede ativa receptores que enviam informações ao sistema nervoso. Durante a micção, o músculo detrusor da parede vesical se contrai para favorecer a expulsão da urina."
-  },
-  "Ureter_1Ureter_2": {
-    "objname": "Ureteres",
-    "description": "Canais musculares que transportam continuamente a urina produzida pelos rins até a bexiga por meio de movimentos peristálticos. Participam do enchimento da bexiga, mas não são responsáveis pelo mecanismo de continência urinária."
-  },
-  "Kidneyfront": {
-    "objname": "Rim - Porção Anterior",
-    "description": "O rim filtra o sangue, participa da regulação do equilíbrio de água e eletrólitos e produz a urina. A urina formada é direcionada para as vias urinárias e posteriormente transportada pelos ureteres até a bexiga."
-  },
-  "KidneyBack": {
-    "objname": "Rim - Porção Posterior",
-    "description": "Porção posterior do rim, órgão responsável pela filtração do sangue e formação da urina. É apresentada no modelo para contextualizar a origem da urina antes de seu transporte até a bexiga."
-  },
-  "Pyramids": {
-    "objname": "Pirâmides Renais",
-    "description": "Estruturas da medula renal que recebem a urina formada nos néfrons e a conduzem em direção aos cálices e à pelve renal, de onde segue para o ureter."
-  },
-  "Externalurethralsphincter": {
-    "objname": "Esfíncter Externo da Uretra",
-    "description": "Músculo que participa do controle voluntário da micção. Durante o armazenamento da urina, sua contração contribui para manter a uretra fechada. Quando a micção é voluntariamente permitida, seu relaxamento contribui para a passagem da urina pela uretra. Alterações em mecanismos de fechamento uretral podem contribuir para determinados tipos de incontinência."
-  },
-  "Urethra": {
-    "objname": "Uretra",
-    "description": "Canal responsável por conduzir a urina da bexiga para o exterior do corpo durante a micção. A manutenção adequada da continência depende, entre outros fatores, dos mecanismos musculares e nervosos que controlam o fechamento e a abertura da via urinária."
+  "parts": {
+    "Nervous001": {
+      "objname": {
+        "pt-BR": "Sistema Nervoso",
+        "en": "Nervous System",
+        "es": "Sistema Nervioso"
+      },
+      "description": {
+        "pt-BR": "Participa do controle do armazenamento e da eliminação da urina por meio de circuitos que envolvem nervos periféricos, medula espinal e centros do encéfalo. Essas estruturas recebem informações sobre o enchimento da bexiga e coordenam as respostas necessárias para manter a continência ou iniciar a micção.",
+        "en": "Participates in the control of urine storage and elimination through circuits involving peripheral nerves, the spinal cord, and centers in the brain. These structures receive information about bladder filling and coordinate the responses necessary to maintain continence or initiate urination.",
+        "es": "Participa en el control del almacenamiento y la eliminación de la orina mediante circuitos que involucran los nervios periféricos, la médula espinal y los centros del encéfalo. Estas estructuras reciben información sobre el llenado de la vejiga y coordinan las respuestas necesarias para mantener la continencia o iniciar la micción."
+      }
+    },
+    "Signal+nisolar": {
+      "objname": {
+        "pt-BR": "Sinal Nervoso da Micção",
+        "en": "Neural Signal of Urination",
+        "es": "Señal Nerviosa de la Micción"
+      },
+      "description": {
+        "pt-BR": "Representação didática da comunicação entre a bexiga e o sistema nervoso. Durante o enchimento, receptores de estiramento da parede da bexiga enviam sinais sensitivos principalmente para a medula espinal sacral e para centros superiores. Durante a micção, comandos nervosos coordenam a contração da bexiga e o relaxamento dos mecanismos responsáveis pela retenção da urina.",
+        "en": "Educational representation of communication between the bladder and the nervous system. During filling, stretch receptors in the bladder wall send sensory signals primarily to the sacral spinal cord and higher neural centers. During urination, neural commands coordinate bladder contraction and the relaxation of the mechanisms responsible for retaining urine.",
+        "es": "Representación didáctica de la comunicación entre la vejiga y el sistema nervioso. Durante el llenado, los receptores de estiramiento de la pared de la vejiga envían señales sensitivas principalmente a la médula espinal sacra y a los centros nerviosos superiores. Durante la micción, las órdenes nerviosas coordinan la contracción de la vejiga y la relajación de los mecanismos responsables de la retención de la orina."
+      }
+    },
+    "Urine+nisolar": {
+      "objname": {
+        "pt-BR": "Urina",
+        "en": "Urine",
+        "es": "Orina"
+      },
+      "description": {
+        "pt-BR": "Líquido produzido pelos rins e transportado pelos ureteres até a bexiga, onde permanece armazenado até a micção. Na animação, seu aumento de volume representa o enchimento progressivo da bexiga e seu escoamento pela uretra representa o esvaziamento vesical.",
+        "en": "Fluid produced by the kidneys and transported through the ureters to the bladder, where it remains stored until urination. In the animation, its increasing volume represents the progressive filling of the bladder, and its flow through the urethra represents bladder emptying.",
+        "es": "Líquido producido por los riñones y transportado por los uréteres hasta la vejiga, donde permanece almacenado hasta la micción. En la animación, el aumento de su volumen representa el llenado progresivo de la vejiga y su salida por la uretra representa el vaciado vesical."
+      }
+    },
+    "Bladder": {
+      "objname": {
+        "pt-BR": "Bexiga Urinária",
+        "en": "Urinary Bladder",
+        "es": "Vejiga Urinaria"
+      },
+      "description": {
+        "pt-BR": "Órgão muscular responsável pelo armazenamento temporário da urina. Conforme seu volume aumenta, o estiramento da parede ativa receptores que enviam informações ao sistema nervoso. Durante a micção, o músculo detrusor da parede vesical se contrai para favorecer a expulsão da urina.",
+        "en": "Muscular organ responsible for the temporary storage of urine. As its volume increases, stretching of the bladder wall activates receptors that send information to the nervous system. During urination, the detrusor muscle of the bladder wall contracts to facilitate the expulsion of urine.",
+        "es": "Órgano muscular responsable del almacenamiento temporal de la orina. A medida que aumenta su volumen, el estiramiento de la pared activa receptores que envían información al sistema nervioso. Durante la micción, el músculo detrusor de la pared vesical se contrae para favorecer la expulsión de la orina."
+      }
+    },
+    "Ureter_1Ureter_2": {
+      "objname": {
+        "pt-BR": "Ureteres",
+        "en": "Ureters",
+        "es": "Uréteres"
+      },
+      "description": {
+        "pt-BR": "Canais musculares que transportam continuamente a urina produzida pelos rins até a bexiga por meio de movimentos peristálticos. Participam do enchimento da bexiga, mas não são responsáveis pelo mecanismo de continência urinária.",
+        "en": "Muscular ducts that continuously transport urine produced by the kidneys to the bladder through peristaltic movements. They participate in bladder filling but are not responsible for the mechanism of urinary continence.",
+        "es": "Conductos musculares que transportan continuamente la orina producida por los riñones hasta la vejiga mediante movimientos peristálticos. Participan en el llenado de la vejiga, pero no son responsables del mecanismo de continencia urinaria."
+      }
+    },
+    "Kidneyfront": {
+      "objname": {
+        "pt-BR": "Rim - Porção Anterior",
+        "en": "Kidney - Anterior Portion",
+        "es": "Riñón - Porción Anterior"
+      },
+      "description": {
+        "pt-BR": "O rim filtra o sangue, participa da regulação do equilíbrio de água e eletrólitos e produz a urina. A urina formada é direcionada para as vias urinárias e posteriormente transportada pelos ureteres até a bexiga.",
+        "en": "The kidney filters the blood, participates in the regulation of water and electrolyte balance, and produces urine. The urine formed is directed into the urinary tract and subsequently transported through the ureters to the bladder.",
+        "es": "El riñón filtra la sangre, participa en la regulación del equilibrio de agua y electrolitos y produce la orina. La orina formada se dirige hacia las vías urinarias y posteriormente es transportada por los uréteres hasta la vejiga."
+      }
+    },
+    "KidneyBack": {
+      "objname": {
+        "pt-BR": "Rim - Porção Posterior",
+        "en": "Kidney - Posterior Portion",
+        "es": "Riñón - Porción Posterior"
+      },
+      "description": {
+        "pt-BR": "Porção posterior do rim, órgão responsável pela filtração do sangue e formação da urina. É apresentada no modelo para contextualizar a origem da urina antes de seu transporte até a bexiga.",
+        "en": "Posterior portion of the kidney, an organ responsible for blood filtration and urine formation. It is presented in the model to provide context for the origin of urine before its transport to the bladder.",
+        "es": "Porción posterior del riñón, órgano responsable de la filtración de la sangre y la formación de la orina. Se presenta en el modelo para contextualizar el origen de la orina antes de su transporte hasta la vejiga."
+      }
+    },
+    "Pyramids": {
+      "objname": {
+        "pt-BR": "Pirâmides Renais",
+        "en": "Renal Pyramids",
+        "es": "Pirámides Renales"
+      },
+      "description": {
+        "pt-BR": "Estruturas da medula renal que recebem a urina formada nos néfrons e a conduzem em direção aos cálices e à pelve renal, de onde segue para o ureter.",
+        "en": "Structures of the renal medulla that receive urine formed in the nephrons and convey it toward the renal calyces and renal pelvis, from where it passes into the ureter.",
+        "es": "Estructuras de la médula renal que reciben la orina formada en las nefronas y la conducen hacia los cálices y la pelvis renal, desde donde continúa hacia el uréter."
+      }
+    },
+    "Externalurethralsphincter": {
+      "objname": {
+        "pt-BR": "Esfíncter Externo da Uretra",
+        "en": "External Urethral Sphincter",
+        "es": "Esfínter Externo de la Uretra"
+      },
+      "description": {
+        "pt-BR": "Músculo que participa do controle voluntário da micção. Durante o armazenamento da urina, sua contração contribui para manter a uretra fechada. Quando a micção é voluntariamente permitida, seu relaxamento contribui para a passagem da urina pela uretra. Alterações em mecanismos de fechamento uretral podem contribuir para determinados tipos de incontinência.",
+        "en": "Muscle involved in the voluntary control of urination. During urine storage, its contraction helps keep the urethra closed. When urination is voluntarily permitted, its relaxation facilitates the passage of urine through the urethra. Impairments in urethral closure mechanisms may contribute to certain types of incontinence.",
+        "es": "Músculo que participa en el control voluntario de la micción. Durante el almacenamiento de la orina, su contracción contribuye a mantener la uretra cerrada. Cuando la micción se permite voluntariamente, su relajación facilita el paso de la orina por la uretra. Las alteraciones en los mecanismos de cierre uretral pueden contribuir a determinados tipos de incontinencia."
+      }
+    },
+    "Urethra": {
+      "objname": {
+        "pt-BR": "Uretra",
+        "en": "Urethra",
+        "es": "Uretra"
+      },
+      "description": {
+        "pt-BR": "Canal responsável por conduzir a urina da bexiga para o exterior do corpo durante a micção. A manutenção adequada da continência depende, entre outros fatores, dos mecanismos musculares e nervosos que controlam o fechamento e a abertura da via urinária.",
+        "en": "Duct responsible for carrying urine from the bladder to the outside of the body during urination. Proper maintenance of continence depends, among other factors, on the muscular and neural mechanisms that control the closure and opening of the urinary outlet.",
+        "es": "Conducto responsable de transportar la orina desde la vejiga hacia el exterior del cuerpo durante la micción. El mantenimiento adecuado de la continencia depende, entre otros factores, de los mecanismos musculares y nerviosos que controlan el cierre y la apertura de la vía de salida urinaria."
+      }
+    }
   }
 }

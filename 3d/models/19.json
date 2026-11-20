@@ -1,63 +1,292 @@
 {
-  "objname": "Sistema Arterial",
-  "objsystem": "Circulatório",
-  "objdescription": "Conjunto de artérias responsável por transportar o sangue do coração para os diferentes tecidos e órgãos do corpo. O sistema arterial distribui sangue rico em oxigênio pela circulação sistêmica e participa da circulação pulmonar, conduzindo o sangue até os pulmões para as trocas gasosas. Suas ramificações formam uma extensa rede vascular que garante o fornecimento de oxigênio e nutrientes e auxilia na manutenção da pressão e do fluxo sanguíneo.",
+  "objname": {
+    "pt-BR": "Sistema Arterial",
+    "en": "Arterial System",
+    "es": "Sistema Arterial"
+  },
+  "objsystem": [
+    "Circulatório"
+  ],
+  "objdescription": {
+    "pt-BR": "Conjunto de artérias responsável por transportar o sangue do coração para os diferentes tecidos e órgãos do corpo. O sistema arterial distribui sangue rico em oxigênio pela circulação sistêmica e participa da circulação pulmonar, conduzindo o sangue até os pulmões para as trocas gasosas. Suas ramificações formam uma extensa rede vascular que garante o fornecimento de oxigênio e nutrientes e auxilia na manutenção da pressão e do fluxo sanguíneo.",
+    "en": "Network of arteries responsible for transporting blood from the heart to the different tissues and organs of the body. The arterial system distributes oxygen-rich blood through the systemic circulation and participates in the pulmonary circulation, carrying blood to the lungs for gas exchange. Its branches form an extensive vascular network that ensures the supply of oxygen and nutrients and helps maintain blood pressure and blood flow.",
+    "es": "Conjunto de arterias responsable de transportar la sangre desde el corazón hacia los diferentes tejidos y órganos del cuerpo. El sistema arterial distribuye sangre rica en oxígeno a través de la circulación sistémica y participa en la circulación pulmonar, conduciendo la sangre hacia los pulmones para el intercambio gaseoso. Sus ramificaciones forman una extensa red vascular que garantiza el suministro de oxígeno y nutrientes y contribuye al mantenimiento de la presión y del flujo sanguíneo."
+  },
   "linkedModels": [
     {
       "id": "4",
-      "label": "Coração"
-    },{
+      "label": {
+        "pt-BR": "Coração",
+        "en": "Heart",
+        "es": "Corazón"
+      }
+    },
+    {
+      "id": "5",
+      "label": {
+        "pt-BR": "Coração (Animado)",
+        "en": "Heart (Animated)",
+        "es": "Corazón (Animado)"
+      }
+    },
+    {
       "id": "20",
-      "label": "Sistema Venoso"
+      "label": {
+        "pt-BR": "Sistema Venoso",
+        "en": "Venous System",
+        "es": "Sistema Venoso"
+      }
+    },
+    {
+      "id": "29",
+      "label": {
+        "pt-BR": "Anatomia Corpo Feminino",
+        "en": "Female Body Anatomy",
+        "es": "Anatomía del Cuerpo Femenino"
+      }
+    },
+    {
+      "id": "30",
+      "label": {
+        "pt-BR": "Anatomia Corpo Masculino",
+        "en": "Male Body Anatomy",
+        "es": "Anatomía del Cuerpo Masculino"
+      }
+    },
+    {
+      "id": "32",
+      "label": {
+        "pt-BR": "Sistema Cardiovascular",
+        "en": "Cardiovascular System",
+        "es": "Sistema Cardiovascular"
+      }
+    },
+    {
+      "id": "36",
+      "label": {
+        "pt-BR": "AVC Isquêmico",
+        "en": "Ischemic Stroke",
+        "es": "Accidente Cerebrovascular Isquémico"
+      }
+    },
+    {
+      "id": "37",
+      "label": {
+        "pt-BR": "AVC Hemorrágico",
+        "en": "Hemorrhagic Stroke",
+        "es": "Accidente Cerebrovascular Hemorrágico"
+      }
+    },
+    {
+      "id": "46",
+      "label": {
+        "pt-BR": "Artéria",
+        "en": "Artery",
+        "es": "Arteria"
+      }
+    },
+    {
+      "id": "55",
+      "label": {
+        "pt-BR": "Ablação Septal com Álcool",
+        "en": "Alcohol Septal Ablation",
+        "es": "Ablación Septal con Alcohol"
+      }
+    },
+    {
+      "id": "56",
+      "label": {
+        "pt-BR": "Infarto do Miocárdio",
+        "en": "Myocardial Infarction",
+        "es": "Infarto de Miocardio"
+      }
+    },
+    {
+      "id": "57",
+      "label": {
+        "pt-BR": "Aterosclerose",
+        "en": "Atherosclerosis",
+        "es": "Aterosclerosis"
+      }
+    },
+    {
+      "id": "58",
+      "label": {
+        "pt-BR": "Anticoagulantes",
+        "en": "Anticoagulants",
+        "es": "Anticoagulantes"
+      }
+    },
+    {
+      "id": "71",
+      "label": {
+        "pt-BR": "Pressão Arterial",
+        "en": "Blood Pressure",
+        "es": "Presión Arterial"
+      }
+    },
+    {
+      "id": "92",
+      "label": {
+        "pt-BR": "Linfedema",
+        "en": "Lymphedema",
+        "es": "Linfedema"
+      }
+    },
+    {
+      "id": "100",
+      "label": {
+        "pt-BR": "Desenvolvimento de Necrose no Pé Diabético",
+        "en": "Development of Necrosis in the Diabetic Foot",
+        "es": "Desarrollo de Necrosis en el Pie Diabético"
+      }
     }
   ],
   "resources": [],
-  "UpperLimbArteries": {
-    "objname": "Artérias dos Membros Superiores",
-    "description": "Conjunto de artérias que irrigam os membros superiores, incluindo regiões do ombro, braço, antebraço e mão. Essas artérias conduzem sangue aos músculos, ossos, articulações e demais tecidos dos membros superiores."
-  },
-  "ThoraxArteries": {
-    "objname": "Artérias do Tórax",
-    "description": "Conjunto de artérias responsáveis pela irrigação das estruturas do tórax, incluindo a parede torácica e órgãos torácicos. São originadas principalmente da aorta torácica e de seus principais ramos."
-  },
-  "PulmonarySuperiorArteries": {
-    "objname": "Artérias Pulmonares Superiores",
-    "description": "Ramos arteriais destinados às regiões superiores dos pulmões. Participam da circulação pulmonar, conduzindo sangue do coração em direção aos pulmões para realização das trocas gasosas."
-  },
-  "PulmonaryInferiorArteries": {
-    "objname": "Artérias Pulmonares Inferiores",
-    "description": "Ramos arteriais destinados às regiões inferiores dos pulmões. Fazem parte da circulação pulmonar e conduzem sangue aos tecidos pulmonares para as trocas de oxigênio e dióxido de carbono."
-  },
-  "PelvisArteries": {
-    "objname": "Artérias da Pelve",
-    "description": "Conjunto de artérias responsáveis pela irrigação da pelve e de suas estruturas, incluindo órgãos pélvicos, músculos, ossos e tecidos adjacentes. Grande parte desses vasos deriva das artérias ilíacas internas e de seus ramos."
-  },
-  "LowerLimbArteries": {
-    "objname": "Artérias dos Membros Inferiores",
-    "description": "Conjunto de artérias que irrigam os membros inferiores, incluindo quadril, coxa, perna e pé. Essas artérias fornecem sangue aos músculos, ossos, articulações e demais tecidos dos membros inferiores."
-  },
-  "LiverArteries": {
-    "objname": "Artérias do Fígado",
-    "description": "Conjunto de vasos arteriais responsáveis pelo suprimento de sangue oxigenado ao fígado. A principal fonte de irrigação arterial hepática é a artéria hepática própria, que se ramifica no interior do órgão."
-  },
-  "KidneyArteries": {
-    "objname": "Artérias Renais",
-    "description": "Artérias responsáveis pelo suprimento sanguíneo dos rins. As artérias renais geralmente se originam diretamente da aorta abdominal e se dividem em diversos ramos antes de penetrar e distribuir sangue pelo tecido renal."
-  },
-  "HeadNeckArteries": {
-    "objname": "Artérias da Cabeça e do Pescoço",
-    "description": "Conjunto de artérias responsáveis pela irrigação da cabeça, face, pescoço e estruturas associadas. Entre os principais vasos estão as artérias carótidas e vertebrais, que fornecem sangue ao encéfalo e aos tecidos da região."
-  },
-  "GutArteries": {
-    "objname": "Artérias do Trato Gastrointestinal",
-    "description": "Conjunto de artérias responsáveis pela irrigação dos órgãos do sistema digestório. Seus principais vasos originam-se da aorta abdominal e incluem os troncos e artérias que irrigam o estômago, intestinos, pâncreas, baço e outras estruturas relacionadas."
-  },
-  "AorticArteries": {
-    "objname": "Artérias da Aorta",
-    "description": "Conjunto de grandes artérias e ramos que se originam da aorta, principal artéria do corpo. A aorta distribui o sangue bombeado pelo ventrículo esquerdo para a circulação sistêmica por meio de seus diferentes segmentos e ramificações."
-  },
-  "AbdomenAortaAbdominalisArteries": {
-    "objname": "Artérias da Aorta Abdominal",
-    "description": "Conjunto de artérias originadas da aorta abdominal que irrigam estruturas do abdome, pelve e membros inferiores. Inclui ramos destinados aos órgãos digestórios, rins, glândulas suprarrenais, gônadas, parede abdominal e demais estruturas da região."
+  "parts": {
+    "UpperLimbArteries": {
+      "objname": {
+        "pt-BR": "Artérias dos Membros Superiores",
+        "en": "Arteries of the Upper Limbs",
+        "es": "Arterias de los Miembros Superiores"
+      },
+      "description": {
+        "pt-BR": "Conjunto de artérias que irrigam os membros superiores, incluindo regiões do ombro, braço, antebraço e mão. Essas artérias conduzem sangue aos músculos, ossos, articulações e demais tecidos dos membros superiores.",
+        "en": "Group of arteries that supply blood to the upper limbs, including the shoulder, arm, forearm, and hand regions. These arteries carry blood to the muscles, bones, joints, and other tissues of the upper limbs.",
+        "es": "Conjunto de arterias que irrigan los miembros superiores, incluidas las regiones del hombro, brazo, antebrazo y mano. Estas arterias conducen la sangre hacia los músculos, huesos, articulaciones y demás tejidos de los miembros superiores."
+      }
+    },
+    "ThoraxArteries": {
+      "objname": {
+        "pt-BR": "Artérias do Tórax",
+        "en": "Thoracic Arteries",
+        "es": "Arterias del Tórax"
+      },
+      "description": {
+        "pt-BR": "Conjunto de artérias responsáveis pela irrigação das estruturas do tórax, incluindo a parede torácica e órgãos torácicos. São originadas principalmente da aorta torácica e de seus principais ramos.",
+        "en": "Group of arteries responsible for supplying blood to the structures of the thorax, including the thoracic wall and thoracic organs. They originate primarily from the thoracic aorta and its main branches.",
+        "es": "Conjunto de arterias responsables de la irrigación de las estructuras del tórax, incluida la pared torácica y los órganos torácicos. Se originan principalmente en la aorta torácica y sus ramas principales."
+      }
+    },
+    "PulmonarySuperiorArteries": {
+      "objname": {
+        "pt-BR": "Artérias Pulmonares Superiores",
+        "en": "Superior Pulmonary Arteries",
+        "es": "Arterias Pulmonares Superiores"
+      },
+      "description": {
+        "pt-BR": "Ramos arteriais destinados às regiões superiores dos pulmões. Participam da circulação pulmonar, conduzindo sangue do coração em direção aos pulmões para realização das trocas gasosas.",
+        "en": "Arterial branches that supply the upper regions of the lungs. They participate in the pulmonary circulation, carrying blood from the heart to the lungs for gas exchange.",
+        "es": "Ramas arteriales destinadas a las regiones superiores de los pulmones. Participan en la circulación pulmonar, conduciendo la sangre desde el corazón hacia los pulmones para realizar el intercambio gaseoso."
+      }
+    },
+    "PulmonaryInferiorArteries": {
+      "objname": {
+        "pt-BR": "Artérias Pulmonares Inferiores",
+        "en": "Inferior Pulmonary Arteries",
+        "es": "Arterias Pulmonares Inferiores"
+      },
+      "description": {
+        "pt-BR": "Ramos arteriais destinados às regiões inferiores dos pulmões. Fazem parte da circulação pulmonar e conduzem sangue aos tecidos pulmonares para as trocas de oxigênio e dióxido de carbono.",
+        "en": "Arterial branches that supply the lower regions of the lungs. They are part of the pulmonary circulation and carry blood to the lung tissues for the exchange of oxygen and carbon dioxide.",
+        "es": "Ramas arteriales destinadas a las regiones inferiores de los pulmones. Forman parte de la circulación pulmonar y conducen la sangre hacia los tejidos pulmonares para el intercambio de oxígeno y dióxido de carbono."
+      }
+    },
+    "PelvisArteries": {
+      "objname": {
+        "pt-BR": "Artérias da Pelve",
+        "en": "Pelvic Arteries",
+        "es": "Arterias de la Pelvis"
+      },
+      "description": {
+        "pt-BR": "Conjunto de artérias responsáveis pela irrigação da pelve e de suas estruturas, incluindo órgãos pélvicos, músculos, ossos e tecidos adjacentes. Grande parte desses vasos deriva das artérias ilíacas internas e de seus ramos.",
+        "en": "Group of arteries responsible for supplying blood to the pelvis and its structures, including pelvic organs, muscles, bones, and adjacent tissues. A large proportion of these vessels originates from the internal iliac arteries and their branches.",
+        "es": "Conjunto de arterias responsables de la irrigación de la pelvis y sus estructuras, incluidos los órganos pélvicos, músculos, huesos y tejidos adyacentes. Gran parte de estos vasos deriva de las arterias ilíacas internas y sus ramas."
+      }
+    },
+    "LowerLimbArteries": {
+      "objname": {
+        "pt-BR": "Artérias dos Membros Inferiores",
+        "en": "Arteries of the Lower Limbs",
+        "es": "Arterias de los Miembros Inferiores"
+      },
+      "description": {
+        "pt-BR": "Conjunto de artérias que irrigam os membros inferiores, incluindo quadril, coxa, perna e pé. Essas artérias fornecem sangue aos músculos, ossos, articulações e demais tecidos dos membros inferiores.",
+        "en": "Group of arteries that supply blood to the lower limbs, including the hip, thigh, leg, and foot. These arteries provide blood to the muscles, bones, joints, and other tissues of the lower limbs.",
+        "es": "Conjunto de arterias que irrigan los miembros inferiores, incluidos la cadera, el muslo, la pierna y el pie. Estas arterias suministran sangre a los músculos, huesos, articulaciones y demás tejidos de los miembros inferiores."
+      }
+    },
+    "LiverArteries": {
+      "objname": {
+        "pt-BR": "Artérias do Fígado",
+        "en": "Hepatic Arteries",
+        "es": "Arterias Hepáticas"
+      },
+      "description": {
+        "pt-BR": "Conjunto de vasos arteriais responsáveis pelo suprimento de sangue oxigenado ao fígado. A principal fonte de irrigação arterial hepática é a artéria hepática própria, que se ramifica no interior do órgão.",
+        "en": "Group of arterial vessels responsible for supplying oxygenated blood to the liver. The main source of hepatic arterial blood supply is the proper hepatic artery, which branches within the organ.",
+        "es": "Conjunto de vasos arteriales responsables del suministro de sangre oxigenada al hígado. La principal fuente de irrigación arterial hepática es la arteria hepática propia, que se ramifica en el interior del órgano."
+      }
+    },
+    "KidneyArteries": {
+      "objname": {
+        "pt-BR": "Artérias Renais",
+        "en": "Renal Arteries",
+        "es": "Arterias Renales"
+      },
+      "description": {
+        "pt-BR": "Artérias responsáveis pelo suprimento sanguíneo dos rins. As artérias renais geralmente se originam diretamente da aorta abdominal e se dividem em diversos ramos antes de penetrar e distribuir sangue pelo tecido renal.",
+        "en": "Arteries responsible for supplying blood to the kidneys. The renal arteries generally originate directly from the abdominal aorta and divide into several branches before entering and distributing blood throughout the renal tissue.",
+        "es": "Arterias responsables del suministro sanguíneo de los riñones. Las arterias renales generalmente se originan directamente en la aorta abdominal y se dividen en diversas ramas antes de penetrar y distribuir la sangre por el tejido renal."
+      }
+    },
+    "HeadNeckArteries": {
+      "objname": {
+        "pt-BR": "Artérias da Cabeça e do Pescoço",
+        "en": "Arteries of the Head and Neck",
+        "es": "Arterias de la Cabeza y del Cuello"
+      },
+      "description": {
+        "pt-BR": "Conjunto de artérias responsáveis pela irrigação da cabeça, face, pescoço e estruturas associadas. Entre os principais vasos estão as artérias carótidas e vertebrais, que fornecem sangue ao encéfalo e aos tecidos da região.",
+        "en": "Group of arteries responsible for supplying blood to the head, face, neck, and associated structures. The main vessels include the carotid and vertebral arteries, which supply blood to the brain and the tissues of the region.",
+        "es": "Conjunto de arterias responsables de la irrigación de la cabeza, la cara, el cuello y las estructuras asociadas. Entre los principales vasos se encuentran las arterias carótidas y vertebrales, que suministran sangre al encéfalo y a los tejidos de la región."
+      }
+    },
+    "GutArteries": {
+      "objname": {
+        "pt-BR": "Artérias do Trato Gastrointestinal",
+        "en": "Arteries of the Gastrointestinal Tract",
+        "es": "Arterias del Tracto Gastrointestinal"
+      },
+      "description": {
+        "pt-BR": "Conjunto de artérias responsáveis pela irrigação dos órgãos do sistema digestório. Seus principais vasos originam-se da aorta abdominal e incluem os troncos e artérias que irrigam o estômago, intestinos, pâncreas, baço e outras estruturas relacionadas.",
+        "en": "Group of arteries responsible for supplying blood to the organs of the digestive system. Its main vessels originate from the abdominal aorta and include the arterial trunks and arteries that supply the stomach, intestines, pancreas, spleen, and other related structures.",
+        "es": "Conjunto de arterias responsables de la irrigación de los órganos del sistema digestivo. Sus principales vasos se originan en la aorta abdominal e incluyen los troncos arteriales y las arterias que irrigan el estómago, los intestinos, el páncreas, el bazo y otras estructuras relacionadas."
+      }
+    },
+    "AorticArteries": {
+      "objname": {
+        "pt-BR": "Artérias da Aorta",
+        "en": "Aortic Arteries",
+        "es": "Arterias de la Aorta"
+      },
+      "description": {
+        "pt-BR": "Conjunto de grandes artérias e ramos que se originam da aorta, principal artéria do corpo. A aorta distribui o sangue bombeado pelo ventrículo esquerdo para a circulação sistêmica por meio de seus diferentes segmentos e ramificações.",
+        "en": "Group of large arteries and branches that originate from the aorta, the main artery of the body. The aorta distributes blood pumped by the left ventricle into the systemic circulation through its various segments and branches.",
+        "es": "Conjunto de grandes arterias y ramas que se originan en la aorta, la principal arteria del cuerpo. La aorta distribuye la sangre bombeada por el ventrículo izquierdo hacia la circulación sistémica a través de sus diferentes segmentos y ramificaciones."
+      }
+    },
+    "AbdomenAortaAbdominalisArteries": {
+      "objname": {
+        "pt-BR": "Artérias da Aorta Abdominal",
+        "en": "Arteries of the Abdominal Aorta",
+        "es": "Arterias de la Aorta Abdominal"
+      },
+      "description": {
+        "pt-BR": "Conjunto de artérias originadas da aorta abdominal que irrigam estruturas do abdome, pelve e membros inferiores. Inclui ramos destinados aos órgãos digestórios, rins, glândulas suprarrenais, gônadas, parede abdominal e demais estruturas da região.",
+        "en": "Group of arteries originating from the abdominal aorta that supply blood to structures of the abdomen, pelvis, and lower limbs. It includes branches supplying the digestive organs, kidneys, adrenal glands, gonads, abdominal wall, and other structures of the region.",
+        "es": "Conjunto de arterias originadas en la aorta abdominal que irrigan estructuras del abdomen, la pelvis y los miembros inferiores. Incluye ramas destinadas a los órganos digestivos, los riñones, las glándulas suprarrenales, las gónadas, la pared abdominal y demás estructuras de la región."
+      }
+    }
   }
 }

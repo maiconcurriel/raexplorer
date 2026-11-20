@@ -1,66 +1,244 @@
 {
-  "objname": "Pressão Arterial",
+  "objname": {
+    "pt-BR": "Pressão Arterial",
+    "en": "Blood Pressure",
+    "es": "Presión Arterial"
+  },
   "objsystem": [
     "Cardiovascular"
   ],
-  "objdescription": "A pressão arterial é a força exercida pelo sangue sobre as paredes das artérias durante sua circulação pelo organismo. Ela varia ao longo do ciclo cardíaco, atingindo valores mais elevados durante a sístole, quando os ventrículos se contraem, e menores durante a diástole, quando relaxam. Sua regulação depende de fatores como o débito cardíaco, a resistência dos vasos sanguíneos e a elasticidade das paredes arteriais. A musculatura lisa presente nas artérias pode contrair-se ou relaxar, modificando o calibre vascular e influenciando a resistência ao fluxo sanguíneo. A animação apresenta um corte longitudinal de uma artéria, demonstrando didaticamente as alterações de seu diâmetro e a movimentação das hemácias, permitindo observar a relação entre a estrutura arterial, o fluxo sanguíneo e os mecanismos que influenciam a pressão arterial.",
+  "objdescription": {
+    "pt-BR": "A pressão arterial é a força exercida pelo sangue sobre as paredes das artérias durante sua circulação pelo organismo. Ela varia ao longo do ciclo cardíaco, atingindo valores mais elevados durante a sístole, quando os ventrículos se contraem, e menores durante a diástole, quando relaxam. Sua regulação depende de fatores como o débito cardíaco, a resistência dos vasos sanguíneos e a elasticidade das paredes arteriais. A musculatura lisa presente nas artérias pode contrair-se ou relaxar, modificando o calibre vascular e influenciando a resistência ao fluxo sanguíneo. A animação apresenta um corte longitudinal de uma artéria, demonstrando didaticamente as alterações de seu diâmetro e a movimentação das hemácias, permitindo observar a relação entre a estrutura arterial, o fluxo sanguíneo e os mecanismos que influenciam a pressão arterial.",
+    "en": "Blood pressure is the force exerted by the blood against the arterial walls as it circulates throughout the body. It varies throughout the cardiac cycle, reaching higher values during systole, when the ventricles contract, and lower values during diastole, when they relax. Its regulation depends on factors such as cardiac output, blood vessel resistance, and the elasticity of arterial walls. The smooth muscle present in the arteries can contract or relax, modifying vascular diameter and influencing resistance to blood flow. The animation presents a longitudinal section of an artery, demonstrating changes in its diameter and the movement of red blood cells for educational purposes, allowing observation of the relationship between arterial structure, blood flow, and the mechanisms that influence blood pressure.",
+    "es": "La presión arterial es la fuerza ejercida por la sangre sobre las paredes de las arterias durante su circulación por el organismo. Varía a lo largo del ciclo cardíaco, alcanzando valores más elevados durante la sístole, cuando los ventrículos se contraen, y menores durante la diástole, cuando se relajan. Su regulación depende de factores como el gasto cardíaco, la resistencia de los vasos sanguíneos y la elasticidad de las paredes arteriales. La musculatura lisa presente en las arterias puede contraerse o relajarse, modificando el calibre vascular e influyendo en la resistencia al flujo sanguíneo. La animación presenta un corte longitudinal de una arteria, demostrando de forma didáctica las alteraciones de su diámetro y el movimiento de los eritrocitos, lo que permite observar la relación entre la estructura arterial, el flujo sanguíneo y los mecanismos que influyen en la presión arterial."
+  },
   "linkedModels": [
     {
-      "id": "46",
-      "label": "Artéria"
+      "id": "4",
+      "label": {
+        "pt-BR": "Coração",
+        "en": "Heart",
+        "es": "Corazón"
+      }
+    },
+    {
+      "id": "5",
+      "label": {
+        "pt-BR": "Coração (Animado)",
+        "en": "Heart (Animated)",
+        "es": "Corazón (Animado)"
+      }
+    },
+    {
+      "id": "19",
+      "label": {
+        "pt-BR": "Sistema Arterial",
+        "en": "Arterial System",
+        "es": "Sistema Arterial"
+      }
     },
     {
       "id": "32",
-      "label": "Sistema Cardiovascular"
+      "label": {
+        "pt-BR": "Sistema Cardiovascular",
+        "en": "Cardiovascular System",
+        "es": "Sistema Cardiovascular"
+      }
+    },
+    {
+      "id": "36",
+      "label": {
+        "pt-BR": "AVC Isquêmico",
+        "en": "Ischemic Stroke",
+        "es": "Accidente Cerebrovascular Isquémico"
+      }
+    },
+    {
+      "id": "37",
+      "label": {
+        "pt-BR": "AVC Hemorrágico",
+        "en": "Hemorrhagic Stroke",
+        "es": "Accidente Cerebrovascular Hemorrágico"
+      }
+    },
+    {
+      "id": "46",
+      "label": {
+        "pt-BR": "Artéria",
+        "en": "Artery",
+        "es": "Arteria"
+      }
+    },
+    {
+      "id": "56",
+      "label": {
+        "pt-BR": "Infarto do Miocárdio",
+        "en": "Myocardial Infarction",
+        "es": "Infarto de Miocardio"
+      }
+    },
+    {
+      "id": "57",
+      "label": {
+        "pt-BR": "Aterosclerose",
+        "en": "Atherosclerosis",
+        "es": "Aterosclerosis"
+      }
+    },
+    {
+      "id": "65",
+      "label": {
+        "pt-BR": "Insuficiência Renal",
+        "en": "Renal Insufficiency",
+        "es": "Insuficiencia Renal"
+      }
     }
   ],
   "resources": [],
-  "07_Involucro": {
-    "objname": "Túnica Adventícia",
-    "description": "Camada mais externa da parede arterial, formada principalmente por tecido conjuntivo. Fornece sustentação e proteção ao vaso, contribuindo para sua resistência mecânica durante as variações de pressão sanguínea."
-  },
-  "06_Fibroblastos": {
-    "objname": "Fibroblastos",
-    "description": "Células do tecido conjuntivo responsáveis pela produção e manutenção de componentes da matriz extracelular, especialmente fibras de colágeno. Contribuem para a estrutura e resistência da parede arterial."
-  },
-  "06_Conjuntivo_externo": {
-    "objname": "Tecido Conjuntivo Externo",
-    "description": "Tecido localizado na região externa da artéria, composto principalmente por fibras de colágeno e outros elementos da matriz extracelular. Proporciona sustentação e ajuda a limitar a distensão excessiva da parede vascular."
-  },
-  "05_Elastica_externa_105_Elastica_externa_2": {
-    "objname": "Lâmina Elástica Externa",
-    "description": "Camada rica em fibras elásticas que delimita externamente a túnica média em determinadas artérias. Contribui para a elasticidade e organização da parede vascular, permitindo que o vaso suporte alterações de pressão e retorne parcialmente à sua forma original."
-  },
-  "04_Musculo_liso": {
-    "objname": "Músculo Liso",
-    "description": "Tecido muscular presente principalmente na túnica média da artéria. Sua contração provoca vasoconstrição, reduzindo o calibre vascular, enquanto seu relaxamento favorece a vasodilatação. Essas alterações influenciam a resistência ao fluxo sanguíneo e participam da regulação da pressão arterial."
-  },
-  "04_Fasciculos_musculares_relevo_104_Fasciculos_musculares_relevo_2": {
-    "objname": "Fascículos de Músculo Liso",
-    "description": "Conjuntos de células musculares lisas organizadas na parede arterial. Sua atividade contrátil permite modificar o diâmetro do vaso, contribuindo para o controle da resistência vascular e da distribuição do fluxo sanguíneo."
-  },
-  "03_Elastica_interna_103_Elastica_interna_2": {
-    "objname": "Lâmina Elástica Interna",
-    "description": "Camada de tecido elástico localizada entre a túnica íntima e a túnica média da artéria. Contribui para a elasticidade da parede vascular, permitindo sua deformação e recuperação durante as variações de pressão e volume sanguíneo."
-  },
-  "02_Conjuntivo_interno": {
-    "objname": "Tecido Conjuntivo Subendotelial",
-    "description": "Tecido localizado abaixo do endotélio, integrante da túnica íntima da artéria. Oferece suporte estrutural ao revestimento interno do vaso e participa da organização da parede arterial."
-  },
-  "01_Relevo_celular_do_endotelio": {
-    "objname": "Relevo das Células Endoteliais",
-    "description": "Representação da superfície das células endoteliais que revestem o interior da artéria. O endotélio participa da regulação do tônus vascular por meio da liberação de substâncias que favorecem a vasodilatação ou a vasoconstrição."
-  },
-  "01_Nucleos_endoteliais": {
-    "objname": "Núcleos das Células Endoteliais",
-    "description": "Estruturas celulares que contêm o material genético das células endoteliais. Essas células revestem internamente os vasos sanguíneos e participam de processos relacionados à manutenção da parede vascular e à regulação do fluxo sanguíneo."
-  },
-  "01_Endotelio_101_Endotelio_2": {
-    "objname": "Endotélio",
-    "description": "Camada de células que reveste a superfície interna da artéria e permanece em contato direto com o sangue. Participa da regulação do tônus vascular, da coagulação e das respostas inflamatórias, liberando substâncias como o óxido nítrico, que favorece o relaxamento da musculatura lisa e a vasodilatação."
-  },
-  "Hemacia_001": {
-    "objname": "Hemácia",
-    "description": "Célula sanguínea responsável principalmente pelo transporte de oxigênio dos pulmões aos tecidos e de parte do dióxido de carbono no sentido inverso. Na animação, as hemácias representam o fluxo sanguíneo pelo interior da artéria, permitindo visualizar sua movimentação durante as alterações do calibre vascular."
+  "parts": {
+    "07_Involucro": {
+      "objname": {
+        "pt-BR": "Túnica Adventícia",
+        "en": "Tunica Adventitia",
+        "es": "Túnica Adventicia"
+      },
+      "description": {
+        "pt-BR": "Camada mais externa da parede arterial, formada principalmente por tecido conjuntivo. Fornece sustentação e proteção ao vaso, contribuindo para sua resistência mecânica durante as variações de pressão sanguínea.",
+        "en": "Outermost layer of the arterial wall, composed primarily of connective tissue. It provides support and protection to the vessel, contributing to its mechanical strength during variations in blood pressure.",
+        "es": "Capa más externa de la pared arterial, formada principalmente por tejido conjuntivo. Proporciona soporte y protección al vaso, contribuyendo a su resistencia mecánica durante las variaciones de la presión sanguínea."
+      }
+    },
+    "06_Fibroblastos": {
+      "objname": {
+        "pt-BR": "Fibroblastos",
+        "en": "Fibroblasts",
+        "es": "Fibroblastos"
+      },
+      "description": {
+        "pt-BR": "Células do tecido conjuntivo responsáveis pela produção e manutenção de componentes da matriz extracelular, especialmente fibras de colágeno. Contribuem para a estrutura e resistência da parede arterial.",
+        "en": "Connective tissue cells responsible for the production and maintenance of extracellular matrix components, particularly collagen fibers. They contribute to the structure and strength of the arterial wall.",
+        "es": "Células del tejido conjuntivo responsables de la producción y el mantenimiento de los componentes de la matriz extracelular, especialmente las fibras de colágeno. Contribuyen a la estructura y resistencia de la pared arterial."
+      }
+    },
+    "06_Conjuntivo_externo": {
+      "objname": {
+        "pt-BR": "Tecido Conjuntivo Externo",
+        "en": "Outer Connective Tissue",
+        "es": "Tejido Conjuntivo Externo"
+      },
+      "description": {
+        "pt-BR": "Tecido localizado na região externa da artéria, composto principalmente por fibras de colágeno e outros elementos da matriz extracelular. Proporciona sustentação e ajuda a limitar a distensão excessiva da parede vascular.",
+        "en": "Tissue located in the outer region of the artery, composed primarily of collagen fibers and other elements of the extracellular matrix. It provides structural support and helps limit excessive distension of the vascular wall.",
+        "es": "Tejido localizado en la región externa de la arteria, compuesto principalmente por fibras de colágeno y otros elementos de la matriz extracelular. Proporciona soporte y ayuda a limitar la distensión excesiva de la pared vascular."
+      }
+    },
+    "05_Elastica_externa_105_Elastica_externa_2": {
+      "objname": {
+        "pt-BR": "Lâmina Elástica Externa",
+        "en": "External Elastic Lamina",
+        "es": "Lámina Elástica Externa"
+      },
+      "description": {
+        "pt-BR": "Camada rica em fibras elásticas que delimita externamente a túnica média em determinadas artérias. Contribui para a elasticidade e organização da parede vascular, permitindo que o vaso suporte alterações de pressão e retorne parcialmente à sua forma original.",
+        "en": "Layer rich in elastic fibers that forms the outer boundary of the tunica media in certain arteries. It contributes to the elasticity and organization of the vascular wall, allowing the vessel to withstand pressure changes and partially return to its original shape.",
+        "es": "Capa rica en fibras elásticas que delimita externamente la túnica media en determinadas arterias. Contribuye a la elasticidad y organización de la pared vascular, permitiendo que el vaso soporte cambios de presión y recupere parcialmente su forma original."
+      }
+    },
+    "04_Musculo_liso": {
+      "objname": {
+        "pt-BR": "Músculo Liso",
+        "en": "Smooth Muscle",
+        "es": "Músculo Liso"
+      },
+      "description": {
+        "pt-BR": "Tecido muscular presente principalmente na túnica média da artéria. Sua contração provoca vasoconstrição, reduzindo o calibre vascular, enquanto seu relaxamento favorece a vasodilatação. Essas alterações influenciam a resistência ao fluxo sanguíneo e participam da regulação da pressão arterial.",
+        "en": "Muscular tissue located primarily in the tunica media of the artery. Its contraction causes vasoconstriction, reducing vascular diameter, while its relaxation promotes vasodilation. These changes influence resistance to blood flow and participate in the regulation of blood pressure.",
+        "es": "Tejido muscular presente principalmente en la túnica media de la arteria. Su contracción provoca vasoconstricción, reduciendo el calibre vascular, mientras que su relajación favorece la vasodilatación. Estas alteraciones influyen en la resistencia al flujo sanguíneo y participan en la regulación de la presión arterial."
+      }
+    },
+    "04_Fasciculos_musculares_relevo_104_Fasciculos_musculares_relevo_2": {
+      "objname": {
+        "pt-BR": "Fascículos de Músculo Liso",
+        "en": "Smooth Muscle Fascicles",
+        "es": "Fascículos de Músculo Liso"
+      },
+      "description": {
+        "pt-BR": "Conjuntos de células musculares lisas organizadas na parede arterial. Sua atividade contrátil permite modificar o diâmetro do vaso, contribuindo para o controle da resistência vascular e da distribuição do fluxo sanguíneo.",
+        "en": "Groups of smooth muscle cells organized within the arterial wall. Their contractile activity allows changes in vessel diameter, contributing to the control of vascular resistance and the distribution of blood flow.",
+        "es": "Conjuntos de células musculares lisas organizadas en la pared arterial. Su actividad contráctil permite modificar el diámetro del vaso, contribuyendo al control de la resistencia vascular y de la distribución del flujo sanguíneo."
+      }
+    },
+    "03_Elastica_interna_103_Elastica_interna_2": {
+      "objname": {
+        "pt-BR": "Lâmina Elástica Interna",
+        "en": "Internal Elastic Lamina",
+        "es": "Lámina Elástica Interna"
+      },
+      "description": {
+        "pt-BR": "Camada de tecido elástico localizada entre a túnica íntima e a túnica média da artéria. Contribui para a elasticidade da parede vascular, permitindo sua deformação e recuperação durante as variações de pressão e volume sanguíneo.",
+        "en": "Layer of elastic tissue located between the tunica intima and the tunica media of the artery. It contributes to the elasticity of the vascular wall, allowing it to deform and recover during variations in blood pressure and volume.",
+        "es": "Capa de tejido elástico localizada entre la túnica íntima y la túnica media de la arteria. Contribuye a la elasticidad de la pared vascular, permitiendo su deformación y recuperación durante las variaciones de presión y volumen sanguíneo."
+      }
+    },
+    "02_Conjuntivo_interno": {
+      "objname": {
+        "pt-BR": "Tecido Conjuntivo Subendotelial",
+        "en": "Subendothelial Connective Tissue",
+        "es": "Tejido Conjuntivo Subendotelial"
+      },
+      "description": {
+        "pt-BR": "Tecido localizado abaixo do endotélio, integrante da túnica íntima da artéria. Oferece suporte estrutural ao revestimento interno do vaso e participa da organização da parede arterial.",
+        "en": "Tissue located beneath the endothelium, forming part of the tunica intima of the artery. It provides structural support to the inner lining of the vessel and participates in the organization of the arterial wall.",
+        "es": "Tejido localizado debajo del endotelio, que forma parte de la túnica íntima de la arteria. Ofrece soporte estructural al revestimiento interno del vaso y participa en la organización de la pared arterial."
+      }
+    },
+    "01_Relevo_celular_do_endotelio": {
+      "objname": {
+        "pt-BR": "Relevo das Células Endoteliais",
+        "en": "Endothelial Cell Surface Relief",
+        "es": "Relieve de las Células Endoteliales"
+      },
+      "description": {
+        "pt-BR": "Representação da superfície das células endoteliais que revestem o interior da artéria. O endotélio participa da regulação do tônus vascular por meio da liberação de substâncias que favorecem a vasodilatação ou a vasoconstrição.",
+        "en": "Representation of the surface of the endothelial cells that line the interior of the artery. The endothelium participates in the regulation of vascular tone through the release of substances that promote vasodilation or vasoconstriction.",
+        "es": "Representación de la superficie de las células endoteliales que revisten el interior de la arteria. El endotelio participa en la regulación del tono vascular mediante la liberación de sustancias que favorecen la vasodilatación o la vasoconstricción."
+      }
+    },
+    "01_Nucleos_endoteliais": {
+      "objname": {
+        "pt-BR": "Núcleos das Células Endoteliais",
+        "en": "Endothelial Cell Nuclei",
+        "es": "Núcleos de las Células Endoteliales"
+      },
+      "description": {
+        "pt-BR": "Estruturas celulares que contêm o material genético das células endoteliais. Essas células revestem internamente os vasos sanguíneos e participam de processos relacionados à manutenção da parede vascular e à regulação do fluxo sanguíneo.",
+        "en": "Cellular structures containing the genetic material of endothelial cells. These cells line the interior of blood vessels and participate in processes related to the maintenance of the vascular wall and the regulation of blood flow.",
+        "es": "Estructuras celulares que contienen el material genético de las células endoteliales. Estas células revisten internamente los vasos sanguíneos y participan en procesos relacionados con el mantenimiento de la pared vascular y la regulación del flujo sanguíneo."
+      }
+    },
+    "01_Endotelio_101_Endotelio_2": {
+      "objname": {
+        "pt-BR": "Endotélio",
+        "en": "Endothelium",
+        "es": "Endotelio"
+      },
+      "description": {
+        "pt-BR": "Camada de células que reveste a superfície interna da artéria e permanece em contato direto com o sangue. Participa da regulação do tônus vascular, da coagulação e das respostas inflamatórias, liberando substâncias como o óxido nítrico, que favorece o relaxamento da musculatura lisa e a vasodilatação.",
+        "en": "Layer of cells that lines the inner surface of the artery and remains in direct contact with the blood. It participates in the regulation of vascular tone, coagulation, and inflammatory responses, releasing substances such as nitric oxide, which promotes smooth muscle relaxation and vasodilation.",
+        "es": "Capa de células que reviste la superficie interna de la arteria y permanece en contacto directo con la sangre. Participa en la regulación del tono vascular, la coagulación y las respuestas inflamatorias, liberando sustancias como el óxido nítrico, que favorece la relajación de la musculatura lisa y la vasodilatación."
+      }
+    },
+    "Hemacia_001": {
+      "objname": {
+        "pt-BR": "Hemácia",
+        "en": "Red Blood Cell",
+        "es": "Eritrocito"
+      },
+      "description": {
+        "pt-BR": "Célula sanguínea responsável principalmente pelo transporte de oxigênio dos pulmões aos tecidos e de parte do dióxido de carbono no sentido inverso. Na animação, as hemácias representam o fluxo sanguíneo pelo interior da artéria, permitindo visualizar sua movimentação durante as alterações do calibre vascular.",
+        "en": "Blood cell primarily responsible for transporting oxygen from the lungs to the tissues and a portion of carbon dioxide in the opposite direction. In the animation, red blood cells represent blood flow through the interior of the artery, allowing their movement to be visualized during changes in vascular diameter.",
+        "es": "Célula sanguínea responsable principalmente del transporte de oxígeno desde los pulmones hasta los tejidos y de parte del dióxido de carbono en sentido inverso. En la animación, los eritrocitos representan el flujo sanguíneo por el interior de la arteria, permitiendo visualizar su movimiento durante las alteraciones del calibre vascular."
+      }
+    }
   }
 }

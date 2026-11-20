@@ -1,50 +1,176 @@
 {
-  "objname": "Ansiedade",
+  "objname": {
+    "pt-BR": "Ansiedade",
+    "en": "Anxiety",
+    "es": "Ansiedad"
+  },
   "objsystem": [
     "Nervoso"
   ],
-  "objdescription": "A ansiedade envolve a atividade integrada de diferentes regiões do cérebro responsáveis pela percepção de ameaças, processamento das emoções, memória e controle das respostas ao estresse. A amígdala participa da identificação de estímulos potencialmente ameaçadores, enquanto o córtex pré-frontal contribui para avaliar e regular essas respostas. O hipocampo relaciona informações ao contexto e às memórias, e o hipotálamo participa das respostas fisiológicas ao estresse. A ínsula e o córtex cingulado anterior também integram informações corporais, emocionais e cognitivas. Na animação, estímulos destacados em amarelo representam de forma didática a comunicação entre regiões envolvidas no processamento e na regulação da ansiedade.",
+  "objdescription": {
+    "pt-BR": "A ansiedade envolve a atividade integrada de diferentes regiões do cérebro responsáveis pela percepção de ameaças, processamento das emoções, memória e controle das respostas ao estresse. A amígdala participa da identificação de estímulos potencialmente ameaçadores, enquanto o córtex pré-frontal contribui para avaliar e regular essas respostas. O hipocampo relaciona informações ao contexto e às memórias, e o hipotálamo participa das respostas fisiológicas ao estresse. A ínsula e o córtex cingulado anterior também integram informações corporais, emocionais e cognitivas. Na animação, estímulos destacados em amarelo representam de forma didática a comunicação entre regiões envolvidas no processamento e na regulação da ansiedade.",
+    "en": "Anxiety involves the integrated activity of different brain regions responsible for threat perception, emotional processing, memory, and the regulation of stress responses. The amygdala participates in identifying potentially threatening stimuli, while the prefrontal cortex contributes to evaluating and regulating these responses. The hippocampus relates information to context and memories, and the hypothalamus participates in physiological responses to stress. The insula and anterior cingulate cortex also integrate bodily, emotional, and cognitive information. In the animation, stimuli highlighted in yellow provide an educational representation of communication between regions involved in the processing and regulation of anxiety.",
+    "es": "La ansiedad involucra la actividad integrada de diferentes regiones del cerebro responsables de la percepción de amenazas, el procesamiento de las emociones, la memoria y el control de las respuestas al estrés. La amígdala participa en la identificación de estímulos potencialmente amenazantes, mientras que la corteza prefrontal contribuye a evaluar y regular estas respuestas. El hipocampo relaciona la información con el contexto y los recuerdos, y el hipotálamo participa en las respuestas fisiológicas al estrés. La ínsula y la corteza cingulada anterior también integran información corporal, emocional y cognitiva. En la animación, los estímulos resaltados en amarillo representan de forma didáctica la comunicación entre las regiones involucradas en el procesamiento y la regulación de la ansiedad."
+  },
   "linkedModels": [
     {
       "id": "2",
-      "label": "Cérebro"
+      "label": {
+        "pt-BR": "Cérebro",
+        "en": "Brain",
+        "es": "Cerebro"
+      }
+    },
+    {
+      "id": "21",
+      "label": {
+        "pt-BR": "Sistema Nervoso",
+        "en": "Nervous System",
+        "es": "Sistema Nervioso"
+      }
+    },
+    {
+      "id": "38",
+      "label": {
+        "pt-BR": "Neurotransmissores",
+        "en": "Neurotransmitters",
+        "es": "Neurotransmisores"
+      }
+    },
+    {
+      "id": "45",
+      "label": {
+        "pt-BR": "Depressão Bipolar",
+        "en": "Bipolar Depression",
+        "es": "Depresión Bipolar"
+      }
+    },
+    {
+      "id": "47",
+      "label": {
+        "pt-BR": "Via de Recompensa",
+        "en": "Reward Pathway",
+        "es": "Vía de Recompensa"
+      }
+    },
+    {
+      "id": "52",
+      "label": {
+        "pt-BR": "Transtorno do Déficit de Atenção e Hiperatividade (TDAH)",
+        "en": "Attention-Deficit/Hyperactivity Disorder (ADHD)",
+        "es": "Trastorno por Déficit de Atención e Hiperactividad (TDAH)"
+      }
     }
   ],
   "resources": [],
-  "CerebrumL": {
-    "objname": "Hemisfério Cerebral Esquerdo",
-    "description": "Metade esquerda do cérebro, composta por diferentes áreas envolvidas no processamento de informações sensoriais, cognitivas e emocionais. No modelo, permite contextualizar a atividade das regiões cerebrais relacionadas ao processamento da ansiedade."
-  },
-  "CerebrumR": {
-    "objname": "Hemisfério Cerebral Direito",
-    "description": "Metade direita do cérebro, composta por diferentes áreas envolvidas no processamento de informações sensoriais, cognitivas e emocionais. No modelo, permite contextualizar a atividade das regiões cerebrais relacionadas ao processamento da ansiedade."
-  },
-  "CerebrumL2": {
-    "objname": "Córtex Pré-Frontal Esquerdo",
-    "description": "Região anterior do cérebro envolvida na avaliação de situações, tomada de decisões e regulação das emoções. Participa do controle das respostas geradas por outras regiões cerebrais envolvidas na ansiedade e na percepção de possíveis ameaças."
-  },
-  "CerebrumR2": {
-    "objname": "Córtex Pré-Frontal Direito",
-    "description": "Região anterior do cérebro envolvida no processamento cognitivo e emocional. Participa da avaliação de estímulos e da regulação das respostas relacionadas à ansiedade, interagindo com estruturas como a amígdala."
-  },
-  "Amygdala": {
-    "objname": "Amígdala",
-    "description": "Estrutura cerebral fundamental para o processamento das emoções e a identificação de estímulos potencialmente ameaçadores. Na ansiedade, participa da geração de respostas de alerta e medo e se comunica com outras regiões responsáveis pela regulação emocional e pelas respostas do organismo."
-  },
-  "Hippocampus": {
-    "objname": "Hipocampo",
-    "description": "Estrutura relacionada à formação e recuperação de memórias e à identificação do contexto em que os estímulos ocorrem. Na ansiedade, auxilia o cérebro a relacionar situações atuais com experiências anteriores e a determinar se determinado contexto pode representar uma ameaça."
-  },
-  "Hypothalamus": {
-    "objname": "Hipotálamo",
-    "description": "Região que participa do controle de diversas respostas fisiológicas do organismo. Diante de situações percebidas como ameaçadoras ou estressantes, contribui para ativar respostas autonômicas e hormonais associadas ao estresse e à ansiedade."
-  },
-  "Cingulategyrus": {
-    "objname": "Giro do cíngulo",
-    "description": "Participa do processamento das emoções, atenção, memória e tomada de decisões."
-  },
-  "Head+ninteract": {
-    "objname": "",
-    "description": ""
+  "parts": {
+    "CerebrumL": {
+      "objname": {
+        "pt-BR": "Hemisfério Cerebral Esquerdo",
+        "en": "Left Cerebral Hemisphere",
+        "es": "Hemisferio Cerebral Izquierdo"
+      },
+      "description": {
+        "pt-BR": "Metade esquerda do cérebro, composta por diferentes áreas envolvidas no processamento de informações sensoriais, cognitivas e emocionais. No modelo, permite contextualizar a atividade das regiões cerebrais relacionadas ao processamento da ansiedade.",
+        "en": "Left half of the brain, composed of different areas involved in processing sensory, cognitive, and emotional information. In the model, it provides anatomical context for the activity of brain regions associated with anxiety processing.",
+        "es": "Mitad izquierda del cerebro, compuesta por diferentes áreas involucradas en el procesamiento de información sensorial, cognitiva y emocional. En el modelo, permite contextualizar la actividad de las regiones cerebrales relacionadas con el procesamiento de la ansiedad."
+      }
+    },
+    "CerebrumR": {
+      "objname": {
+        "pt-BR": "Hemisfério Cerebral Direito",
+        "en": "Right Cerebral Hemisphere",
+        "es": "Hemisferio Cerebral Derecho"
+      },
+      "description": {
+        "pt-BR": "Metade direita do cérebro, composta por diferentes áreas envolvidas no processamento de informações sensoriais, cognitivas e emocionais. No modelo, permite contextualizar a atividade das regiões cerebrais relacionadas ao processamento da ansiedade.",
+        "en": "Right half of the brain, composed of different areas involved in processing sensory, cognitive, and emotional information. In the model, it provides anatomical context for the activity of brain regions associated with anxiety processing.",
+        "es": "Mitad derecha del cerebro, compuesta por diferentes áreas involucradas en el procesamiento de información sensorial, cognitiva y emocional. En el modelo, permite contextualizar la actividad de las regiones cerebrales relacionadas con el procesamiento de la ansiedad."
+      }
+    },
+    "CerebrumL2": {
+      "objname": {
+        "pt-BR": "Córtex Pré-Frontal Esquerdo",
+        "en": "Left Prefrontal Cortex",
+        "es": "Corteza Prefrontal Izquierda"
+      },
+      "description": {
+        "pt-BR": "Região anterior do cérebro envolvida na avaliação de situações, tomada de decisões e regulação das emoções. Participa do controle das respostas geradas por outras regiões cerebrais envolvidas na ansiedade e na percepção de possíveis ameaças.",
+        "en": "Anterior region of the brain involved in evaluating situations, decision-making, and emotional regulation. It participates in controlling responses generated by other brain regions involved in anxiety and the perception of potential threats.",
+        "es": "Región anterior del cerebro involucrada en la evaluación de situaciones, la toma de decisiones y la regulación de las emociones. Participa en el control de las respuestas generadas por otras regiones cerebrales involucradas en la ansiedad y en la percepción de posibles amenazas."
+      }
+    },
+    "CerebrumR2": {
+      "objname": {
+        "pt-BR": "Córtex Pré-Frontal Direito",
+        "en": "Right Prefrontal Cortex",
+        "es": "Corteza Prefrontal Derecha"
+      },
+      "description": {
+        "pt-BR": "Região anterior do cérebro envolvida no processamento cognitivo e emocional. Participa da avaliação de estímulos e da regulação das respostas relacionadas à ansiedade, interagindo com estruturas como a amígdala.",
+        "en": "Anterior region of the brain involved in cognitive and emotional processing. It participates in evaluating stimuli and regulating anxiety-related responses, interacting with structures such as the amygdala.",
+        "es": "Región anterior del cerebro involucrada en el procesamiento cognitivo y emocional. Participa en la evaluación de estímulos y en la regulación de las respuestas relacionadas con la ansiedad, interactuando con estructuras como la amígdala."
+      }
+    },
+    "Amygdala": {
+      "objname": {
+        "pt-BR": "Amígdala",
+        "en": "Amygdala",
+        "es": "Amígdala"
+      },
+      "description": {
+        "pt-BR": "Estrutura cerebral fundamental para o processamento das emoções e a identificação de estímulos potencialmente ameaçadores. Na ansiedade, participa da geração de respostas de alerta e medo e se comunica com outras regiões responsáveis pela regulação emocional e pelas respostas do organismo.",
+        "en": "Brain structure essential for emotional processing and the identification of potentially threatening stimuli. In anxiety, it participates in generating alertness and fear responses and communicates with other regions responsible for emotional regulation and the body's responses.",
+        "es": "Estructura cerebral fundamental para el procesamiento de las emociones y la identificación de estímulos potencialmente amenazantes. En la ansiedad, participa en la generación de respuestas de alerta y miedo y se comunica con otras regiones responsables de la regulación emocional y de las respuestas del organismo."
+      }
+    },
+    "Hippocampus": {
+      "objname": {
+        "pt-BR": "Hipocampo",
+        "en": "Hippocampus",
+        "es": "Hipocampo"
+      },
+      "description": {
+        "pt-BR": "Estrutura relacionada à formação e recuperação de memórias e à identificação do contexto em que os estímulos ocorrem. Na ansiedade, auxilia o cérebro a relacionar situações atuais com experiências anteriores e a determinar se determinado contexto pode representar uma ameaça.",
+        "en": "Structure associated with memory formation and retrieval and with identifying the context in which stimuli occur. In anxiety, it helps the brain relate current situations to previous experiences and determine whether a particular context may represent a threat.",
+        "es": "Estructura relacionada con la formación y recuperación de recuerdos y con la identificación del contexto en el que ocurren los estímulos. En la ansiedad, ayuda al cerebro a relacionar situaciones actuales con experiencias anteriores y a determinar si un contexto determinado puede representar una amenaza."
+      }
+    },
+    "Hypothalamus": {
+      "objname": {
+        "pt-BR": "Hipotálamo",
+        "en": "Hypothalamus",
+        "es": "Hipotálamo"
+      },
+      "description": {
+        "pt-BR": "Região que participa do controle de diversas respostas fisiológicas do organismo. Diante de situações percebidas como ameaçadoras ou estressantes, contribui para ativar respostas autonômicas e hormonais associadas ao estresse e à ansiedade.",
+        "en": "Region involved in controlling various physiological responses of the body. In situations perceived as threatening or stressful, it contributes to the activation of autonomic and hormonal responses associated with stress and anxiety.",
+        "es": "Región que participa en el control de diversas respuestas fisiológicas del organismo. Ante situaciones percibidas como amenazantes o estresantes, contribuye a activar respuestas autonómicas y hormonales asociadas al estrés y a la ansiedad."
+      }
+    },
+    "Cingulategyrus": {
+      "objname": {
+        "pt-BR": "Giro do cíngulo",
+        "en": "Cingulate Gyrus",
+        "es": "Giro del Cíngulo"
+      },
+      "description": {
+        "pt-BR": "Participa do processamento das emoções, atenção, memória e tomada de decisões.",
+        "en": "Participates in emotional processing, attention, memory, and decision-making.",
+        "es": "Participa en el procesamiento de las emociones, la atención, la memoria y la toma de decisiones."
+      }
+    },
+    "Head+ninteract": {
+      "objname": {
+        "pt-BR": "",
+        "en": "",
+        "es": ""
+      },
+      "description": {
+        "pt-BR": "",
+        "en": "",
+        "es": ""
+      }
+    }
   }
 }

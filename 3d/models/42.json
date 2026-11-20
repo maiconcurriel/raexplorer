@@ -1,38 +1,96 @@
 {
-  "objname": "Estenose Aórtica",
+  "objname": {
+    "pt-BR": "Estenose Aórtica",
+    "en": "Aortic Stenosis",
+    "es": "Estenosis Aórtica"
+  },
   "objsystem": [
     "Cardiovascular"
   ],
-  "objdescription": "A estenose aórtica é caracterizada pelo estreitamento da abertura da valva aórtica, localizada entre o ventrículo esquerdo e a aorta. Frequentemente, esse estreitamento está relacionado ao espessamento e à calcificação das cúspides da valva, que se tornam menos flexíveis e não conseguem se abrir completamente durante a contração do coração. Como consequência, o ventrículo esquerdo precisa exercer maior força para bombear o sangue através da abertura reduzida. O modelo representa a valva aórtica calcificada e com mobilidade limitada, permitindo observar como a estenose dificulta a passagem do sangue do coração para a aorta.",
+  "objdescription": {
+    "pt-BR": "A estenose aórtica é caracterizada pelo estreitamento da abertura da valva aórtica, localizada entre o ventrículo esquerdo e a aorta. Frequentemente, esse estreitamento está relacionado ao espessamento e à calcificação das cúspides da valva, que se tornam menos flexíveis e não conseguem se abrir completamente durante a contração do coração. Como consequência, o ventrículo esquerdo precisa exercer maior força para bombear o sangue através da abertura reduzida. O modelo representa a valva aórtica calcificada e com mobilidade limitada, permitindo observar como a estenose dificulta a passagem do sangue do coração para a aorta.",
+    "en": "Aortic stenosis is characterized by narrowing of the opening of the aortic valve, located between the left ventricle and the aorta. This narrowing is frequently associated with thickening and calcification of the valve cusps, which become less flexible and cannot open completely during cardiac contraction. As a result, the left ventricle must exert greater force to pump blood through the narrowed opening. The model represents the calcified aortic valve with limited mobility, allowing observation of how stenosis restricts blood flow from the heart to the aorta.",
+    "es": "La estenosis aórtica se caracteriza por el estrechamiento de la abertura de la válvula aórtica, situada entre el ventrículo izquierdo y la aorta. Frecuentemente, este estrechamiento está relacionado con el engrosamiento y la calcificación de las cúspides de la válvula, que se vuelven menos flexibles y no pueden abrirse completamente durante la contracción cardíaca. Como consecuencia, el ventrículo izquierdo debe ejercer una mayor fuerza para bombear la sangre a través de la abertura reducida. El modelo representa la válvula aórtica calcificada y con movilidad limitada, permitiendo observar cómo la estenosis dificulta el paso de la sangre desde el corazón hacia la aorta."
+  },
   "linkedModels": [
     {
       "id": "4",
-      "label": "Coração"
+      "label": {
+        "pt-BR": "Coração",
+        "en": "Heart",
+        "es": "Corazón"
+      }
     },
     {
       "id": "5",
-      "label": "Coração (Animado)"
+      "label": {
+        "pt-BR": "Coração (Animado)",
+        "en": "Heart (Animated)",
+        "es": "Corazón (Animado)"
+      }
     }
   ],
   "resources": [],
-  "heart_section_animation": {
-    "objname": "Coração (Base)",
-    "description": "Representação do coração utilizada como base anatômica para visualizar a localização das valvas cardíacas e compreender a posição da valva aórtica afetada pela estenose."
-  },
-  "aortic_valve_section_animation": {
-    "objname": "Valva Aórtica com Estenose",
-    "description": "Valva localizada entre o ventrículo esquerdo e a aorta. No modelo, suas cúspides apresentam espessamento e calcificação, tornando-se mais rígidas e com menor mobilidade. Como resultado, a valva não consegue se abrir completamente, reduzindo a abertura disponível para a passagem do sangue e representando a estenose aórtica."
-  },
-  "tricuspid_valve_section_animation": {
-    "objname": "Valva Tricúspide",
-    "description": "Valva localizada entre o átrio direito e o ventrículo direito. Controla a passagem do sangue entre essas câmaras e impede seu retorno ao átrio durante a contração ventricular. No modelo, auxilia na contextualização das demais valvas cardíacas."
-  },
-  "mitral_valve_section_animation": {
-    "objname": "Valva Mitral",
-    "description": "Valva localizada entre o átrio esquerdo e o ventrículo esquerdo. Permite a passagem do sangue para o ventrículo e impede seu retorno ao átrio durante a contração ventricular. Está localizada antes da valva aórtica no trajeto do sangue pelo lado esquerdo do coração."
-  },
-  "pulmonary_valve_section_animation": {
-    "objname": "Valva Pulmonar",
-    "description": "Valva localizada entre o ventrículo direito e o tronco pulmonar. Abre para permitir a saída do sangue em direção aos pulmões e fecha para impedir seu retorno ao ventrículo."
+  "parts": {
+    "heart_section_animation": {
+      "objname": {
+        "pt-BR": "Coração (Base)",
+        "en": "Heart (Base)",
+        "es": "Corazón (Base)"
+      },
+      "description": {
+        "pt-BR": "Representação do coração utilizada como base anatômica para visualizar a localização das valvas cardíacas e compreender a posição da valva aórtica afetada pela estenose.",
+        "en": "Representation of the heart used as an anatomical reference to visualize the location of the cardiac valves and understand the position of the aortic valve affected by stenosis.",
+        "es": "Representación del corazón utilizada como base anatómica para visualizar la localización de las válvulas cardíacas y comprender la posición de la válvula aórtica afectada por la estenosis."
+      }
+    },
+    "aortic_valve_section_animation": {
+      "objname": {
+        "pt-BR": "Valva Aórtica com Estenose",
+        "en": "Aortic Valve with Stenosis",
+        "es": "Válvula Aórtica con Estenosis"
+      },
+      "description": {
+        "pt-BR": "Valva localizada entre o ventrículo esquerdo e a aorta. No modelo, suas cúspides apresentam espessamento e calcificação, tornando-se mais rígidas e com menor mobilidade. Como resultado, a valva não consegue se abrir completamente, reduzindo a abertura disponível para a passagem do sangue e representando a estenose aórtica.",
+        "en": "Valve located between the left ventricle and the aorta. In the model, its cusps exhibit thickening and calcification, becoming more rigid and less mobile. As a result, the valve cannot open completely, reducing the opening available for blood flow and representing aortic stenosis.",
+        "es": "Válvula situada entre el ventrículo izquierdo y la aorta. En el modelo, sus cúspides presentan engrosamiento y calcificación, volviéndose más rígidas y con menor movilidad. Como resultado, la válvula no puede abrirse completamente, reduciendo la abertura disponible para el paso de la sangre y representando la estenosis aórtica."
+      }
+    },
+    "tricuspid_valve_section_animation": {
+      "objname": {
+        "pt-BR": "Valva Tricúspide",
+        "en": "Tricuspid Valve",
+        "es": "Válvula Tricúspide"
+      },
+      "description": {
+        "pt-BR": "Valva localizada entre o átrio direito e o ventrículo direito. Controla a passagem do sangue entre essas câmaras e impede seu retorno ao átrio durante a contração ventricular. No modelo, auxilia na contextualização das demais valvas cardíacas.",
+        "en": "Valve located between the right atrium and the right ventricle. It controls blood flow between these chambers and prevents blood from returning to the atrium during ventricular contraction. In the model, it helps provide anatomical context for the other cardiac valves.",
+        "es": "Válvula situada entre la aurícula derecha y el ventrículo derecho. Controla el paso de la sangre entre estas cavidades e impide su retorno a la aurícula durante la contracción ventricular. En el modelo, ayuda a contextualizar las demás válvulas cardíacas."
+      }
+    },
+    "mitral_valve_section_animation": {
+      "objname": {
+        "pt-BR": "Valva Mitral",
+        "en": "Mitral Valve",
+        "es": "Válvula Mitral"
+      },
+      "description": {
+        "pt-BR": "Valva localizada entre o átrio esquerdo e o ventrículo esquerdo. Permite a passagem do sangue para o ventrículo e impede seu retorno ao átrio durante a contração ventricular. Está localizada antes da valva aórtica no trajeto do sangue pelo lado esquerdo do coração.",
+        "en": "Valve located between the left atrium and the left ventricle. It allows blood to flow into the ventricle and prevents its return to the atrium during ventricular contraction. It is located before the aortic valve along the path of blood flow through the left side of the heart.",
+        "es": "Válvula situada entre la aurícula izquierda y el ventrículo izquierdo. Permite el paso de la sangre hacia el ventrículo e impide su retorno a la aurícula durante la contracción ventricular. Se encuentra antes de la válvula aórtica en el recorrido de la sangre por el lado izquierdo del corazón."
+      }
+    },
+    "pulmonary_valve_section_animation": {
+      "objname": {
+        "pt-BR": "Valva Pulmonar",
+        "en": "Pulmonary Valve",
+        "es": "Válvula Pulmonar"
+      },
+      "description": {
+        "pt-BR": "Valva localizada entre o ventrículo direito e o tronco pulmonar. Abre para permitir a saída do sangue em direção aos pulmões e fecha para impedir seu retorno ao ventrículo.",
+        "en": "Valve located between the right ventricle and the pulmonary trunk. It opens to allow blood to flow toward the lungs and closes to prevent its return to the ventricle.",
+        "es": "Válvula situada entre el ventrículo derecho y el tronco pulmonar. Se abre para permitir la salida de la sangre hacia los pulmones y se cierra para impedir su retorno al ventrículo."
+      }
+    }
   }
 }

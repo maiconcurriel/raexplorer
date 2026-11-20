@@ -1,105 +1,380 @@
 {
-  "objname": "Sistema Digestório",
+  "objname": {
+    "pt-BR": "Sistema Digestório",
+    "en": "Digestive System",
+    "es": "Sistema Digestivo"
+  },
   "objsystem": [
     "Digestório"
   ],
-  "objdescription": "Conjunto de órgãos responsáveis pela ingestão, digestão, absorção de nutrientes e eliminação dos resíduos alimentares.",
-  "linkedModels": [],
+  "objdescription": {
+    "pt-BR": "Conjunto de órgãos responsáveis pela ingestão, digestão, absorção de nutrientes e eliminação dos resíduos alimentares.",
+    "en": "Group of organs responsible for food ingestion, digestion, nutrient absorption, and the elimination of food waste.",
+    "es": "Conjunto de órganos responsables de la ingestión, digestión, absorción de nutrientes y eliminación de los residuos alimentarios."
+  },
+  "linkedModels": [
+    {
+      "id": "6",
+      "label": {
+        "pt-BR": "Tecido do Intestino Delgado",
+        "en": "Small Intestine Tissue",
+        "es": "Tejido del Intestino Delgado"
+      }
+    },
+    {
+      "id": "34",
+      "label": {
+        "pt-BR": "Dores Abdominais",
+        "en": "Abdominal Pain",
+        "es": "Dolor Abdominal"
+      }
+    },
+    {
+      "id": "61",
+      "label": {
+        "pt-BR": "Gastrite",
+        "en": "Gastritis",
+        "es": "Gastritis"
+      }
+    },
+    {
+      "id": "62",
+      "label": {
+        "pt-BR": "Úlcera Gástrica",
+        "en": "Gastric Ulcer",
+        "es": "Úlcera Gástrica"
+      }
+    },
+    {
+      "id": "81",
+      "label": {
+        "pt-BR": "Sarcoma de Kaposi: Comprometimento de Órgãos Internos",
+        "en": "Kaposi Sarcoma: Internal Organ Involvement",
+        "es": "Sarcoma de Kaposi: Afectación de Órganos Internos"
+      }
+    },
+    {
+      "id": "85",
+      "label": {
+        "pt-BR": "Colite",
+        "en": "Colitis",
+        "es": "Colitis"
+      }
+    },
+    {
+      "id": "86",
+      "label": {
+        "pt-BR": "Absorção de Glicose",
+        "en": "Glucose Absorption",
+        "es": "Absorción de Glucosa"
+      }
+    },
+    {
+      "id": "87",
+      "label": {
+        "pt-BR": "Produção e Liberação de Glicose",
+        "en": "Glucose Production and Release",
+        "es": "Producción y Liberación de Glucosa"
+      }
+    },
+    {
+      "id": "94",
+      "label": {
+        "pt-BR": "Esôfago de Barrett",
+        "en": "Barrett's Esophagus",
+        "es": "Esófago de Barrett"
+      }
+    }
+  ],
   "resources": [],
-  "Uvula": {
-    "objname": "Úvula",
-    "description": "Pequena estrutura muscular localizada na parte posterior do palato mole. Auxilia na deglutição e participa do fechamento da comunicação entre a cavidade oral e a nasofaringe."
-  },
-  "Stomach_cap2": {
-    "objname": "Capa do Estômago",
-    "description": "Objeto 3D auxiliar utilizado para ocultar parte do estômago e facilitar a visualização de suas estruturas internas."
-  },
-  "Stomach_cap": {
-    "objname": "Capa do Estômago",
-    "description": "Objeto 3D auxiliar utilizado para ocultar parte do estômago e facilitar a visualização de suas estruturas internas."
-  },
-  "Stomach": {
-    "objname": "Estômago",
-    "description": "Órgão muscular localizado entre o esôfago e o duodeno. Armazena e mistura o alimento, produzindo secreções que iniciam principalmente a digestão das proteínas."
-  },
-  "SmallIntestine": {
-    "objname": "Intestino Delgado",
-    "description": "Porção do sistema digestório responsável pela maior parte da digestão e absorção dos nutrientes. É formado pelo duodeno, jejuno e íleo."
-  },
-  "SalivaryGland": {
-    "objname": "Glândula Salivar",
-    "description": "Glândula responsável pela produção de saliva, que lubrifica o alimento e contém enzimas que iniciam a digestão dos carboidratos."
-  },
-  "SalivaryDuct": {
-    "objname": "Ducto Salivar",
-    "description": "Canal que conduz a saliva produzida pelas glândulas salivares até a cavidade oral."
-  },
-  "Right_Lobe": {
-    "objname": "Lobo Direito do Fígado",
-    "description": "Maior dos dois lobos anatômicos principais do fígado. Participa das funções metabólicas, da produção de bile, do armazenamento de nutrientes e da desintoxicação do organismo."
-  },
-  "PyloricSphincterValve": {
-    "objname": "Esfíncter Pilórico",
-    "description": "Anel de músculo localizado na saída do estômago. Controla a passagem do conteúdo gástrico para o duodeno."
-  },
-  "PancreasTail": {
-    "objname": "Cauda do Pâncreas",
-    "description": "Extremidade esquerda do pâncreas, localizada próxima ao baço. Faz parte do órgão responsável por funções digestivas e endócrinas."
-  },
-  "PancreasHead": {
-    "objname": "Cabeça do Pâncreas",
-    "description": "Porção mais larga do pâncreas, localizada junto à curvatura do duodeno. Produz enzimas digestivas e hormônios envolvidos no controle da glicose."
-  },
-  "PancreasBody": {
-    "objname": "Corpo do Pâncreas",
-    "description": "Porção central do pâncreas, situada entre a cabeça e a cauda. Participa tanto da produção de enzimas digestivas quanto da secreção de hormônios."
-  },
-  "OralCavity": {
-    "objname": "Cavidade Oral",
-    "description": "Primeira região do sistema digestório, onde o alimento é recebido, mastigado e misturado à saliva, iniciando o processo de digestão."
-  },
-  "Ligaments": {
-    "objname": "Ligamentos do Fígado",
-    "description": "Estruturas de tecido conjuntivo que ajudam a sustentar e fixar o fígado às estruturas próximas e à parede abdominal."
-  },
-  "Left_Lobe": {
-    "objname": "Lobo Esquerdo do Fígado",
-    "description": "Porção esquerda do fígado, menor que o lobo direito. Participa das mesmas funções metabólicas e digestivas realizadas pelo fígado."
-  },
-  "LargeIntestine": {
-    "objname": "Intestino Grosso",
-    "description": "Porção final do sistema digestório. Absorve principalmente água e eletrólitos e participa da formação, armazenamento e eliminação das fezes."
-  },
-  "GallBladder": {
-    "objname": "Vesícula Biliar",
-    "description": "Pequeno órgão localizado sob o fígado que armazena e concentra a bile produzida pelo fígado, liberando-a no duodeno durante a digestão."
-  },
-  "Esophagus": {
-    "objname": "Esôfago",
-    "description": "Tubo muscular que conduz o alimento da faringe até o estômago por meio de movimentos peristálticos."
-  },
-  "Duodenum_001": {
-    "objname": "Capa do Duodeno",
-    "description": "Objeto 3D auxiliar utilizado para remover parte da parede do duodeno e facilitar a visualização de seu interior."
-  },
-  "Duodenum": {
-    "objname": "Duodeno",
-    "description": "Primeira porção do intestino delgado, localizada após o estômago. Recebe o quimo gástrico, a bile e as secreções pancreáticas, desempenhando importante papel na digestão."
-  },
-  "DuctsB": {
-    "objname": "Ductos Biliares",
-    "description": "Canais que conduzem a bile produzida pelo fígado e armazenada na vesícula biliar até o duodeno."
-  },
-  "DuctsA": {
-    "objname": "Ductos Pancreáticos",
-    "description": "Canais que conduzem as secreções digestivas produzidas pelo pâncreas até o duodeno."
-  },
-  "Cardiac": {
-    "objname": "Cárdia",
-    "description": "Região de transição entre o esôfago e o estômago. Permite a passagem do alimento para o estômago e está relacionada ao mecanismo que ajuda a evitar o refluxo do conteúdo gástrico."
-  },
-  "Tongue": {
-  "objname": "Língua",
-  "description": "Órgão muscular localizado na cavidade oral, responsável pela movimentação e manipulação dos alimentos, auxiliando na mastigação, deglutição, fala e percepção dos sabores."
-}
+  "parts": {
+    "Uvula": {
+      "objname": {
+        "pt-BR": "Úvula",
+        "en": "Uvula",
+        "es": "Úvula"
+      },
+      "description": {
+        "pt-BR": "Pequena estrutura muscular localizada na parte posterior do palato mole. Auxilia na deglutição e participa do fechamento da comunicação entre a cavidade oral e a nasofaringe.",
+        "en": "Small muscular structure located at the posterior part of the soft palate. It assists in swallowing and contributes to closing the passage between the oral cavity and the nasopharynx.",
+        "es": "Pequeña estructura muscular situada en la parte posterior del paladar blando. Ayuda en la deglución y participa en el cierre de la comunicación entre la cavidad oral y la nasofaringe."
+      }
+    },
+    "Stomach_cap2": {
+      "objname": {
+        "pt-BR": "Capa do Estômago",
+        "en": "Stomach Cover",
+        "es": "Cubierta del Estómago"
+      },
+      "description": {
+        "pt-BR": "Objeto 3D auxiliar utilizado para ocultar parte do estômago e facilitar a visualização de suas estruturas internas.",
+        "en": "Auxiliary 3D object used to hide part of the stomach and facilitate visualization of its internal structures.",
+        "es": "Objeto 3D auxiliar utilizado para ocultar parte del estómago y facilitar la visualización de sus estructuras internas."
+      }
+    },
+    "Stomach_cap": {
+      "objname": {
+        "pt-BR": "Capa do Estômago",
+        "en": "Stomach Cover",
+        "es": "Cubierta del Estómago"
+      },
+      "description": {
+        "pt-BR": "Objeto 3D auxiliar utilizado para ocultar parte do estômago e facilitar a visualização de suas estruturas internas.",
+        "en": "Auxiliary 3D object used to hide part of the stomach and facilitate visualization of its internal structures.",
+        "es": "Objeto 3D auxiliar utilizado para ocultar parte del estómago y facilitar la visualización de sus estructuras internas."
+      }
+    },
+    "Stomach": {
+      "objname": {
+        "pt-BR": "Estômago",
+        "en": "Stomach",
+        "es": "Estómago"
+      },
+      "description": {
+        "pt-BR": "Órgão muscular localizado entre o esôfago e o duodeno. Armazena e mistura o alimento, produzindo secreções que iniciam principalmente a digestão das proteínas.",
+        "en": "Muscular organ located between the esophagus and the duodenum. It stores and mixes food, producing secretions that primarily initiate protein digestion.",
+        "es": "Órgano muscular situado entre el esófago y el duodeno. Almacena y mezcla los alimentos, produciendo secreciones que inician principalmente la digestión de las proteínas."
+      }
+    },
+    "SmallIntestine": {
+      "objname": {
+        "pt-BR": "Intestino Delgado",
+        "en": "Small Intestine",
+        "es": "Intestino Delgado"
+      },
+      "description": {
+        "pt-BR": "Porção do sistema digestório responsável pela maior parte da digestão e absorção dos nutrientes. É formado pelo duodeno, jejuno e íleo.",
+        "en": "Portion of the digestive system responsible for most digestion and nutrient absorption. It consists of the duodenum, jejunum, and ileum.",
+        "es": "Porción del sistema digestivo responsable de la mayor parte de la digestión y absorción de los nutrientes. Está formado por el duodeno, el yeyuno y el íleon."
+      }
+    },
+    "SalivaryGland": {
+      "objname": {
+        "pt-BR": "Glândula Salivar",
+        "en": "Salivary Gland",
+        "es": "Glándula Salival"
+      },
+      "description": {
+        "pt-BR": "Glândula responsável pela produção de saliva, que lubrifica o alimento e contém enzimas que iniciam a digestão dos carboidratos.",
+        "en": "Gland responsible for producing saliva, which lubricates food and contains enzymes that initiate carbohydrate digestion.",
+        "es": "Glándula responsable de la producción de saliva, que lubrica los alimentos y contiene enzimas que inician la digestión de los carbohidratos."
+      }
+    },
+    "SalivaryDuct": {
+      "objname": {
+        "pt-BR": "Ducto Salivar",
+        "en": "Salivary Duct",
+        "es": "Conducto Salival"
+      },
+      "description": {
+        "pt-BR": "Canal que conduz a saliva produzida pelas glândulas salivares até a cavidade oral.",
+        "en": "Duct that carries saliva produced by the salivary glands to the oral cavity.",
+        "es": "Conducto que transporta la saliva producida por las glándulas salivales hasta la cavidad oral."
+      }
+    },
+    "Right_Lobe": {
+      "objname": {
+        "pt-BR": "Lobo Direito do Fígado",
+        "en": "Right Lobe of the Liver",
+        "es": "Lóbulo Derecho del Hígado"
+      },
+      "description": {
+        "pt-BR": "Maior dos dois lobos anatômicos principais do fígado. Participa das funções metabólicas, da produção de bile, do armazenamento de nutrientes e da desintoxicação do organismo.",
+        "en": "Largest of the two main anatomical lobes of the liver. It participates in metabolic functions, bile production, nutrient storage, and detoxification of the body.",
+        "es": "El mayor de los dos lóbulos anatómicos principales del hígado. Participa en las funciones metabólicas, la producción de bilis, el almacenamiento de nutrientes y la desintoxicación del organismo."
+      }
+    },
+    "PyloricSphincterValve": {
+      "objname": {
+        "pt-BR": "Esfíncter Pilórico",
+        "en": "Pyloric Sphincter",
+        "es": "Esfínter Pilórico"
+      },
+      "description": {
+        "pt-BR": "Anel de músculo localizado na saída do estômago. Controla a passagem do conteúdo gástrico para o duodeno.",
+        "en": "Ring of muscle located at the outlet of the stomach. It controls the passage of gastric contents into the duodenum.",
+        "es": "Anillo muscular situado en la salida del estómago. Controla el paso del contenido gástrico hacia el duodeno."
+      }
+    },
+    "PancreasTail": {
+      "objname": {
+        "pt-BR": "Cauda do Pâncreas",
+        "en": "Tail of the Pancreas",
+        "es": "Cola del Páncreas"
+      },
+      "description": {
+        "pt-BR": "Extremidade esquerda do pâncreas, localizada próxima ao baço. Faz parte do órgão responsável por funções digestivas e endócrinas.",
+        "en": "Left extremity of the pancreas, located near the spleen. It forms part of the organ responsible for digestive and endocrine functions.",
+        "es": "Extremo izquierdo del páncreas, situado cerca del bazo. Forma parte del órgano responsable de funciones digestivas y endocrinas."
+      }
+    },
+    "PancreasHead": {
+      "objname": {
+        "pt-BR": "Cabeça do Pâncreas",
+        "en": "Head of the Pancreas",
+        "es": "Cabeza del Páncreas"
+      },
+      "description": {
+        "pt-BR": "Porção mais larga do pâncreas, localizada junto à curvatura do duodeno. Produz enzimas digestivas e hormônios envolvidos no controle da glicose.",
+        "en": "Widest portion of the pancreas, located next to the curvature of the duodenum. It produces digestive enzymes and hormones involved in glucose regulation.",
+        "es": "Porción más ancha del páncreas, situada junto a la curvatura del duodeno. Produce enzimas digestivas y hormonas involucradas en el control de la glucosa."
+      }
+    },
+    "PancreasBody": {
+      "objname": {
+        "pt-BR": "Corpo do Pâncreas",
+        "en": "Body of the Pancreas",
+        "es": "Cuerpo del Páncreas"
+      },
+      "description": {
+        "pt-BR": "Porção central do pâncreas, situada entre a cabeça e a cauda. Participa tanto da produção de enzimas digestivas quanto da secreção de hormônios.",
+        "en": "Central portion of the pancreas, located between the head and the tail. It participates in both the production of digestive enzymes and the secretion of hormones.",
+        "es": "Porción central del páncreas, situada entre la cabeza y la cola. Participa tanto en la producción de enzimas digestivas como en la secreción de hormonas."
+      }
+    },
+    "OralCavity": {
+      "objname": {
+        "pt-BR": "Cavidade Oral",
+        "en": "Oral Cavity",
+        "es": "Cavidad Oral"
+      },
+      "description": {
+        "pt-BR": "Primeira região do sistema digestório, onde o alimento é recebido, mastigado e misturado à saliva, iniciando o processo de digestão.",
+        "en": "First region of the digestive system, where food is received, chewed, and mixed with saliva, initiating the digestive process.",
+        "es": "Primera región del sistema digestivo, donde los alimentos son recibidos, masticados y mezclados con la saliva, iniciando el proceso de digestión."
+      }
+    },
+    "Ligaments": {
+      "objname": {
+        "pt-BR": "Ligamentos do Fígado",
+        "en": "Ligaments of the Liver",
+        "es": "Ligamentos del Hígado"
+      },
+      "description": {
+        "pt-BR": "Estruturas de tecido conjuntivo que ajudam a sustentar e fixar o fígado às estruturas próximas e à parede abdominal.",
+        "en": "Connective tissue structures that help support and anchor the liver to nearby structures and the abdominal wall.",
+        "es": "Estructuras de tejido conjuntivo que ayudan a sostener y fijar el hígado a las estructuras cercanas y a la pared abdominal."
+      }
+    },
+    "Left_Lobe": {
+      "objname": {
+        "pt-BR": "Lobo Esquerdo do Fígado",
+        "en": "Left Lobe of the Liver",
+        "es": "Lóbulo Izquierdo del Hígado"
+      },
+      "description": {
+        "pt-BR": "Porção esquerda do fígado, menor que o lobo direito. Participa das mesmas funções metabólicas e digestivas realizadas pelo fígado.",
+        "en": "Left portion of the liver, smaller than the right lobe. It participates in the same metabolic and digestive functions performed by the liver.",
+        "es": "Porción izquierda del hígado, de menor tamaño que el lóbulo derecho. Participa en las mismas funciones metabólicas y digestivas realizadas por el hígado."
+      }
+    },
+    "LargeIntestine": {
+      "objname": {
+        "pt-BR": "Intestino Grosso",
+        "en": "Large Intestine",
+        "es": "Intestino Grueso"
+      },
+      "description": {
+        "pt-BR": "Porção final do sistema digestório. Absorve principalmente água e eletrólitos e participa da formação, armazenamento e eliminação das fezes.",
+        "en": "Final portion of the digestive system. It primarily absorbs water and electrolytes and participates in the formation, storage, and elimination of feces.",
+        "es": "Porción final del sistema digestivo. Absorbe principalmente agua y electrolitos y participa en la formación, el almacenamiento y la eliminación de las heces."
+      }
+    },
+    "GallBladder": {
+      "objname": {
+        "pt-BR": "Vesícula Biliar",
+        "en": "Gallbladder",
+        "es": "Vesícula Biliar"
+      },
+      "description": {
+        "pt-BR": "Pequeno órgão localizado sob o fígado que armazena e concentra a bile produzida pelo fígado, liberando-a no duodeno durante a digestão.",
+        "en": "Small organ located beneath the liver that stores and concentrates the bile produced by the liver, releasing it into the duodenum during digestion.",
+        "es": "Pequeño órgano situado debajo del hígado que almacena y concentra la bilis producida por el hígado, liberándola en el duodeno durante la digestión."
+      }
+    },
+    "Esophagus": {
+      "objname": {
+        "pt-BR": "Esôfago",
+        "en": "Esophagus",
+        "es": "Esófago"
+      },
+      "description": {
+        "pt-BR": "Tubo muscular que conduz o alimento da faringe até o estômago por meio de movimentos peristálticos.",
+        "en": "Muscular tube that carries food from the pharynx to the stomach through peristaltic movements.",
+        "es": "Tubo muscular que conduce los alimentos desde la faringe hasta el estómago mediante movimientos peristálticos."
+      }
+    },
+    "Duodenum_001": {
+      "objname": {
+        "pt-BR": "Capa do Duodeno",
+        "en": "Duodenum Cover",
+        "es": "Cubierta del Duodeno"
+      },
+      "description": {
+        "pt-BR": "Objeto 3D auxiliar utilizado para remover parte da parede do duodeno e facilitar a visualização de seu interior.",
+        "en": "Auxiliary 3D object used to remove part of the duodenal wall and facilitate visualization of its interior.",
+        "es": "Objeto 3D auxiliar utilizado para retirar parte de la pared del duodeno y facilitar la visualización de su interior."
+      }
+    },
+    "Duodenum": {
+      "objname": {
+        "pt-BR": "Duodeno",
+        "en": "Duodenum",
+        "es": "Duodeno"
+      },
+      "description": {
+        "pt-BR": "Primeira porção do intestino delgado, localizada após o estômago. Recebe o quimo gástrico, a bile e as secreções pancreáticas, desempenhando importante papel na digestão.",
+        "en": "First portion of the small intestine, located immediately after the stomach. It receives gastric chyme, bile, and pancreatic secretions, playing an important role in digestion.",
+        "es": "Primera porción del intestino delgado, situada después del estómago. Recibe el quimo gástrico, la bilis y las secreciones pancreáticas, desempeñando un papel importante en la digestión."
+      }
+    },
+    "DuctsB": {
+      "objname": {
+        "pt-BR": "Ductos Biliares",
+        "en": "Bile Ducts",
+        "es": "Conductos Biliares"
+      },
+      "description": {
+        "pt-BR": "Canais que conduzem a bile produzida pelo fígado e armazenada na vesícula biliar até o duodeno.",
+        "en": "Ducts that carry bile produced by the liver and stored in the gallbladder to the duodenum.",
+        "es": "Conductos que transportan la bilis producida por el hígado y almacenada en la vesícula biliar hasta el duodeno."
+      }
+    },
+    "DuctsA": {
+      "objname": {
+        "pt-BR": "Ductos Pancreáticos",
+        "en": "Pancreatic Ducts",
+        "es": "Conductos Pancreáticos"
+      },
+      "description": {
+        "pt-BR": "Canais que conduzem as secreções digestivas produzidas pelo pâncreas até o duodeno.",
+        "en": "Ducts that carry digestive secretions produced by the pancreas to the duodenum.",
+        "es": "Conductos que transportan las secreciones digestivas producidas por el páncreas hasta el duodeno."
+      }
+    },
+    "Cardiac": {
+      "objname": {
+        "pt-BR": "Cárdia",
+        "en": "Cardia",
+        "es": "Cardias"
+      },
+      "description": {
+        "pt-BR": "Região de transição entre o esôfago e o estômago. Permite a passagem do alimento para o estômago e está relacionada ao mecanismo que ajuda a evitar o refluxo do conteúdo gástrico.",
+        "en": "Transition region between the esophagus and the stomach. It allows food to pass into the stomach and is associated with the mechanism that helps prevent the reflux of gastric contents.",
+        "es": "Región de transición entre el esófago y el estómago. Permite el paso de los alimentos hacia el estómago y está relacionada con el mecanismo que ayuda a evitar el reflujo del contenido gástrico."
+      }
+    },
+    "Tongue": {
+      "objname": {
+        "pt-BR": "Língua",
+        "en": "Tongue",
+        "es": "Lengua"
+      },
+      "description": {
+        "pt-BR": "Órgão muscular localizado na cavidade oral, responsável pela movimentação e manipulação dos alimentos, auxiliando na mastigação, deglutição, fala e percepção dos sabores.",
+        "en": "Muscular organ located in the oral cavity, responsible for moving and manipulating food, assisting in chewing, swallowing, speech, and taste perception.",
+        "es": "Órgano muscular situado en la cavidad oral, responsable del movimiento y la manipulación de los alimentos, que contribuye a la masticación, la deglución, el habla y la percepción de los sabores."
+      }
+    }
+  }
 }

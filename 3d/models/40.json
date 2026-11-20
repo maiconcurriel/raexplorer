@@ -1,30 +1,92 @@
 {
-  "objname": "Queratose Pilar",
+  "objname": {
+    "pt-BR": "Queratose Pilar",
+    "en": "Keratosis Pilaris",
+    "es": "Queratosis Pilar"
+  },
   "objsystem": [
     "Tegumentar"
   ],
-  "objdescription": "A queratose pilar é uma alteração da pele caracterizada pelo acúmulo de queratina nos folículos pilosos, formando pequenas elevações e áreas ásperas na superfície cutânea. O excesso de queratina pode obstruir a abertura dos folículos, dificultando a passagem normal dos pelos. No modelo, essa alteração é representada por áreas de acúmulo de queratina ao redor dos pelos e por mudanças na superfície da pele, permitindo visualizar a relação entre os folículos, a epiderme e as camadas mais profundas da pele.",
+  "objdescription": {
+    "pt-BR": "A queratose pilar é uma alteração da pele caracterizada pelo acúmulo de queratina nos folículos pilosos, formando pequenas elevações e áreas ásperas na superfície cutânea. O excesso de queratina pode obstruir a abertura dos folículos, dificultando a passagem normal dos pelos. No modelo, essa alteração é representada por áreas de acúmulo de queratina ao redor dos pelos e por mudanças na superfície da pele, permitindo visualizar a relação entre os folículos, a epiderme e as camadas mais profundas da pele.",
+    "en": "Keratosis pilaris is a skin condition characterized by the accumulation of keratin in the hair follicles, forming small bumps and rough areas on the skin surface. Excess keratin may obstruct the follicular openings, interfering with the normal passage of hair. In the model, this condition is represented by areas of keratin accumulation around the hairs and by changes in the skin surface, allowing visualization of the relationship between the hair follicles, the epidermis, and the deeper layers of the skin.",
+    "es": "La queratosis pilar es una alteración de la piel caracterizada por la acumulación de queratina en los folículos pilosos, formando pequeñas elevaciones y áreas ásperas en la superficie cutánea. El exceso de queratina puede obstruir la abertura de los folículos, dificultando la salida normal del vello. En el modelo, esta alteración se representa mediante áreas de acumulación de queratina alrededor del vello y cambios en la superficie de la piel, permitiendo visualizar la relación entre los folículos pilosos, la epidermis y las capas más profundas de la piel."
+  },
   "linkedModels": [
     {
       "id": "15",
-      "label": "Anatomia das Camadas da Pele Humana"
+      "label": {
+        "pt-BR": "Anatomia das Camadas da Pele Humana",
+        "en": "Anatomy of Human Skin Layers",
+        "es": "Anatomía de las Capas de la Piel Humana"
+      }
+    },
+    {
+      "id": "95",
+      "label": {
+        "pt-BR": "Camadas da Epiderme",
+        "en": "Layers of the Epidermis",
+        "es": "Capas de la Epidermis"
+      }
+    },
+    {
+      "id": "101",
+      "label": {
+        "pt-BR": "Ciclo Biológico do Pelo/Cabelo",
+        "en": "Hair Growth Cycle",
+        "es": "Ciclo de Crecimiento del Pelo/Cabello"
+      }
     }
   ],
   "resources": [],
-  "HairShaft+nisolar": {
-    "objname": "Pelo",
-    "description": "Estrutura que emerge dos folículos pilosos e se projeta para fora da superfície da pele. No modelo, os pelos atravessam a região onde ocorre o acúmulo de queratina, permitindo visualizar a relação entre o pelo e a obstrução do folículo."
-  },
-  "StratumCorneum+nisolar": {
-    "objname": "Estrato Córneo",
-    "description": "Camada mais superficial da epiderme, formada principalmente por células queratinizadas e responsável por parte da proteção da pele. No modelo, apresenta áreas associadas ao acúmulo de queratina, que se concentra ao redor das aberturas dos folículos pilosos."
-  },
-  "StratumSpinosum+nisolar": {
-    "objname": "Estrato Espinhoso",
-    "description": "Camada da epiderme localizada abaixo do estrato córneo, formada por células que contribuem para a resistência e a integridade da pele. No modelo, participa da representação das camadas epidérmicas envolvidas na região afetada pela queratose pilar."
-  },
-  "Dermis+nisolar": {
-    "objname": "Derme",
-    "description": "Camada localizada abaixo da epiderme, formada por tecido conjuntivo que fornece sustentação à pele e contém vasos sanguíneos, nervos e estruturas como os folículos pilosos. No modelo, permite visualizar a localização dos folículos e sua relação com as camadas mais superficiais da pele."
+  "parts": {
+    "HairShaft+nisolar": {
+      "objname": {
+        "pt-BR": "Pelo",
+        "en": "Hair",
+        "es": "Pelo"
+      },
+      "description": {
+        "pt-BR": "Estrutura que emerge dos folículos pilosos e se projeta para fora da superfície da pele. No modelo, os pelos atravessam a região onde ocorre o acúmulo de queratina, permitindo visualizar a relação entre o pelo e a obstrução do folículo.",
+        "en": "Structure that emerges from the hair follicles and projects beyond the skin surface. In the model, the hairs pass through the region where keratin accumulates, allowing visualization of the relationship between the hair and follicular obstruction.",
+        "es": "Estructura que emerge de los folículos pilosos y se proyecta hacia el exterior de la superficie de la piel. En el modelo, los pelos atraviesan la región donde se produce la acumulación de queratina, permitiendo visualizar la relación entre el pelo y la obstrucción del folículo."
+      }
+    },
+    "StratumCorneum+nisolar": {
+      "objname": {
+        "pt-BR": "Estrato Córneo",
+        "en": "Stratum Corneum",
+        "es": "Estrato Córneo"
+      },
+      "description": {
+        "pt-BR": "Camada mais superficial da epiderme, formada principalmente por células queratinizadas e responsável por parte da proteção da pele. No modelo, apresenta áreas associadas ao acúmulo de queratina, que se concentra ao redor das aberturas dos folículos pilosos.",
+        "en": "Outermost layer of the epidermis, composed primarily of keratinized cells and contributing to skin protection. In the model, it displays areas associated with keratin accumulation, which is concentrated around the openings of the hair follicles.",
+        "es": "Capa más superficial de la epidermis, formada principalmente por células queratinizadas y responsable de parte de la protección de la piel. En el modelo, presenta áreas asociadas a la acumulación de queratina, que se concentra alrededor de las aberturas de los folículos pilosos."
+      }
+    },
+    "StratumSpinosum+nisolar": {
+      "objname": {
+        "pt-BR": "Estrato Espinhoso",
+        "en": "Stratum Spinosum",
+        "es": "Estrato Espinoso"
+      },
+      "description": {
+        "pt-BR": "Camada da epiderme localizada abaixo do estrato córneo, formada por células que contribuem para a resistência e a integridade da pele. No modelo, participa da representação das camadas epidérmicas envolvidas na região afetada pela queratose pilar.",
+        "en": "Layer of the epidermis located beneath the stratum corneum, composed of cells that contribute to skin strength and integrity. In the model, it forms part of the representation of the epidermal layers involved in the region affected by keratosis pilaris.",
+        "es": "Capa de la epidermis situada por debajo del estrato córneo, formada por células que contribuyen a la resistencia y la integridad de la piel. En el modelo, forma parte de la representación de las capas epidérmicas involucradas en la región afectada por la queratosis pilar."
+      }
+    },
+    "Dermis+nisolar": {
+      "objname": {
+        "pt-BR": "Derme",
+        "en": "Dermis",
+        "es": "Dermis"
+      },
+      "description": {
+        "pt-BR": "Camada localizada abaixo da epiderme, formada por tecido conjuntivo que fornece sustentação à pele e contém vasos sanguíneos, nervos e estruturas como os folículos pilosos. No modelo, permite visualizar a localização dos folículos e sua relação com as camadas mais superficiais da pele.",
+        "en": "Layer located beneath the epidermis, composed of connective tissue that provides structural support to the skin and contains blood vessels, nerves, and structures such as hair follicles. In the model, it allows visualization of the location of the follicles and their relationship with the more superficial layers of the skin.",
+        "es": "Capa situada por debajo de la epidermis, formada por tejido conjuntivo que proporciona soporte estructural a la piel y contiene vasos sanguíneos, nervios y estructuras como los folículos pilosos. En el modelo, permite visualizar la localización de los folículos y su relación con las capas más superficiales de la piel."
+      }
+    }
   }
 }

@@ -1,25 +1,84 @@
 {
-  "objname": "Terapia Fotodinâmica para Tratamento de Infecções Fúngicas",
+  "objname": {
+    "pt-BR": "Terapia Fotodinâmica para Tratamento de Infecções Fúngicas",
+    "en": "Photodynamic Therapy for the Treatment of Fungal Infections",
+    "es": "Terapia Fotodinámica para el Tratamiento de Infecciones Fúngicas"
+  },
   "objsystem": [
     "Tegumentar"
   ],
-  "objdescription": "A terapia fotodinâmica antimicrobiana é uma técnica utilizada como alternativa ou complemento no tratamento de determinadas infecções, incluindo infecções fúngicas das unhas, conhecidas como onicomicoses. O procedimento utiliza uma substância fotossensibilizadora, como o azul de metileno, que, ao ser ativada por luz de comprimento de onda adequado, pode gerar espécies reativas de oxigênio capazes de danificar estruturas dos microrganismos. A animação apresenta uma unha acometida por fungos e demonstra as etapas do procedimento: aplicação do azul de metileno, envolvimento da região com papel-alumínio para proteção contra a exposição luminosa durante o período de contato e, posteriormente, aplicação da irradiação por um dispositivo de luz. A eficácia depende de fatores como o agente infeccioso, a concentração do fotossensibilizador e os parâmetros de iluminação.",
-  "linkedModels": [],
+  "objdescription": {
+    "pt-BR": "A terapia fotodinâmica antimicrobiana é uma técnica utilizada como alternativa ou complemento no tratamento de determinadas infecções, incluindo infecções fúngicas das unhas, conhecidas como onicomicoses. O procedimento utiliza uma substância fotossensibilizadora, como o azul de metileno, que, ao ser ativada por luz de comprimento de onda adequado, pode gerar espécies reativas de oxigênio capazes de danificar estruturas dos microrganismos. A animação apresenta uma unha acometida por fungos e demonstra as etapas do procedimento: aplicação do azul de metileno, envolvimento da região com papel-alumínio para proteção contra a exposição luminosa durante o período de contato e, posteriormente, aplicação da irradiação por um dispositivo de luz. A eficácia depende de fatores como o agente infeccioso, a concentração do fotossensibilizador e os parâmetros de iluminação.",
+    "en": "Antimicrobial photodynamic therapy is a technique used as an alternative or adjunctive treatment for certain infections, including fungal nail infections known as onychomycosis. The procedure uses a photosensitizing substance, such as methylene blue, which, when activated by light of an appropriate wavelength, can generate reactive oxygen species capable of damaging microbial structures. The animation presents a nail affected by a fungal infection and demonstrates the stages of the procedure: application of methylene blue, wrapping the region in aluminum foil to protect it from light exposure during the contact period, and subsequent irradiation using a light-emitting device. Effectiveness depends on factors such as the infectious agent, the concentration of the photosensitizer, and the illumination parameters.",
+    "es": "La terapia fotodinámica antimicrobiana es una técnica utilizada como alternativa o complemento en el tratamiento de determinadas infecciones, incluidas las infecciones fúngicas de las uñas, conocidas como onicomicosis. El procedimiento utiliza una sustancia fotosensibilizadora, como el azul de metileno, que, al ser activada por luz de una longitud de onda adecuada, puede generar especies reactivas de oxígeno capaces de dañar las estructuras de los microorganismos. La animación presenta una uña afectada por hongos y demuestra las etapas del procedimiento: aplicación del azul de metileno, envoltura de la región con papel de aluminio para protegerla de la exposición a la luz durante el período de contacto y, posteriormente, aplicación de la irradiación mediante un dispositivo de luz. La eficacia depende de factores como el agente infeccioso, la concentración del fotosensibilizador y los parámetros de iluminación."
+  },
+  "linkedModels": [
+    {
+      "id": "54",
+      "label": {
+        "pt-BR": "Micose",
+        "en": "Mycosis",
+        "es": "Micosis"
+      }
+    },
+    {
+      "id": "98",
+      "label": {
+        "pt-BR": "Pé com Onicomicose",
+        "en": "Foot with Onychomycosis",
+        "es": "Pie con Onicomicosis"
+      }
+    }
+  ],
   "resources": [],
-  "Pe+nisolar": {
-    "objname": "Pé com Onicomicose",
-    "description": "Representação de um pé com infecção fúngica na unha, denominada onicomicose. Essa condição pode ser causada principalmente por fungos dermatófitos, embora leveduras e outros fungos também possam estar envolvidos. A infecção pode provocar alterações na coloração, espessamento, fragilidade e deformação da unha. No modelo, a unha acometida representa a região que receberá o tratamento fotodinâmico, com aplicação do fotossensibilizador e posterior irradiação luminosa."
-  },
-  "Papel_Aluminio+nisolar": {
-    "objname": "Papel-Alumínio para Proteção da Região",
-    "description": "Material utilizado para envolver a região tratada durante o período de contato do azul de metileno com a unha. Sua função é proteger o fotossensibilizador da exposição luminosa antes da etapa de irradiação, evitando sua ativação prematura. Após o período estabelecido pelo protocolo, a proteção é retirada para permitir a aplicação controlada da luz sobre a área acometida."
-  },
-  "Aparelho_001+Fio+Scene003+nisolar": {
-    "objname": "Dispositivo de Irradiação Luminosa",
-    "description": "Equipamento utilizado para emitir luz sobre a unha após a aplicação do fotossensibilizador. Na terapia fotodinâmica, a luz deve apresentar comprimento de onda compatível com a absorção do azul de metileno, frequentemente na região do vermelho do espectro visível. A ativação do fotossensibilizador, na presença de oxigênio, favorece a formação de espécies reativas de oxigênio que podem danificar componentes celulares dos fungos. A intensidade, o tempo de exposição e a dose luminosa devem seguir parâmetros específicos do protocolo utilizado."
-  },
-  "Vidro+Scene009+Scene009_1+Passador+nisolar": {
-    "objname": "Azul de Metileno (Fotossensibilizador)",
-    "description": "Solução contendo azul de metileno, substância utilizada como fotossensibilizador na terapia fotodinâmica antimicrobiana. O produto é aplicado sobre a unha acometida para permitir seu contato com a região infectada. Após um período determinado pelo protocolo, a substância é exposta à luz de comprimento de onda apropriado, desencadeando reações fotoquímicas que podem produzir espécies reativas de oxigênio e provocar danos aos fungos. Sua eficácia depende da concentração, do tempo de contato, da penetração na região infectada e das condições de irradiação."
+  "parts": {
+    "Pe+nisolar": {
+      "objname": {
+        "pt-BR": "Pé com Onicomicose",
+        "en": "Foot with Onychomycosis",
+        "es": "Pie con Onicomicosis"
+      },
+      "description": {
+        "pt-BR": "Representação de um pé com infecção fúngica na unha, denominada onicomicose. Essa condição pode ser causada principalmente por fungos dermatófitos, embora leveduras e outros fungos também possam estar envolvidos. A infecção pode provocar alterações na coloração, espessamento, fragilidade e deformação da unha. No modelo, a unha acometida representa a região que receberá o tratamento fotodinâmico, com aplicação do fotossensibilizador e posterior irradiação luminosa.",
+        "en": "Representation of a foot with a fungal nail infection known as onychomycosis. This condition is primarily caused by dermatophyte fungi, although yeasts and other fungi may also be involved. The infection may cause nail discoloration, thickening, fragility, and deformation. In the model, the affected nail represents the region that will receive photodynamic treatment, involving the application of the photosensitizer followed by light irradiation.",
+        "es": "Representación de un pie con una infección fúngica en la uña, denominada onicomicosis. Esta afección puede ser causada principalmente por hongos dermatofitos, aunque también pueden estar involucradas levaduras y otros hongos. La infección puede provocar alteraciones en la coloración, engrosamiento, fragilidad y deformación de la uña. En el modelo, la uña afectada representa la región que recibirá el tratamiento fotodinámico, con la aplicación del fotosensibilizador y la posterior irradiación luminosa."
+      }
+    },
+    "Papel_Aluminio+nisolar": {
+      "objname": {
+        "pt-BR": "Papel-Alumínio para Proteção da Região",
+        "en": "Aluminum Foil for Treatment Area Protection",
+        "es": "Papel de Aluminio para la Protección de la Región"
+      },
+      "description": {
+        "pt-BR": "Material utilizado para envolver a região tratada durante o período de contato do azul de metileno com a unha. Sua função é proteger o fotossensibilizador da exposição luminosa antes da etapa de irradiação, evitando sua ativação prematura. Após o período estabelecido pelo protocolo, a proteção é retirada para permitir a aplicação controlada da luz sobre a área acometida.",
+        "en": "Material used to wrap the treated region during the period of contact between methylene blue and the nail. Its function is to protect the photosensitizer from light exposure before the irradiation stage, preventing its premature activation. After the period established by the protocol, the protective covering is removed to allow controlled application of light to the affected area.",
+        "es": "Material utilizado para envolver la región tratada durante el período de contacto del azul de metileno con la uña. Su función es proteger el fotosensibilizador de la exposición a la luz antes de la etapa de irradiación, evitando su activación prematura. Tras el período establecido por el protocolo, se retira la protección para permitir la aplicación controlada de la luz sobre el área afectada."
+      }
+    },
+    "Aparelho_001+Fio+Scene003+nisolar": {
+      "objname": {
+        "pt-BR": "Dispositivo de Irradiação Luminosa",
+        "en": "Light Irradiation Device",
+        "es": "Dispositivo de Irradiación Luminosa"
+      },
+      "description": {
+        "pt-BR": "Equipamento utilizado para emitir luz sobre a unha após a aplicação do fotossensibilizador. Na terapia fotodinâmica, a luz deve apresentar comprimento de onda compatível com a absorção do azul de metileno, frequentemente na região do vermelho do espectro visível. A ativação do fotossensibilizador, na presença de oxigênio, favorece a formação de espécies reativas de oxigênio que podem danificar componentes celulares dos fungos. A intensidade, o tempo de exposição e a dose luminosa devem seguir parâmetros específicos do protocolo utilizado.",
+        "en": "Equipment used to deliver light to the nail after the application of the photosensitizer. In photodynamic therapy, the light must have a wavelength compatible with the absorption spectrum of methylene blue, frequently within the red region of the visible spectrum. Activation of the photosensitizer in the presence of oxygen promotes the formation of reactive oxygen species that may damage fungal cellular components. Light intensity, exposure time, and light dose must follow the specific parameters of the protocol used.",
+        "es": "Equipo utilizado para emitir luz sobre la uña después de la aplicación del fotosensibilizador. En la terapia fotodinámica, la luz debe presentar una longitud de onda compatible con la absorción del azul de metileno, frecuentemente en la región roja del espectro visible. La activación del fotosensibilizador, en presencia de oxígeno, favorece la formación de especies reactivas de oxígeno que pueden dañar los componentes celulares de los hongos. La intensidad, el tiempo de exposición y la dosis luminosa deben ajustarse a los parámetros específicos del protocolo utilizado."
+      }
+    },
+    "Vidro+Scene009+Scene009_1+Passador+nisolar": {
+      "objname": {
+        "pt-BR": "Azul de Metileno (Fotossensibilizador)",
+        "en": "Methylene Blue (Photosensitizer)",
+        "es": "Azul de Metileno (Fotosensibilizador)"
+      },
+      "description": {
+        "pt-BR": "Solução contendo azul de metileno, substância utilizada como fotossensibilizador na terapia fotodinâmica antimicrobiana. O produto é aplicado sobre a unha acometida para permitir seu contato com a região infectada. Após um período determinado pelo protocolo, a substância é exposta à luz de comprimento de onda apropriado, desencadeando reações fotoquímicas que podem produzir espécies reativas de oxigênio e provocar danos aos fungos. Sua eficácia depende da concentração, do tempo de contato, da penetração na região infectada e das condições de irradiação.",
+        "en": "Solution containing methylene blue, a substance used as a photosensitizer in antimicrobial photodynamic therapy. The product is applied to the affected nail to allow contact with the infected region. After a period determined by the protocol, the substance is exposed to light of an appropriate wavelength, triggering photochemical reactions that may produce reactive oxygen species and cause damage to the fungi. Its effectiveness depends on the concentration, contact time, penetration into the infected region, and irradiation conditions.",
+        "es": "Solución que contiene azul de metileno, sustancia utilizada como fotosensibilizador en la terapia fotodinámica antimicrobiana. El producto se aplica sobre la uña afectada para permitir su contacto con la región infectada. Tras un período determinado por el protocolo, la sustancia se expone a luz de una longitud de onda apropiada, desencadenando reacciones fotoquímicas que pueden producir especies reactivas de oxígeno y provocar daños en los hongos. Su eficacia depende de la concentración, el tiempo de contacto, la penetración en la región infectada y las condiciones de irradiación."
+      }
+    }
   }
 }

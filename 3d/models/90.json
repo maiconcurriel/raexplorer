@@ -1,30 +1,113 @@
 {
-  "objname": "Anafilaxia: Inchaço na Face",
+  "objname": {
+    "pt-BR": "Anafilaxia: Inchaço na Face",
+    "en": "Anaphylaxis: Facial Swelling",
+    "es": "Anafilaxia: Hinchazón Facial"
+  },
   "objsystem": [
     "Imunológico",
     "Tegumentar"
   ],
-  "objdescription": "A anafilaxia é uma reação alérgica sistêmica grave, geralmente de início rápido, que pode provocar alterações na pele, nas mucosas, no sistema respiratório e na circulação sanguínea. Durante a reação, a liberação de mediadores químicos, como a histamina, aumenta a permeabilidade dos vasos sanguíneos, favorecendo o extravasamento de líquido para os tecidos. Esse processo pode causar angioedema, caracterizado por inchaço das camadas mais profundas da pele e das mucosas, especialmente nas pálpebras, nos lábios e em outras regiões da face. A animação demonstra o aumento de volume dessas estruturas, destacando manifestações faciais que podem ocorrer durante a anafilaxia. O inchaço facial isolado não confirma anafilaxia, mas, quando associado a comprometimento respiratório ou circulatório, pode indicar uma emergência médica que exige tratamento imediato.",
-  "linkedModels": [],
+  "objdescription": {
+    "pt-BR": "A anafilaxia é uma reação alérgica sistêmica grave, geralmente de início rápido, que pode provocar alterações na pele, nas mucosas, no sistema respiratório e na circulação sanguínea. Durante a reação, a liberação de mediadores químicos, como a histamina, aumenta a permeabilidade dos vasos sanguíneos, favorecendo o extravasamento de líquido para os tecidos. Esse processo pode causar angioedema, caracterizado por inchaço das camadas mais profundas da pele e das mucosas, especialmente nas pálpebras, nos lábios e em outras regiões da face. A animação demonstra o aumento de volume dessas estruturas, destacando manifestações faciais que podem ocorrer durante a anafilaxia. O inchaço facial isolado não confirma anafilaxia, mas, quando associado a comprometimento respiratório ou circulatório, pode indicar uma emergência médica que exige tratamento imediato.",
+    "en": "Anaphylaxis is a severe systemic allergic reaction, usually with a rapid onset, that may cause changes in the skin, mucous membranes, respiratory system, and blood circulation. During the reaction, the release of chemical mediators, such as histamine, increases blood vessel permeability, promoting fluid leakage into the tissues. This process may cause angioedema, characterized by swelling of the deeper layers of the skin and mucous membranes, particularly in the eyelids, lips, and other facial regions. The animation demonstrates the increase in volume of these structures, highlighting facial manifestations that may occur during anaphylaxis. Facial swelling alone does not confirm anaphylaxis, but when associated with respiratory or circulatory impairment, it may indicate a medical emergency requiring immediate treatment.",
+    "es": "La anafilaxia es una reacción alérgica sistémica grave, generalmente de inicio rápido, que puede provocar alteraciones en la piel, las mucosas, el sistema respiratorio y la circulación sanguínea. Durante la reacción, la liberación de mediadores químicos, como la histamina, aumenta la permeabilidad de los vasos sanguíneos, favoreciendo la extravasación de líquido hacia los tejidos. Este proceso puede causar angioedema, caracterizado por la hinchazón de las capas más profundas de la piel y las mucosas, especialmente en los párpados, los labios y otras regiones de la cara. La animación demuestra el aumento de volumen de estas estructuras, destacando las manifestaciones faciales que pueden producirse durante la anafilaxia. La hinchazón facial aislada no confirma la anafilaxia, pero, cuando se asocia a un compromiso respiratorio o circulatorio, puede indicar una emergencia médica que requiere tratamiento inmediato."
+  },
+  "linkedModels": [
+    {
+      "id": "15",
+      "label": {
+        "pt-BR": "Anatomia das Camadas da Pele Humana",
+        "en": "Anatomy of Human Skin Layers",
+        "es": "Anatomía de las Capas de la Piel Humana"
+      }
+    },
+    {
+      "id": "26",
+      "label": {
+        "pt-BR": "Sistema Estomatognático",
+        "en": "Stomatognathic System",
+        "es": "Sistema Estomatognático"
+      }
+    },
+    {
+      "id": "82",
+      "label": {
+        "pt-BR": "Reações Alérgicas Sistêmicas",
+        "en": "Systemic Allergic Reactions",
+        "es": "Reacciones Alérgicas Sistémicas"
+      }
+    },
+    {
+      "id": "89",
+      "label": {
+        "pt-BR": "Anafilaxia: Inchaço na Garganta",
+        "en": "Anaphylaxis: Throat Swelling",
+        "es": "Anafilaxia: Hinchazón de la Garganta"
+      }
+    }
+  ],
   "resources": [],
-  "Eye+nisolar": {
-    "objname": "Inchaço nas Pálpebras",
-    "description": "O edema palpebral é caracterizado pelo acúmulo de líquido nos tecidos ao redor dos olhos, provocando aumento de volume e dificuldade para abrir as pálpebras. Durante uma reação alérgica, a liberação de mediadores inflamatórios aumenta a permeabilidade vascular, favorecendo o desenvolvimento de angioedema nessa região. Na animação, o inchaço representa o comprometimento dos tecidos palpebrais, sem indicar necessariamente alterações no globo ocular."
-  },
-  "Mouth+nisolar": {
-    "objname": "Inchaço nos Lábios",
-    "description": "O angioedema labial ocorre devido ao acúmulo de líquido nos tecidos profundos dos lábios, provocando aumento de volume, sensação de tensão e desconforto. Durante a anafilaxia, esse processo pode resultar da ação de mediadores químicos liberados pelo sistema imunológico. O inchaço dos lábios pode ocorrer juntamente com edema da língua e da garganta, aumentando o risco de comprometimento das vias aéreas."
-  },
-  "Skin+nisolar+ninteract": {
-    "objname": "Pele",
-    "description": ""
-  },
-  "Hair+nisolar+ninteract": {
-    "objname": "Cabelo",
-    "description": ""
-  },
-  "ScalpHead+nisolar+ninteract": {
-    "objname": "Cabeça",
-    "description": ""
+  "parts": {
+    "Eye+nisolar": {
+      "objname": {
+        "pt-BR": "Inchaço nas Pálpebras",
+        "en": "Eyelid Swelling",
+        "es": "Hinchazón de los Párpados"
+      },
+      "description": {
+        "pt-BR": "O edema palpebral é caracterizado pelo acúmulo de líquido nos tecidos ao redor dos olhos, provocando aumento de volume e dificuldade para abrir as pálpebras. Durante uma reação alérgica, a liberação de mediadores inflamatórios aumenta a permeabilidade vascular, favorecendo o desenvolvimento de angioedema nessa região. Na animação, o inchaço representa o comprometimento dos tecidos palpebrais, sem indicar necessariamente alterações no globo ocular.",
+        "en": "Eyelid edema is characterized by fluid accumulation in the tissues surrounding the eyes, causing an increase in volume and difficulty opening the eyelids. During an allergic reaction, the release of inflammatory mediators increases vascular permeability, promoting the development of angioedema in this region. In the animation, the swelling represents involvement of the eyelid tissues without necessarily indicating changes in the eyeball.",
+        "es": "El edema palpebral se caracteriza por la acumulación de líquido en los tejidos que rodean los ojos, provocando un aumento de volumen y dificultad para abrir los párpados. Durante una reacción alérgica, la liberación de mediadores inflamatorios aumenta la permeabilidad vascular, favoreciendo el desarrollo de angioedema en esta región. En la animación, la hinchazón representa la afectación de los tejidos palpebrales, sin indicar necesariamente alteraciones en el globo ocular."
+      }
+    },
+    "Mouth+nisolar": {
+      "objname": {
+        "pt-BR": "Inchaço nos Lábios",
+        "en": "Lip Swelling",
+        "es": "Hinchazón de los Labios"
+      },
+      "description": {
+        "pt-BR": "O angioedema labial ocorre devido ao acúmulo de líquido nos tecidos profundos dos lábios, provocando aumento de volume, sensação de tensão e desconforto. Durante a anafilaxia, esse processo pode resultar da ação de mediadores químicos liberados pelo sistema imunológico. O inchaço dos lábios pode ocorrer juntamente com edema da língua e da garganta, aumentando o risco de comprometimento das vias aéreas.",
+        "en": "Lip angioedema occurs due to fluid accumulation in the deeper tissues of the lips, causing an increase in volume, a sensation of tightness, and discomfort. During anaphylaxis, this process may result from the action of chemical mediators released by the immune system. Lip swelling may occur together with edema of the tongue and throat, increasing the risk of airway compromise.",
+        "es": "El angioedema labial se produce debido a la acumulación de líquido en los tejidos profundos de los labios, provocando un aumento de volumen, sensación de tensión y molestias. Durante la anafilaxia, este proceso puede resultar de la acción de mediadores químicos liberados por el sistema inmunitario. La hinchazón de los labios puede ocurrir junto con edema de la lengua y la garganta, aumentando el riesgo de compromiso de las vías respiratorias."
+      }
+    },
+    "Skin+nisolar+ninteract": {
+      "objname": {
+        "pt-BR": "Pele",
+        "en": "Skin",
+        "es": "Piel"
+      },
+      "description": {
+        "pt-BR": "",
+        "en": "",
+        "es": ""
+      }
+    },
+    "Hair+nisolar+ninteract": {
+      "objname": {
+        "pt-BR": "Cabelo",
+        "en": "Hair",
+        "es": "Cabello"
+      },
+      "description": {
+        "pt-BR": "",
+        "en": "",
+        "es": ""
+      }
+    },
+    "ScalpHead+nisolar+ninteract": {
+      "objname": {
+        "pt-BR": "Cabeça",
+        "en": "Head",
+        "es": "Cabeza"
+      },
+      "description": {
+        "pt-BR": "",
+        "en": "",
+        "es": ""
+      }
+    }
   }
 }

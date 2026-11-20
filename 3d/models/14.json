@@ -1,23 +1,76 @@
 {
-  "objname": "Covid-19",
-  "objsystem": "Infeccioso",
-  "objdescription": "O SARS-CoV-2 é um vírus envelopado responsável pela COVID-19. Possui material genético constituído por RNA, envolvido por proteínas estruturais e protegido por um envelope lipídico. Em sua superfície encontram-se as proteínas Spike (S), responsáveis pela ligação e entrada do vírus nas células, além das proteínas de membrana (M) e do envelope (E), que participam da formação, organização e liberação das partículas virais. O envelope viral envolve o conteúdo interno e contém as proteínas estruturais necessárias para a montagem do vírus.",
-  "linkedModels": [],
+  "objname": {
+    "pt-BR": "COVID-19",
+    "en": "COVID-19",
+    "es": "COVID-19"
+  },
+  "objsystem": [
+    "Infeccioso"
+  ],
+  "objdescription": {
+    "pt-BR": "O SARS-CoV-2 é um vírus envelopado responsável pela COVID-19. Possui material genético constituído por RNA, envolvido por proteínas estruturais e protegido por um envelope lipídico. Em sua superfície encontram-se as proteínas Spike (S), responsáveis pela ligação e entrada do vírus nas células, além das proteínas de membrana (M) e do envelope (E), que participam da formação, organização e liberação das partículas virais. O envelope viral envolve o conteúdo interno e contém as proteínas estruturais necessárias para a montagem do vírus.",
+    "en": "SARS-CoV-2 is an enveloped virus responsible for COVID-19. Its genetic material consists of RNA, surrounded by structural proteins and protected by a lipid envelope. Its surface contains Spike proteins (S), responsible for viral attachment to and entry into cells, as well as membrane proteins (M) and envelope proteins (E), which participate in the formation, organization, and release of viral particles. The viral envelope surrounds the internal contents and contains the structural proteins required for viral assembly.",
+    "es": "El SARS-CoV-2 es un virus envuelto responsable de la COVID-19. Su material genético está constituido por ARN, rodeado por proteínas estructurales y protegido por una envoltura lipídica. En su superficie se encuentran las proteínas Spike (S), responsables de la unión y entrada del virus en las células, además de las proteínas de membrana (M) y de envoltura (E), que participan en la formación, organización y liberación de las partículas virales. La envoltura viral rodea el contenido interno y contiene las proteínas estructurales necesarias para el ensamblaje del virus."
+  },
+  "linkedModels": [
+    {
+      "id": "16",
+      "label": {
+        "pt-BR": "Pulmões de Pacientes com COVID-19",
+        "en": "Lungs of Patients with COVID-19",
+        "es": "Pulmones de Pacientes con COVID-19"
+      }
+    }
+  ],
   "resources": [],
-  "Envelope+nisolar": {
-    "objname": "Proteína do Envelope (E)",
-    "description": "Pequena proteína estrutural presente no envelope do SARS-CoV-2. Participa da montagem, formação e liberação das partículas virais, além de contribuir para a organização do envelope viral."
-  },
-  "Membrana+nisolar": {
-    "objname": "Proteína de Membrana (M)",
-    "description": "Principal proteína estrutural do envelope viral e uma das mais abundantes na superfície do SARS-CoV-2. Contribui para a forma do vírus e desempenha papel fundamental na montagem das novas partículas virais."
-  },
-  "Spike+nisolar": {
-    "objname": "Proteína Spike (S)",
-    "description": "Proteína localizada na superfície do SARS-CoV-2, formando as características espículas do coronavírus. Reconhece receptores presentes nas células hospedeiras e participa da entrada do vírus na célula."
-  },
-  "EViral+nisolar": {
-    "objname": "Envelope Viral",
-    "description": "Camada externa formada principalmente por uma bicamada lipídica derivada da célula hospedeira. Envolve e protege o conteúdo interno do vírus e contém as proteínas Spike, de membrana e do envelope."
+  "parts": {
+    "Envelope+nisolar": {
+      "objname": {
+        "pt-BR": "Proteína do Envelope (E)",
+        "en": "Envelope Protein (E)",
+        "es": "Proteína de Envoltura (E)"
+      },
+      "description": {
+        "pt-BR": "Pequena proteína estrutural presente no envelope do SARS-CoV-2. Participa da montagem, formação e liberação das partículas virais, além de contribuir para a organização do envelope viral.",
+        "en": "Small structural protein present in the SARS-CoV-2 envelope. It participates in the assembly, formation, and release of viral particles and contributes to the organization of the viral envelope.",
+        "es": "Pequeña proteína estructural presente en la envoltura del SARS-CoV-2. Participa en el ensamblaje, la formación y la liberación de las partículas virales, además de contribuir a la organización de la envoltura viral."
+      }
+    },
+    "Membrana+nisolar": {
+      "objname": {
+        "pt-BR": "Proteína de Membrana (M)",
+        "en": "Membrane Protein (M)",
+        "es": "Proteína de Membrana (M)"
+      },
+      "description": {
+        "pt-BR": "Principal proteína estrutural do envelope viral e uma das mais abundantes na superfície do SARS-CoV-2. Contribui para a forma do vírus e desempenha papel fundamental na montagem das novas partículas virais.",
+        "en": "Main structural protein of the viral envelope and one of the most abundant proteins on the surface of SARS-CoV-2. It contributes to the shape of the virus and plays a fundamental role in the assembly of new viral particles.",
+        "es": "Principal proteína estructural de la envoltura viral y una de las más abundantes en la superficie del SARS-CoV-2. Contribuye a la forma del virus y desempeña un papel fundamental en el ensamblaje de nuevas partículas virales."
+      }
+    },
+    "Spike+nisolar": {
+      "objname": {
+        "pt-BR": "Proteína Spike (S)",
+        "en": "Spike Protein (S)",
+        "es": "Proteína Spike (S)"
+      },
+      "description": {
+        "pt-BR": "Proteína localizada na superfície do SARS-CoV-2, formando as características espículas do coronavírus. Reconhece receptores presentes nas células hospedeiras e participa da entrada do vírus na célula.",
+        "en": "Protein located on the surface of SARS-CoV-2, forming the characteristic spikes of the coronavirus. It recognizes receptors on host cells and participates in viral entry into the cell.",
+        "es": "Proteína situada en la superficie del SARS-CoV-2, que forma las características espículas del coronavirus. Reconoce los receptores presentes en las células hospedadoras y participa en la entrada del virus en la célula."
+      }
+    },
+    "EViral+nisolar": {
+      "objname": {
+        "pt-BR": "Envelope Viral",
+        "en": "Viral Envelope",
+        "es": "Envoltura Viral"
+      },
+      "description": {
+        "pt-BR": "Camada externa formada principalmente por uma bicamada lipídica derivada da célula hospedeira. Envolve e protege o conteúdo interno do vírus e contém as proteínas Spike, de membrana e do envelope.",
+        "en": "Outer layer composed primarily of a lipid bilayer derived from the host cell. It surrounds and protects the internal contents of the virus and contains the Spike, membrane, and envelope proteins.",
+        "es": "Capa externa formada principalmente por una bicapa lipídica derivada de la célula hospedadora. Rodea y protege el contenido interno del virus y contiene las proteínas Spike, de membrana y de envoltura."
+      }
+    }
   }
 }

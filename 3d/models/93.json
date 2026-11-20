@@ -1,17 +1,60 @@
 {
-  "objname": "Papilomavírus Humano (HPV)",
+  "objname": {
+    "pt-BR": "Papilomavírus Humano (HPV)",
+    "en": "Human Papillomavirus (HPV)",
+    "es": "Virus del Papiloma Humano (VPH)"
+  },
   "objsystem": [
     "Tegumentar"
   ],
-  "objdescription": "O papilomavírus humano (HPV) é um grupo de vírus que infecta células epiteliais da pele e das mucosas. Alguns tipos de HPV provocam verrugas cutâneas, lesões benignas caracterizadas pelo crescimento excessivo das células da epiderme. A transmissão pode ocorrer pelo contato direto com a pele infectada ou por superfícies contaminadas, especialmente quando existem pequenas lesões na barreira cutânea. Nas mãos e nos dedos, o HPV pode causar verrugas comuns, que geralmente apresentam superfície áspera, formato irregular e coloração semelhante à da pele. A infecção pode permanecer localizada e, em muitos casos, desaparecer espontaneamente pela ação do sistema imunológico. O modelo apresenta uma verruga cutânea na mão, demonstrando uma manifestação dermatológica da infecção pelo HPV. Os tipos de HPV associados às verrugas comuns geralmente diferem daqueles de alto risco relacionados a determinados tipos de câncer.",
-  "linkedModels": [],
-  "resources": [],
-  "Skin+nisolar": {
-    "objname": "Pele da Mão",
-    "description": "A pele da mão é formada pela epiderme, derme e estruturas associadas, atuando como barreira protetora contra agentes externos. O HPV pode penetrar no epitélio por pequenas lesões ou fissuras, infectando principalmente células da camada basal da epiderme. A multiplicação viral pode estimular a proliferação das células epiteliais, resultando na formação de verrugas cutâneas. No modelo, a mão representa a região anatômica acometida pela infecção."
+  "objdescription": {
+    "pt-BR": "O papilomavírus humano (HPV) é um grupo de vírus que infecta células epiteliais da pele e das mucosas. Alguns tipos de HPV provocam verrugas cutâneas, lesões benignas caracterizadas pelo crescimento excessivo das células da epiderme. A transmissão pode ocorrer pelo contato direto com a pele infectada ou por superfícies contaminadas, especialmente quando existem pequenas lesões na barreira cutânea. Nas mãos e nos dedos, o HPV pode causar verrugas comuns, que geralmente apresentam superfície áspera, formato irregular e coloração semelhante à da pele. A infecção pode permanecer localizada e, em muitos casos, desaparecer espontaneamente pela ação do sistema imunológico. O modelo apresenta uma verruga cutânea na mão, demonstrando uma manifestação dermatológica da infecção pelo HPV. Os tipos de HPV associados às verrugas comuns geralmente diferem daqueles de alto risco relacionados a determinados tipos de câncer.",
+    "en": "Human papillomavirus (HPV) is a group of viruses that infect epithelial cells of the skin and mucous membranes. Some types of HPV cause cutaneous warts, benign lesions characterized by excessive growth of epidermal cells. Transmission may occur through direct contact with infected skin or through contaminated surfaces, particularly when small breaks in the skin barrier are present. On the hands and fingers, HPV may cause common warts, which generally have a rough surface, an irregular shape, and a color similar to that of the surrounding skin. The infection may remain localized and, in many cases, resolve spontaneously through the action of the immune system. The model presents a cutaneous wart on the hand, demonstrating a dermatological manifestation of HPV infection. The HPV types associated with common warts generally differ from the high-risk types associated with certain types of cancer.",
+    "es": "El virus del papiloma humano (VPH) es un grupo de virus que infecta las células epiteliales de la piel y las mucosas. Algunos tipos de VPH provocan verrugas cutáneas, lesiones benignas caracterizadas por el crecimiento excesivo de las células de la epidermis. La transmisión puede producirse por contacto directo con la piel infectada o a través de superficies contaminadas, especialmente cuando existen pequeñas lesiones en la barrera cutánea. En las manos y los dedos, el VPH puede causar verrugas comunes, que generalmente presentan una superficie áspera, una forma irregular y una coloración similar a la de la piel. La infección puede permanecer localizada y, en muchos casos, desaparecer espontáneamente por la acción del sistema inmunitario. El modelo presenta una verruga cutánea en la mano, demostrando una manifestación dermatológica de la infección por el VPH. Los tipos de VPH asociados a las verrugas comunes generalmente difieren de aquellos de alto riesgo relacionados con determinados tipos de cáncer."
   },
-  "Plane+nisolar": {
-    "objname": "Verruga Cutânea por HPV",
-    "description": "Lesão benigna da epiderme causada pela infecção por determinados tipos de papilomavírus humano. A multiplicação viral estimula a proliferação dos queratinócitos, provocando espessamento da epiderme e formação de uma superfície elevada, frequentemente áspera e irregular. As verrugas comuns aparecem principalmente nas mãos e nos dedos, podendo ocorrer isoladamente ou em grupos. A lesão representada no modelo demonstra didaticamente o crescimento localizado do tecido epitelial provocado pela infecção viral."
+  "linkedModels": [
+    {
+      "id": "15",
+      "label": {
+        "pt-BR": "Anatomia das Camadas da Pele Humana",
+        "en": "Anatomy of Human Skin Layers",
+        "es": "Anatomía de las Capas de la Piel Humana"
+      }
+    },
+    {
+      "id": "95",
+      "label": {
+        "pt-BR": "Camadas da Epiderme",
+        "en": "Layers of the Epidermis",
+        "es": "Capas de la Epidermis"
+      }
+    }
+  ],
+  "resources": [],
+  "parts": {
+    "Skin+nisolar": {
+      "objname": {
+        "pt-BR": "Pele da Mão",
+        "en": "Skin of the Hand",
+        "es": "Piel de la Mano"
+      },
+      "description": {
+        "pt-BR": "A pele da mão é formada pela epiderme, derme e estruturas associadas, atuando como barreira protetora contra agentes externos. O HPV pode penetrar no epitélio por pequenas lesões ou fissuras, infectando principalmente células da camada basal da epiderme. A multiplicação viral pode estimular a proliferação das células epiteliais, resultando na formação de verrugas cutâneas. No modelo, a mão representa a região anatômica acometida pela infecção.",
+        "en": "The skin of the hand consists of the epidermis, dermis, and associated structures, acting as a protective barrier against external agents. HPV can penetrate the epithelium through small lesions or fissures, primarily infecting cells in the basal layer of the epidermis. Viral replication may stimulate the proliferation of epithelial cells, resulting in the formation of cutaneous warts. In the model, the hand represents the anatomical region affected by the infection.",
+        "es": "La piel de la mano está formada por la epidermis, la dermis y las estructuras asociadas, actuando como barrera protectora frente a agentes externos. El VPH puede penetrar en el epitelio a través de pequeñas lesiones o fisuras, infectando principalmente las células de la capa basal de la epidermis. La replicación viral puede estimular la proliferación de las células epiteliales, dando lugar a la formación de verrugas cutáneas. En el modelo, la mano representa la región anatómica afectada por la infección."
+      }
+    },
+    "Plane+nisolar": {
+      "objname": {
+        "pt-BR": "Verruga Cutânea por HPV",
+        "en": "HPV-Induced Cutaneous Wart",
+        "es": "Verruga Cutánea por VPH"
+      },
+      "description": {
+        "pt-BR": "Lesão benigna da epiderme causada pela infecção por determinados tipos de papilomavírus humano. A multiplicação viral estimula a proliferação dos queratinócitos, provocando espessamento da epiderme e formação de uma superfície elevada, frequentemente áspera e irregular. As verrugas comuns aparecem principalmente nas mãos e nos dedos, podendo ocorrer isoladamente ou em grupos. A lesão representada no modelo demonstra didaticamente o crescimento localizado do tecido epitelial provocado pela infecção viral.",
+        "en": "Benign lesion of the epidermis caused by infection with certain types of human papillomavirus. Viral replication stimulates the proliferation of keratinocytes, causing thickening of the epidermis and the formation of a raised surface that is frequently rough and irregular. Common warts appear primarily on the hands and fingers and may occur individually or in groups. The lesion represented in the model illustrates the localized growth of epithelial tissue caused by the viral infection for educational purposes.",
+        "es": "Lesión benigna de la epidermis causada por la infección por determinados tipos del virus del papiloma humano. La replicación viral estimula la proliferación de los queratinocitos, provocando el engrosamiento de la epidermis y la formación de una superficie elevada, frecuentemente áspera e irregular. Las verrugas comunes aparecen principalmente en las manos y los dedos, pudiendo presentarse de forma aislada o en grupos. La lesión representada en el modelo demuestra de forma didáctica el crecimiento localizado del tejido epitelial provocado por la infección viral."
+      }
+    }
   }
 }

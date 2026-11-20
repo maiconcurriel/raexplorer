@@ -1,14 +1,68 @@
 {
-  "objname": "Osso Osteoporótico",
-  "objsystem": "Esquelético",
-  "objdescription": "A osteoporose é uma doença caracterizada pela redução da densidade e da qualidade do tecido ósseo, tornando os ossos mais frágeis e suscetíveis a fraturas. Ocorre quando a reabsorção óssea supera a formação de novo osso, processo associado ao envelhecimento, alterações hormonais, deficiência de cálcio e vitamina D, sedentarismo e outros fatores de risco. Frequentemente não apresenta sintomas até a ocorrência de uma fratura, sendo mais comum em mulheres após a menopausa e idosos. O diagnóstico precoce e medidas preventivas, como alimentação adequada, exercícios físicos e tratamento quando indicado, ajudam a preservar a saúde óssea e reduzir o risco de complicações."
-,
-  "saudavel+saudavel1": {
-    "objname": "Saudável",
-    "description": "Observa-se um osso esponjoso com trabéculas espessas, numerosas e bem conectadas, além de uma camada de osso compacto preservada. Essa arquitetura proporciona maior resistência mecânica, sustentação e capacidade de suportar impactos, reduzindo o risco de fraturas quando comparado ao osso afetado pela osteoporose."
+  "objname": {
+    "pt-BR": "Osso Osteoporótico",
+    "en": "Osteoporotic Bone",
+    "es": "Hueso Osteoporótico"
   },
-  "osteoporose+osteoporose1": {
-    "objname": "Osteoporose",
-    "description": "A osteoporose é representada neste modelo pela redução da densidade do osso esponjoso, com trabéculas mais finas, espaçadas e frágeis, enquanto a camada externa de osso compacto pode apresentar afinamento. Essas alterações comprometem a resistência mecânica do osso, aumentando significativamente o risco de fraturas, mesmo após pequenos impactos ou esforços cotidianos."
+  "objsystem": [
+    "Esquelético"
+  ],
+  "objdescription": {
+    "pt-BR": "A osteoporose é uma doença caracterizada pela redução da densidade e da qualidade do tecido ósseo, tornando os ossos mais frágeis e suscetíveis a fraturas. Ocorre quando a reabsorção óssea supera a formação de novo osso, processo associado ao envelhecimento, alterações hormonais, deficiência de cálcio e vitamina D, sedentarismo e outros fatores de risco. Frequentemente não apresenta sintomas até a ocorrência de uma fratura, sendo mais comum em mulheres após a menopausa e idosos. O diagnóstico precoce e medidas preventivas, como alimentação adequada, exercícios físicos e tratamento quando indicado, ajudam a preservar a saúde óssea e reduzir o risco de complicações.",
+    "en": "Osteoporosis is a disease characterized by a reduction in bone tissue density and quality, making bones more fragile and susceptible to fractures. It occurs when bone resorption exceeds the formation of new bone, a process associated with aging, hormonal changes, calcium and vitamin D deficiencies, a sedentary lifestyle, and other risk factors. It often presents no symptoms until a fracture occurs and is more common in postmenopausal women and older adults. Early diagnosis and preventive measures, such as proper nutrition, physical exercise, and treatment when indicated, help preserve bone health and reduce the risk of complications.",
+    "es": "La osteoporosis es una enfermedad caracterizada por la disminución de la densidad y la calidad del tejido óseo, lo que hace que los huesos sean más frágiles y susceptibles a fracturas. Se produce cuando la resorción ósea supera la formación de hueso nuevo, un proceso asociado al envejecimiento, las alteraciones hormonales, la deficiencia de calcio y vitamina D, el sedentarismo y otros factores de riesgo. A menudo no presenta síntomas hasta que se produce una fractura y es más frecuente en mujeres posmenopáusicas y adultos mayores. El diagnóstico precoz y las medidas preventivas, como una alimentación adecuada, el ejercicio físico y el tratamiento cuando está indicado, ayudan a preservar la salud ósea y reducir el riesgo de complicaciones."
+  },
+  "linkedModels": [
+    {
+      "id": "3",
+      "label": {
+        "pt-BR": "Sistema Esquelético Masculino",
+        "en": "Male Skeletal System",
+        "es": "Sistema Esquelético Masculino"
+      }
+    },
+    {
+      "id": "8",
+      "label": {
+        "pt-BR": "Microestrutura do Osso Humano – Ósteon e Sistema de Havers",
+        "en": "Human Bone Microstructure – Osteon and Haversian System",
+        "es": "Microestructura del Hueso Humano – Osteona y Sistema de Havers"
+      }
+    },
+    {
+      "id": "28",
+      "label": {
+        "pt-BR": "Sistema Esquelético Feminino",
+        "en": "Female Skeletal System",
+        "es": "Sistema Esquelético Femenino"
+      }
+    }
+  ],
+  "resources": [],
+  "parts": {
+    "saudavel+saudavel1": {
+      "objname": {
+        "pt-BR": "Saudável",
+        "en": "Healthy Bone",
+        "es": "Hueso Sano"
+      },
+      "description": {
+        "pt-BR": "Observa-se um osso esponjoso com trabéculas espessas, numerosas e bem conectadas, além de uma camada de osso compacto preservada. Essa arquitetura proporciona maior resistência mecânica, sustentação e capacidade de suportar impactos, reduzindo o risco de fraturas quando comparado ao osso afetado pela osteoporose.",
+        "en": "Spongy bone with thick, numerous, and well-connected trabeculae can be observed, along with a preserved layer of compact bone. This architecture provides greater mechanical strength, structural support, and the ability to withstand impacts, reducing the risk of fractures compared with bone affected by osteoporosis.",
+        "es": "Se observa un hueso esponjoso con trabéculas gruesas, numerosas y bien conectadas, además de una capa de hueso compacto conservada. Esta arquitectura proporciona mayor resistencia mecánica, soporte estructural y capacidad para soportar impactos, reduciendo el riesgo de fracturas en comparación con el hueso afectado por la osteoporosis."
+      }
+    },
+    "osteoporose+osteoporose1": {
+      "objname": {
+        "pt-BR": "Osteoporose",
+        "en": "Osteoporosis",
+        "es": "Osteoporosis"
+      },
+      "description": {
+        "pt-BR": "A osteoporose é representada neste modelo pela redução da densidade do osso esponjoso, com trabéculas mais finas, espaçadas e frágeis, enquanto a camada externa de osso compacto pode apresentar afinamento. Essas alterações comprometem a resistência mecânica do osso, aumentando significativamente o risco de fraturas, mesmo após pequenos impactos ou esforços cotidianos.",
+        "en": "Osteoporosis is represented in this model by a reduction in spongy bone density, with thinner, more widely spaced, and fragile trabeculae, while the outer layer of compact bone may become thinner. These changes compromise the mechanical strength of the bone, significantly increasing the risk of fractures, even following minor impacts or everyday physical exertion.",
+        "es": "La osteoporosis se representa en este modelo mediante la disminución de la densidad del hueso esponjoso, con trabéculas más delgadas, separadas y frágiles, mientras que la capa externa de hueso compacto puede presentar un adelgazamiento. Estas alteraciones comprometen la resistencia mecánica del hueso, aumentando significativamente el riesgo de fracturas, incluso tras pequeños impactos o esfuerzos cotidianos."
+      }
+    }
   }
 }

@@ -1,35 +1,133 @@
 {
-  "objname": "Ciclo da Marcha",
+  "objname": {
+    "pt-BR": "Ciclo da Marcha",
+    "en": "Gait Cycle",
+    "es": "Ciclo de la Marcha"
+  },
   "objsystem": [
     "Muscular",
     "Esquelético"
   ],
-  "objdescription": "O ciclo da marcha corresponde à sequência de movimentos realizados pelo corpo durante a caminhada, desde o contato inicial de um pé com o solo até o próximo contato do mesmo pé. É dividido em duas fases principais: apoio, quando o membro inferior sustenta o peso corporal, e balanço, quando avança para iniciar um novo passo. Durante esse processo, músculos, ossos e articulações atuam de maneira coordenada para proporcionar estabilidade, equilíbrio e deslocamento. Os músculos glúteos, quadríceps, isquiotibiais e da panturrilha participam do controle dos movimentos, da sustentação corporal e da propulsão. As articulações do quadril, joelho e tornozelo realizam movimentos coordenados de flexão e extensão. A animação demonstra a alternância dos membros inferiores e a interação entre os sistemas muscular e esquelético durante o ciclo da marcha.",
+  "objdescription": {
+    "pt-BR": "O ciclo da marcha corresponde à sequência de movimentos realizados pelo corpo durante a caminhada, desde o contato inicial de um pé com o solo até o próximo contato do mesmo pé. É dividido em duas fases principais: apoio, quando o membro inferior sustenta o peso corporal, e balanço, quando avança para iniciar um novo passo. Durante esse processo, músculos, ossos e articulações atuam de maneira coordenada para proporcionar estabilidade, equilíbrio e deslocamento. Os músculos glúteos, quadríceps, isquiotibiais e da panturrilha participam do controle dos movimentos, da sustentação corporal e da propulsão. As articulações do quadril, joelho e tornozelo realizam movimentos coordenados de flexão e extensão. A animação demonstra a alternância dos membros inferiores e a interação entre os sistemas muscular e esquelético durante o ciclo da marcha.",
+    "en": "The gait cycle corresponds to the sequence of movements performed by the body during walking, from the initial contact of one foot with the ground to the next contact of the same foot. It is divided into two main phases: the stance phase, when the lower limb supports body weight, and the swing phase, when it moves forward to initiate a new step. During this process, muscles, bones, and joints work in a coordinated manner to provide stability, balance, and locomotion. The gluteal muscles, quadriceps, hamstrings, and calf muscles participate in movement control, body support, and propulsion. The hip, knee, and ankle joints perform coordinated flexion and extension movements. The animation demonstrates the alternation of the lower limbs and the interaction between the muscular and skeletal systems throughout the gait cycle.",
+    "es": "El ciclo de la marcha corresponde a la secuencia de movimientos realizados por el cuerpo durante la caminata, desde el contacto inicial de un pie con el suelo hasta el siguiente contacto del mismo pie. Se divide en dos fases principales: apoyo, cuando el miembro inferior sostiene el peso corporal, y balanceo, cuando avanza para iniciar un nuevo paso. Durante este proceso, los músculos, huesos y articulaciones actúan de manera coordinada para proporcionar estabilidad, equilibrio y desplazamiento. Los músculos glúteos, el cuádriceps, los isquiotibiales y los músculos de la pantorrilla participan en el control de los movimientos, el sostenimiento corporal y la propulsión. Las articulaciones de la cadera, la rodilla y el tobillo realizan movimientos coordinados de flexión y extensión. La animación demuestra la alternancia de los miembros inferiores y la interacción entre los sistemas muscular y esquelético durante el ciclo de la marcha."
+  },
   "linkedModels": [
     {
       "id": "3",
-      "label": "Sistema Esquelético Masculino"
-    },
-    {
-      "id": "28",
-      "label": "Sistema Esquelético Feminino"
+      "label": {
+        "pt-BR": "Sistema Esquelético Masculino",
+        "en": "Male Skeletal System",
+        "es": "Sistema Esquelético Masculino"
+      }
     },
     {
       "id": "17",
-      "label": "Sistema Muscular Masculino"
+      "label": {
+        "pt-BR": "Sistema Muscular Masculino",
+        "en": "Male Muscular System",
+        "es": "Sistema Muscular Masculino"
+      }
     },
     {
       "id": "27",
-      "label": "Sistema Muscular Feminino"
+      "label": {
+        "pt-BR": "Sistema Muscular Feminino",
+        "en": "Female Muscular System",
+        "es": "Sistema Muscular Femenino"
+      }
+    },
+    {
+      "id": "28",
+      "label": {
+        "pt-BR": "Sistema Esquelético Feminino",
+        "en": "Female Skeletal System",
+        "es": "Sistema Esquelético Femenino"
+      }
+    },
+    {
+      "id": "31",
+      "label": {
+        "pt-BR": "Artrose",
+        "en": "Osteoarthritis",
+        "es": "Artrosis"
+      }
+    },
+    {
+      "id": "51",
+      "label": {
+        "pt-BR": "Paralisia Cerebral",
+        "en": "Cerebral Palsy",
+        "es": "Parálisis Cerebral"
+      }
+    },
+    {
+      "id": "53",
+      "label": {
+        "pt-BR": "Síndrome de Guillain-Barré (SGB)",
+        "en": "Guillain-Barré Syndrome (GBS)",
+        "es": "Síndrome de Guillain-Barré (SGB)"
+      }
+    },
+    {
+      "id": "68",
+      "label": {
+        "pt-BR": "Flexão e Extensão do Joelho",
+        "en": "Knee Flexion and Extension",
+        "es": "Flexión y Extensión de la Rodilla"
+      }
+    },
+    {
+      "id": "69",
+      "label": {
+        "pt-BR": "Mecânica da Corrida",
+        "en": "Running Mechanics",
+        "es": "Mecánica de la Carrera"
+      }
+    },
+    {
+      "id": "103",
+      "label": {
+        "pt-BR": "Característica Anatômica do Pé com Hálux Valgo",
+        "en": "Anatomical Feature of the Foot with Hallux Valgus",
+        "es": "Característica Anatómica del Pie con Hallux Valgus"
+      }
+    },
+    {
+      "id": "104",
+      "label": {
+        "pt-BR": "Biomateriais - Prótese de Quadril",
+        "en": "Biomaterials - Hip Prosthesis",
+        "es": "Biomateriales - Prótesis de Cadera"
+      }
     }
   ],
   "resources": [],
-  "Muscle_1+Muscle_2+nisolar": {
-    "objname": "Músculos dos Membros Inferiores",
-    "description": "Conjunto de músculos responsáveis pela movimentação e estabilização dos membros inferiores durante a marcha. Os glúteos estabilizam a pelve e participam dos movimentos do quadril; o quadríceps contribui para o controle do joelho; os isquiotibiais auxiliam na flexão do joelho e na extensão do quadril; e os músculos da panturrilha participam do controle do tornozelo e da propulsão. Na animação, a musculatura acompanha os movimentos de apoio e balanço realizados durante a caminhada."
-  },
-  "Skeleton_3+Skeleton_4+Skeleton_1+nisolar": {
-    "objname": "Esqueleto dos Membros Inferiores",
-    "description": "Conjunto de estruturas ósseas que sustentam o corpo e permitem a realização dos movimentos da marcha. A pelve, o fêmur, a patela, a tíbia, a fíbula e os ossos dos pés participam da transmissão do peso corporal e da movimentação das articulações. Durante a caminhada, quadril, joelho e tornozelo realizam movimentos coordenados que permitem o apoio, a transferência de peso e o avanço alternado dos membros inferiores."
+  "parts": {
+    "Muscle_1+Muscle_2+nisolar": {
+      "objname": {
+        "pt-BR": "Músculos dos Membros Inferiores",
+        "en": "Muscles of the Lower Limbs",
+        "es": "Músculos de los Miembros Inferiores"
+      },
+      "description": {
+        "pt-BR": "Conjunto de músculos responsáveis pela movimentação e estabilização dos membros inferiores durante a marcha. Os glúteos estabilizam a pelve e participam dos movimentos do quadril; o quadríceps contribui para o controle do joelho; os isquiotibiais auxiliam na flexão do joelho e na extensão do quadril; e os músculos da panturrilha participam do controle do tornozelo e da propulsão. Na animação, a musculatura acompanha os movimentos de apoio e balanço realizados durante a caminhada.",
+        "en": "Group of muscles responsible for the movement and stabilization of the lower limbs during gait. The gluteal muscles stabilize the pelvis and participate in hip movements; the quadriceps contributes to knee control; the hamstrings assist in knee flexion and hip extension; and the calf muscles participate in ankle control and propulsion. In the animation, the musculature follows the movements performed during the stance and swing phases of walking.",
+        "es": "Conjunto de músculos responsables del movimiento y la estabilización de los miembros inferiores durante la marcha. Los glúteos estabilizan la pelvis y participan en los movimientos de la cadera; el cuádriceps contribuye al control de la rodilla; los isquiotibiales ayudan en la flexión de la rodilla y la extensión de la cadera; y los músculos de la pantorrilla participan en el control del tobillo y la propulsión. En la animación, la musculatura acompaña los movimientos de apoyo y balanceo realizados durante la caminata."
+      }
+    },
+    "Skeleton_3+Skeleton_4+Skeleton_1+nisolar": {
+      "objname": {
+        "pt-BR": "Esqueleto dos Membros Inferiores",
+        "en": "Skeleton of the Lower Limbs",
+        "es": "Esqueleto de los Miembros Inferiores"
+      },
+      "description": {
+        "pt-BR": "Conjunto de estruturas ósseas que sustentam o corpo e permitem a realização dos movimentos da marcha. A pelve, o fêmur, a patela, a tíbia, a fíbula e os ossos dos pés participam da transmissão do peso corporal e da movimentação das articulações. Durante a caminhada, quadril, joelho e tornozelo realizam movimentos coordenados que permitem o apoio, a transferência de peso e o avanço alternado dos membros inferiores.",
+        "en": "Group of skeletal structures that support the body and enable the movements involved in gait. The pelvis, femur, patella, tibia, fibula, and bones of the feet participate in the transmission of body weight and joint movement. During walking, the hip, knee, and ankle perform coordinated movements that enable support, weight transfer, and the alternating forward movement of the lower limbs.",
+        "es": "Conjunto de estructuras óseas que sostienen el cuerpo y permiten la realización de los movimientos de la marcha. La pelvis, el fémur, la rótula, la tibia, la fíbula y los huesos de los pies participan en la transmisión del peso corporal y en el movimiento de las articulaciones. Durante la caminata, la cadera, la rodilla y el tobillo realizan movimientos coordinados que permiten el apoyo, la transferencia de peso y el avance alternado de los miembros inferiores."
+      }
+    }
   }
 }

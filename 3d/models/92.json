@@ -1,30 +1,129 @@
 {
-  "objname": "Linfedema",
+  "objname": {
+    "pt-BR": "Linfedema",
+    "en": "Lymphedema",
+    "es": "Linfedema"
+  },
   "objsystem": [
     "Linfático",
     "Cardiovascular"
   ],
-  "objdescription": "O linfedema é uma condição caracterizada pelo acúmulo de líquido rico em proteínas nos tecidos, causado por alterações na drenagem do sistema linfático. Pode ocorrer devido a malformações congênitas dos vasos linfáticos ou a danos adquiridos, como aqueles provocados por cirurgias, radioterapia, infecções e outras doenças. Nos membros inferiores, o comprometimento da circulação linfática favorece o desenvolvimento de inchaço persistente, sensação de peso, desconforto e alterações progressivas da pele e do tecido subcutâneo. Em casos crônicos, podem ocorrer fibrose e aumento da espessura dos tecidos. O modelo apresenta os membros inferiores e suas estruturas vasculares, nervosas e linfáticas, destacando o aumento de volume das pernas provocado pelo acúmulo de líquido intersticial e a importância dos vasos linfáticos na manutenção do equilíbrio dos fluidos corporais.",
-  "linkedModels": [],
+  "objdescription": {
+    "pt-BR": "O linfedema é uma condição caracterizada pelo acúmulo de líquido rico em proteínas nos tecidos, causado por alterações na drenagem do sistema linfático. Pode ocorrer devido a malformações congênitas dos vasos linfáticos ou a danos adquiridos, como aqueles provocados por cirurgias, radioterapia, infecções e outras doenças. Nos membros inferiores, o comprometimento da circulação linfática favorece o desenvolvimento de inchaço persistente, sensação de peso, desconforto e alterações progressivas da pele e do tecido subcutâneo. Em casos crônicos, podem ocorrer fibrose e aumento da espessura dos tecidos. O modelo apresenta os membros inferiores e suas estruturas vasculares, nervosas e linfáticas, destacando o aumento de volume das pernas provocado pelo acúmulo de líquido intersticial e a importância dos vasos linfáticos na manutenção do equilíbrio dos fluidos corporais.",
+    "en": "Lymphedema is a condition characterized by the accumulation of protein-rich fluid in the tissues caused by impaired drainage of the lymphatic system. It may occur due to congenital malformations of the lymphatic vessels or acquired damage, such as that caused by surgery, radiation therapy, infections, and other diseases. In the lower limbs, impaired lymphatic circulation promotes the development of persistent swelling, a sensation of heaviness, discomfort, and progressive changes in the skin and subcutaneous tissue. In chronic cases, fibrosis and tissue thickening may occur. The model presents the lower limbs and their vascular, nervous, and lymphatic structures, highlighting the increase in leg volume caused by the accumulation of interstitial fluid and the importance of lymphatic vessels in maintaining body fluid balance.",
+    "es": "El linfedema es una afección caracterizada por la acumulación de líquido rico en proteínas en los tejidos, causada por alteraciones en el drenaje del sistema linfático. Puede producirse debido a malformaciones congénitas de los vasos linfáticos o a daños adquiridos, como los provocados por cirugías, radioterapia, infecciones y otras enfermedades. En los miembros inferiores, el compromiso de la circulación linfática favorece el desarrollo de hinchazón persistente, sensación de pesadez, molestias y alteraciones progresivas de la piel y el tejido subcutáneo. En casos crónicos, pueden producirse fibrosis y aumento del grosor de los tejidos. El modelo presenta los miembros inferiores y sus estructuras vasculares, nerviosas y linfáticas, destacando el aumento de volumen de las piernas provocado por la acumulación de líquido intersticial y la importancia de los vasos linfáticos en el mantenimiento del equilibrio de los líquidos corporales."
+  },
+  "linkedModels": [
+    {
+      "id": "18",
+      "label": {
+        "pt-BR": "Sistema Linfático",
+        "en": "Lymphatic System",
+        "es": "Sistema Linfático"
+      }
+    },
+    {
+      "id": "19",
+      "label": {
+        "pt-BR": "Sistema Arterial",
+        "en": "Arterial System",
+        "es": "Sistema Arterial"
+      }
+    },
+    {
+      "id": "20",
+      "label": {
+        "pt-BR": "Sistema Venoso",
+        "en": "Venous System",
+        "es": "Sistema Venoso"
+      }
+    },
+    {
+      "id": "32",
+      "label": {
+        "pt-BR": "Sistema Cardiovascular",
+        "en": "Cardiovascular System",
+        "es": "Sistema Cardiovascular"
+      }
+    },
+    {
+      "id": "77",
+      "label": {
+        "pt-BR": "Câncer de Mama: Estágio 3",
+        "en": "Breast Cancer: Stage 3",
+        "es": "Cáncer de Mama: Estadio 3"
+      }
+    },
+    {
+      "id": "78",
+      "label": {
+        "pt-BR": "Câncer de Mama: Estágio 4",
+        "en": "Breast Cancer: Stage 4",
+        "es": "Cáncer de Mama: Estadio 4"
+      }
+    }
+  ],
   "resources": [],
-  "Skin": {
-    "objname": "Edema nos Membros Inferiores",
-    "description": "Representação do aumento de volume das pernas causado pelo acúmulo de líquido no espaço intersticial, decorrente da redução da capacidade de drenagem linfática. O linfedema pode afetar pés, tornozelos e pernas, provocando inchaço, sensação de peso e limitação dos movimentos. Com a progressão da condição, a pele e o tecido subcutâneo podem apresentar espessamento e fibrose. No modelo, a silhueta dos membros inferiores demonstra didaticamente as alterações de volume associadas ao linfedema."
-  },
-  "LowerLimbArteries": {
-    "objname": "Artérias dos Membros Inferiores",
-    "description": "Vasos sanguíneos responsáveis por transportar sangue oxigenado do coração para os tecidos dos membros inferiores. A circulação arterial fornece oxigênio e nutrientes às células e participa da dinâmica de troca de líquidos nos capilares. No linfedema, as artérias não constituem o principal local de comprometimento, mas são apresentadas para demonstrar sua relação anatômica e funcional com os sistemas venoso e linfático."
-  },
-  "LowerLimbVeins": {
-    "objname": "Veias dos Membros Inferiores",
-    "description": "Vasos responsáveis pelo retorno do sangue dos membros inferiores em direção ao coração. Participam do equilíbrio dos líquidos corporais por meio da circulação venosa e das trocas capilares. Alterações no retorno venoso podem contribuir para o desenvolvimento de edema e, em algumas situações, coexistir com a insuficiência linfática. No modelo, as veias são apresentadas para contextualizar sua relação com a drenagem dos líquidos dos tecidos."
-  },
-  "LymphVessel": {
-    "objname": "Vasos Linfáticos dos Membros Inferiores",
-    "description": "Rede de vasos responsável por recolher o excesso de líquido intersticial, proteínas e outras substâncias dos tecidos, transportando-os na forma de linfa até sua devolução à circulação sanguínea. No linfedema, alterações estruturais ou funcionais desses vasos comprometem a drenagem linfática, favorecendo o acúmulo de líquido e o aumento de volume dos membros inferiores. O comprometimento prolongado também pode provocar inflamação crônica, fibrose e alterações na pele e no tecido subcutâneo."
-  },
-  "Nervous": {
-    "objname": "Nervos dos Membros Inferiores",
-    "description": "Conjunto de nervos periféricos responsáveis pela transmissão de informações motoras e sensitivas entre o sistema nervoso central e os membros inferiores. Permitem a movimentação muscular e a percepção de estímulos como toque, temperatura e dor. No linfedema, os nervos não são o principal local de comprometimento, mas o aumento de volume dos tecidos pode contribuir para desconforto, sensação de pressão e, em determinadas situações, alterações sensitivas."
+  "parts": {
+    "Skin": {
+      "objname": {
+        "pt-BR": "Edema nos Membros Inferiores",
+        "en": "Edema of the Lower Limbs",
+        "es": "Edema en los Miembros Inferiores"
+      },
+      "description": {
+        "pt-BR": "Representação do aumento de volume das pernas causado pelo acúmulo de líquido no espaço intersticial, decorrente da redução da capacidade de drenagem linfática. O linfedema pode afetar pés, tornozelos e pernas, provocando inchaço, sensação de peso e limitação dos movimentos. Com a progressão da condição, a pele e o tecido subcutâneo podem apresentar espessamento e fibrose. No modelo, a silhueta dos membros inferiores demonstra didaticamente as alterações de volume associadas ao linfedema.",
+        "en": "Representation of the increase in leg volume caused by fluid accumulation in the interstitial space resulting from reduced lymphatic drainage capacity. Lymphedema may affect the feet, ankles, and legs, causing swelling, a sensation of heaviness, and limited movement. As the condition progresses, the skin and subcutaneous tissue may develop thickening and fibrosis. In the model, the silhouette of the lower limbs illustrates the changes in volume associated with lymphedema for educational purposes.",
+        "es": "Representación del aumento de volumen de las piernas causado por la acumulación de líquido en el espacio intersticial, como consecuencia de la reducción de la capacidad de drenaje linfático. El linfedema puede afectar los pies, los tobillos y las piernas, provocando hinchazón, sensación de pesadez y limitación de los movimientos. Con la progresión de la afección, la piel y el tejido subcutáneo pueden presentar engrosamiento y fibrosis. En el modelo, la silueta de los miembros inferiores demuestra de forma didáctica las alteraciones de volumen asociadas al linfedema."
+      }
+    },
+    "LowerLimbArteries": {
+      "objname": {
+        "pt-BR": "Artérias dos Membros Inferiores",
+        "en": "Arteries of the Lower Limbs",
+        "es": "Arterias de los Miembros Inferiores"
+      },
+      "description": {
+        "pt-BR": "Vasos sanguíneos responsáveis por transportar sangue oxigenado do coração para os tecidos dos membros inferiores. A circulação arterial fornece oxigênio e nutrientes às células e participa da dinâmica de troca de líquidos nos capilares. No linfedema, as artérias não constituem o principal local de comprometimento, mas são apresentadas para demonstrar sua relação anatômica e funcional com os sistemas venoso e linfático.",
+        "en": "Blood vessels responsible for transporting oxygenated blood from the heart to the tissues of the lower limbs. Arterial circulation supplies oxygen and nutrients to cells and participates in the dynamics of fluid exchange within the capillaries. In lymphedema, the arteries are not the primary site of impairment but are presented to demonstrate their anatomical and functional relationship with the venous and lymphatic systems.",
+        "es": "Vasos sanguíneos responsables de transportar sangre oxigenada desde el corazón hasta los tejidos de los miembros inferiores. La circulación arterial proporciona oxígeno y nutrientes a las células y participa en la dinámica del intercambio de líquidos en los capilares. En el linfedema, las arterias no constituyen el principal lugar de afectación, pero se presentan para demostrar su relación anatómica y funcional con los sistemas venoso y linfático."
+      }
+    },
+    "LowerLimbVeins": {
+      "objname": {
+        "pt-BR": "Veias dos Membros Inferiores",
+        "en": "Veins of the Lower Limbs",
+        "es": "Venas de los Miembros Inferiores"
+      },
+      "description": {
+        "pt-BR": "Vasos responsáveis pelo retorno do sangue dos membros inferiores em direção ao coração. Participam do equilíbrio dos líquidos corporais por meio da circulação venosa e das trocas capilares. Alterações no retorno venoso podem contribuir para o desenvolvimento de edema e, em algumas situações, coexistir com a insuficiência linfática. No modelo, as veias são apresentadas para contextualizar sua relação com a drenagem dos líquidos dos tecidos.",
+        "en": "Vessels responsible for returning blood from the lower limbs to the heart. They contribute to body fluid balance through venous circulation and capillary exchange. Impaired venous return may contribute to the development of edema and, in some situations, coexist with lymphatic insufficiency. In the model, the veins are presented to provide context for their relationship with the drainage of tissue fluids.",
+        "es": "Vasos responsables del retorno de la sangre desde los miembros inferiores hacia el corazón. Participan en el equilibrio de los líquidos corporales mediante la circulación venosa y los intercambios capilares. Las alteraciones del retorno venoso pueden contribuir al desarrollo de edema y, en algunas situaciones, coexistir con la insuficiencia linfática. En el modelo, las venas se presentan para contextualizar su relación con el drenaje de los líquidos de los tejidos."
+      }
+    },
+    "LymphVessel": {
+      "objname": {
+        "pt-BR": "Vasos Linfáticos dos Membros Inferiores",
+        "en": "Lymphatic Vessels of the Lower Limbs",
+        "es": "Vasos Linfáticos de los Miembros Inferiores"
+      },
+      "description": {
+        "pt-BR": "Rede de vasos responsável por recolher o excesso de líquido intersticial, proteínas e outras substâncias dos tecidos, transportando-os na forma de linfa até sua devolução à circulação sanguínea. No linfedema, alterações estruturais ou funcionais desses vasos comprometem a drenagem linfática, favorecendo o acúmulo de líquido e o aumento de volume dos membros inferiores. O comprometimento prolongado também pode provocar inflamação crônica, fibrose e alterações na pele e no tecido subcutâneo.",
+        "en": "Network of vessels responsible for collecting excess interstitial fluid, proteins, and other substances from the tissues, transporting them as lymph until they are returned to the bloodstream. In lymphedema, structural or functional abnormalities of these vessels impair lymphatic drainage, promoting fluid accumulation and an increase in the volume of the lower limbs. Prolonged impairment may also cause chronic inflammation, fibrosis, and changes in the skin and subcutaneous tissue.",
+        "es": "Red de vasos responsable de recoger el exceso de líquido intersticial, proteínas y otras sustancias de los tejidos, transportándolos en forma de linfa hasta su retorno a la circulación sanguínea. En el linfedema, las alteraciones estructurales o funcionales de estos vasos comprometen el drenaje linfático, favoreciendo la acumulación de líquido y el aumento de volumen de los miembros inferiores. El compromiso prolongado también puede provocar inflamación crónica, fibrosis y alteraciones en la piel y el tejido subcutáneo."
+      }
+    },
+    "Nervous": {
+      "objname": {
+        "pt-BR": "Nervos dos Membros Inferiores",
+        "en": "Nerves of the Lower Limbs",
+        "es": "Nervios de los Miembros Inferiores"
+      },
+      "description": {
+        "pt-BR": "Conjunto de nervos periféricos responsáveis pela transmissão de informações motoras e sensitivas entre o sistema nervoso central e os membros inferiores. Permitem a movimentação muscular e a percepção de estímulos como toque, temperatura e dor. No linfedema, os nervos não são o principal local de comprometimento, mas o aumento de volume dos tecidos pode contribuir para desconforto, sensação de pressão e, em determinadas situações, alterações sensitivas.",
+        "en": "Group of peripheral nerves responsible for transmitting motor and sensory information between the central nervous system and the lower limbs. They enable muscle movement and the perception of stimuli such as touch, temperature, and pain. In lymphedema, the nerves are not the primary site of impairment, but the increase in tissue volume may contribute to discomfort, a sensation of pressure, and, in certain situations, sensory disturbances.",
+        "es": "Conjunto de nervios periféricos responsables de la transmisión de información motora y sensitiva entre el sistema nervioso central y los miembros inferiores. Permiten el movimiento muscular y la percepción de estímulos como el tacto, la temperatura y el dolor. En el linfedema, los nervios no constituyen el principal lugar de afectación, pero el aumento de volumen de los tejidos puede contribuir a la aparición de molestias, sensación de presión y, en determinadas situaciones, alteraciones sensitivas."
+      }
+    }
   }
 }

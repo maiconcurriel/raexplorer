@@ -1,38 +1,140 @@
 {
-  "objname": "Via de Recompensa",
+  "objname": {
+    "pt-BR": "Via de Recompensa",
+    "en": "Reward Pathway",
+    "es": "Vía de Recompensa"
+  },
   "objsystem": [
     "Nervoso"
   ],
-  "objdescription": "A via de recompensa é um conjunto de circuitos cerebrais relacionado à motivação, ao aprendizado e ao reforço de comportamentos associados a experiências consideradas recompensadoras. A comunicação entre regiões do mesencéfalo e estruturas como o núcleo accumbens envolve a ação da dopamina e contribui para a sensação de recompensa e para a motivação de repetir determinados comportamentos. Outras regiões, como o córtex pré-frontal, a amígdala e o hipocampo, participam da avaliação das consequências, das emoções e da formação de memórias associadas às experiências. Esse sistema pode ser ativado por recompensas naturais e também pode ser intensamente afetado por substâncias capazes de alterar a sinalização cerebral, desempenhando papel importante nos mecanismos relacionados à dependência.",
+  "objdescription": {
+    "pt-BR": "A via de recompensa é um conjunto de circuitos cerebrais relacionado à motivação, ao aprendizado e ao reforço de comportamentos associados a experiências consideradas recompensadoras. A comunicação entre regiões do mesencéfalo e estruturas como o núcleo accumbens envolve a ação da dopamina e contribui para a sensação de recompensa e para a motivação de repetir determinados comportamentos. Outras regiões, como o córtex pré-frontal, a amígdala e o hipocampo, participam da avaliação das consequências, das emoções e da formação de memórias associadas às experiências. Esse sistema pode ser ativado por recompensas naturais e também pode ser intensamente afetado por substâncias capazes de alterar a sinalização cerebral, desempenhando papel importante nos mecanismos relacionados à dependência.",
+    "en": "The reward pathway is a set of brain circuits associated with motivation, learning, and the reinforcement of behaviors linked to experiences perceived as rewarding. Communication between regions of the midbrain and structures such as the nucleus accumbens involves the action of dopamine and contributes to the sensation of reward and the motivation to repeat certain behaviors. Other regions, such as the prefrontal cortex, the amygdala, and the hippocampus, participate in evaluating consequences, processing emotions, and forming memories associated with experiences. This system can be activated by natural rewards and can also be strongly affected by substances capable of altering brain signaling, playing an important role in mechanisms associated with addiction.",
+    "es": "La vía de recompensa es un conjunto de circuitos cerebrales relacionado con la motivación, el aprendizaje y el refuerzo de comportamientos asociados a experiencias consideradas gratificantes. La comunicación entre regiones del mesencéfalo y estructuras como el núcleo accumbens implica la acción de la dopamina y contribuye a la sensación de recompensa y a la motivación para repetir determinados comportamientos. Otras regiones, como la corteza prefrontal, la amígdala y el hipocampo, participan en la evaluación de las consecuencias, el procesamiento de las emociones y la formación de recuerdos asociados a las experiencias. Este sistema puede activarse mediante recompensas naturales y también puede verse intensamente afectado por sustancias capaces de alterar la señalización cerebral, desempeñando un papel importante en los mecanismos relacionados con la dependencia."
+  },
   "linkedModels": [
     {
       "id": "2",
-      "label": "Cérebro"
+      "label": {
+        "pt-BR": "Cérebro",
+        "en": "Brain",
+        "es": "Cerebro"
+      }
+    },
+    {
+      "id": "21",
+      "label": {
+        "pt-BR": "Sistema Nervoso",
+        "en": "Nervous System",
+        "es": "Sistema Nervioso"
+      }
+    },
+    {
+      "id": "38",
+      "label": {
+        "pt-BR": "Neurotransmissores",
+        "en": "Neurotransmitters",
+        "es": "Neurotransmisores"
+      }
+    },
+    {
+      "id": "44",
+      "label": {
+        "pt-BR": "Ansiedade",
+        "en": "Anxiety",
+        "es": "Ansiedad"
+      }
+    },
+    {
+      "id": "45",
+      "label": {
+        "pt-BR": "Depressão Bipolar",
+        "en": "Bipolar Depression",
+        "es": "Depresión Bipolar"
+      }
+    },
+    {
+      "id": "52",
+      "label": {
+        "pt-BR": "Transtorno do Déficit de Atenção e Hiperatividade (TDAH)",
+        "en": "Attention-Deficit/Hyperactivity Disorder (ADHD)",
+        "es": "Trastorno por Déficit de Atención e Hiperactividad (TDAH)"
+      }
     }
   ],
   "resources": [],
-  "CortexPreFrontal": {
-    "objname": "Córtex Pré-Frontal",
-    "description": "Região cerebral envolvida no planejamento, tomada de decisões, atenção e controle do comportamento. Na via de recompensa, participa da avaliação das consequências das ações e da regulação de comportamentos motivados pela busca de recompensas."
-  },
-  "Amygdala": {
-    "objname": "Amígdala",
-    "description": "Estrutura envolvida no processamento das emoções e na atribuição de significado emocional aos estímulos. Na via de recompensa, contribui para associar experiências e estímulos às respostas emocionais, influenciando comportamentos de aproximação ou evitação."
-  },
-  "Hippocampus": {
-    "objname": "Hipocampo",
-    "description": "Estrutura fundamental para a formação e recuperação de memórias. Nos circuitos de recompensa, contribui para registrar o contexto e as experiências relacionadas a uma recompensa, permitindo que situações e estímulos sejam posteriormente reconhecidos e associados a essas experiências."
-  },
-  "Mesencefalo": {
-    "objname": "Mesencéfalo",
-    "description": "Região do tronco encefálico que contém grupos de neurônios importantes para os circuitos de recompensa. Entre eles estão neurônios dopaminérgicos da área tegmental ventral, que enviam sinais para estruturas como o núcleo accumbens e o córtex pré-frontal, participando da motivação, aprendizagem e reforço."
-  },
-  "NucleusAccumbens": {
-    "objname": "Núcleo Accumbens",
-    "description": "Estrutura cerebral com papel importante no processamento da recompensa, motivação e reforço. Recebe sinais dopaminérgicos provenientes do mesencéfalo e integra essas informações com outros circuitos cerebrais, contribuindo para a aprendizagem e para a repetição de comportamentos associados a recompensas."
-  },
-  "Head+ninteract": {
-    "objname": "",
-    "description": ""
+  "parts": {
+    "CortexPreFrontal": {
+      "objname": {
+        "pt-BR": "Córtex Pré-Frontal",
+        "en": "Prefrontal Cortex",
+        "es": "Corteza Prefrontal"
+      },
+      "description": {
+        "pt-BR": "Região cerebral envolvida no planejamento, tomada de decisões, atenção e controle do comportamento. Na via de recompensa, participa da avaliação das consequências das ações e da regulação de comportamentos motivados pela busca de recompensas.",
+        "en": "Brain region involved in planning, decision-making, attention, and behavioral control. In the reward pathway, it participates in evaluating the consequences of actions and regulating behaviors motivated by the pursuit of rewards.",
+        "es": "Región cerebral involucrada en la planificación, la toma de decisiones, la atención y el control del comportamiento. En la vía de recompensa, participa en la evaluación de las consecuencias de las acciones y en la regulación de comportamientos motivados por la búsqueda de recompensas."
+      }
+    },
+    "Amygdala": {
+      "objname": {
+        "pt-BR": "Amígdala",
+        "en": "Amygdala",
+        "es": "Amígdala"
+      },
+      "description": {
+        "pt-BR": "Estrutura envolvida no processamento das emoções e na atribuição de significado emocional aos estímulos. Na via de recompensa, contribui para associar experiências e estímulos às respostas emocionais, influenciando comportamentos de aproximação ou evitação.",
+        "en": "Structure involved in emotional processing and assigning emotional significance to stimuli. In the reward pathway, it contributes to associating experiences and stimuli with emotional responses, influencing approach or avoidance behaviors.",
+        "es": "Estructura involucrada en el procesamiento de las emociones y en la atribución de significado emocional a los estímulos. En la vía de recompensa, contribuye a asociar experiencias y estímulos con respuestas emocionales, influyendo en los comportamientos de aproximación o evitación."
+      }
+    },
+    "Hippocampus": {
+      "objname": {
+        "pt-BR": "Hipocampo",
+        "en": "Hippocampus",
+        "es": "Hipocampo"
+      },
+      "description": {
+        "pt-BR": "Estrutura fundamental para a formação e recuperação de memórias. Nos circuitos de recompensa, contribui para registrar o contexto e as experiências relacionadas a uma recompensa, permitindo que situações e estímulos sejam posteriormente reconhecidos e associados a essas experiências.",
+        "en": "Structure essential for memory formation and retrieval. In reward circuits, it contributes to recording the context and experiences associated with a reward, allowing situations and stimuli to be subsequently recognized and associated with those experiences.",
+        "es": "Estructura fundamental para la formación y recuperación de recuerdos. En los circuitos de recompensa, contribuye a registrar el contexto y las experiencias relacionadas con una recompensa, permitiendo que las situaciones y los estímulos sean posteriormente reconocidos y asociados a dichas experiencias."
+      }
+    },
+    "Mesencefalo": {
+      "objname": {
+        "pt-BR": "Mesencéfalo",
+        "en": "Midbrain",
+        "es": "Mesencéfalo"
+      },
+      "description": {
+        "pt-BR": "Região do tronco encefálico que contém grupos de neurônios importantes para os circuitos de recompensa. Entre eles estão neurônios dopaminérgicos da área tegmental ventral, que enviam sinais para estruturas como o núcleo accumbens e o córtex pré-frontal, participando da motivação, aprendizagem e reforço.",
+        "en": "Region of the brainstem that contains groups of neurons important to reward circuits. These include dopaminergic neurons of the ventral tegmental area, which send signals to structures such as the nucleus accumbens and the prefrontal cortex, participating in motivation, learning, and reinforcement.",
+        "es": "Región del tronco encefálico que contiene grupos de neuronas importantes para los circuitos de recompensa. Entre ellas se encuentran las neuronas dopaminérgicas del área tegmental ventral, que envían señales a estructuras como el núcleo accumbens y la corteza prefrontal, participando en la motivación, el aprendizaje y el refuerzo."
+      }
+    },
+    "NucleusAccumbens": {
+      "objname": {
+        "pt-BR": "Núcleo Accumbens",
+        "en": "Nucleus Accumbens",
+        "es": "Núcleo Accumbens"
+      },
+      "description": {
+        "pt-BR": "Estrutura cerebral com papel importante no processamento da recompensa, motivação e reforço. Recebe sinais dopaminérgicos provenientes do mesencéfalo e integra essas informações com outros circuitos cerebrais, contribuindo para a aprendizagem e para a repetição de comportamentos associados a recompensas.",
+        "en": "Brain structure that plays an important role in reward processing, motivation, and reinforcement. It receives dopaminergic signals from the midbrain and integrates this information with other brain circuits, contributing to learning and the repetition of behaviors associated with rewards.",
+        "es": "Estructura cerebral que desempeña un papel importante en el procesamiento de la recompensa, la motivación y el refuerzo. Recibe señales dopaminérgicas procedentes del mesencéfalo e integra esta información con otros circuitos cerebrales, contribuyendo al aprendizaje y a la repetición de comportamientos asociados a recompensas."
+      }
+    },
+    "Head+ninteract": {
+      "objname": {
+        "pt-BR": "",
+        "en": "",
+        "es": ""
+      },
+      "description": {
+        "pt-BR": "",
+        "en": "",
+        "es": ""
+      }
+    }
   }
 }

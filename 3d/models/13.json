@@ -1,126 +1,324 @@
 {
-  "objname": "Sistema Reprodutor Masculino",
-  "objsystem": "Reprodutor",
-  "objdescription": "O sistema reprodutor masculino é responsável pela produção, armazenamento e transporte dos espermatozoides, além da produção de hormônios sexuais, principalmente a testosterona. Os testículos produzem os espermatozoides e hormônios, enquanto o epidídimo participa da maturação e armazenamento dos gametas. O ducto deferente conduz os espermatozoides até os ductos ejaculatórios. As vesículas seminais, a próstata e as glândulas bulbouretrais produzem secreções que formam o sêmen. O pênis contém tecidos eréteis que permitem a ereção e a deposição do sêmen no sistema reprodutor feminino.",
+  "objname": {
+    "pt-BR": "Sistema Reprodutor Masculino",
+    "en": "Male Reproductive System",
+    "es": "Sistema Reproductor Masculino"
+  },
+  "objsystem": [
+    "Reprodutor"
+  ],
+  "objdescription": {
+    "pt-BR": "O sistema reprodutor masculino é responsável pela produção, armazenamento e transporte dos espermatozoides, além da produção de hormônios sexuais, principalmente a testosterona. Os testículos produzem os espermatozoides e hormônios, enquanto o epidídimo participa da maturação e armazenamento dos gametas. O ducto deferente conduz os espermatozoides até os ductos ejaculatórios. As vesículas seminais, a próstata e as glândulas bulbouretrais produzem secreções que formam o sêmen. O pênis contém tecidos eréteis que permitem a ereção e a deposição do sêmen no sistema reprodutor feminino.",
+    "en": "The male reproductive system is responsible for the production, storage, and transport of sperm cells, as well as the production of sex hormones, primarily testosterone. The testes produce sperm cells and hormones, while the epididymis participates in the maturation and storage of gametes. The vas deferens carries sperm cells to the ejaculatory ducts. The seminal vesicles, prostate, and bulbourethral glands produce secretions that form semen. The penis contains erectile tissues that enable erection and the deposition of semen in the female reproductive system.",
+    "es": "El sistema reproductor masculino es responsable de la producción, el almacenamiento y el transporte de los espermatozoides, además de la producción de hormonas sexuales, principalmente la testosterona. Los testículos producen los espermatozoides y las hormonas, mientras que el epidídimo participa en la maduración y el almacenamiento de los gametos. El conducto deferente conduce los espermatozoides hasta los conductos eyaculadores. Las vesículas seminales, la próstata y las glándulas bulbouretrales producen secreciones que forman el semen. El pene contiene tejidos eréctiles que permiten la erección y la deposición del semen en el sistema reproductor femenino."
+  },
   "linkedModels": [
     {
-      "id": "11",
-      "label": "Sistema Reprodutor Feminino"
-    },{
-      "id": "12",
-      "label": "Sistema Urinário Masculino"
-    },{
       "id": "10",
-      "label": "Sistema Urinário Femininoo"
+      "label": {
+        "pt-BR": "Sistema Urinário Feminino",
+        "en": "Female Urinary System",
+        "es": "Sistema Urinario Femenino"
+      }
+    },
+    {
+      "id": "11",
+      "label": {
+        "pt-BR": "Sistema Reprodutor Feminino",
+        "en": "Female Reproductive System",
+        "es": "Sistema Reproductor Femenino"
+      }
+    },
+    {
+      "id": "12",
+      "label": {
+        "pt-BR": "Sistema Urinário Masculino",
+        "en": "Male Urinary System",
+        "es": "Sistema Urinario Masculino"
+      }
+    },
+    {
+      "id": "25",
+      "label": {
+        "pt-BR": "Sistema Endócrino",
+        "en": "Endocrine System",
+        "es": "Sistema Endocrino"
+      }
+    },
+    {
+      "id": "30",
+      "label": {
+        "pt-BR": "Anatomia Corpo Masculino",
+        "en": "Male Body Anatomy",
+        "es": "Anatomía del Cuerpo Masculino"
+      }
     }
   ],
   "resources": [],
-
-  "SpermaticFascia": {
-    "objname": "Fáscia Espermática",
-    "description": "Camada de tecido conjuntivo que envolve o cordão espermático e as estruturas associadas ao testículo. Contribui para a proteção e sustentação dessas estruturas dentro do escroto."
-  },
-
-  "TesticleTestisLateral": {
-    "objname": "Testículo Lateral",
-    "description": "Porção lateral do testículo, órgão responsável pela produção dos espermatozoides e pela secreção de testosterona. Os túbulos seminíferos presentes em seu interior são o local onde ocorre a espermatogênese."
-  },
-
-  "TesticleTestisMedial": {
-    "objname": "Testículo Medial",
-    "description": "Porção medial do testículo, que contém os túbulos seminíferos responsáveis pela produção dos espermatozoides e células especializadas envolvidas na produção de testosterona."
-  },
-
-  "Epididymis": {
-    "objname": "Epidídimo",
-    "description": "Estrutura tubular localizada sobre a superfície posterior do testículo. É responsável pela maturação, armazenamento e transporte dos espermatozoides antes que eles sigam para o ducto deferente."
-  },
-
-  "VasDeferens": {
-    "objname": "Ducto Deferente",
-    "description": "Tubo muscular que conduz os espermatozoides do epidídimo até o ducto ejaculatório. Suas contrações ajudam a impulsionar os espermatozoides durante a ejaculação."
-  },
-
-  "SeminalVesicle": {
-    "objname": "Vesícula Seminal",
-    "description": "Glândula localizada posteriormente à bexiga que produz uma secreção rica em substâncias nutritivas, especialmente frutose. Essa secreção representa uma parte importante do volume do sêmen."
-  },
-
-  "ProstaticCapsule": {
-    "objname": "Cápsula Prostática",
-    "description": "Camada de tecido conjuntivo que envolve a próstata. Fornece suporte estrutural e delimita externamente o tecido glandular e muscular da próstata."
-  },
-
-  "Prostate": {
-    "objname": "Próstata",
-    "description": "Glândula localizada abaixo da bexiga e ao redor da uretra prostática. Produz parte do líquido seminal, que contribui para a composição e proteção dos espermatozoides."
-  },
-
-  "ProstatePosteriorLobe": {
-    "objname": "Lobo Posterior da Próstata",
-    "description": "Região posterior da próstata, localizada atrás da uretra. É uma área clinicamente importante por ser frequentemente avaliada em exames para alterações prostáticas."
-  },
-
-  "ProstateLateralLobe": {
-    "objname": "Lobo Lateral da Próstata",
-    "description": "Porção lateral da próstata que circunda a uretra prostática e contém tecido glandular responsável pela produção de parte do líquido seminal."
-  },
-
-  "ProstateMedianLobe": {
-    "objname": "Lobo Mediano da Próstata",
-    "description": "Região da próstata localizada entre a uretra e os ductos ejaculatórios. Sua posição pode fazer com que alterações de volume interfiram no fluxo urinário."
-  },
-
-  "ProstateAnteriorLobe": {
-    "objname": "Lobo Anterior da Próstata",
-    "description": "Porção anterior da próstata localizada à frente da uretra. É constituída predominantemente por tecido fibromuscular e possui menor quantidade de tecido glandular."
-  },
-
-  "EjaculatoryDuct": {
-    "objname": "Ducto Ejaculatório",
-    "description": "Canal formado pela união do ducto deferente com o ducto da vesícula seminal. Atravessa a próstata e desemboca na uretra prostática, conduzindo o sêmen."
-  },
-
-  "BulbourethralCowperGland": {
-    "objname": "Glândula Bulbouretral (de Cowper)",
-    "description": "Pequena glândula localizada abaixo da próstata. Produz uma secreção mucosa que contribui para a lubrificação da uretra e ajuda a neutralizar sua acidez antes da passagem do sêmen."
-  },
-
-  "BuckFasciaLower": {
-    "objname": "Fáscia de Buck",
-    "description": "Camada profunda de tecido conjuntivo que envolve os corpos eréteis do pênis. Fornece suporte estrutural e ajuda a manter unidos os tecidos do pênis."
-  },
-
-  "CorpusSpongiosum": {
-    "objname": "Corpo Esponjoso",
-    "description": "Tecido erétil que envolve a uretra ao longo da porção peniana. Durante a ereção, permanece relativamente menos rígido que os corpos cavernosos, ajudando a manter a uretra aberta."
-  },
-
-  "TunicaAlbuginea": {
-    "objname": "Túnica Albugínea",
-    "description": "Cápsula de tecido conjuntivo resistente que envolve o tecido erétil dos corpos cavernosos e também está relacionada ao revestimento do testículo. No pênis, contribui para a sustentação e rigidez durante a ereção."
-  },
-
-  "CorpusCavernosum": {
-    "objname": "Corpos Cavernosos",
-    "description": "Dois cilindros de tecido erétil localizados na parte dorsal do pênis. Durante a excitação sexual, seus espaços vasculares se enchem de sangue, promovendo a maior parte da rigidez peniana."
-  },
-
-  "GlansPenis": {
-    "objname": "Glande do Pênis",
-    "description": "Extremidade expandida do pênis, formada pela continuação do corpo esponjoso. Possui grande quantidade de terminações nervosas e envolve a extremidade distal da uretra, onde se encontra o óstio uretral externo."
-  },
-
-  "DartosFascia": {
-    "objname": "Fáscia de Dartos",
-    "description": "Camada de tecido conjuntivo e músculo liso localizada no escroto, abaixo da pele. Sua contração provoca o enrugamento da pele escrotal e auxilia na regulação da temperatura dos testículos."
-  },
-  "BuckFasciaUpper": {
-  "objname": "Fáscia de Buck Superior",
-  "description": "Camada profunda de tecido conjuntivo que envolve e sustenta os tecidos eréteis do pênis. Contribui para a organização estrutural do órgão e auxilia na proteção dos vasos sanguíneos e nervos presentes em seu interior."
-  },
-  "UrethraSpongyPortionPenile": {
-  "objname": "Porção Esponjosa da Uretra",
-  "description": "Porção da uretra que percorre o corpo esponjoso do pênis. Conduz a urina e o sêmen até o óstio uretral externo, participando dos sistemas urinário e reprodutor masculino."
+  "parts": {
+    "SpermaticFascia": {
+      "objname": {
+        "pt-BR": "Fáscia Espermática",
+        "en": "Spermatic Fascia",
+        "es": "Fascia Espermática"
+      },
+      "description": {
+        "pt-BR": "Camada de tecido conjuntivo que envolve o cordão espermático e as estruturas associadas ao testículo. Contribui para a proteção e sustentação dessas estruturas dentro do escroto.",
+        "en": "Layer of connective tissue that surrounds the spermatic cord and structures associated with the testis. It contributes to the protection and support of these structures within the scrotum.",
+        "es": "Capa de tejido conjuntivo que rodea el cordón espermático y las estructuras asociadas al testículo. Contribuye a la protección y el sostén de estas estructuras dentro del escroto."
+      }
+    },
+    "TesticleTestisLateral": {
+      "objname": {
+        "pt-BR": "Testículo Lateral",
+        "en": "Lateral Portion of the Testis",
+        "es": "Porción Lateral del Testículo"
+      },
+      "description": {
+        "pt-BR": "Porção lateral do testículo, órgão responsável pela produção dos espermatozoides e pela secreção de testosterona. Os túbulos seminíferos presentes em seu interior são o local onde ocorre a espermatogênese.",
+        "en": "Lateral portion of the testis, an organ responsible for sperm cell production and testosterone secretion. The seminiferous tubules located within it are the site where spermatogenesis occurs.",
+        "es": "Porción lateral del testículo, órgano responsable de la producción de espermatozoides y de la secreción de testosterona. Los túbulos seminíferos presentes en su interior constituyen el lugar donde ocurre la espermatogénesis."
+      }
+    },
+    "TesticleTestisMedial": {
+      "objname": {
+        "pt-BR": "Testículo Medial",
+        "en": "Medial Portion of the Testis",
+        "es": "Porción Medial del Testículo"
+      },
+      "description": {
+        "pt-BR": "Porção medial do testículo, que contém os túbulos seminíferos responsáveis pela produção dos espermatozoides e células especializadas envolvidas na produção de testosterona.",
+        "en": "Medial portion of the testis, containing the seminiferous tubules responsible for sperm cell production and specialized cells involved in testosterone production.",
+        "es": "Porción medial del testículo, que contiene los túbulos seminíferos responsables de la producción de espermatozoides y células especializadas involucradas en la producción de testosterona."
+      }
+    },
+    "Epididymis": {
+      "objname": {
+        "pt-BR": "Epidídimo",
+        "en": "Epididymis",
+        "es": "Epidídimo"
+      },
+      "description": {
+        "pt-BR": "Estrutura tubular localizada sobre a superfície posterior do testículo. É responsável pela maturação, armazenamento e transporte dos espermatozoides antes que eles sigam para o ducto deferente.",
+        "en": "Tubular structure located along the posterior surface of the testis. It is responsible for the maturation, storage, and transport of sperm cells before they pass into the vas deferens.",
+        "es": "Estructura tubular situada sobre la superficie posterior del testículo. Es responsable de la maduración, el almacenamiento y el transporte de los espermatozoides antes de que pasen al conducto deferente."
+      }
+    },
+    "VasDeferens": {
+      "objname": {
+        "pt-BR": "Ducto Deferente",
+        "en": "Vas Deferens",
+        "es": "Conducto Deferente"
+      },
+      "description": {
+        "pt-BR": "Tubo muscular que conduz os espermatozoides do epidídimo até o ducto ejaculatório. Suas contrações ajudam a impulsionar os espermatozoides durante a ejaculação.",
+        "en": "Muscular tube that carries sperm cells from the epididymis to the ejaculatory duct. Its contractions help propel sperm cells during ejaculation.",
+        "es": "Tubo muscular que conduce los espermatozoides desde el epidídimo hasta el conducto eyaculador. Sus contracciones ayudan a impulsar los espermatozoides durante la eyaculación."
+      }
+    },
+    "SeminalVesicle": {
+      "objname": {
+        "pt-BR": "Vesícula Seminal",
+        "en": "Seminal Vesicle",
+        "es": "Vesícula Seminal"
+      },
+      "description": {
+        "pt-BR": "Glândula localizada posteriormente à bexiga que produz uma secreção rica em substâncias nutritivas, especialmente frutose. Essa secreção representa uma parte importante do volume do sêmen.",
+        "en": "Gland located posterior to the bladder that produces a secretion rich in nutrients, particularly fructose. This secretion accounts for a significant portion of semen volume.",
+        "es": "Glándula situada por detrás de la vejiga que produce una secreción rica en sustancias nutritivas, especialmente fructosa. Esta secreción representa una parte importante del volumen del semen."
+      }
+    },
+    "ProstaticCapsule": {
+      "objname": {
+        "pt-BR": "Cápsula Prostática",
+        "en": "Prostatic Capsule",
+        "es": "Cápsula Prostática"
+      },
+      "description": {
+        "pt-BR": "Camada de tecido conjuntivo que envolve a próstata. Fornece suporte estrutural e delimita externamente o tecido glandular e muscular da próstata.",
+        "en": "Layer of connective tissue that surrounds the prostate. It provides structural support and defines the outer boundary of the glandular and muscular tissues of the prostate.",
+        "es": "Capa de tejido conjuntivo que rodea la próstata. Proporciona soporte estructural y delimita externamente el tejido glandular y muscular de la próstata."
+      }
+    },
+    "Prostate": {
+      "objname": {
+        "pt-BR": "Próstata",
+        "en": "Prostate",
+        "es": "Próstata"
+      },
+      "description": {
+        "pt-BR": "Glândula localizada abaixo da bexiga e ao redor da uretra prostática. Produz parte do líquido seminal, que contribui para a composição e proteção dos espermatozoides.",
+        "en": "Gland located below the bladder and around the prostatic urethra. It produces part of the seminal fluid, which contributes to the composition and protection of sperm cells.",
+        "es": "Glándula situada debajo de la vejiga y alrededor de la uretra prostática. Produce parte del líquido seminal, que contribuye a la composición y protección de los espermatozoides."
+      }
+    },
+    "ProstatePosteriorLobe": {
+      "objname": {
+        "pt-BR": "Lobo Posterior da Próstata",
+        "en": "Posterior Lobe of the Prostate",
+        "es": "Lóbulo Posterior de la Próstata"
+      },
+      "description": {
+        "pt-BR": "Região posterior da próstata, localizada atrás da uretra. É uma área clinicamente importante por ser frequentemente avaliada em exames para alterações prostáticas.",
+        "en": "Posterior region of the prostate, located behind the urethra. It is a clinically important area because it is frequently assessed during examinations for prostatic abnormalities.",
+        "es": "Región posterior de la próstata, situada detrás de la uretra. Es un área de importancia clínica porque se evalúa con frecuencia en los exámenes destinados a detectar alteraciones prostáticas."
+      }
+    },
+    "ProstateLateralLobe": {
+      "objname": {
+        "pt-BR": "Lobo Lateral da Próstata",
+        "en": "Lateral Lobe of the Prostate",
+        "es": "Lóbulo Lateral de la Próstata"
+      },
+      "description": {
+        "pt-BR": "Porção lateral da próstata que circunda a uretra prostática e contém tecido glandular responsável pela produção de parte do líquido seminal.",
+        "en": "Lateral portion of the prostate that surrounds the prostatic urethra and contains glandular tissue responsible for producing part of the seminal fluid.",
+        "es": "Porción lateral de la próstata que rodea la uretra prostática y contiene tejido glandular responsable de la producción de parte del líquido seminal."
+      }
+    },
+    "ProstateMedianLobe": {
+      "objname": {
+        "pt-BR": "Lobo Mediano da Próstata",
+        "en": "Median Lobe of the Prostate",
+        "es": "Lóbulo Mediano de la Próstata"
+      },
+      "description": {
+        "pt-BR": "Região da próstata localizada entre a uretra e os ductos ejaculatórios. Sua posição pode fazer com que alterações de volume interfiram no fluxo urinário.",
+        "en": "Region of the prostate located between the urethra and the ejaculatory ducts. Due to its position, changes in its volume may interfere with urinary flow.",
+        "es": "Región de la próstata situada entre la uretra y los conductos eyaculadores. Debido a su posición, las alteraciones de su volumen pueden interferir en el flujo urinario."
+      }
+    },
+    "ProstateAnteriorLobe": {
+      "objname": {
+        "pt-BR": "Lobo Anterior da Próstata",
+        "en": "Anterior Lobe of the Prostate",
+        "es": "Lóbulo Anterior de la Próstata"
+      },
+      "description": {
+        "pt-BR": "Porção anterior da próstata localizada à frente da uretra. É constituída predominantemente por tecido fibromuscular e possui menor quantidade de tecido glandular.",
+        "en": "Anterior portion of the prostate located in front of the urethra. It consists predominantly of fibromuscular tissue and contains a smaller amount of glandular tissue.",
+        "es": "Porción anterior de la próstata situada por delante de la uretra. Está constituida predominantemente por tejido fibromuscular y contiene una menor cantidad de tejido glandular."
+      }
+    },
+    "EjaculatoryDuct": {
+      "objname": {
+        "pt-BR": "Ducto Ejaculatório",
+        "en": "Ejaculatory Duct",
+        "es": "Conducto Eyaculador"
+      },
+      "description": {
+        "pt-BR": "Canal formado pela união do ducto deferente com o ducto da vesícula seminal. Atravessa a próstata e desemboca na uretra prostática, conduzindo o sêmen.",
+        "en": "Duct formed by the union of the vas deferens and the duct of the seminal vesicle. It passes through the prostate and opens into the prostatic urethra, carrying semen.",
+        "es": "Conducto formado por la unión del conducto deferente con el conducto de la vesícula seminal. Atraviesa la próstata y desemboca en la uretra prostática, conduciendo el semen."
+      }
+    },
+    "BulbourethralCowperGland": {
+      "objname": {
+        "pt-BR": "Glândula Bulbouretral (de Cowper)",
+        "en": "Bulbourethral Gland (Cowper's Gland)",
+        "es": "Glándula Bulbouretral (de Cowper)"
+      },
+      "description": {
+        "pt-BR": "Pequena glândula localizada abaixo da próstata. Produz uma secreção mucosa que contribui para a lubrificação da uretra e ajuda a neutralizar sua acidez antes da passagem do sêmen.",
+        "en": "Small gland located below the prostate. It produces a mucous secretion that contributes to urethral lubrication and helps neutralize its acidity before semen passes through.",
+        "es": "Pequeña glándula situada debajo de la próstata. Produce una secreción mucosa que contribuye a la lubricación de la uretra y ayuda a neutralizar su acidez antes del paso del semen."
+      }
+    },
+    "BuckFasciaLower": {
+      "objname": {
+        "pt-BR": "Fáscia de Buck",
+        "en": "Buck's Fascia",
+        "es": "Fascia de Buck"
+      },
+      "description": {
+        "pt-BR": "Camada profunda de tecido conjuntivo que envolve os corpos eréteis do pênis. Fornece suporte estrutural e ajuda a manter unidos os tecidos do pênis.",
+        "en": "Deep layer of connective tissue that surrounds the erectile bodies of the penis. It provides structural support and helps hold the penile tissues together.",
+        "es": "Capa profunda de tejido conjuntivo que rodea los cuerpos eréctiles del pene. Proporciona soporte estructural y ayuda a mantener unidos los tejidos del pene."
+      }
+    },
+    "CorpusSpongiosum": {
+      "objname": {
+        "pt-BR": "Corpo Esponjoso",
+        "en": "Corpus Spongiosum",
+        "es": "Cuerpo Esponjoso"
+      },
+      "description": {
+        "pt-BR": "Tecido erétil que envolve a uretra ao longo da porção peniana. Durante a ereção, permanece relativamente menos rígido que os corpos cavernosos, ajudando a manter a uretra aberta.",
+        "en": "Erectile tissue that surrounds the urethra along its penile portion. During erection, it remains relatively less rigid than the corpora cavernosa, helping keep the urethra open.",
+        "es": "Tejido eréctil que rodea la uretra a lo largo de su porción peniana. Durante la erección, permanece relativamente menos rígido que los cuerpos cavernosos, ayudando a mantener abierta la uretra."
+      }
+    },
+    "TunicaAlbuginea": {
+      "objname": {
+        "pt-BR": "Túnica Albugínea",
+        "en": "Tunica Albuginea",
+        "es": "Túnica Albugínea"
+      },
+      "description": {
+        "pt-BR": "Cápsula de tecido conjuntivo resistente que envolve o tecido erétil dos corpos cavernosos e também está relacionada ao revestimento do testículo. No pênis, contribui para a sustentação e rigidez durante a ereção.",
+        "en": "Tough connective tissue capsule that surrounds the erectile tissue of the corpora cavernosa and is also associated with the covering of the testis. In the penis, it contributes to structural support and rigidity during erection.",
+        "es": "Cápsula de tejido conjuntivo resistente que rodea el tejido eréctil de los cuerpos cavernosos y también está relacionada con el revestimiento del testículo. En el pene, contribuye al sostén y la rigidez durante la erección."
+      }
+    },
+    "CorpusCavernosum": {
+      "objname": {
+        "pt-BR": "Corpos Cavernosos",
+        "en": "Corpora Cavernosa",
+        "es": "Cuerpos Cavernosos"
+      },
+      "description": {
+        "pt-BR": "Dois cilindros de tecido erétil localizados na parte dorsal do pênis. Durante a excitação sexual, seus espaços vasculares se enchem de sangue, promovendo a maior parte da rigidez peniana.",
+        "en": "Two cylindrical structures of erectile tissue located on the dorsal aspect of the penis. During sexual arousal, their vascular spaces fill with blood, providing most of the penile rigidity.",
+        "es": "Dos cilindros de tejido eréctil situados en la parte dorsal del pene. Durante la excitación sexual, sus espacios vasculares se llenan de sangre, proporcionando la mayor parte de la rigidez peniana."
+      }
+    },
+    "GlansPenis": {
+      "objname": {
+        "pt-BR": "Glande do Pênis",
+        "en": "Glans Penis",
+        "es": "Glande del Pene"
+      },
+      "description": {
+        "pt-BR": "Extremidade expandida do pênis, formada pela continuação do corpo esponjoso. Possui grande quantidade de terminações nervosas e envolve a extremidade distal da uretra, onde se encontra o óstio uretral externo.",
+        "en": "Expanded end of the penis, formed by the continuation of the corpus spongiosum. It contains numerous nerve endings and surrounds the distal end of the urethra, where the external urethral orifice is located.",
+        "es": "Extremo ensanchado del pene, formado por la continuación del cuerpo esponjoso. Contiene numerosas terminaciones nerviosas y rodea el extremo distal de la uretra, donde se encuentra el orificio uretral externo."
+      }
+    },
+    "DartosFascia": {
+      "objname": {
+        "pt-BR": "Fáscia de Dartos",
+        "en": "Dartos Fascia",
+        "es": "Fascia de Dartos"
+      },
+      "description": {
+        "pt-BR": "Camada de tecido conjuntivo e músculo liso localizada no escroto, abaixo da pele. Sua contração provoca o enrugamento da pele escrotal e auxilia na regulação da temperatura dos testículos.",
+        "en": "Layer of connective tissue and smooth muscle located in the scrotum, beneath the skin. Its contraction causes wrinkling of the scrotal skin and assists in regulating testicular temperature.",
+        "es": "Capa de tejido conjuntivo y músculo liso situada en el escroto, debajo de la piel. Su contracción provoca el arrugamiento de la piel escrotal y contribuye a la regulación de la temperatura de los testículos."
+      }
+    },
+    "BuckFasciaUpper": {
+      "objname": {
+        "pt-BR": "Fáscia de Buck Superior",
+        "en": "Superior Portion of Buck's Fascia",
+        "es": "Porción Superior de la Fascia de Buck"
+      },
+      "description": {
+        "pt-BR": "Camada profunda de tecido conjuntivo que envolve e sustenta os tecidos eréteis do pênis. Contribui para a organização estrutural do órgão e auxilia na proteção dos vasos sanguíneos e nervos presentes em seu interior.",
+        "en": "Deep layer of connective tissue that surrounds and supports the erectile tissues of the penis. It contributes to the structural organization of the organ and helps protect the blood vessels and nerves located within it.",
+        "es": "Capa profunda de tejido conjuntivo que rodea y sostiene los tejidos eréctiles del pene. Contribuye a la organización estructural del órgano y ayuda a proteger los vasos sanguíneos y nervios presentes en su interior."
+      }
+    },
+    "UrethraSpongyPortionPenile": {
+      "objname": {
+        "pt-BR": "Porção Esponjosa da Uretra",
+        "en": "Spongy Portion of the Urethra",
+        "es": "Porción Esponjosa de la Uretra"
+      },
+      "description": {
+        "pt-BR": "Porção da uretra que percorre o corpo esponjoso do pênis. Conduz a urina e o sêmen até o óstio uretral externo, participando dos sistemas urinário e reprodutor masculino.",
+        "en": "Portion of the urethra that passes through the corpus spongiosum of the penis. It carries urine and semen to the external urethral orifice, participating in the male urinary and reproductive systems.",
+        "es": "Porción de la uretra que recorre el cuerpo esponjoso del pene. Conduce la orina y el semen hasta el orificio uretral externo, participando en los sistemas urinario y reproductor masculino."
+      }
+    }
   }
 }

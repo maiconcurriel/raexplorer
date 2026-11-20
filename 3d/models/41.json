@@ -1,26 +1,72 @@
 {
-  "objname": "Queimadura Solar",
+  "objname": {
+    "pt-BR": "Queimadura Solar",
+    "en": "Sunburn",
+    "es": "Quemadura Solar"
+  },
   "objsystem": [
     "Tegumentar"
   ],
-  "objdescription": "A queimadura solar é uma lesão da pele causada pela exposição excessiva à radiação ultravioleta, principalmente proveniente do Sol. Essa radiação pode danificar as células da epiderme e desencadear uma resposta inflamatória, provocando vermelhidão, sensibilidade, dor e, em casos mais intensos, formação de bolhas e descamação. O modelo representa os danos provocados nas camadas superficiais da pele, destacando a alteração do tecido, a formação de uma bolha e a participação da derme na resposta inflamatória. A representação permite compreender como uma exposição intensa à radiação solar pode comprometer a integridade e a função protetora da pele.",
+  "objdescription": {
+    "pt-BR": "A queimadura solar é uma lesão da pele causada pela exposição excessiva à radiação ultravioleta, principalmente proveniente do Sol. Essa radiação pode danificar as células da epiderme e desencadear uma resposta inflamatória, provocando vermelhidão, sensibilidade, dor e, em casos mais intensos, formação de bolhas e descamação. O modelo representa os danos provocados nas camadas superficiais da pele, destacando a alteração do tecido, a formação de uma bolha e a participação da derme na resposta inflamatória. A representação permite compreender como uma exposição intensa à radiação solar pode comprometer a integridade e a função protetora da pele.",
+    "en": "Sunburn is a skin injury caused by excessive exposure to ultraviolet radiation, primarily from the Sun. This radiation can damage epidermal cells and trigger an inflammatory response, causing redness, tenderness, pain, and, in more severe cases, blistering and peeling. The model represents the damage caused to the superficial layers of the skin, highlighting tissue changes, blister formation, and the involvement of the dermis in the inflammatory response. This representation helps explain how intense exposure to solar radiation can compromise the integrity and protective function of the skin.",
+    "es": "La quemadura solar es una lesión de la piel causada por la exposición excesiva a la radiación ultravioleta, procedente principalmente del Sol. Esta radiación puede dañar las células de la epidermis y desencadenar una respuesta inflamatoria, provocando enrojecimiento, sensibilidad, dolor y, en casos más intensos, formación de ampollas y descamación. El modelo representa los daños provocados en las capas superficiales de la piel, destacando la alteración del tejido, la formación de una ampolla y la participación de la dermis en la respuesta inflamatoria. Esta representación permite comprender cómo una exposición intensa a la radiación solar puede comprometer la integridad y la función protectora de la piel."
+  },
   "linkedModels": [
     {
       "id": "15",
-      "label": "Anatomia das Camadas da Pele Humana"
+      "label": {
+        "pt-BR": "Anatomia das Camadas da Pele Humana",
+        "en": "Anatomy of Human Skin Layers",
+        "es": "Anatomía de las Capas de la Piel Humana"
+      }
+    },
+    {
+      "id": "95",
+      "label": {
+        "pt-BR": "Camadas da Epiderme",
+        "en": "Layers of the Epidermis",
+        "es": "Capas de la Epidermis"
+      }
     }
   ],
   "resources": [],
-  "bubble_1+nisolar": {
-    "objname": "Bolha",
-    "description": "Elevação da pele formada pelo acúmulo de líquido entre suas camadas após uma lesão mais intensa. Na queimadura solar, pode surgir como consequência do dano às células e da resposta inflamatória, ajudando a proteger temporariamente o tecido localizado abaixo da área lesionada."
-  },
-  "StratumSpinosum+nisolar": {
-    "objname": "Estrato Córneo e Estrato Espinhoso",
-    "description": "Camadas da epiderme afetadas pela exposição excessiva à radiação ultravioleta. No modelo, apresentam alterações que representam o dano às células e à barreira superficial da pele. Em queimaduras mais intensas, a lesão dessas camadas pode contribuir para inflamação, descamação e formação de bolhas."
-  },
-  "Dermis+nisolar": {
-    "objname": "Derme",
-    "description": "Camada localizada abaixo da epiderme, rica em tecido conjuntivo, vasos sanguíneos e terminações nervosas. Durante uma queimadura solar, a resposta inflamatória provoca dilatação dos vasos sanguíneos e contribui para a vermelhidão, o calor, a sensibilidade e a dor. No modelo, a derme contextualiza os tecidos localizados abaixo da região superficial lesionada."
+  "parts": {
+    "bubble_1+nisolar": {
+      "objname": {
+        "pt-BR": "Bolha",
+        "en": "Blister",
+        "es": "Ampolla"
+      },
+      "description": {
+        "pt-BR": "Elevação da pele formada pelo acúmulo de líquido entre suas camadas após uma lesão mais intensa. Na queimadura solar, pode surgir como consequência do dano às células e da resposta inflamatória, ajudando a proteger temporariamente o tecido localizado abaixo da área lesionada.",
+        "en": "Raised area of the skin formed by the accumulation of fluid between its layers following a more severe injury. In sunburn, it may develop as a result of cellular damage and the inflammatory response, helping temporarily protect the tissue beneath the injured area.",
+        "es": "Elevación de la piel formada por la acumulación de líquido entre sus capas tras una lesión más intensa. En la quemadura solar, puede aparecer como consecuencia del daño celular y de la respuesta inflamatoria, ayudando a proteger temporalmente el tejido situado por debajo de la zona lesionada."
+      }
+    },
+    "StratumSpinosum+nisolar": {
+      "objname": {
+        "pt-BR": "Estrato Córneo e Estrato Espinhoso",
+        "en": "Stratum Corneum and Stratum Spinosum",
+        "es": "Estrato Córneo y Estrato Espinoso"
+      },
+      "description": {
+        "pt-BR": "Camadas da epiderme afetadas pela exposição excessiva à radiação ultravioleta. No modelo, apresentam alterações que representam o dano às células e à barreira superficial da pele. Em queimaduras mais intensas, a lesão dessas camadas pode contribuir para inflamação, descamação e formação de bolhas.",
+        "en": "Layers of the epidermis affected by excessive exposure to ultraviolet radiation. In the model, they exhibit changes that represent damage to the cells and the superficial skin barrier. In more severe sunburns, injury to these layers may contribute to inflammation, peeling, and blister formation.",
+        "es": "Capas de la epidermis afectadas por la exposición excesiva a la radiación ultravioleta. En el modelo, presentan alteraciones que representan el daño a las células y a la barrera superficial de la piel. En quemaduras más intensas, la lesión de estas capas puede contribuir a la inflamación, la descamación y la formación de ampollas."
+      }
+    },
+    "Dermis+nisolar": {
+      "objname": {
+        "pt-BR": "Derme",
+        "en": "Dermis",
+        "es": "Dermis"
+      },
+      "description": {
+        "pt-BR": "Camada localizada abaixo da epiderme, rica em tecido conjuntivo, vasos sanguíneos e terminações nervosas. Durante uma queimadura solar, a resposta inflamatória provoca dilatação dos vasos sanguíneos e contribui para a vermelhidão, o calor, a sensibilidade e a dor. No modelo, a derme contextualiza os tecidos localizados abaixo da região superficial lesionada.",
+        "en": "Layer located beneath the epidermis, rich in connective tissue, blood vessels, and nerve endings. During sunburn, the inflammatory response causes blood vessels to dilate and contributes to redness, warmth, tenderness, and pain. In the model, the dermis provides context for the tissues located beneath the injured superficial region.",
+        "es": "Capa situada por debajo de la epidermis, rica en tejido conjuntivo, vasos sanguíneos y terminaciones nerviosas. Durante una quemadura solar, la respuesta inflamatoria provoca la dilatación de los vasos sanguíneos y contribuye al enrojecimiento, el calor, la sensibilidad y el dolor. En el modelo, la dermis permite contextualizar los tejidos situados por debajo de la región superficial lesionada."
+      }
+    }
   }
 }

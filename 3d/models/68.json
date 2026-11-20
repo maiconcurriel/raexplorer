@@ -1,31 +1,89 @@
 {
-  "objname": "Flexão e Extensão do Joelho",
+  "objname": {
+    "pt-BR": "Flexão e Extensão do Joelho",
+    "en": "Knee Flexion and Extension",
+    "es": "Flexión y Extensión de la Rodilla"
+  },
   "objsystem": [
     "Muscular",
     "Esquelético"
   ],
-  "objdescription": "A flexão e a extensão do joelho são movimentos fundamentais dos membros inferiores, realizados principalmente pela articulação entre o fêmur e a tíbia, com participação da patela. Na flexão, o ângulo entre a coxa e a perna diminui, aproximando a perna da região posterior da coxa, com atuação principalmente dos músculos isquiotibiais. Na extensão, esse ângulo aumenta, promovendo o alinhamento da perna com a coxa, movimento realizado principalmente pelo quadríceps femoral. Tendões, ligamentos e outras estruturas articulares contribuem para a estabilidade e a transmissão das forças musculares. A animação apresenta a transição entre as posições estendida e flexionada do joelho, demonstrando a movimentação coordenada dos músculos, tendões e ossos envolvidos.",
+  "objdescription": {
+    "pt-BR": "A flexão e a extensão do joelho são movimentos fundamentais dos membros inferiores, realizados principalmente pela articulação entre o fêmur e a tíbia, com participação da patela. Na flexão, o ângulo entre a coxa e a perna diminui, aproximando a perna da região posterior da coxa, com atuação principalmente dos músculos isquiotibiais. Na extensão, esse ângulo aumenta, promovendo o alinhamento da perna com a coxa, movimento realizado principalmente pelo quadríceps femoral. Tendões, ligamentos e outras estruturas articulares contribuem para a estabilidade e a transmissão das forças musculares. A animação apresenta a transição entre as posições estendida e flexionada do joelho, demonstrando a movimentação coordenada dos músculos, tendões e ossos envolvidos.",
+    "en": "Knee flexion and extension are fundamental movements of the lower limbs, performed primarily through the articulation between the femur and the tibia, with the involvement of the patella. During flexion, the angle between the thigh and the lower leg decreases, bringing the lower leg closer to the posterior region of the thigh, primarily through the action of the hamstring muscles. During extension, this angle increases, aligning the lower leg with the thigh, a movement performed primarily by the quadriceps femoris muscle. Tendons, ligaments, and other joint structures contribute to stability and the transmission of muscular forces. The animation presents the transition between the extended and flexed positions of the knee, demonstrating the coordinated movement of the muscles, tendons, and bones involved.",
+    "es": "La flexión y la extensión de la rodilla son movimientos fundamentales de los miembros inferiores, realizados principalmente por la articulación entre el fémur y la tibia, con la participación de la rótula. Durante la flexión, el ángulo entre el muslo y la pierna disminuye, acercando la pierna a la región posterior del muslo, principalmente mediante la acción de los músculos isquiotibiales. Durante la extensión, este ángulo aumenta, favoreciendo la alineación de la pierna con el muslo, movimiento realizado principalmente por el cuádriceps femoral. Los tendones, los ligamentos y otras estructuras articulares contribuyen a la estabilidad y a la transmisión de las fuerzas musculares. La animación presenta la transición entre las posiciones extendida y flexionada de la rodilla, demostrando el movimiento coordinado de los músculos, tendones y huesos involucrados."
+  },
   "linkedModels": [
     {
       "id": "3",
-      "label": "Sistema Esquelético Masculino"
-    },
-    {
-      "id": "28",
-      "label": "Sistema Esquelético Feminino"
+      "label": {
+        "pt-BR": "Sistema Esquelético Masculino",
+        "en": "Male Skeletal System",
+        "es": "Sistema Esquelético Masculino"
+      }
     },
     {
       "id": "17",
-      "label": "Sistema Muscular Masculino"
+      "label": {
+        "pt-BR": "Sistema Muscular Masculino",
+        "en": "Male Muscular System",
+        "es": "Sistema Muscular Masculino"
+      }
     },
     {
       "id": "27",
-      "label": "Sistema Muscular Feminino"
+      "label": {
+        "pt-BR": "Sistema Muscular Feminino",
+        "en": "Female Muscular System",
+        "es": "Sistema Muscular Femenino"
+      }
+    },
+    {
+      "id": "28",
+      "label": {
+        "pt-BR": "Sistema Esquelético Feminino",
+        "en": "Female Skeletal System",
+        "es": "Sistema Esquelético Femenino"
+      }
+    },
+    {
+      "id": "31",
+      "label": {
+        "pt-BR": "Artrose",
+        "en": "Osteoarthritis",
+        "es": "Artrosis"
+      }
+    },
+    {
+      "id": "69",
+      "label": {
+        "pt-BR": "Mecânica da Corrida",
+        "en": "Running Mechanics",
+        "es": "Mecánica de la Carrera"
+      }
+    },
+    {
+      "id": "72",
+      "label": {
+        "pt-BR": "Ciclo da Marcha",
+        "en": "Gait Cycle",
+        "es": "Ciclo de la Marcha"
+      }
     }
   ],
   "resources": [],
-  "a_R_1+a_R_5+a_R+a_R_2+a_R_6+a_R_4+nisolar": {
-    "objname": "Movimentação do Joelho",
-    "description": "Representação animada da flexão e extensão do joelho. Durante a flexão, a perna se aproxima da parte posterior da coxa, movimento produzido principalmente pelos músculos isquiotibiais. Durante a extensão, o quadríceps femoral atua para endireitar o joelho e alinhar a perna com a coxa. A animação demonstra o deslocamento dos segmentos ósseos e o acompanhamento das estruturas musculares e tendíneas durante esses movimentos."
+  "parts": {
+    "a_R_1+a_R_5+a_R+a_R_2+a_R_6+a_R_4+nisolar": {
+      "objname": {
+        "pt-BR": "Movimentação do Joelho",
+        "en": "Knee Movement",
+        "es": "Movimiento de la Rodilla"
+      },
+      "description": {
+        "pt-BR": "Representação animada da flexão e extensão do joelho. Durante a flexão, a perna se aproxima da parte posterior da coxa, movimento produzido principalmente pelos músculos isquiotibiais. Durante a extensão, o quadríceps femoral atua para endireitar o joelho e alinhar a perna com a coxa. A animação demonstra o deslocamento dos segmentos ósseos e o acompanhamento das estruturas musculares e tendíneas durante esses movimentos.",
+        "en": "Animated representation of knee flexion and extension. During flexion, the lower leg moves closer to the posterior part of the thigh, a movement produced primarily by the hamstring muscles. During extension, the quadriceps femoris muscle acts to straighten the knee and align the lower leg with the thigh. The animation demonstrates the displacement of the bone segments and the accompanying movement of the muscular and tendinous structures during these movements.",
+        "es": "Representación animada de la flexión y extensión de la rodilla. Durante la flexión, la pierna se acerca a la parte posterior del muslo, movimiento producido principalmente por los músculos isquiotibiales. Durante la extensión, el cuádriceps femoral actúa para enderezar la rodilla y alinear la pierna con el muslo. La animación demuestra el desplazamiento de los segmentos óseos y el movimiento de las estructuras musculares y tendinosas que los acompañan durante estos movimientos."
+      }
+    }
   }
 }

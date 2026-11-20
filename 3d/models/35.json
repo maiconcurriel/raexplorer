@@ -1,26 +1,88 @@
 {
-  "objname": "Atelectasia",
+  "objname": {
+    "pt-BR": "Atelectasia",
+    "en": "Atelectasis",
+    "es": "Atelectasia"
+  },
   "objsystem": [
     "Respiratório"
   ],
-  "objdescription": "A atelectasia é uma condição caracterizada pelo colapso parcial ou total de uma região do pulmão, levando à redução da quantidade de ar presente nos alvéolos. Pode ocorrer por obstrução das vias aéreas, compressão do pulmão ou outras alterações que impeçam sua adequada expansão. A redução da ventilação pode comprometer as trocas gasosas e, dependendo da extensão, causar falta de ar e outros sintomas respiratórios. O modelo permite comparar um pulmão com aspecto normal a um pulmão colapsado, facilitando a compreensão visual da alteração provocada pela atelectasia.",
+  "objdescription": {
+    "pt-BR": "A atelectasia é uma condição caracterizada pelo colapso parcial ou total de uma região do pulmão, levando à redução da quantidade de ar presente nos alvéolos. Pode ocorrer por obstrução das vias aéreas, compressão do pulmão ou outras alterações que impeçam sua adequada expansão. A redução da ventilação pode comprometer as trocas gasosas e, dependendo da extensão, causar falta de ar e outros sintomas respiratórios. O modelo permite comparar um pulmão com aspecto normal a um pulmão colapsado, facilitando a compreensão visual da alteração provocada pela atelectasia.",
+    "en": "Atelectasis is a condition characterized by the partial or complete collapse of a region of the lung, resulting in a reduction in the amount of air present in the alveoli. It may occur due to airway obstruction, lung compression, or other changes that prevent adequate lung expansion. Reduced ventilation may impair gas exchange and, depending on its extent, cause shortness of breath and other respiratory symptoms. The model allows comparison between a normal-looking lung and a collapsed lung, facilitating a visual understanding of the changes caused by atelectasis.",
+    "es": "La atelectasia es una afección caracterizada por el colapso parcial o total de una región del pulmón, lo que provoca una reducción de la cantidad de aire presente en los alvéolos. Puede producirse por obstrucción de las vías respiratorias, compresión del pulmón u otras alteraciones que impidan su adecuada expansión. La reducción de la ventilación puede comprometer el intercambio gaseoso y, dependiendo de su extensión, causar dificultad para respirar y otros síntomas respiratorios. El modelo permite comparar un pulmón de aspecto normal con un pulmón colapsado, facilitando la comprensión visual de la alteración provocada por la atelectasia."
+  },
   "linkedModels": [
     {
+      "id": "16",
+      "label": {
+        "pt-BR": "Pulmões de Pacientes com COVID-19",
+        "en": "Lungs of Patients with COVID-19",
+        "es": "Pulmones de Pacientes con COVID-19"
+      }
+    },
+    {
       "id": "23",
-      "label": "Sistema Respiratório"
+      "label": {
+        "pt-BR": "Sistema Respiratório",
+        "en": "Respiratory System",
+        "es": "Sistema Respiratorio"
+      }
+    },
+    {
+      "id": "67",
+      "label": {
+        "pt-BR": "Dinâmica Respiratória com o Coração",
+        "en": "Respiratory Dynamics with the Heart",
+        "es": "Dinámica Respiratoria con el Corazón"
+      }
+    },
+    {
+      "id": "70",
+      "label": {
+        "pt-BR": "Dinâmica Respiratória",
+        "en": "Respiratory Dynamics",
+        "es": "Dinámica Respiratoria"
+      }
     }
   ],
   "resources": [],
-  "Skeleton+ninteract": {
-    "objname": "Esqueleto Humano",
-    "description": "Representação simplificada do esqueleto humano utilizada para contextualizar a localização dos pulmões dentro da cavidade torácica."
-  },
-  "LeftLung": {
-    "objname": "Pulmão Normal",
-    "description": "Pulmão apresentado com aspecto normal, servindo como referência para comparação com o pulmão afetado pela atelectasia. Sua estrutura está expandida, permitindo visualizar a diferença em relação ao pulmão colapsado."
-  },
-  "RightLung": {
-    "objname": "Pulmão Colapsado",
-    "description": "Pulmão que apresenta redução de sua expansão devido ao colapso de parte ou de todo o tecido pulmonar, característica da atelectasia. A comparação com o pulmão normal permite visualizar a redução do volume e da expansão pulmonar."
+  "parts": {
+    "Skeleton+ninteract": {
+      "objname": {
+        "pt-BR": "Esqueleto Humano",
+        "en": "Human Skeleton",
+        "es": "Esqueleto Humano"
+      },
+      "description": {
+        "pt-BR": "Representação simplificada do esqueleto humano utilizada para contextualizar a localização dos pulmões dentro da cavidade torácica.",
+        "en": "Simplified representation of the human skeleton used to contextualize the location of the lungs within the thoracic cavity.",
+        "es": "Representación simplificada del esqueleto humano utilizada para contextualizar la localización de los pulmones dentro de la cavidad torácica."
+      }
+    },
+    "LeftLung": {
+      "objname": {
+        "pt-BR": "Pulmão Normal",
+        "en": "Normal Lung",
+        "es": "Pulmón Normal"
+      },
+      "description": {
+        "pt-BR": "Pulmão apresentado com aspecto normal, servindo como referência para comparação com o pulmão afetado pela atelectasia. Sua estrutura está expandida, permitindo visualizar a diferença em relação ao pulmão colapsado.",
+        "en": "Lung presented with a normal appearance, serving as a reference for comparison with the lung affected by atelectasis. Its structure is expanded, allowing visualization of the difference compared with the collapsed lung.",
+        "es": "Pulmón presentado con un aspecto normal, que sirve como referencia para la comparación con el pulmón afectado por la atelectasia. Su estructura se encuentra expandida, lo que permite visualizar la diferencia con respecto al pulmón colapsado."
+      }
+    },
+    "RightLung": {
+      "objname": {
+        "pt-BR": "Pulmão Colapsado",
+        "en": "Collapsed Lung",
+        "es": "Pulmón Colapsado"
+      },
+      "description": {
+        "pt-BR": "Pulmão que apresenta redução de sua expansão devido ao colapso de parte ou de todo o tecido pulmonar, característica da atelectasia. A comparação com o pulmão normal permite visualizar a redução do volume e da expansão pulmonar.",
+        "en": "Lung that exhibits reduced expansion due to the collapse of part or all of the lung tissue, a characteristic of atelectasis. Comparison with the normal lung allows visualization of the reduction in lung volume and expansion.",
+        "es": "Pulmón que presenta una reducción de su expansión debido al colapso de parte o de la totalidad del tejido pulmonar, característico de la atelectasia. La comparación con el pulmón normal permite visualizar la reducción del volumen y de la expansión pulmonar."
+      }
+    }
   }
 }

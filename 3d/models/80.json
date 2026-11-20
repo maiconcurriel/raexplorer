@@ -1,67 +1,221 @@
 {
-  "objname": "Artrite Psoriática: Articulações das Mãos",
+  "objname": {
+    "pt-BR": "Artrite Psoriática: Articulações das Mãos",
+    "en": "Psoriatic Arthritis: Hand Joints",
+    "es": "Artritis Psoriásica: Articulaciones de las Manos"
+  },
   "objsystem": [
     "Esquelético",
     "Muscular"
   ],
-  "objdescription": "A artrite psoriática é uma doença inflamatória crônica, imunomediada, que pode afetar as articulações das mãos, provocando dor, inchaço, rigidez e limitação dos movimentos. A inflamação pode comprometer a membrana sinovial, os tendões e suas inserções nos ossos, atingindo frequentemente as articulações interfalângicas, incluindo as distais. Em casos persistentes, podem ocorrer erosões ósseas e alterações estruturais das articulações. A doença também pode provocar dactilite, caracterizada pelo inchaço difuso de um dedo. O modelo apresenta os ossos, músculos e tendões da mão, destacando por meio de esferas vermelhas animadas as regiões articulares que podem apresentar inflamação e dor, permitindo compreender sua distribuição e os possíveis efeitos sobre a mobilidade e a função das mãos.",
+  "objdescription": {
+    "pt-BR": "A artrite psoriática é uma doença inflamatória crônica, imunomediada, que pode afetar as articulações das mãos, provocando dor, inchaço, rigidez e limitação dos movimentos. A inflamação pode comprometer a membrana sinovial, os tendões e suas inserções nos ossos, atingindo frequentemente as articulações interfalângicas, incluindo as distais. Em casos persistentes, podem ocorrer erosões ósseas e alterações estruturais das articulações. A doença também pode provocar dactilite, caracterizada pelo inchaço difuso de um dedo. O modelo apresenta os ossos, músculos e tendões da mão, destacando por meio de esferas vermelhas animadas as regiões articulares que podem apresentar inflamação e dor, permitindo compreender sua distribuição e os possíveis efeitos sobre a mobilidade e a função das mãos.",
+    "en": "Psoriatic arthritis is a chronic, immune-mediated inflammatory disease that may affect the joints of the hands, causing pain, swelling, stiffness, and limited movement. Inflammation may involve the synovial membrane, tendons, and their attachment sites to bones, frequently affecting the interphalangeal joints, including the distal ones. In persistent cases, bone erosions and structural changes in the joints may occur. The disease may also cause dactylitis, characterized by diffuse swelling of a digit. The model presents the bones, muscles, and tendons of the hand, using animated red spheres to highlight joint regions that may exhibit inflammation and pain, helping to understand their distribution and potential effects on hand mobility and function.",
+    "es": "La artritis psoriásica es una enfermedad inflamatoria crónica, inmunomediada, que puede afectar a las articulaciones de las manos, provocando dolor, hinchazón, rigidez y limitación de los movimientos. La inflamación puede comprometer la membrana sinovial, los tendones y sus inserciones en los huesos, afectando frecuentemente a las articulaciones interfalángicas, incluidas las distales. En casos persistentes, pueden producirse erosiones óseas y alteraciones estructurales de las articulaciones. La enfermedad también puede provocar dactilitis, caracterizada por la hinchazón difusa de un dedo. El modelo presenta los huesos, músculos y tendones de la mano, destacando mediante esferas rojas animadas las regiones articulares que pueden presentar inflamación y dolor, permitiendo comprender su distribución y los posibles efectos sobre la movilidad y la función de las manos."
+  },
   "linkedModels": [
     {
+      "id": "3",
+      "label": {
+        "pt-BR": "Sistema Esquelético Masculino",
+        "en": "Male Skeletal System",
+        "es": "Sistema Esquelético Masculino"
+      }
+    },
+    {
+      "id": "17",
+      "label": {
+        "pt-BR": "Sistema Muscular Masculino",
+        "en": "Male Muscular System",
+        "es": "Sistema Muscular Masculino"
+      }
+    },
+    {
+      "id": "27",
+      "label": {
+        "pt-BR": "Sistema Muscular Feminino",
+        "en": "Female Muscular System",
+        "es": "Sistema Muscular Femenino"
+      }
+    },
+    {
+      "id": "28",
+      "label": {
+        "pt-BR": "Sistema Esquelético Feminino",
+        "en": "Female Skeletal System",
+        "es": "Sistema Esquelético Femenino"
+      }
+    },
+    {
+      "id": "59",
+      "label": {
+        "pt-BR": "Psoríase",
+        "en": "Psoriasis",
+        "es": "Psoriasis"
+      }
+    },
+    {
       "id": "73",
-      "label": "Psoríase Cutânea Associada à Artrite Psoriática"
+      "label": {
+        "pt-BR": "Psoríase Cutânea Associada à Artrite Psoriática",
+        "en": "Cutaneous Psoriasis Associated with Psoriatic Arthritis",
+        "es": "Psoriasis Cutánea Asociada a la Artritis Psoriásica"
+      }
     },
     {
       "id": "79",
-      "label": "Artrite Psoriática: Inflamações nas Articulações"
+      "label": {
+        "pt-BR": "Artrite Psoriática: Inflamações nas Articulações",
+        "en": "Psoriatic Arthritis: Joint Inflammation",
+        "es": "Artritis Psoriásica: Inflamación de las Articulaciones"
+      }
     }
   ],
   "resources": [],
-  "Ske": {
-    "objname": "Ossos da Mão",
-    "description": "Conjunto de ossos formado pelo carpo, metacarpo e falanges, responsáveis pela sustentação e movimentação das mãos. Na artrite psoriática, as articulações entre esses ossos podem apresentar inflamação, dor e rigidez. Em casos de inflamação persistente, podem ocorrer erosões ósseas e alterações estruturais que comprometem a mobilidade e a função articular."
-  },
-  "MusculosMao": {
-    "objname": "Músculos da Mão",
-    "description": "Conjunto de músculos responsáveis pelos movimentos e pela estabilidade da mão e dos dedos. Permitem ações como flexão, extensão, aproximação, afastamento e oposição dos dedos. Na artrite psoriática, a inflamação das articulações e das estruturas tendíneas pode provocar dor, rigidez e dificuldade na execução de movimentos finos."
-  },
-  "FlexorPollicisLongus": {
-    "objname": "Flexor Longo do Polegar",
-    "description": "Músculo do antebraço cujo tendão alcança o polegar, sendo responsável principalmente pela flexão de sua articulação interfalângica. Na artrite psoriática, processos inflamatórios envolvendo o tendão ou sua bainha podem contribuir para dor, inchaço e dificuldade de movimentação do polegar."
-  },
-  "FlexorDigitorumSuperficialis": {
-    "objname": "Flexor Superficial dos Dedos",
-    "description": "Músculo do antebraço responsável principalmente pela flexão das articulações interfalângicas proximais dos dedos indicador, médio, anelar e mínimo. Seus tendões atravessam a região palmar da mão. A inflamação das estruturas tendíneas pode contribuir para dor, rigidez e limitação dos movimentos dos dedos."
-  },
-  "FlexorDigitorumProfundus": {
-    "objname": "Flexor Profundo dos Dedos",
-    "description": "Músculo do antebraço responsável principalmente pela flexão das articulações interfalângicas distais dos quatro dedos mediais. Seus tendões alcançam as falanges distais e participam dos movimentos de preensão. Na artrite psoriática, o comprometimento inflamatório das estruturas tendíneas pode prejudicar a flexão e a função dos dedos."
-  },
-  "ExtensorPollicisLongus": {
-    "objname": "Extensor Longo do Polegar",
-    "description": "Músculo do antebraço cujo tendão alcança a falange distal do polegar, promovendo principalmente a extensão de sua articulação interfalângica. Alterações inflamatórias envolvendo o tendão ou suas estruturas adjacentes podem causar dor e dificuldade de movimentação."
-  },
-  "ExtensorPollicisBrevis": {
-    "objname": "Extensor Curto do Polegar",
-    "description": "Músculo do antebraço responsável principalmente pela extensão da articulação metacarpofalângica do polegar. Atua em conjunto com outros músculos para controlar seus movimentos. A inflamação de estruturas tendíneas próximas pode contribuir para desconforto e limitação funcional."
-  },
-  "ExtensorIndicis": {
-    "objname": "Extensor do Indicador",
-    "description": "Músculo do antebraço responsável por auxiliar a extensão do dedo indicador, permitindo movimentos relativamente independentes dos demais dedos. Na artrite psoriática, alterações inflamatórias articulares ou tendíneas podem provocar dor e dificultar a extensão do indicador."
-  },
-  "ExtensorDigitorum": {
-    "objname": "Extensor dos Dedos",
-    "description": "Músculo do antebraço responsável pela extensão dos dedos indicador, médio, anelar e mínimo, atuando principalmente nas articulações metacarpofalângicas e auxiliando a extensão das interfalângicas. A inflamação das articulações e das estruturas tendíneas pode comprometer sua função e provocar dor durante os movimentos."
-  },
-  "ExtensorDigitiMinimi": {
-    "objname": "Extensor do Dedo Mínimo",
-    "description": "Músculo do antebraço que auxilia a extensão do dedo mínimo, contribuindo para seus movimentos independentes. Na artrite psoriática, processos inflamatórios envolvendo articulações ou tendões podem provocar dor, rigidez e dificuldade de movimentação desse dedo."
-  },
-  "Skin+nisolar+ninteract": {
-    "objname": "Pele",
-    "description": ""
-  },
-  "B1+B2+B3+B4+B5+B6+B7+B8+B9+B10+B11+B12+B13+nisolar": {
-    "objname": "Regiões de Inflamação e Dor Articular",
-    "description": "Representação didática das regiões das mãos que podem apresentar inflamação e dor devido à artrite psoriática. A doença pode comprometer as articulações interfalângicas, metacarpofalângicas e outras estruturas articulares, provocando inchaço, rigidez e limitação dos movimentos. Na animação, as esferas vermelhas aumentam e diminuem de tamanho para destacar visualmente os locais potencialmente afetados. Esse efeito é ilustrativo e não representa alterações reais de volume das articulações."
+  "parts": {
+    "Ske": {
+      "objname": {
+        "pt-BR": "Ossos da Mão",
+        "en": "Bones of the Hand",
+        "es": "Huesos de la Mano"
+      },
+      "description": {
+        "pt-BR": "Conjunto de ossos formado pelo carpo, metacarpo e falanges, responsáveis pela sustentação e movimentação das mãos. Na artrite psoriática, as articulações entre esses ossos podem apresentar inflamação, dor e rigidez. Em casos de inflamação persistente, podem ocorrer erosões ósseas e alterações estruturais que comprometem a mobilidade e a função articular.",
+        "en": "Group of bones comprising the carpal bones, metacarpal bones, and phalanges, responsible for supporting and enabling movement of the hands. In psoriatic arthritis, the joints between these bones may exhibit inflammation, pain, and stiffness. In cases of persistent inflammation, bone erosions and structural changes may occur, impairing mobility and joint function.",
+        "es": "Conjunto de huesos formado por el carpo, el metacarpo y las falanges, responsables del soporte y el movimiento de las manos. En la artritis psoriásica, las articulaciones entre estos huesos pueden presentar inflamación, dolor y rigidez. En casos de inflamación persistente, pueden producirse erosiones óseas y alteraciones estructurales que comprometen la movilidad y la función articular."
+      }
+    },
+    "MusculosMao": {
+      "objname": {
+        "pt-BR": "Músculos da Mão",
+        "en": "Muscles of the Hand",
+        "es": "Músculos de la Mano"
+      },
+      "description": {
+        "pt-BR": "Conjunto de músculos responsáveis pelos movimentos e pela estabilidade da mão e dos dedos. Permitem ações como flexão, extensão, aproximação, afastamento e oposição dos dedos. Na artrite psoriática, a inflamação das articulações e das estruturas tendíneas pode provocar dor, rigidez e dificuldade na execução de movimentos finos.",
+        "en": "Group of muscles responsible for the movement and stability of the hand and fingers. They enable actions such as flexion, extension, adduction, abduction, and opposition of the digits. In psoriatic arthritis, inflammation of the joints and tendon structures may cause pain, stiffness, and difficulty performing fine movements.",
+        "es": "Conjunto de músculos responsables de los movimientos y la estabilidad de la mano y los dedos. Permiten acciones como la flexión, extensión, aducción, abducción y oposición de los dedos. En la artritis psoriásica, la inflamación de las articulaciones y las estructuras tendinosas puede provocar dolor, rigidez y dificultad para realizar movimientos finos."
+      }
+    },
+    "FlexorPollicisLongus": {
+      "objname": {
+        "pt-BR": "Flexor Longo do Polegar",
+        "en": "Flexor Pollicis Longus",
+        "es": "Flexor Largo del Pulgar"
+      },
+      "description": {
+        "pt-BR": "Músculo do antebraço cujo tendão alcança o polegar, sendo responsável principalmente pela flexão de sua articulação interfalângica. Na artrite psoriática, processos inflamatórios envolvendo o tendão ou sua bainha podem contribuir para dor, inchaço e dificuldade de movimentação do polegar.",
+        "en": "Forearm muscle whose tendon reaches the thumb, primarily responsible for flexion of its interphalangeal joint. In psoriatic arthritis, inflammatory processes involving the tendon or its sheath may contribute to pain, swelling, and difficulty moving the thumb.",
+        "es": "Músculo del antebrazo cuyo tendón alcanza el pulgar, responsable principalmente de la flexión de su articulación interfalángica. En la artritis psoriásica, los procesos inflamatorios que afectan al tendón o a su vaina pueden contribuir al dolor, la hinchazón y la dificultad para mover el pulgar."
+      }
+    },
+    "FlexorDigitorumSuperficialis": {
+      "objname": {
+        "pt-BR": "Flexor Superficial dos Dedos",
+        "en": "Flexor Digitorum Superficialis",
+        "es": "Flexor Superficial de los Dedos"
+      },
+      "description": {
+        "pt-BR": "Músculo do antebraço responsável principalmente pela flexão das articulações interfalângicas proximais dos dedos indicador, médio, anelar e mínimo. Seus tendões atravessam a região palmar da mão. A inflamação das estruturas tendíneas pode contribuir para dor, rigidez e limitação dos movimentos dos dedos.",
+        "en": "Forearm muscle primarily responsible for flexion of the proximal interphalangeal joints of the index, middle, ring, and little fingers. Its tendons pass through the palmar region of the hand. Inflammation of the tendon structures may contribute to pain, stiffness, and limited finger movement.",
+        "es": "Músculo del antebrazo responsable principalmente de la flexión de las articulaciones interfalángicas proximales de los dedos índice, medio, anular y meñique. Sus tendones atraviesan la región palmar de la mano. La inflamación de las estructuras tendinosas puede contribuir al dolor, la rigidez y la limitación de los movimientos de los dedos."
+      }
+    },
+    "FlexorDigitorumProfundus": {
+      "objname": {
+        "pt-BR": "Flexor Profundo dos Dedos",
+        "en": "Flexor Digitorum Profundus",
+        "es": "Flexor Profundo de los Dedos"
+      },
+      "description": {
+        "pt-BR": "Músculo do antebraço responsável principalmente pela flexão das articulações interfalângicas distais dos quatro dedos mediais. Seus tendões alcançam as falanges distais e participam dos movimentos de preensão. Na artrite psoriática, o comprometimento inflamatório das estruturas tendíneas pode prejudicar a flexão e a função dos dedos.",
+        "en": "Forearm muscle primarily responsible for flexion of the distal interphalangeal joints of the four medial fingers. Its tendons reach the distal phalanges and participate in gripping movements. In psoriatic arthritis, inflammatory involvement of the tendon structures may impair finger flexion and function.",
+        "es": "Músculo del antebrazo responsable principalmente de la flexión de las articulaciones interfalángicas distales de los cuatro dedos mediales. Sus tendones alcanzan las falanges distales y participan en los movimientos de prensión. En la artritis psoriásica, la afectación inflamatoria de las estructuras tendinosas puede perjudicar la flexión y la función de los dedos."
+      }
+    },
+    "ExtensorPollicisLongus": {
+      "objname": {
+        "pt-BR": "Extensor Longo do Polegar",
+        "en": "Extensor Pollicis Longus",
+        "es": "Extensor Largo del Pulgar"
+      },
+      "description": {
+        "pt-BR": "Músculo do antebraço cujo tendão alcança a falange distal do polegar, promovendo principalmente a extensão de sua articulação interfalângica. Alterações inflamatórias envolvendo o tendão ou suas estruturas adjacentes podem causar dor e dificuldade de movimentação.",
+        "en": "Forearm muscle whose tendon reaches the distal phalanx of the thumb, primarily enabling extension of its interphalangeal joint. Inflammatory changes involving the tendon or its adjacent structures may cause pain and difficulty with movement.",
+        "es": "Músculo del antebrazo cuyo tendón alcanza la falange distal del pulgar, permitiendo principalmente la extensión de su articulación interfalángica. Las alteraciones inflamatorias que afectan al tendón o a sus estructuras adyacentes pueden causar dolor y dificultad de movimiento."
+      }
+    },
+    "ExtensorPollicisBrevis": {
+      "objname": {
+        "pt-BR": "Extensor Curto do Polegar",
+        "en": "Extensor Pollicis Brevis",
+        "es": "Extensor Corto del Pulgar"
+      },
+      "description": {
+        "pt-BR": "Músculo do antebraço responsável principalmente pela extensão da articulação metacarpofalângica do polegar. Atua em conjunto com outros músculos para controlar seus movimentos. A inflamação de estruturas tendíneas próximas pode contribuir para desconforto e limitação funcional.",
+        "en": "Forearm muscle primarily responsible for extension of the metacarpophalangeal joint of the thumb. It works together with other muscles to control thumb movements. Inflammation of nearby tendon structures may contribute to discomfort and functional limitations.",
+        "es": "Músculo del antebrazo responsable principalmente de la extensión de la articulación metacarpofalángica del pulgar. Actúa en conjunto con otros músculos para controlar sus movimientos. La inflamación de estructuras tendinosas cercanas puede contribuir al malestar y a la limitación funcional."
+      }
+    },
+    "ExtensorIndicis": {
+      "objname": {
+        "pt-BR": "Extensor do Indicador",
+        "en": "Extensor Indicis",
+        "es": "Extensor del Índice"
+      },
+      "description": {
+        "pt-BR": "Músculo do antebraço responsável por auxiliar a extensão do dedo indicador, permitindo movimentos relativamente independentes dos demais dedos. Na artrite psoriática, alterações inflamatórias articulares ou tendíneas podem provocar dor e dificultar a extensão do indicador.",
+        "en": "Forearm muscle responsible for assisting extension of the index finger, allowing movements that are relatively independent of the other fingers. In psoriatic arthritis, inflammatory changes affecting the joints or tendons may cause pain and make extension of the index finger difficult.",
+        "es": "Músculo del antebrazo responsable de facilitar la extensión del dedo índice, permitiendo movimientos relativamente independientes de los demás dedos. En la artritis psoriásica, las alteraciones inflamatorias articulares o tendinosas pueden provocar dolor y dificultar la extensión del índice."
+      }
+    },
+    "ExtensorDigitorum": {
+      "objname": {
+        "pt-BR": "Extensor dos Dedos",
+        "en": "Extensor Digitorum",
+        "es": "Extensor de los Dedos"
+      },
+      "description": {
+        "pt-BR": "Músculo do antebraço responsável pela extensão dos dedos indicador, médio, anelar e mínimo, atuando principalmente nas articulações metacarpofalângicas e auxiliando a extensão das interfalângicas. A inflamação das articulações e das estruturas tendíneas pode comprometer sua função e provocar dor durante os movimentos.",
+        "en": "Forearm muscle responsible for extension of the index, middle, ring, and little fingers, acting primarily on the metacarpophalangeal joints and assisting extension of the interphalangeal joints. Inflammation of the joints and tendon structures may impair its function and cause pain during movement.",
+        "es": "Músculo del antebrazo responsable de la extensión de los dedos índice, medio, anular y meñique, actuando principalmente sobre las articulaciones metacarpofalángicas y facilitando la extensión de las interfalángicas. La inflamación de las articulaciones y las estructuras tendinosas puede comprometer su función y provocar dolor durante los movimientos."
+      }
+    },
+    "ExtensorDigitiMinimi": {
+      "objname": {
+        "pt-BR": "Extensor do Dedo Mínimo",
+        "en": "Extensor Digiti Minimi",
+        "es": "Extensor del Dedo Meñique"
+      },
+      "description": {
+        "pt-BR": "Músculo do antebraço que auxilia a extensão do dedo mínimo, contribuindo para seus movimentos independentes. Na artrite psoriática, processos inflamatórios envolvendo articulações ou tendões podem provocar dor, rigidez e dificuldade de movimentação desse dedo.",
+        "en": "Forearm muscle that assists extension of the little finger, contributing to its independent movements. In psoriatic arthritis, inflammatory processes involving the joints or tendons may cause pain, stiffness, and difficulty moving this finger.",
+        "es": "Músculo del antebrazo que facilita la extensión del dedo meñique, contribuyendo a sus movimientos independientes. En la artritis psoriásica, los procesos inflamatorios que afectan a las articulaciones o los tendones pueden provocar dolor, rigidez y dificultad para mover este dedo."
+      }
+    },
+    "Skin+nisolar+ninteract": {
+      "objname": {
+        "pt-BR": "Pele",
+        "en": "Skin",
+        "es": "Piel"
+      },
+      "description": {
+        "pt-BR": "",
+        "en": "",
+        "es": ""
+      }
+    },
+    "B1+B2+B3+B4+B5+B6+B7+B8+B9+B10+B11+B12+B13+nisolar": {
+      "objname": {
+        "pt-BR": "Regiões de Inflamação e Dor Articular",
+        "en": "Regions of Joint Inflammation and Pain",
+        "es": "Regiones de Inflamación y Dolor Articular"
+      },
+      "description": {
+        "pt-BR": "Representação didática das regiões das mãos que podem apresentar inflamação e dor devido à artrite psoriática. A doença pode comprometer as articulações interfalângicas, metacarpofalângicas e outras estruturas articulares, provocando inchaço, rigidez e limitação dos movimentos. Na animação, as esferas vermelhas aumentam e diminuem de tamanho para destacar visualmente os locais potencialmente afetados. Esse efeito é ilustrativo e não representa alterações reais de volume das articulações.",
+        "en": "Educational representation of the regions of the hands that may exhibit inflammation and pain due to psoriatic arthritis. The disease may affect the interphalangeal and metacarpophalangeal joints, as well as other joint structures, causing swelling, stiffness, and limited movement. In the animation, the red spheres increase and decrease in size to visually highlight potentially affected sites. This effect is illustrative and does not represent actual changes in joint volume.",
+        "es": "Representación didáctica de las regiones de las manos que pueden presentar inflamación y dolor debido a la artritis psoriásica. La enfermedad puede comprometer las articulaciones interfalángicas, metacarpofalángicas y otras estructuras articulares, provocando hinchazón, rigidez y limitación de los movimientos. En la animación, las esferas rojas aumentan y disminuyen de tamaño para destacar visualmente los lugares potencialmente afectados. Este efecto es ilustrativo y no representa alteraciones reales del volumen de las articulaciones."
+      }
+    }
   }
 }

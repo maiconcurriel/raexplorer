@@ -1,22 +1,76 @@
 {
-  "objname": "Úlcera Gástrica",
+  "objname": {
+    "pt-BR": "Úlcera Gástrica",
+    "en": "Gastric Ulcer",
+    "es": "Úlcera Gástrica"
+  },
   "objsystem": [
     "Digestório"
   ],
-  "objdescription": "A úlcera gástrica é uma lesão que ocorre quando há perda da integridade da mucosa do estômago, formando uma ferida que se aprofunda na parede gástrica. Entre as causas mais comuns estão a infecção pela bactéria Helicobacter pylori e o uso prolongado de medicamentos anti-inflamatórios não esteroides, que podem comprometer os mecanismos de proteção da mucosa. A exposição do tecido lesionado ao ácido e às enzimas do suco gástrico pode dificultar a cicatrização e provocar sintomas como dor ou queimação na região superior do abdômen, náuseas e desconforto. Algumas úlceras podem causar complicações, como sangramento ou perfuração. O modelo apresenta um corte do estômago e destaca didaticamente uma área de ulceração na mucosa gástrica.",
+  "objdescription": {
+    "pt-BR": "A úlcera gástrica é uma lesão que ocorre quando há perda da integridade da mucosa do estômago, formando uma ferida que se aprofunda na parede gástrica. Entre as causas mais comuns estão a infecção pela bactéria Helicobacter pylori e o uso prolongado de medicamentos anti-inflamatórios não esteroides, que podem comprometer os mecanismos de proteção da mucosa. A exposição do tecido lesionado ao ácido e às enzimas do suco gástrico pode dificultar a cicatrização e provocar sintomas como dor ou queimação na região superior do abdômen, náuseas e desconforto. Algumas úlceras podem causar complicações, como sangramento ou perfuração. O modelo apresenta um corte do estômago e destaca didaticamente uma área de ulceração na mucosa gástrica.",
+    "en": "A gastric ulcer is a lesion that occurs when the integrity of the stomach mucosa is compromised, forming a wound that extends deeper into the gastric wall. The most common causes include infection with the bacterium Helicobacter pylori and prolonged use of nonsteroidal anti-inflammatory drugs, which may impair the protective mechanisms of the mucosa. Exposure of the injured tissue to gastric acid and digestive enzymes may hinder healing and cause symptoms such as pain or a burning sensation in the upper abdomen, nausea, and discomfort. Some ulcers may cause complications, such as bleeding or perforation. The model presents a cross-section of the stomach and highlights an area of ulceration in the gastric mucosa for educational purposes.",
+    "es": "La úlcera gástrica es una lesión que ocurre cuando se pierde la integridad de la mucosa del estómago, formando una herida que se profundiza en la pared gástrica. Entre las causas más comunes se encuentran la infección por la bacteria Helicobacter pylori y el uso prolongado de medicamentos antiinflamatorios no esteroideos, que pueden comprometer los mecanismos de protección de la mucosa. La exposición del tejido lesionado al ácido y a las enzimas del jugo gástrico puede dificultar la cicatrización y provocar síntomas como dolor o sensación de ardor en la región superior del abdomen, náuseas y molestias. Algunas úlceras pueden causar complicaciones, como sangrado o perforación. El modelo presenta un corte del estómago y destaca de forma didáctica un área de ulceración en la mucosa gástrica."
+  },
   "linkedModels": [
     {
       "id": "24",
-      "label": "Sistema Digestório"
+      "label": {
+        "pt-BR": "Sistema Digestório",
+        "en": "Digestive System",
+        "es": "Sistema Digestivo"
+      }
+    },
+    {
+      "id": "34",
+      "label": {
+        "pt-BR": "Dores Abdominais",
+        "en": "Abdominal Pain",
+        "es": "Dolor Abdominal"
+      }
+    },
+    {
+      "id": "61",
+      "label": {
+        "pt-BR": "Gastrite",
+        "en": "Gastritis",
+        "es": "Gastritis"
+      }
+    },
+    {
+      "id": "94",
+      "label": {
+        "pt-BR": "Esôfago de Barrett",
+        "en": "Barrett's Esophagus",
+        "es": "Esófago de Barrett"
+      }
     }
   ],
   "resources": [],
-  "Stomach_1+Stomach_2+nisolar": {
-    "objname": "Estômago",
-    "description": "Órgão do sistema digestório responsável por armazenar temporariamente os alimentos e misturá-los ao suco gástrico. Sua superfície interna é revestida pela mucosa gástrica, que possui mecanismos de proteção contra a ação do ácido e das enzimas digestivas. Quando essa barreira protetora é comprometida, o tecido pode ficar mais suscetível ao desenvolvimento de lesões como a úlcera gástrica."
-  },
-  "Ulcera+nisolar": {
-    "objname": "Úlcera Gástrica",
-    "description": "Lesão localizada na parede interna do estômago caracterizada pela perda da mucosa e pelo aprofundamento da ferida nos tecidos subjacentes. Pode se desenvolver quando os mecanismos de proteção da mucosa são prejudicados, permitindo maior ação do conteúdo gástrico sobre a parede. No modelo, a região destacada representa didaticamente o local da ulceração."
+  "parts": {
+    "Stomach_1+Stomach_2+nisolar": {
+      "objname": {
+        "pt-BR": "Estômago",
+        "en": "Stomach",
+        "es": "Estómago"
+      },
+      "description": {
+        "pt-BR": "Órgão do sistema digestório responsável por armazenar temporariamente os alimentos e misturá-los ao suco gástrico. Sua superfície interna é revestida pela mucosa gástrica, que possui mecanismos de proteção contra a ação do ácido e das enzimas digestivas. Quando essa barreira protetora é comprometida, o tecido pode ficar mais suscetível ao desenvolvimento de lesões como a úlcera gástrica.",
+        "en": "Organ of the digestive system responsible for temporarily storing food and mixing it with gastric juice. Its inner surface is lined by the gastric mucosa, which has protective mechanisms against the effects of acid and digestive enzymes. When this protective barrier is compromised, the tissue may become more susceptible to the development of lesions such as gastric ulcers.",
+        "es": "Órgano del sistema digestivo responsable de almacenar temporalmente los alimentos y mezclarlos con el jugo gástrico. Su superficie interna está revestida por la mucosa gástrica, que posee mecanismos de protección contra la acción del ácido y de las enzimas digestivas. Cuando esta barrera protectora se ve comprometida, el tejido puede volverse más susceptible al desarrollo de lesiones como la úlcera gástrica."
+      }
+    },
+    "Ulcera+nisolar": {
+      "objname": {
+        "pt-BR": "Úlcera Gástrica",
+        "en": "Gastric Ulcer",
+        "es": "Úlcera Gástrica"
+      },
+      "description": {
+        "pt-BR": "Lesão localizada na parede interna do estômago caracterizada pela perda da mucosa e pelo aprofundamento da ferida nos tecidos subjacentes. Pode se desenvolver quando os mecanismos de proteção da mucosa são prejudicados, permitindo maior ação do conteúdo gástrico sobre a parede. No modelo, a região destacada representa didaticamente o local da ulceração.",
+        "en": "Lesion located in the inner wall of the stomach, characterized by the loss of mucosal tissue and the extension of the wound into the underlying tissues. It may develop when the protective mechanisms of the mucosa are impaired, allowing the gastric contents to exert a greater effect on the stomach wall. In the model, the highlighted region provides an educational representation of the site of ulceration.",
+        "es": "Lesión localizada en la pared interna del estómago, caracterizada por la pérdida de la mucosa y la profundización de la herida en los tejidos subyacentes. Puede desarrollarse cuando los mecanismos de protección de la mucosa se ven afectados, permitiendo una mayor acción del contenido gástrico sobre la pared del estómago. En el modelo, la región destacada representa de forma didáctica el lugar de la ulceración."
+      }
+    }
   }
 }

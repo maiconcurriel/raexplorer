@@ -1,59 +1,232 @@
 {
-  "objname": "Sistema Venoso",
-  "objsystem": "Circulatório",
-  "objdescription": "Conjunto de veias responsável por transportar o sangue dos tecidos e órgãos de volta ao coração. O sistema venoso recebe o sangue proveniente da circulação sistêmica e o conduz ao coração, enquanto as veias pulmonares transportam sangue oxigenado dos pulmões até o átrio esquerdo. Suas ramificações formam uma extensa rede vascular que auxilia no retorno venoso e na manutenção da circulação sanguínea.",
+  "objname": {
+    "pt-BR": "Sistema Venoso",
+    "en": "Venous System",
+    "es": "Sistema Venoso"
+  },
+  "objsystem": [
+    "Circulatório"
+  ],
+  "objdescription": {
+    "pt-BR": "Conjunto de veias responsável por transportar o sangue dos tecidos e órgãos de volta ao coração. O sistema venoso recebe o sangue proveniente da circulação sistêmica e o conduz ao coração, enquanto as veias pulmonares transportam sangue oxigenado dos pulmões até o átrio esquerdo. Suas ramificações formam uma extensa rede vascular que auxilia no retorno venoso e na manutenção da circulação sanguínea.",
+    "en": "Network of veins responsible for transporting blood from tissues and organs back to the heart. The venous system receives blood from the systemic circulation and carries it to the heart, while the pulmonary veins transport oxygenated blood from the lungs to the left atrium. Its branches form an extensive vascular network that assists in venous return and the maintenance of blood circulation.",
+    "es": "Conjunto de venas responsable de transportar la sangre desde los tejidos y órganos de regreso al corazón. El sistema venoso recibe la sangre procedente de la circulación sistémica y la conduce al corazón, mientras que las venas pulmonares transportan sangre oxigenada desde los pulmones hasta la aurícula izquierda. Sus ramificaciones forman una extensa red vascular que contribuye al retorno venoso y al mantenimiento de la circulación sanguínea."
+  },
   "linkedModels": [
     {
       "id": "4",
-      "label": "Coração"
-    },{
+      "label": {
+        "pt-BR": "Coração",
+        "en": "Heart",
+        "es": "Corazón"
+      }
+    },
+    {
+      "id": "5",
+      "label": {
+        "pt-BR": "Coração (Animado)",
+        "en": "Heart (Animated)",
+        "es": "Corazón (Animado)"
+      }
+    },
+    {
       "id": "19",
-      "label": "Sistema Arterial"
+      "label": {
+        "pt-BR": "Sistema Arterial",
+        "en": "Arterial System",
+        "es": "Sistema Arterial"
+      }
+    },
+    {
+      "id": "29",
+      "label": {
+        "pt-BR": "Anatomia Corpo Feminino",
+        "en": "Female Body Anatomy",
+        "es": "Anatomía del Cuerpo Femenino"
+      }
+    },
+    {
+      "id": "30",
+      "label": {
+        "pt-BR": "Anatomia Corpo Masculino",
+        "en": "Male Body Anatomy",
+        "es": "Anatomía del Cuerpo Masculino"
+      }
+    },
+    {
+      "id": "32",
+      "label": {
+        "pt-BR": "Sistema Cardiovascular",
+        "en": "Cardiovascular System",
+        "es": "Sistema Cardiovascular"
+      }
+    },
+    {
+      "id": "55",
+      "label": {
+        "pt-BR": "Ablação Septal com Álcool",
+        "en": "Alcohol Septal Ablation",
+        "es": "Ablación Septal con Alcohol"
+      }
+    },
+    {
+      "id": "58",
+      "label": {
+        "pt-BR": "Anticoagulantes",
+        "en": "Anticoagulants",
+        "es": "Anticoagulantes"
+      }
+    },
+    {
+      "id": "67",
+      "label": {
+        "pt-BR": "Dinâmica Respiratória com o Coração",
+        "en": "Respiratory Dynamics with the Heart",
+        "es": "Dinámica Respiratoria con el Corazón"
+      }
+    },
+    {
+      "id": "92",
+      "label": {
+        "pt-BR": "Linfedema",
+        "en": "Lymphedema",
+        "es": "Linfedema"
+      }
     }
   ],
   "resources": [],
-  "UpperLimbVeins": {
-    "objname": "Veias dos Membros Superiores",
-    "description": "Conjunto de veias responsáveis pela drenagem sanguínea dos membros superiores, incluindo ombro, braço, antebraço e mão. Essas veias conduzem o sangue dos tecidos dos membros superiores em direção às veias de maior calibre e posteriormente ao coração."
-  },
-  "ThoraxVeins": {
-    "objname": "Veias do Tórax",
-    "description": "Conjunto de veias responsáveis pela drenagem sanguínea da parede torácica e de estruturas localizadas no tórax. Seus vasos conduzem o sangue em direção às veias maiores que desembocam na veia cava superior ou no sistema ázigos."
-  },
-  "SuperiorVenaCavaVeins": {
-    "objname": "Veia Cava Superior",
-    "description": "Grande veia responsável por transportar para o átrio direito o sangue venoso proveniente da cabeça, pescoço, membros superiores e grande parte do tórax. Forma-se pela união das veias braquiocefálicas e desemboca diretamente no coração."
-  },
-  "PulmonaryVeins": {
-    "objname": "Veias Pulmonares",
-    "description": "Veias responsáveis por transportar sangue oxigenado dos pulmões até o átrio esquerdo do coração. Normalmente existem quatro veias pulmonares principais, duas provenientes de cada pulmão."
-  },
-  "PelvisVeins": {
-    "objname": "Veias da Pelve",
-    "description": "Conjunto de veias responsáveis pela drenagem sanguínea das estruturas da pelve, incluindo órgãos pélvicos, músculos, ossos e tecidos adjacentes. O sangue é direcionado principalmente para as veias ilíacas internas e externas e posteriormente para as veias ilíacas comuns."
-  },
-  "LowerLimbVeins": {
-    "objname": "Veias dos Membros Inferiores",
-    "description": "Conjunto de veias responsáveis pela drenagem sanguínea dos membros inferiores, incluindo quadril, coxa, perna e pé. O sistema inclui veias superficiais e profundas que conduzem o sangue em direção às veias femorais e ilíacas."
-  },
-  "LiverVeins": {
-    "objname": "Veias do Fígado",
-    "description": "Conjunto de vasos venosos responsáveis pela drenagem do sangue proveniente do fígado. As principais veias hepáticas conduzem o sangue do fígado diretamente para a veia cava inferior."
-  },
-  "KidneyVeins": {
-    "objname": "Veias Renais",
-    "description": "Veias responsáveis pela drenagem sanguínea dos rins. As veias renais geralmente desembocam diretamente na veia cava inferior, transportando o sangue que deixou o tecido renal."
-  },
-  "HeadNeckVeins": {
-    "objname": "Veias da Cabeça e do Pescoço",
-    "description": "Conjunto de veias responsáveis pela drenagem sanguínea da cabeça, face, pescoço e estruturas associadas. Entre os principais vasos estão as veias jugulares e vertebrais, que conduzem o sangue em direção às veias braquiocefálicas e posteriormente à veia cava superior."
-  },
-  "GutVeins": {
-    "objname": "Veias do Trato Gastrointestinal",
-    "description": "Conjunto de veias responsáveis pela drenagem sanguínea dos órgãos do sistema digestório. Grande parte do sangue proveniente do estômago, intestinos, pâncreas e baço é direcionada ao sistema porta hepático antes de alcançar a circulação sistêmica."
-  },
-  "AbdomenInferiorVenaCavaVeins": {
-    "objname": "Veias Abdominais e Veia Cava Inferior",
-    "description": "Conjunto de grandes veias responsáveis pela drenagem sanguínea do abdome, pelve e membros inferiores. A veia cava inferior é a principal via de retorno venoso dessas regiões e transporta o sangue até o átrio direito do coração."
+  "parts": {
+    "UpperLimbVeins": {
+      "objname": {
+        "pt-BR": "Veias dos Membros Superiores",
+        "en": "Veins of the Upper Limbs",
+        "es": "Venas de los Miembros Superiores"
+      },
+      "description": {
+        "pt-BR": "Conjunto de veias responsáveis pela drenagem sanguínea dos membros superiores, incluindo ombro, braço, antebraço e mão. Essas veias conduzem o sangue dos tecidos dos membros superiores em direção às veias de maior calibre e posteriormente ao coração.",
+        "en": "Group of veins responsible for draining blood from the upper limbs, including the shoulder, arm, forearm, and hand. These veins carry blood from the tissues of the upper limbs toward larger veins and subsequently to the heart.",
+        "es": "Conjunto de venas responsables del drenaje sanguíneo de los miembros superiores, incluidos el hombro, el brazo, el antebrazo y la mano. Estas venas conducen la sangre desde los tejidos de los miembros superiores hacia las venas de mayor calibre y posteriormente al corazón."
+      }
+    },
+    "ThoraxVeins": {
+      "objname": {
+        "pt-BR": "Veias do Tórax",
+        "en": "Thoracic Veins",
+        "es": "Venas del Tórax"
+      },
+      "description": {
+        "pt-BR": "Conjunto de veias responsáveis pela drenagem sanguínea da parede torácica e de estruturas localizadas no tórax. Seus vasos conduzem o sangue em direção às veias maiores que desembocam na veia cava superior ou no sistema ázigos.",
+        "en": "Group of veins responsible for draining blood from the thoracic wall and structures located within the thorax. These vessels carry blood toward larger veins that drain into the superior vena cava or the azygos venous system.",
+        "es": "Conjunto de venas responsables del drenaje sanguíneo de la pared torácica y de las estructuras situadas en el tórax. Sus vasos conducen la sangre hacia venas de mayor calibre que desembocan en la vena cava superior o en el sistema ácigos."
+      }
+    },
+    "SuperiorVenaCavaVeins": {
+      "objname": {
+        "pt-BR": "Veia Cava Superior",
+        "en": "Superior Vena Cava",
+        "es": "Vena Cava Superior"
+      },
+      "description": {
+        "pt-BR": "Grande veia responsável por transportar para o átrio direito o sangue venoso proveniente da cabeça, pescoço, membros superiores e grande parte do tórax. Forma-se pela união das veias braquiocefálicas e desemboca diretamente no coração.",
+        "en": "Large vein responsible for carrying venous blood from the head, neck, upper limbs, and much of the thorax to the right atrium. It is formed by the union of the brachiocephalic veins and drains directly into the heart.",
+        "es": "Vena de gran calibre responsable de transportar hacia la aurícula derecha la sangre venosa procedente de la cabeza, el cuello, los miembros superiores y gran parte del tórax. Se forma por la unión de las venas braquiocefálicas y desemboca directamente en el corazón."
+      }
+    },
+    "PulmonaryVeins": {
+      "objname": {
+        "pt-BR": "Veias Pulmonares",
+        "en": "Pulmonary Veins",
+        "es": "Venas Pulmonares"
+      },
+      "description": {
+        "pt-BR": "Veias responsáveis por transportar sangue oxigenado dos pulmões até o átrio esquerdo do coração. Normalmente existem quatro veias pulmonares principais, duas provenientes de cada pulmão.",
+        "en": "Veins responsible for carrying oxygenated blood from the lungs to the left atrium of the heart. There are normally four main pulmonary veins, two originating from each lung.",
+        "es": "Venas responsables de transportar sangre oxigenada desde los pulmones hasta la aurícula izquierda del corazón. Normalmente existen cuatro venas pulmonares principales, dos procedentes de cada pulmón."
+      }
+    },
+    "PelvisVeins": {
+      "objname": {
+        "pt-BR": "Veias da Pelve",
+        "en": "Pelvic Veins",
+        "es": "Venas de la Pelvis"
+      },
+      "description": {
+        "pt-BR": "Conjunto de veias responsáveis pela drenagem sanguínea das estruturas da pelve, incluindo órgãos pélvicos, músculos, ossos e tecidos adjacentes. O sangue é direcionado principalmente para as veias ilíacas internas e externas e posteriormente para as veias ilíacas comuns.",
+        "en": "Group of veins responsible for draining blood from the structures of the pelvis, including pelvic organs, muscles, bones, and adjacent tissues. Blood is directed primarily toward the internal and external iliac veins and subsequently into the common iliac veins.",
+        "es": "Conjunto de venas responsables del drenaje sanguíneo de las estructuras de la pelvis, incluidos los órganos pélvicos, músculos, huesos y tejidos adyacentes. La sangre se dirige principalmente hacia las venas ilíacas internas y externas y posteriormente hacia las venas ilíacas comunes."
+      }
+    },
+    "LowerLimbVeins": {
+      "objname": {
+        "pt-BR": "Veias dos Membros Inferiores",
+        "en": "Veins of the Lower Limbs",
+        "es": "Venas de los Miembros Inferiores"
+      },
+      "description": {
+        "pt-BR": "Conjunto de veias responsáveis pela drenagem sanguínea dos membros inferiores, incluindo quadril, coxa, perna e pé. O sistema inclui veias superficiais e profundas que conduzem o sangue em direção às veias femorais e ilíacas.",
+        "en": "Group of veins responsible for draining blood from the lower limbs, including the hip, thigh, leg, and foot. The system includes superficial and deep veins that carry blood toward the femoral and iliac veins.",
+        "es": "Conjunto de venas responsables del drenaje sanguíneo de los miembros inferiores, incluidos la cadera, el muslo, la pierna y el pie. El sistema incluye venas superficiales y profundas que conducen la sangre hacia las venas femorales e ilíacas."
+      }
+    },
+    "LiverVeins": {
+      "objname": {
+        "pt-BR": "Veias do Fígado",
+        "en": "Hepatic Veins",
+        "es": "Venas Hepáticas"
+      },
+      "description": {
+        "pt-BR": "Conjunto de vasos venosos responsáveis pela drenagem do sangue proveniente do fígado. As principais veias hepáticas conduzem o sangue do fígado diretamente para a veia cava inferior.",
+        "en": "Group of venous vessels responsible for draining blood from the liver. The main hepatic veins carry blood from the liver directly into the inferior vena cava.",
+        "es": "Conjunto de vasos venosos responsables del drenaje de la sangre procedente del hígado. Las principales venas hepáticas conducen la sangre desde el hígado directamente hacia la vena cava inferior."
+      }
+    },
+    "KidneyVeins": {
+      "objname": {
+        "pt-BR": "Veias Renais",
+        "en": "Renal Veins",
+        "es": "Venas Renales"
+      },
+      "description": {
+        "pt-BR": "Veias responsáveis pela drenagem sanguínea dos rins. As veias renais geralmente desembocam diretamente na veia cava inferior, transportando o sangue que deixou o tecido renal.",
+        "en": "Veins responsible for draining blood from the kidneys. The renal veins generally drain directly into the inferior vena cava, carrying blood that has left the renal tissue.",
+        "es": "Venas responsables del drenaje sanguíneo de los riñones. Las venas renales generalmente desembocan directamente en la vena cava inferior, transportando la sangre que ha salido del tejido renal."
+      }
+    },
+    "HeadNeckVeins": {
+      "objname": {
+        "pt-BR": "Veias da Cabeça e do Pescoço",
+        "en": "Veins of the Head and Neck",
+        "es": "Venas de la Cabeza y del Cuello"
+      },
+      "description": {
+        "pt-BR": "Conjunto de veias responsáveis pela drenagem sanguínea da cabeça, face, pescoço e estruturas associadas. Entre os principais vasos estão as veias jugulares e vertebrais, que conduzem o sangue em direção às veias braquiocefálicas e posteriormente à veia cava superior.",
+        "en": "Group of veins responsible for draining blood from the head, face, neck, and associated structures. The main vessels include the jugular and vertebral veins, which carry blood toward the brachiocephalic veins and subsequently into the superior vena cava.",
+        "es": "Conjunto de venas responsables del drenaje sanguíneo de la cabeza, la cara, el cuello y las estructuras asociadas. Entre los principales vasos se encuentran las venas yugulares y vertebrales, que conducen la sangre hacia las venas braquiocefálicas y posteriormente hacia la vena cava superior."
+      }
+    },
+    "GutVeins": {
+      "objname": {
+        "pt-BR": "Veias do Trato Gastrointestinal",
+        "en": "Veins of the Gastrointestinal Tract",
+        "es": "Venas del Tracto Gastrointestinal"
+      },
+      "description": {
+        "pt-BR": "Conjunto de veias responsáveis pela drenagem sanguínea dos órgãos do sistema digestório. Grande parte do sangue proveniente do estômago, intestinos, pâncreas e baço é direcionada ao sistema porta hepático antes de alcançar a circulação sistêmica.",
+        "en": "Group of veins responsible for draining blood from the organs of the digestive system. Much of the blood from the stomach, intestines, pancreas, and spleen is directed into the hepatic portal system before reaching the systemic circulation.",
+        "es": "Conjunto de venas responsables del drenaje sanguíneo de los órganos del sistema digestivo. Gran parte de la sangre procedente del estómago, los intestinos, el páncreas y el bazo se dirige al sistema porta hepático antes de alcanzar la circulación sistémica."
+      }
+    },
+    "AbdomenInferiorVenaCavaVeins": {
+      "objname": {
+        "pt-BR": "Veias Abdominais e Veia Cava Inferior",
+        "en": "Abdominal Veins and Inferior Vena Cava",
+        "es": "Venas Abdominales y Vena Cava Inferior"
+      },
+      "description": {
+        "pt-BR": "Conjunto de grandes veias responsáveis pela drenagem sanguínea do abdome, pelve e membros inferiores. A veia cava inferior é a principal via de retorno venoso dessas regiões e transporta o sangue até o átrio direito do coração.",
+        "en": "Group of large veins responsible for draining blood from the abdomen, pelvis, and lower limbs. The inferior vena cava is the main pathway for venous return from these regions and carries blood to the right atrium of the heart.",
+        "es": "Conjunto de grandes venas responsables del drenaje sanguíneo del abdomen, la pelvis y los miembros inferiores. La vena cava inferior es la principal vía de retorno venoso de estas regiones y transporta la sangre hasta la aurícula derecha del corazón."
+      }
+    }
   }
 }

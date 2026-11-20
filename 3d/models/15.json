@@ -1,87 +1,348 @@
 {
-  "objname": "Anatomia das Camadas da Pele Humana",
-  "objsystem": "Tegumentar",
-  "objdescription": "A pele é o maior órgão do corpo humano e forma a principal barreira entre o organismo e o ambiente externo. É composta principalmente pela epiderme, derme e tecido subcutâneo. A epiderme contém diferentes camadas de células, incluindo queratinócitos e melanócitos, enquanto a derme abriga vasos sanguíneos, folículos pilosos, músculos, receptores sensoriais e outras estruturas. O tecido subcutâneo contém principalmente gordura e tecido conjuntivo, contribuindo para proteção, isolamento térmico e armazenamento de energia. A pele também participa da percepção sensorial, regulação da temperatura e proteção contra agentes externos.",
-  "linkedModels": [],
+  "objname": {
+    "pt-BR": "Anatomia das Camadas da Pele Humana",
+    "en": "Anatomy of Human Skin Layers",
+    "es": "Anatomía de las Capas de la Piel Humana"
+  },
+  "objsystem": [
+    "Tegumentar"
+  ],
+  "objdescription": {
+    "pt-BR": "A pele é o maior órgão do corpo humano e forma a principal barreira entre o organismo e o ambiente externo. É composta principalmente pela epiderme, derme e tecido subcutâneo. A epiderme contém diferentes camadas de células, incluindo queratinócitos e melanócitos, enquanto a derme abriga vasos sanguíneos, folículos pilosos, músculos, receptores sensoriais e outras estruturas. O tecido subcutâneo contém principalmente gordura e tecido conjuntivo, contribuindo para proteção, isolamento térmico e armazenamento de energia. A pele também participa da percepção sensorial, regulação da temperatura e proteção contra agentes externos.",
+    "en": "The skin is the largest organ of the human body and forms the main barrier between the body and the external environment. It consists primarily of the epidermis, dermis, and subcutaneous tissue. The epidermis contains different layers of cells, including keratinocytes and melanocytes, while the dermis houses blood vessels, hair follicles, muscles, sensory receptors, and other structures. Subcutaneous tissue contains mainly fat and connective tissue, contributing to protection, thermal insulation, and energy storage. The skin also participates in sensory perception, temperature regulation, and protection against external agents.",
+    "es": "La piel es el órgano más grande del cuerpo humano y constituye la principal barrera entre el organismo y el ambiente externo. Está compuesta principalmente por la epidermis, la dermis y el tejido subcutáneo. La epidermis contiene diferentes capas de células, incluidos los queratinocitos y los melanocitos, mientras que la dermis alberga vasos sanguíneos, folículos pilosos, músculos, receptores sensoriales y otras estructuras. El tejido subcutáneo contiene principalmente grasa y tejido conjuntivo, contribuyendo a la protección, el aislamiento térmico y el almacenamiento de energía. La piel también participa en la percepción sensorial, la regulación de la temperatura y la protección contra agentes externos."
+  },
+  "linkedModels": [
+    {
+      "id": "39",
+      "label": {
+        "pt-BR": "Envelhecimento do Tecido da Pele",
+        "en": "Skin Tissue Aging",
+        "es": "Envejecimiento del Tejido de la Piel"
+      }
+    },
+    {
+      "id": "40",
+      "label": {
+        "pt-BR": "Queratose Pilar",
+        "en": "Keratosis Pilaris",
+        "es": "Queratosis Pilar"
+      }
+    },
+    {
+      "id": "41",
+      "label": {
+        "pt-BR": "Queimadura Solar",
+        "en": "Sunburn",
+        "es": "Quemadura Solar"
+      }
+    },
+    {
+      "id": "54",
+      "label": {
+        "pt-BR": "Micose",
+        "en": "Mycosis",
+        "es": "Micosis"
+      }
+    },
+    {
+      "id": "59",
+      "label": {
+        "pt-BR": "Psoríase",
+        "en": "Psoriasis",
+        "es": "Psoriasis"
+      }
+    },
+    {
+      "id": "60",
+      "label": {
+        "pt-BR": "Herpes Labial",
+        "en": "Herpes Labialis",
+        "es": "Herpes Labial"
+      }
+    },
+    {
+      "id": "66",
+      "label": {
+        "pt-BR": "Sarcoma de Kaposi",
+        "en": "Kaposi Sarcoma",
+        "es": "Sarcoma de Kaposi"
+      }
+    },
+    {
+      "id": "73",
+      "label": {
+        "pt-BR": "Psoríase Cutânea Associada à Artrite Psoriática",
+        "en": "Cutaneous Psoriasis Associated with Psoriatic Arthritis",
+        "es": "Psoriasis Cutánea Asociada a la Artritis Psoriásica"
+      }
+    },
+    {
+      "id": "82",
+      "label": {
+        "pt-BR": "Reações Alérgicas Sistêmicas",
+        "en": "Systemic Allergic Reactions",
+        "es": "Reacciones Alérgicas Sistémicas"
+      }
+    },
+    {
+      "id": "90",
+      "label": {
+        "pt-BR": "Anafilaxia: Inchaço na Face",
+        "en": "Anaphylaxis: Facial Swelling",
+        "es": "Anafilaxia: Hinchazón Facial"
+      }
+    },
+    {
+      "id": "93",
+      "label": {
+        "pt-BR": "Papilomavírus Humano (HPV)",
+        "en": "Human Papillomavirus (HPV)",
+        "es": "Virus del Papiloma Humano (VPH)"
+      }
+    },
+    {
+      "id": "95",
+      "label": {
+        "pt-BR": "Camadas da Epiderme",
+        "en": "Layers of the Epidermis",
+        "es": "Capas de la Epidermis"
+      }
+    },
+    {
+      "id": "98",
+      "label": {
+        "pt-BR": "Pé com Onicomicose",
+        "en": "Foot with Onychomycosis",
+        "es": "Pie con Onicomicosis"
+      }
+    },
+    {
+      "id": "99",
+      "label": {
+        "pt-BR": "Pé com Onicólise",
+        "en": "Foot with Onycholysis",
+        "es": "Pie con Onicólisis"
+      }
+    },
+    {
+      "id": "100",
+      "label": {
+        "pt-BR": "Desenvolvimento de Necrose no Pé Diabético",
+        "en": "Development of Necrosis in the Diabetic Foot",
+        "es": "Desarrollo de Necrosis en el Pie Diabético"
+      }
+    },
+    {
+      "id": "101",
+      "label": {
+        "pt-BR": "Ciclo Biológico do Pelo/Cabelo",
+        "en": "Biological Hair Cycle",
+        "es": "Ciclo Biológico del Pelo/Cabello"
+      }
+    },
+    {
+      "id": "102",
+      "label": {
+        "pt-BR": "Onicocriptose",
+        "en": "Onychocryptosis",
+        "es": "Onicocriptosis"
+      }
+    }
+  ],
   "resources": [],
-
-  "ArrectorPili": {
-    "objname": "Músculo Eretor do Pelo",
-    "description": "Pequeno músculo liso ligado ao folículo piloso. Sua contração provoca a elevação do pelo e pode produzir o aspecto de pele arrepiada, além de estar associada à atividade das glândulas sebáceas."
-  },
-
-  "StratumReticulare": {
-    "objname": "Camada Reticular",
-    "description": "Região profunda da derme formada principalmente por tecido conjuntivo denso e fibras de colágeno e elastina. Proporciona resistência, elasticidade e sustentação à pele."
-  },
-
-  "SubcutanousTissue": {
-    "objname": "Tecido Subcutâneo",
-    "description": "Camada localizada abaixo da derme, formada principalmente por tecido adiposo e conjuntivo. Atua no armazenamento de energia, isolamento térmico, proteção contra impactos e fixação da pele aos tecidos subjacentes."
-  },
-
-  "StratumSpinosum": {
-    "objname": "Estrato Espinhoso",
-    "description": "Camada da epiderme localizada acima do estrato basal. É formada principalmente por queratinócitos unidos por desmossomos, contribuindo para a resistência mecânica e para a produção de queratina."
-  },
-
-  "Melanocytes": {
-    "objname": "Melanócitos",
-    "description": "Células especializadas localizadas principalmente no estrato basal da epiderme. Produzem melanina, pigmento que contribui para a coloração da pele e ajuda a proteger as células contra a radiação ultravioleta."
-  },
-
-  "Dermis": {
-    "objname": "Derme",
-    "description": "Camada de tecido conjuntivo localizada abaixo da epiderme. Contém vasos sanguíneos, nervos, receptores sensoriais, folículos pilosos, glândulas e músculos, fornecendo sustentação, nutrição e resistência à pele."
-  },
-
-  "Arteries": {
-    "objname": "Artérias",
-    "description": "Vasos sanguíneos que transportam sangue sob maior pressão para os tecidos da pele. Fornecem oxigênio e nutrientes e participam da regulação da temperatura corporal por meio da alteração do fluxo sanguíneo."
-  },
-
-  "Veins": {
-    "objname": "Veias",
-    "description": "Vasos sanguíneos que conduzem o sangue dos tecidos da pele de volta à circulação. Participam da drenagem sanguínea e também contribuem para a regulação da temperatura corporal."
-  },
-
-  "StratumGranulosum": {
-    "objname": "Estrato Granuloso",
-    "description": "Camada da epiderme localizada acima do estrato espinhoso. Suas células acumulam grânulos relacionados à formação de queratina e de uma barreira que reduz a perda de água pela pele."
-  },
-
-  "StratumCorneum": {
-    "objname": "Estrato Córneo",
-    "description": "Camada mais superficial da epiderme, formada principalmente por células queratinizadas. Atua como uma importante barreira física e química, protegendo o organismo contra agentes externos e reduzindo a perda de água."
-  },
-
-  "Hair": {
-    "objname": "Pelo",
-    "description": "Estrutura queratinizada produzida pelos folículos pilosos. Participa da proteção da pele e pode contribuir para a percepção sensorial e para a conservação de calor em determinadas regiões do corpo."
-  },
-
-  "FoliculusPili": {
-    "objname": "Folículo Piloso",
-    "description": "Estrutura localizada na derme que envolve e sustenta a raiz do pelo. É responsável pela formação e crescimento do pelo e está associado ao músculo eretor e às glândulas sebáceas."
-  },
-
-  "HairShaft": {
-    "objname": "Haste do Pelo",
-    "description": "Porção do pelo que se projeta acima da superfície da pele. É formada principalmente por células queratinizadas e pode ser dividida em cutícula, córtex e, em pelos mais espessos, medula."
-  },
-
-  "PacinianCorpuscles": {
-    "objname": "Corpúsculos de Pacini",
-    "description": "Receptores sensoriais localizados principalmente na derme profunda e no tecido subcutâneo. Detectam especialmente pressão profunda e vibrações, contribuindo para a percepção tátil."
-  },
-
-  "MekelCells": {
-    "objname": "Células de Merkel",
-    "description": "Células especializadas localizadas na camada basal da epiderme, associadas a terminações nervosas. Participam da percepção de estímulos mecânicos leves e do tato discriminativo."
-  },
-
-  "LangerhanCells": {
-    "objname": "Células de Langerhans",
-    "description": "Células do sistema imunológico encontradas principalmente na epiderme. Capturam e processam substâncias estranhas, participando da defesa imunológica e da identificação de possíveis agentes invasores."
+  "parts": {
+    "ArrectorPili": {
+      "objname": {
+        "pt-BR": "Músculo Eretor do Pelo",
+        "en": "Arrector Pili Muscle",
+        "es": "Músculo Erector del Pelo"
+      },
+      "description": {
+        "pt-BR": "Pequeno músculo liso ligado ao folículo piloso. Sua contração provoca a elevação do pelo e pode produzir o aspecto de pele arrepiada, além de estar associada à atividade das glândulas sebáceas.",
+        "en": "Small smooth muscle attached to the hair follicle. Its contraction causes the hair to stand upright and may produce the appearance of goosebumps. It is also associated with the activity of the sebaceous glands.",
+        "es": "Pequeño músculo liso unido al folículo piloso. Su contracción provoca la elevación del pelo y puede producir el aspecto de piel de gallina, además de estar asociada a la actividad de las glándulas sebáceas."
+      }
+    },
+    "StratumReticulare": {
+      "objname": {
+        "pt-BR": "Camada Reticular",
+        "en": "Reticular Layer",
+        "es": "Capa Reticular"
+      },
+      "description": {
+        "pt-BR": "Região profunda da derme formada principalmente por tecido conjuntivo denso e fibras de colágeno e elastina. Proporciona resistência, elasticidade e sustentação à pele.",
+        "en": "Deep region of the dermis composed mainly of dense connective tissue and collagen and elastin fibers. It provides strength, elasticity, and structural support to the skin.",
+        "es": "Región profunda de la dermis formada principalmente por tejido conjuntivo denso y fibras de colágeno y elastina. Proporciona resistencia, elasticidad y sostén a la piel."
+      }
+    },
+    "SubcutanousTissue": {
+      "objname": {
+        "pt-BR": "Tecido Subcutâneo",
+        "en": "Subcutaneous Tissue",
+        "es": "Tejido Subcutáneo"
+      },
+      "description": {
+        "pt-BR": "Camada localizada abaixo da derme, formada principalmente por tecido adiposo e conjuntivo. Atua no armazenamento de energia, isolamento térmico, proteção contra impactos e fixação da pele aos tecidos subjacentes.",
+        "en": "Layer located beneath the dermis, composed primarily of adipose and connective tissue. It contributes to energy storage, thermal insulation, protection against impacts, and attachment of the skin to underlying tissues.",
+        "es": "Capa situada debajo de la dermis, formada principalmente por tejido adiposo y conjuntivo. Participa en el almacenamiento de energía, el aislamiento térmico, la protección contra impactos y la fijación de la piel a los tejidos subyacentes."
+      }
+    },
+    "StratumSpinosum": {
+      "objname": {
+        "pt-BR": "Estrato Espinhoso",
+        "en": "Stratum Spinosum",
+        "es": "Estrato Espinoso"
+      },
+      "description": {
+        "pt-BR": "Camada da epiderme localizada acima do estrato basal. É formada principalmente por queratinócitos unidos por desmossomos, contribuindo para a resistência mecânica e para a produção de queratina.",
+        "en": "Layer of the epidermis located above the stratum basale. It consists mainly of keratinocytes connected by desmosomes, contributing to mechanical strength and keratin production.",
+        "es": "Capa de la epidermis situada por encima del estrato basal. Está formada principalmente por queratinocitos unidos mediante desmosomas, contribuyendo a la resistencia mecánica y a la producción de queratina."
+      }
+    },
+    "Melanocytes": {
+      "objname": {
+        "pt-BR": "Melanócitos",
+        "en": "Melanocytes",
+        "es": "Melanocitos"
+      },
+      "description": {
+        "pt-BR": "Células especializadas localizadas principalmente no estrato basal da epiderme. Produzem melanina, pigmento que contribui para a coloração da pele e ajuda a proteger as células contra a radiação ultravioleta.",
+        "en": "Specialized cells located primarily in the stratum basale of the epidermis. They produce melanin, a pigment that contributes to skin coloration and helps protect cells against ultraviolet radiation.",
+        "es": "Células especializadas situadas principalmente en el estrato basal de la epidermis. Producen melanina, un pigmento que contribuye a la coloración de la piel y ayuda a proteger las células contra la radiación ultravioleta."
+      }
+    },
+    "Dermis": {
+      "objname": {
+        "pt-BR": "Derme",
+        "en": "Dermis",
+        "es": "Dermis"
+      },
+      "description": {
+        "pt-BR": "Camada de tecido conjuntivo localizada abaixo da epiderme. Contém vasos sanguíneos, nervos, receptores sensoriais, folículos pilosos, glândulas e músculos, fornecendo sustentação, nutrição e resistência à pele.",
+        "en": "Layer of connective tissue located beneath the epidermis. It contains blood vessels, nerves, sensory receptors, hair follicles, glands, and muscles, providing structural support, nourishment, and strength to the skin.",
+        "es": "Capa de tejido conjuntivo situada debajo de la epidermis. Contiene vasos sanguíneos, nervios, receptores sensoriales, folículos pilosos, glándulas y músculos, proporcionando sostén, nutrición y resistencia a la piel."
+      }
+    },
+    "Arteries": {
+      "objname": {
+        "pt-BR": "Artérias",
+        "en": "Arteries",
+        "es": "Arterias"
+      },
+      "description": {
+        "pt-BR": "Vasos sanguíneos que transportam sangue sob maior pressão para os tecidos da pele. Fornecem oxigênio e nutrientes e participam da regulação da temperatura corporal por meio da alteração do fluxo sanguíneo.",
+        "en": "Blood vessels that carry blood under higher pressure to the skin tissues. They supply oxygen and nutrients and participate in the regulation of body temperature by adjusting blood flow.",
+        "es": "Vasos sanguíneos que transportan sangre a mayor presión hacia los tejidos de la piel. Proporcionan oxígeno y nutrientes y participan en la regulación de la temperatura corporal mediante la modificación del flujo sanguíneo."
+      }
+    },
+    "Veins": {
+      "objname": {
+        "pt-BR": "Veias",
+        "en": "Veins",
+        "es": "Venas"
+      },
+      "description": {
+        "pt-BR": "Vasos sanguíneos que conduzem o sangue dos tecidos da pele de volta à circulação. Participam da drenagem sanguínea e também contribuem para a regulação da temperatura corporal.",
+        "en": "Blood vessels that carry blood from the skin tissues back into circulation. They participate in blood drainage and also contribute to the regulation of body temperature.",
+        "es": "Vasos sanguíneos que conducen la sangre desde los tejidos de la piel de regreso a la circulación. Participan en el drenaje sanguíneo y también contribuyen a la regulación de la temperatura corporal."
+      }
+    },
+    "StratumGranulosum": {
+      "objname": {
+        "pt-BR": "Estrato Granuloso",
+        "en": "Stratum Granulosum",
+        "es": "Estrato Granuloso"
+      },
+      "description": {
+        "pt-BR": "Camada da epiderme localizada acima do estrato espinhoso. Suas células acumulam grânulos relacionados à formação de queratina e de uma barreira que reduz a perda de água pela pele.",
+        "en": "Layer of the epidermis located above the stratum spinosum. Its cells accumulate granules associated with keratin formation and the development of a barrier that reduces water loss through the skin.",
+        "es": "Capa de la epidermis situada por encima del estrato espinoso. Sus células acumulan gránulos relacionados con la formación de queratina y de una barrera que reduce la pérdida de agua a través de la piel."
+      }
+    },
+    "StratumCorneum": {
+      "objname": {
+        "pt-BR": "Estrato Córneo",
+        "en": "Stratum Corneum",
+        "es": "Estrato Córneo"
+      },
+      "description": {
+        "pt-BR": "Camada mais superficial da epiderme, formada principalmente por células queratinizadas. Atua como uma importante barreira física e química, protegendo o organismo contra agentes externos e reduzindo a perda de água.",
+        "en": "Outermost layer of the epidermis, composed mainly of keratinized cells. It acts as an important physical and chemical barrier, protecting the body against external agents and reducing water loss.",
+        "es": "Capa más superficial de la epidermis, formada principalmente por células queratinizadas. Actúa como una importante barrera física y química, protegiendo al organismo contra agentes externos y reduciendo la pérdida de agua."
+      }
+    },
+    "Hair": {
+      "objname": {
+        "pt-BR": "Pelo",
+        "en": "Hair",
+        "es": "Pelo"
+      },
+      "description": {
+        "pt-BR": "Estrutura queratinizada produzida pelos folículos pilosos. Participa da proteção da pele e pode contribuir para a percepção sensorial e para a conservação de calor em determinadas regiões do corpo.",
+        "en": "Keratinized structure produced by hair follicles. It participates in skin protection and may contribute to sensory perception and heat conservation in certain regions of the body.",
+        "es": "Estructura queratinizada producida por los folículos pilosos. Participa en la protección de la piel y puede contribuir a la percepción sensorial y a la conservación del calor en determinadas regiones del cuerpo."
+      }
+    },
+    "FoliculusPili": {
+      "objname": {
+        "pt-BR": "Folículo Piloso",
+        "en": "Hair Follicle",
+        "es": "Folículo Piloso"
+      },
+      "description": {
+        "pt-BR": "Estrutura localizada na derme que envolve e sustenta a raiz do pelo. É responsável pela formação e crescimento do pelo e está associado ao músculo eretor e às glândulas sebáceas.",
+        "en": "Structure located in the dermis that surrounds and supports the hair root. It is responsible for hair formation and growth and is associated with the arrector pili muscle and sebaceous glands.",
+        "es": "Estructura situada en la dermis que rodea y sostiene la raíz del pelo. Es responsable de la formación y el crecimiento del pelo y está asociada al músculo erector y a las glándulas sebáceas."
+      }
+    },
+    "HairShaft": {
+      "objname": {
+        "pt-BR": "Haste do Pelo",
+        "en": "Hair Shaft",
+        "es": "Tallo del Pelo"
+      },
+      "description": {
+        "pt-BR": "Porção do pelo que se projeta acima da superfície da pele. É formada principalmente por células queratinizadas e pode ser dividida em cutícula, córtex e, em pelos mais espessos, medula.",
+        "en": "Portion of the hair that projects above the skin surface. It consists mainly of keratinized cells and can be divided into the cuticle, cortex, and, in thicker hairs, the medulla.",
+        "es": "Porción del pelo que sobresale por encima de la superficie de la piel. Está formada principalmente por células queratinizadas y puede dividirse en cutícula, corteza y, en los pelos más gruesos, médula."
+      }
+    },
+    "PacinianCorpuscles": {
+      "objname": {
+        "pt-BR": "Corpúsculos de Pacini",
+        "en": "Pacinian Corpuscles",
+        "es": "Corpúsculos de Pacini"
+      },
+      "description": {
+        "pt-BR": "Receptores sensoriais localizados principalmente na derme profunda e no tecido subcutâneo. Detectam especialmente pressão profunda e vibrações, contribuindo para a percepção tátil.",
+        "en": "Sensory receptors located primarily in the deep dermis and subcutaneous tissue. They are particularly sensitive to deep pressure and vibrations, contributing to tactile perception.",
+        "es": "Receptores sensoriales situados principalmente en la dermis profunda y el tejido subcutáneo. Detectan especialmente la presión profunda y las vibraciones, contribuyendo a la percepción táctil."
+      }
+    },
+    "MekelCells": {
+      "objname": {
+        "pt-BR": "Células de Merkel",
+        "en": "Merkel Cells",
+        "es": "Células de Merkel"
+      },
+      "description": {
+        "pt-BR": "Células especializadas localizadas na camada basal da epiderme, associadas a terminações nervosas. Participam da percepção de estímulos mecânicos leves e do tato discriminativo.",
+        "en": "Specialized cells located in the basal layer of the epidermis and associated with nerve endings. They participate in the perception of light mechanical stimuli and discriminative touch.",
+        "es": "Células especializadas situadas en la capa basal de la epidermis, asociadas a terminaciones nerviosas. Participan en la percepción de estímulos mecánicos leves y del tacto discriminativo."
+      }
+    },
+    "LangerhanCells": {
+      "objname": {
+        "pt-BR": "Células de Langerhans",
+        "en": "Langerhans Cells",
+        "es": "Células de Langerhans"
+      },
+      "description": {
+        "pt-BR": "Células do sistema imunológico encontradas principalmente na epiderme. Capturam e processam substâncias estranhas, participando da defesa imunológica e da identificação de possíveis agentes invasores.",
+        "en": "Immune system cells found primarily in the epidermis. They capture and process foreign substances, participating in immune defense and the identification of potential invading agents.",
+        "es": "Células del sistema inmunitario presentes principalmente en la epidermis. Capturan y procesan sustancias extrañas, participando en la defensa inmunitaria y en la identificación de posibles agentes invasores."
+      }
+    }
   }
 }

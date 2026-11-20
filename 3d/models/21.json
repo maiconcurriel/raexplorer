@@ -1,128 +1,500 @@
 {
-  "objname": "Sistema Nervoso",
-  "objsystem": "Nervoso",
-  "objdescription": "Conjunto de estruturas responsáveis por receber, processar e transmitir informações pelo organismo, coordenando funções motoras, sensoriais, cognitivas e autonômicas. O sistema nervoso é formado pelo encéfalo, medula espinal e estruturas associadas, incluindo nervos, núcleos, vias de comunicação e membranas que protegem o sistema nervoso central.",
+  "objname": {
+    "pt-BR": "Sistema Nervoso",
+    "en": "Nervous System",
+    "es": "Sistema Nervioso"
+  },
+  "objsystem": [
+    "Nervoso"
+  ],
+  "objdescription": {
+    "pt-BR": "Conjunto de estruturas responsáveis por receber, processar e transmitir informações pelo organismo, coordenando funções motoras, sensoriais, cognitivas e autonômicas. O sistema nervoso é formado pelo encéfalo, medula espinal e estruturas associadas, incluindo nervos, núcleos, vias de comunicação e membranas que protegem o sistema nervoso central.",
+    "en": "Group of structures responsible for receiving, processing, and transmitting information throughout the body, coordinating motor, sensory, cognitive, and autonomic functions. The nervous system consists of the brain, spinal cord, and associated structures, including nerves, nuclei, communication pathways, and membranes that protect the central nervous system.",
+    "es": "Conjunto de estructuras responsables de recibir, procesar y transmitir información por todo el organismo, coordinando funciones motoras, sensoriales, cognitivas y autónomas. El sistema nervioso está formado por el encéfalo, la médula espinal y las estructuras asociadas, incluidos los nervios, los núcleos, las vías de comunicación y las membranas que protegen el sistema nervioso central."
+  },
   "linkedModels": [
     {
-      "id": "2",
-      "label": "Cérebro"
+      "id": "1",
+      "label": {
+        "pt-BR": "Impulso Nervoso",
+        "en": "Nerve Impulse",
+        "es": "Impulso Nervioso"
+      }
     },
     {
-      "id": "1",
-      "label": "Neurônio"
+      "id": "2",
+      "label": {
+        "pt-BR": "Cérebro",
+        "en": "Brain",
+        "es": "Cerebro"
+      }
+    },
+    {
+      "id": "22",
+      "label": {
+        "pt-BR": "Sistema Auditivo",
+        "en": "Auditory System",
+        "es": "Sistema Auditivo"
+      }
+    },
+    {
+      "id": "29",
+      "label": {
+        "pt-BR": "Anatomia Corpo Feminino",
+        "en": "Female Body Anatomy",
+        "es": "Anatomía del Cuerpo Femenino"
+      }
+    },
+    {
+      "id": "30",
+      "label": {
+        "pt-BR": "Anatomia Corpo Masculino",
+        "en": "Male Body Anatomy",
+        "es": "Anatomía del Cuerpo Masculino"
+      }
+    },
+    {
+      "id": "36",
+      "label": {
+        "pt-BR": "AVC Isquêmico",
+        "en": "Ischemic Stroke",
+        "es": "Accidente Cerebrovascular Isquémico"
+      }
+    },
+    {
+      "id": "37",
+      "label": {
+        "pt-BR": "AVC Hemorrágico",
+        "en": "Hemorrhagic Stroke",
+        "es": "Accidente Cerebrovascular Hemorrágico"
+      }
+    },
+    {
+      "id": "38",
+      "label": {
+        "pt-BR": "Neurotransmissores",
+        "en": "Neurotransmitters",
+        "es": "Neurotransmisores"
+      }
+    },
+    {
+      "id": "43",
+      "label": {
+        "pt-BR": "Via Visual",
+        "en": "Visual Pathway",
+        "es": "Vía Visual"
+      }
+    },
+    {
+      "id": "44",
+      "label": {
+        "pt-BR": "Ansiedade",
+        "en": "Anxiety",
+        "es": "Ansiedad"
+      }
+    },
+    {
+      "id": "45",
+      "label": {
+        "pt-BR": "Depressão Bipolar",
+        "en": "Bipolar Depression",
+        "es": "Depresión Bipolar"
+      }
+    },
+    {
+      "id": "47",
+      "label": {
+        "pt-BR": "Via de Recompensa",
+        "en": "Reward Pathway",
+        "es": "Vía de Recompensa"
+      }
+    },
+    {
+      "id": "50",
+      "label": {
+        "pt-BR": "Meningite",
+        "en": "Meningitis",
+        "es": "Meningitis"
+      }
+    },
+    {
+      "id": "51",
+      "label": {
+        "pt-BR": "Paralisia Cerebral",
+        "en": "Cerebral Palsy",
+        "es": "Parálisis Cerebral"
+      }
+    },
+    {
+      "id": "52",
+      "label": {
+        "pt-BR": "Transtorno do Déficit de Atenção e Hiperatividade (TDAH)",
+        "en": "Attention-Deficit/Hyperactivity Disorder (ADHD)",
+        "es": "Trastorno por Déficit de Atención e Hiperactividad (TDAH)"
+      }
+    },
+    {
+      "id": "53",
+      "label": {
+        "pt-BR": "Síndrome de Guillain-Barré (SGB)",
+        "en": "Guillain-Barré Syndrome (GBS)",
+        "es": "Síndrome de Guillain-Barré (SGB)"
+      }
+    },
+    {
+      "id": "64",
+      "label": {
+        "pt-BR": "Incontinência Urinária",
+        "en": "Urinary Incontinence",
+        "es": "Incontinencia Urinaria"
+      }
+    },
+    {
+      "id": "100",
+      "label": {
+        "pt-BR": "Desenvolvimento de Necrose no Pé Diabético",
+        "en": "Development of Necrosis in the Diabetic Foot",
+        "es": "Desarrollo de Necrosis en el Pie Diabético"
+      }
     }
   ],
   "resources": [],
-  "SpinalCords": {
-    "objname": "Medula Espinal",
-    "description": "Parte do sistema nervoso central localizada no interior do canal vertebral. A medula espinal conduz informações entre o encéfalo e o restante do corpo e participa da integração de diversos reflexos."
-  },
-  "SpinalCordMembrane": {
-    "objname": "Membranas da Medula Espinal",
-    "description": "Conjunto de membranas que envolvem e protegem a medula espinal. Essas estruturas fazem parte das meninges e contribuem para a proteção mecânica do sistema nervoso central."
-  },
-  "OlfactoryNerves": {
-    "objname": "Nervos Olfatórios",
-    "description": "Conjunto de fibras nervosas responsáveis por transmitir ao encéfalo informações relacionadas ao sentido do olfato. Essas fibras conectam os receptores olfatórios da cavidade nasal ao bulbo olfatório."
-  },
-  "OlfactoryBulb": {
-    "objname": "Bulbo Olfatório",
-    "description": "Estrutura localizada na região anterior do encéfalo que recebe e processa inicialmente as informações provenientes dos nervos olfatórios antes de encaminhá-las para outras regiões cerebrais."
-  },
-  "Nervous": {
-    "objname": "Estruturas do Sistema Nervoso",
-    "description": "Representação geral de estruturas pertencentes ao sistema nervoso, incluindo componentes do sistema nervoso central e estruturas associadas responsáveis pela comunicação e integração das informações no organismo."
-  },
-  "BrainMembrane": {
-    "objname": "Meninges do Encéfalo",
-    "description": "Conjunto de membranas que envolve e protege o encéfalo. As meninges são constituídas pela dura-máter, aracnoide e pia-máter e contribuem para a proteção mecânica e o suporte das estruturas nervosas."
-  },
-  "Thalamus": {
-    "objname": "Tálamo",
-    "description": "Grande estrutura de substância cinzenta localizada no diencéfalo. Atua como importante centro de retransmissão e processamento de informações sensoriais e motoras, além de participar da regulação da consciência, atenção e outras funções cerebrais."
-  },
-  "SeptalNucleus": {
-    "objname": "Núcleo Septal",
-    "description": "Grupo de núcleos localizado na região septal do cérebro. Está relacionado a circuitos límbicos envolvidos na regulação emocional, motivação, recompensa e outras funções comportamentais."
-  },
-  "Putamen": {
-    "objname": "Putâmen",
-    "description": "Estrutura de substância cinzenta localizada no interior dos hemisférios cerebrais e componente dos núcleos da base. Participa principalmente do controle e da modulação dos movimentos."
-  },
-  "Pons": {
-    "objname": "Ponte",
-    "description": "Parte do tronco encefálico localizada entre o mesencéfalo e o bulbo. Atua na comunicação entre diferentes regiões do sistema nervoso e participa do controle de funções como respiração, sono e movimentos."
-  },
-  "Midbrain": {
-    "objname": "Mesencéfalo",
-    "description": "Porção superior do tronco encefálico localizada entre a ponte e o diencéfalo. Participa do controle dos movimentos oculares, reflexos visuais e auditivos e da transmissão de informações entre diferentes regiões do sistema nervoso."
-  },
-  "MedullaOblongata": {
-    "objname": "Bulbo",
-    "description": "Porção inferior do tronco encefálico, localizada entre a ponte e a medula espinal. Contém centros responsáveis pela regulação de funções vitais, incluindo respiração, frequência cardíaca, pressão arterial e reflexos como deglutição e tosse."
-  },
-  "LateralVentricle": {
-    "objname": "Ventrículo Lateral",
-    "description": "Cavidade localizada no interior de cada hemisfério cerebral que faz parte do sistema ventricular. Contém líquido cerebrospinal e comunica-se com outras cavidades ventriculares, contribuindo para a circulação e proteção do sistema nervoso central."
-  },
-  "IndusiumGriseum": {
-    "objname": "Indúsio Cinzento",
-    "description": "Delgada camada de substância cinzenta localizada sobre a superfície superior do corpo caloso. É considerada uma estrutura remanescente relacionada à formação hipocampal."
-  },
-  "Hypothalamus": {
-    "objname": "Hipotálamo",
-    "description": "Região do diencéfalo localizada abaixo do tálamo. Atua na regulação da homeostase, temperatura corporal, fome, sede, sono, comportamento e funções endócrinas por meio de sua relação com a hipófise."
-  },
-  "Hippocampus": {
-    "objname": "Hipocampo",
-    "description": "Estrutura localizada no lobo temporal medial e integrante do sistema límbico. Está fortemente relacionada à formação e consolidação de memórias e à orientação espacial."
-  },
-  "GlobusPallidusMedial": {
-    "objname": "Globo Pálido Medial",
-    "description": "Porção medial do globo pálido, integrante dos núcleos da base. Participa dos circuitos responsáveis pela modulação e controle dos movimentos voluntários."
-  },
-  "GlobusPallidusLateral": {
-    "objname": "Globo Pálido Lateral",
-    "description": "Porção lateral do globo pálido, integrante dos núcleos da base. Participa dos circuitos neurais envolvidos na regulação e coordenação da atividade motora."
-  },
-  "FourthVentricle": {
-    "objname": "Quarto Ventrículo",
-    "description": "Cavidade do sistema ventricular localizada entre o tronco encefálico e o cerebelo. Contém líquido cerebrospinal e estabelece comunicação entre os ventrículos superiores e o espaço subaracnoideo."
-  },
-  "Fornix": {
-    "objname": "Fórnix",
-    "description": "Feixe de fibras nervosas que conecta estruturas do sistema límbico, especialmente o hipocampo, a regiões do diencéfalo. Participa de circuitos relacionados à memória."
-  },
-  "DentateGyrus": {
-    "objname": "Giro Denteado",
-    "description": "Estrutura localizada na formação hipocampal do lobo temporal medial. Participa dos processos relacionados à formação e organização das memórias e apresenta importante papel na neurogênese adulta."
-  },
-  "CorpusCallosum": {
-    "objname": "Corpo Caloso",
-    "description": "Grande feixe de fibras nervosas que conecta os dois hemisférios cerebrais. Permite a comunicação e integração de informações entre regiões correspondentes dos hemisférios direito e esquerdo."
-  },
-  "CingulateGyrus": {
-    "objname": "Giro do Cíngulo",
-    "description": "Estrutura cortical localizada na face medial dos hemisférios cerebrais e integrante do sistema límbico. Participa de processos relacionados às emoções, motivação, memória, atenção e comportamento."
-  },
-  "Cerebrum": {
-    "objname": "Cérebro",
-    "description": "Maior parte do encéfalo, formada pelos dois hemisférios cerebrais e suas estruturas associadas. É responsável por funções complexas como percepção sensorial, movimento voluntário, linguagem, memória, raciocínio, aprendizagem e consciência."
-  },
-  "Cerebellum": {
-    "objname": "Cerebelo",
-    "description": "Estrutura localizada na região posterior do encéfalo, atrás do tronco encefálico. Atua principalmente na coordenação dos movimentos, equilíbrio, postura e ajuste da atividade motora."
-  },
-  "CaudateNucleus": {
-    "objname": "Núcleo Caudado",
-    "description": "Estrutura de substância cinzenta pertencente aos núcleos da base. Participa da modulação dos movimentos e também está relacionada a processos de aprendizagem, memória e comportamento."
-  },
-  "AnteriorCommissure": {
-    "objname": "Comissura Anterior",
-    "description": "Pequeno feixe de fibras nervosas que conecta regiões correspondentes dos dois hemisférios cerebrais. Participa principalmente da comunicação entre estruturas relacionadas aos sistemas olfatório e temporal."
-  },
-  "Amygdala": {
-    "objname": "Amígdala",
-    "description": "Conjunto de núcleos localizado no lobo temporal medial e integrante do sistema límbico. Está relacionado ao processamento das emoções, especialmente respostas de medo e ameaça, além de participar da memória emocional."
+  "parts": {
+    "SpinalCords": {
+      "objname": {
+        "pt-BR": "Medula Espinal",
+        "en": "Spinal Cord",
+        "es": "Médula Espinal"
+      },
+      "description": {
+        "pt-BR": "Parte do sistema nervoso central localizada no interior do canal vertebral. A medula espinal conduz informações entre o encéfalo e o restante do corpo e participa da integração de diversos reflexos.",
+        "en": "Part of the central nervous system located within the vertebral canal. The spinal cord transmits information between the brain and the rest of the body and participates in the integration of various reflexes.",
+        "es": "Parte del sistema nervioso central situada en el interior del canal vertebral. La médula espinal transmite información entre el encéfalo y el resto del cuerpo y participa en la integración de diversos reflejos."
+      }
+    },
+    "SpinalCordMembrane": {
+      "objname": {
+        "pt-BR": "Membranas da Medula Espinal",
+        "en": "Spinal Cord Membranes",
+        "es": "Membranas de la Médula Espinal"
+      },
+      "description": {
+        "pt-BR": "Conjunto de membranas que envolvem e protegem a medula espinal. Essas estruturas fazem parte das meninges e contribuem para a proteção mecânica do sistema nervoso central.",
+        "en": "Group of membranes that surround and protect the spinal cord. These structures are part of the meninges and contribute to the mechanical protection of the central nervous system.",
+        "es": "Conjunto de membranas que rodean y protegen la médula espinal. Estas estructuras forman parte de las meninges y contribuyen a la protección mecánica del sistema nervioso central."
+      }
+    },
+    "OlfactoryNerves": {
+      "objname": {
+        "pt-BR": "Nervos Olfatórios",
+        "en": "Olfactory Nerves",
+        "es": "Nervios Olfatorios"
+      },
+      "description": {
+        "pt-BR": "Conjunto de fibras nervosas responsáveis por transmitir ao encéfalo informações relacionadas ao sentido do olfato. Essas fibras conectam os receptores olfatórios da cavidade nasal ao bulbo olfatório.",
+        "en": "Group of nerve fibers responsible for transmitting information related to the sense of smell to the brain. These fibers connect the olfactory receptors of the nasal cavity to the olfactory bulb.",
+        "es": "Conjunto de fibras nerviosas responsables de transmitir al encéfalo información relacionada con el sentido del olfato. Estas fibras conectan los receptores olfatorios de la cavidad nasal con el bulbo olfatorio."
+      }
+    },
+    "OlfactoryBulb": {
+      "objname": {
+        "pt-BR": "Bulbo Olfatório",
+        "en": "Olfactory Bulb",
+        "es": "Bulbo Olfatorio"
+      },
+      "description": {
+        "pt-BR": "Estrutura localizada na região anterior do encéfalo que recebe e processa inicialmente as informações provenientes dos nervos olfatórios antes de encaminhá-las para outras regiões cerebrais.",
+        "en": "Structure located in the anterior region of the brain that receives and initially processes information from the olfactory nerves before transmitting it to other brain regions.",
+        "es": "Estructura situada en la región anterior del encéfalo que recibe y procesa inicialmente la información procedente de los nervios olfatorios antes de transmitirla a otras regiones cerebrales."
+      }
+    },
+    "Nervous": {
+      "objname": {
+        "pt-BR": "Estruturas do Sistema Nervoso",
+        "en": "Structures of the Nervous System",
+        "es": "Estructuras del Sistema Nervioso"
+      },
+      "description": {
+        "pt-BR": "Representação geral de estruturas pertencentes ao sistema nervoso, incluindo componentes do sistema nervoso central e estruturas associadas responsáveis pela comunicação e integração das informações no organismo.",
+        "en": "General representation of structures belonging to the nervous system, including components of the central nervous system and associated structures responsible for communication and information integration throughout the body.",
+        "es": "Representación general de las estructuras pertenecientes al sistema nervioso, incluidos los componentes del sistema nervioso central y las estructuras asociadas responsables de la comunicación y la integración de la información en el organismo."
+      }
+    },
+    "BrainMembrane": {
+      "objname": {
+        "pt-BR": "Meninges do Encéfalo",
+        "en": "Cranial Meninges",
+        "es": "Meninges del Encéfalo"
+      },
+      "description": {
+        "pt-BR": "Conjunto de membranas que envolve e protege o encéfalo. As meninges são constituídas pela dura-máter, aracnoide e pia-máter e contribuem para a proteção mecânica e o suporte das estruturas nervosas.",
+        "en": "Group of membranes that surrounds and protects the brain. The meninges consist of the dura mater, arachnoid mater, and pia mater and contribute to the mechanical protection and support of nervous system structures.",
+        "es": "Conjunto de membranas que rodea y protege el encéfalo. Las meninges están constituidas por la duramadre, la aracnoides y la piamadre y contribuyen a la protección mecánica y al sostén de las estructuras nerviosas."
+      }
+    },
+    "Thalamus": {
+      "objname": {
+        "pt-BR": "Tálamo",
+        "en": "Thalamus",
+        "es": "Tálamo"
+      },
+      "description": {
+        "pt-BR": "Grande estrutura de substância cinzenta localizada no diencéfalo. Atua como importante centro de retransmissão e processamento de informações sensoriais e motoras, além de participar da regulação da consciência, atenção e outras funções cerebrais.",
+        "en": "Large gray matter structure located in the diencephalon. It acts as an important relay and processing center for sensory and motor information and participates in the regulation of consciousness, attention, and other brain functions.",
+        "es": "Gran estructura de sustancia gris situada en el diencéfalo. Actúa como un importante centro de retransmisión y procesamiento de información sensorial y motora, además de participar en la regulación de la conciencia, la atención y otras funciones cerebrales."
+      }
+    },
+    "SeptalNucleus": {
+      "objname": {
+        "pt-BR": "Núcleo Septal",
+        "en": "Septal Nucleus",
+        "es": "Núcleo Septal"
+      },
+      "description": {
+        "pt-BR": "Grupo de núcleos localizado na região septal do cérebro. Está relacionado a circuitos límbicos envolvidos na regulação emocional, motivação, recompensa e outras funções comportamentais.",
+        "en": "Group of nuclei located in the septal region of the brain. It is associated with limbic circuits involved in emotional regulation, motivation, reward, and other behavioral functions.",
+        "es": "Grupo de núcleos situado en la región septal del cerebro. Está relacionado con circuitos límbicos involucrados en la regulación emocional, la motivación, la recompensa y otras funciones conductuales."
+      }
+    },
+    "Putamen": {
+      "objname": {
+        "pt-BR": "Putâmen",
+        "en": "Putamen",
+        "es": "Putamen"
+      },
+      "description": {
+        "pt-BR": "Estrutura de substância cinzenta localizada no interior dos hemisférios cerebrais e componente dos núcleos da base. Participa principalmente do controle e da modulação dos movimentos.",
+        "en": "Gray matter structure located within the cerebral hemispheres and a component of the basal ganglia. It participates primarily in the control and modulation of movement.",
+        "es": "Estructura de sustancia gris situada en el interior de los hemisferios cerebrales y componente de los ganglios basales. Participa principalmente en el control y la modulación de los movimientos."
+      }
+    },
+    "Pons": {
+      "objname": {
+        "pt-BR": "Ponte",
+        "en": "Pons",
+        "es": "Puente"
+      },
+      "description": {
+        "pt-BR": "Parte do tronco encefálico localizada entre o mesencéfalo e o bulbo. Atua na comunicação entre diferentes regiões do sistema nervoso e participa do controle de funções como respiração, sono e movimentos.",
+        "en": "Part of the brainstem located between the midbrain and the medulla oblongata. It facilitates communication between different regions of the nervous system and participates in the control of functions such as breathing, sleep, and movement.",
+        "es": "Parte del tronco encefálico situada entre el mesencéfalo y el bulbo raquídeo. Participa en la comunicación entre diferentes regiones del sistema nervioso y en el control de funciones como la respiración, el sueño y los movimientos."
+      }
+    },
+    "Midbrain": {
+      "objname": {
+        "pt-BR": "Mesencéfalo",
+        "en": "Midbrain",
+        "es": "Mesencéfalo"
+      },
+      "description": {
+        "pt-BR": "Porção superior do tronco encefálico localizada entre a ponte e o diencéfalo. Participa do controle dos movimentos oculares, reflexos visuais e auditivos e da transmissão de informações entre diferentes regiões do sistema nervoso.",
+        "en": "Upper portion of the brainstem located between the pons and the diencephalon. It participates in the control of eye movements, visual and auditory reflexes, and the transmission of information between different regions of the nervous system.",
+        "es": "Porción superior del tronco encefálico situada entre el puente y el diencéfalo. Participa en el control de los movimientos oculares, los reflejos visuales y auditivos y la transmisión de información entre diferentes regiones del sistema nervioso."
+      }
+    },
+    "MedullaOblongata": {
+      "objname": {
+        "pt-BR": "Bulbo",
+        "en": "Medulla Oblongata",
+        "es": "Bulbo Raquídeo"
+      },
+      "description": {
+        "pt-BR": "Porção inferior do tronco encefálico, localizada entre a ponte e a medula espinal. Contém centros responsáveis pela regulação de funções vitais, incluindo respiração, frequência cardíaca, pressão arterial e reflexos como deglutição e tosse.",
+        "en": "Lower portion of the brainstem, located between the pons and the spinal cord. It contains centers responsible for regulating vital functions, including breathing, heart rate, blood pressure, and reflexes such as swallowing and coughing.",
+        "es": "Porción inferior del tronco encefálico, situada entre el puente y la médula espinal. Contiene centros responsables de la regulación de funciones vitales, incluidas la respiración, la frecuencia cardíaca, la presión arterial y reflejos como la deglución y la tos."
+      }
+    },
+    "LateralVentricle": {
+      "objname": {
+        "pt-BR": "Ventrículo Lateral",
+        "en": "Lateral Ventricle",
+        "es": "Ventrículo Lateral"
+      },
+      "description": {
+        "pt-BR": "Cavidade localizada no interior de cada hemisfério cerebral que faz parte do sistema ventricular. Contém líquido cerebrospinal e comunica-se com outras cavidades ventriculares, contribuindo para a circulação e proteção do sistema nervoso central.",
+        "en": "Cavity located within each cerebral hemisphere that forms part of the ventricular system. It contains cerebrospinal fluid and communicates with other ventricular cavities, contributing to fluid circulation and the protection of the central nervous system.",
+        "es": "Cavidad situada en el interior de cada hemisferio cerebral que forma parte del sistema ventricular. Contiene líquido cefalorraquídeo y se comunica con otras cavidades ventriculares, contribuyendo a la circulación del líquido y a la protección del sistema nervioso central."
+      }
+    },
+    "IndusiumGriseum": {
+      "objname": {
+        "pt-BR": "Indúsio Cinzento",
+        "en": "Indusium Griseum",
+        "es": "Indusio Gris"
+      },
+      "description": {
+        "pt-BR": "Delgada camada de substância cinzenta localizada sobre a superfície superior do corpo caloso. É considerada uma estrutura remanescente relacionada à formação hipocampal.",
+        "en": "Thin layer of gray matter located on the superior surface of the corpus callosum. It is considered a remnant structure associated with the hippocampal formation.",
+        "es": "Delgada capa de sustancia gris situada sobre la superficie superior del cuerpo calloso. Se considera una estructura remanente relacionada con la formación hipocampal."
+      }
+    },
+    "Hypothalamus": {
+      "objname": {
+        "pt-BR": "Hipotálamo",
+        "en": "Hypothalamus",
+        "es": "Hipotálamo"
+      },
+      "description": {
+        "pt-BR": "Região do diencéfalo localizada abaixo do tálamo. Atua na regulação da homeostase, temperatura corporal, fome, sede, sono, comportamento e funções endócrinas por meio de sua relação com a hipófise.",
+        "en": "Region of the diencephalon located below the thalamus. It regulates homeostasis, body temperature, hunger, thirst, sleep, behavior, and endocrine functions through its relationship with the pituitary gland.",
+        "es": "Región del diencéfalo situada debajo del tálamo. Participa en la regulación de la homeostasis, la temperatura corporal, el hambre, la sed, el sueño, el comportamiento y las funciones endocrinas mediante su relación con la hipófisis."
+      }
+    },
+    "Hippocampus": {
+      "objname": {
+        "pt-BR": "Hipocampo",
+        "en": "Hippocampus",
+        "es": "Hipocampo"
+      },
+      "description": {
+        "pt-BR": "Estrutura localizada no lobo temporal medial e integrante do sistema límbico. Está fortemente relacionada à formação e consolidação de memórias e à orientação espacial.",
+        "en": "Structure located in the medial temporal lobe and a component of the limbic system. It is closely associated with memory formation and consolidation, as well as spatial orientation.",
+        "es": "Estructura situada en el lóbulo temporal medial e integrante del sistema límbico. Está estrechamente relacionada con la formación y consolidación de los recuerdos y con la orientación espacial."
+      }
+    },
+    "GlobusPallidusMedial": {
+      "objname": {
+        "pt-BR": "Globo Pálido Medial",
+        "en": "Medial Globus Pallidus",
+        "es": "Globo Pálido Medial"
+      },
+      "description": {
+        "pt-BR": "Porção medial do globo pálido, integrante dos núcleos da base. Participa dos circuitos responsáveis pela modulação e controle dos movimentos voluntários.",
+        "en": "Medial portion of the globus pallidus, a component of the basal ganglia. It participates in circuits responsible for the modulation and control of voluntary movements.",
+        "es": "Porción medial del globo pálido, integrante de los ganglios basales. Participa en los circuitos responsables de la modulación y el control de los movimientos voluntarios."
+      }
+    },
+    "GlobusPallidusLateral": {
+      "objname": {
+        "pt-BR": "Globo Pálido Lateral",
+        "en": "Lateral Globus Pallidus",
+        "es": "Globo Pálido Lateral"
+      },
+      "description": {
+        "pt-BR": "Porção lateral do globo pálido, integrante dos núcleos da base. Participa dos circuitos neurais envolvidos na regulação e coordenação da atividade motora.",
+        "en": "Lateral portion of the globus pallidus, a component of the basal ganglia. It participates in neural circuits involved in the regulation and coordination of motor activity.",
+        "es": "Porción lateral del globo pálido, integrante de los ganglios basales. Participa en los circuitos neuronales involucrados en la regulación y coordinación de la actividad motora."
+      }
+    },
+    "FourthVentricle": {
+      "objname": {
+        "pt-BR": "Quarto Ventrículo",
+        "en": "Fourth Ventricle",
+        "es": "Cuarto Ventrículo"
+      },
+      "description": {
+        "pt-BR": "Cavidade do sistema ventricular localizada entre o tronco encefálico e o cerebelo. Contém líquido cerebrospinal e estabelece comunicação entre os ventrículos superiores e o espaço subaracnoideo.",
+        "en": "Cavity of the ventricular system located between the brainstem and the cerebellum. It contains cerebrospinal fluid and establishes communication between the upper ventricles and the subarachnoid space.",
+        "es": "Cavidad del sistema ventricular situada entre el tronco encefálico y el cerebelo. Contiene líquido cefalorraquídeo y establece comunicación entre los ventrículos superiores y el espacio subaracnoideo."
+      }
+    },
+    "Fornix": {
+      "objname": {
+        "pt-BR": "Fórnix",
+        "en": "Fornix",
+        "es": "Fórnix"
+      },
+      "description": {
+        "pt-BR": "Feixe de fibras nervosas que conecta estruturas do sistema límbico, especialmente o hipocampo, a regiões do diencéfalo. Participa de circuitos relacionados à memória.",
+        "en": "Bundle of nerve fibers that connects structures of the limbic system, particularly the hippocampus, to regions of the diencephalon. It participates in memory-related circuits.",
+        "es": "Haz de fibras nerviosas que conecta estructuras del sistema límbico, especialmente el hipocampo, con regiones del diencéfalo. Participa en circuitos relacionados con la memoria."
+      }
+    },
+    "DentateGyrus": {
+      "objname": {
+        "pt-BR": "Giro Denteado",
+        "en": "Dentate Gyrus",
+        "es": "Giro Dentado"
+      },
+      "description": {
+        "pt-BR": "Estrutura localizada na formação hipocampal do lobo temporal medial. Participa dos processos relacionados à formação e organização das memórias e apresenta importante papel na neurogênese adulta.",
+        "en": "Structure located within the hippocampal formation of the medial temporal lobe. It participates in processes associated with memory formation and organization and plays an important role in adult neurogenesis.",
+        "es": "Estructura situada en la formación hipocampal del lóbulo temporal medial. Participa en los procesos relacionados con la formación y organización de los recuerdos y desempeña un papel importante en la neurogénesis adulta."
+      }
+    },
+    "CorpusCallosum": {
+      "objname": {
+        "pt-BR": "Corpo Caloso",
+        "en": "Corpus Callosum",
+        "es": "Cuerpo Calloso"
+      },
+      "description": {
+        "pt-BR": "Grande feixe de fibras nervosas que conecta os dois hemisférios cerebrais. Permite a comunicação e integração de informações entre regiões correspondentes dos hemisférios direito e esquerdo.",
+        "en": "Large bundle of nerve fibers that connects the two cerebral hemispheres. It enables communication and integration of information between corresponding regions of the right and left hemispheres.",
+        "es": "Gran haz de fibras nerviosas que conecta los dos hemisferios cerebrales. Permite la comunicación y la integración de información entre regiones correspondientes de los hemisferios derecho e izquierdo."
+      }
+    },
+    "CingulateGyrus": {
+      "objname": {
+        "pt-BR": "Giro do Cíngulo",
+        "en": "Cingulate Gyrus",
+        "es": "Giro del Cíngulo"
+      },
+      "description": {
+        "pt-BR": "Estrutura cortical localizada na face medial dos hemisférios cerebrais e integrante do sistema límbico. Participa de processos relacionados às emoções, motivação, memória, atenção e comportamento.",
+        "en": "Cortical structure located on the medial surface of the cerebral hemispheres and a component of the limbic system. It participates in processes related to emotions, motivation, memory, attention, and behavior.",
+        "es": "Estructura cortical situada en la superficie medial de los hemisferios cerebrales e integrante del sistema límbico. Participa en procesos relacionados con las emociones, la motivación, la memoria, la atención y el comportamiento."
+      }
+    },
+    "Cerebrum": {
+      "objname": {
+        "pt-BR": "Cérebro",
+        "en": "Cerebrum",
+        "es": "Cerebro"
+      },
+      "description": {
+        "pt-BR": "Maior parte do encéfalo, formada pelos dois hemisférios cerebrais e suas estruturas associadas. É responsável por funções complexas como percepção sensorial, movimento voluntário, linguagem, memória, raciocínio, aprendizagem e consciência.",
+        "en": "Largest part of the brain, consisting of the two cerebral hemispheres and their associated structures. It is responsible for complex functions such as sensory perception, voluntary movement, language, memory, reasoning, learning, and consciousness.",
+        "es": "Parte de mayor tamaño del encéfalo, formada por los dos hemisferios cerebrales y sus estructuras asociadas. Es responsable de funciones complejas como la percepción sensorial, el movimiento voluntario, el lenguaje, la memoria, el razonamiento, el aprendizaje y la conciencia."
+      }
+    },
+    "Cerebellum": {
+      "objname": {
+        "pt-BR": "Cerebelo",
+        "en": "Cerebellum",
+        "es": "Cerebelo"
+      },
+      "description": {
+        "pt-BR": "Estrutura localizada na região posterior do encéfalo, atrás do tronco encefálico. Atua principalmente na coordenação dos movimentos, equilíbrio, postura e ajuste da atividade motora.",
+        "en": "Structure located in the posterior region of the brain, behind the brainstem. It is primarily involved in movement coordination, balance, posture, and fine-tuning of motor activity.",
+        "es": "Estructura situada en la región posterior del encéfalo, detrás del tronco encefálico. Participa principalmente en la coordinación de los movimientos, el equilibrio, la postura y el ajuste de la actividad motora."
+      }
+    },
+    "CaudateNucleus": {
+      "objname": {
+        "pt-BR": "Núcleo Caudado",
+        "en": "Caudate Nucleus",
+        "es": "Núcleo Caudado"
+      },
+      "description": {
+        "pt-BR": "Estrutura de substância cinzenta pertencente aos núcleos da base. Participa da modulação dos movimentos e também está relacionada a processos de aprendizagem, memória e comportamento.",
+        "en": "Gray matter structure belonging to the basal ganglia. It participates in the modulation of movement and is also associated with learning, memory, and behavioral processes.",
+        "es": "Estructura de sustancia gris perteneciente a los ganglios basales. Participa en la modulación de los movimientos y también está relacionada con procesos de aprendizaje, memoria y comportamiento."
+      }
+    },
+    "AnteriorCommissure": {
+      "objname": {
+        "pt-BR": "Comissura Anterior",
+        "en": "Anterior Commissure",
+        "es": "Comisura Anterior"
+      },
+      "description": {
+        "pt-BR": "Pequeno feixe de fibras nervosas que conecta regiões correspondentes dos dois hemisférios cerebrais. Participa principalmente da comunicação entre estruturas relacionadas aos sistemas olfatório e temporal.",
+        "en": "Small bundle of nerve fibers that connects corresponding regions of the two cerebral hemispheres. It participates primarily in communication between structures associated with the olfactory and temporal systems.",
+        "es": "Pequeño haz de fibras nerviosas que conecta regiones correspondientes de los dos hemisferios cerebrales. Participa principalmente en la comunicación entre estructuras relacionadas con los sistemas olfatorio y temporal."
+      }
+    },
+    "Amygdala": {
+      "objname": {
+        "pt-BR": "Amígdala",
+        "en": "Amygdala",
+        "es": "Amígdala"
+      },
+      "description": {
+        "pt-BR": "Conjunto de núcleos localizado no lobo temporal medial e integrante do sistema límbico. Está relacionado ao processamento das emoções, especialmente respostas de medo e ameaça, além de participar da memória emocional.",
+        "en": "Group of nuclei located in the medial temporal lobe and a component of the limbic system. It is associated with emotional processing, particularly responses to fear and threats, and also participates in emotional memory.",
+        "es": "Conjunto de núcleos situado en el lóbulo temporal medial e integrante del sistema límbico. Está relacionado con el procesamiento de las emociones, especialmente las respuestas de miedo y ante amenazas, además de participar en la memoria emocional."
+      }
+    }
   }
 }

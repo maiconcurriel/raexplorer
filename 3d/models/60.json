@@ -1,17 +1,68 @@
 {
-  "objname": "Herpes Labial",
+  "objname": {
+    "pt-BR": "Herpes Labial",
+    "en": "Herpes Labialis",
+    "es": "Herpes Labial"
+  },
   "objsystem": [
     "Tegumentar"
   ],
-  "objdescription": "O herpes labial é uma infecção causada principalmente pelo vírus herpes simples tipo 1 (HSV-1). Após a infecção inicial, o vírus pode permanecer em estado latente em neurônios sensitivos e ser reativado posteriormente, provocando novos episódios. As manifestações geralmente surgem nos lábios ou ao redor da boca e podem começar com formigamento, ardor ou coceira, seguidos pelo aparecimento de pequenas vesículas agrupadas e preenchidas por líquido. Essas vesículas podem se romper e formar pequenas feridas e crostas durante o processo de cicatrização. O herpes labial é contagioso, especialmente quando existem lesões ativas. O modelo representa didaticamente um agrupamento de vesículas característico dessa manifestação.",
-  "linkedModels": [],
-  "resources": [],
-  "Head+nisolar+ninteract": {
-    "objname": "Cabeça",
-    "description": ""
+  "objdescription": {
+    "pt-BR": "O herpes labial é uma infecção causada principalmente pelo vírus herpes simples tipo 1 (HSV-1). Após a infecção inicial, o vírus pode permanecer em estado latente em neurônios sensitivos e ser reativado posteriormente, provocando novos episódios. As manifestações geralmente surgem nos lábios ou ao redor da boca e podem começar com formigamento, ardor ou coceira, seguidos pelo aparecimento de pequenas vesículas agrupadas e preenchidas por líquido. Essas vesículas podem se romper e formar pequenas feridas e crostas durante o processo de cicatrização. O herpes labial é contagioso, especialmente quando existem lesões ativas. O modelo representa didaticamente um agrupamento de vesículas característico dessa manifestação.",
+    "en": "Herpes labialis is an infection primarily caused by herpes simplex virus type 1 (HSV-1). After the initial infection, the virus may remain latent in sensory neurons and subsequently reactivate, causing recurrent episodes. Symptoms usually appear on the lips or around the mouth and may begin with tingling, burning, or itching, followed by the appearance of small, clustered, fluid-filled vesicles. These vesicles may rupture and form small sores and crusts during the healing process. Herpes labialis is contagious, especially when active lesions are present. The model provides an educational representation of a cluster of vesicles characteristic of this manifestation.",
+    "es": "El herpes labial es una infección causada principalmente por el virus del herpes simple tipo 1 (VHS-1). Después de la infección inicial, el virus puede permanecer en estado latente en las neuronas sensitivas y reactivarse posteriormente, provocando nuevos episodios. Las manifestaciones generalmente aparecen en los labios o alrededor de la boca y pueden comenzar con hormigueo, ardor o picazón, seguidos de la aparición de pequeñas vesículas agrupadas y llenas de líquido. Estas vesículas pueden romperse y formar pequeñas heridas y costras durante el proceso de cicatrización. El herpes labial es contagioso, especialmente cuando existen lesiones activas. El modelo representa de forma didáctica una agrupación de vesículas característica de esta manifestación."
   },
-  "Herpes+nisolar": {
-    "objname": "Lesão de Herpes Labial",
-    "description": "Representação de vesículas agrupadas características do herpes labial. As pequenas elevações preenchidas por líquido surgem devido à infecção e à resposta inflamatória local, podendo causar ardor, coceira, formigamento ou dor. Durante a evolução da lesão, as vesículas podem se romper, formar pequenas feridas e posteriormente desenvolver crostas até a cicatrização."
+  "linkedModels": [
+    {
+      "id": "15",
+      "label": {
+        "pt-BR": "Anatomia das Camadas da Pele Humana",
+        "en": "Anatomy of Human Skin Layers",
+        "es": "Anatomía de las Capas de la Piel Humana"
+      }
+    },
+    {
+      "id": "26",
+      "label": {
+        "pt-BR": "Sistema Estomatognático",
+        "en": "Stomatognathic System",
+        "es": "Sistema Estomatognático"
+      }
+    },
+    {
+      "id": "95",
+      "label": {
+        "pt-BR": "Camadas da Epiderme",
+        "en": "Layers of the Epidermis",
+        "es": "Capas de la Epidermis"
+      }
+    }
+  ],
+  "resources": [],
+  "parts": {
+    "Head+nisolar+ninteract": {
+      "objname": {
+        "pt-BR": "Cabeça",
+        "en": "Head",
+        "es": "Cabeza"
+      },
+      "description": {
+        "pt-BR": "",
+        "en": "",
+        "es": ""
+      }
+    },
+    "Herpes+nisolar": {
+      "objname": {
+        "pt-BR": "Lesão de Herpes Labial",
+        "en": "Herpes Labialis Lesion",
+        "es": "Lesión de Herpes Labial"
+      },
+      "description": {
+        "pt-BR": "Representação de vesículas agrupadas características do herpes labial. As pequenas elevações preenchidas por líquido surgem devido à infecção e à resposta inflamatória local, podendo causar ardor, coceira, formigamento ou dor. Durante a evolução da lesão, as vesículas podem se romper, formar pequenas feridas e posteriormente desenvolver crostas até a cicatrização.",
+        "en": "Representation of clustered vesicles characteristic of herpes labialis. These small, fluid-filled elevations develop as a result of the infection and the local inflammatory response and may cause burning, itching, tingling, or pain. As the lesion progresses, the vesicles may rupture, form small sores, and subsequently develop crusts until healing is complete.",
+        "es": "Representación de vesículas agrupadas características del herpes labial. Estas pequeñas elevaciones llenas de líquido aparecen como consecuencia de la infección y de la respuesta inflamatoria local, y pueden causar ardor, picazón, hormigueo o dolor. Durante la evolución de la lesión, las vesículas pueden romperse, formar pequeñas heridas y posteriormente desarrollar costras hasta la cicatrización."
+      }
+    }
   }
 }

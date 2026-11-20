@@ -1,62 +1,212 @@
 {
-  "objname": "Insuficiência Renal",
+  "objname": {
+    "pt-BR": "Insuficiência Renal",
+    "en": "Renal Insufficiency",
+    "es": "Insuficiencia Renal"
+  },
   "objsystem": [
     "Urinário"
   ],
-  "objdescription": "A insuficiência renal ocorre quando os rins perdem parcial ou significativamente a capacidade de filtrar o sangue, eliminar resíduos e excesso de líquidos e contribuir para o equilíbrio de eletrólitos e outras funções do organismo. Pode ocorrer de forma aguda ou estar relacionada à progressão de uma doença renal crônica. Com a perda crônica de tecido renal funcional, alguns rins podem apresentar atrofia e redução de tamanho, embora essa alteração não esteja presente em todas as causas de insuficiência renal. No modelo, o rim esquerdo apresenta tamanho reduzido para representar didaticamente uma alteração renal crônica, enquanto o rim direito mantém dimensões preservadas para comparação. A aparência e o tamanho dos rins podem variar conforme a causa e o estágio da doença.",
+  "objdescription": {
+    "pt-BR": "A insuficiência renal ocorre quando os rins perdem parcial ou significativamente a capacidade de filtrar o sangue, eliminar resíduos e excesso de líquidos e contribuir para o equilíbrio de eletrólitos e outras funções do organismo. Pode ocorrer de forma aguda ou estar relacionada à progressão de uma doença renal crônica. Com a perda crônica de tecido renal funcional, alguns rins podem apresentar atrofia e redução de tamanho, embora essa alteração não esteja presente em todas as causas de insuficiência renal. No modelo, o rim esquerdo apresenta tamanho reduzido para representar didaticamente uma alteração renal crônica, enquanto o rim direito mantém dimensões preservadas para comparação. A aparência e o tamanho dos rins podem variar conforme a causa e o estágio da doença.",
+    "en": "Renal insufficiency occurs when the kidneys partially or significantly lose their ability to filter the blood, eliminate waste and excess fluid, and contribute to electrolyte balance and other bodily functions. It may occur acutely or be associated with the progression of chronic kidney disease. With the chronic loss of functional renal tissue, some kidneys may undergo atrophy and decrease in size, although this change is not present in all causes of renal insufficiency. In the model, the left kidney is reduced in size to provide an educational representation of a chronic renal abnormality, while the right kidney retains its dimensions for comparison. The appearance and size of the kidneys may vary depending on the cause and stage of the disease.",
+    "es": "La insuficiencia renal ocurre cuando los riñones pierden parcial o significativamente la capacidad de filtrar la sangre, eliminar residuos y el exceso de líquidos, y contribuir al equilibrio de electrolitos y otras funciones del organismo. Puede presentarse de forma aguda o estar relacionada con la progresión de una enfermedad renal crónica. Con la pérdida crónica de tejido renal funcional, algunos riñones pueden presentar atrofia y reducción de tamaño, aunque esta alteración no está presente en todas las causas de insuficiencia renal. En el modelo, el riñón izquierdo presenta un tamaño reducido para representar de forma didáctica una alteración renal crónica, mientras que el riñón derecho conserva sus dimensiones para la comparación. La apariencia y el tamaño de los riñones pueden variar según la causa y el estadio de la enfermedad."
+  },
   "linkedModels": [
     {
       "id": "10",
-      "label": "Sistema Urinário Feminino"
+      "label": {
+        "pt-BR": "Sistema Urinário Feminino",
+        "en": "Female Urinary System",
+        "es": "Sistema Urinario Femenino"
+      }
+    },
+    {
+      "id": "12",
+      "label": {
+        "pt-BR": "Sistema Urinário Masculino",
+        "en": "Male Urinary System",
+        "es": "Sistema Urinario Masculino"
+      }
+    },
+    {
+      "id": "63",
+      "label": {
+        "pt-BR": "Infecção Urinária",
+        "en": "Urinary Tract Infection",
+        "es": "Infección del Tracto Urinario"
+      }
+    },
+    {
+      "id": "71",
+      "label": {
+        "pt-BR": "Pressão Arterial",
+        "en": "Blood Pressure",
+        "es": "Presión Arterial"
+      }
+    },
+    {
+      "id": "83",
+      "label": {
+        "pt-BR": "Absorção de Glicose no Diabetes Tipo 1",
+        "en": "Glucose Absorption in Type 1 Diabetes",
+        "es": "Absorción de Glucosa en la Diabetes Tipo 1"
+      }
+    },
+    {
+      "id": "84",
+      "label": {
+        "pt-BR": "Absorção de Glicose no Diabetes Tipo 2",
+        "en": "Glucose Absorption in Type 2 Diabetes",
+        "es": "Absorción de Glucosa en la Diabetes Tipo 2"
+      }
     }
   ],
   "resources": [],
-  "KidneyArteriesL": {
-    "objname": "Artérias do Rim Esquerdo",
-    "description": "Vasos responsáveis pelo fornecimento de sangue ao rim esquerdo. O fluxo sanguíneo renal é essencial para que os néfrons realizem a filtração do sangue. No modelo, acompanham o rim esquerdo reduzido, utilizado para representar uma alteração renal crônica."
-  },
-  "KidneyVeinsL": {
-    "objname": "Veias do Rim Esquerdo",
-    "description": "Vasos responsáveis pela drenagem do sangue do rim esquerdo após sua passagem pela circulação renal. São apresentadas junto ao rim reduzido para contextualizar sua vascularização."
-  },
-  "Bladder": {
-    "objname": "Bexiga Urinária",
-    "description": "Órgão responsável pelo armazenamento temporário da urina produzida pelos rins. A bexiga não é o local primário da insuficiência renal, mas integra o sistema responsável pelo armazenamento e posterior eliminação da urina."
-  },
-  "KidneyBackL": {
-    "objname": "Porção Posterior do Rim Esquerdo com Atrofia",
-    "description": "Porção posterior do rim esquerdo representada com tamanho reduzido. A atrofia renal pode ocorrer em determinadas doenças renais crônicas devido à perda progressiva de tecido funcional e formação de alterações estruturais. A redução de tamanho apresentada no modelo é uma representação didática e não ocorre em todas as formas de insuficiência renal."
-  },
-  "KidneyfrontL": {
-    "objname": "Porção Anterior do Rim Esquerdo com Atrofia",
-    "description": "Porção anterior do rim esquerdo representada com redução de tamanho associada à perda crônica de tecido renal funcional. Conforme determinadas doenças renais progridem, podem ocorrer alterações estruturais e diminuição das dimensões do rim."
-  },
-  "PyramidsL": {
-    "objname": "Pirâmides Renais Esquerdas",
-    "description": "Estruturas da medula do rim esquerdo que participam da condução da urina formada nos néfrons em direção aos cálices renais. No modelo, acompanham a redução estrutural do rim esquerdo afetado."
-  },
-  "UreterL_1+UreterL_2": {
-    "objname": "Ureter Esquerdo",
-    "description": "Canal que transporta a urina produzida pelo rim esquerdo até a bexiga. É apresentado para demonstrar o trajeto da urina e não representa, por si só, o local responsável pela insuficiência renal."
-  },
-  "KidneyBackR": {
-    "objname": "Porção Posterior do Rim Direito",
-    "description": "Porção posterior do rim direito, apresentada com tamanho preservado no modelo para comparação com o rim esquerdo reduzido. Os rins participam da filtração do sangue, eliminação de resíduos e manutenção do equilíbrio interno do organismo."
-  },
-  "KidneyfrontR": {
-    "objname": "Porção Anterior do Rim Direito",
-    "description": "Porção anterior do rim direito, representada com dimensões preservadas para servir como referência anatômica em comparação ao rim esquerdo atrófico."
-  },
-  "PyramidsR": {
-    "objname": "Pirâmides Renais Direitas",
-    "description": "Estruturas localizadas na medula do rim direito que recebem a urina formada nos néfrons e a conduzem em direção aos cálices e à pelve renal."
-  },
-  "UreterR_1+UreterR_2": {
-    "objname": "Ureter Direito",
-    "description": "Canal responsável por transportar a urina produzida pelo rim direito até a bexiga por meio de movimentos peristálticos."
-  },
-  "Body_Skin_2+Body_Skin_1+nisolar+ninteract": {
-    "objname": "Corpo Humano",
-    "description": ""
+  "parts": {
+    "KidneyArteriesL": {
+      "objname": {
+        "pt-BR": "Artérias do Rim Esquerdo",
+        "en": "Arteries of the Left Kidney",
+        "es": "Arterias del Riñón Izquierdo"
+      },
+      "description": {
+        "pt-BR": "Vasos responsáveis pelo fornecimento de sangue ao rim esquerdo. O fluxo sanguíneo renal é essencial para que os néfrons realizem a filtração do sangue. No modelo, acompanham o rim esquerdo reduzido, utilizado para representar uma alteração renal crônica.",
+        "en": "Blood vessels responsible for supplying blood to the left kidney. Renal blood flow is essential for the nephrons to perform blood filtration. In the model, these vessels accompany the reduced left kidney, which is used to represent a chronic renal abnormality.",
+        "es": "Vasos sanguíneos responsables del suministro de sangre al riñón izquierdo. El flujo sanguíneo renal es esencial para que las nefronas realicen la filtración de la sangre. En el modelo, acompañan al riñón izquierdo de tamaño reducido, utilizado para representar una alteración renal crónica."
+      }
+    },
+    "KidneyVeinsL": {
+      "objname": {
+        "pt-BR": "Veias do Rim Esquerdo",
+        "en": "Veins of the Left Kidney",
+        "es": "Venas del Riñón Izquierdo"
+      },
+      "description": {
+        "pt-BR": "Vasos responsáveis pela drenagem do sangue do rim esquerdo após sua passagem pela circulação renal. São apresentadas junto ao rim reduzido para contextualizar sua vascularização.",
+        "en": "Blood vessels responsible for draining blood from the left kidney after it passes through the renal circulation. They are presented alongside the reduced kidney to illustrate its vascular anatomy.",
+        "es": "Vasos sanguíneos responsables del drenaje de la sangre del riñón izquierdo después de su paso por la circulación renal. Se presentan junto al riñón de tamaño reducido para contextualizar su vascularización."
+      }
+    },
+    "Bladder": {
+      "objname": {
+        "pt-BR": "Bexiga Urinária",
+        "en": "Urinary Bladder",
+        "es": "Vejiga Urinaria"
+      },
+      "description": {
+        "pt-BR": "Órgão responsável pelo armazenamento temporário da urina produzida pelos rins. A bexiga não é o local primário da insuficiência renal, mas integra o sistema responsável pelo armazenamento e posterior eliminação da urina.",
+        "en": "Organ responsible for the temporary storage of urine produced by the kidneys. The bladder is not the primary site of renal insufficiency but forms part of the system responsible for urine storage and subsequent elimination.",
+        "es": "Órgano responsable del almacenamiento temporal de la orina producida por los riñones. La vejiga no es el lugar primario de la insuficiencia renal, pero forma parte del sistema responsable del almacenamiento y la posterior eliminación de la orina."
+      }
+    },
+    "KidneyBackL": {
+      "objname": {
+        "pt-BR": "Porção Posterior do Rim Esquerdo com Atrofia",
+        "en": "Posterior Portion of the Atrophic Left Kidney",
+        "es": "Porción Posterior del Riñón Izquierdo con Atrofia"
+      },
+      "description": {
+        "pt-BR": "Porção posterior do rim esquerdo representada com tamanho reduzido. A atrofia renal pode ocorrer em determinadas doenças renais crônicas devido à perda progressiva de tecido funcional e formação de alterações estruturais. A redução de tamanho apresentada no modelo é uma representação didática e não ocorre em todas as formas de insuficiência renal.",
+        "en": "Posterior portion of the left kidney depicted with reduced size. Renal atrophy may occur in certain chronic kidney diseases due to the progressive loss of functional tissue and the development of structural changes. The reduction in size shown in the model is an educational representation and does not occur in all forms of renal insufficiency.",
+        "es": "Porción posterior del riñón izquierdo representada con un tamaño reducido. La atrofia renal puede ocurrir en determinadas enfermedades renales crónicas debido a la pérdida progresiva de tejido funcional y al desarrollo de alteraciones estructurales. La reducción de tamaño presentada en el modelo es una representación didáctica y no ocurre en todas las formas de insuficiencia renal."
+      }
+    },
+    "KidneyfrontL": {
+      "objname": {
+        "pt-BR": "Porção Anterior do Rim Esquerdo com Atrofia",
+        "en": "Anterior Portion of the Atrophic Left Kidney",
+        "es": "Porción Anterior del Riñón Izquierdo con Atrofia"
+      },
+      "description": {
+        "pt-BR": "Porção anterior do rim esquerdo representada com redução de tamanho associada à perda crônica de tecido renal funcional. Conforme determinadas doenças renais progridem, podem ocorrer alterações estruturais e diminuição das dimensões do rim.",
+        "en": "Anterior portion of the left kidney depicted with a reduction in size associated with the chronic loss of functional renal tissue. As certain kidney diseases progress, structural changes and a decrease in kidney size may occur.",
+        "es": "Porción anterior del riñón izquierdo representada con una reducción de tamaño asociada a la pérdida crónica de tejido renal funcional. A medida que determinadas enfermedades renales progresan, pueden producirse alteraciones estructurales y una disminución de las dimensiones del riñón."
+      }
+    },
+    "PyramidsL": {
+      "objname": {
+        "pt-BR": "Pirâmides Renais Esquerdas",
+        "en": "Left Renal Pyramids",
+        "es": "Pirámides Renales Izquierdas"
+      },
+      "description": {
+        "pt-BR": "Estruturas da medula do rim esquerdo que participam da condução da urina formada nos néfrons em direção aos cálices renais. No modelo, acompanham a redução estrutural do rim esquerdo afetado.",
+        "en": "Structures of the medulla of the left kidney that participate in conveying urine formed in the nephrons toward the renal calyces. In the model, they reflect the structural reduction of the affected left kidney.",
+        "es": "Estructuras de la médula del riñón izquierdo que participan en la conducción de la orina formada en las nefronas hacia los cálices renales. En el modelo, acompañan la reducción estructural del riñón izquierdo afectado."
+      }
+    },
+    "UreterL_1+UreterL_2": {
+      "objname": {
+        "pt-BR": "Ureter Esquerdo",
+        "en": "Left Ureter",
+        "es": "Uréter Izquierdo"
+      },
+      "description": {
+        "pt-BR": "Canal que transporta a urina produzida pelo rim esquerdo até a bexiga. É apresentado para demonstrar o trajeto da urina e não representa, por si só, o local responsável pela insuficiência renal.",
+        "en": "Duct that transports urine produced by the left kidney to the bladder. It is presented to demonstrate the pathway of urine and does not, by itself, represent the site responsible for renal insufficiency.",
+        "es": "Conducto que transporta la orina producida por el riñón izquierdo hasta la vejiga. Se presenta para demostrar el trayecto de la orina y no representa, por sí solo, el lugar responsable de la insuficiencia renal."
+      }
+    },
+    "KidneyBackR": {
+      "objname": {
+        "pt-BR": "Porção Posterior do Rim Direito",
+        "en": "Posterior Portion of the Right Kidney",
+        "es": "Porción Posterior del Riñón Derecho"
+      },
+      "description": {
+        "pt-BR": "Porção posterior do rim direito, apresentada com tamanho preservado no modelo para comparação com o rim esquerdo reduzido. Os rins participam da filtração do sangue, eliminação de resíduos e manutenção do equilíbrio interno do organismo.",
+        "en": "Posterior portion of the right kidney, presented in the model with preserved size for comparison with the reduced left kidney. The kidneys participate in blood filtration, waste elimination, and the maintenance of the body's internal balance.",
+        "es": "Porción posterior del riñón derecho, presentada en el modelo con un tamaño conservado para su comparación con el riñón izquierdo de tamaño reducido. Los riñones participan en la filtración de la sangre, la eliminación de residuos y el mantenimiento del equilibrio interno del organismo."
+      }
+    },
+    "KidneyfrontR": {
+      "objname": {
+        "pt-BR": "Porção Anterior do Rim Direito",
+        "en": "Anterior Portion of the Right Kidney",
+        "es": "Porción Anterior del Riñón Derecho"
+      },
+      "description": {
+        "pt-BR": "Porção anterior do rim direito, representada com dimensões preservadas para servir como referência anatômica em comparação ao rim esquerdo atrófico.",
+        "en": "Anterior portion of the right kidney, depicted with preserved dimensions to serve as an anatomical reference for comparison with the atrophic left kidney.",
+        "es": "Porción anterior del riñón derecho, representada con dimensiones conservadas para servir como referencia anatómica en comparación con el riñón izquierdo atrófico."
+      }
+    },
+    "PyramidsR": {
+      "objname": {
+        "pt-BR": "Pirâmides Renais Direitas",
+        "en": "Right Renal Pyramids",
+        "es": "Pirámides Renales Derechas"
+      },
+      "description": {
+        "pt-BR": "Estruturas localizadas na medula do rim direito que recebem a urina formada nos néfrons e a conduzem em direção aos cálices e à pelve renal.",
+        "en": "Structures located in the medulla of the right kidney that receive urine formed in the nephrons and convey it toward the renal calyces and renal pelvis.",
+        "es": "Estructuras situadas en la médula del riñón derecho que reciben la orina formada en las nefronas y la conducen hacia los cálices y la pelvis renal."
+      }
+    },
+    "UreterR_1+UreterR_2": {
+      "objname": {
+        "pt-BR": "Ureter Direito",
+        "en": "Right Ureter",
+        "es": "Uréter Derecho"
+      },
+      "description": {
+        "pt-BR": "Canal responsável por transportar a urina produzida pelo rim direito até a bexiga por meio de movimentos peristálticos.",
+        "en": "Duct responsible for transporting urine produced by the right kidney to the bladder through peristaltic movements.",
+        "es": "Conducto responsable de transportar la orina producida por el riñón derecho hasta la vejiga mediante movimientos peristálticos."
+      }
+    },
+    "Body_Skin_2+Body_Skin_1+nisolar+ninteract": {
+      "objname": {
+        "pt-BR": "Corpo Humano",
+        "en": "Human Body",
+        "es": "Cuerpo Humano"
+      },
+      "description": {
+        "pt-BR": "",
+        "en": "",
+        "es": ""
+      }
+    }
   }
 }

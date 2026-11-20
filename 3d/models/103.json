@@ -1,21 +1,88 @@
 {
-  "objname": "Característica Anatômica do Pé com Hálux Valgo",
+  "objname": {
+    "pt-BR": "Característica Anatômica do Pé com Hálux Valgo",
+    "en": "Anatomical Feature of the Foot with Hallux Valgus",
+    "es": "Característica Anatómica del Pie con Hallux Valgus"
+  },
   "objsystem": [
     "Esquelético"
   ],
-  "objdescription": "O hálux valgo, popularmente conhecido como joanete, é uma deformidade caracterizada pelo desvio lateral do hálux (dedão do pé) em direção aos demais dedos, geralmente acompanhado pelo desvio medial do primeiro osso metatarsal. Essa alteração modifica o alinhamento da articulação metatarsofalângica, formando uma proeminência óssea na região interna do antepé. Pode provocar dor, inflamação, vermelhidão, dificuldade para utilizar calçados e alterações na distribuição do peso durante a caminhada. Fatores genéticos, características anatômicas, alterações biomecânicas e uso de calçados inadequados podem contribuir para seu desenvolvimento. O modelo apresenta os ossos do pé e sua relação com os tecidos externos, permitindo observar o desalinhamento do primeiro metatarso e do hálux, característico dessa deformidade.",
-  "linkedModels": [],
+  "objdescription": {
+    "pt-BR": "O hálux valgo, popularmente conhecido como joanete, é uma deformidade caracterizada pelo desvio lateral do hálux (dedão do pé) em direção aos demais dedos, geralmente acompanhado pelo desvio medial do primeiro osso metatarsal. Essa alteração modifica o alinhamento da articulação metatarsofalângica, formando uma proeminência óssea na região interna do antepé. Pode provocar dor, inflamação, vermelhidão, dificuldade para utilizar calçados e alterações na distribuição do peso durante a caminhada. Fatores genéticos, características anatômicas, alterações biomecânicas e uso de calçados inadequados podem contribuir para seu desenvolvimento. O modelo apresenta os ossos do pé e sua relação com os tecidos externos, permitindo observar o desalinhamento do primeiro metatarso e do hálux, característico dessa deformidade.",
+    "en": "Hallux valgus, commonly known as a bunion, is a deformity characterized by the lateral deviation of the hallux (big toe) toward the other toes, generally accompanied by medial deviation of the first metatarsal bone. This alteration changes the alignment of the metatarsophalangeal joint, forming a bony prominence on the medial side of the forefoot. It may cause pain, inflammation, redness, difficulty wearing footwear, and changes in weight distribution during walking. Genetic factors, anatomical characteristics, biomechanical alterations, and the use of unsuitable footwear may contribute to its development. The model presents the bones of the foot and their relationship with the external tissues, allowing observation of the misalignment of the first metatarsal and hallux characteristic of this deformity.",
+    "es": "El hallux valgus, conocido popularmente como juanete, es una deformidad caracterizada por la desviación lateral del hallux (dedo gordo del pie) hacia los demás dedos, generalmente acompañada por la desviación medial del primer hueso metatarsiano. Esta alteración modifica la alineación de la articulación metatarsofalángica, formando una prominencia ósea en la región interna del antepié. Puede provocar dolor, inflamación, enrojecimiento, dificultad para utilizar calzado y alteraciones en la distribución del peso durante la marcha. Los factores genéticos, las características anatómicas, las alteraciones biomecánicas y el uso de calzado inadecuado pueden contribuir a su desarrollo. El modelo presenta los huesos del pie y su relación con los tejidos externos, permitiendo observar la desalineación del primer metatarsiano y del hallux, característica de esta deformidad."
+  },
+  "linkedModels": [
+    {
+      "id": "3",
+      "label": {
+        "pt-BR": "Sistema Esquelético Masculino",
+        "en": "Male Skeletal System",
+        "es": "Sistema Esquelético Masculino"
+      }
+    },
+    {
+      "id": "28",
+      "label": {
+        "pt-BR": "Sistema Esquelético Feminino",
+        "en": "Female Skeletal System",
+        "es": "Sistema Esquelético Femenino"
+      }
+    },
+    {
+      "id": "72",
+      "label": {
+        "pt-BR": "Ciclo da Marcha",
+        "en": "Gait Cycle",
+        "es": "Ciclo de la Marcha"
+      }
+    },
+    {
+      "id": "102",
+      "label": {
+        "pt-BR": "Onicocriptose",
+        "en": "Onychocryptosis",
+        "es": "Onicocriptosis"
+      }
+    }
+  ],
   "resources": [],
-  "Ossos": {
-    "objname": "Ossos do Pé",
-    "description": "Estruturas ósseas que formam o esqueleto do pé, incluindo tarso, metatarso e falanges. No hálux valgo, ocorre um desalinhamento entre o primeiro metatarso e a falange proximal do hálux, aumentando o ângulo entre essas estruturas. Essa alteração contribui para a formação da proeminência óssea conhecida como joanete e pode comprometer a distribuição das cargas durante a marcha."
-  },
-  "Scene002": {
-    "objname": "Pé com Hálux Valgo",
-    "description": "Representação externa do pé com hálux valgo, destacando o desvio do dedão em direção aos demais dedos e a proeminência na região medial da articulação metatarsofalângica. A deformidade pode causar atrito com calçados, dor, vermelhidão e inflamação dos tecidos adjacentes, além de alterações na biomecânica do pé."
-  },
-  "Casca+nisolar+ninteract": {
-    "objname": "Revestimento Externo do Pé",
-    "description": ""
+  "parts": {
+    "Ossos": {
+      "objname": {
+        "pt-BR": "Ossos do Pé",
+        "en": "Bones of the Foot",
+        "es": "Huesos del Pie"
+      },
+      "description": {
+        "pt-BR": "Estruturas ósseas que formam o esqueleto do pé, incluindo tarso, metatarso e falanges. No hálux valgo, ocorre um desalinhamento entre o primeiro metatarso e a falange proximal do hálux, aumentando o ângulo entre essas estruturas. Essa alteração contribui para a formação da proeminência óssea conhecida como joanete e pode comprometer a distribuição das cargas durante a marcha.",
+        "en": "Bony structures that form the skeleton of the foot, including the tarsus, metatarsus, and phalanges. In hallux valgus, misalignment occurs between the first metatarsal and the proximal phalanx of the hallux, increasing the angle between these structures. This alteration contributes to the formation of the bony prominence known as a bunion and may compromise load distribution during gait.",
+        "es": "Estructuras óseas que forman el esqueleto del pie, incluyendo el tarso, el metatarso y las falanges. En el hallux valgus, se produce una desalineación entre el primer metatarsiano y la falange proximal del hallux, aumentando el ángulo entre estas estructuras. Esta alteración contribuye a la formación de la prominencia ósea conocida como juanete y puede comprometer la distribución de las cargas durante la marcha."
+      }
+    },
+    "Scene002": {
+      "objname": {
+        "pt-BR": "Pé com Hálux Valgo",
+        "en": "Foot with Hallux Valgus",
+        "es": "Pie con Hallux Valgus"
+      },
+      "description": {
+        "pt-BR": "Representação externa do pé com hálux valgo, destacando o desvio do dedão em direção aos demais dedos e a proeminência na região medial da articulação metatarsofalângica. A deformidade pode causar atrito com calçados, dor, vermelhidão e inflamação dos tecidos adjacentes, além de alterações na biomecânica do pé.",
+        "en": "External representation of a foot with hallux valgus, highlighting the deviation of the big toe toward the other toes and the prominence on the medial side of the metatarsophalangeal joint. The deformity may cause friction against footwear, pain, redness, and inflammation of adjacent tissues, as well as alterations in foot biomechanics.",
+        "es": "Representación externa del pie con hallux valgus, que destaca la desviación del dedo gordo hacia los demás dedos y la prominencia en la región medial de la articulación metatarsofalángica. La deformidad puede causar rozamiento con el calzado, dolor, enrojecimiento e inflamación de los tejidos adyacentes, además de alteraciones en la biomecánica del pie."
+      }
+    },
+    "Casca+nisolar+ninteract": {
+      "objname": {
+        "pt-BR": "Revestimento Externo do Pé",
+        "en": "External Covering of the Foot",
+        "es": "Revestimiento Externo del Pie"
+      },
+      "description": {
+        "pt-BR": "",
+        "en": "",
+        "es": ""
+      }
+    }
   }
 }

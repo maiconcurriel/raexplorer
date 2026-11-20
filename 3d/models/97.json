@@ -1,93 +1,288 @@
 {
-  "objname": "Mapa de Auriculoterapia (Frente)",
+  "objname": {
+    "pt-BR": "Mapa de Auriculoterapia (Frente)",
+    "en": "Auriculotherapy Map (Anterior View)",
+    "es": "Mapa de Auriculoterapia (Vista Anterior)"
+  },
   "objsystem": [
     "Sensorial"
   ],
-  "objdescription": "A auriculoterapia é uma prática integrativa que utiliza a estimulação de pontos específicos do pavilhão auricular. Segundo seus mapas tradicionais, diferentes regiões da orelha são associadas a órgãos, funções corporais e estados emocionais. O modelo apresenta a face anterior da orelha, destacando pontos utilizados em protocolos voltados ao relaxamento, sono, equilíbrio emocional, desconfortos físicos e outras condições. Essas correspondências pertencem aos sistemas teóricos da auriculoterapia e não representam conexões anatômicas diretas com os órgãos. As evidências científicas sobre seus benefícios variam conforme a aplicação.",
-  "linkedModels": [],
+  "objdescription": {
+    "pt-BR": "A auriculoterapia é uma prática integrativa que utiliza a estimulação de pontos específicos do pavilhão auricular. Segundo seus mapas tradicionais, diferentes regiões da orelha são associadas a órgãos, funções corporais e estados emocionais. O modelo apresenta a face anterior da orelha, destacando pontos utilizados em protocolos voltados ao relaxamento, sono, equilíbrio emocional, desconfortos físicos e outras condições. Essas correspondências pertencem aos sistemas teóricos da auriculoterapia e não representam conexões anatômicas diretas com os órgãos. As evidências científicas sobre seus benefícios variam conforme a aplicação.",
+    "en": "Auriculotherapy is an integrative practice that involves stimulating specific points on the auricle. According to its traditional maps, different regions of the ear are associated with organs, bodily functions, and emotional states. The model presents the anterior surface of the ear, highlighting points used in protocols focused on relaxation, sleep, emotional balance, physical discomfort, and other conditions. These correspondences belong to the theoretical systems of auriculotherapy and do not represent direct anatomical connections with the organs. Scientific evidence regarding its benefits varies depending on the application.",
+    "es": "La auriculoterapia es una práctica integrativa que utiliza la estimulación de puntos específicos del pabellón auricular. Según sus mapas tradicionales, diferentes regiones de la oreja se asocian con órganos, funciones corporales y estados emocionales. El modelo presenta la cara anterior de la oreja, destacando puntos utilizados en protocolos orientados a la relajación, el sueño, el equilibrio emocional, las molestias físicas y otras afecciones. Estas correspondencias pertenecen a los sistemas teóricos de la auriculoterapia y no representan conexiones anatómicas directas con los órganos. La evidencia científica sobre sus beneficios varía según la aplicación."
+  },
+  "linkedModels": [
+    {
+      "id": "22",
+      "label": {
+        "pt-BR": "Sistema Auditivo",
+        "en": "Auditory System",
+        "es": "Sistema Auditivo"
+      }
+    },
+    {
+      "id": "96",
+      "label": {
+        "pt-BR": "Mapa de Auriculoterapia (Atrás)",
+        "en": "Auriculotherapy Map (Posterior View)",
+        "es": "Mapa de Auriculoterapia (Vista Posterior)"
+      }
+    }
+  ],
   "resources": [],
-  "Orelha": {
-    "objname": "Face Anterior da Orelha",
-    "description": "Região externa do pavilhão auricular, formada principalmente por cartilagem elástica revestida por pele. Possui estruturas como hélice, anti-hélice, concha, trago, antitrago e lóbulo, utilizadas como referências para a localização dos pontos de auriculoterapia."
-  },
-  "Ansiedade+nisolar": {
-    "objname": "Ponto da Ansiedade",
-    "description": "Ponto tradicionalmente utilizado em protocolos de auriculoterapia voltados ao relaxamento e ao equilíbrio emocional. Sua estimulação é proposta como recurso complementar para aliviar manifestações de ansiedade e tensão."
-  },
-  "Apice+nisolar": {
-    "objname": "Ápice da Orelha",
-    "description": "Ponto localizado na região superior do pavilhão auricular. Na auriculoterapia tradicional, é associado a protocolos relacionados à sensação de calor, inflamação e desconfortos, conforme o sistema terapêutico utilizado."
-  },
-  "Baco+nisolar": {
-    "objname": "Ponto do Baço",
-    "description": "Ponto associado ao baço nos mapas tradicionais de auriculoterapia. Na medicina tradicional chinesa, relaciona-se à digestão, transformação de nutrientes e equilíbrio energético, conceitos que não correspondem diretamente às funções anatômicas do órgão."
-  },
-  "Coluna+nisolar": {
-    "objname": "Ponto da Coluna Vertebral",
-    "description": "Região auricular tradicionalmente associada à coluna vertebral. É utilizada em protocolos complementares relacionados a desconfortos nas costas, tensão muscular e mobilidade da coluna."
-  },
-  "Coracao+nisolar": {
-    "objname": "Ponto do Coração",
-    "description": "Ponto tradicionalmente relacionado ao coração e ao equilíbrio emocional. É utilizado em algumas abordagens de auriculoterapia voltadas ao relaxamento, tranquilidade e bem-estar."
-  },
-  "Endocrino+nisolar": {
-    "objname": "Ponto Endócrino",
-    "description": "Ponto associado à regulação hormonal nos mapas tradicionais de auriculoterapia. É utilizado em protocolos que buscam favorecer o equilíbrio de funções atribuídas ao sistema endócrino, embora não exista comprovação de uma ação hormonal específica."
-  },
-  "Fome+nisolar": {
-    "objname": "Ponto da Fome",
-    "description": "Ponto tradicionalmente utilizado em protocolos relacionados ao apetite e ao comportamento alimentar. Sua estimulação é proposta como recurso complementar para auxiliar no controle da sensação de fome, sem substituir orientações nutricionais."
-  },
-  "IntestinoDelgado+nisolar": {
-    "objname": "Ponto do Intestino Delgado",
-    "description": "Ponto associado ao intestino delgado nos mapas auriculares tradicionais. É utilizado em protocolos relacionados ao conforto digestivo e às funções de digestão e absorção de nutrientes."
-  },
-  "IntestinoGrosso+nisolar": {
-    "objname": "Ponto do Intestino Grosso",
-    "description": "Ponto tradicionalmente associado ao intestino grosso. É utilizado em abordagens de auriculoterapia relacionadas ao trânsito intestinal, à eliminação de resíduos e ao conforto abdominal."
-  },
-  "NDM+nisolar": {
-    "objname": "Ponto NDM",
-    "description": "Ponto identificado pela sigla NDM no mapa de auriculoterapia. Sua denominação completa e finalidade terapêutica dependem do sistema de referência utilizado, pois essa abreviação não possui significado universalmente padronizado."
-  },
-  "PancreasVB+nisolar": {
-    "objname": "Ponto do Pâncreas e Vesícula Biliar",
-    "description": "Ponto associado ao pâncreas e à vesícula biliar em determinados mapas de auriculoterapia. Tradicionalmente relacionado às funções digestivas e ao equilíbrio metabólico, sem representar uma conexão anatômica direta com esses órgãos."
-  },
-  "Pulmao+nisolar": {
-    "objname": "Ponto do Pulmão",
-    "description": "Ponto auricular tradicionalmente associado aos pulmões e às funções respiratórias. É utilizado em protocolos complementares relacionados ao conforto respiratório e ao relaxamento."
-  },
-  "Rim+nisolar": {
-    "objname": "Ponto do Rim",
-    "description": "Ponto associado aos rins nos mapas tradicionais de auriculoterapia. Na medicina tradicional chinesa, relaciona-se à vitalidade e ao equilíbrio energético, conceitos distintos das funções renais descritas pela fisiologia moderna."
-  },
-  "SanJiao+nisolar": {
-    "objname": "Ponto San Jiao (Triplo Aquecedor)",
-    "description": "Ponto relacionado ao conceito de San Jiao, ou Triplo Aquecedor, da medicina tradicional chinesa. Esse conceito representa a integração funcional de diferentes regiões do organismo, associada à circulação de fluidos e à regulação energética, não correspondendo a um órgão anatômico específico."
-  },
-  "ShenMan+nisolar": {
-    "objname": "Ponto Shen Men",
-    "description": "Ponto conhecido como Shen Men, tradicionalmente associado ao relaxamento e ao equilíbrio emocional. É amplamente utilizado em protocolos de auriculoterapia voltados ao estresse, ansiedade, sono e desconfortos físicos."
-  },
-  "Simpatico+nisolar": {
-    "objname": "Ponto Simpático",
-    "description": "Ponto tradicionalmente associado à regulação do sistema nervoso autônomo. É utilizado em protocolos de auriculoterapia voltados ao relaxamento, à tensão corporal e a desconfortos viscerais, sem comprovação de ação direta e específica sobre o sistema nervoso simpático."
-  },
-  "SupraRenal+nisolar": {
-    "objname": "Ponto da Glândula Suprarrenal",
-    "description": "Ponto associado às glândulas suprarrenais nos mapas tradicionais de auriculoterapia. É utilizado em protocolos relacionados às respostas ao estresse e a processos inflamatórios, embora sua estimulação não tenha efeito hormonal específico comprovado."
-  },
-  "TroncoCerebral+nisolar": {
-    "objname": "Ponto do Tronco Cerebral",
-    "description": "Ponto tradicionalmente associado ao tronco cerebral, estrutura responsável por importantes funções neurológicas e autonômicas. Na auriculoterapia, é utilizado em protocolos relacionados ao relaxamento e ao equilíbrio funcional do organismo."
-  },
-  "YangFigado+nisolar": {
-    "objname": "Ponto Yang do Fígado",
-    "description": "Ponto relacionado ao conceito de Yang do Fígado na medicina tradicional chinesa. É utilizado em protocolos associados à irritabilidade, tensão emocional, cefaleias e sensação de agitação, conforme a interpretação energética tradicional."
-  },
-  "Pontos+nisolar+ninteract": {
-    "objname": "Marcações dos Pontos Auriculares",
-    "description": ""
+  "parts": {
+    "Orelha": {
+      "objname": {
+        "pt-BR": "Face Anterior da Orelha",
+        "en": "Anterior Surface of the Ear",
+        "es": "Cara Anterior de la Oreja"
+      },
+      "description": {
+        "pt-BR": "Região externa do pavilhão auricular, formada principalmente por cartilagem elástica revestida por pele. Possui estruturas como hélice, anti-hélice, concha, trago, antitrago e lóbulo, utilizadas como referências para a localização dos pontos de auriculoterapia.",
+        "en": "External region of the auricle, composed primarily of elastic cartilage covered by skin. It contains structures such as the helix, antihelix, concha, tragus, antitragus, and lobule, which are used as anatomical landmarks for locating auriculotherapy points.",
+        "es": "Región externa del pabellón auricular, formada principalmente por cartílago elástico recubierto de piel. Posee estructuras como el hélix, el antihélix, la concha, el trago, el antitrago y el lóbulo, utilizadas como referencias anatómicas para la localización de los puntos de auriculoterapia."
+      }
+    },
+    "Ansiedade+nisolar": {
+      "objname": {
+        "pt-BR": "Ponto da Ansiedade",
+        "en": "Anxiety Point",
+        "es": "Punto de la Ansiedad"
+      },
+      "description": {
+        "pt-BR": "Ponto tradicionalmente utilizado em protocolos de auriculoterapia voltados ao relaxamento e ao equilíbrio emocional. Sua estimulação é proposta como recurso complementar para aliviar manifestações de ansiedade e tensão.",
+        "en": "Point traditionally used in auriculotherapy protocols focused on relaxation and emotional balance. Its stimulation is proposed as a complementary approach to alleviate manifestations of anxiety and tension.",
+        "es": "Punto utilizado tradicionalmente en protocolos de auriculoterapia orientados a la relajación y el equilibrio emocional. Su estimulación se propone como recurso complementario para aliviar las manifestaciones de ansiedad y tensión."
+      }
+    },
+    "Apice+nisolar": {
+      "objname": {
+        "pt-BR": "Ápice da Orelha",
+        "en": "Ear Apex",
+        "es": "Ápice de la Oreja"
+      },
+      "description": {
+        "pt-BR": "Ponto localizado na região superior do pavilhão auricular. Na auriculoterapia tradicional, é associado a protocolos relacionados à sensação de calor, inflamação e desconfortos, conforme o sistema terapêutico utilizado.",
+        "en": "Point located in the upper region of the auricle. In traditional auriculotherapy, it is associated with protocols addressing sensations of heat, inflammation, and discomfort, depending on the therapeutic system used.",
+        "es": "Punto localizado en la región superior del pabellón auricular. En la auriculoterapia tradicional, se asocia con protocolos relacionados con la sensación de calor, la inflamación y las molestias, según el sistema terapéutico utilizado."
+      }
+    },
+    "Baco+nisolar": {
+      "objname": {
+        "pt-BR": "Ponto do Baço",
+        "en": "Spleen Point",
+        "es": "Punto del Bazo"
+      },
+      "description": {
+        "pt-BR": "Ponto associado ao baço nos mapas tradicionais de auriculoterapia. Na medicina tradicional chinesa, relaciona-se à digestão, transformação de nutrientes e equilíbrio energético, conceitos que não correspondem diretamente às funções anatômicas do órgão.",
+        "en": "Point associated with the spleen in traditional auriculotherapy maps. In traditional Chinese medicine, it is related to digestion, nutrient transformation, and energy balance, concepts that do not directly correspond to the anatomical functions of the organ.",
+        "es": "Punto asociado al bazo en los mapas tradicionales de auriculoterapia. En la medicina tradicional china, se relaciona con la digestión, la transformación de nutrientes y el equilibrio energético, conceptos que no corresponden directamente a las funciones anatómicas del órgano."
+      }
+    },
+    "Coluna+nisolar": {
+      "objname": {
+        "pt-BR": "Ponto da Coluna Vertebral",
+        "en": "Spinal Column Point",
+        "es": "Punto de la Columna Vertebral"
+      },
+      "description": {
+        "pt-BR": "Região auricular tradicionalmente associada à coluna vertebral. É utilizada em protocolos complementares relacionados a desconfortos nas costas, tensão muscular e mobilidade da coluna.",
+        "en": "Auricular region traditionally associated with the spinal column. It is used in complementary protocols related to back discomfort, muscle tension, and spinal mobility.",
+        "es": "Región auricular tradicionalmente asociada a la columna vertebral. Se utiliza en protocolos complementarios relacionados con las molestias de espalda, la tensión muscular y la movilidad de la columna."
+      }
+    },
+    "Coracao+nisolar": {
+      "objname": {
+        "pt-BR": "Ponto do Coração",
+        "en": "Heart Point",
+        "es": "Punto del Corazón"
+      },
+      "description": {
+        "pt-BR": "Ponto tradicionalmente relacionado ao coração e ao equilíbrio emocional. É utilizado em algumas abordagens de auriculoterapia voltadas ao relaxamento, tranquilidade e bem-estar.",
+        "en": "Point traditionally associated with the heart and emotional balance. It is used in some auriculotherapy approaches focused on relaxation, tranquility, and well-being.",
+        "es": "Punto tradicionalmente relacionado con el corazón y el equilibrio emocional. Se utiliza en algunos enfoques de auriculoterapia orientados a la relajación, la tranquilidad y el bienestar."
+      }
+    },
+    "Endocrino+nisolar": {
+      "objname": {
+        "pt-BR": "Ponto Endócrino",
+        "en": "Endocrine Point",
+        "es": "Punto Endocrino"
+      },
+      "description": {
+        "pt-BR": "Ponto associado à regulação hormonal nos mapas tradicionais de auriculoterapia. É utilizado em protocolos que buscam favorecer o equilíbrio de funções atribuídas ao sistema endócrino, embora não exista comprovação de uma ação hormonal específica.",
+        "en": "Point associated with hormonal regulation in traditional auriculotherapy maps. It is used in protocols intended to promote the balance of functions attributed to the endocrine system, although a specific hormonal effect has not been demonstrated.",
+        "es": "Punto asociado a la regulación hormonal en los mapas tradicionales de auriculoterapia. Se utiliza en protocolos que buscan favorecer el equilibrio de las funciones atribuidas al sistema endocrino, aunque no existe evidencia que demuestre una acción hormonal específica."
+      }
+    },
+    "Fome+nisolar": {
+      "objname": {
+        "pt-BR": "Ponto da Fome",
+        "en": "Hunger Point",
+        "es": "Punto del Hambre"
+      },
+      "description": {
+        "pt-BR": "Ponto tradicionalmente utilizado em protocolos relacionados ao apetite e ao comportamento alimentar. Sua estimulação é proposta como recurso complementar para auxiliar no controle da sensação de fome, sem substituir orientações nutricionais.",
+        "en": "Point traditionally used in protocols related to appetite and eating behavior. Its stimulation is proposed as a complementary approach to help manage feelings of hunger without replacing nutritional guidance.",
+        "es": "Punto utilizado tradicionalmente en protocolos relacionados con el apetito y la conducta alimentaria. Su estimulación se propone como recurso complementario para ayudar a controlar la sensación de hambre, sin sustituir las orientaciones nutricionales."
+      }
+    },
+    "IntestinoDelgado+nisolar": {
+      "objname": {
+        "pt-BR": "Ponto do Intestino Delgado",
+        "en": "Small Intestine Point",
+        "es": "Punto del Intestino Delgado"
+      },
+      "description": {
+        "pt-BR": "Ponto associado ao intestino delgado nos mapas auriculares tradicionais. É utilizado em protocolos relacionados ao conforto digestivo e às funções de digestão e absorção de nutrientes.",
+        "en": "Point associated with the small intestine in traditional auricular maps. It is used in protocols related to digestive comfort and the functions of digestion and nutrient absorption.",
+        "es": "Punto asociado al intestino delgado en los mapas auriculares tradicionales. Se utiliza en protocolos relacionados con el bienestar digestivo y las funciones de digestión y absorción de nutrientes."
+      }
+    },
+    "IntestinoGrosso+nisolar": {
+      "objname": {
+        "pt-BR": "Ponto do Intestino Grosso",
+        "en": "Large Intestine Point",
+        "es": "Punto del Intestino Grueso"
+      },
+      "description": {
+        "pt-BR": "Ponto tradicionalmente associado ao intestino grosso. É utilizado em abordagens de auriculoterapia relacionadas ao trânsito intestinal, à eliminação de resíduos e ao conforto abdominal.",
+        "en": "Point traditionally associated with the large intestine. It is used in auriculotherapy approaches related to intestinal transit, waste elimination, and abdominal comfort.",
+        "es": "Punto tradicionalmente asociado al intestino grueso. Se utiliza en enfoques de auriculoterapia relacionados con el tránsito intestinal, la eliminación de residuos y el bienestar abdominal."
+      }
+    },
+    "NDM+nisolar": {
+      "objname": {
+        "pt-BR": "Ponto NDM",
+        "en": "NDM Point",
+        "es": "Punto NDM"
+      },
+      "description": {
+        "pt-BR": "Ponto identificado pela sigla NDM no mapa de auriculoterapia. Sua denominação completa e finalidade terapêutica dependem do sistema de referência utilizado, pois essa abreviação não possui significado universalmente padronizado.",
+        "en": "Point identified by the abbreviation NDM on the auriculotherapy map. Its full name and therapeutic purpose depend on the reference system used, as this abbreviation does not have a universally standardized meaning.",
+        "es": "Punto identificado mediante la sigla NDM en el mapa de auriculoterapia. Su denominación completa y finalidad terapéutica dependen del sistema de referencia utilizado, ya que esta abreviatura no posee un significado universalmente estandarizado."
+      }
+    },
+    "PancreasVB+nisolar": {
+      "objname": {
+        "pt-BR": "Ponto do Pâncreas e Vesícula Biliar",
+        "en": "Pancreas and Gallbladder Point",
+        "es": "Punto del Páncreas y la Vesícula Biliar"
+      },
+      "description": {
+        "pt-BR": "Ponto associado ao pâncreas e à vesícula biliar em determinados mapas de auriculoterapia. Tradicionalmente relacionado às funções digestivas e ao equilíbrio metabólico, sem representar uma conexão anatômica direta com esses órgãos.",
+        "en": "Point associated with the pancreas and gallbladder in certain auriculotherapy maps. It is traditionally related to digestive functions and metabolic balance, without representing a direct anatomical connection with these organs.",
+        "es": "Punto asociado al páncreas y a la vesícula biliar en determinados mapas de auriculoterapia. Se relaciona tradicionalmente con las funciones digestivas y el equilibrio metabólico, sin representar una conexión anatómica directa con estos órganos."
+      }
+    },
+    "Pulmao+nisolar": {
+      "objname": {
+        "pt-BR": "Ponto do Pulmão",
+        "en": "Lung Point",
+        "es": "Punto del Pulmón"
+      },
+      "description": {
+        "pt-BR": "Ponto auricular tradicionalmente associado aos pulmões e às funções respiratórias. É utilizado em protocolos complementares relacionados ao conforto respiratório e ao relaxamento.",
+        "en": "Auricular point traditionally associated with the lungs and respiratory functions. It is used in complementary protocols related to respiratory comfort and relaxation.",
+        "es": "Punto auricular tradicionalmente asociado a los pulmones y las funciones respiratorias. Se utiliza en protocolos complementarios relacionados con el confort respiratorio y la relajación."
+      }
+    },
+    "Rim+nisolar": {
+      "objname": {
+        "pt-BR": "Ponto do Rim",
+        "en": "Kidney Point",
+        "es": "Punto del Riñón"
+      },
+      "description": {
+        "pt-BR": "Ponto associado aos rins nos mapas tradicionais de auriculoterapia. Na medicina tradicional chinesa, relaciona-se à vitalidade e ao equilíbrio energético, conceitos distintos das funções renais descritas pela fisiologia moderna.",
+        "en": "Point associated with the kidneys in traditional auriculotherapy maps. In traditional Chinese medicine, it is related to vitality and energy balance, concepts distinct from the renal functions described by modern physiology.",
+        "es": "Punto asociado a los riñones en los mapas tradicionales de auriculoterapia. En la medicina tradicional china, se relaciona con la vitalidad y el equilibrio energético, conceptos distintos de las funciones renales descritas por la fisiología moderna."
+      }
+    },
+    "SanJiao+nisolar": {
+      "objname": {
+        "pt-BR": "Ponto San Jiao (Triplo Aquecedor)",
+        "en": "San Jiao Point (Triple Burner)",
+        "es": "Punto San Jiao (Triple Calentador)"
+      },
+      "description": {
+        "pt-BR": "Ponto relacionado ao conceito de San Jiao, ou Triplo Aquecedor, da medicina tradicional chinesa. Esse conceito representa a integração funcional de diferentes regiões do organismo, associada à circulação de fluidos e à regulação energética, não correspondendo a um órgão anatômico específico.",
+        "en": "Point related to the concept of San Jiao, or Triple Burner, in traditional Chinese medicine. This concept represents the functional integration of different regions of the body, associated with fluid circulation and energy regulation, and does not correspond to a specific anatomical organ.",
+        "es": "Punto relacionado con el concepto de San Jiao, o Triple Calentador, de la medicina tradicional china. Este concepto representa la integración funcional de diferentes regiones del organismo, asociada a la circulación de líquidos y a la regulación energética, sin corresponder a un órgano anatómico específico."
+      }
+    },
+    "ShenMan+nisolar": {
+      "objname": {
+        "pt-BR": "Ponto Shen Men",
+        "en": "Shen Men Point",
+        "es": "Punto Shen Men"
+      },
+      "description": {
+        "pt-BR": "Ponto conhecido como Shen Men, tradicionalmente associado ao relaxamento e ao equilíbrio emocional. É amplamente utilizado em protocolos de auriculoterapia voltados ao estresse, ansiedade, sono e desconfortos físicos.",
+        "en": "Point known as Shen Men, traditionally associated with relaxation and emotional balance. It is widely used in auriculotherapy protocols addressing stress, anxiety, sleep, and physical discomfort.",
+        "es": "Punto conocido como Shen Men, tradicionalmente asociado a la relajación y el equilibrio emocional. Se utiliza ampliamente en protocolos de auriculoterapia orientados al estrés, la ansiedad, el sueño y las molestias físicas."
+      }
+    },
+    "Simpatico+nisolar": {
+      "objname": {
+        "pt-BR": "Ponto Simpático",
+        "en": "Sympathetic Point",
+        "es": "Punto Simpático"
+      },
+      "description": {
+        "pt-BR": "Ponto tradicionalmente associado à regulação do sistema nervoso autônomo. É utilizado em protocolos de auriculoterapia voltados ao relaxamento, à tensão corporal e a desconfortos viscerais, sem comprovação de ação direta e específica sobre o sistema nervoso simpático.",
+        "en": "Point traditionally associated with the regulation of the autonomic nervous system. It is used in auriculotherapy protocols focused on relaxation, bodily tension, and visceral discomfort, without proven direct and specific effects on the sympathetic nervous system.",
+        "es": "Punto tradicionalmente asociado a la regulación del sistema nervioso autónomo. Se utiliza en protocolos de auriculoterapia orientados a la relajación, la tensión corporal y las molestias viscerales, sin que se haya demostrado una acción directa y específica sobre el sistema nervioso simpático."
+      }
+    },
+    "SupraRenal+nisolar": {
+      "objname": {
+        "pt-BR": "Ponto da Glândula Suprarrenal",
+        "en": "Adrenal Gland Point",
+        "es": "Punto de la Glándula Suprarrenal"
+      },
+      "description": {
+        "pt-BR": "Ponto associado às glândulas suprarrenais nos mapas tradicionais de auriculoterapia. É utilizado em protocolos relacionados às respostas ao estresse e a processos inflamatórios, embora sua estimulação não tenha efeito hormonal específico comprovado.",
+        "en": "Point associated with the adrenal glands in traditional auriculotherapy maps. It is used in protocols related to stress responses and inflammatory processes, although its stimulation has no proven specific hormonal effect.",
+        "es": "Punto asociado a las glándulas suprarrenales en los mapas tradicionales de auriculoterapia. Se utiliza en protocolos relacionados con las respuestas al estrés y los procesos inflamatorios, aunque su estimulación no tiene un efecto hormonal específico comprobado."
+      }
+    },
+    "TroncoCerebral+nisolar": {
+      "objname": {
+        "pt-BR": "Ponto do Tronco Cerebral",
+        "en": "Brainstem Point",
+        "es": "Punto del Tronco Encefálico"
+      },
+      "description": {
+        "pt-BR": "Ponto tradicionalmente associado ao tronco cerebral, estrutura responsável por importantes funções neurológicas e autonômicas. Na auriculoterapia, é utilizado em protocolos relacionados ao relaxamento e ao equilíbrio funcional do organismo.",
+        "en": "Point traditionally associated with the brainstem, a structure responsible for important neurological and autonomic functions. In auriculotherapy, it is used in protocols related to relaxation and the functional balance of the body.",
+        "es": "Punto tradicionalmente asociado al tronco encefálico, estructura responsable de importantes funciones neurológicas y autonómicas. En la auriculoterapia, se utiliza en protocolos relacionados con la relajación y el equilibrio funcional del organismo."
+      }
+    },
+    "YangFigado+nisolar": {
+      "objname": {
+        "pt-BR": "Ponto Yang do Fígado",
+        "en": "Liver Yang Point",
+        "es": "Punto Yang del Hígado"
+      },
+      "description": {
+        "pt-BR": "Ponto relacionado ao conceito de Yang do Fígado na medicina tradicional chinesa. É utilizado em protocolos associados à irritabilidade, tensão emocional, cefaleias e sensação de agitação, conforme a interpretação energética tradicional.",
+        "en": "Point related to the concept of Liver Yang in traditional Chinese medicine. It is used in protocols associated with irritability, emotional tension, headaches, and feelings of agitation, according to traditional interpretations of energy balance.",
+        "es": "Punto relacionado con el concepto de Yang del Hígado en la medicina tradicional china. Se utiliza en protocolos asociados a la irritabilidad, la tensión emocional, las cefaleas y la sensación de agitación, según la interpretación energética tradicional."
+      }
+    },
+    "Pontos+nisolar+ninteract": {
+      "objname": {
+        "pt-BR": "Marcações dos Pontos Auriculares",
+        "en": "Auricular Point Markings",
+        "es": "Marcaciones de los Puntos Auriculares"
+      },
+      "description": {
+        "pt-BR": "",
+        "en": "",
+        "es": ""
+      }
+    }
   }
 }

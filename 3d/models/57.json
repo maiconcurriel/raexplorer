@@ -1,62 +1,228 @@
 {
-  "objname": "Aterosclerose",
+  "objname": {
+    "pt-BR": "Aterosclerose",
+    "en": "Atherosclerosis",
+    "es": "Aterosclerosis"
+  },
   "objsystem": [
     "Cardiovascular"
   ],
-  "objdescription": "A aterosclerose é uma doença crônica das artérias caracterizada pelo desenvolvimento de placas na camada interna da parede arterial. O processo envolve retenção e modificação de lipídios, resposta inflamatória, participação de células do sistema imunológico e alterações progressivas da parede do vaso. Com o crescimento das placas, o lúmen da artéria pode se estreitar e dificultar o fluxo sanguíneo. Algumas placas também podem se romper, favorecendo a formação de trombos capazes de obstruir o vaso e causar complicações como infarto do miocárdio ou acidente vascular cerebral. No modelo, a região amarelada representa didaticamente o acúmulo de lipídios associado ao desenvolvimento da aterosclerose.",
+  "objdescription": {
+    "pt-BR": "A aterosclerose é uma doença crônica das artérias caracterizada pelo desenvolvimento de placas na camada interna da parede arterial. O processo envolve retenção e modificação de lipídios, resposta inflamatória, participação de células do sistema imunológico e alterações progressivas da parede do vaso. Com o crescimento das placas, o lúmen da artéria pode se estreitar e dificultar o fluxo sanguíneo. Algumas placas também podem se romper, favorecendo a formação de trombos capazes de obstruir o vaso e causar complicações como infarto do miocárdio ou acidente vascular cerebral. No modelo, a região amarelada representa didaticamente o acúmulo de lipídios associado ao desenvolvimento da aterosclerose.",
+    "en": "Atherosclerosis is a chronic disease of the arteries characterized by the development of plaques in the inner layer of the arterial wall. The process involves lipid retention and modification, an inflammatory response, the involvement of immune system cells, and progressive changes in the vessel wall. As plaques grow, the arterial lumen may narrow and restrict blood flow. Some plaques may also rupture, promoting the formation of thrombi that can obstruct the vessel and cause complications such as myocardial infarction or stroke. In the model, the yellowish region provides an educational representation of lipid accumulation associated with the development of atherosclerosis.",
+    "es": "La aterosclerosis es una enfermedad crónica de las arterias caracterizada por el desarrollo de placas en la capa interna de la pared arterial. El proceso implica la retención y modificación de lípidos, una respuesta inflamatoria, la participación de células del sistema inmunitario y alteraciones progresivas de la pared del vaso. A medida que las placas crecen, la luz de la arteria puede estrecharse y dificultar el flujo sanguíneo. Algunas placas también pueden romperse, favoreciendo la formación de trombos capaces de obstruir el vaso y causar complicaciones como infarto de miocardio o accidente cerebrovascular. En el modelo, la región amarillenta representa de forma didáctica la acumulación de lípidos asociada al desarrollo de la aterosclerosis."
+  },
   "linkedModels": [
     {
+      "id": "19",
+      "label": {
+        "pt-BR": "Sistema Arterial",
+        "en": "Arterial System",
+        "es": "Sistema Arterial"
+      }
+    },
+    {
+      "id": "32",
+      "label": {
+        "pt-BR": "Sistema Cardiovascular",
+        "en": "Cardiovascular System",
+        "es": "Sistema Cardiovascular"
+      }
+    },
+    {
+      "id": "36",
+      "label": {
+        "pt-BR": "AVC Isquêmico",
+        "en": "Ischemic Stroke",
+        "es": "Accidente Cerebrovascular Isquémico"
+      }
+    },
+    {
       "id": "46",
-      "label": "Artéria"
+      "label": {
+        "pt-BR": "Artéria",
+        "en": "Artery",
+        "es": "Arteria"
+      }
+    },
+    {
+      "id": "56",
+      "label": {
+        "pt-BR": "Infarto do Miocárdio",
+        "en": "Myocardial Infarction",
+        "es": "Infarto de Miocardio"
+      }
+    },
+    {
+      "id": "58",
+      "label": {
+        "pt-BR": "Anticoagulantes",
+        "en": "Anticoagulants",
+        "es": "Anticoagulantes"
+      }
+    },
+    {
+      "id": "71",
+      "label": {
+        "pt-BR": "Pressão Arterial",
+        "en": "Blood Pressure",
+        "es": "Presión Arterial"
+      }
+    },
+    {
+      "id": "100",
+      "label": {
+        "pt-BR": "Desenvolvimento de Necrose no Pé Diabético",
+        "en": "Development of Necrosis in the Diabetic Foot",
+        "es": "Desarrollo de Necrosis en el Pie Diabético"
+      }
     }
   ],
   "resources": [],
-  "01_Endotelio": {
-    "objname": "Endotélio",
-    "description": "Camada de células que reveste internamente a artéria e permanece em contato direto com o sangue. Alterações na função endotelial participam do início e da progressão do processo aterosclerótico."
-  },
-  "01_Nucleos_endoteliais": {
-    "objname": "Núcleos das Células Endoteliais",
-    "description": "Núcleos das células que constituem o endotélio, camada mais interna da parede arterial e importante na regulação da interação entre o sangue e a parede do vaso."
-  },
-  "01_Relevo_celular_do_endotelio": {
-    "objname": "Relevo das Células Endoteliais",
-    "description": "Representação da superfície das células endoteliais que revestem o interior da artéria. O endotélio participa da regulação do fluxo sanguíneo, da coagulação e de processos inflamatórios envolvidos na aterosclerose."
-  },
-  "02_Conjuntivo_interno": {
-    "objname": "Tecido Conjuntivo Subendotelial",
-    "description": "Tecido localizado abaixo do endotélio e integrante da túnica íntima. É nessa região da parede arterial que ocorre a retenção de lipídios e o desenvolvimento inicial das lesões ateroscleróticas."
-  },
-  "03_Elastica_interna": {
-    "objname": "Lâmina Elástica Interna",
-    "description": "Camada rica em fibras elásticas que separa principalmente a túnica íntima da túnica média e contribui para a elasticidade da parede arterial."
-  },
-  "04_Fasciculos_musculares_relevo": {
-    "objname": "Fascículos de Músculo Liso",
-    "description": "Conjuntos de células musculares lisas da túnica média da artéria. Essas células participam do controle do calibre vascular e também podem contribuir para a formação e evolução das placas ateroscleróticas."
-  },
-  "04_Musculo_liso": {
-    "objname": "Músculo Liso",
-    "description": "Principal componente muscular da túnica média. Sua contração e seu relaxamento ajudam a controlar o diâmetro da artéria. Na aterosclerose, células musculares lisas também podem participar do remodelamento da parede e da formação da placa."
-  },
-  "05_Elastica_externa": {
-    "objname": "Lâmina Elástica Externa",
-    "description": "Camada de tecido elástico localizada entre a túnica média e a região mais externa da parede arterial, contribuindo para a organização e elasticidade do vaso."
-  },
-  "06_Conjuntivo_externo": {
-    "objname": "Tecido Conjuntivo Externo",
-    "description": "Tecido conjuntivo da região externa da artéria, responsável por fornecer sustentação e contribuir para a integração do vaso com os tecidos ao seu redor."
-  },
-  "06_Fibroblastos": {
-    "objname": "Fibroblastos",
-    "description": "Células do tecido conjuntivo responsáveis pela produção de componentes da matriz extracelular, como fibras de colágeno, contribuindo para a estrutura e manutenção da parede vascular."
-  },
-  "07_Involucro": {
-    "objname": "Túnica Adventícia",
-    "description": "Camada mais externa da parede arterial, formada principalmente por tecido conjuntivo. Fornece sustentação e proteção ao vaso e estabelece sua relação com os tecidos adjacentes."
-  },
-  "08_Acumulo_Gordura": {
-    "objname": "Acúmulo de Lipídios",
-    "description": "Representação didática do acúmulo de lipídios associado à formação da placa aterosclerótica. Na aterosclerose, partículas lipídicas podem ficar retidas na túnica íntima e participar de uma resposta inflamatória que leva ao crescimento da lesão e ao possível estreitamento do lúmen arterial."
+  "parts": {
+    "01_Endotelio": {
+      "objname": {
+        "pt-BR": "Endotélio",
+        "en": "Endothelium",
+        "es": "Endotelio"
+      },
+      "description": {
+        "pt-BR": "Camada de células que reveste internamente a artéria e permanece em contato direto com o sangue. Alterações na função endotelial participam do início e da progressão do processo aterosclerótico.",
+        "en": "Layer of cells that lines the interior of the artery and remains in direct contact with the blood. Changes in endothelial function contribute to the onset and progression of the atherosclerotic process.",
+        "es": "Capa de células que recubre el interior de la arteria y permanece en contacto directo con la sangre. Las alteraciones de la función endotelial contribuyen al inicio y la progresión del proceso aterosclerótico."
+      }
+    },
+    "01_Nucleos_endoteliais": {
+      "objname": {
+        "pt-BR": "Núcleos das Células Endoteliais",
+        "en": "Endothelial Cell Nuclei",
+        "es": "Núcleos de las Células Endoteliales"
+      },
+      "description": {
+        "pt-BR": "Núcleos das células que constituem o endotélio, camada mais interna da parede arterial e importante na regulação da interação entre o sangue e a parede do vaso.",
+        "en": "Nuclei of the cells that constitute the endothelium, the innermost layer of the arterial wall, which plays an important role in regulating the interaction between the blood and the vessel wall.",
+        "es": "Núcleos de las células que constituyen el endotelio, la capa más interna de la pared arterial, que desempeña un papel importante en la regulación de la interacción entre la sangre y la pared del vaso."
+      }
+    },
+    "01_Relevo_celular_do_endotelio": {
+      "objname": {
+        "pt-BR": "Relevo das Células Endoteliais",
+        "en": "Endothelial Cell Surface Relief",
+        "es": "Relieve de las Células Endoteliales"
+      },
+      "description": {
+        "pt-BR": "Representação da superfície das células endoteliais que revestem o interior da artéria. O endotélio participa da regulação do fluxo sanguíneo, da coagulação e de processos inflamatórios envolvidos na aterosclerose.",
+        "en": "Representation of the surface of the endothelial cells that line the interior of the artery. The endothelium participates in the regulation of blood flow, coagulation, and inflammatory processes involved in atherosclerosis.",
+        "es": "Representación de la superficie de las células endoteliales que recubren el interior de la arteria. El endotelio participa en la regulación del flujo sanguíneo, la coagulación y los procesos inflamatorios involucrados en la aterosclerosis."
+      }
+    },
+    "02_Conjuntivo_interno": {
+      "objname": {
+        "pt-BR": "Tecido Conjuntivo Subendotelial",
+        "en": "Subendothelial Connective Tissue",
+        "es": "Tejido Conjuntivo Subendotelial"
+      },
+      "description": {
+        "pt-BR": "Tecido localizado abaixo do endotélio e integrante da túnica íntima. É nessa região da parede arterial que ocorre a retenção de lipídios e o desenvolvimento inicial das lesões ateroscleróticas.",
+        "en": "Tissue located beneath the endothelium that forms part of the tunica intima. Lipid retention and the initial development of atherosclerotic lesions occur in this region of the arterial wall.",
+        "es": "Tejido situado debajo del endotelio que forma parte de la túnica íntima. En esta región de la pared arterial se produce la retención de lípidos y el desarrollo inicial de las lesiones ateroscleróticas."
+      }
+    },
+    "03_Elastica_interna": {
+      "objname": {
+        "pt-BR": "Lâmina Elástica Interna",
+        "en": "Internal Elastic Lamina",
+        "es": "Lámina Elástica Interna"
+      },
+      "description": {
+        "pt-BR": "Camada rica em fibras elásticas que separa principalmente a túnica íntima da túnica média e contribui para a elasticidade da parede arterial.",
+        "en": "Layer rich in elastic fibers that primarily separates the tunica intima from the tunica media and contributes to the elasticity of the arterial wall.",
+        "es": "Capa rica en fibras elásticas que separa principalmente la túnica íntima de la túnica media y contribuye a la elasticidad de la pared arterial."
+      }
+    },
+    "04_Fasciculos_musculares_relevo": {
+      "objname": {
+        "pt-BR": "Fascículos de Músculo Liso",
+        "en": "Smooth Muscle Fascicles",
+        "es": "Fascículos de Músculo Liso"
+      },
+      "description": {
+        "pt-BR": "Conjuntos de células musculares lisas da túnica média da artéria. Essas células participam do controle do calibre vascular e também podem contribuir para a formação e evolução das placas ateroscleróticas.",
+        "en": "Groups of smooth muscle cells in the tunica media of the artery. These cells participate in the regulation of vascular diameter and may also contribute to the formation and progression of atherosclerotic plaques.",
+        "es": "Conjuntos de células musculares lisas de la túnica media de la arteria. Estas células participan en la regulación del calibre vascular y también pueden contribuir a la formación y evolución de las placas ateroscleróticas."
+      }
+    },
+    "04_Musculo_liso": {
+      "objname": {
+        "pt-BR": "Músculo Liso",
+        "en": "Smooth Muscle",
+        "es": "Músculo Liso"
+      },
+      "description": {
+        "pt-BR": "Principal componente muscular da túnica média. Sua contração e seu relaxamento ajudam a controlar o diâmetro da artéria. Na aterosclerose, células musculares lisas também podem participar do remodelamento da parede e da formação da placa.",
+        "en": "Main muscular component of the tunica media. Its contraction and relaxation help regulate the diameter of the artery. In atherosclerosis, smooth muscle cells may also participate in arterial wall remodeling and plaque formation.",
+        "es": "Principal componente muscular de la túnica media. Su contracción y relajación ayudan a controlar el diámetro de la arteria. En la aterosclerosis, las células musculares lisas también pueden participar en la remodelación de la pared arterial y en la formación de la placa."
+      }
+    },
+    "05_Elastica_externa": {
+      "objname": {
+        "pt-BR": "Lâmina Elástica Externa",
+        "en": "External Elastic Lamina",
+        "es": "Lámina Elástica Externa"
+      },
+      "description": {
+        "pt-BR": "Camada de tecido elástico localizada entre a túnica média e a região mais externa da parede arterial, contribuindo para a organização e elasticidade do vaso.",
+        "en": "Layer of elastic tissue located between the tunica media and the outermost region of the arterial wall, contributing to the organization and elasticity of the vessel.",
+        "es": "Capa de tejido elástico situada entre la túnica media y la región más externa de la pared arterial, que contribuye a la organización y elasticidad del vaso."
+      }
+    },
+    "06_Conjuntivo_externo": {
+      "objname": {
+        "pt-BR": "Tecido Conjuntivo Externo",
+        "en": "Outer Connective Tissue",
+        "es": "Tejido Conjuntivo Externo"
+      },
+      "description": {
+        "pt-BR": "Tecido conjuntivo da região externa da artéria, responsável por fornecer sustentação e contribuir para a integração do vaso com os tecidos ao seu redor.",
+        "en": "Connective tissue in the outer region of the artery, responsible for providing structural support and contributing to the integration of the vessel with the surrounding tissues.",
+        "es": "Tejido conjuntivo de la región externa de la arteria, responsable de proporcionar soporte estructural y contribuir a la integración del vaso con los tejidos que lo rodean."
+      }
+    },
+    "06_Fibroblastos": {
+      "objname": {
+        "pt-BR": "Fibroblastos",
+        "en": "Fibroblasts",
+        "es": "Fibroblastos"
+      },
+      "description": {
+        "pt-BR": "Células do tecido conjuntivo responsáveis pela produção de componentes da matriz extracelular, como fibras de colágeno, contribuindo para a estrutura e manutenção da parede vascular.",
+        "en": "Connective tissue cells responsible for producing components of the extracellular matrix, such as collagen fibers, contributing to the structure and maintenance of the vascular wall.",
+        "es": "Células del tejido conjuntivo responsables de la producción de componentes de la matriz extracelular, como las fibras de colágeno, que contribuyen a la estructura y el mantenimiento de la pared vascular."
+      }
+    },
+    "07_Involucro": {
+      "objname": {
+        "pt-BR": "Túnica Adventícia",
+        "en": "Tunica Adventitia",
+        "es": "Túnica Adventicia"
+      },
+      "description": {
+        "pt-BR": "Camada mais externa da parede arterial, formada principalmente por tecido conjuntivo. Fornece sustentação e proteção ao vaso e estabelece sua relação com os tecidos adjacentes.",
+        "en": "Outermost layer of the arterial wall, composed primarily of connective tissue. It provides structural support and protection to the vessel and establishes its connection with adjacent tissues.",
+        "es": "Capa más externa de la pared arterial, formada principalmente por tejido conjuntivo. Proporciona soporte estructural y protección al vaso y establece su relación con los tejidos adyacentes."
+      }
+    },
+    "08_Acumulo_Gordura": {
+      "objname": {
+        "pt-BR": "Acúmulo de Lipídios",
+        "en": "Lipid Accumulation",
+        "es": "Acumulación de Lípidos"
+      },
+      "description": {
+        "pt-BR": "Representação didática do acúmulo de lipídios associado à formação da placa aterosclerótica. Na aterosclerose, partículas lipídicas podem ficar retidas na túnica íntima e participar de uma resposta inflamatória que leva ao crescimento da lesão e ao possível estreitamento do lúmen arterial.",
+        "en": "Educational representation of lipid accumulation associated with the formation of atherosclerotic plaque. In atherosclerosis, lipid particles may become trapped in the tunica intima and contribute to an inflammatory response that leads to lesion growth and possible narrowing of the arterial lumen.",
+        "es": "Representación didáctica de la acumulación de lípidos asociada a la formación de la placa aterosclerótica. En la aterosclerosis, las partículas lipídicas pueden quedar retenidas en la túnica íntima y participar en una respuesta inflamatoria que conduce al crecimiento de la lesión y al posible estrechamiento de la luz arterial."
+      }
+    }
   }
 }

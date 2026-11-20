@@ -1,33 +1,120 @@
 {
-  "objname": "Tecido do Intestino Delgado",
-  "objsystem": "Digestório",
-  "objdescription": "O intestino delgado é revestido por tecido especializado na digestão e absorção de nutrientes. Sua parede é formada por mucosa, submucosa, camada muscular e serosa. A mucosa apresenta vilosidades e microvilosidades que ampliam a superfície absortiva, além de vasos sanguíneos e linfáticos responsáveis pelo transporte dos nutrientes absorvidos.",
-  "mucmusc": {
-    "objname": "Mucosa Muscularica",
-    "description": "Fina camada de músculo liso localizada na base da mucosa. Promove pequenos movimentos que auxiliam o contato da mucosa com o conteúdo intestinal e favorecem a absorção."
+  "objname": {
+    "pt-BR": "Tecido do Intestino Delgado",
+    "en": "Small Intestinal Tissue",
+    "es": "Tejido del Intestino Delgado"
   },
-  "mucosa": {
-    "objname": "Mucosa",
-    "description": "Camada mais interna do intestino delgado, formada por epitélio, lâmina própria e muscular da mucosa. É responsável pela digestão final e absorção dos nutrientes."
+  "objsystem": [
+    "Digestório"
+  ],
+  "objdescription": {
+    "pt-BR": "O intestino delgado é revestido por tecido especializado na digestão e absorção de nutrientes. Sua parede é formada por mucosa, submucosa, camada muscular e serosa. A mucosa apresenta vilosidades e microvilosidades que ampliam a superfície absortiva, além de vasos sanguíneos e linfáticos responsáveis pelo transporte dos nutrientes absorvidos.",
+    "en": "The small intestine is lined with tissue specialized in the digestion and absorption of nutrients. Its wall consists of the mucosa, submucosa, muscular layer, and serosa. The mucosa contains villi and microvilli that increase the absorptive surface area, as well as blood and lymphatic vessels responsible for transporting absorbed nutrients.",
+    "es": "El intestino delgado está revestido por tejido especializado en la digestión y absorción de nutrientes. Su pared está formada por la mucosa, la submucosa, la capa muscular y la serosa. La mucosa presenta vellosidades y microvellosidades que amplían la superficie de absorción, además de vasos sanguíneos y linfáticos responsables del transporte de los nutrientes absorbidos."
   },
-  "serosa": {
-    "objname": "Serosa",
-    "description": "Camada mais externa do intestino delgado, composta por tecido conjuntivo e mesotélio. Protege o órgão e reduz o atrito com estruturas vizinhas durante os movimentos."
-  },
-  "submucosa": {
-    "objname": "Submucosa",
-    "description": "Camada de tecido conjuntivo que sustenta a mucosa, contendo vasos sanguíneos, vasos linfáticos, nervos e glândulas, fornecendo suporte estrutural e nutrição."
-  },
-  "villus": {
-    "objname": "Villus",
-    "description": "Projeções da mucosa que aumentam significativamente a área de absorção. Cada vilo contém capilares sanguíneos e um vaso linfático central."
-  },
-  "vlinf": {
-    "objname": "Vasos Linfáticos",
-    "description": "Vasos localizados no interior das vilosidades que absorvem lipídios e vitaminas lipossolúveis, transportando-os pela linfa até a circulação."
-  },
-  "vsangue": {
-    "objname": "Vasos Sanguíneos",
-    "description": "Rede de capilares presente nas vilosidades que recebe glicose, aminoácidos, sais minerais e outras moléculas absorvidas, conduzindo-as à circulação."
+  "linkedModels": [
+    {
+      "id": "24",
+      "label": {
+        "pt-BR": "Sistema Digestório",
+        "en": "Digestive System",
+        "es": "Sistema Digestivo"
+      }
+    },
+    {
+      "id": "86",
+      "label": {
+        "pt-BR": "Absorção de Glicose",
+        "en": "Glucose Absorption",
+        "es": "Absorción de Glucosa"
+      }
+    }
+  ],
+  "resources": [],
+  "parts": {
+    "mucmusc": {
+      "objname": {
+        "pt-BR": "Mucosa Muscularica",
+        "en": "Muscularis Mucosae",
+        "es": "Muscular de la Mucosa"
+      },
+      "description": {
+        "pt-BR": "Fina camada de músculo liso localizada na base da mucosa. Promove pequenos movimentos que auxiliam o contato da mucosa com o conteúdo intestinal e favorecem a absorção.",
+        "en": "Thin layer of smooth muscle located at the base of the mucosa. It produces small movements that facilitate contact between the mucosa and the intestinal contents, promoting absorption.",
+        "es": "Capa delgada de músculo liso situada en la base de la mucosa. Produce pequeños movimientos que facilitan el contacto de la mucosa con el contenido intestinal y favorecen la absorción."
+      }
+    },
+    "mucosa": {
+      "objname": {
+        "pt-BR": "Mucosa",
+        "en": "Mucosa",
+        "es": "Mucosa"
+      },
+      "description": {
+        "pt-BR": "Camada mais interna do intestino delgado, formada por epitélio, lâmina própria e muscular da mucosa. É responsável pela digestão final e absorção dos nutrientes.",
+        "en": "Innermost layer of the small intestine, consisting of the epithelium, lamina propria, and muscularis mucosae. It is responsible for the final stages of digestion and nutrient absorption.",
+        "es": "Capa más interna del intestino delgado, formada por el epitelio, la lámina propia y la muscular de la mucosa. Es responsable de las etapas finales de la digestión y de la absorción de nutrientes."
+      }
+    },
+    "serosa": {
+      "objname": {
+        "pt-BR": "Serosa",
+        "en": "Serosa",
+        "es": "Serosa"
+      },
+      "description": {
+        "pt-BR": "Camada mais externa do intestino delgado, composta por tecido conjuntivo e mesotélio. Protege o órgão e reduz o atrito com estruturas vizinhas durante os movimentos.",
+        "en": "Outermost layer of the small intestine, composed of connective tissue and mesothelium. It protects the organ and reduces friction with surrounding structures during movement.",
+        "es": "Capa más externa del intestino delgado, compuesta por tejido conjuntivo y mesotelio. Protege el órgano y reduce la fricción con las estructuras vecinas durante los movimientos."
+      }
+    },
+    "submucosa": {
+      "objname": {
+        "pt-BR": "Submucosa",
+        "en": "Submucosa",
+        "es": "Submucosa"
+      },
+      "description": {
+        "pt-BR": "Camada de tecido conjuntivo que sustenta a mucosa, contendo vasos sanguíneos, vasos linfáticos, nervos e glândulas, fornecendo suporte estrutural e nutrição.",
+        "en": "Layer of connective tissue that supports the mucosa and contains blood vessels, lymphatic vessels, nerves, and glands, providing structural support and nourishment.",
+        "es": "Capa de tejido conjuntivo que sostiene la mucosa y contiene vasos sanguíneos, vasos linfáticos, nervios y glándulas, proporcionando soporte estructural y nutrición."
+      }
+    },
+    "villus": {
+      "objname": {
+        "pt-BR": "Villus",
+        "en": "Intestinal Villus",
+        "es": "Vellosidad Intestinal"
+      },
+      "description": {
+        "pt-BR": "Projeções da mucosa que aumentam significativamente a área de absorção. Cada vilo contém capilares sanguíneos e um vaso linfático central.",
+        "en": "Projections of the mucosa that significantly increase the absorptive surface area. Each villus contains blood capillaries and a central lymphatic vessel.",
+        "es": "Proyecciones de la mucosa que aumentan significativamente la superficie de absorción. Cada vellosidad contiene capilares sanguíneos y un vaso linfático central."
+      }
+    },
+    "vlinf": {
+      "objname": {
+        "pt-BR": "Vasos Linfáticos",
+        "en": "Lymphatic Vessels",
+        "es": "Vasos Linfáticos"
+      },
+      "description": {
+        "pt-BR": "Vasos localizados no interior das vilosidades que absorvem lipídios e vitaminas lipossolúveis, transportando-os pela linfa até a circulação.",
+        "en": "Vessels located within the intestinal villi that absorb lipids and fat-soluble vitamins, transporting them through the lymph to the bloodstream.",
+        "es": "Vasos situados en el interior de las vellosidades intestinales que absorben lípidos y vitaminas liposolubles, transportándolos a través de la linfa hasta la circulación sanguínea."
+      }
+    },
+    "vsangue": {
+      "objname": {
+        "pt-BR": "Vasos Sanguíneos",
+        "en": "Blood Vessels",
+        "es": "Vasos Sanguíneos"
+      },
+      "description": {
+        "pt-BR": "Rede de capilares presente nas vilosidades que recebe glicose, aminoácidos, sais minerais e outras moléculas absorvidas, conduzindo-as à circulação.",
+        "en": "Network of capillaries within the intestinal villi that receives glucose, amino acids, mineral salts, and other absorbed molecules, transporting them into the bloodstream.",
+        "es": "Red de capilares presente en las vellosidades intestinales que recibe glucosa, aminoácidos, sales minerales y otras moléculas absorbidas, transportándolas hacia la circulación sanguínea."
+      }
+    }
   }
 }

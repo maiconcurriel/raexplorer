@@ -209,7 +209,7 @@ async function initViewer() {
         renderizarRecursosGlobais(objectData);
 
         if (objectData.linkedModel?.id) {
-            preloadModel(objectData.linkedModel.id);
+            //preloadModel(objectData.linkedModel.id);
         }
 
         initThree();
@@ -1283,7 +1283,7 @@ function renderizarRecursosGlobais(data) {
     });
 
     if (typeof preloadModel === 'function') {
-        preloadModel(targetId);
+        //preloadModel(targetId);
     }
 
     html += `
@@ -1874,7 +1874,7 @@ window.carregarNovoModelo = async function(id, voltar = false) {
         renderizarCapitulos(objectData);
         renderizarRecursosGlobais(objectData);
 
-        if (objectData.linkedModel?.id) preloadModel(objectData.linkedModel.id);
+        //if (objectData.linkedModel?.id) preloadModel(objectData.linkedModel.id);
 
         load3DModel(modelId);
         resetScene();

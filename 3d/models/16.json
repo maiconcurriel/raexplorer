@@ -1,102 +1,280 @@
 {
-  "objname": "Pulmões de Pacientes com COVID-19",
-  "objsystem": "Respiratório",
-  "objdescription": "Modelo anatômico dos pulmões e das principais estruturas das vias respiratórias, representando alterações pulmonares associadas à COVID-19. A infecção pelo SARS-CoV-2 pode provocar inflamação e lesões no tecido pulmonar, comprometendo as trocas gasosas. O modelo apresenta os pulmões, traqueia, brônquios, vasos pulmonares e estruturas da laringe, além de uma região de inflamação pulmonar. O sistema respiratório é responsável pela condução do ar e pelas trocas de oxigênio e dióxido de carbono entre os pulmões e o sangue.",
-  "linkedModels": [],
+  "objname": {
+    "pt-BR": "Pulmões de Pacientes com COVID-19",
+    "en": "Lungs of Patients with COVID-19",
+    "es": "Pulmones de Pacientes con COVID-19"
+  },
+  "objsystem": [
+    "Respiratório"
+  ],
+  "objdescription": {
+    "pt-BR": "Modelo anatômico dos pulmões e das principais estruturas das vias respiratórias, representando alterações pulmonares associadas à COVID-19. A infecção pelo SARS-CoV-2 pode provocar inflamação e lesões no tecido pulmonar, comprometendo as trocas gasosas. O modelo apresenta os pulmões, traqueia, brônquios, vasos pulmonares e estruturas da laringe, além de uma região de inflamação pulmonar. O sistema respiratório é responsável pela condução do ar e pelas trocas de oxigênio e dióxido de carbono entre os pulmões e o sangue.",
+    "en": "Anatomical model of the lungs and the main structures of the respiratory tract, representing pulmonary changes associated with COVID-19. SARS-CoV-2 infection can cause inflammation and damage to lung tissue, impairing gas exchange. The model presents the lungs, trachea, bronchi, pulmonary vessels, and laryngeal structures, as well as an area of pulmonary inflammation. The respiratory system is responsible for conducting air and exchanging oxygen and carbon dioxide between the lungs and the blood.",
+    "es": "Modelo anatómico de los pulmones y de las principales estructuras de las vías respiratorias, que representa alteraciones pulmonares asociadas a la COVID-19. La infección por SARS-CoV-2 puede provocar inflamación y lesiones en el tejido pulmonar, comprometiendo el intercambio gaseoso. El modelo presenta los pulmones, la tráquea, los bronquios, los vasos pulmonares y las estructuras de la laringe, además de una región de inflamación pulmonar. El sistema respiratorio es responsable de la conducción del aire y del intercambio de oxígeno y dióxido de carbono entre los pulmones y la sangre."
+  },
+  "linkedModels": [
+    {
+      "id": "14",
+      "label": {
+        "pt-BR": "Covid-19",
+        "en": "COVID-19",
+        "es": "COVID-19"
+      }
+    },
+    {
+      "id": "23",
+      "label": {
+        "pt-BR": "Sistema Respiratório",
+        "en": "Respiratory System",
+        "es": "Sistema Respiratorio"
+      }
+    },
+    {
+      "id": "35",
+      "label": {
+        "pt-BR": "Atelectasia",
+        "en": "Atelectasis",
+        "es": "Atelectasia"
+      }
+    },
+    {
+      "id": "70",
+      "label": {
+        "pt-BR": "Dinâmica Respiratória",
+        "en": "Respiratory Dynamics",
+        "es": "Dinámica Respiratoria"
+      }
+    }
+  ],
   "resources": [],
-
-  "LungRight": {
-    "objname": "Pulmão Direito",
-    "description": "Pulmão localizado no lado direito do tórax. Possui três lobos e participa das trocas gasosas, recebendo ar através das vias respiratórias e permitindo a passagem de oxigênio para o sangue e de dióxido de carbono para o ar."
-  },
-
-  "LungLeft": {
-    "objname": "Pulmão Esquerdo",
-    "description": "Pulmão localizado no lado esquerdo do tórax. Possui dois lobos e apresenta uma região adaptada à posição do coração. Participa das trocas gasosas entre o ar inspirado e o sangue."
-  },
-
-  "InflamationLeft": {
-    "objname": "Inflamação Pulmonar",
-    "description": "Região do pulmão que apresenta inflamação associada à infecção. A resposta inflamatória pode causar alterações no tecido pulmonar e nos alvéolos, prejudicando a eficiência das trocas gasosas."
-  },
-
-  "Trachea": {
-    "objname": "Traqueia",
-    "description": "Tubo respiratório que conecta a laringe aos brônquios. Conduz o ar para os pulmões e possui anéis de cartilagem que ajudam a manter sua luz aberta durante a respiração."
-  },
-
-  "BronchiLeft": {
-    "objname": "Brônquio Esquerdo",
-    "description": "Principal via aérea que se origina da bifurcação da traqueia e conduz o ar para o pulmão esquerdo. Divide-se progressivamente em estruturas menores dentro do pulmão."
-  },
-
-  "PulmonaryArteries": {
-    "objname": "Artérias Pulmonares",
-    "description": "Vasos sanguíneos que transportam sangue pobre em oxigênio do ventrículo direito do coração até os pulmões. Nos capilares pulmonares, o sangue recebe oxigênio e elimina dióxido de carbono."
-  },
-
-  "PulmonaryVeins": {
-    "objname": "Veias Pulmonares",
-    "description": "Vasos sanguíneos que transportam sangue rico em oxigênio dos pulmões até o átrio esquerdo do coração. Normalmente existem quatro veias pulmonares principais."
-  },
-
-  "Diaphragm": {
-    "objname": "Diafragma",
-    "description": "Principal músculo da respiração, localizado entre as cavidades torácica e abdominal. Sua contração aumenta o volume do tórax e favorece a entrada de ar nos pulmões."
-  },
-
-  "HyoidBone": {
-    "objname": "Osso Hioide",
-    "description": "Pequeno osso localizado no pescoço, abaixo da mandíbula. Sustenta a língua e participa da organização das estruturas relacionadas à deglutição e à laringe."
-  },
-
-  "ThyrohyoidMembrane": {
-    "objname": "Membrana Tireo-Hioidea",
-    "description": "Membrana de tecido conjuntivo que conecta o osso hioide à cartilagem tireoidea. Auxilia na sustentação e movimentação das estruturas superiores da laringe."
-  },
-
-  "Epiglosttis": {
-    "objname": "Epiglote",
-    "description": "Estrutura cartilaginosa localizada na entrada da laringe. Durante a deglutição, movimenta-se para ajudar a direcionar alimentos e líquidos para o esôfago, protegendo as vias respiratórias."
-  },
-
-  "ThyroidCartilage": {
-    "objname": "Cartilagem Tireoidea",
-    "description": "Maior cartilagem da laringe, formando grande parte de sua parede anterior. Dá suporte às estruturas laríngeas e protege componentes envolvidos na produção da voz."
-  },
-
-  "Larynx": {
-    "objname": "Laringe",
-    "description": "Órgão localizado entre a faringe e a traqueia que conduz o ar e participa da produção da voz. Suas estruturas cartilaginosas também ajudam a proteger as vias respiratórias durante a deglutição."
-  },
-
-  "VocalChords": {
-    "objname": "Pregas Vocais",
-    "description": "Duas estruturas localizadas no interior da laringe que vibram com a passagem do ar, produzindo sons. Também participam da proteção das vias respiratórias ao fecharem a entrada da laringe."
-  },
-
-  "ThyrocricoidLigament": {
-    "objname": "Ligamento Tireo-Cricoide",
-    "description": "Estrutura ligamentar que conecta a cartilagem tireoidea à cartilagem cricoidea. Contribui para a sustentação da laringe e para a relação entre suas principais cartilagens."
-  },
-
-  "Arytenoid": {
-    "objname": "Cartilagem Aritenoidea",
-    "description": "Par de pequenas cartilagens da laringe localizadas posteriormente à cartilagem cricoidea. Participam do movimento das pregas vocais e, consequentemente, da produção da voz e proteção das vias respiratórias."
-  },
-
-  "Corniculate": {
-    "objname": "Cartilagens Corniculadas",
-    "description": "Pequenas cartilagens localizadas sobre as cartilagens aritenoideas, formando parte da estrutura posterior da laringe. Contribuem para a sustentação das pregas e das estruturas laríngeas."
-  },
-
-  "Cricoid": {
-    "objname": "Cartilagem Cricoidea",
-    "description": "Cartilagem em formato de anel localizada abaixo da cartilagem tireoidea e acima da traqueia. Mantém a estrutura aberta da laringe e serve de suporte para outras cartilagens laríngeas."
-  },
-
-  "MedianCricothyroidLigament": {
-    "objname": "Ligamento Cricotireoideo Mediano",
-    "description": "Estrutura fibrosa localizada entre as cartilagens tireoidea e cricoidea. Contribui para a união e estabilidade dessas cartilagens e participa da mecânica da laringe."
+  "parts": {
+    "LungRight": {
+      "objname": {
+        "pt-BR": "Pulmão Direito",
+        "en": "Right Lung",
+        "es": "Pulmón Derecho"
+      },
+      "description": {
+        "pt-BR": "Pulmão localizado no lado direito do tórax. Possui três lobos e participa das trocas gasosas, recebendo ar através das vias respiratórias e permitindo a passagem de oxigênio para o sangue e de dióxido de carbono para o ar.",
+        "en": "Lung located on the right side of the thorax. It has three lobes and participates in gas exchange, receiving air through the respiratory tract and allowing oxygen to pass into the blood and carbon dioxide into the air.",
+        "es": "Pulmón situado en el lado derecho del tórax. Posee tres lóbulos y participa en el intercambio gaseoso, recibiendo aire a través de las vías respiratorias y permitiendo el paso de oxígeno hacia la sangre y de dióxido de carbono hacia el aire."
+      }
+    },
+    "LungLeft": {
+      "objname": {
+        "pt-BR": "Pulmão Esquerdo",
+        "en": "Left Lung",
+        "es": "Pulmón Izquierdo"
+      },
+      "description": {
+        "pt-BR": "Pulmão localizado no lado esquerdo do tórax. Possui dois lobos e apresenta uma região adaptada à posição do coração. Participa das trocas gasosas entre o ar inspirado e o sangue.",
+        "en": "Lung located on the left side of the thorax. It has two lobes and features a region adapted to accommodate the position of the heart. It participates in gas exchange between inhaled air and the blood.",
+        "es": "Pulmón situado en el lado izquierdo del tórax. Posee dos lóbulos y presenta una región adaptada a la posición del corazón. Participa en el intercambio gaseoso entre el aire inspirado y la sangre."
+      }
+    },
+    "InflamationLeft": {
+      "objname": {
+        "pt-BR": "Inflamação Pulmonar",
+        "en": "Pulmonary Inflammation",
+        "es": "Inflamación Pulmonar"
+      },
+      "description": {
+        "pt-BR": "Região do pulmão que apresenta inflamação associada à infecção. A resposta inflamatória pode causar alterações no tecido pulmonar e nos alvéolos, prejudicando a eficiência das trocas gasosas.",
+        "en": "Region of the lung exhibiting inflammation associated with infection. The inflammatory response can cause changes in lung tissue and the alveoli, impairing the efficiency of gas exchange.",
+        "es": "Región del pulmón que presenta inflamación asociada a la infección. La respuesta inflamatoria puede causar alteraciones en el tejido pulmonar y en los alvéolos, perjudicando la eficiencia del intercambio gaseoso."
+      }
+    },
+    "Trachea": {
+      "objname": {
+        "pt-BR": "Traqueia",
+        "en": "Trachea",
+        "es": "Tráquea"
+      },
+      "description": {
+        "pt-BR": "Tubo respiratório que conecta a laringe aos brônquios. Conduz o ar para os pulmões e possui anéis de cartilagem que ajudam a manter sua luz aberta durante a respiração.",
+        "en": "Respiratory tube that connects the larynx to the bronchi. It conducts air to the lungs and contains cartilaginous rings that help keep its lumen open during breathing.",
+        "es": "Tubo respiratorio que conecta la laringe con los bronquios. Conduce el aire hacia los pulmones y posee anillos de cartílago que ayudan a mantener su luz abierta durante la respiración."
+      }
+    },
+    "BronchiLeft": {
+      "objname": {
+        "pt-BR": "Brônquio Esquerdo",
+        "en": "Left Bronchus",
+        "es": "Bronquio Izquierdo"
+      },
+      "description": {
+        "pt-BR": "Principal via aérea que se origina da bifurcação da traqueia e conduz o ar para o pulmão esquerdo. Divide-se progressivamente em estruturas menores dentro do pulmão.",
+        "en": "Main airway that originates at the bifurcation of the trachea and carries air to the left lung. It progressively branches into smaller structures within the lung.",
+        "es": "Principal vía aérea que se origina en la bifurcación de la tráquea y conduce el aire hacia el pulmón izquierdo. Se divide progresivamente en estructuras más pequeñas dentro del pulmón."
+      }
+    },
+    "PulmonaryArteries": {
+      "objname": {
+        "pt-BR": "Artérias Pulmonares",
+        "en": "Pulmonary Arteries",
+        "es": "Arterias Pulmonares"
+      },
+      "description": {
+        "pt-BR": "Vasos sanguíneos que transportam sangue pobre em oxigênio do ventrículo direito do coração até os pulmões. Nos capilares pulmonares, o sangue recebe oxigênio e elimina dióxido de carbono.",
+        "en": "Blood vessels that carry oxygen-poor blood from the right ventricle of the heart to the lungs. In the pulmonary capillaries, the blood receives oxygen and releases carbon dioxide.",
+        "es": "Vasos sanguíneos que transportan sangre pobre en oxígeno desde el ventrículo derecho del corazón hasta los pulmones. En los capilares pulmonares, la sangre recibe oxígeno y elimina dióxido de carbono."
+      }
+    },
+    "PulmonaryVeins": {
+      "objname": {
+        "pt-BR": "Veias Pulmonares",
+        "en": "Pulmonary Veins",
+        "es": "Venas Pulmonares"
+      },
+      "description": {
+        "pt-BR": "Vasos sanguíneos que transportam sangue rico em oxigênio dos pulmões até o átrio esquerdo do coração. Normalmente existem quatro veias pulmonares principais.",
+        "en": "Blood vessels that carry oxygen-rich blood from the lungs to the left atrium of the heart. There are normally four main pulmonary veins.",
+        "es": "Vasos sanguíneos que transportan sangre rica en oxígeno desde los pulmones hasta la aurícula izquierda del corazón. Normalmente existen cuatro venas pulmonares principales."
+      }
+    },
+    "Diaphragm": {
+      "objname": {
+        "pt-BR": "Diafragma",
+        "en": "Diaphragm",
+        "es": "Diafragma"
+      },
+      "description": {
+        "pt-BR": "Principal músculo da respiração, localizado entre as cavidades torácica e abdominal. Sua contração aumenta o volume do tórax e favorece a entrada de ar nos pulmões.",
+        "en": "Primary muscle of respiration, located between the thoracic and abdominal cavities. Its contraction increases the volume of the thorax and facilitates the entry of air into the lungs.",
+        "es": "Principal músculo de la respiración, situado entre las cavidades torácica y abdominal. Su contracción aumenta el volumen del tórax y favorece la entrada de aire en los pulmones."
+      }
+    },
+    "HyoidBone": {
+      "objname": {
+        "pt-BR": "Osso Hioide",
+        "en": "Hyoid Bone",
+        "es": "Hueso Hioides"
+      },
+      "description": {
+        "pt-BR": "Pequeno osso localizado no pescoço, abaixo da mandíbula. Sustenta a língua e participa da organização das estruturas relacionadas à deglutição e à laringe.",
+        "en": "Small bone located in the neck, below the mandible. It supports the tongue and contributes to the organization of structures associated with swallowing and the larynx.",
+        "es": "Pequeño hueso situado en el cuello, debajo de la mandíbula. Sostiene la lengua y participa en la organización de las estructuras relacionadas con la deglución y la laringe."
+      }
+    },
+    "ThyrohyoidMembrane": {
+      "objname": {
+        "pt-BR": "Membrana Tireo-Hioidea",
+        "en": "Thyrohyoid Membrane",
+        "es": "Membrana Tirohioidea"
+      },
+      "description": {
+        "pt-BR": "Membrana de tecido conjuntivo que conecta o osso hioide à cartilagem tireoidea. Auxilia na sustentação e movimentação das estruturas superiores da laringe.",
+        "en": "Connective tissue membrane that connects the hyoid bone to the thyroid cartilage. It assists in supporting and moving the upper structures of the larynx.",
+        "es": "Membrana de tejido conjuntivo que conecta el hueso hioides con el cartílago tiroides. Contribuye al sostén y al movimiento de las estructuras superiores de la laringe."
+      }
+    },
+    "Epiglosttis": {
+      "objname": {
+        "pt-BR": "Epiglote",
+        "en": "Epiglottis",
+        "es": "Epiglotis"
+      },
+      "description": {
+        "pt-BR": "Estrutura cartilaginosa localizada na entrada da laringe. Durante a deglutição, movimenta-se para ajudar a direcionar alimentos e líquidos para o esôfago, protegendo as vias respiratórias.",
+        "en": "Cartilaginous structure located at the entrance to the larynx. During swallowing, it moves to help direct food and liquids toward the esophagus, protecting the respiratory tract.",
+        "es": "Estructura cartilaginosa situada en la entrada de la laringe. Durante la deglución, se mueve para ayudar a dirigir los alimentos y líquidos hacia el esófago, protegiendo las vías respiratorias."
+      }
+    },
+    "ThyroidCartilage": {
+      "objname": {
+        "pt-BR": "Cartilagem Tireoidea",
+        "en": "Thyroid Cartilage",
+        "es": "Cartílago Tiroides"
+      },
+      "description": {
+        "pt-BR": "Maior cartilagem da laringe, formando grande parte de sua parede anterior. Dá suporte às estruturas laríngeas e protege componentes envolvidos na produção da voz.",
+        "en": "Largest cartilage of the larynx, forming a large part of its anterior wall. It supports the laryngeal structures and protects components involved in voice production.",
+        "es": "Cartílago de mayor tamaño de la laringe, que forma gran parte de su pared anterior. Proporciona soporte a las estructuras laríngeas y protege los componentes involucrados en la producción de la voz."
+      }
+    },
+    "Larynx": {
+      "objname": {
+        "pt-BR": "Laringe",
+        "en": "Larynx",
+        "es": "Laringe"
+      },
+      "description": {
+        "pt-BR": "Órgão localizado entre a faringe e a traqueia que conduz o ar e participa da produção da voz. Suas estruturas cartilaginosas também ajudam a proteger as vias respiratórias durante a deglutição.",
+        "en": "Organ located between the pharynx and the trachea that conducts air and participates in voice production. Its cartilaginous structures also help protect the respiratory tract during swallowing.",
+        "es": "Órgano situado entre la faringe y la tráquea que conduce el aire y participa en la producción de la voz. Sus estructuras cartilaginosas también ayudan a proteger las vías respiratorias durante la deglución."
+      }
+    },
+    "VocalChords": {
+      "objname": {
+        "pt-BR": "Pregas Vocais",
+        "en": "Vocal Folds",
+        "es": "Pliegues Vocales"
+      },
+      "description": {
+        "pt-BR": "Duas estruturas localizadas no interior da laringe que vibram com a passagem do ar, produzindo sons. Também participam da proteção das vias respiratórias ao fecharem a entrada da laringe.",
+        "en": "Two structures located inside the larynx that vibrate as air passes through, producing sounds. They also participate in airway protection by closing the entrance to the larynx.",
+        "es": "Dos estructuras situadas en el interior de la laringe que vibran con el paso del aire, produciendo sonidos. También participan en la protección de las vías respiratorias al cerrar la entrada de la laringe."
+      }
+    },
+    "ThyrocricoidLigament": {
+      "objname": {
+        "pt-BR": "Ligamento Tireo-Cricoide",
+        "en": "Cricothyroid Ligament",
+        "es": "Ligamento Cricotiroideo"
+      },
+      "description": {
+        "pt-BR": "Estrutura ligamentar que conecta a cartilagem tireoidea à cartilagem cricoidea. Contribui para a sustentação da laringe e para a relação entre suas principais cartilagens.",
+        "en": "Ligamentous structure that connects the thyroid cartilage to the cricoid cartilage. It contributes to the structural support of the larynx and the anatomical relationship between its main cartilages.",
+        "es": "Estructura ligamentosa que conecta el cartílago tiroides con el cartílago cricoides. Contribuye al sostén de la laringe y a la relación anatómica entre sus principales cartílagos."
+      }
+    },
+    "Arytenoid": {
+      "objname": {
+        "pt-BR": "Cartilagem Aritenoidea",
+        "en": "Arytenoid Cartilage",
+        "es": "Cartílago Aritenoides"
+      },
+      "description": {
+        "pt-BR": "Par de pequenas cartilagens da laringe localizadas posteriormente à cartilagem cricoidea. Participam do movimento das pregas vocais e, consequentemente, da produção da voz e proteção das vias respiratórias.",
+        "en": "Pair of small laryngeal cartilages located posterior to the cricoid cartilage. They participate in the movement of the vocal folds and, consequently, in voice production and airway protection.",
+        "es": "Par de pequeños cartílagos de la laringe situados posteriormente al cartílago cricoides. Participan en el movimiento de los pliegues vocales y, por consiguiente, en la producción de la voz y la protección de las vías respiratorias."
+      }
+    },
+    "Corniculate": {
+      "objname": {
+        "pt-BR": "Cartilagens Corniculadas",
+        "en": "Corniculate Cartilages",
+        "es": "Cartílagos Corniculados"
+      },
+      "description": {
+        "pt-BR": "Pequenas cartilagens localizadas sobre as cartilagens aritenoideas, formando parte da estrutura posterior da laringe. Contribuem para a sustentação das pregas e das estruturas laríngeas.",
+        "en": "Small cartilages located above the arytenoid cartilages, forming part of the posterior structure of the larynx. They contribute to the support of the folds and laryngeal structures.",
+        "es": "Pequeños cartílagos situados sobre los cartílagos aritenoides, que forman parte de la estructura posterior de la laringe. Contribuyen al sostén de los pliegues y de las estructuras laríngeas."
+      }
+    },
+    "Cricoid": {
+      "objname": {
+        "pt-BR": "Cartilagem Cricoidea",
+        "en": "Cricoid Cartilage",
+        "es": "Cartílago Cricoides"
+      },
+      "description": {
+        "pt-BR": "Cartilagem em formato de anel localizada abaixo da cartilagem tireoidea e acima da traqueia. Mantém a estrutura aberta da laringe e serve de suporte para outras cartilagens laríngeas.",
+        "en": "Ring-shaped cartilage located below the thyroid cartilage and above the trachea. It maintains the open structure of the larynx and provides support for other laryngeal cartilages.",
+        "es": "Cartílago en forma de anillo situado debajo del cartílago tiroides y por encima de la tráquea. Mantiene abierta la estructura de la laringe y sirve de soporte para otros cartílagos laríngeos."
+      }
+    },
+    "MedianCricothyroidLigament": {
+      "objname": {
+        "pt-BR": "Ligamento Cricotireoideo Mediano",
+        "en": "Median Cricothyroid Ligament",
+        "es": "Ligamento Cricotiroideo Medio"
+      },
+      "description": {
+        "pt-BR": "Estrutura fibrosa localizada entre as cartilagens tireoidea e cricoidea. Contribui para a união e estabilidade dessas cartilagens e participa da mecânica da laringe.",
+        "en": "Fibrous structure located between the thyroid and cricoid cartilages. It contributes to the connection and stability of these cartilages and participates in the mechanics of the larynx.",
+        "es": "Estructura fibrosa situada entre los cartílagos tiroides y cricoides. Contribuye a la unión y estabilidad de estos cartílagos y participa en la mecánica de la laringe."
+      }
+    }
   }
 }

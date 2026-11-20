@@ -1,26 +1,88 @@
 {
-  "objname": "Dinâmica Respiratória",
+  "objname": {
+    "pt-BR": "Dinâmica Respiratória",
+    "en": "Respiratory Dynamics",
+    "es": "Dinámica Respiratoria"
+  },
   "objsystem": [
     "Respiratório"
   ],
-  "objdescription": "A dinâmica respiratória corresponde aos movimentos de inspiração e expiração que permitem a entrada e a saída de ar dos pulmões. Durante a inspiração, o diafragma se contrai e desce, enquanto a caixa torácica se expande, aumentando o volume da cavidade torácica e reduzindo a pressão no interior dos pulmões, o que favorece a entrada de ar. Durante a expiração tranquila, o diafragma relaxa e retorna à sua posição elevada, enquanto a caixa torácica diminui seu volume e os pulmões retraem elasticamente, promovendo a saída do ar. Esses movimentos são fundamentais para a ventilação pulmonar e a renovação do ar nos alvéolos. O modelo apresenta uma animação didática da movimentação coordenada do diafragma, dos pulmões e da caixa torácica durante o ciclo respiratório.",
+  "objdescription": {
+    "pt-BR": "A dinâmica respiratória corresponde aos movimentos de inspiração e expiração que permitem a entrada e a saída de ar dos pulmões. Durante a inspiração, o diafragma se contrai e desce, enquanto a caixa torácica se expande, aumentando o volume da cavidade torácica e reduzindo a pressão no interior dos pulmões, o que favorece a entrada de ar. Durante a expiração tranquila, o diafragma relaxa e retorna à sua posição elevada, enquanto a caixa torácica diminui seu volume e os pulmões retraem elasticamente, promovendo a saída do ar. Esses movimentos são fundamentais para a ventilação pulmonar e a renovação do ar nos alvéolos. O modelo apresenta uma animação didática da movimentação coordenada do diafragma, dos pulmões e da caixa torácica durante o ciclo respiratório.",
+    "en": "Respiratory dynamics involve the movements of inspiration and expiration that allow air to enter and leave the lungs. During inspiration, the diaphragm contracts and descends while the rib cage expands, increasing the volume of the thoracic cavity and reducing pressure within the lungs, thereby facilitating the entry of air. During quiet expiration, the diaphragm relaxes and returns to its elevated position, while the volume of the rib cage decreases and the lungs undergo elastic recoil, promoting the exit of air. These movements are essential for pulmonary ventilation and the renewal of air in the alveoli. The model presents an educational animation of the coordinated movements of the diaphragm, lungs, and rib cage throughout the respiratory cycle.",
+    "es": "La dinámica respiratoria comprende los movimientos de inspiración y espiración que permiten la entrada y salida de aire de los pulmones. Durante la inspiración, el diafragma se contrae y desciende, mientras que la caja torácica se expande, aumentando el volumen de la cavidad torácica y reduciendo la presión en el interior de los pulmones, lo que favorece la entrada de aire. Durante la espiración tranquila, el diafragma se relaja y retorna a su posición elevada, mientras que la caja torácica disminuye su volumen y los pulmones se retraen elásticamente, favoreciendo la salida del aire. Estos movimientos son fundamentales para la ventilación pulmonar y la renovación del aire en los alvéolos. El modelo presenta una animación didáctica del movimiento coordinado del diafragma, los pulmones y la caja torácica durante el ciclo respiratorio."
+  },
   "linkedModels": [
     {
-    "id": "23",
-    "label": "Sistema Respiratório"
-  }
+      "id": "16",
+      "label": {
+        "pt-BR": "Pulmões de Pacientes com COVID-19",
+        "en": "Lungs of Patients with COVID-19",
+        "es": "Pulmones de Pacientes con COVID-19"
+      }
+    },
+    {
+      "id": "23",
+      "label": {
+        "pt-BR": "Sistema Respiratório",
+        "en": "Respiratory System",
+        "es": "Sistema Respiratorio"
+      }
+    },
+    {
+      "id": "35",
+      "label": {
+        "pt-BR": "Atelectasia",
+        "en": "Atelectasis",
+        "es": "Atelectasia"
+      }
+    },
+    {
+      "id": "67",
+      "label": {
+        "pt-BR": "Dinâmica Respiratória com o Coração",
+        "en": "Respiratory Dynamics with the Heart",
+        "es": "Dinámica Respiratoria con el Corazón"
+      }
+    }
   ],
   "resources": [],
-  "Diaphragm": {
-    "objname": "Diafragma",
-    "description": "Principal músculo da inspiração, localizado abaixo dos pulmões e responsável por separar as cavidades torácica e abdominal. Durante a inspiração, contrai-se e desce, aumentando o volume da cavidade torácica e favorecendo a entrada de ar nos pulmões. Durante a expiração tranquila, relaxa e retorna à sua posição elevada, contribuindo para a redução do volume torácico."
-  },
-  "LeftLung+RightLung": {
-    "objname": "Pulmões",
-    "description": "Órgãos do sistema respiratório responsáveis pelas trocas gasosas entre o ar e o sangue. Durante a inspiração, expandem-se passivamente em resposta ao aumento do volume torácico e à redução da pressão intrapulmonar. Durante a expiração, retraem-se elasticamente, favorecendo a saída do ar. A animação demonstra a expansão e a retração dos pulmões ao longo do ciclo respiratório."
-  },
-  "Caixa_1": {
-    "objname": "Caixa Torácica",
-    "description": "Estrutura formada pelas costelas, esterno, vértebras torácicas e suas articulações, responsável por proteger os órgãos da cavidade torácica e participar dos movimentos respiratórios. Durante a inspiração, a ação dos músculos respiratórios promove sua expansão, aumentando o volume da cavidade torácica. Durante a expiração tranquila, ocorre o retorno à posição de repouso, acompanhando a retração pulmonar."
+  "parts": {
+    "Diaphragm": {
+      "objname": {
+        "pt-BR": "Diafragma",
+        "en": "Diaphragm",
+        "es": "Diafragma"
+      },
+      "description": {
+        "pt-BR": "Principal músculo da inspiração, localizado abaixo dos pulmões e responsável por separar as cavidades torácica e abdominal. Durante a inspiração, contrai-se e desce, aumentando o volume da cavidade torácica e favorecendo a entrada de ar nos pulmões. Durante a expiração tranquila, relaxa e retorna à sua posição elevada, contribuindo para a redução do volume torácico.",
+        "en": "Primary muscle of inspiration, located beneath the lungs and responsible for separating the thoracic and abdominal cavities. During inspiration, it contracts and descends, increasing the volume of the thoracic cavity and facilitating the entry of air into the lungs. During quiet expiration, it relaxes and returns to its elevated position, contributing to the reduction in thoracic volume.",
+        "es": "Principal músculo de la inspiración, situado debajo de los pulmones y responsable de separar las cavidades torácica y abdominal. Durante la inspiración, se contrae y desciende, aumentando el volumen de la cavidad torácica y favoreciendo la entrada de aire en los pulmones. Durante la espiración tranquila, se relaja y retorna a su posición elevada, contribuyendo a la reducción del volumen torácico."
+      }
+    },
+    "LeftLung+RightLung": {
+      "objname": {
+        "pt-BR": "Pulmões",
+        "en": "Lungs",
+        "es": "Pulmones"
+      },
+      "description": {
+        "pt-BR": "Órgãos do sistema respiratório responsáveis pelas trocas gasosas entre o ar e o sangue. Durante a inspiração, expandem-se passivamente em resposta ao aumento do volume torácico e à redução da pressão intrapulmonar. Durante a expiração, retraem-se elasticamente, favorecendo a saída do ar. A animação demonstra a expansão e a retração dos pulmões ao longo do ciclo respiratório.",
+        "en": "Organs of the respiratory system responsible for gas exchange between the air and the blood. During inspiration, they expand passively in response to an increase in thoracic volume and a decrease in intrapulmonary pressure. During expiration, they undergo elastic recoil, facilitating the exit of air. The animation demonstrates the expansion and recoil of the lungs throughout the respiratory cycle.",
+        "es": "Órganos del sistema respiratorio responsables del intercambio gaseoso entre el aire y la sangre. Durante la inspiración, se expanden pasivamente en respuesta al aumento del volumen torácico y a la reducción de la presión intrapulmonar. Durante la espiración, se retraen elásticamente, favoreciendo la salida del aire. La animación demuestra la expansión y la retracción de los pulmones a lo largo del ciclo respiratorio."
+      }
+    },
+    "Caixa_1": {
+      "objname": {
+        "pt-BR": "Caixa Torácica",
+        "en": "Rib Cage",
+        "es": "Caja Torácica"
+      },
+      "description": {
+        "pt-BR": "Estrutura formada pelas costelas, esterno, vértebras torácicas e suas articulações, responsável por proteger os órgãos da cavidade torácica e participar dos movimentos respiratórios. Durante a inspiração, a ação dos músculos respiratórios promove sua expansão, aumentando o volume da cavidade torácica. Durante a expiração tranquila, ocorre o retorno à posição de repouso, acompanhando a retração pulmonar.",
+        "en": "Structure formed by the ribs, sternum, thoracic vertebrae, and their joints, responsible for protecting the organs of the thoracic cavity and participating in respiratory movements. During inspiration, the action of the respiratory muscles promotes its expansion, increasing the volume of the thoracic cavity. During quiet expiration, it returns to its resting position, accompanying the elastic recoil of the lungs.",
+        "es": "Estructura formada por las costillas, el esternón, las vértebras torácicas y sus articulaciones, responsable de proteger los órganos de la cavidad torácica y participar en los movimientos respiratorios. Durante la inspiración, la acción de los músculos respiratorios promueve su expansión, aumentando el volumen de la cavidad torácica. Durante la espiración tranquila, retorna a su posición de reposo, acompañando la retracción pulmonar."
+      }
+    }
   }
 }
